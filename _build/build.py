@@ -329,8 +329,8 @@ def silhouette(v):
         f'<g transform="translate({x} {y}) scale({k})"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g>'
         for x, y, k in tannen)
     return (f'<svg class="vsil" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">'
-            f'<path d="{berge}" fill="#ece3d1"/><path d="{vorne}" fill="#e4d9c3"/></svg>'
-            f'<svg class="vtrees" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#ddd1b8">{baeume}</g></svg>')
+            f'<path d="{berge}" fill="#c9d8cb"/><path d="{vorne}" fill="#9fb8a5"/></svg>'
+            f'<svg class="vtrees" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#34475c">{baeume}</g></svg>')
 
 
 rows = "\n".join(
