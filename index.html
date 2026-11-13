@@ -8,105 +8,13 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --sand:#f4f1ea; --sand-dark:#e9e3d6; --line:#e6e0d3;
-    --green:#3f5d4a; --green-dark:#2f4a39; --green-mid:#6f8f78; --green-light:#e7ede6;
-    --text:#2f3a32; --muted:#6b7368;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:"DM Sans",system-ui,sans-serif;background:var(--sand);color:var(--text);line-height:1.55}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
-
-  /* ---------- Kopfbalken ---------- */
-  header{position:sticky;top:0;z-index:20;background:rgba(244,241,234,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand svg{width:54px;height:54px;flex:none;overflow:visible}
-  .brand .name{font-family:Fraunces,serif;font-size:23px;font-weight:600;color:var(--green);letter-spacing:-.01em}
-  .brand .name span{color:var(--green-mid)}
-  .menu{display:flex;align-items:center;gap:6px;list-style:none}
-  .menu a{display:block;padding:8px 12px;border-radius:8px;font-size:15px;color:#4c5a50;transition:background .15s,color .15s}
-  .menu a:hover{background:var(--green-light);color:var(--green-dark)}
-  .menu a.cta{background:var(--green);color:var(--sand);margin-left:6px}
-  .menu a.cta:hover{background:var(--green-dark);color:#fff}
-  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
-  .burger span{display:block;width:24px;height:2px;background:var(--green);margin:5px 0;border-radius:2px}
-
-  /* ---------- Teil 1: Hero ---------- */
-  .hero{margin:28px 0 0;background:var(--green);color:var(--sand);border-radius:22px;position:relative;overflow:hidden}
-  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;padding:64px 56px 96px}
-  .motto{font-family:Fraunces,serif;font-style:italic;font-weight:500;font-size:40px;line-height:1.2;margin-bottom:22px}
-  .motto .ph{border-bottom:2px dashed rgba(244,241,234,.5)}
-  .lead{font-size:17px;max-width:560px;opacity:.9}
-  .hero-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:500;font-size:15px}
-  .btn.light{background:var(--sand);color:var(--green-dark)}
-  .btn.ghost{border:1px solid rgba(244,241,234,.45);color:var(--sand)}
-  .portrait{justify-self:center;text-align:center}
-  .photo{width:250px;height:300px;border-radius:18px;background:var(--sand-dark);border:5px solid rgba(244,241,234,.35);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;overflow:hidden;color:var(--green-mid);font-size:13px}
-  .photo svg{width:170px;height:auto;display:block}
-  .photo small{position:absolute;margin-bottom:270px;background:rgba(255,255,255,.7);padding:2px 10px;border-radius:20px}
-  .person{display:inline-block;margin-top:16px}
-  .person strong{display:block;font-family:Fraunces,serif;font-size:21px;font-weight:600;border-bottom:1px solid transparent;transition:border-color .15s}
-  .person:hover strong{border-color:var(--sand)}
-  .person span{font-size:14px;opacity:.8}
-  .hero .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:120px;z-index:0}
-
-  /* ---------- Teil 2: Bereiche ---------- */
-  .section-head{margin:72px 0 28px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
-  .section-head h2{font-family:Fraunces,serif;font-size:32px;font-weight:600;color:var(--green-dark);line-height:1.2}
-  .section-head p{color:var(--muted);max-width:420px}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:80px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-  .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(63,93,74,.12)}
-  .card .art{background:var(--green-light);height:150px;display:flex;align-items:flex-end;justify-content:center}
-  .card .art svg{height:140px;width:auto}
-  .card.wide{grid-column:1 / -1;flex-direction:row}
-  .card.wide .art{width:42%;height:auto;min-height:220px;align-items:center}
-  .card.wide .art svg{height:170px}
-  .card .body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
-  .card .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);font-weight:700;margin-bottom:6px}
-  .card h3{font-family:Fraunces,serif;font-size:23px;font-weight:600;color:var(--green-dark);margin-bottom:8px}
-  .card p{color:var(--muted);font-size:15px}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 20px}
-  .tags span{font-size:13px;background:var(--sand);border:1px solid var(--line);color:#55624f;padding:3px 10px;border-radius:20px}
-  .card .go{margin-top:auto;font-weight:600;color:var(--green);font-size:15px}
-  .card:hover .go{color:var(--green-dark)}
-
-  /* ---------- Fusszeile ---------- */
-  footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
-  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  footer nav{display:flex;gap:20px}
-  footer a:hover{color:var(--green)}
-
-  /* ---------- Mobil ---------- */
-  @media (max-width:1000px){
-    .burger{display:block}
-    .menu{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--sand);border-bottom:1px solid var(--line);padding:10px 20px 18px}
-    .menu.open{display:flex}
-    .menu a.cta{margin:6px 0 0;text-align:center}
-  }
-  @media (max-width:820px){
-    .wrap{padding:0 18px}
-    .hero-grid{grid-template-columns:1fr;padding:44px 28px 100px;text-align:left}
-    .portrait{justify-self:start}
-    .motto{font-size:30px}
-    .cards{grid-template-columns:1fr}
-    .card.wide{flex-direction:column}.card.wide .art{width:100%;min-height:0;height:150px}.card.wide .art svg{height:140px}
-    .section-head h2{font-size:26px}
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===================== Kopfbalken ===================== -->
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="MuggliOnline Startseite">
-      <!-- Logo: Steinbockhorn bildet den Kreis, Bergketten formen ein M -->
       <svg aria-hidden="true" viewBox="0 0 100 100">
   <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clipPath></defs>
   <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
@@ -138,17 +46,15 @@
 </svg>
       <span class="name">Muggli<span>Online</span></span>
     </a>
-
     <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
-
     <ul class="menu" id="menu">
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#english">English</a></li>
-      <li><a href="#didaktik">Didaktik</a></li>
-      <li><a href="#lernende">Für Lernende</a></li>
-      <li><a href="#werkstatt">App-Werkstatt</a></li>
-      <li><a href="#ueber-anja">Über Anja</a></li>
-      <li><a class="cta" href="#kontakt">Kontakt</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="english.html">English</a></li>
+      <li><a href="didaktik.html">Didaktik</a></li>
+      <li><a href="lernende.html">Für Lernende</a></li>
+      <li><a href="werkstatt.html">App-Werkstatt</a></li>
+      <li><a href="ueber-anja.html">Über Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Kontakt</a></li>
     </ul>
   </div>
 </header>
@@ -163,7 +69,7 @@
         <p class="lead">MuggliOnline bündelt Unterrichtsmaterialien, Online-Übungen mit direkter Rückmeldung und didaktische Hilfsmittel. Für Lernende, die selbstständig üben möchten, und für Lehrpersonen, die guten Unterricht planen.</p>
         <div class="hero-actions">
           <a class="btn light" href="#bereiche">Bereiche entdecken</a>
-          <a class="btn ghost" href="#vision">Meine Vision</a>
+          <a class="btn ghost" href="vision.html">Meine Vision</a>
         </div>
       </div>
 
@@ -175,7 +81,7 @@
             <path d="M10,200 C14,148 46,124 85,124 C124,124 156,148 160,200 Z" fill="#c9d3c7"/>
           </svg>
         </div>
-        <a class="person" href="#ueber-anja">
+        <a class="person" href="ueber-anja.html">
           <strong>Dr. Anja Muggli</strong>
           <span>Dozentin Erziehungswissenschaften · Englischlehrperson</span>
         </a>
@@ -199,7 +105,7 @@
     <div class="cards">
 
       <!-- 1 English -->
-      <a class="card" id="english" href="#english-lernende">
+      <a class="card" id="english" href="english-lernende.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
             <path d="M0,140 L0,110 L50,80 L80,96 L130,60 L170,92 L220,74 L220,140 Z" fill="#cfdacd"/>
@@ -225,7 +131,7 @@
       </a>
 
       <!-- 2 English für Lehrpersonen -->
-      <a class="card" id="english-lehrpersonen" href="#english-lehrpersonen">
+      <a class="card" id="english-lehrpersonen" href="english-lehrpersonen.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
             <path d="M0,140 L0,108 L60,86 L100,104 L160,74 L220,98 L220,140 Z" fill="#cfdacd"/>
@@ -253,7 +159,7 @@
       </a>
 
       <!-- 3 Didaktik -->
-      <a class="card" id="didaktik" href="#didaktik">
+      <a class="card" id="didaktik" href="didaktik.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
             <path d="M0,140 L0,104 L60,84 L110,100 L170,78 L220,96 L220,140 Z" fill="#cfdacd"/>
@@ -280,7 +186,7 @@
       </a>
 
       <!-- 4 Für Lernende -->
-      <a class="card" id="lernende" href="#lernende">
+      <a class="card" id="lernende" href="lernende.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
             <path d="M0,140 L0,128 L60,110 L110,72 L146,40 L180,70 L220,96 L220,140 Z" fill="#6f8f78"/>
@@ -310,7 +216,7 @@
       </a>
 
       <!-- 5 App-Werkstatt -->
-      <a class="card wide" id="werkstatt" href="#werkstatt">
+      <a class="card wide" id="werkstatt" href="werkstatt.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
             <path d="M0,140 L0,112 L70,92 L120,108 L180,86 L220,100 L220,140 Z" fill="#cfdacd"/>
@@ -356,7 +262,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 MuggliOnline · Dr. Anja Muggli, Chur</span>
-    <nav><a href="#kontakt">Kontakt</a><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></nav>
+    <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
 
