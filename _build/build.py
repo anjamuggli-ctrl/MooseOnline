@@ -14,7 +14,7 @@ LOGO = (B / "logo_inline.svg").read_text()
 
 MENU = [
     ("vision.html", "Vision"),
-    ("english.html", "English"),
+    ("english.html", "Englisch"),
     ("didaktik.html", "Didaktik"),
     ("lernende.html", "Für Lernende"),
     ("werkstatt.html", "App-Werkstatt"),
@@ -132,20 +132,20 @@ page("index.html", "MuggliOnline – Materialien und Werkzeuge für gutes Lernen
      description="Unterrichtsmaterialien, Online-Übungen und didaktische Hilfsmittel für Lernende und Lehrpersonen.")
 
 # ---------------- English: Übersicht ----------------
-page("english.html", "English – MuggliOnline", f"""<main class="wrap">
-{hero("English", "Englisch", "English", "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.")}
+page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
+{hero("Englisch", "Für Lehrpersonen und Lernende", "Englisch", "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.")}
   <section class="section">
     <h2>Wähle deinen Bereich</h2>
-    <p class="intro">Der English-Bereich ist in zwei Teile gegliedert.</p>
+    <p class="intro">Der Englisch-Bereich ist in zwei Teile gegliedert.</p>
     <div class="grid2">
-      <a class="plan" href="english-lehrpersonen.html" style="border-style:solid"><span class="badge live">Für Lehrpersonen</span><h3>English für Lehrpersonen →</h3><p>Unterrichtsmaterialien, Vorlagen und Prüfungen für den eigenen Englischunterricht.</p></a>
-      <a class="plan" href="english-lernende.html" style="border-style:solid"><span class="badge live">Für Lernende</span><h3>English für Lernende →</h3><p>Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.</p></a>
+      <a class="plan" href="english-lehrpersonen.html" style="border-style:solid"><span class="badge live">Für Lehrpersonen</span><h3>Englisch für Lehrpersonen →</h3><p>Unterrichtsmaterialien, Vorlagen und Prüfungen für den eigenen Englischunterricht.</p></a>
+      <a class="plan" href="english-lernende.html" style="border-style:solid"><span class="badge live">Für Lernende</span><h3>Englisch für Lernende →</h3><p>Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.</p></a>
     </div>
   </section>
 </main>""", active="english.html", description="Englisch für Lernende und Lehrpersonen.")
 
-area("english-lernende.html", '<a href="english.html">English</a> › Für Lernende', "Für Lernende",
-     "English für Lernende",
+area("english-lernende.html", '<a href="english.html">Englisch</a> › Für Lernende', "Für Lernende",
+     "Englisch für Lernende",
      "Übungen mit direkter Rückmeldung: Du schreibst deine Antworten hinein und siehst sofort, ob sie stimmen.",
      "Die Übungen werden laufend aufgebaut. Geplant sind diese Bereiche:",
      [plan("Basic English", "Grundlagen in kleinen Schritten, mit Sofortkontrolle.", ["Grammatik-Übungen und Lückentexte", "Wortschatz", "Writing-Aufgaben mit Checklisten"]),
@@ -154,8 +154,8 @@ area("english-lernende.html", '<a href="english.html">English</a> › Für Lerne
       plan("Fachenglisch Informatik", "Englisch für IT, Netzwerke und Software.", ["Vokabeltrainer", "Leseverständnis", "Lückentexte"])],
      cols="grid2")
 
-area("english-lehrpersonen.html", '<a href="english.html">English</a> › Für Lehrpersonen', "Für Lehrpersonen",
-     "English für Lehrpersonen",
+area("english-lehrpersonen.html", '<a href="english.html">Englisch</a> › Für Lehrpersonen', "Für Lehrpersonen",
+     "Englisch für Lehrpersonen",
      "Unterrichtsmaterialien, Vorlagen und Prüfungen für Basic English und Fachenglisch an Berufsschulen.",
      "Hier entsteht eine Sammlung von erprobten Materialien für den eigenen Unterricht:",
      [plan("Unterrichtsmaterialien", "Arbeitsblätter, Dialoge und Aufgaben zu verschiedenen Themen."),
