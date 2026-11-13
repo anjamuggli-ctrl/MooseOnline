@@ -28,17 +28,17 @@ MENU = [
 
 def banner_ridge(h):
     """Bergsilhouette unten im grünen Banner: Grün, Dunkelblau, Sandfront und dunkelblaue Tannen."""
-    tannen = [(70, 108, .9), (98, 111, .7), (380, 110, .6), (870, 111, .65), (1080, 108, .95), (1112, 111, .7)]
+    tannen = [(x, round(113 - 22 * k, 1), k) for x, k in [(60, 1.1), (92, .85), (380, .7), (870, .75), (1090, 1.15), (1126, .85)]]
     baeume = "".join(
         f'<g transform="translate({x} {y}) scale({k})"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g>'
         for x, y, k in tannen)
     return (f'<svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:{h}px">'
             '<path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/>'
-            '<path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#34475c"/>'
-            '<path d="M0,120 L0,108 L160,100 L300,111 L460,102 L640,113 L800,102 L980,111 L1200,104 L1200,120 Z" fill="#f4f1ea"/></svg>'
-            f'<svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style="height:{h}px"><g fill="#2a3a4b">{baeume}</g></svg>')
+            '<path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/>'
+            '<path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg>'
+            f'<svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:{h}px"><g fill="#2a3a4b">{baeume}</g></svg>')
 
-RIDGE = banner_ridge(100)
+RIDGE = banner_ridge(150)
 
 
 def silhouette(v):
@@ -157,7 +157,7 @@ ACTIVE = {
 # ---------------- Startseite ----------------
 main = (B / "index_main.html").read_text()
 import re as _re
-main = _re.sub(r'<svg class="ridge".*?</svg>', lambda m: banner_ridge(120), main, count=1, flags=_re.S)
+main = _re.sub(r'<svg class="ridge".*?</svg>', lambda m: banner_ridge(180), main, count=1, flags=_re.S)
 for old, new in {
     'href="#english-lernende"': 'href="english.html"',
     'href="#english-lehrpersonen"': 'href="english.html"',

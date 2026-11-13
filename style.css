@@ -237,3 +237,8 @@
   .thema-art svg{width:100%;max-width:240px;height:auto}
   .thema .badge,.thema h3,.thema p{margin-left:24px;margin-right:24px}
   .einleitung-bar{margin-bottom:30px}
+  /* höhere Bergsilhouette in den Bannern */
+  .hero-grid{padding-bottom:170px}
+  .page-hero .inner{padding-bottom:150px}
+  .page-hero .ridge{height:150px}
+  @media (max-width:820px){ .hero-grid{padding-bottom:150px} .page-hero .inner{padding-bottom:120px} }
