@@ -201,3 +201,16 @@
   .vtext p{color:#45524a;font-size:16.5px;line-height:1.7}
   .vtext p+p{margin-top:12px}
   @media (max-width:820px){ .vrow{grid-template-columns:1fr;gap:10px;padding:26px 24px 80px} }
+
+  /* ---------- Sprachwahl ---------- */
+  .nav .menu{margin-left:auto}
+  .lang{position:relative;margin-left:10px}
+  .lang-btn{font:inherit;font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--green-dark);cursor:pointer}
+  .lang-btn svg{width:16px;height:16px}
+  .lang-list{display:none;position:absolute;right:0;top:calc(100% + 6px);list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(47,74,57,.15);padding:6px;min-width:170px;z-index:40}
+  .lang.open .lang-list{display:block}
+  .lang-list a{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;border-radius:8px;font-size:15px;color:#3d4b41}
+  .lang-list a:hover{background:var(--green-light)}
+  .lang-list a.aktiv{font-weight:700;color:var(--green-dark);background:var(--sand)}
+  .lang-list small{color:var(--muted);font-size:12px;font-weight:600}
+  @media (max-width:1000px){ .lang{margin-left:auto} .burger{margin-left:6px} }

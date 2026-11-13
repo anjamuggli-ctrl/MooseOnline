@@ -8,7 +8,13 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1e0e7302">
+<link rel="stylesheet" href="style.css?v=747105d5">
+<link rel="alternate" hreflang="de" href="datenschutz.html">
+<link rel="alternate" hreflang="rm" href="rm/datenschutz.html">
+<link rel="alternate" hreflang="en" href="en/datenschutz.html">
+<link rel="alternate" hreflang="it" href="it/datenschutz.html">
+<link rel="alternate" hreflang="fr" href="fr/datenschutz.html">
+<link rel="alternate" hreflang="es" href="es/datenschutz.html">
 </head>
 <body>
 
@@ -46,7 +52,6 @@
 </svg>
       <span class="name">Muggli<span>Online</span></span>
     </a>
-    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="vision.html">Vision</a></li>
       <li><a href="english.html">Englisch</a></li>
@@ -56,6 +61,8 @@
       <li><a href="ueber-anja.html">Über Anja</a></li>
       <li><a class="cta" href="kontakt.html">Kontakt</a></li>
     </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Sprache wählen" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>DE</button><ul class="lang-list"><li><a href="datenschutz.html" hreflang="de" lang="de" class="aktiv">Deutsch<small>DE</small></a></li><li><a href="rm/datenschutz.html" hreflang="rm" lang="rm">Romontsch<small>RM</small></a></li><li><a href="en/datenschutz.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="it/datenschutz.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li><li><a href="fr/datenschutz.html" hreflang="fr" lang="fr">Français<small>FR</small></a></li><li><a href="es/datenschutz.html" hreflang="es" lang="es">Español<small>ES</small></a></li></ul></div>
+    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -81,6 +88,6 @@
     <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
-
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 // Vorlagen-Bibliothek: Filter, Vorschau, Drucken und PDF-Download.
 (function () {
   const daten = JSON.parse(document.getElementById('vorlagen-daten').textContent);
+  const L = Object.assign({ ansehen: 'ansehen', vorschau: 'Vorschau', vorlage: 'Vorlage', kategorien: {} }, window.I18N || {});
+  const BASE = window.SITE_BASE || '';
   const $ = (id) => document.getElementById(id);
   let aktuell = 0, sichtbar = daten.map((_, i) => i);
 
@@ -8,21 +10,21 @@
     sichtbar = daten.map((_, i) => i).filter((i) => filter === 'alle' || daten[i].kategorie === filter);
     $('lib').innerHTML = sichtbar.map((i) => {
       const v = daten[i];
-      return `<button class="tpl" type="button" data-i="${i}" aria-label="${v.titel} ansehen">
-        <img src="vorlagen/vorschau/${v.datei}-klein.jpg" alt="Vorschau ${v.titel}" loading="lazy" width="300" height="426">
+      return `<button class="tpl" type="button" data-i="${i}" aria-label="${v.titel} – ${L.ansehen}">
+        <img src="${BASE}vorlagen/vorschau/${v.datei}-klein.jpg" alt="${L.vorschau} ${v.titel}" loading="lazy" width="300" height="426">
         <b>${v.titel}</b></button>`;
     }).join('');
   }
 
   function zeigen(i) {
     aktuell = i; const v = daten[i];
-    $('m-bild').src = `vorlagen/vorschau/${v.datei}.jpg`;
-    $('m-bild').alt = `Vorlage ${v.titel}`;
+    $('m-bild').src = `${BASE}vorlagen/vorschau/${v.datei}.jpg`;
+    $('m-bild').alt = `${L.vorlage} ${v.titel}`;
     $('m-titel').textContent = v.titel;
-    $('m-kat').textContent = `${v.kategorie} · A5 · PDF`;
-    $('m-pdf').href = `vorlagen/${v.datei}.pdf`;
+    $('m-kat').textContent = `${L.kategorien[v.kategorie] || v.kategorie} · A5 · PDF`;
+    $('m-pdf').href = `${BASE}vorlagen/${v.datei}.pdf`;
     $('m-pdf').setAttribute('download', `${v.datei}.pdf`);
-    $('pv-print').innerHTML = `<img src="vorlagen/vorschau/${v.datei}.jpg" alt="">`;
+    $('pv-print').innerHTML = `<img src="${BASE}vorlagen/vorschau/${v.datei}.jpg" alt="">`;
     $('modal').classList.add('open');
   }
   function schliessen() { $('modal').classList.remove('open'); }

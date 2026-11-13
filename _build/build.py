@@ -59,11 +59,12 @@ def page(filename, title, body, active=None, description="", extra_head=""):
       {LOGO}
       <span class="name">Muggli<span>Online</span></span>
     </a>
-    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
 {items}
       <li><a class="{kontakt_cls}" href="kontakt.html">Kontakt</a></li>
     </ul>
+    <!--LANG:{filename}-->
+    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -75,7 +76,7 @@ def page(filename, title, body, active=None, description="", extra_head=""):
     <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
-
+<script>document.addEventListener('click',function(e){{document.querySelectorAll('.lang.open').forEach(function(l){{if(!l.contains(e.target))l.classList.remove('open')}})}});</script>
 </body>
 </html>
 """
@@ -297,9 +298,10 @@ page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<ma
   <div id="pv-print" aria-hidden="true"></div>
   <script type="application/json" id="vorlagen-daten">{VORLAGEN_JSON}</script>
   <section class="section" style="margin-top:0">
-    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
+    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
   </section>
 </main>
+<!--I18N-->
 <script src="bullet-journal.js?v={JS_V['bullet-journal.js']}"></script>
 <script src="vorlagen.js?v={JS_V['vorlagen.js']}"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
 
@@ -391,3 +393,7 @@ page("datenschutz.html", "Datenschutz – MuggliOnline", f"""<main class="wrap">
 </main>""", description="Datenschutzerklärung MuggliOnline.")
 
 print("Seiten gebaut.")
+
+
+import subprocess
+subprocess.run(["python3", str(B / "i18n.py")], check=True)

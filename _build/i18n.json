@@ -1,0 +1,2024 @@
+{
+ "texte": {
+  "Bullet-Journal-Generator – MuggliOnline": {
+   "rm": "Generatur da Bullet Journal – MuggliOnline",
+   "en": "Bullet Journal Generator – MuggliOnline",
+   "it": "Generatore di Bullet Journal – MuggliOnline",
+   "fr": "Générateur de Bullet Journal – MuggliOnline",
+   "es": "Generador de Bullet Journal – MuggliOnline"
+  },
+  "Druckfertige A5-Seiten für das Bullet Journal erstellen.": {
+   "rm": "Crear paginas A5 promtas da stampar pil Bullet Journal.",
+   "en": "Create print-ready A5 pages for your bullet journal.",
+   "it": "Crea pagine A5 pronte da stampare per il bullet journal.",
+   "fr": "Créer des pages A5 prêtes à imprimer pour le bullet journal.",
+   "es": "Crea páginas A5 listas para imprimir para tu bullet journal."
+  },
+  "MuggliOnline Startseite": {
+   "rm": "Pagina principala MuggliOnline",
+   "en": "MuggliOnline home page",
+   "it": "Pagina iniziale di MuggliOnline",
+   "fr": "Page d'accueil MuggliOnline",
+   "es": "Página de inicio de MuggliOnline"
+  },
+  "Menü öffnen": {
+   "rm": "Averer il menu",
+   "en": "Open menu",
+   "it": "Apri il menu",
+   "fr": "Ouvrir le menu",
+   "es": "Abrir el menú"
+  },
+  "Vision": {
+   "rm": "Visiun",
+   "en": "Vision",
+   "it": "Visione",
+   "fr": "Vision",
+   "es": "Visión"
+  },
+  "Englisch": {
+   "rm": "Englais",
+   "en": "English",
+   "it": "Inglese",
+   "fr": "Anglais",
+   "es": "Inglés"
+  },
+  "Didaktik": {
+   "rm": "Didactica",
+   "en": "Didactics",
+   "it": "Didattica",
+   "fr": "Didactique",
+   "es": "Didáctica"
+  },
+  "Für Lernende": {
+   "rm": "Per emprendists",
+   "en": "For learners",
+   "it": "Per allievi",
+   "fr": "Pour apprenant·e·s",
+   "es": "Para estudiantes"
+  },
+  "App-Werkstatt": {
+   "rm": "Ufficina d'apps",
+   "en": "App Workshop",
+   "it": "Officina delle app",
+   "fr": "Atelier d'apps",
+   "es": "Taller de apps"
+  },
+  "Über Anja": {
+   "rm": "Davart Anja",
+   "en": "About Anja",
+   "it": "Su Anja",
+   "fr": "À propos d'Anja",
+   "es": "Sobre Anja"
+  },
+  "Kontakt": {
+   "rm": "Contact",
+   "en": "Contact",
+   "it": "Contatto",
+   "fr": "Contact",
+   "es": "Contacto"
+  },
+  "Startseite": {
+   "rm": "Pagina principala",
+   "en": "Home",
+   "it": "Home",
+   "fr": "Accueil",
+   "es": "Inicio"
+  },
+  "› Bullet-Journal-Generator": {
+   "rm": "› Generatur da Bullet Journal",
+   "en": "› Bullet Journal Generator",
+   "it": "› Generatore di Bullet Journal",
+   "fr": "› Générateur de Bullet Journal",
+   "es": "› Generador de Bullet Journal"
+  },
+  "Bullet-Journal-Generator": {
+   "rm": "Generatur da Bullet Journal",
+   "en": "Bullet Journal Generator",
+   "it": "Generatore di Bullet Journal",
+   "fr": "Générateur de Bullet Journal",
+   "es": "Generador de Bullet Journal"
+  },
+  "Stelle deine Seite zusammen, schau sie dir in der Vorschau an und drucke sie in A5 aus oder speichere sie als PDF.": {
+   "rm": "Cumpona tia pagina, contempla ella ella prevista e stampa ella en A5 ni memorisescha ella sco PDF.",
+   "en": "Put your page together, check it in the preview and print it in A5 or save it as a PDF.",
+   "it": "Componi la tua pagina, guardala nell'anteprima e stampala in A5 o salvala come PDF.",
+   "fr": "Compose ta page, regarde-la dans l'aperçu, puis imprime-la en A5 ou enregistre-la en PDF.",
+   "es": "Diseña tu página, mírala en la vista previa e imprímela en A5 o guárdala como PDF."
+  },
+  "Seite gestalten": {
+   "rm": "Concepir la pagina",
+   "en": "Design your page",
+   "it": "Crea la pagina",
+   "fr": "Créer la page",
+   "es": "Diseñar la página"
+  },
+  "Seitentyp": {
+   "rm": "Tip da pagina",
+   "en": "Page type",
+   "it": "Tipo di pagina",
+   "fr": "Type de page",
+   "es": "Tipo de página"
+  },
+  "Tagesplaner": {
+   "rm": "Plan dil di",
+   "en": "Daily planner",
+   "it": "Agenda giornaliera",
+   "fr": "Planning du jour",
+   "es": "Agenda diaria"
+  },
+  "Woche": {
+   "rm": "Jamna",
+   "en": "Week",
+   "it": "Settimana",
+   "fr": "Semaine",
+   "es": "Semana"
+  },
+  "Monat": {
+   "rm": "Meins",
+   "en": "Month",
+   "it": "Mese",
+   "fr": "Mois",
+   "es": "Mes"
+  },
+  "Habit-Tracker": {
+   "rm": "Habit tracker",
+   "en": "Habit tracker",
+   "it": "Habit tracker",
+   "fr": "Suivi d'habitudes",
+   "es": "Registro de hábitos"
+  },
+  "Leere Seite": {
+   "rm": "Pagina vita",
+   "en": "Blank page",
+   "it": "Pagina vuota",
+   "fr": "Page vierge",
+   "es": "Página en blanco"
+  },
+  "Jahr": {
+   "rm": "Onn",
+   "en": "Year",
+   "it": "Anno",
+   "fr": "Année",
+   "es": "Año"
+  },
+  "Raster": {
+   "rm": "Rasta",
+   "en": "Grid",
+   "it": "Griglia",
+   "fr": "Grille",
+   "es": "Cuadrícula"
+  },
+  "Punkte": {
+   "rm": "Punctas",
+   "en": "Dots",
+   "it": "Puntini",
+   "fr": "Points",
+   "es": "Puntos"
+  },
+  "Kästchen": {
+   "rm": "Quaderets",
+   "en": "Squares",
+   "it": "Quadretti",
+   "fr": "Carreaux",
+   "es": "Cuadros"
+  },
+  "Linien": {
+   "rm": "Lingias",
+   "en": "Lines",
+   "it": "Righe",
+   "fr": "Lignes",
+   "es": "Líneas"
+  },
+  "Ohne": {
+   "rm": "Senza",
+   "en": "None",
+   "it": "Nessuna",
+   "fr": "Aucune",
+   "es": "Ninguna"
+  },
+  "Rasterabstand": {
+   "rm": "Distanza dalla rasta",
+   "en": "Grid spacing",
+   "it": "Distanza della griglia",
+   "fr": "Espacement de la grille",
+   "es": "Espaciado de la cuadrícula"
+  },
+  "Titel (optional)": {
+   "rm": "Titel (facultativ)",
+   "en": "Title (optional)",
+   "it": "Titolo (facoltativo)",
+   "fr": "Titre (facultatif)",
+   "es": "Título (opcional)"
+  },
+  "z. B. Montag oder Lernplan": {
+   "rm": "p. ex. glindesdi ni plan d'emprender",
+   "en": "e.g. Monday or study plan",
+   "it": "ad es. lunedì o piano di studio",
+   "fr": "p. ex. lundi ou plan de révision",
+   "es": "p. ej. lunes o plan de estudio"
+  },
+  "Akzentfarbe": {
+   "rm": "Colur d'accent",
+   "en": "Accent colour",
+   "it": "Colore d'accento",
+   "fr": "Couleur d'accent",
+   "es": "Color de acento"
+  },
+  "Tannengrün": {
+   "rm": "Verd pégn",
+   "en": "Fir green",
+   "it": "Verde abete",
+   "fr": "Vert sapin",
+   "es": "Verde abeto"
+  },
+  "Sand": {
+   "rm": "Sablun",
+   "en": "Sand",
+   "it": "Sabbia",
+   "fr": "Sable",
+   "es": "Arena"
+  },
+  "Schiefer": {
+   "rm": "Ardiesch",
+   "en": "Slate",
+   "it": "Ardesia",
+   "fr": "Ardoise",
+   "es": "Pizarra"
+  },
+  "Beere": {
+   "rm": "Baccas",
+   "en": "Berry",
+   "it": "Bacca",
+   "fr": "Baie",
+   "es": "Baya"
+  },
+  "KI-Motiv zum Nachzeichnen": {
+   "rm": "Motiv KI per sedessegnar",
+   "en": "AI motif to trace",
+   "it": "Motivo IA da ricalcare",
+   "fr": "Motif IA à décalquer",
+   "es": "Motivo con IA para calcar"
+  },
+  "🔒 folgt": {
+   "rm": "🔒 suonda",
+   "en": "🔒 coming soon",
+   "it": "🔒 in arrivo",
+   "fr": "🔒 bientôt",
+   "es": "🔒 próximamente"
+  },
+  "Beschreibe ein Motiv, z. B. «Steinbock auf einem Berggipfel». Diese Funktion wird später mit KI ergänzt und ist dann passwortgeschützt.": {
+   "rm": "Descriva in motiv, p. ex. «capricorn sin in piz». Questa funcziun vegn cumplettada pli tard cun KI ed ei lu protegida cun pled-clav.",
+   "en": "Describe a motif, e.g. “ibex on a mountain peak”. This feature will be added later with AI and will then be password-protected.",
+   "it": "Descrivi un motivo, ad es. «stambecco su una vetta». Questa funzione verrà aggiunta più avanti con l'IA e sarà protetta da password.",
+   "fr": "Décris un motif, p. ex. « bouquetin sur un sommet ». Cette fonction sera ajoutée plus tard avec l'IA et sera alors protégée par un mot de passe.",
+   "es": "Describe un motivo, p. ej. «íbice en una cumbre». Esta función se añadirá más adelante con IA y estará protegida con contraseña."
+  },
+  "Vorschau der A5-Seite": {
+   "rm": "Prevista dalla pagina A5",
+   "en": "Preview of the A5 page",
+   "it": "Anteprima della pagina A5",
+   "fr": "Aperçu de la page A5",
+   "es": "Vista previa de la página A5"
+  },
+  "Drucken / als PDF speichern": {
+   "rm": "Stampar / memorisar sco PDF",
+   "en": "Print / save as PDF",
+   "it": "Stampa / salva come PDF",
+   "fr": "Imprimer / enregistrer en PDF",
+   "es": "Imprimir / guardar como PDF"
+  },
+  "Tipp: Im Druckdialog «Papierformat A5» und «Ränder: keine» wählen.": {
+   "rm": "Tip: Tscherna el dialog da stampar «format da pupi A5» e «urs: negins».",
+   "en": "Tip: In the print dialog, choose “paper size A5” and “margins: none”.",
+   "it": "Suggerimento: nella finestra di stampa scegli «formato carta A5» e «margini: nessuno».",
+   "fr": "Astuce : dans la fenêtre d'impression, choisis « format A5 » et « marges : aucune ».",
+   "es": "Consejo: en el cuadro de impresión elige «tamaño de papel A5» y «márgenes: ninguno»."
+  },
+  "Vorlagen-Bibliothek": {
+   "rm": "Biblioteca da models",
+   "en": "Template library",
+   "it": "Biblioteca di modelli",
+   "fr": "Bibliothèque de modèles",
+   "es": "Biblioteca de plantillas"
+  },
+  "Fertig gestaltete Seiten zum Ausdrucken: Notizseiten, Agenda-Seiten für Woche und Monat, To-do-Listen und illustrierte Seiten. Klicke auf eine Vorlage, um sie gross anzusehen, zu drucken oder als PDF herunterzuladen. Alle Vorlagen sind im Format A5.": {
+   "rm": "Paginas fatgas da stampar: paginas da notizias, paginas d'agenda per jamna e meins, glistas da lavurs e paginas illustradas. Clicca sin in model per mirar el grond, per stampar el ni per telechargiar el sco PDF. Tut ils models ein en format A5.",
+   "en": "Ready-made pages to print: note pages, weekly and monthly agenda pages, to-do lists and illustrated pages. Click a template to view it large, print it or download it as a PDF. All templates are A5.",
+   "it": "Pagine pronte da stampare: pagine per appunti, agende settimanali e mensili, liste di cose da fare e pagine illustrate. Clicca su un modello per vederlo in grande, stamparlo o scaricarlo in PDF. Tutti i modelli sono in formato A5.",
+   "fr": "Des pages prêtes à imprimer : pages de notes, agendas hebdomadaires et mensuels, listes de tâches et pages illustrées. Clique sur un modèle pour l'agrandir, l'imprimer ou le télécharger en PDF. Tous les modèles sont au format A5.",
+   "es": "Páginas listas para imprimir: páginas de notas, agendas semanales y mensuales, listas de tareas y páginas ilustradas. Haz clic en una plantilla para verla en grande, imprimirla o descargarla en PDF. Todas las plantillas son de tamaño A5."
+  },
+  "Alle": {
+   "rm": "Tuts",
+   "en": "All",
+   "it": "Tutti",
+   "fr": "Tous",
+   "es": "Todas"
+  },
+  "To-do-Listen": {
+   "rm": "Glistas da lavurs",
+   "en": "To-do lists",
+   "it": "Liste di cose da fare",
+   "fr": "Listes de tâches",
+   "es": "Listas de tareas"
+  },
+  "Notizen": {
+   "rm": "Notizias",
+   "en": "Notes",
+   "it": "Appunti",
+   "fr": "Notes",
+   "es": "Notas"
+  },
+  "Agenda": {
+   "rm": "Agenda",
+   "en": "Planner",
+   "it": "Agenda",
+   "fr": "Agenda",
+   "es": "Agenda"
+  },
+  "1 Feld": {
+   "rm": "1 fenestra",
+   "en": "1 box",
+   "it": "1 riquadro",
+   "fr": "1 cadre",
+   "es": "1 recuadro"
+  },
+  "2 Felder": {
+   "rm": "2 fenestras",
+   "en": "2 boxes",
+   "it": "2 riquadri",
+   "fr": "2 cadres",
+   "es": "2 recuadros"
+  },
+  "3 Felder": {
+   "rm": "3 fenestras",
+   "en": "3 boxes",
+   "it": "3 riquadri",
+   "fr": "3 cadres",
+   "es": "3 recuadros"
+  },
+  "4 Felder": {
+   "rm": "4 fenestras",
+   "en": "4 boxes",
+   "it": "4 riquadri",
+   "fr": "4 cadres",
+   "es": "4 recuadros"
+  },
+  "Schliessen": {
+   "rm": "Serrar",
+   "en": "Close",
+   "it": "Chiudi",
+   "fr": "Fermer",
+   "es": "Cerrar"
+  },
+  "Vorlage": {
+   "rm": "Model",
+   "en": "Template",
+   "it": "Modello",
+   "fr": "Modèle",
+   "es": "Plantilla"
+  },
+  "Drucken": {
+   "rm": "Stampar",
+   "en": "Print",
+   "it": "Stampa",
+   "fr": "Imprimer",
+   "es": "Imprimir"
+  },
+  "PDF herunterladen": {
+   "rm": "Telechargiar PDF",
+   "en": "Download PDF",
+   "it": "Scarica PDF",
+   "fr": "Télécharger le PDF",
+   "es": "Descargar PDF"
+  },
+  "Tipp: Im Druckdialog «Papierformat A5» und «Ränder: keine» wählen. Auf A4 gedruckt wird die Seite automatisch verkleinert.": {
+   "rm": "Tip: Tscherna el dialog da stampar «format da pupi A5» e «urs: negins». Stampau sin A4 vegn la pagina automaticamein empitschnida.",
+   "en": "Tip: In the print dialog, choose “paper size A5” and “margins: none”. Printed on A4, the page is scaled down automatically.",
+   "it": "Suggerimento: nella finestra di stampa scegli «formato carta A5» e «margini: nessuno». Su A4 la pagina viene ridotta automaticamente.",
+   "fr": "Astuce : dans la fenêtre d'impression, choisis « format A5 » et « marges : aucune ». Sur du A4, la page est réduite automatiquement.",
+   "es": "Consejo: en el cuadro de impresión elige «tamaño de papel A5» y «márgenes: ninguno». En A4 la página se reduce automáticamente."
+  },
+  "← Vorherige": {
+   "rm": "← Avon",
+   "en": "← Previous",
+   "it": "← Precedente",
+   "fr": "← Précédent",
+   "es": "← Anterior"
+  },
+  "Nächste →": {
+   "rm": "Proxim →",
+   "en": "Next →",
+   "it": "Successivo →",
+   "fr": "Suivant →",
+   "es": "Siguiente →"
+  },
+  "Was noch kommt:": {
+   "rm": "Quei che vegn:",
+   "en": "Coming soon:",
+   "it": "In arrivo:",
+   "fr": "À venir :",
+   "es": "Próximamente:"
+  },
+  "KI-Motive zum Nachzeichnen und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.": {
+   "rm": "Motivs KI per sedessegnar e memorisar tes parameters preferi. Questas funcziuns vegnan protegidas cun pled-clav.",
+   "en": "AI motifs to trace and saving your favourite settings. These features will be password-protected.",
+   "it": "Motivi IA da ricalcare e salvataggio delle tue impostazioni preferite. Queste funzioni saranno protette da password.",
+   "fr": "Des motifs IA à décalquer et l'enregistrement de tes réglages préférés. Ces fonctions seront protégées par un mot de passe.",
+   "es": "Motivos con IA para calcar y guardar tus ajustes favoritos. Estas funciones estarán protegidas con contraseña."
+  },
+  "Impressum": {
+   "rm": "Impressum",
+   "en": "Legal notice",
+   "it": "Note legali",
+   "fr": "Mentions légales",
+   "es": "Aviso legal"
+  },
+  "Datenschutz": {
+   "rm": "Protecziun da datas",
+   "en": "Privacy",
+   "it": "Protezione dei dati",
+   "fr": "Protection des données",
+   "es": "Privacidad"
+  },
+  "Datenschutz – MuggliOnline": {
+   "rm": "Protecziun da datas – MuggliOnline",
+   "en": "Privacy – MuggliOnline",
+   "it": "Protezione dei dati – MuggliOnline",
+   "fr": "Protection des données – MuggliOnline",
+   "es": "Privacidad – MuggliOnline"
+  },
+  "Datenschutzerklärung MuggliOnline.": {
+   "rm": "Decleraziun da protecziun da datas MuggliOnline.",
+   "en": "MuggliOnline privacy policy.",
+   "it": "Informativa sulla protezione dei dati di MuggliOnline.",
+   "fr": "Déclaration de protection des données MuggliOnline.",
+   "es": "Política de privacidad de MuggliOnline."
+  },
+  "› Datenschutz": {
+   "rm": "› Protecziun da datas",
+   "en": "› Privacy",
+   "it": "› Protezione dei dati",
+   "fr": "› Protection des données",
+   "es": "› Privacidad"
+  },
+  "Rechtliches": {
+   "rm": "Legal",
+   "en": "Legal",
+   "it": "Aspetti legali",
+   "fr": "Informations légales",
+   "es": "Información legal"
+  },
+  "Datenschutzerklärung": {
+   "rm": "Decleraziun da protecziun da datas",
+   "en": "Privacy policy",
+   "it": "Informativa sulla protezione dei dati",
+   "fr": "Déclaration de protection des données",
+   "es": "Política de privacidad"
+  },
+  "Wie auf dieser Website mit Daten umgegangen wird.": {
+   "rm": "Co quella website tracta datas.",
+   "en": "How this website handles data.",
+   "it": "Come questo sito tratta i dati.",
+   "fr": "Comment ce site traite les données.",
+   "es": "Cómo este sitio web trata los datos."
+  },
+  "Wird ergänzt.": {
+   "rm": "Vegn cumplettau.",
+   "en": "Coming soon.",
+   "it": "In preparazione.",
+   "fr": "À compléter.",
+   "es": "Próximamente."
+  },
+  "Didaktik Zyklus 2 – MuggliOnline": {
+   "rm": "Didactica ciclus 2 – MuggliOnline",
+   "en": "Didactics Cycle 2 – MuggliOnline",
+   "it": "Didattica 2° ciclo – MuggliOnline",
+   "fr": "Didactique cycle 2 – MuggliOnline",
+   "es": "Didáctica ciclo 2 – MuggliOnline"
+  },
+  "Hilfsmittel, Unterrichtsvorlagen und Zusammenfassungen für die Praxis, fachlich fundiert und direkt einsetzbar.": {
+   "rm": "Mieds d'agid, models d'instrucziun e resumaziuns per la pratica, fundai e directamein applicabels.",
+   "en": "Teaching aids, lesson templates and summaries for everyday practice, well-founded and ready to use.",
+   "it": "Strumenti, modelli di lezione e sintesi per la pratica, fondati e subito utilizzabili.",
+   "fr": "Outils, modèles de leçons et synthèses pour la pratique, solidement fondés et directement utilisables.",
+   "es": "Recursos, plantillas de clase y resúmenes para la práctica, bien fundamentados y listos para usar."
+  },
+  "› Didaktik": {
+   "rm": "› Didactica",
+   "en": "› Didactics",
+   "it": "› Didattica",
+   "fr": "› Didactique",
+   "es": "› Didáctica"
+  },
+  "Für Lehrpersonen": {
+   "rm": "Per persunas d'instrucziun",
+   "en": "For teachers",
+   "it": "Per docenti",
+   "fr": "Pour enseignant·e·s",
+   "es": "Para docentes"
+  },
+  "Didaktik Zyklus 2": {
+   "rm": "Didactica ciclus 2",
+   "en": "Didactics Cycle 2",
+   "it": "Didattica 2° ciclo",
+   "fr": "Didactique cycle 2",
+   "es": "Didáctica ciclo 2"
+  },
+  "Was hier entsteht": {
+   "rm": "Quei che vegn",
+   "en": "What's coming",
+   "it": "Cosa sta nascendo",
+   "fr": "Ce qui se prépare",
+   "es": "Lo que está en camino"
+  },
+  "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:": {
+   "rm": "Ils cuntegns sesbasan sin fontaunas scientificas. Planisau ein:",
+   "en": "The content is based on scientifically sound sources. Planned:",
+   "it": "I contenuti si basano su fonti scientificamente fondate. Previsti:",
+   "fr": "Les contenus s'appuient sur des sources scientifiquement fondées. Prévu :",
+   "es": "Los contenidos se basan en fuentes científicamente fundamentadas. Previsto:"
+  },
+  "In Vorbereitung": {
+   "rm": "En preparaziun",
+   "en": "In preparation",
+   "it": "In preparazione",
+   "fr": "En préparation",
+   "es": "En preparación"
+  },
+  "Hilfsmittel": {
+   "rm": "Mieds d'agid",
+   "en": "Teaching aids",
+   "it": "Strumenti",
+   "fr": "Outils",
+   "es": "Recursos"
+  },
+  "Praktische Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.": {
+   "rm": "Utensils pratics per planisar, realisar e reflectar l'instrucziun.",
+   "en": "Practical tools for planning, teaching and reflecting on lessons.",
+   "it": "Strumenti pratici per pianificare, svolgere e riflettere sulle lezioni.",
+   "fr": "Des outils pratiques pour planifier, conduire et analyser l'enseignement.",
+   "es": "Herramientas prácticas para planificar, impartir y reflexionar sobre las clases."
+  },
+  "Unterrichtsvorlagen": {
+   "rm": "Models d'instrucziun",
+   "en": "Lesson templates",
+   "it": "Modelli di lezione",
+   "fr": "Modèles de leçons",
+   "es": "Plantillas de clase"
+  },
+  "Vorlagen, die sich direkt an die eigene Klasse anpassen lassen.": {
+   "rm": "Models che san vegnir adattai directamein alla atgna classa.",
+   "en": "Templates you can adapt directly to your own class.",
+   "it": "Modelli che si adattano direttamente alla propria classe.",
+   "fr": "Des modèles à adapter directement à sa propre classe.",
+   "es": "Plantillas que se adaptan directamente a tu propia clase."
+  },
+  "Zusammenfassungen": {
+   "rm": "Resumaziuns",
+   "en": "Summaries",
+   "it": "Sintesi",
+   "fr": "Synthèses",
+   "es": "Resúmenes"
+  },
+  "Kompakte Zusammenfassungen zu didaktischen Themen, jeweils mit Quellenangaben.": {
+   "rm": "Resumaziuns cumpactas tier temas didactics, adina cun indicaziuns da fontaunas.",
+   "en": "Concise summaries of didactic topics, always with references.",
+   "it": "Sintesi compatte su temi didattici, sempre con le fonti.",
+   "fr": "Des synthèses concises sur des thèmes didactiques, toujours avec les sources.",
+   "es": "Resúmenes concisos sobre temas didácticos, siempre con referencias."
+  },
+  "Englisch für Lehrpersonen – MuggliOnline": {
+   "rm": "Englais per persunas d'instrucziun – MuggliOnline",
+   "en": "English for teachers – MuggliOnline",
+   "it": "Inglese per docenti – MuggliOnline",
+   "fr": "Anglais pour enseignant·e·s – MuggliOnline",
+   "es": "Inglés para docentes – MuggliOnline"
+  },
+  "Unterrichtsmaterialien, Vorlagen und Prüfungen für Basic English und Fachenglisch an Berufsschulen.": {
+   "rm": "Materials d'instrucziun, models ed examens per Basic English ed englais professiunal a scolas professiunalas.",
+   "en": "Teaching materials, templates and tests for Basic English and English for specific purposes at vocational schools.",
+   "it": "Materiali didattici, modelli e verifiche per Basic English e inglese tecnico nelle scuole professionali.",
+   "fr": "Matériel pédagogique, modèles et examens pour le Basic English et l'anglais professionnel en école professionnelle.",
+   "es": "Materiales didácticos, plantillas y exámenes de Basic English e inglés técnico para escuelas de formación profesional."
+  },
+  "› Für Lehrpersonen": {
+   "rm": "› Per persunas d'instrucziun",
+   "en": "› For teachers",
+   "it": "› Per docenti",
+   "fr": "› Pour enseignant·e·s",
+   "es": "› Para docentes"
+  },
+  "Englisch für Lehrpersonen": {
+   "rm": "Englais per persunas d'instrucziun",
+   "en": "English for teachers",
+   "it": "Inglese per docenti",
+   "fr": "Anglais pour enseignant·e·s",
+   "es": "Inglés para docentes"
+  },
+  "Hier entsteht eine Sammlung von erprobten Materialien für den eigenen Unterricht:": {
+   "rm": "Cheu nescha ina collecziun da materials empruvai per l'atgna instrucziun:",
+   "en": "A collection of tried-and-tested materials for your own lessons is being built here:",
+   "it": "Qui nasce una raccolta di materiali collaudati per le proprie lezioni:",
+   "fr": "Une collection de matériel éprouvé pour ses propres cours est en cours de création :",
+   "es": "Aquí se está creando una colección de materiales probados para tus propias clases:"
+  },
+  "Unterrichtsmaterialien": {
+   "rm": "Materials d'instrucziun",
+   "en": "Teaching materials",
+   "it": "Materiali didattici",
+   "fr": "Matériel pédagogique",
+   "es": "Materiales didácticos"
+  },
+  "Arbeitsblätter, Dialoge und Aufgaben zu verschiedenen Themen.": {
+   "rm": "Fegls da lavur, dialogs ed incumbensas tier differents temas.",
+   "en": "Worksheets, dialogues and tasks on various topics.",
+   "it": "Schede, dialoghi e compiti su vari temi.",
+   "fr": "Fiches de travail, dialogues et exercices sur différents thèmes.",
+   "es": "Fichas, diálogos y tareas sobre distintos temas."
+  },
+  "Vorlagen": {
+   "rm": "Models",
+   "en": "Templates",
+   "it": "Modelli",
+   "fr": "Modèles",
+   "es": "Plantillas"
+  },
+  "Vorlagen für Unterrichtsplanung, Aufträge und Bewertungsraster.": {
+   "rm": "Models per la planisaziun dall'instrucziun, incumbensas e rasters da valitaziun.",
+   "en": "Templates for lesson planning, assignments and assessment rubrics.",
+   "it": "Modelli per la pianificazione, i compiti e le griglie di valutazione.",
+   "fr": "Modèles pour la planification, les consignes et les grilles d'évaluation.",
+   "es": "Plantillas para planificar clases, encargos y rúbricas de evaluación."
+  },
+  "Prüfungen": {
+   "rm": "Examens",
+   "en": "Tests",
+   "it": "Verifiche",
+   "fr": "Examens",
+   "es": "Exámenes"
+  },
+  "Prüfungen und Probeprüfungen mit Lösungen und Bewertungshinweisen.": {
+   "rm": "Examens ed examens da prova cun soluziuns ed indicaziuns da valitaziun.",
+   "en": "Tests and practice tests with answers and marking guidance.",
+   "it": "Verifiche e verifiche di prova con soluzioni e criteri di valutazione.",
+   "fr": "Examens et examens blancs avec corrigés et indications d'évaluation.",
+   "es": "Exámenes y simulacros con soluciones y criterios de evaluación."
+  },
+  "Englisch für Lernende – MuggliOnline": {
+   "rm": "Englais per emprendists – MuggliOnline",
+   "en": "English for learners – MuggliOnline",
+   "it": "Inglese per allievi – MuggliOnline",
+   "fr": "Anglais pour apprenant·e·s – MuggliOnline",
+   "es": "Inglés para estudiantes – MuggliOnline"
+  },
+  "Übungen mit direkter Rückmeldung: Du schreibst deine Antworten hinein und siehst sofort, ob sie stimmen.": {
+   "rm": "Exercizis cun resposta directa: Ti scrivas tias rispostas e vesas immediat sch'ellas ein endretg.",
+   "en": "Exercises with instant feedback: type in your answers and see right away whether they are correct.",
+   "it": "Esercizi con riscontro immediato: scrivi le tue risposte e vedi subito se sono giuste.",
+   "fr": "Exercices avec retour immédiat : tu écris tes réponses et tu vois tout de suite si elles sont justes.",
+   "es": "Ejercicios con corrección inmediata: escribe tus respuestas y comprueba al instante si son correctas."
+  },
+  "› Für Lernende": {
+   "rm": "› Per emprendists",
+   "en": "› For learners",
+   "it": "› Per allievi",
+   "fr": "› Pour apprenant·e·s",
+   "es": "› Para estudiantes"
+  },
+  "Englisch für Lernende": {
+   "rm": "Englais per emprendists",
+   "en": "English for learners",
+   "it": "Inglese per allievi",
+   "fr": "Anglais pour apprenant·e·s",
+   "es": "Inglés para estudiantes"
+  },
+  "Die Übungen werden laufend aufgebaut. Geplant sind diese Bereiche:": {
+   "rm": "Ils exercizis vegnan construi cuntinuadamein. Planisau ein quels secturs:",
+   "en": "The exercises are being built step by step. These areas are planned:",
+   "it": "Gli esercizi vengono sviluppati man mano. Sono previste queste aree:",
+   "fr": "Les exercices sont développés au fur et à mesure. Ces domaines sont prévus :",
+   "es": "Los ejercicios se van ampliando poco a poco. Están previstas estas áreas:"
+  },
+  "Grundlagen in kleinen Schritten, mit Sofortkontrolle.": {
+   "rm": "Fundaments en pigns pass, cun controlla immediata.",
+   "en": "The basics in small steps, with instant checking.",
+   "it": "Le basi a piccoli passi, con verifica immediata.",
+   "fr": "Les bases pas à pas, avec vérification immédiate.",
+   "es": "Lo básico paso a paso, con corrección inmediata."
+  },
+  "Grammatik-Übungen und Lückentexte": {
+   "rm": "Exercizis da grammatica e texts cun largias",
+   "en": "Grammar exercises and gap-fill texts",
+   "it": "Esercizi di grammatica e testi lacunosi",
+   "fr": "Exercices de grammaire et textes à trous",
+   "es": "Ejercicios de gramática y textos para completar"
+  },
+  "Wortschatz": {
+   "rm": "Vocabulari",
+   "en": "Vocabulary",
+   "it": "Lessico",
+   "fr": "Vocabulaire",
+   "es": "Vocabulario"
+  },
+  "Writing-Aufgaben mit Checklisten": {
+   "rm": "Incumbensas da scriver cun glistas da controlla",
+   "en": "Writing tasks with checklists",
+   "it": "Compiti di scrittura con liste di controllo",
+   "fr": "Tâches d'écriture avec listes de contrôle",
+   "es": "Tareas de escritura con listas de control"
+  },
+  "Fachenglisch Maschinenbau": {
+   "rm": "Englais professiunal mecanica",
+   "en": "English for mechanical engineering",
+   "it": "Inglese tecnico per la meccanica",
+   "fr": "Anglais professionnel en mécanique",
+   "es": "Inglés técnico para mecánica"
+  },
+  "Fachwortschatz und Texte aus dem Berufsalltag.": {
+   "rm": "Vocabulari professiunal e texts ord la veta da lavur.",
+   "en": "Technical vocabulary and texts from everyday working life.",
+   "it": "Lessico tecnico e testi dalla vita professionale.",
+   "fr": "Vocabulaire technique et textes tirés du quotidien professionnel.",
+   "es": "Vocabulario técnico y textos del día a día laboral."
+  },
+  "Vokabeltrainer": {
+   "rm": "Trenader da vocabulari",
+   "en": "Vocabulary trainer",
+   "it": "Allenatore di lessico",
+   "fr": "Entraîneur de vocabulaire",
+   "es": "Entrenador de vocabulario"
+  },
+  "Leseverständnis": {
+   "rm": "Capientscha da texts",
+   "en": "Reading comprehension",
+   "it": "Comprensione della lettura",
+   "fr": "Compréhension écrite",
+   "es": "Comprensión lectora"
+  },
+  "Lückentexte": {
+   "rm": "Texts cun largias",
+   "en": "Gap-fill texts",
+   "it": "Testi lacunosi",
+   "fr": "Textes à trous",
+   "es": "Textos para completar"
+  },
+  "Fachenglisch Mediamatik": {
+   "rm": "Englais professiunal mediamatica",
+   "en": "English for mediamatics",
+   "it": "Inglese tecnico per la mediamatica",
+   "fr": "Anglais professionnel en médiamatique",
+   "es": "Inglés técnico para mediamática"
+  },
+  "Englisch rund um Medien, Design und Kommunikation.": {
+   "rm": "Englais per medias, design e communicaziun.",
+   "en": "English for media, design and communication.",
+   "it": "Inglese per media, design e comunicazione.",
+   "fr": "L'anglais des médias, du design et de la communication.",
+   "es": "Inglés para medios, diseño y comunicación."
+  },
+  "Fachenglisch Informatik": {
+   "rm": "Englais professiunal informatica",
+   "en": "English for IT",
+   "it": "Inglese tecnico per l'informatica",
+   "fr": "Anglais professionnel en informatique",
+   "es": "Inglés técnico para informática"
+  },
+  "Englisch für IT, Netzwerke und Software.": {
+   "rm": "Englais per IT, reits e software.",
+   "en": "English for IT, networks and software.",
+   "it": "Inglese per IT, reti e software.",
+   "fr": "L'anglais de l'informatique, des réseaux et des logiciels.",
+   "es": "Inglés para TI, redes y software."
+  },
+  "Englisch – MuggliOnline": {
+   "rm": "Englais – MuggliOnline",
+   "en": "English – MuggliOnline",
+   "it": "Inglese – MuggliOnline",
+   "fr": "Anglais – MuggliOnline",
+   "es": "Inglés – MuggliOnline"
+  },
+  "Englisch für Lernende und Lehrpersonen.": {
+   "rm": "Englais per emprendists e persunas d'instrucziun.",
+   "en": "English for learners and teachers.",
+   "it": "Inglese per allievi e docenti.",
+   "fr": "Anglais pour apprenant·e·s et enseignant·e·s.",
+   "es": "Inglés para estudiantes y docentes."
+  },
+  "› Englisch": {
+   "rm": "› Englais",
+   "en": "› English",
+   "it": "› Inglese",
+   "fr": "› Anglais",
+   "es": "› Inglés"
+  },
+  "Für Lehrpersonen und Lernende": {
+   "rm": "Per persunas d'instrucziun ed emprendists",
+   "en": "For teachers and learners",
+   "it": "Per docenti e allievi",
+   "fr": "Pour enseignant·e·s et apprenant·e·s",
+   "es": "Para docentes y estudiantes"
+  },
+  "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.": {
+   "rm": "Exercizis per emprendists e materials per persunas d'instrucziun, da Basic English tochen englais professiunal a scolas professiunalas.",
+   "en": "Exercises for learners and materials for teachers, from Basic English to English for specific purposes at vocational schools.",
+   "it": "Esercizi per allievi e materiali per docenti, dal Basic English all'inglese tecnico nelle scuole professionali.",
+   "fr": "Exercices pour apprenant·e·s et matériel pour enseignant·e·s, du Basic English à l'anglais professionnel en école professionnelle.",
+   "es": "Ejercicios para estudiantes y materiales para docentes, desde Basic English hasta inglés técnico en la formación profesional."
+  },
+  "Wähle deinen Bereich": {
+   "rm": "Tscherna tiu sectur",
+   "en": "Choose your area",
+   "it": "Scegli la tua area",
+   "fr": "Choisis ton domaine",
+   "es": "Elige tu área"
+  },
+  "Der Englisch-Bereich ist in zwei Teile gegliedert.": {
+   "rm": "Il sectur d'englais ei partius en duas parts.",
+   "en": "The English section is divided into two parts.",
+   "it": "L'area di inglese è suddivisa in due parti.",
+   "fr": "L'espace anglais est divisé en deux parties.",
+   "es": "El área de inglés se divide en dos partes."
+  },
+  "Englisch für Lehrpersonen →": {
+   "rm": "Englais per persunas d'instrucziun →",
+   "en": "English for teachers →",
+   "it": "Inglese per docenti →",
+   "fr": "Anglais pour enseignant·e·s →",
+   "es": "Inglés para docentes →"
+  },
+  "Unterrichtsmaterialien, Vorlagen und Prüfungen für den eigenen Englischunterricht.": {
+   "rm": "Materials d'instrucziun, models ed examens per l'atgna instrucziun d'englais.",
+   "en": "Teaching materials, templates and tests for your own English lessons.",
+   "it": "Materiali didattici, modelli e verifiche per le proprie lezioni di inglese.",
+   "fr": "Matériel pédagogique, modèles et examens pour ses propres cours d'anglais.",
+   "es": "Materiales, plantillas y exámenes para tus propias clases de inglés."
+  },
+  "Englisch für Lernende →": {
+   "rm": "Englais per emprendists →",
+   "en": "English for learners →",
+   "it": "Inglese per allievi →",
+   "fr": "Anglais pour apprenant·e·s →",
+   "es": "Inglés para estudiantes →"
+  },
+  "Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.": {
+   "rm": "Exercizis online cun resposta directa tier Basic English, grammatica, writing ed englais professiunal.",
+   "en": "Online exercises with instant feedback on Basic English, grammar, writing and English for specific purposes.",
+   "it": "Esercizi online con riscontro immediato su Basic English, grammatica, writing e inglese tecnico.",
+   "fr": "Exercices en ligne avec retour immédiat : Basic English, grammaire, writing et anglais professionnel.",
+   "es": "Ejercicios en línea con corrección inmediata de Basic English, gramática, writing e inglés técnico."
+  },
+  "Impressum – MuggliOnline": {
+   "rm": "Impressum – MuggliOnline",
+   "en": "Legal notice – MuggliOnline",
+   "it": "Note legali – MuggliOnline",
+   "fr": "Mentions légales – MuggliOnline",
+   "es": "Aviso legal – MuggliOnline"
+  },
+  "Impressum MuggliOnline.": {
+   "rm": "Impressum MuggliOnline.",
+   "en": "MuggliOnline legal notice.",
+   "it": "Note legali di MuggliOnline.",
+   "fr": "Mentions légales MuggliOnline.",
+   "es": "Aviso legal de MuggliOnline."
+  },
+  "› Impressum": {
+   "rm": "› Impressum",
+   "en": "› Legal notice",
+   "it": "› Note legali",
+   "fr": "› Mentions légales",
+   "es": "› Aviso legal"
+  },
+  "Angaben zur verantwortlichen Person dieser Website.": {
+   "rm": "Indicaziuns davart la persuna responsabla da questa website.",
+   "en": "Information about the person responsible for this website.",
+   "it": "Informazioni sulla persona responsabile di questo sito.",
+   "fr": "Informations sur la personne responsable de ce site.",
+   "es": "Información sobre la persona responsable de este sitio web."
+  },
+  "MuggliOnline – Materialien und Werkzeuge für gutes Lernen": {
+   "rm": "MuggliOnline – Materials ed utensils per bien emprender",
+   "en": "MuggliOnline – Materials and tools for good learning",
+   "it": "MuggliOnline – Materiali e strumenti per imparare bene",
+   "fr": "MuggliOnline – Matériel et outils pour bien apprendre",
+   "es": "MuggliOnline – Materiales y herramientas para aprender bien"
+  },
+  "Unterrichtsmaterialien, Online-Übungen und didaktische Hilfsmittel für Lernende und Lehrpersonen.": {
+   "rm": "Materials d'instrucziun, exercizis online e mieds d'agid didactics per emprendists e persunas d'instrucziun.",
+   "en": "Teaching materials, online exercises and didactic tools for learners and teachers.",
+   "it": "Materiali didattici, esercizi online e strumenti didattici per allievi e docenti.",
+   "fr": "Matériel pédagogique, exercices en ligne et outils didactiques pour apprenant·e·s et enseignant·e·s.",
+   "es": "Materiales didácticos, ejercicios en línea y recursos didácticos para estudiantes y docentes."
+  },
+  "Lernen verstehen,": {
+   "rm": "Capir igl emprender,",
+   "en": "Understanding learning,",
+   "it": "Comprendere l'apprendimento,",
+   "fr": "Comprendre l'apprentissage,",
+   "es": "Comprender el aprendizaje,"
+  },
+  "Lehren gestalten,": {
+   "rm": "Concepir l'instrucziun,",
+   "en": "shaping teaching,",
+   "it": "dare forma all'insegnamento,",
+   "fr": "façonner l'enseignement,",
+   "es": "dar forma a la enseñanza,"
+  },
+  "Zukunft mitprägen.": {
+   "rm": "Cunfurmar il futur.",
+   "en": "helping shape the future.",
+   "it": "contribuire a plasmare il futuro.",
+   "fr": "contribuer à façonner l'avenir.",
+   "es": "contribuir a construir el futuro."
+  },
+  "MuggliOnline bündelt Unterrichtsmaterialien, Online-Übungen mit direkter Rückmeldung und didaktische Hilfsmittel. Für Lernende, die selbstständig üben möchten, und für Lehrpersonen, die guten Unterricht planen.": {
+   "rm": "MuggliOnline unescha materials d'instrucziun, exercizis online cun resposta directa e mieds d'agid didactics. Per emprendists che vulan exercitar persulets, e per persunas d'instrucziun che planiseschan buna instrucziun.",
+   "en": "MuggliOnline brings together teaching materials, online exercises with instant feedback and didactic tools. For learners who want to practise independently and for teachers who plan good lessons.",
+   "it": "MuggliOnline riunisce materiali didattici, esercizi online con riscontro immediato e strumenti didattici. Per allievi che vogliono esercitarsi in autonomia e per docenti che progettano lezioni di qualità.",
+   "fr": "MuggliOnline réunit du matériel pédagogique, des exercices en ligne avec retour immédiat et des outils didactiques. Pour les apprenant·e·s qui veulent s'exercer en autonomie et pour les enseignant·e·s qui préparent de bons cours.",
+   "es": "MuggliOnline reúne materiales didácticos, ejercicios en línea con corrección inmediata y recursos didácticos. Para estudiantes que quieren practicar de forma autónoma y para docentes que planifican buenas clases."
+  },
+  "Bereiche entdecken": {
+   "rm": "Scuvrir ils secturs",
+   "en": "Explore the areas",
+   "it": "Scopri le aree",
+   "fr": "Découvrir les domaines",
+   "es": "Descubrir las áreas"
+  },
+  "Meine Vision": {
+   "rm": "Mia visiun",
+   "en": "My vision",
+   "it": "La mia visione",
+   "fr": "Ma vision",
+   "es": "Mi visión"
+  },
+  "Platzhalter für Porträtfoto": {
+   "rm": "Plazza per la fotografia",
+   "en": "Placeholder for portrait photo",
+   "it": "Spazio per la foto ritratto",
+   "fr": "Emplacement pour la photo de portrait",
+   "es": "Espacio para la foto de retrato"
+  },
+  "Dozentin Erziehungswissenschaften · Englischlehrperson": {
+   "rm": "Docenta da scienzas d'educaziun · Scolasta d'englais",
+   "en": "Lecturer in Educational Science · English teacher",
+   "it": "Docente di scienze dell'educazione · Insegnante di inglese",
+   "fr": "Chargée de cours en sciences de l'éducation · Enseignante d'anglais",
+   "es": "Profesora de Ciencias de la Educación · Profesora de inglés"
+  },
+  "Materialien und Werkzeuge": {
+   "rm": "Materials ed utensils",
+   "en": "Materials and tools",
+   "it": "Materiali e strumenti",
+   "fr": "Matériel et outils",
+   "es": "Materiales y herramientas"
+  },
+  "für gutes Lehren und Lernen": {
+   "rm": "per bien instruir ed emprender",
+   "en": "for good teaching and learning",
+   "it": "per insegnare e imparare bene",
+   "fr": "pour bien enseigner et apprendre",
+   "es": "para enseñar y aprender bien"
+  },
+  "Fünf Bereiche für Lehrpersonen und Lernende. Die Inhalte wachsen laufend.": {
+   "rm": "Tschun secturs per persunas d'instrucziun ed emprendists. Ils cuntegns creschan cuntinuadamein.",
+   "en": "Five areas for teachers and learners. The content keeps growing.",
+   "it": "Cinque aree per docenti e allievi. I contenuti crescono continuamente.",
+   "fr": "Cinq domaines pour enseignant·e·s et apprenant·e·s. Les contenus s'enrichissent au fil du temps.",
+   "es": "Cinco áreas para docentes y estudiantes. Los contenidos crecen continuamente."
+  },
+  "Unterrichtsmaterialien, Vorlagen und Prüfungen für Basic English und Fachenglisch an Berufsschulen, bereit für den eigenen Unterricht.": {
+   "rm": "Materials d'instrucziun, models ed examens per Basic English ed englais professiunal a scolas professiunalas, promts per l'atgna instrucziun.",
+   "en": "Teaching materials, templates and tests for Basic English and English for specific purposes at vocational schools, ready for your own lessons.",
+   "it": "Materiali didattici, modelli e verifiche per Basic English e inglese tecnico nelle scuole professionali, pronti per le proprie lezioni.",
+   "fr": "Matériel pédagogique, modèles et examens pour le Basic English et l'anglais professionnel en école professionnelle, prêts pour vos propres cours.",
+   "es": "Materiales didácticos, plantillas y exámenes de Basic English e inglés técnico para la formación profesional, listos para tus propias clases."
+  },
+  "Unterrichtsmaterial": {
+   "rm": "Material d'instrucziun",
+   "en": "Teaching material",
+   "it": "Materiale didattico",
+   "fr": "Matériel pédagogique",
+   "es": "Material didáctico"
+  },
+  "Fachenglisch": {
+   "rm": "Englais professiunal",
+   "en": "English for specific purposes",
+   "it": "Inglese tecnico",
+   "fr": "Anglais professionnel",
+   "es": "Inglés técnico"
+  },
+  "Zu den Materialien →": {
+   "rm": "Tier ils materials →",
+   "en": "To the materials →",
+   "it": "Ai materiali →",
+   "fr": "Vers le matériel →",
+   "es": "A los materiales →"
+  },
+  "Übungen mit direkter Rückmeldung: Basic English inklusive Grammatik und Writing sowie Fachenglisch für Berufsschulen.": {
+   "rm": "Exercizis cun resposta directa: Basic English cun grammatica e writing sco era englais professiunal per scolas professiunalas.",
+   "en": "Exercises with instant feedback: Basic English including grammar and writing, plus English for specific purposes at vocational schools.",
+   "it": "Esercizi con riscontro immediato: Basic English con grammatica e writing, oltre all'inglese tecnico per le scuole professionali.",
+   "fr": "Exercices avec retour immédiat : Basic English avec grammaire et writing, ainsi que l'anglais professionnel pour les écoles professionnelles.",
+   "es": "Ejercicios con corrección inmediata: Basic English con gramática y writing, además de inglés técnico para la formación profesional."
+  },
+  "Grammatik": {
+   "rm": "Grammatica",
+   "en": "Grammar",
+   "it": "Grammatica",
+   "fr": "Grammaire",
+   "es": "Gramática"
+  },
+  "Maschinenbau": {
+   "rm": "Mecanica",
+   "en": "Mechanical engineering",
+   "it": "Meccanica",
+   "fr": "Mécanique",
+   "es": "Mecánica"
+  },
+  "Mediamatik": {
+   "rm": "Mediamatica",
+   "en": "Mediamatics",
+   "it": "Mediamatica",
+   "fr": "Médiamatique",
+   "es": "Mediamática"
+  },
+  "Informatik": {
+   "rm": "Informatica",
+   "en": "IT",
+   "it": "Informatica",
+   "fr": "Informatique",
+   "es": "Informática"
+  },
+  "Zu den Übungen →": {
+   "rm": "Tier ils exercizis →",
+   "en": "To the exercises →",
+   "it": "Agli esercizi →",
+   "fr": "Vers les exercices →",
+   "es": "A los ejercicios →"
+  },
+  "Zum Didaktik-Bereich →": {
+   "rm": "Tier il sectur da didactica →",
+   "en": "To the didactics area →",
+   "it": "All'area di didattica →",
+   "fr": "Vers l'espace didactique →",
+   "es": "Al área de didáctica →"
+  },
+  "6. Klasse und Oberstufe": {
+   "rm": "6avla classa e scalem superiur",
+   "en": "Grade 6 and lower secondary",
+   "it": "6ª classe e scuola media",
+   "fr": "6e année (8H) et secondaire I",
+   "es": "6.º curso y secundaria"
+  },
+  "Probeprüfungen und Übungen zur Vorbereitung auf Prüfungen in verschiedenen Themen, mit Lösungen zur Selbstkontrolle.": {
+   "rm": "Examens da prova ed exercizis per sepreparar sin examens tier differents temas, cun soluziuns per sezs controllar.",
+   "en": "Practice tests and exercises to prepare for exams on various topics, with answers for self-checking.",
+   "it": "Verifiche di prova ed esercizi per prepararsi agli esami su vari temi, con soluzioni per l'autocorrezione.",
+   "fr": "Examens blancs et exercices pour préparer les examens sur différents thèmes, avec corrigés pour s'autoévaluer.",
+   "es": "Simulacros de examen y ejercicios para preparar exámenes de distintos temas, con soluciones para autocorregirse."
+  },
+  "Probeprüfungen": {
+   "rm": "Examens da prova",
+   "en": "Practice tests",
+   "it": "Verifiche di prova",
+   "fr": "Examens blancs",
+   "es": "Simulacros de examen"
+  },
+  "Prüfungsvorbereitung": {
+   "rm": "Preparaziun sin examens",
+   "en": "Exam preparation",
+   "it": "Preparazione agli esami",
+   "fr": "Préparation aux examens",
+   "es": "Preparación de exámenes"
+  },
+  "Übungen": {
+   "rm": "Exercizis",
+   "en": "Exercises",
+   "it": "Esercizi",
+   "fr": "Exercices",
+   "es": "Ejercicios"
+  },
+  "Zu den Prüfungsübungen →": {
+   "rm": "Tier ils exercizis d'examen →",
+   "en": "To the exam practice →",
+   "it": "Agli esercizi d'esame →",
+   "fr": "Vers les exercices d'examen →",
+   "es": "A los ejercicios de examen →"
+  },
+  "Werkzeuge": {
+   "rm": "Utensils",
+   "en": "Tools",
+   "it": "Strumenti",
+   "fr": "Outils",
+   "es": "Herramientas"
+  },
+  "Kleine Web-Apps für Schule und Alltag, zum Beispiel die Bullet-Journal-Werkstatt. Einzelne Apps nutzen KI und sind passwortgeschützt.": {
+   "rm": "Pintgas web-apps per scola e mintgadi, per exempel l'ufficina da Bullet Journal. Singulas apps duvran KI e ein protegidas cun pled-clav.",
+   "en": "Small web apps for school and everyday life, such as the bullet journal workshop. Some apps use AI and are password-protected.",
+   "it": "Piccole web app per la scuola e la vita quotidiana, ad esempio l'officina del bullet journal. Alcune app usano l'IA e sono protette da password.",
+   "fr": "De petites applis web pour l'école et le quotidien, comme l'atelier bullet journal. Certaines applis utilisent l'IA et sont protégées par un mot de passe.",
+   "es": "Pequeñas apps web para la escuela y el día a día, como el taller de bullet journal. Algunas usan IA y están protegidas con contraseña."
+  },
+  "KI-Apps": {
+   "rm": "Apps KI",
+   "en": "AI apps",
+   "it": "App IA",
+   "fr": "Applis IA",
+   "es": "Apps con IA"
+  },
+  "Zur Werkstatt →": {
+   "rm": "Tier l'ufficina →",
+   "en": "To the workshop →",
+   "it": "All'officina →",
+   "fr": "Vers l'atelier →",
+   "es": "Al taller →"
+  },
+  "Kontakt – MuggliOnline": {
+   "rm": "Contact – MuggliOnline",
+   "en": "Contact – MuggliOnline",
+   "it": "Contatto – MuggliOnline",
+   "fr": "Contact – MuggliOnline",
+   "es": "Contacto – MuggliOnline"
+  },
+  "Kontakt zu Dr. Anja Muggli.": {
+   "rm": "Contact cun dr. Anja Muggli.",
+   "en": "Get in touch with Dr Anja Muggli.",
+   "it": "Contatta la dott.ssa Anja Muggli.",
+   "fr": "Contacter Dr Anja Muggli.",
+   "es": "Contacta con la Dra. Anja Muggli."
+  },
+  "› Kontakt": {
+   "rm": "› Contact",
+   "en": "› Contact",
+   "it": "› Contatto",
+   "fr": "› Contact",
+   "es": "› Contacto"
+  },
+  "Fragen, Anregungen oder Interesse an einer Zusammenarbeit? Ich freue mich auf deine Nachricht.": {
+   "rm": "Damondas, impuls ni interess per ina collaboraziun? Jeu selegrel sin tes messadi.",
+   "en": "Questions, ideas or interested in working together? I look forward to your message.",
+   "it": "Domande, spunti o interesse per una collaborazione? Attendo con piacere il tuo messaggio.",
+   "fr": "Des questions, des idées ou envie de collaborer ? Je me réjouis de ton message.",
+   "es": "¿Preguntas, ideas o interés en colaborar? Espero tu mensaje con ilusión."
+  },
+  "Folgt": {
+   "rm": "Suonda",
+   "en": "Coming soon",
+   "it": "In arrivo",
+   "fr": "Bientôt",
+   "es": "Próximamente"
+  },
+  "E-Mail": {
+   "rm": "E-mail",
+   "en": "Email",
+   "it": "E-mail",
+   "fr": "E-mail",
+   "es": "Correo electrónico"
+  },
+  "Die E-Mail-Adresse wird hier bald ergänzt.": {
+   "rm": "L'adressa d'e-mail vegn cumplettada cheu prest.",
+   "en": "The email address will be added here soon.",
+   "it": "L'indirizzo e-mail verrà aggiunto qui a breve.",
+   "fr": "L'adresse e-mail sera bientôt ajoutée ici.",
+   "es": "La dirección de correo se añadirá aquí pronto."
+  },
+  "Der Link zu meinem LinkedIn-Profil wird hier bald ergänzt.": {
+   "rm": "La colligiaziun cun miu profil da LinkedIn vegn cumplettada cheu prest.",
+   "en": "The link to my LinkedIn profile will be added here soon.",
+   "it": "Il link al mio profilo LinkedIn verrà aggiunto qui a breve.",
+   "fr": "Le lien vers mon profil LinkedIn sera bientôt ajouté ici.",
+   "es": "El enlace a mi perfil de LinkedIn se añadirá aquí pronto."
+  },
+  "Für Lernende – MuggliOnline": {
+   "rm": "Per emprendists – MuggliOnline",
+   "en": "For learners – MuggliOnline",
+   "it": "Per allievi – MuggliOnline",
+   "fr": "Pour apprenant·e·s – MuggliOnline",
+   "es": "Para estudiantes – MuggliOnline"
+  },
+  "Hier kannst du dich gezielt auf Prüfungen vorbereiten. Geplant sind:": {
+   "rm": "Cheu sas ti sepreparar sin examens. Planisau ein:",
+   "en": "Here you can prepare for exams in a targeted way. Planned:",
+   "it": "Qui puoi prepararti in modo mirato agli esami. Previsti:",
+   "fr": "Ici, tu peux te préparer de façon ciblée aux examens. Prévu :",
+   "es": "Aquí puedes prepararte para los exámenes de forma específica. Previsto:"
+  },
+  "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen.": {
+   "rm": "Examens per exercitar sut cundiziuns realas, cun soluziuns.",
+   "en": "Tests to practise under real conditions, with answers.",
+   "it": "Verifiche per esercitarsi in condizioni reali, con soluzioni.",
+   "fr": "Des examens pour s'entraîner en conditions réelles, avec corrigés.",
+   "es": "Exámenes para practicar en condiciones reales, con soluciones."
+  },
+  "Übungsserien": {
+   "rm": "Seria d'exercizis",
+   "en": "Exercise sets",
+   "it": "Serie di esercizi",
+   "fr": "Séries d'exercices",
+   "es": "Series de ejercicios"
+  },
+  "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen.": {
+   "rm": "Exercizis curts tier singuls temas, per serrar largias.",
+   "en": "Short exercises on individual topics to close gaps.",
+   "it": "Brevi esercizi su singoli temi per colmare le lacune.",
+   "fr": "De courts exercices sur des thèmes précis pour combler les lacunes.",
+   "es": "Ejercicios breves sobre temas concretos para cerrar lagunas."
+  },
+  "Selbstkontrolle": {
+   "rm": "Controlla persunala",
+   "en": "Self-check",
+   "it": "Autocorrezione",
+   "fr": "Autoévaluation",
+   "es": "Autocorrección"
+  },
+  "Lösungen und Tipps, damit du selbst überprüfen kannst, wo du stehst.": {
+   "rm": "Soluziuns e tips, aschia che ti sas controllar sez nua che ti stas.",
+   "en": "Answers and tips so you can check where you stand.",
+   "it": "Soluzioni e consigli per verificare da solo a che punto sei.",
+   "fr": "Corrigés et conseils pour vérifier toi-même où tu en es.",
+   "es": "Soluciones y consejos para que compruebes tú mismo en qué punto estás."
+  },
+  "Über Anja – MuggliOnline": {
+   "rm": "Davart Anja – MuggliOnline",
+   "en": "About Anja – MuggliOnline",
+   "it": "Su Anja – MuggliOnline",
+   "fr": "À propos d'Anja – MuggliOnline",
+   "es": "Sobre Anja – MuggliOnline"
+  },
+  "Über Dr. Anja Muggli.": {
+   "rm": "Davart dr. Anja Muggli.",
+   "en": "About Dr Anja Muggli.",
+   "it": "Sulla dott.ssa Anja Muggli.",
+   "fr": "À propos de Dr Anja Muggli.",
+   "es": "Sobre la Dra. Anja Muggli."
+  },
+  "› Über Anja": {
+   "rm": "› Davart Anja",
+   "en": "› About Anja",
+   "it": "› Su Anja",
+   "fr": "› À propos d'Anja",
+   "es": "› Sobre Anja"
+  },
+  "Über mich": {
+   "rm": "Davart mei",
+   "en": "About me",
+   "it": "Chi sono",
+   "fr": "À propos de moi",
+   "es": "Sobre mí"
+  },
+  "Werdegang": {
+   "rm": "Carriera",
+   "en": "Background",
+   "it": "Percorso",
+   "fr": "Parcours",
+   "es": "Trayectoria"
+  },
+  "Text folgt.": {
+   "rm": "Text suonda.",
+   "en": "Text coming soon.",
+   "it": "Testo in arrivo.",
+   "fr": "Texte à venir.",
+   "es": "Texto próximamente."
+  },
+  "Schwerpunkte": {
+   "rm": "Puncts centrals",
+   "en": "Focus areas",
+   "it": "Ambiti principali",
+   "fr": "Domaines de prédilection",
+   "es": "Áreas de interés"
+  },
+  "Aktuelle Tätigkeiten": {
+   "rm": "Activitads actualas",
+   "en": "Current activities",
+   "it": "Attività attuali",
+   "fr": "Activités actuelles",
+   "es": "Actividades actuales"
+  },
+  "Kontakt aufnehmen": {
+   "rm": "Prender contact",
+   "en": "Get in touch",
+   "it": "Contattami",
+   "fr": "Prendre contact",
+   "es": "Ponte en contacto"
+  },
+  "Vision – MuggliOnline": {
+   "rm": "Visiun – MuggliOnline",
+   "en": "Vision – MuggliOnline",
+   "it": "Visione – MuggliOnline",
+   "fr": "Vision – MuggliOnline",
+   "es": "Visión – MuggliOnline"
+  },
+  "Lernen verstehen, Lehren gestalten, Zukunft mitprägen: die Vision hinter MuggliOnline.": {
+   "rm": "Capir igl emprender, concepir l'instrucziun, cunfurmar il futur: la visiun davos MuggliOnline.",
+   "en": "Understanding learning, shaping teaching, helping shape the future: the vision behind MuggliOnline.",
+   "it": "Comprendere l'apprendimento, dare forma all'insegnamento, contribuire a plasmare il futuro: la visione dietro MuggliOnline.",
+   "fr": "Comprendre l'apprentissage, façonner l'enseignement, contribuer à façonner l'avenir : la vision de MuggliOnline.",
+   "es": "Comprender el aprendizaje, dar forma a la enseñanza, contribuir a construir el futuro: la visión de MuggliOnline."
+  },
+  "› Vision": {
+   "rm": "› Visiun",
+   "en": "› Vision",
+   "it": "› Visione",
+   "fr": "› Vision",
+   "es": "› Visión"
+  },
+  "Lernen verstehen, Lehren gestalten, Zukunft mitprägen. Was ich mit MuggliOnline erreichen möchte.": {
+   "rm": "Capir igl emprender, concepir l'instrucziun, cunfurmar il futur. Quei che jeu vuless cuntonscher cun MuggliOnline.",
+   "en": "Understanding learning, shaping teaching, helping shape the future. What I want to achieve with MuggliOnline.",
+   "it": "Comprendere l'apprendimento, dare forma all'insegnamento, contribuire a plasmare il futuro. Ciò che voglio realizzare con MuggliOnline.",
+   "fr": "Comprendre l'apprentissage, façonner l'enseignement, contribuer à façonner l'avenir. Ce que je souhaite accomplir avec MuggliOnline.",
+   "es": "Comprender el aprendizaje, dar forma a la enseñanza, contribuir a construir el futuro. Lo que quiero lograr con MuggliOnline."
+  },
+  "Lernen verstehen": {
+   "rm": "Capir igl emprender",
+   "en": "Understanding learning",
+   "it": "Comprendere l'apprendimento",
+   "fr": "Comprendre l'apprentissage",
+   "es": "Comprender el aprendizaje"
+  },
+  "Wie lernen Menschen? Was weckt ihre Neugier, was hilft ihnen weiter und wo entstehen Hindernisse? Diese Fragen stehen im Zentrum meiner Arbeit. Ich möchte Lernprozesse besser verstehen und dieses Wissen für Lehrpersonen und Lernende zugänglich machen.": {
+   "rm": "Co emprendan carstgauns? Tgei sveglia lur curiositad, tgei gida els vinavon e nua naschan impediments? Questas damondas stattan el center da mia lavur. Jeu vuless capir meglier ils process d'emprender e render quella savida accessibla per persunas d'instrucziun ed emprendists.",
+   "en": "How do people learn? What sparks their curiosity, what helps them move forward and where do obstacles arise? These questions are at the heart of my work. I want to understand learning processes better and make this knowledge accessible to teachers and learners.",
+   "it": "Come imparano le persone? Che cosa risveglia la loro curiosità, che cosa le aiuta ad andare avanti e dove nascono gli ostacoli? Queste domande sono al centro del mio lavoro. Voglio comprendere meglio i processi di apprendimento e rendere queste conoscenze accessibili a docenti e allievi.",
+   "fr": "Comment les gens apprennent-ils ? Qu'est-ce qui éveille leur curiosité, qu'est-ce qui les fait progresser et où naissent les obstacles ? Ces questions sont au cœur de mon travail. Je souhaite mieux comprendre les processus d'apprentissage et rendre ces connaissances accessibles aux enseignant·e·s et aux apprenant·e·s.",
+   "es": "¿Cómo aprenden las personas? ¿Qué despierta su curiosidad, qué les ayuda a avanzar y dónde surgen los obstáculos? Estas preguntas están en el centro de mi trabajo. Quiero comprender mejor los procesos de aprendizaje y hacer que este conocimiento sea accesible para docentes y estudiantes."
+  },
+  "Dabei verbinde ich Erkenntnisse aus den Erziehungswissenschaften mit Erfahrungen aus dem Unterricht. So entstehen Materialien und Impulse, die Lehrpersonen sowie Lernenden helfen können, Lernwege zu erkennen, Schwierigkeiten einzuordnen und passende nächste Schritte zu finden.": {
+   "rm": "Cheutier collieschel jeu enconuschientschas dallas scienzas d'educaziun cun experientschas ord l'instrucziun. Aschia naschan materials ed impuls che san gidar a persunas d'instrucziun sco era ad emprendists d'enconuscher vias d'emprender, da classificar difficultads e da anflar proxims pass adattai.",
+   "en": "In doing so, I combine findings from educational science with experience from the classroom. This leads to materials and ideas that can help teachers and learners alike to recognise learning paths, make sense of difficulties and find suitable next steps.",
+   "it": "In questo collego le conoscenze delle scienze dell'educazione con l'esperienza in classe. Nascono così materiali e spunti che possono aiutare docenti e allievi a riconoscere i percorsi di apprendimento, a inquadrare le difficoltà e a trovare i passi successivi più adatti.",
+   "fr": "Pour cela, je relie les connaissances des sciences de l'éducation à l'expérience de la classe. Il en résulte du matériel et des pistes qui peuvent aider enseignant·e·s et apprenant·e·s à reconnaître des chemins d'apprentissage, à situer les difficultés et à trouver les prochaines étapes adaptées.",
+   "es": "Para ello combino los conocimientos de las ciencias de la educación con la experiencia en el aula. Así surgen materiales e ideas que pueden ayudar tanto a docentes como a estudiantes a reconocer caminos de aprendizaje, entender las dificultades y encontrar los siguientes pasos adecuados."
+  },
+  "Lehren gestalten": {
+   "rm": "Concepir l'instrucziun",
+   "en": "Shaping teaching",
+   "it": "Dare forma all'insegnamento",
+   "fr": "Façonner l'enseignement",
+   "es": "Dar forma a la enseñanza"
+  },
+  "Lehren bedeutet für mich, Bedingungen zu schaffen, unter denen Menschen lernen und sich entwickeln können. Dazu gehören klare Ziele, anregende Aufgaben, hilfreiche Rückmeldungen und eine vertrauensvolle Beziehung.": {
+   "rm": "Instruir munta per mei da crear cundiziuns, sut las qualas carstgauns san emprender e sesviluppar. Quei cumpeglia finamiras claras, incumbensas stimulontas, rispostas utilas ed ina relaziun da fidonza.",
+   "en": "For me, teaching means creating conditions in which people can learn and develop. This includes clear goals, stimulating tasks, helpful feedback and a relationship built on trust.",
+   "it": "Per me insegnare significa creare condizioni in cui le persone possano imparare e crescere. Ne fanno parte obiettivi chiari, compiti stimolanti, riscontri utili e una relazione di fiducia.",
+   "fr": "Pour moi, enseigner, c'est créer des conditions dans lesquelles les personnes peuvent apprendre et se développer. Cela implique des objectifs clairs, des tâches stimulantes, des retours utiles et une relation de confiance.",
+   "es": "Para mí, enseñar significa crear condiciones en las que las personas puedan aprender y desarrollarse. Esto incluye objetivos claros, tareas estimulantes, una retroalimentación útil y una relación de confianza."
+  },
+  "Mit MuggliOnline möchte ich Lehrpersonen dabei unterstützen, Unterricht bewusst und fundiert zu gestalten. Ich teile Materialien, didaktische Hilfsmittel und Ideen, die sich an unterschiedliche Lerngruppen anpassen lassen und Raum für eigene Wege bieten.": {
+   "rm": "Cun MuggliOnline vuless jeu sustener persunas d'instrucziun da concepir l'instrucziun conscientamein e fundadamein. Jeu partel materials, mieds d'agid didactics ed ideas che laian adattar ad differentas gruppas d'emprender e dattan spazi per atgnas vias.",
+   "en": "With MuggliOnline, I want to support teachers in designing lessons consciously and on a solid foundation. I share materials, didactic tools and ideas that can be adapted to different groups of learners and leave room for your own approach.",
+   "it": "Con MuggliOnline voglio sostenere i docenti nel progettare le lezioni in modo consapevole e fondato. Condivido materiali, strumenti didattici e idee che si adattano a gruppi diversi e lasciano spazio a percorsi propri.",
+   "fr": "Avec MuggliOnline, je souhaite aider les enseignant·e·s à concevoir leur enseignement de manière réfléchie et fondée. Je partage du matériel, des outils didactiques et des idées qui s'adaptent à différents groupes et laissent de la place à des chemins personnels.",
+   "es": "Con MuggliOnline quiero ayudar a los docentes a diseñar sus clases de forma consciente y fundamentada. Comparto materiales, recursos didácticos e ideas que se adaptan a distintos grupos y dejan espacio para caminos propios."
+  },
+  "Zukunft mitprägen": {
+   "rm": "Cunfurmar il futur",
+   "en": "Helping shape the future",
+   "it": "Contribuire a plasmare il futuro",
+   "fr": "Contribuer à façonner l'avenir",
+   "es": "Contribuir a construir el futuro"
+  },
+  "Bildung eröffnet Möglichkeiten, das eigene Leben und unsere Gesellschaft mitzugestalten. Ich möchte Lernende darin stärken, selbstständig zu denken, Fragen zu stellen, unterschiedliche Perspektiven zu prüfen und Verantwortung zu übernehmen. Dazu gehört für mich auch ein neugieriger und reflektierter Umgang mit digitalen Werkzeugen und künstlicher Intelligenz.": {
+   "rm": "La scolaziun avra pusseivladads da cunfurmar l'atgna veta e nossa societad. Jeu vuless rinforzar ils emprendists da patertgar independentamein, da far damondas, da examinar differentas perspectivas e da surprender responsabladad. Cheutier tutga per mei era in contact curios e reflectau cun utensils digitals ed intelligenza artificiala.",
+   "en": "Education opens up opportunities to shape one's own life and our society. I want to empower learners to think independently, ask questions, examine different perspectives and take responsibility. For me, this also includes a curious and reflective approach to digital tools and artificial intelligence.",
+   "it": "L'istruzione apre possibilità per plasmare la propria vita e la nostra società. Voglio rafforzare gli allievi nel pensare in modo autonomo, porre domande, esaminare prospettive diverse e assumersi responsabilità. Per me ne fa parte anche un approccio curioso e riflessivo agli strumenti digitali e all'intelligenza artificiale.",
+   "fr": "L'éducation ouvre des possibilités de façonner sa propre vie et notre société. Je souhaite renforcer les apprenant·e·s dans leur capacité à penser par eux-mêmes, à poser des questions, à examiner différents points de vue et à prendre des responsabilités. Cela inclut aussi, pour moi, un usage curieux et réfléchi des outils numériques et de l'intelligence artificielle.",
+   "es": "La educación abre posibilidades para dar forma a la propia vida y a nuestra sociedad. Quiero fortalecer a los estudiantes para que piensen por sí mismos, hagan preguntas, examinen diferentes perspectivas y asuman responsabilidades. Para mí, esto incluye también un uso curioso y reflexivo de las herramientas digitales y de la inteligencia artificial."
+  },
+  "Gleichzeitig möchte ich Lernende bei den Anforderungen unterstützen, denen sie im Schulalltag begegnen. Deshalb bietet MuggliOnline auch Lernübungen und Probeprüfungen zur Vorbereitung auf klassische Prüfungen. Diese gehören zu unserem Schulsystem, auch wenn sie aus meiner Sicht die vielfältigen Kompetenzen und Potenziale von Lernenden nur begrenzt abbilden. Mein Anliegen ist es, Lernenden Sicherheit für diese Prüfungen zu geben und zugleich ihr Vertrauen in die eigenen Fähigkeiten über einzelne Noten hinaus zu stärken.": {
+   "rm": "Il medem mument vuless jeu sustener ils emprendists tier las pretensiuns che els entaupan el mintgadi da scola. Perquei porscha MuggliOnline era exercizis ed examens da prova per sepreparar sin examens classics. Quels tutgan tier noss sistem da scola, era sch'els reproduceschan tenor mia opiniun mo limitadamein las cumpetenzas ed ils potenzials multifars dils emprendists. Mia intenziun ei da dar als emprendists segirtad per quels examens e da rinforzar il medem mument lur fidonza en las atgnas habilitads sur singulas notas ora.",
+   "en": "At the same time, I want to support learners with the demands they face in everyday school life. That is why MuggliOnline also offers practice exercises and mock exams to prepare for traditional tests. These are part of our school system, even if, in my view, they only partly reflect learners' many skills and potential. My aim is to give learners confidence for these exams while strengthening their trust in their own abilities beyond individual grades.",
+   "it": "Allo stesso tempo voglio sostenere gli allievi nelle esigenze che incontrano nella vita scolastica. Per questo MuggliOnline offre anche esercizi e verifiche di prova per prepararsi agli esami tradizionali. Questi fanno parte del nostro sistema scolastico, anche se a mio avviso rispecchiano solo in parte le molteplici competenze e potenzialità degli allievi. Il mio obiettivo è dare agli allievi sicurezza per questi esami e, al tempo stesso, rafforzare la fiducia nelle proprie capacità al di là dei singoli voti.",
+   "fr": "En même temps, je souhaite accompagner les apprenant·e·s face aux exigences du quotidien scolaire. C'est pourquoi MuggliOnline propose aussi des exercices et des examens blancs pour se préparer aux examens classiques. Ceux-ci font partie de notre système scolaire, même si, à mon avis, ils ne reflètent que partiellement les compétences et le potentiel variés des apprenant·e·s. Mon souhait est de leur donner de l'assurance pour ces examens tout en renforçant leur confiance en leurs propres capacités, au-delà des notes.",
+   "es": "Al mismo tiempo, quiero apoyar a los estudiantes ante las exigencias que encuentran en el día a día escolar. Por eso MuggliOnline ofrece también ejercicios y simulacros para preparar los exámenes tradicionales. Estos forman parte de nuestro sistema educativo, aunque en mi opinión solo reflejan de forma limitada las múltiples competencias y el potencial de los estudiantes. Mi objetivo es darles seguridad para estos exámenes y, a la vez, reforzar su confianza en sus propias capacidades más allá de las notas."
+  },
+  "App-Werkstatt – MuggliOnline": {
+   "rm": "Ufficina d'apps – MuggliOnline",
+   "en": "App Workshop – MuggliOnline",
+   "it": "Officina delle app – MuggliOnline",
+   "fr": "Atelier d'apps – MuggliOnline",
+   "es": "Taller de apps – MuggliOnline"
+  },
+  "Kleine Web-Apps für Schule und Alltag.": {
+   "rm": "Pintgas web-apps per scola e mintgadi.",
+   "en": "Small web apps for school and everyday life.",
+   "it": "Piccole web app per la scuola e la vita quotidiana.",
+   "fr": "De petites applis web pour l'école et le quotidien.",
+   "es": "Pequeñas apps web para la escuela y el día a día."
+  },
+  "› App-Werkstatt": {
+   "rm": "› Ufficina d'apps",
+   "en": "› App Workshop",
+   "it": "› Officina delle app",
+   "fr": "› Atelier d'apps",
+   "es": "› Taller de apps"
+  },
+  "Kleine Web-Apps für Schule und Alltag. Einzelne Apps nutzen künftig KI und sind dann passwortgeschützt.": {
+   "rm": "Pintgas web-apps per scola e mintgadi. Singulas apps duvran pli tard KI e ein lu protegidas cun pled-clav.",
+   "en": "Small web apps for school and everyday life. Some apps will use AI in future and will then be password-protected.",
+   "it": "Piccole web app per la scuola e la vita quotidiana. In futuro alcune app useranno l'IA e saranno protette da password.",
+   "fr": "De petites applis web pour l'école et le quotidien. Certaines utiliseront bientôt l'IA et seront alors protégées par un mot de passe.",
+   "es": "Pequeñas apps web para la escuela y el día a día. En el futuro, algunas usarán IA y estarán protegidas con contraseña."
+  },
+  "Die Apps laufen direkt im Browser, ohne Installation.": {
+   "rm": "Las apps funcziuneschan directamein el navigatur, senza installaziun.",
+   "en": "The apps run directly in your browser, no installation needed.",
+   "it": "Le app funzionano direttamente nel browser, senza installazione.",
+   "fr": "Les applis fonctionnent directement dans le navigateur, sans installation.",
+   "es": "Las apps funcionan directamente en el navegador, sin instalación."
+  },
+  "Verfügbar": {
+   "rm": "Disponibel",
+   "en": "Available",
+   "it": "Disponibile",
+   "fr": "Disponible",
+   "es": "Disponible"
+  },
+  "Erstelle druckfertige A5-Seiten für dein Bullet Journal: Tagesplaner, Wochen- und Monatsübersicht oder Habit-Tracker, mit Punkten, Kästchen oder Linien. Dazu kommt eine Bibliothek mit 27 fertig gestalteten Vorlagen zum Drucken oder Herunterladen.": {
+   "rm": "Crea paginas A5 promtas da stampar per tiu Bullet Journal: plan dil di, survesta da jamna e meins ni habit tracker, cun punctas, quaderets ni lingias. Cheutier vegn ina biblioteca cun 27 models fatgs da stampar ni telechargiar.",
+   "en": "Create print-ready A5 pages for your bullet journal: daily planner, weekly and monthly overview or habit tracker, with dots, squares or lines. Plus a library of 27 ready-made templates to print or download.",
+   "it": "Crea pagine A5 pronte da stampare per il tuo bullet journal: agenda giornaliera, panoramica settimanale e mensile o habit tracker, con puntini, quadretti o righe. In più una biblioteca di 27 modelli pronti da stampare o scaricare.",
+   "fr": "Crée des pages A5 prêtes à imprimer pour ton bullet journal : planning du jour, aperçu hebdomadaire et mensuel ou suivi d'habitudes, avec points, carreaux ou lignes. En plus, une bibliothèque de 27 modèles prêts à imprimer ou à télécharger.",
+   "es": "Crea páginas A5 listas para imprimir para tu bullet journal: agenda diaria, vista semanal y mensual o registro de hábitos, con puntos, cuadros o líneas. Además, una biblioteca con 27 plantillas listas para imprimir o descargar."
+  },
+  "Druckfertig": {
+   "rm": "Promt da stampar",
+   "en": "Print-ready",
+   "it": "Pronto da stampare",
+   "fr": "Prêt à imprimer",
+   "es": "Listo para imprimir"
+  },
+  "27 Vorlagen": {
+   "rm": "27 models",
+   "en": "27 templates",
+   "it": "27 modelli",
+   "fr": "27 modèles",
+   "es": "27 plantillas"
+  },
+  "Bald mit KI": {
+   "rm": "Prest cun KI",
+   "en": "AI coming soon",
+   "it": "Presto con IA",
+   "fr": "Bientôt avec IA",
+   "es": "Pronto con IA"
+  },
+  "App öffnen →": {
+   "rm": "Averer l'app →",
+   "en": "Open app →",
+   "it": "Apri l'app →",
+   "fr": "Ouvrir l'appli →",
+   "es": "Abrir la app →"
+  },
+  "Weitere Apps": {
+   "rm": "Ulteriuras apps",
+   "en": "More apps",
+   "it": "Altre app",
+   "fr": "Autres applis",
+   "es": "Más apps"
+  },
+  "Weitere kleine Werkzeuge für Unterricht und Alltag sind in Planung.": {
+   "rm": "Ulteriurs pigns utensils per l'instrucziun ed il mintgadi ein planisai.",
+   "en": "More small tools for teaching and everyday life are in the works.",
+   "it": "Altri piccoli strumenti per l'insegnamento e la vita quotidiana sono in programma.",
+   "fr": "D'autres petits outils pour l'enseignement et le quotidien sont prévus.",
+   "es": "Hay más herramientas pequeñas para la enseñanza y el día a día en preparación."
+  },
+  "Bald": {
+   "rm": "Prest",
+   "en": "Soon",
+   "it": "Presto",
+   "fr": "Bientôt",
+   "es": "Pronto"
+  },
+  "KI-Funktionen": {
+   "rm": "Funcziuns KI",
+   "en": "AI features",
+   "it": "Funzioni IA",
+   "fr": "Fonctions IA",
+   "es": "Funciones de IA"
+  },
+  "Apps mit KI werden mit einem Passwort geschützt, damit nur berechtigte Personen sie nutzen können.": {
+   "rm": "Apps cun KI vegnan protegidas cun in pled-clav, aschia che mo persunas autorisadas san duvrar ellas.",
+   "en": "Apps with AI are password-protected so that only authorised people can use them.",
+   "it": "Le app con IA sono protette da password, così solo le persone autorizzate possono usarle.",
+   "fr": "Les applis avec IA sont protégées par un mot de passe afin que seules les personnes autorisées puissent les utiliser.",
+   "es": "Las apps con IA están protegidas con contraseña para que solo las personas autorizadas puedan usarlas."
+  },
+  "Sprache wählen": {
+   "rm": "Tscherner lungatg",
+   "en": "Choose language",
+   "it": "Scegli la lingua",
+   "fr": "Choisir la langue",
+   "es": "Elegir idioma"
+  }
+ },
+ "js": {
+  "monate": {
+   "rm": [
+    "Schaner",
+    "Favrer",
+    "Mars",
+    "Avrel",
+    "Matg",
+    "Zercladur",
+    "Fenadur",
+    "Uost",
+    "Settember",
+    "October",
+    "November",
+    "December"
+   ],
+   "en": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+   ],
+   "it": [
+    "Gennaio",
+    "Febbraio",
+    "Marzo",
+    "Aprile",
+    "Maggio",
+    "Giugno",
+    "Luglio",
+    "Agosto",
+    "Settembre",
+    "Ottobre",
+    "Novembre",
+    "Dicembre"
+   ],
+   "fr": [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre"
+   ],
+   "es": [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+   ]
+  },
+  "tage": {
+   "rm": [
+    "Gli",
+    "Ma",
+    "Me",
+    "Gie",
+    "Ve",
+    "So",
+    "Du"
+   ],
+   "en": [
+    "Mo",
+    "Tu",
+    "We",
+    "Th",
+    "Fr",
+    "Sa",
+    "Su"
+   ],
+   "it": [
+    "Lu",
+    "Ma",
+    "Me",
+    "Gi",
+    "Ve",
+    "Sa",
+    "Do"
+   ],
+   "fr": [
+    "Lu",
+    "Ma",
+    "Me",
+    "Je",
+    "Ve",
+    "Sa",
+    "Di"
+   ],
+   "es": [
+    "Lu",
+    "Ma",
+    "Mi",
+    "Ju",
+    "Vi",
+    "Sá",
+    "Do"
+   ]
+  },
+  "meinTag": {
+   "rm": "Miu di",
+   "en": "My day",
+   "it": "La mia giornata",
+   "fr": "Ma journée",
+   "es": "Mi día"
+  },
+  "datum": {
+   "rm": "Data: ____________",
+   "en": "Date: ____________",
+   "it": "Data: ____________",
+   "fr": "Date : ____________",
+   "es": "Fecha: ____________"
+  },
+  "zeitplan": {
+   "rm": "Uraris",
+   "en": "Schedule",
+   "it": "Orario",
+   "fr": "Horaire",
+   "es": "Horario"
+  },
+  "todos": {
+   "rm": "Lavurs",
+   "en": "To-dos",
+   "it": "Da fare",
+   "fr": "À faire",
+   "es": "Tareas"
+  },
+  "notizen": {
+   "rm": "Notizias",
+   "en": "Notes",
+   "it": "Appunti",
+   "fr": "Notes",
+   "es": "Notas"
+  },
+  "meineWoche": {
+   "rm": "Mia jamna",
+   "en": "My week",
+   "it": "La mia settimana",
+   "fr": "Ma semaine",
+   "es": "Mi semana"
+  },
+  "kw": {
+   "rm": "Jamna ____",
+   "en": "Week ____",
+   "it": "Sett. ____",
+   "fr": "Sem. ____",
+   "es": "Sem. ____"
+  },
+  "wochentage": {
+   "rm": [
+    "Glindesdi",
+    "Mardi",
+    "Mesjamna",
+    "Gievgia",
+    "Venderdi",
+    "Sonda",
+    "Dumengia"
+   ],
+   "en": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "it": [
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+    "Domenica"
+   ],
+   "fr": [
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+    "Dimanche"
+   ],
+   "es": [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+    "Domingo"
+   ]
+  },
+  "zieleNotizen": {
+   "rm": "Finamiras & notizias",
+   "en": "Goals & notes",
+   "it": "Obiettivi e appunti",
+   "fr": "Objectifs & notes",
+   "es": "Objetivos y notas"
+  },
+  "habit": {
+   "rm": "Habit tracker",
+   "en": "Habit tracker",
+   "it": "Habit tracker",
+   "fr": "Suivi d'habitudes",
+   "es": "Registro de hábitos"
+  },
+  "monatLinie": {
+   "rm": "Meins: __________",
+   "en": "Month: __________",
+   "it": "Mese: __________",
+   "fr": "Mois : __________",
+   "es": "Mes: __________"
+  },
+  "rueckblick": {
+   "rm": "Retrospectiva",
+   "en": "Review",
+   "it": "Bilancio",
+   "fr": "Bilan",
+   "es": "Balance"
+  },
+  "ansehen": {
+   "rm": "mirar",
+   "en": "view",
+   "it": "vedi",
+   "fr": "voir",
+   "es": "ver"
+  },
+  "vorschau": {
+   "rm": "Prevista",
+   "en": "Preview",
+   "it": "Anteprima",
+   "fr": "Aperçu",
+   "es": "Vista previa"
+  },
+  "vorlage": {
+   "rm": "Model",
+   "en": "Template",
+   "it": "Modello",
+   "fr": "Modèle",
+   "es": "Plantilla"
+  }
+ },
+ "kategorien": {
+  "To-do": {
+   "rm": "Glista da lavurs",
+   "en": "To-do list",
+   "it": "Lista di cose da fare",
+   "fr": "Liste de tâches",
+   "es": "Lista de tareas"
+  },
+  "Notizen": {
+   "rm": "Notizias",
+   "en": "Notes",
+   "it": "Appunti",
+   "fr": "Notes",
+   "es": "Notas"
+  },
+  "Agenda": {
+   "rm": "Agenda",
+   "en": "Planner",
+   "it": "Agenda",
+   "fr": "Agenda",
+   "es": "Agenda"
+  },
+  "1 Feld": {
+   "rm": "1 fenestra",
+   "en": "1 box",
+   "it": "1 riquadro",
+   "fr": "1 cadre",
+   "es": "1 recuadro"
+  },
+  "2 Felder": {
+   "rm": "2 fenestras",
+   "en": "2 boxes",
+   "it": "2 riquadri",
+   "fr": "2 cadres",
+   "es": "2 recuadros"
+  },
+  "3 Felder": {
+   "rm": "3 fenestras",
+   "en": "3 boxes",
+   "it": "3 riquadri",
+   "fr": "3 cadres",
+   "es": "3 recuadros"
+  },
+  "4 Felder": {
+   "rm": "4 fenestras",
+   "en": "4 boxes",
+   "it": "4 riquadri",
+   "fr": "4 cadres",
+   "es": "4 recuadros"
+  }
+ },
+ "titel": {
+  "Wolken und Sterne": {
+   "rm": "Nibels e steilas",
+   "en": "Clouds and stars",
+   "it": "Nuvole e stelle",
+   "fr": "Nuages et étoiles",
+   "es": "Nubes y estrellas"
+  },
+  "Zarte Zweige": {
+   "rm": "Romets fins",
+   "en": "Delicate branches",
+   "it": "Rametti delicati",
+   "fr": "Branches délicates",
+   "es": "Ramas delicadas"
+  },
+  "To-do-Liste Mint": {
+   "rm": "Glista da lavurs menta",
+   "en": "To-do list mint",
+   "it": "Lista da fare menta",
+   "fr": "Liste de tâches menthe",
+   "es": "Lista de tareas menta"
+  },
+  "To-do-Liste Lavendel": {
+   "rm": "Glista da lavurs lavanda",
+   "en": "To-do list lavender",
+   "it": "Lista da fare lavanda",
+   "fr": "Liste de tâches lavande",
+   "es": "Lista de tareas lavanda"
+  },
+  "Bücherregal mit Katze": {
+   "rm": "Curuna da cudischs cun gat",
+   "en": "Bookshelf with cat",
+   "it": "Libreria con gatto",
+   "fr": "Bibliothèque et chat",
+   "es": "Estantería con gato"
+  },
+  "Kakteen und Washi-Tape": {
+   "rm": "Cactus e washi tape",
+   "en": "Cacti and washi tape",
+   "it": "Cactus e washi tape",
+   "fr": "Cactus et washi tape",
+   "es": "Cactus y washi tape"
+  },
+  "Heissluftballone und Mond": {
+   "rm": "Balluns d'aria caulda e glina",
+   "en": "Hot-air balloons and moon",
+   "it": "Mongolfiere e luna",
+   "fr": "Montgolfières et lune",
+   "es": "Globos aerostáticos y luna"
+  },
+  "Wald": {
+   "rm": "Guaud",
+   "en": "Forest",
+   "it": "Bosco",
+   "fr": "Forêt",
+   "es": "Bosque"
+  },
+  "Fledermäuse": {
+   "rm": "Mezzamieurs",
+   "en": "Bats",
+   "it": "Pipistrelli",
+   "fr": "Chauves-souris",
+   "es": "Murciélagos"
+  },
+  "Aquarium": {
+   "rm": "Aquarium",
+   "en": "Aquarium",
+   "it": "Acquario",
+   "fr": "Aquarium",
+   "es": "Acuario"
+  },
+  "Weltreise und Kompass": {
+   "rm": "Viadi entuorn il mund e cumpass",
+   "en": "World trip and compass",
+   "it": "Giro del mondo e bussola",
+   "fr": "Tour du monde et boussole",
+   "es": "Vuelta al mundo y brújula"
+  },
+  "Vögel im Winter": {
+   "rm": "Utschals igl unviern",
+   "en": "Birds in winter",
+   "it": "Uccelli d'inverno",
+   "fr": "Oiseaux en hiver",
+   "es": "Pájaros en invierno"
+  },
+  "Raben im Baum": {
+   "rm": "Corvs sin la plonta",
+   "en": "Ravens in a tree",
+   "it": "Corvi sull'albero",
+   "fr": "Corbeaux dans l'arbre",
+   "es": "Cuervos en el árbol"
+  },
+  "Goldfische": {
+   "rm": "Peschs d'aur",
+   "en": "Goldfish",
+   "it": "Pesci rossi",
+   "fr": "Poissons rouges",
+   "es": "Peces de colores"
+  },
+  "Berge und Kühe": {
+   "rm": "Cuolms e vaccas",
+   "en": "Mountains and cows",
+   "it": "Montagne e mucche",
+   "fr": "Montagnes et vaches",
+   "es": "Montañas y vacas"
+  },
+  "Zimmerpflanzen": {
+   "rm": "Plontas da combra",
+   "en": "Houseplants",
+   "it": "Piante da appartamento",
+   "fr": "Plantes d'intérieur",
+   "es": "Plantas de interior"
+  },
+  "Wüste": {
+   "rm": "Desiert",
+   "en": "Desert",
+   "it": "Deserto",
+   "fr": "Désert",
+   "es": "Desierto"
+  },
+  "Bücher und Lampe": {
+   "rm": "Cudischs e cazzola",
+   "en": "Books and lamp",
+   "it": "Libri e lampada",
+   "fr": "Livres et lampe",
+   "es": "Libros y lámpara"
+  },
+  "Kakteen in Pastell": {
+   "rm": "Cactus en pastel",
+   "en": "Pastel cacti",
+   "it": "Cactus pastello",
+   "fr": "Cactus pastel",
+   "es": "Cactus en pastel"
+  },
+  "Notizseite Bergsee": {
+   "rm": "Pagina da notizias Lag da muntogna",
+   "en": "Note page Mountain lake",
+   "it": "Pagina appunti Lago alpino",
+   "fr": "Page de notes Lac de montagne",
+   "es": "Página de notas Lago de montaña"
+  },
+  "Notizseite Alpenrose": {
+   "rm": "Pagina da notizias Rosa d'alp",
+   "en": "Note page Alpine rose",
+   "it": "Pagina appunti Rododendro",
+   "fr": "Page de notes Rose des Alpes",
+   "es": "Página de notas Rosa alpina"
+  },
+  "Notizseite Gletscher": {
+   "rm": "Pagina da notizias Glatscher",
+   "en": "Note page Glacier",
+   "it": "Pagina appunti Ghiacciaio",
+   "fr": "Page de notes Glacier",
+   "es": "Página de notas Glaciar"
+  },
+  "Sitzungsnotizen": {
+   "rm": "Notizias da sesida",
+   "en": "Meeting notes",
+   "it": "Verbale di riunione",
+   "fr": "Notes de réunion",
+   "es": "Notas de reunión"
+  },
+  "Monatsplaner Terrakotta": {
+   "rm": "Plan dil meins terracotta",
+   "en": "Monthly planner terracotta",
+   "it": "Agenda mensile terracotta",
+   "fr": "Planning mensuel terracotta",
+   "es": "Agenda mensual terracota"
+  },
+  "Wochenplaner Pastell": {
+   "rm": "Plan da jamna pastel",
+   "en": "Weekly planner pastel",
+   "it": "Agenda settimanale pastello",
+   "fr": "Planning hebdo pastel",
+   "es": "Agenda semanal pastel"
+  },
+  "Woche mit Bergkette": {
+   "rm": "Jamna cun cuolms",
+   "en": "Week with mountains",
+   "it": "Settimana con montagne",
+   "fr": "Semaine et montagnes",
+   "es": "Semana con montañas"
+  },
+  "Monat Alpenglühen": {
+   "rm": "Meins cun brischament dallas alps",
+   "en": "Month alpenglow",
+   "it": "Mese enrosadira",
+   "fr": "Mois alpenglow",
+   "es": "Mes arrebol alpino"
+  }
+ }
+}

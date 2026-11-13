@@ -4,8 +4,16 @@
   const W = 148, H = 210, M = 10;                       // Seitengrösse und Rand in mm
   const GREEN = '#3f5d4a', SOFT = '#9fb3a5', LINE = '#c9d3c7', TEXT = '#2f3a32';
   const state = { layout: 'tag', raster: 'punkte', abstand: 5, titel: '', akzent: GREEN };
-  const MONATE = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
-  const TAGE = ['Mo','Di','Mi','Do','Fr','Sa','So'];
+  // Texte: Deutsch als Standard, andere Sprachen kommen über window.I18N
+  const L = Object.assign({
+    monate: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+    tage: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+    wochentage: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+    meinTag: 'Mein Tag', datum: 'Datum: ____________', zeitplan: 'Zeitplan', todos: 'To-dos', notizen: 'Notizen',
+    meineWoche: 'Meine Woche', kw: 'KW ____', zieleNotizen: 'Ziele & Notizen', habit: 'Habit-Tracker',
+    monatLinie: 'Monat: __________', rueckblick: 'Rückblick'
+  }, window.I18N || {});
+  const MONATE = L.monate, TAGE = L.tage;
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -35,29 +43,29 @@
   }
 
   function tagesplaner() {
-    let s = kopf('Mein Tag') + t(W - M, M + 8, 'Datum: ____________', 3.4, 'text-anchor="end"');
+    let s = kopf(L.meinTag) + t(W - M, M + 8, L.datum, 3.4, 'text-anchor="end"');
     const top = M + 18, colW = 62;
-    s += t(M, top + 3, 'Zeitplan', 3.6, 'font-weight="700"');
+    s += t(M, top + 3, L.zeitplan, 3.6, 'font-weight="700"');
     for (let h = 6; h <= 21; h++) {
       const y = top + 8 + (h - 6) * 10.2;
       s += t(M, y + 3.2, String(h).padStart(2, '0') + ':00', 3) +
         `<line x1="${M + 13}" y1="${y + 4}" x2="${M + colW}" y2="${y + 4}" stroke="${LINE}" stroke-width="0.25"/>`;
     }
     const rx = M + colW + 8, rw = W - M - rx;
-    s += t(rx, top + 3, 'To-dos', 3.6, 'font-weight="700"');
+    s += t(rx, top + 3, L.todos, 3.6, 'font-weight="700"');
     for (let i = 0; i < 9; i++) {
       const y = top + 8 + i * 8;
       s += rect(rx, y, 3.4, 3.4, 0.6) + `<line x1="${rx + 6}" y1="${y + 3.4}" x2="${rx + rw}" y2="${y + 3.4}" stroke="${LINE}" stroke-width="0.25"/>`;
     }
     const ny = top + 84;
-    s += t(rx, ny, 'Notizen', 3.6, 'font-weight="700"') + raster(rx + 1, ny + 5, rx + rw - 1, H - M - 1) ;
+    s += t(rx, ny, L.notizen, 3.6, 'font-weight="700"') + raster(rx + 1, ny + 5, rx + rw - 1, H - M - 1) ;
     return s;
   }
 
   function woche() {
-    let s = kopf('Meine Woche') + t(W - M, M + 8, 'KW ____', 3.4, 'text-anchor="end"');
+    let s = kopf(L.meineWoche) + t(W - M, M + 8, L.kw, 3.4, 'text-anchor="end"');
     const top = M + 17, gap = 3, bw = (W - 2 * M - gap) / 2, bh = (H - M - top - 3 * gap) / 4;
-    const felder = [...TAGE, 'Notizen'];
+    const felder = [...L.wochentage, L.notizen];
     felder.forEach((name, i) => {
       const x = M + (i % 2) * (bw + gap), y = top + Math.floor(i / 2) * (bh + gap);
       s += rect(x, y, bw, bh) + t(x + 3, y + 5.5, name, 3.6, `font-weight="700" fill="${state.akzent}"`) + raster(x + 3, y + 9, x + bw - 3, y + bh - 3);
@@ -77,12 +85,12 @@
       if (nr >= 1 && nr <= tage) s += t(x + 1.6, y + 4.2, nr, 3.2);
     }
     const ny = top + 6 + 6 * ch + 6;
-    s += t(M, ny, 'Ziele & Notizen', 3.6, 'font-weight="700"') + raster(M + 1, ny + 5, W - M - 1, H - M - 1);
+    s += t(M, ny, L.zieleNotizen, 3.6, 'font-weight="700"') + raster(M + 1, ny + 5, W - M - 1, H - M - 1);
     return s;
   }
 
   function habits() {
-    let s = kopf('Habit-Tracker') + t(W - M, M + 8, 'Monat: __________', 3.4, 'text-anchor="end"');
+    let s = kopf(L.habit) + t(W - M, M + 8, L.monatLinie, 3.4, 'text-anchor="end"');
     const top = M + 18, nameW = 30, cell = (W - 2 * M - nameW) / 31, rows = 14, rh = 7.4;
     for (let d = 1; d <= 31; d++) s += t(M + nameW + (d - 0.5) * cell, top + 3, d, 2.2, 'text-anchor="middle"');
     for (let r = 0; r < rows; r++) {
@@ -92,7 +100,7 @@
         s += `<rect x="${(M + nameW + d * cell + 0.3).toFixed(2)}" y="${y + 1.6}" width="${(cell - 0.6).toFixed(2)}" height="${(rh - 2.6).toFixed(2)}" fill="none" stroke="${LINE}" stroke-width="0.2" rx="0.5"/>`;
     }
     const ny = top + 6 + rows * rh + 8;
-    s += t(M, ny, 'Rückblick', 3.6, 'font-weight="700"') + raster(M + 1, ny + 5, W - M - 1, H - M - 1);
+    s += t(M, ny, L.rueckblick, 3.6, 'font-weight="700"') + raster(M + 1, ny + 5, W - M - 1, H - M - 1);
     return s;
   }
 

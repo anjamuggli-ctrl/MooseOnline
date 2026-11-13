@@ -8,7 +8,13 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1e0e7302">
+<link rel="stylesheet" href="style.css?v=747105d5">
+<link rel="alternate" hreflang="de" href="bullet-journal.html">
+<link rel="alternate" hreflang="rm" href="rm/bullet-journal.html">
+<link rel="alternate" hreflang="en" href="en/bullet-journal.html">
+<link rel="alternate" hreflang="it" href="it/bullet-journal.html">
+<link rel="alternate" hreflang="fr" href="fr/bullet-journal.html">
+<link rel="alternate" hreflang="es" href="es/bullet-journal.html">
 </head>
 <body>
 
@@ -46,7 +52,6 @@
 </svg>
       <span class="name">Muggli<span>Online</span></span>
     </a>
-    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="vision.html">Vision</a></li>
       <li><a href="english.html">Englisch</a></li>
@@ -56,6 +61,8 @@
       <li><a href="ueber-anja.html">Über Anja</a></li>
       <li><a class="cta" href="kontakt.html">Kontakt</a></li>
     </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Sprache wählen" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>DE</button><ul class="lang-list"><li><a href="bullet-journal.html" hreflang="de" lang="de" class="aktiv">Deutsch<small>DE</small></a></li><li><a href="rm/bullet-journal.html" hreflang="rm" lang="rm">Romontsch<small>RM</small></a></li><li><a href="en/bullet-journal.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="it/bullet-journal.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li><li><a href="fr/bullet-journal.html" hreflang="fr" lang="fr">Français<small>FR</small></a></li><li><a href="es/bullet-journal.html" hreflang="es" lang="es">Español<small>ES</small></a></li></ul></div>
+    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -147,11 +154,12 @@
   <div id="pv-print" aria-hidden="true"></div>
   <script type="application/json" id="vorlagen-daten">[{"nr": 20, "datei": "vorlage-20-notizen-bergsee", "titel": "Notizseite Bergsee", "kategorie": "Notizen"}, {"nr": 21, "datei": "vorlage-21-notizen-alpenrose", "titel": "Notizseite Alpenrose", "kategorie": "Notizen"}, {"nr": 22, "datei": "vorlage-22-notizen-gletscher", "titel": "Notizseite Gletscher", "kategorie": "Notizen"}, {"nr": 23, "datei": "vorlage-23-sitzungsnotizen", "titel": "Sitzungsnotizen", "kategorie": "Notizen"}, {"nr": 24, "datei": "vorlage-24-monatsplaner-terrakotta", "titel": "Monatsplaner Terrakotta", "kategorie": "Agenda"}, {"nr": 25, "datei": "vorlage-25-wochenplaner-pastell", "titel": "Wochenplaner Pastell", "kategorie": "Agenda"}, {"nr": 26, "datei": "vorlage-26-woche-bergkette", "titel": "Woche mit Bergkette", "kategorie": "Agenda"}, {"nr": 27, "datei": "vorlage-27-monat-alpengluehen", "titel": "Monat Alpenglühen", "kategorie": "Agenda"}, {"nr": 3, "datei": "vorlage-03-todo-gruen", "titel": "To-do-Liste Mint", "kategorie": "To-do"}, {"nr": 4, "datei": "vorlage-04-todo-lila", "titel": "To-do-Liste Lavendel", "kategorie": "To-do"}, {"nr": 1, "datei": "vorlage-01-wolken-und-sterne", "titel": "Wolken und Sterne", "kategorie": "4 Felder"}, {"nr": 2, "datei": "vorlage-02-zweige", "titel": "Zarte Zweige", "kategorie": "1 Feld"}, {"nr": 5, "datei": "vorlage-05-buecherregal-katze", "titel": "Bücherregal mit Katze", "kategorie": "3 Felder"}, {"nr": 6, "datei": "vorlage-06-kakteen-washi", "titel": "Kakteen und Washi-Tape", "kategorie": "3 Felder"}, {"nr": 7, "datei": "vorlage-07-heissluftballone", "titel": "Heissluftballone und Mond", "kategorie": "2 Felder"}, {"nr": 8, "datei": "vorlage-08-wald", "titel": "Wald", "kategorie": "3 Felder"}, {"nr": 9, "datei": "vorlage-09-fledermaeuse", "titel": "Fledermäuse", "kategorie": "2 Felder"}, {"nr": 10, "datei": "vorlage-10-aquarium", "titel": "Aquarium", "kategorie": "2 Felder"}, {"nr": 11, "datei": "vorlage-11-weltreise", "titel": "Weltreise und Kompass", "kategorie": "2 Felder"}, {"nr": 12, "datei": "vorlage-12-voegel", "titel": "Vögel im Winter", "kategorie": "4 Felder"}, {"nr": 13, "datei": "vorlage-13-raben", "titel": "Raben im Baum", "kategorie": "2 Felder"}, {"nr": 14, "datei": "vorlage-14-goldfische", "titel": "Goldfische", "kategorie": "3 Felder"}, {"nr": 15, "datei": "vorlage-15-berge-kuehe", "titel": "Berge und Kühe", "kategorie": "1 Feld"}, {"nr": 16, "datei": "vorlage-16-zimmerpflanzen", "titel": "Zimmerpflanzen", "kategorie": "3 Felder"}, {"nr": 17, "datei": "vorlage-17-wueste", "titel": "Wüste", "kategorie": "2 Felder"}, {"nr": 18, "datei": "vorlage-18-buecher-lampe", "titel": "Bücher und Lampe", "kategorie": "2 Felder"}, {"nr": 19, "datei": "vorlage-19-kakteen-pastell", "titel": "Kakteen in Pastell", "kategorie": "2 Felder"}]</script>
   <section class="section" style="margin-top:0">
-    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
+    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
   </section>
 </main>
-<script src="bullet-journal.js?v=80ebb757"></script>
-<script src="vorlagen.js?v=a6940ba9"></script>
+
+<script src="bullet-journal.js?v=871560d3"></script>
+<script src="vorlagen.js?v=9e09fe2b"></script>
 
 <footer>
   <div class="wrap">
@@ -159,6 +167,6 @@
     <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
-
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
 </body>
 </html>
