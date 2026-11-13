@@ -138,8 +138,8 @@ page("english.html", "English – MuggliOnline", f"""<main class="wrap">
     <h2>Wähle deinen Bereich</h2>
     <p class="intro">Der English-Bereich ist in zwei Teile gegliedert.</p>
     <div class="grid2">
-      <a class="plan" href="english-lernende.html" style="border-style:solid"><span class="badge live">Für Lernende</span><h3>English für Lernende →</h3><p>Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.</p></a>
       <a class="plan" href="english-lehrpersonen.html" style="border-style:solid"><span class="badge live">Für Lehrpersonen</span><h3>English für Lehrpersonen →</h3><p>Unterrichtsmaterialien, Vorlagen und Prüfungen für den eigenen Englischunterricht.</p></a>
+      <a class="plan" href="english-lernende.html" style="border-style:solid"><span class="badge live">Für Lernende</span><h3>English für Lernende →</h3><p>Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.</p></a>
     </div>
   </section>
 </main>""", active="english.html", description="Englisch für Lernende und Lehrpersonen.")
