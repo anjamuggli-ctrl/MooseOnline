@@ -226,3 +226,4 @@
   .entile .badge{align-self:flex-start}
   .section .grid2 > div > h2{margin-bottom:6px}
   .section .grid2 > div > p.intro{color:var(--muted);margin-bottom:16px}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}

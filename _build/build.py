@@ -375,9 +375,7 @@ page("ueber-anja.html", "Über Anja – MuggliOnline", f"""<main class="wrap">
 {hero("Über Anja", "Über mich", "Dr. Anja Muggli", "Dozentin Erziehungswissenschaften · Englischlehrperson")}
   <section class="section">
     <div class="about">
-      <div class="photo" aria-label="Platzhalter für Porträtfoto">
-        <svg viewBox="0 0 170 200" aria-hidden="true"><circle cx="85" cy="78" r="38" fill="#c9d3c7"/><path d="M10,200 C14,148 46,124 85,124 C124,124 156,148 160,200 Z" fill="#c9d3c7"/></svg>
-      </div>
+      <div class="photo"><img src="foto-anja.jpg" alt="Porträt von Dr. Anja Muggli" width="560" height="672"></div>
       <div>
         <h2>Werdegang</h2>
         <p class="intro">Dr. Anja Muggli absolvierte in den USA einen Bachelor in K–12 Education mit Major in Germanistik und Minor in Englisch als Zweitsprache, einen Master in Education mit Major in E-Learning Technology and Design sowie ein Doktorat in Education mit Schwerpunkten in englischer Linguistik und (Fremd-)Sprachdidaktik. Seit ihrer Rückkehr in die Schweiz im Jahr 2022 bringt sie ihre fachlichen und internationalen Erfahrungen in die Berufsbildung ein. Ergänzend erwarb sie das schweizerische Lehrdiplom für den berufskundlichen Unterricht im Fach Technisches Englisch.</p>
