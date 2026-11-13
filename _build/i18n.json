@@ -980,13 +980,6 @@
    "fr": "pour bien enseigner et apprendre",
    "es": "para enseñar y aprender bien"
   },
-  "Fünf Bereiche für Lehrpersonen und Lernende. Die Inhalte wachsen laufend.": {
-   "rm": "Tschun secturs per persunas d'instrucziun ed emprendists. Ils cuntegns creschan cuntinuadamein.",
-   "en": "Five areas for teachers and learners. The content keeps growing.",
-   "it": "Cinque aree per docenti e allievi. I contenuti crescono continuamente.",
-   "fr": "Cinq domaines pour enseignant·e·s et apprenant·e·s. Les contenus s'enrichissent au fil du temps.",
-   "es": "Cinco áreas para docentes y estudiantes. Los contenidos crecen continuamente."
-  },
   "Unterrichtsmaterialien, Vorlagen und Prüfungen für Basic English und Fachenglisch an Berufsschulen, bereit für den eigenen Unterricht.": {
    "rm": "Materials d'instrucziun, models ed examens per Basic English ed englais professiunal a scolas professiunalas, promts per l'atgna instrucziun.",
    "en": "Teaching materials, templates and tests for Basic English and English for specific purposes at vocational schools, ready for your own lessons.",
@@ -1812,6 +1805,13 @@
    "it": "Poiché sono pensate per l'insegnamento delle lingue straniere, il livello linguistico è adattato di conseguenza. Nella prima lingua si prestano quindi bene anche come progetti nella scuola media o in 6ª classe.",
    "fr": "Comme elles sont pensées pour l'enseignement des langues étrangères, le niveau de langue est adapté en conséquence. Dans la langue première, elles conviennent donc aussi très bien comme projets au secondaire I ou en 6e année (8H).",
    "es": "Como están pensadas para la enseñanza de lenguas extranjeras, el nivel lingüístico está adaptado en consecuencia. En la lengua materna, también funcionan bien como proyectos en secundaria o en 6.º curso."
+  },
+  "Vier Bereiche für Lehrpersonen und Lernende. Die Inhalte wachsen laufend.": {
+   "rm": "Quater secturs per persunas d'instrucziun ed emprendists. Ils cuntegns creschan cuntinuadamein.",
+   "en": "Four areas for teachers and learners. The content keeps growing.",
+   "it": "Quattro aree per docenti e allievi. I contenuti crescono continuamente.",
+   "fr": "Quatre domaines pour enseignant·e·s et apprenant·e·s. Les contenus s'enrichissent au fil du temps.",
+   "es": "Cuatro áreas para docentes y estudiantes. Los contenidos crecen continuamente."
   }
  },
  "js": {
