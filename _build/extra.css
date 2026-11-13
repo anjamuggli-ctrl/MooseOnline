@@ -125,3 +125,13 @@
   @media (max-width:1000px){ .lang{margin-left:auto} .burger{margin-left:6px} }
   .about .intro{color:#45524a;font-size:16.5px;line-height:1.7;max-width:none;margin-bottom:30px}
   .about h2{margin-bottom:10px}
+
+  /* Englisch-Kacheln */
+  .entile{border-style:solid;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  .entile:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(63,93,74,.12)}
+  .entile ul{margin:12px 0 18px 18px}
+  .entile .go{margin-top:auto;font-weight:600;color:var(--green);font-size:15px}
+  .stack{display:flex;flex-direction:column;gap:14px}
+  .entile .badge{align-self:flex-start}
+  .section .grid2 > div > h2{margin-bottom:6px}
+  .section .grid2 > div > p.intro{color:var(--muted);margin-bottom:16px}

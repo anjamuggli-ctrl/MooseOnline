@@ -1532,6 +1532,209 @@
    "it": "Anja insegna inglese alla Gewerbliche Berufsschule Chur ed è docente di scienze dell'educazione nel master per il livello secondario I e II presso l'Alta scuola pedagogica dei Grigioni. In questi ruoli accompagna apprendisti e futuri docenti e collega la pratica scolastica con prospettive scientifiche sull'insegnare e l'imparare. Con MuggliOnline desidera rendere accessibili a docenti e allievi materiali didattici, esercizi e strumenti digitali da lei creati, sostenendo così l'apprendimento autonomo e la progettazione delle lezioni.",
    "fr": "Anja enseigne l'anglais à la Gewerbliche Berufsschule Chur et travaille comme chargée de cours en sciences de l'éducation dans le master secondaire I & II de la Haute école pédagogique des Grisons. Dans ces fonctions, elle accompagne des apprenti·e·s et de futur·e·s enseignant·e·s et relie la pratique scolaire à des perspectives scientifiques sur l'enseignement et l'apprentissage. Avec MuggliOnline, elle souhaite rendre accessibles aux enseignant·e·s et aux apprenant·e·s le matériel pédagogique, les exercices et les outils numériques qu'elle a créés, afin de soutenir l'apprentissage autonome et la conception de l'enseignement.",
    "es": "Anja enseña inglés en la Gewerbliche Berufsschule Chur y trabaja como profesora de Ciencias de la Educación en el máster de Educación Secundaria I y II de la Universidad Pedagógica de los Grisones (PH Graubünden). En estas funciones acompaña a aprendices y futuros docentes y conecta la práctica escolar con perspectivas científicas sobre la enseñanza y el aprendizaje. Con MuggliOnline quiere poner a disposición de docentes y estudiantes materiales didácticos, ejercicios y herramientas digitales creados por ella misma, para apoyar el aprendizaje autónomo y el diseño de las clases."
+  },
+  "Arbeitsblätter, Texte und Aufgaben für den Unterricht.": {
+   "rm": "Fegls da lavur, texts ed incumbensas per l'instrucziun.",
+   "en": "Worksheets, texts and tasks for your lessons.",
+   "it": "Schede, testi e compiti per le lezioni.",
+   "fr": "Fiches de travail, textes et exercices pour les cours.",
+   "es": "Fichas, textos y tareas para tus clases."
+  },
+  "Basic English – MuggliOnline": {
+   "rm": "Basic English – MuggliOnline",
+   "en": "Basic English – MuggliOnline",
+   "it": "Basic English – MuggliOnline",
+   "fr": "Basic English – MuggliOnline",
+   "es": "Basic English – MuggliOnline"
+  },
+  "Berufsschule: Informatik": {
+   "rm": "Scola professiunala: informatica",
+   "en": "Vocational school: IT",
+   "it": "Scuola professionale: informatica",
+   "fr": "École professionnelle : informatique",
+   "es": "Formación profesional: informática"
+  },
+  "Berufsschule: Maschinenbau": {
+   "rm": "Scola professiunala: mecanica",
+   "en": "Vocational school: Mechanical engineering",
+   "it": "Scuola professionale: meccanica",
+   "fr": "École professionnelle : mécanique",
+   "es": "Formación profesional: mecánica"
+  },
+  "Berufsschule: Mediamatik": {
+   "rm": "Scola professiunala: mediamatica",
+   "en": "Vocational school: Mediamatics",
+   "it": "Scuola professionale: mediamatica",
+   "fr": "École professionnelle : médiamatique",
+   "es": "Formación profesional: mediamática"
+  },
+  "Bewertungsraster": {
+   "rm": "Rasters da valitaziun",
+   "en": "Grading rubrics",
+   "it": "Griglie di valutazione",
+   "fr": "Grilles d'évaluation",
+   "es": "Rúbricas de evaluación"
+  },
+  "Fachenglisch für IT, Netzwerke und Software.": {
+   "rm": "Englais professiunal per IT, reits e software.",
+   "en": "English for IT, networks and software.",
+   "it": "Inglese tecnico per IT, reti e software.",
+   "fr": "Anglais professionnel pour l'informatique, les réseaux et les logiciels.",
+   "es": "Inglés técnico para TI, redes y software."
+  },
+  "Fachenglisch rund um Maschinen, Werkstoffe und Fertigung.": {
+   "rm": "Englais professiunal davart maschinas, materials e producziun.",
+   "en": "English for machines, materials and manufacturing.",
+   "it": "Inglese tecnico su macchine, materiali e produzione.",
+   "fr": "Anglais professionnel autour des machines, des matériaux et de la fabrication.",
+   "es": "Inglés técnico sobre máquinas, materiales y fabricación."
+  },
+  "Fachenglisch rund um Medien, Design und Kommunikation.": {
+   "rm": "Englais professiunal davart medias, design e communicaziun.",
+   "en": "English for media, design and communication.",
+   "it": "Inglese tecnico su media, design e comunicazione.",
+   "fr": "Anglais professionnel autour des médias, du design et de la communication.",
+   "es": "Inglés técnico sobre medios, diseño y comunicación."
+  },
+  "Fachwortschatz": {
+   "rm": "Vocabulari professiunal",
+   "en": "Technical vocabulary",
+   "it": "Lessico tecnico",
+   "fr": "Vocabulaire technique",
+   "es": "Vocabulario técnico"
+  },
+  "Grundlagen des Englischen in kleinen Schritten.": {
+   "rm": "Fundaments digl englais en pigns pass.",
+   "en": "The basics of English in small steps.",
+   "it": "Le basi dell'inglese a piccoli passi.",
+   "fr": "Les bases de l'anglais pas à pas.",
+   "es": "Los fundamentos del inglés paso a paso."
+  },
+  "Jeder Bereich bietet Übungen für Lernende und Materialien für Lehrpersonen.": {
+   "rm": "Mintga sectur porscha exercizis per emprendists e materials per persunas d'instrucziun.",
+   "en": "Each area offers exercises for learners and materials for teachers.",
+   "it": "Ogni area offre esercizi per allievi e materiali per docenti.",
+   "fr": "Chaque domaine propose des exercices pour apprenant·e·s et du matériel pour enseignant·e·s.",
+   "es": "Cada área ofrece ejercicios para estudiantes y materiales para docentes."
+  },
+  "Materialien für den eigenen Unterricht.": {
+   "rm": "Materials per l'atgna instrucziun.",
+   "en": "Materials for your own lessons.",
+   "it": "Materiali per le proprie lezioni.",
+   "fr": "Du matériel pour ses propres cours.",
+   "es": "Materiales para tus propias clases."
+  },
+  "Prüfungen zum Üben, mit Lösungen.": {
+   "rm": "Examens per exercitar, cun soluziuns.",
+   "en": "Practice tests with answers.",
+   "it": "Verifiche per esercitarsi, con soluzioni.",
+   "fr": "Des examens pour s'entraîner, avec corrigés.",
+   "es": "Exámenes para practicar, con soluciones."
+  },
+  "Raster und Kriterien für Writing und Speaking.": {
+   "rm": "Rasters e criteris per writing e speaking.",
+   "en": "Rubrics and criteria for writing and speaking.",
+   "it": "Griglie e criteri per writing e speaking.",
+   "fr": "Grilles et critères pour le writing et le speaking.",
+   "es": "Rúbricas y criterios para writing y speaking."
+  },
+  "Schreibaufträge mit Checklisten.": {
+   "rm": "Incumbensas da scriver cun glistas da controlla.",
+   "en": "Writing tasks with checklists.",
+   "it": "Compiti di scrittura con liste di controllo.",
+   "fr": "Consignes d'écriture avec listes de contrôle.",
+   "es": "Tareas de escritura con listas de control."
+  },
+  "Texte aus dem Berufsalltag mit Verständnisfragen.": {
+   "rm": "Texts ord la veta professiunala cun damondas da capientscha.",
+   "en": "Texts from everyday working life with comprehension questions.",
+   "it": "Testi dalla vita professionale con domande di comprensione.",
+   "fr": "Textes tirés du quotidien professionnel avec questions de compréhension.",
+   "es": "Textos del día a día laboral con preguntas de comprensión."
+  },
+  "Vokabeltrainer für den Grundwortschatz.": {
+   "rm": "Trenader da vocabulari pil vocabulari da basa.",
+   "en": "Vocabulary trainer for core vocabulary.",
+   "it": "Allenatore per il lessico di base.",
+   "fr": "Entraîneur pour le vocabulaire de base.",
+   "es": "Entrenador de vocabulario básico."
+  },
+  "Vokabeltrainer mit den wichtigsten Fachbegriffen.": {
+   "rm": "Trenader da vocabulari cun ils pli impurtonts terms professiunals.",
+   "en": "Vocabulary trainer with the most important technical terms.",
+   "it": "Allenatore con i termini tecnici più importanti.",
+   "fr": "Entraîneur avec les termes techniques les plus importants.",
+   "es": "Entrenador con los términos técnicos más importantes."
+  },
+  "Zum Bereich →": {
+   "rm": "Tier il sectur →",
+   "en": "Go to this area →",
+   "it": "All'area →",
+   "fr": "Vers ce domaine →",
+   "es": "Ir al área →"
+  },
+  "Übungen mit direkter Rückmeldung.": {
+   "rm": "Exercizis cun resposta directa.",
+   "en": "Exercises with instant feedback.",
+   "it": "Esercizi con riscontro immediato.",
+   "fr": "Exercices avec retour immédiat.",
+   "es": "Ejercicios con corrección inmediata."
+  },
+  "Übungen zu den wichtigsten Grammatikthemen, mit Sofortkontrolle.": {
+   "rm": "Exercizis tier ils pli impurtonts temas da grammatica, cun controlla immediata.",
+   "en": "Exercises on the key grammar topics, with instant checking.",
+   "it": "Esercizi sui temi grammaticali principali, con verifica immediata.",
+   "fr": "Exercices sur les principaux thèmes de grammaire, avec vérification immédiate.",
+   "es": "Ejercicios sobre los temas gramaticales clave, con corrección inmediata."
+  },
+  "Berufsschule: Informatik – MuggliOnline": {
+   "rm": "Scola professiunala: informatica – MuggliOnline",
+   "en": "Vocational school: IT – MuggliOnline",
+   "it": "Scuola professionale: informatica – MuggliOnline",
+   "fr": "École professionnelle : informatique – MuggliOnline",
+   "es": "Formación profesional: informática – MuggliOnline"
+  },
+  "› Berufsschule: Informatik": {
+   "rm": "› Scola professiunala: informatica",
+   "en": "› Vocational school: IT",
+   "it": "› Scuola professionale: informatica",
+   "fr": "› École professionnelle : informatique",
+   "es": "› Formación profesional: informática"
+  },
+  "Berufsschule: Maschinenbau – MuggliOnline": {
+   "rm": "Scola professiunala: mecanica – MuggliOnline",
+   "en": "Vocational school: Mechanical engineering – MuggliOnline",
+   "it": "Scuola professionale: meccanica – MuggliOnline",
+   "fr": "École professionnelle : mécanique – MuggliOnline",
+   "es": "Formación profesional: mecánica – MuggliOnline"
+  },
+  "› Berufsschule: Maschinenbau": {
+   "rm": "› Scola professiunala: mecanica",
+   "en": "› Vocational school: Mechanical engineering",
+   "it": "› Scuola professionale: meccanica",
+   "fr": "› École professionnelle : mécanique",
+   "es": "› Formación profesional: mecánica"
+  },
+  "Berufsschule: Mediamatik – MuggliOnline": {
+   "rm": "Scola professiunala: mediamatica – MuggliOnline",
+   "en": "Vocational school: Mediamatics – MuggliOnline",
+   "it": "Scuola professionale: mediamatica – MuggliOnline",
+   "fr": "École professionnelle : médiamatique – MuggliOnline",
+   "es": "Formación profesional: mediamática – MuggliOnline"
+  },
+  "› Berufsschule: Mediamatik": {
+   "rm": "› Scola professiunala: mediamatica",
+   "en": "› Vocational school: Mediamatics",
+   "it": "› Scuola professionale: mediamatica",
+   "fr": "› École professionnelle : médiamatique",
+   "es": "› Formación profesional: mediamática"
+  },
+  "› Basic English": {
+   "rm": "› Basic English",
+   "en": "› Basic English",
+   "it": "› Basic English",
+   "fr": "› Basic English",
+   "es": "› Basic English"
   }
  },
  "js": {

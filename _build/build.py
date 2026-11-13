@@ -116,7 +116,7 @@ def area(filename, crumb, kicker, h1, lead, intro, plans, note="", cols="grid3")
 
 
 ACTIVE = {
-    "english.html": "english.html", "english-lernende.html": "english.html", "english-lehrpersonen.html": "english.html",
+    "english.html": "english.html",
     "didaktik.html": "didaktik.html", "lernende.html": "lernende.html",
     "werkstatt.html": "werkstatt.html", "bullet-journal.html": "werkstatt.html",
     "vision.html": "vision.html", "ueber-anja.html": "ueber-anja.html", "kontakt.html": "kontakt.html",
@@ -125,8 +125,8 @@ ACTIVE = {
 # ---------------- Startseite ----------------
 main = (B / "index_main.html").read_text()
 for old, new in {
-    'href="#english-lernende"': 'href="english-lernende.html"',
-    'href="#english-lehrpersonen"': 'href="english-lehrpersonen.html"',
+    'href="#english-lernende"': 'href="english.html"',
+    'href="#english-lehrpersonen"': 'href="english.html"',
     'href="#didaktik"': 'href="didaktik.html"',
     'href="#lernende"': 'href="lernende.html"',
     'href="#werkstatt"': 'href="werkstatt.html"',
@@ -137,36 +137,56 @@ for old, new in {
 page("index.html", "MuggliOnline – Materialien und Werkzeuge für gutes Lernen", main,
      description="Unterrichtsmaterialien, Online-Übungen und didaktische Hilfsmittel für Lernende und Lehrpersonen.")
 
-# ---------------- English: Übersicht ----------------
+# ---------------- Englisch: Übersicht und vier Bereiche ----------------
+EN_BEREICHE = [
+    ("english-basic.html", "Basic English", "Grundlagen des Englischen in kleinen Schritten.",
+     ["Grammatik", "Writing", "Wortschatz"],
+     [("Grammatik", "Übungen zu den wichtigsten Grammatikthemen, mit Sofortkontrolle."),
+      ("Writing", "Schreibaufträge mit Checklisten."),
+      ("Wortschatz", "Vokabeltrainer für den Grundwortschatz.")]),
+    ("english-maschinenbau.html", "Berufsschule: Maschinenbau", "Fachenglisch rund um Maschinen, Werkstoffe und Fertigung.",
+     ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
+    ("english-informatik.html", "Berufsschule: Informatik", "Fachenglisch für IT, Netzwerke und Software.",
+     ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
+    ("english-mediamatik.html", "Berufsschule: Mediamatik", "Fachenglisch rund um Medien, Design und Kommunikation.",
+     ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
+]
+LERNENDE_BERUF = [("Fachwortschatz", "Vokabeltrainer mit den wichtigsten Fachbegriffen."),
+                  ("Leseverständnis", "Texte aus dem Berufsalltag mit Verständnisfragen."),
+                  ("Probeprüfungen", "Prüfungen zum Üben, mit Lösungen.")]
+LEHRPERSONEN = [("Unterrichtsmaterialien", "Arbeitsblätter, Texte und Aufgaben für den Unterricht."),
+                ("Bewertungsraster", "Raster und Kriterien für Writing und Speaking."),
+                ("Prüfungen", "Prüfungen und Probeprüfungen mit Lösungen und Bewertungshinweisen.")]
+for datei, *_ in EN_BEREICHE:
+    ACTIVE[datei] = "english.html"
+
+kacheln = "\n".join(
+    f'''      <a class="plan entile" href="{datei}"><span class="badge live">Für Lehrpersonen und Lernende</span><h3>{titel}</h3><p>{text}</p><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul><span class="go">Zum Bereich →</span></a>'''
+    for datei, titel, text, punkte, _ in EN_BEREICHE)
 page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
 {hero("Englisch", "Für Lehrpersonen und Lernende", "Englisch", "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.")}
   <section class="section">
     <h2>Wähle deinen Bereich</h2>
-    <p class="intro">Der Englisch-Bereich ist in zwei Teile gegliedert.</p>
+    <p class="intro">Jeder Bereich bietet Übungen für Lernende und Materialien für Lehrpersonen.</p>
     <div class="grid2">
-      <a class="plan" href="english-lehrpersonen.html" style="border-style:solid"><span class="badge live">Für Lehrpersonen</span><h3>Englisch für Lehrpersonen →</h3><p>Unterrichtsmaterialien, Vorlagen und Prüfungen für den eigenen Englischunterricht.</p></a>
-      <a class="plan" href="english-lernende.html" style="border-style:solid"><span class="badge live">Für Lernende</span><h3>Englisch für Lernende →</h3><p>Online-Übungen mit direkter Rückmeldung zu Basic English, Grammatik, Writing und Fachenglisch.</p></a>
+{kacheln}
     </div>
   </section>
 </main>""", active="english.html", description="Englisch für Lernende und Lehrpersonen.")
 
-area("english-lernende.html", '<a href="english.html">Englisch</a> › Für Lernende', "Für Lernende",
-     "Englisch für Lernende",
-     "Übungen mit direkter Rückmeldung: Du schreibst deine Antworten hinein und siehst sofort, ob sie stimmen.",
-     "Die Übungen werden laufend aufgebaut. Geplant sind diese Bereiche:",
-     [plan("Basic English", "Grundlagen in kleinen Schritten, mit Sofortkontrolle.", ["Grammatik-Übungen und Lückentexte", "Wortschatz", "Writing-Aufgaben mit Checklisten"]),
-      plan("Fachenglisch Maschinenbau", "Fachwortschatz und Texte aus dem Berufsalltag.", ["Vokabeltrainer", "Leseverständnis", "Lückentexte"]),
-      plan("Fachenglisch Mediamatik", "Englisch rund um Medien, Design und Kommunikation.", ["Vokabeltrainer", "Leseverständnis", "Lückentexte"]),
-      plan("Fachenglisch Informatik", "Englisch für IT, Netzwerke und Software.", ["Vokabeltrainer", "Leseverständnis", "Lückentexte"])],
-     cols="grid2")
-
-area("english-lehrpersonen.html", '<a href="english.html">Englisch</a> › Für Lehrpersonen', "Für Lehrpersonen",
-     "Englisch für Lehrpersonen",
-     "Unterrichtsmaterialien, Vorlagen und Prüfungen für Basic English und Fachenglisch an Berufsschulen.",
-     "Hier entsteht eine Sammlung von erprobten Materialien für den eigenen Unterricht:",
-     [plan("Unterrichtsmaterialien", "Arbeitsblätter, Dialoge und Aufgaben zu verschiedenen Themen."),
-      plan("Vorlagen", "Vorlagen für Unterrichtsplanung, Aufträge und Bewertungsraster."),
-      plan("Prüfungen", "Prüfungen und Probeprüfungen mit Lösungen und Bewertungshinweisen.")])
+for datei, titel, text, punkte, lern in EN_BEREICHE:
+    lern = lern or LERNENDE_BERUF
+    spalte = lambda h, intro, items: (f'''    <div><h2>{h}</h2><p class="intro">{intro}</p><div class="stack">'''
+                                      + "".join(plan(t, d) for t, d in items) + "</div></div>")
+    page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
+{hero(f'<a href="english.html">Englisch</a> › {titel}', "Englisch", titel, text)}
+  <section class="section">
+    <div class="grid2">
+{spalte("Für Lehrpersonen", "Materialien für den eigenen Unterricht.", LEHRPERSONEN)}
+{spalte("Für Lernende", "Übungen mit direkter Rückmeldung.", lern)}
+    </div>
+  </section>
+</main>""", active="english.html", description=text)
 
 area("didaktik.html", "Didaktik", "Für Lehrpersonen",
      "Didaktik Zyklus 2",
