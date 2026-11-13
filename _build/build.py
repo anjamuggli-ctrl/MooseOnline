@@ -159,7 +159,8 @@ main = (B / "index_main.html").read_text()
 import re as _re
 main = _re.sub(r'<svg class="ridge".*?</svg>', lambda m: banner_ridge(180), main, count=1, flags=_re.S)
 _logo_gross = LOGO.replace('id="inner"', 'id="inner-gross"').replace('url(#inner)', 'url(#inner-gross)')
-main = main.replace('      </div>\n\n    </div>', '      </div>\n      <div class="hero-logo" aria-hidden="true"><div class="ring">' + _logo_gross + '</div><span class="wort">Muggli<span>Online</span></span></div>\n    </div>', 1)
+_logo_gross = _re.sub(r'<path[^>]*>', lambda m: m.group(0).replace('#2f4a39', '#2a3a4b'), _logo_gross)
+main = main.replace('      </div>\n\n    </div>', '      </div>\n      <div class="hero-logo" aria-hidden="true">' + _logo_gross + '<span class="wort">Muggli<span>Online</span></span></div>\n    </div>', 1)
 for old, new in {
     'href="#english-lernende"': 'href="english.html"',
     'href="#english-lehrpersonen"': 'href="english.html"',
