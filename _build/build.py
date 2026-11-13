@@ -146,7 +146,7 @@ EN_BEREICHE = [
     ("english-maschinenbau.html", "Berufsschule: Maschinenbau", "Fachenglisch rund um Maschinen, Werkstoffe und Fertigung.",
      ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
     ("english-informatik.html", "Berufsschule: Informatik", "Fachenglisch für IT, Netzwerke und Software.",
-     ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
+     ["Unterrichtsideen", "Materialien", "Bewertungsraster"], "nur-lp"),
     ("english-mediamatik.html", "Berufsschule: Mediamatik", "Fachenglisch rund um Medien, Design und Kommunikation.",
      ["Fachwortschatz", "Leseverständnis", "Prüfungsvorbereitung"], None),
 ]
@@ -160,7 +160,7 @@ for datei, *_ in EN_BEREICHE:
     ACTIVE[datei] = "english.html"
 
 kacheln = "\n".join(
-    f'''      <a class="plan entile" href="{datei}"><span class="badge live">Für Lehrpersonen und Lernende</span><h3>{titel}</h3><p>{text}</p><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul><span class="go">Zum Bereich →</span></a>'''
+    f'''      <a class="plan entile" href="{datei}"><span class="badge live">{"Für Lehrpersonen" if _ == "nur-lp" else "Für Lehrpersonen und Lernende"}</span><h3>{titel}</h3><p>{text}</p><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul><span class="go">Zum Bereich →</span></a>'''
     for datei, titel, text, punkte, _ in EN_BEREICHE)
 page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
 {hero("Englisch", "Für Lehrpersonen und Lernende", "Englisch", "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.")}
@@ -173,7 +173,55 @@ page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
   </section>
 </main>""", active="english.html", description="Englisch für Lernende und Lehrpersonen.")
 
+INFORMATIK_THEMEN = [
+    ("OSI Model", "Die sieben Schichten des OSI-Modells verstehen und auf Englisch erklären."),
+    ("Smart City", "Vernetzte Technologien in der Stadt der Zukunft erkunden und präsentieren."),
+    ("Software Tutorial", "Eine Software Schritt für Schritt erklären und ein eigenes Tutorial erstellen."),
+    ("IT Job Abroad", "Stelleninserate lesen, sich bewerben und ein Vorstellungsgespräch üben."),
+    ("Cybersecurity & Data Protection", "Risiken im Netz erkennen und Massnahmen zum Datenschutz diskutieren."),
+]
+
+LINE = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"'
+THEMEN_ART = {
+"OSI Model": f'''<g {LINE}>{"".join(f'<rect x="{60+i*2}" y="{14+i*13}" width="{100-i*4}" height="9" rx="3" fill="{"#e7ede6" if i%2==0 else "#cfdacd"}"/>' for i in range(7))}
+<path d="M178 20 v80 M172 92 l6 8 6-8 M42 100 v-80 M36 28 l6-8 6 8"/></g>''',
+"Smart City": f'''<g {LINE}><path d="M20 106 h180"/><rect x="34" y="56" width="26" height="50" rx="2"/><rect x="66" y="36" width="30" height="70" rx="2" fill="#e7ede6"/>
+<rect x="102" y="64" width="22" height="42" rx="2"/><rect x="130" y="28" width="28" height="78" rx="2" fill="#e7ede6"/><rect x="164" y="60" width="24" height="46" rx="2"/>
+<path d="M74 48 h6 M84 48 h4 M74 60 h6 M84 60 h4 M74 72 h6 M138 40 h5 M147 40 h5 M138 52 h5 M147 52 h5 M138 64 h5 M147 64 h5"/>
+<path d="M81 24 a8 8 0 0 1 0 -0.1 M73 20 a12 12 0 0 1 16 0 M68 14 a19 19 0 0 1 26 0" /><circle cx="81" cy="27" r="1.6" fill="#3f5d4a"/>
+<circle cx="47" cy="44" r="4"/><circle cx="113" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><path d="M51 42 l58 8 M117 51 l55 -2" stroke-dasharray="3 4"/></g>''',
+"Software Tutorial": f'''<g {LINE}><rect x="54" y="16" width="112" height="70" rx="6" fill="#e7ede6"/><path d="M40 98 h140 l-10 -12 h-120 z"/>
+<circle cx="110" cy="51" r="17" fill="#fff"/><path d="M104 42 v18 l14 -9 z" fill="#3f5d4a"/>
+<path d="M150 64 l10 22 4 -9 9 -3 z" fill="#fff"/><circle cx="22" cy="30" r="9"/><circle cx="22" cy="58" r="9"/><circle cx="22" cy="86" r="9"/>
+<path d="M19 27 l3 -2 v10 M19 55 q3 -4 6 0 q0 3 -6 7 h6 M19 82 h6 l-3 4 q4 0 4 3 q-1 4 -7 2"/></g>''',
+"IT Job Abroad": f'''<g {LINE}><circle cx="70" cy="60" r="38" fill="#e7ede6"/><path d="M32 60 h76 M70 22 v76 M70 22 c-16 20 -16 56 0 76 M70 22 c16 20 16 56 0 76 M38 40 h64 M38 80 h64"/>
+<rect x="136" y="62" width="50" height="38" rx="5" fill="#fff"/><path d="M152 62 v-8 h18 v8 M136 78 h50"/>
+<path d="M106 34 q30 -26 62 -6" stroke-dasharray="4 5"/><path d="M168 22 l12 4 -9 8 z" fill="#3f5d4a"/></g>''',
+"Cybersecurity & Data Protection": f'''<g {LINE}><path d="M110 12 l36 12 v28 c0 26 -16 44 -36 54 c-20 -10 -36 -28 -36 -54 v-28 z" fill="#e7ede6"/>
+<rect x="96" y="56" width="28" height="24" rx="4" fill="#fff"/><path d="M102 56 v-8 a8 8 0 0 1 16 0 v8"/><circle cx="110" cy="66" r="2.4" fill="#3f5d4a"/><path d="M110 68 v5"/></g>
+<g font-family="Inter, sans-serif" font-size="11" fill="#9fb3a5"><text x="20" y="30">1010</text><text x="30" y="60">0110</text><text x="18" y="90">1101</text><text x="166" y="34">0011</text><text x="176" y="64">1001</text><text x="164" y="94">0101</text></g>''',
+}
+def themen_karte(titel, text):
+    return (f'      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{THEMEN_ART[titel]}</svg></div>'
+            f'<span class="badge">In Vorbereitung</span><h3>{titel}</h3><p>{text}</p></div>')
+INFORMATIK_INTRO = ("Unter den folgenden Themenbereichen findest du Unterrichtsideen mit Materialien und Bewertungsrastern. "
+    "Sie wurden für den Unterricht in Technischem Englisch an der Berufsschule entwickelt, lassen sich aber übersetzen und für andere Fächer anpassen.")
+INFORMATIK_INTRO2 = ("Weil sie für den Fremdsprachenunterricht gedacht sind, ist das sprachliche Niveau entsprechend angepasst. "
+    "In der Erstsprache eignen sie sich deshalb auch gut als Projekte in der Oberstufe oder in der 6. Klasse.")
 for datei, titel, text, punkte, lern in EN_BEREICHE:
+    if lern == "nur-lp":
+        themen = "\n".join(themen_karte(t, d) for t, d in INFORMATIK_THEMEN)
+        page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
+{hero(f'<a href="english.html">Englisch</a> › {titel}', "Für Lehrpersonen", titel, text)}
+  <section class="section">
+    <h2>Themenbereiche</h2>
+    <div class="einleitung"><p>{INFORMATIK_INTRO}</p><p>{INFORMATIK_INTRO2}</p></div>
+    <div class="grid3">
+{themen}
+    </div>
+  </section>
+</main>""", active="english.html", description=text)
+        continue
     lern = lern or LERNENDE_BERUF
     spalte = lambda h, intro, items: (f'''    <div><h2>{h}</h2><p class="intro">{intro}</p><div class="stack">'''
                                       + "".join(plan(t, d) for t, d in items) + "</div></div>")

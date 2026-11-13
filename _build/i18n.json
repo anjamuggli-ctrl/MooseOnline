@@ -1742,6 +1742,76 @@
    "it": "Ritratto della dott.ssa Anja Muggli",
    "fr": "Portrait de Dr Anja Muggli",
    "es": "Retrato de la Dra. Anja Muggli"
+  },
+  "Unterrichtsideen": {
+   "rm": "Ideas d'instrucziun",
+   "en": "Lesson ideas",
+   "it": "Idee didattiche",
+   "fr": "Idées de cours",
+   "es": "Ideas para clases"
+  },
+  "Materialien": {
+   "rm": "Materials",
+   "en": "Materials",
+   "it": "Materiali",
+   "fr": "Matériel",
+   "es": "Materiales"
+  },
+  "Themenbereiche": {
+   "rm": "Secturs tematics",
+   "en": "Topics",
+   "it": "Aree tematiche",
+   "fr": "Thèmes",
+   "es": "Áreas temáticas"
+  },
+  "Die sieben Schichten des OSI-Modells verstehen und auf Englisch erklären.": {
+   "rm": "Capir las siat schichts dil model OSI e declarar ellas en englais.",
+   "en": "Understand the seven layers of the OSI model and explain them in English.",
+   "it": "Comprendere i sette livelli del modello OSI e spiegarli in inglese.",
+   "fr": "Comprendre les sept couches du modèle OSI et les expliquer en anglais.",
+   "es": "Comprender las siete capas del modelo OSI y explicarlas en inglés."
+  },
+  "Vernetzte Technologien in der Stadt der Zukunft erkunden und präsentieren.": {
+   "rm": "Explorar e preschentar tecnologias colligadas en la citad dil futur.",
+   "en": "Explore and present connected technologies in the city of the future.",
+   "it": "Esplorare e presentare tecnologie connesse nella città del futuro.",
+   "fr": "Explorer et présenter les technologies connectées de la ville de demain.",
+   "es": "Explorar y presentar tecnologías conectadas en la ciudad del futuro."
+  },
+  "Eine Software Schritt für Schritt erklären und ein eigenes Tutorial erstellen.": {
+   "rm": "Declarar ina software pass per pass e crear in agen tutorial.",
+   "en": "Explain a piece of software step by step and create your own tutorial.",
+   "it": "Spiegare un software passo dopo passo e creare un proprio tutorial.",
+   "fr": "Expliquer un logiciel étape par étape et créer son propre tutoriel.",
+   "es": "Explicar un programa paso a paso y crear un tutorial propio."
+  },
+  "Stelleninserate lesen, sich bewerben und ein Vorstellungsgespräch üben.": {
+   "rm": "Leger inserats da plazzas, s'annunziar ed exercitar ina discussiun da preschentaziun.",
+   "en": "Read job ads, apply for a position and practice a job interview.",
+   "it": "Leggere annunci di lavoro, candidarsi ed esercitarsi per un colloquio.",
+   "fr": "Lire des offres d'emploi, postuler et s'entraîner à l'entretien d'embauche.",
+   "es": "Leer ofertas de empleo, presentar una candidatura y practicar una entrevista de trabajo."
+  },
+  "Risiken im Netz erkennen und Massnahmen zum Datenschutz diskutieren.": {
+   "rm": "Enconuscher risguards ell'internet e discutar mesiras per la protecziun da datas.",
+   "en": "Recognize online risks and discuss data protection measures.",
+   "it": "Riconoscere i rischi in rete e discutere misure di protezione dei dati.",
+   "fr": "Reconnaître les risques en ligne et discuter des mesures de protection des données.",
+   "es": "Reconocer los riesgos en internet y debatir medidas de protección de datos."
+  },
+  "Unter den folgenden Themenbereichen findest du Unterrichtsideen mit Materialien und Bewertungsrastern. Sie wurden für den Unterricht in Technischem Englisch an der Berufsschule entwickelt, lassen sich aber übersetzen und für andere Fächer anpassen.": {
+   "rm": "Sut ils suandonts secturs tematics anflas ti ideas d'instrucziun cun materials e rasters da valitaziun. Ellas ein vegnidas sviluppadas per l'instrucziun d'englais tecnic alla scola professiunala, san denton vegnir translatadas ed adattadas per auters roms.",
+   "en": "Under the following topics, you will find lesson ideas with materials and grading rubrics. They were developed for Technical English classes at vocational school, but they can be translated and adapted for other subjects.",
+   "it": "Nelle seguenti aree tematiche trovi idee didattiche con materiali e griglie di valutazione. Sono state sviluppate per l'insegnamento dell'inglese tecnico nella scuola professionale, ma possono essere tradotte e adattate ad altre materie.",
+   "fr": "Dans les thèmes suivants, tu trouveras des idées de cours avec du matériel et des grilles d'évaluation. Elles ont été conçues pour l'enseignement de l'anglais technique en école professionnelle, mais peuvent être traduites et adaptées à d'autres disciplines.",
+   "es": "En las siguientes áreas temáticas encontrarás ideas para clases con materiales y rúbricas de evaluación. Se crearon para las clases de inglés técnico en la formación profesional, pero pueden traducirse y adaptarse a otras asignaturas."
+  },
+  "Weil sie für den Fremdsprachenunterricht gedacht sind, ist das sprachliche Niveau entsprechend angepasst. In der Erstsprache eignen sie sich deshalb auch gut als Projekte in der Oberstufe oder in der 6. Klasse.": {
+   "rm": "Damai ch'ellas ein pensadas per l'instrucziun da lungatgs jasters, ei il nivel linguistic adattaus correspundentamein. En la emprema lungatg s'adattan ellas perquei era bein sco projects el scalem superiur ni en la 6avla classa.",
+   "en": "Because they are designed for foreign language teaching, the language level is adjusted accordingly. In students' first language, they therefore also work well as projects in middle school or 6th grade.",
+   "it": "Poiché sono pensate per l'insegnamento delle lingue straniere, il livello linguistico è adattato di conseguenza. Nella prima lingua si prestano quindi bene anche come progetti nella scuola media o in 6ª classe.",
+   "fr": "Comme elles sont pensées pour l'enseignement des langues étrangères, le niveau de langue est adapté en conséquence. Dans la langue première, elles conviennent donc aussi très bien comme projets au secondaire I ou en 6e année (8H).",
+   "es": "Como están pensadas para la enseñanza de lenguas extranjeras, el nivel lingüístico está adaptado en consecuencia. En la lengua materna, también funcionan bien como proyectos en secundaria o en 6.º curso."
   }
  },
  "js": {
