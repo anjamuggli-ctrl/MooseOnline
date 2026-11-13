@@ -68,3 +68,31 @@
     .page-hero .inner{padding:32px 26px 84px}
     .page-hero h1{font-size:30px}
   }
+
+  /* ---------- Vorlagen-Bibliothek ---------- */
+  .filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+  .filter button{font:inherit;font-size:14px;padding:7px 14px;border-radius:20px;border:1px solid var(--line);background:#fff;color:#4c5a50;cursor:pointer}
+  .filter button.on{background:var(--green);border-color:var(--green);color:var(--sand)}
+  .lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:20px}
+  .tpl{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 12px 14px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s}
+  .tpl:hover,.tpl:focus-visible{transform:translateY(-3px);box-shadow:0 10px 26px rgba(63,93,74,.14);outline:none}
+  .tpl img{display:block;width:100%;height:auto;aspect-ratio:148/210;object-fit:contain;background:#fff;border:1px solid #eee8db;border-radius:6px}
+  .tpl b{display:block;font-size:14.5px;margin-top:10px;color:var(--green-dark)}
+  .tpl span{font-size:13px;color:var(--muted)}
+  .modal{position:fixed;inset:0;z-index:50;background:rgba(31,43,35,.72);display:none;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .modal .box{background:var(--sand);border-radius:20px;max-width:900px;width:100%;max-height:94vh;overflow:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:26px;padding:26px;position:relative}
+  .modal .box img{width:100%;height:auto;max-height:80vh;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .modal h3{font-family:Fraunces,serif;font-size:26px;color:var(--green-dark);margin:6px 0 6px}
+  .modal p{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .modal .acts{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+  .modal .x{position:absolute;top:12px;right:14px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--green-dark)}
+  .modal .nav2{display:flex;gap:8px;margin-top:22px}
+  .modal .nav2 button{font:inherit;font-size:14px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;cursor:pointer}
+  #pv-print{display:none}
+  @media print{
+    body.druck-vorlage #sheet,body.druck-vorlage #sheet *{visibility:hidden!important}
+    body.druck-vorlage #pv-print{display:block;position:fixed;left:0;top:0;width:148mm;height:210mm;visibility:visible}
+    body.druck-vorlage #pv-print img{width:148mm;height:210mm;visibility:visible}
+  }
+  @media (max-width:720px){ .modal .box{grid-template-columns:1fr} .lib{grid-template-columns:repeat(2,1fr);gap:12px} }

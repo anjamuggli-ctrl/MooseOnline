@@ -112,11 +112,39 @@
       </div>
     </div>
   </section>
+  <section class="section" id="vorlagen">
+    <h2>Vorlagen-Bibliothek</h2>
+    <p class="intro">Fertig gestaltete Seiten zum Ausdrucken. Klicke auf eine Vorlage, um sie gross anzusehen, zu drucken oder als PDF herunterzuladen. Alle Vorlagen sind im Format A5.</p>
+    <div class="filter" id="filter">
+      <button class="on" data-f="alle">Alle</button><button data-f="To-do">To-do-Listen</button><button data-f="1 Feld">1 Feld</button><button data-f="2 Felder">2 Felder</button><button data-f="3 Felder">3 Felder</button><button data-f="4 Felder">4 Felder</button>
+    </div>
+    <div class="lib" id="lib"></div>
+  </section>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-titel">
+    <div class="box">
+      <button class="x" id="m-x" type="button" aria-label="Schliessen">×</button>
+      <img id="m-bild" src="" alt="">
+      <div>
+        <span class="badge live">Vorlage</span>
+        <h3 id="m-titel"></h3>
+        <p id="m-kat"></p>
+        <div class="acts">
+          <button class="btn green" id="m-drucken" type="button">Drucken</button>
+          <a class="btn outline" id="m-pdf" href="#" download>PDF herunterladen</a>
+        </div>
+        <p style="margin-top:16px;font-size:13.5px">Tipp: Im Druckdialog «Papierformat A5» und «Ränder: keine» wählen. Auf A4 gedruckt wird die Seite automatisch verkleinert.</p>
+        <div class="nav2"><button id="m-zur" type="button">← Vorherige</button><button id="m-vor" type="button">Nächste →</button></div>
+      </div>
+    </div>
+  </div>
+  <div id="pv-print" aria-hidden="true"></div>
+  <script type="application/json" id="vorlagen-daten">[{"nr": 1, "datei": "vorlage-01-wolken-und-sterne", "titel": "Wolken und Sterne", "kategorie": "4 Felder"}, {"nr": 2, "datei": "vorlage-02-zweige", "titel": "Zarte Zweige", "kategorie": "1 Feld"}, {"nr": 3, "datei": "vorlage-03-todo-gruen", "titel": "To-do-Liste Mint", "kategorie": "To-do"}, {"nr": 4, "datei": "vorlage-04-todo-lila", "titel": "To-do-Liste Lavendel", "kategorie": "To-do"}, {"nr": 5, "datei": "vorlage-05-buecherregal-katze", "titel": "Bücherregal mit Katze", "kategorie": "3 Felder"}, {"nr": 6, "datei": "vorlage-06-kakteen-washi", "titel": "Kakteen und Washi-Tape", "kategorie": "3 Felder"}, {"nr": 7, "datei": "vorlage-07-heissluftballone", "titel": "Heissluftballone und Mond", "kategorie": "2 Felder"}, {"nr": 8, "datei": "vorlage-08-wald", "titel": "Wald", "kategorie": "3 Felder"}, {"nr": 9, "datei": "vorlage-09-fledermaeuse", "titel": "Fledermäuse", "kategorie": "2 Felder"}, {"nr": 10, "datei": "vorlage-10-aquarium", "titel": "Aquarium", "kategorie": "2 Felder"}, {"nr": 11, "datei": "vorlage-11-weltreise", "titel": "Weltreise und Kompass", "kategorie": "2 Felder"}, {"nr": 12, "datei": "vorlage-12-voegel", "titel": "Vögel im Winter", "kategorie": "4 Felder"}, {"nr": 13, "datei": "vorlage-13-raben", "titel": "Raben im Baum", "kategorie": "2 Felder"}, {"nr": 14, "datei": "vorlage-14-goldfische", "titel": "Goldfische", "kategorie": "3 Felder"}, {"nr": 15, "datei": "vorlage-15-berge-kuehe", "titel": "Berge und Kühe", "kategorie": "1 Feld"}, {"nr": 16, "datei": "vorlage-16-zimmerpflanzen", "titel": "Zimmerpflanzen", "kategorie": "3 Felder"}, {"nr": 17, "datei": "vorlage-17-wueste", "titel": "Wüste", "kategorie": "2 Felder"}, {"nr": 18, "datei": "vorlage-18-buecher-lampe", "titel": "Bücher und Lampe", "kategorie": "2 Felder"}, {"nr": 19, "datei": "vorlage-19-kakteen-pastell", "titel": "Kakteen in Pastell", "kategorie": "2 Felder"}]</script>
   <section class="section" style="margin-top:0">
-    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, eine Bibliothek mit eigenen Vorlagen und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
+    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
   </section>
 </main>
 <script src="bullet-journal.js"></script>
+<script src="vorlagen.js"></script>
 
 <footer>
   <div class="wrap">

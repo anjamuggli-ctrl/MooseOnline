@@ -199,8 +199,8 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
         <div class="body">
           <div class="kicker"><span class="badge live">Verfügbar</span></div>
           <h3>Bullet-Journal-Generator</h3>
-          <p>Erstelle druckfertige A5-Seiten für dein Bullet Journal: Tagesplaner, Wochen- und Monatsübersicht oder Habit-Tracker, mit Punkten, Kästchen oder Linien. Später kommen KI-Motive zum Nachzeichnen dazu.</p>
-          <div class="tags"><span>A5</span><span>Druckfertig</span><span>Bald mit KI</span></div>
+          <p>Erstelle druckfertige A5-Seiten für dein Bullet Journal: Tagesplaner, Wochen- und Monatsübersicht oder Habit-Tracker, mit Punkten, Kästchen oder Linien. Dazu kommt eine Bibliothek mit 19 fertig gestalteten Vorlagen zum Drucken oder Herunterladen.</p>
+          <div class="tags"><span>A5</span><span>Druckfertig</span><span>19 Vorlagen</span><span>Bald mit KI</span></div>
           <span class="go">App öffnen →</span>
         </div>
       </a>
@@ -213,6 +213,8 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
 </main>""", active="werkstatt.html", description="Kleine Web-Apps für Schule und Alltag.")
 
 # ---------------- Bullet-Journal-Generator ----------------
+import json
+VORLAGEN_JSON = json.dumps(json.loads((B / "vorlagen.json").read_text()), ensure_ascii=False)
 page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<main class="wrap">
 {hero('<a href="werkstatt.html">App-Werkstatt</a> › Bullet-Journal-Generator', "App-Werkstatt", "Bullet-Journal-Generator", "Stelle deine Seite zusammen, schau sie dir in der Vorschau an und drucke sie in A5 aus oder speichere sie als PDF.")}
   <section class="section">
@@ -255,11 +257,39 @@ page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<ma
       </div>
     </div>
   </section>
+  <section class="section" id="vorlagen">
+    <h2>Vorlagen-Bibliothek</h2>
+    <p class="intro">Fertig gestaltete Seiten zum Ausdrucken. Klicke auf eine Vorlage, um sie gross anzusehen, zu drucken oder als PDF herunterzuladen. Alle Vorlagen sind im Format A5.</p>
+    <div class="filter" id="filter">
+      <button class="on" data-f="alle">Alle</button><button data-f="To-do">To-do-Listen</button><button data-f="1 Feld">1 Feld</button><button data-f="2 Felder">2 Felder</button><button data-f="3 Felder">3 Felder</button><button data-f="4 Felder">4 Felder</button>
+    </div>
+    <div class="lib" id="lib"></div>
+  </section>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-titel">
+    <div class="box">
+      <button class="x" id="m-x" type="button" aria-label="Schliessen">×</button>
+      <img id="m-bild" src="" alt="">
+      <div>
+        <span class="badge live">Vorlage</span>
+        <h3 id="m-titel"></h3>
+        <p id="m-kat"></p>
+        <div class="acts">
+          <button class="btn green" id="m-drucken" type="button">Drucken</button>
+          <a class="btn outline" id="m-pdf" href="#" download>PDF herunterladen</a>
+        </div>
+        <p style="margin-top:16px;font-size:13.5px">Tipp: Im Druckdialog «Papierformat A5» und «Ränder: keine» wählen. Auf A4 gedruckt wird die Seite automatisch verkleinert.</p>
+        <div class="nav2"><button id="m-zur" type="button">← Vorherige</button><button id="m-vor" type="button">Nächste →</button></div>
+      </div>
+    </div>
+  </div>
+  <div id="pv-print" aria-hidden="true"></div>
+  <script type="application/json" id="vorlagen-daten">{VORLAGEN_JSON}</script>
   <section class="section" style="margin-top:0">
-    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, eine Bibliothek mit eigenen Vorlagen und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
+    <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
   </section>
 </main>
-<script src="bullet-journal.js"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
+<script src="bullet-journal.js"></script>
+<script src="vorlagen.js"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
 
 # ---------------- Vision ----------------
 area("vision.html", "Vision", "Meine Vision", "Vision",
