@@ -310,9 +310,32 @@ VISION = [
         "Bildung eröffnet Möglichkeiten, das eigene Leben und unsere Gesellschaft mitzugestalten. Ich möchte Lernende darin stärken, selbstständig zu denken, Fragen zu stellen, unterschiedliche Perspektiven zu prüfen und Verantwortung zu übernehmen. Dazu gehört für mich auch ein neugieriger und reflektierter Umgang mit digitalen Werkzeugen und künstlicher Intelligenz.",
         "Gleichzeitig möchte ich Lernende bei den Anforderungen unterstützen, denen sie im Schulalltag begegnen. Deshalb bietet MuggliOnline auch Lernübungen und Probeprüfungen zur Vorbereitung auf klassische Prüfungen. Diese gehören zu unserem Schulsystem, auch wenn sie aus meiner Sicht die vielfältigen Kompetenzen und Potenziale von Lernenden nur begrenzt abbilden. Mein Anliegen ist es, Lernenden Sicherheit für diese Prüfungen zu geben und zugleich ihr Vertrauen in die eigenen Fähigkeiten über einzelne Noten hinaus zu stärken."]),
 ]
+def silhouette(v):
+    """Sanfte Berg- und Baumsilhouette im Hintergrund der Vision-Balken (drei Varianten)."""
+    berge = [
+        "M0,120 L0,78 L90,52 L170,70 L260,30 L340,62 L420,48 L520,80 L600,40 L700,70 L800,34 L900,66 L1000,50 L1100,74 L1200,46 L1200,120 Z",
+        "M0,120 L0,64 L110,40 L200,66 L300,44 L380,72 L480,26 L580,60 L660,50 L760,78 L860,38 L960,64 L1080,30 L1200,58 L1200,120 Z",
+        "M0,120 L0,70 L80,58 L190,32 L290,64 L400,46 L470,70 L560,36 L680,68 L780,44 L880,72 L990,28 L1090,60 L1200,40 L1200,120 Z",
+    ][v]
+    vorne = [
+        "M0,120 L0,96 L150,80 L300,98 L450,84 L620,100 L780,86 L950,102 L1100,88 L1200,96 L1200,120 Z",
+        "M0,120 L0,92 L180,100 L330,84 L500,98 L640,88 L820,102 L990,84 L1200,98 L1200,120 Z",
+        "M0,120 L0,100 L140,86 L320,100 L470,88 L650,102 L800,84 L980,98 L1200,90 L1200,120 Z",
+    ][v]
+    tannen = [[(60, 92, 1.0), (88, 96, .75), (1030, 94, .9), (1060, 98, .7), (1120, 92, 1.1)],
+              [(40, 96, .8), (980, 92, 1.0), (1010, 98, .7), (1150, 94, .95)],
+              [(70, 98, .9), (100, 94, 1.1), (130, 99, .7), (1100, 96, .85)]][v]
+    baeume = "".join(
+        f'<g transform="translate({x} {y}) scale({k})"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g>'
+        for x, y, k in tannen)
+    return (f'<svg class="vsil" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">'
+            f'<path d="{berge}" fill="#ece3d1"/><path d="{vorne}" fill="#e4d9c3"/></svg>'
+            f'<svg class="vtrees" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#ddd1b8">{baeume}</g></svg>')
+
+
 rows = "\n".join(
-    f'''    <article class="vrow"><div class="vhead"><span class="vnum">0{i}</span><h2>{titel}</h2></div><div class="vtext">{"".join(f"<p>{p}</p>" for p in absaetze)}</div></article>'''
-    for i, (titel, absaetze) in enumerate(VISION, 1))
+    f'''    <article class="vrow">{silhouette(i)}<div class="vhead"><h2>{titel}</h2></div><div class="vtext">{"".join(f"<p>{p}</p>" for p in absaetze)}</div></article>'''
+    for i, (titel, absaetze) in enumerate(VISION))
 page("vision.html", "Vision – MuggliOnline", f"""<main class="wrap">
 {hero("Vision", "Meine Vision", "Vision", "Lernen verstehen, Lehren gestalten, Zukunft mitprägen. Was ich mit MuggliOnline erreichen möchte.")}
   <section class="section vision">
