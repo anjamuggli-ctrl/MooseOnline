@@ -299,12 +299,26 @@ page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<ma
 <script src="vorlagen.js"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
 
 # ---------------- Vision ----------------
-area("vision.html", "Vision", "Meine Vision", "Vision",
-     "Lernen verstehen, Lehren gestalten, Zukunft mitprägen. Was ich mit MuggliOnline erreichen möchte.",
-     "Die drei Teile meines Mottos bilden das Fundament dieser Website. Die ausführlichen Texte folgen.",
-     [plan("Lernen verstehen", "Text folgt.", badge="Text folgt"),
-      plan("Lehren gestalten", "Text folgt.", badge="Text folgt"),
-      plan("Zukunft mitprägen", "Text folgt.", badge="Text folgt")])
+VISION = [
+    ("Lernen verstehen", [
+        "Wie lernen Menschen? Was weckt ihre Neugier, was hilft ihnen weiter und wo entstehen Hindernisse? Diese Fragen stehen im Zentrum meiner Arbeit. Ich möchte Lernprozesse besser verstehen und dieses Wissen für Lehrpersonen und Lernende zugänglich machen.",
+        "Dabei verbinde ich Erkenntnisse aus den Erziehungswissenschaften mit Erfahrungen aus dem Unterricht. So entstehen Materialien und Impulse, die Lehrpersonen sowie Lernenden helfen können, Lernwege zu erkennen, Schwierigkeiten einzuordnen und passende nächste Schritte zu finden."]),
+    ("Lehren gestalten", [
+        "Lehren bedeutet für mich, Bedingungen zu schaffen, unter denen Menschen lernen und sich entwickeln können. Dazu gehören klare Ziele, anregende Aufgaben, hilfreiche Rückmeldungen und eine vertrauensvolle Beziehung.",
+        "Mit MuggliOnline möchte ich Lehrpersonen dabei unterstützen, Unterricht bewusst und fundiert zu gestalten. Ich teile Materialien, didaktische Hilfsmittel und Ideen, die sich an unterschiedliche Lerngruppen anpassen lassen und Raum für eigene Wege bieten."]),
+    ("Zukunft mitprägen", [
+        "Bildung eröffnet Möglichkeiten, das eigene Leben und unsere Gesellschaft mitzugestalten. Ich möchte Lernende darin stärken, selbstständig zu denken, Fragen zu stellen, unterschiedliche Perspektiven zu prüfen und Verantwortung zu übernehmen. Dazu gehört für mich auch ein neugieriger und reflektierter Umgang mit digitalen Werkzeugen und künstlicher Intelligenz.",
+        "Gleichzeitig möchte ich Lernende bei den Anforderungen unterstützen, denen sie im Schulalltag begegnen. Deshalb bietet MuggliOnline auch Lernübungen und Probeprüfungen zur Vorbereitung auf klassische Prüfungen. Diese gehören zu unserem Schulsystem, auch wenn sie aus meiner Sicht die vielfältigen Kompetenzen und Potenziale von Lernenden nur begrenzt abbilden. Mein Anliegen ist es, Lernenden Sicherheit für diese Prüfungen zu geben und zugleich ihr Vertrauen in die eigenen Fähigkeiten über einzelne Noten hinaus zu stärken."]),
+]
+rows = "\n".join(
+    f'''    <article class="vrow"><div class="vhead"><span class="vnum">0{i}</span><h2>{titel}</h2></div><div class="vtext">{"".join(f"<p>{p}</p>" for p in absaetze)}</div></article>'''
+    for i, (titel, absaetze) in enumerate(VISION, 1))
+page("vision.html", "Vision – MuggliOnline", f"""<main class="wrap">
+{hero("Vision", "Meine Vision", "Vision", "Lernen verstehen, Lehren gestalten, Zukunft mitprägen. Was ich mit MuggliOnline erreichen möchte.")}
+  <section class="section vision">
+{rows}
+  </section>
+</main>""", active="vision.html", description="Lernen verstehen, Lehren gestalten, Zukunft mitprägen: die Vision hinter MuggliOnline.")
 
 # ---------------- Über Anja ----------------
 page("ueber-anja.html", "Über Anja – MuggliOnline", f"""<main class="wrap">
