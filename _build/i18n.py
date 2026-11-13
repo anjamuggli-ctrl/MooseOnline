@@ -3,7 +3,7 @@
 Wird automatisch am Ende von build.py aufgerufen. Übersetzungen stehen in _build/i18n.json.
 Fehlt eine Übersetzung, bleibt der deutsche Text stehen und das Skript meldet ihn.
 """
-import json, re
+import json, re, html as H
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -46,7 +46,7 @@ def hreflang(lang, datei):
 
 class Uebersetzer(HTMLParser):
     def __init__(self, lang, fehlend):
-        super().__init__(convert_charrefs=False)
+        super().__init__(convert_charrefs=True)
         self.lang, self.out, self.fehlend = lang, [], fehlend
         self.in_json = False
 
@@ -97,7 +97,7 @@ class Uebersetzer(HTMLParser):
         if not s:
             self.out.append(d); return
         vorne, hinten = d[: len(d) - len(d.lstrip())], d[len(d.rstrip()):]
-        self.out.append(vorne + self.tr(s) + hinten)
+        self.out.append(vorne + H.escape(self.tr(s), quote=False) + hinten)
 
     def handle_entityref(self, name): self.out.append(f"&{name};")
     def handle_charref(self, name): self.out.append(f"&#{name};")

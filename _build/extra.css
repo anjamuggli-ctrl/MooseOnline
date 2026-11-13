@@ -123,3 +123,5 @@
   .lang-list a.aktiv{font-weight:700;color:var(--green-dark);background:var(--sand)}
   .lang-list small{color:var(--muted);font-size:12px;font-weight:600}
   @media (max-width:1000px){ .lang{margin-left:auto} .burger{margin-left:6px} }
+  .about .intro{color:#45524a;font-size:16.5px;line-height:1.7;max-width:none;margin-bottom:30px}
+  .about h2{margin-bottom:10px}

@@ -360,11 +360,11 @@ page("ueber-anja.html", "Über Anja – MuggliOnline", f"""<main class="wrap">
       </div>
       <div>
         <h2>Werdegang</h2>
-        <p class="intro">Text folgt.</p>
+        <p class="intro">Dr. Anja Muggli absolvierte in den USA einen Bachelor in K–12 Education mit Major in Germanistik und Minor in Englisch als Zweitsprache, einen Master in Education mit Major in E-Learning Technology and Design sowie ein Doktorat in Education mit Schwerpunkten in englischer Linguistik und (Fremd-)Sprachdidaktik. Seit ihrer Rückkehr in die Schweiz im Jahr 2022 bringt sie ihre fachlichen und internationalen Erfahrungen in die Berufsbildung ein. Ergänzend erwarb sie das schweizerische Lehrdiplom für den berufskundlichen Unterricht im Fach Technisches Englisch.</p>
         <h2>Schwerpunkte</h2>
-        <p class="intro">Text folgt.</p>
+        <p class="intro">Ihre fachlichen Schwerpunkte liegen in der Gestaltung und Begleitung von Lernprozessen, der Förderung selbstregulierten Lernens sowie der Verbindung von erziehungswissenschaftlichen Erkenntnissen und Unterrichtspraxis. Weitere Schwerpunkte bilden die Interdisziplinarität in der Berufsbildung, der berufsbezogene Englischunterricht, die Fremdsprachendidaktik und der sprachsensible Unterricht. Ein besonderes Interesse gilt digitalen Lernangeboten und dem reflektierten Einsatz künstlicher Intelligenz in der Bildung. Im Zentrum steht dabei die Frage, wie didaktische Ansätze und Werkzeuge das Verständnis, die Selbstständigkeit und das kritische Denken von Lernenden fördern können.</p>
         <h2>Aktuelle Tätigkeiten</h2>
-        <p class="intro">Text folgt.</p>
+        <p class="intro">Anja unterrichtet Englisch an der Gewerblichen Berufsschule Chur und ist als Dozentin für Erziehungswissenschaften im Masterstudiengang Sekundarstufe I &amp; II an der Pädagogischen Hochschule Graubünden tätig. In diesen Funktionen begleitet sie Berufslernende und angehende Lehrpersonen und verbindet schulische Praxis mit wissenschaftlichen Perspektiven auf Lehren und Lernen. Mit MuggliOnline möchte sie selbst erstellte Unterrichtsmaterialien, Lernübungen und digitale Werkzeuge für Lehrpersonen und Lernende zugänglich machen und damit selbstständiges Lernen sowie die Unterrichtsgestaltung unterstützen.</p>
         <a class="btn green" href="kontakt.html">Kontakt aufnehmen</a>
       </div>
     </div>
