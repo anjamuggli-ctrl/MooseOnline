@@ -1,15 +1,51 @@
 [
  {
-  "nr": 1,
-  "datei": "vorlage-01-wolken-und-sterne",
-  "titel": "Wolken und Sterne",
-  "kategorie": "4 Felder"
+  "nr": 20,
+  "datei": "vorlage-20-notizen-bergsee",
+  "titel": "Notizseite Bergsee",
+  "kategorie": "Notizen"
  },
  {
-  "nr": 2,
-  "datei": "vorlage-02-zweige",
-  "titel": "Zarte Zweige",
-  "kategorie": "1 Feld"
+  "nr": 21,
+  "datei": "vorlage-21-notizen-alpenrose",
+  "titel": "Notizseite Alpenrose",
+  "kategorie": "Notizen"
+ },
+ {
+  "nr": 22,
+  "datei": "vorlage-22-notizen-gletscher",
+  "titel": "Notizseite Gletscher",
+  "kategorie": "Notizen"
+ },
+ {
+  "nr": 23,
+  "datei": "vorlage-23-sitzungsnotizen",
+  "titel": "Sitzungsnotizen",
+  "kategorie": "Notizen"
+ },
+ {
+  "nr": 24,
+  "datei": "vorlage-24-monatsplaner-terrakotta",
+  "titel": "Monatsplaner Terrakotta",
+  "kategorie": "Planer"
+ },
+ {
+  "nr": 25,
+  "datei": "vorlage-25-wochenplaner-pastell",
+  "titel": "Wochenplaner Pastell",
+  "kategorie": "Planer"
+ },
+ {
+  "nr": 26,
+  "datei": "vorlage-26-woche-bergkette",
+  "titel": "Woche mit Bergkette",
+  "kategorie": "Planer"
+ },
+ {
+  "nr": 27,
+  "datei": "vorlage-27-monat-alpengluehen",
+  "titel": "Monat Alpenglühen",
+  "kategorie": "Planer"
  },
  {
   "nr": 3,
@@ -22,6 +58,18 @@
   "datei": "vorlage-04-todo-lila",
   "titel": "To-do-Liste Lavendel",
   "kategorie": "To-do"
+ },
+ {
+  "nr": 1,
+  "datei": "vorlage-01-wolken-und-sterne",
+  "titel": "Wolken und Sterne",
+  "kategorie": "4 Felder"
+ },
+ {
+  "nr": 2,
+  "datei": "vorlage-02-zweige",
+  "titel": "Zarte Zweige",
+  "kategorie": "1 Feld"
  },
  {
   "nr": 5,
@@ -112,53 +160,5 @@
   "datei": "vorlage-19-kakteen-pastell",
   "titel": "Kakteen in Pastell",
   "kategorie": "2 Felder"
- },
- {
-  "nr": 20,
-  "datei": "vorlage-20-notizen-bergsee",
-  "titel": "Notizseite Bergsee",
-  "kategorie": "Notizen"
- },
- {
-  "nr": 21,
-  "datei": "vorlage-21-notizen-alpenrose",
-  "titel": "Notizseite Alpenrose",
-  "kategorie": "Notizen"
- },
- {
-  "nr": 22,
-  "datei": "vorlage-22-notizen-gletscher",
-  "titel": "Notizseite Gletscher",
-  "kategorie": "Notizen"
- },
- {
-  "nr": 23,
-  "datei": "vorlage-23-sitzungsnotizen",
-  "titel": "Sitzungsnotizen",
-  "kategorie": "Notizen"
- },
- {
-  "nr": 24,
-  "datei": "vorlage-24-monatsplaner-terrakotta",
-  "titel": "Monatsplaner Terrakotta",
-  "kategorie": "Planer"
- },
- {
-  "nr": 25,
-  "datei": "vorlage-25-wochenplaner-pastell",
-  "titel": "Wochenplaner Pastell",
-  "kategorie": "Planer"
- },
- {
-  "nr": 26,
-  "datei": "vorlage-26-woche-bergkette",
-  "titel": "Woche mit Bergkette",
-  "kategorie": "Planer"
- },
- {
-  "nr": 27,
-  "datei": "vorlage-27-monat-alpengluehen",
-  "titel": "Monat Alpenglühen",
-  "kategorie": "Planer"
  }
 ]
