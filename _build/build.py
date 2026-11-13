@@ -10,7 +10,12 @@ ROOT = Path(__file__).resolve().parent.parent
 B = Path(__file__).resolve().parent
 
 LOGO = (B / "logo_inline.svg").read_text()
-(ROOT / "style.css").write_text((B / "base.css").read_text() + (B / "extra.css").read_text())
+CSS = (B / "base.css").read_text() + (B / "extra.css").read_text()
+(ROOT / "style.css").write_text(CSS)
+import hashlib
+def version(text): return hashlib.md5(text.encode()).hexdigest()[:8]
+CSS_V = version(CSS)
+JS_V = {n: version((ROOT / n).read_text()) for n in ("bullet-journal.js", "vorlagen.js")}
 
 MENU = [
     ("vision.html", "Vision"),
@@ -44,7 +49,7 @@ def page(filename, title, body, active=None, description="", extra_head=""):
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={CSS_V}">
 {extra_head}</head>
 <body>
 
@@ -295,8 +300,8 @@ page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<ma
     <div class="note"><span>✨</span><span><b>Was noch kommt:</b> KI-Motive zum Nachzeichnen, und das Speichern deiner Lieblingseinstellungen. Diese Funktionen werden passwortgeschützt.</span></div>
   </section>
 </main>
-<script src="bullet-journal.js"></script>
-<script src="vorlagen.js"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
+<script src="bullet-journal.js?v={JS_V['bullet-journal.js']}"></script>
+<script src="vorlagen.js?v={JS_V['vorlagen.js']}"></script>""", active="werkstatt.html", description="Druckfertige A5-Seiten für das Bullet Journal erstellen.")
 
 # ---------------- Vision ----------------
 VISION = [
