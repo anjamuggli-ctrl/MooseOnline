@@ -72,7 +72,7 @@ def page(filename, title, body, active=None, description="", extra_head=""):
 
 <footer>
   <div class="wrap">
-    <span>© 2026 MuggliOnline · Dr. Anja Muggli, Chur</span>
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
     <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
@@ -87,8 +87,7 @@ def hero(crumb, kicker, h1, lead):
     return f"""  <section class="page-hero">
     <div class="inner">
       <div class="crumbs"><a href="index.html">Startseite</a> › {crumb}</div>
-      <div class="kicker">{kicker}</div>
-      <h1>{h1}</h1>
+{f'      <div class="kicker">{kicker}</div>\n' if kicker else ""}      <h1>{h1}</h1>
       <p class="lead">{lead}</p>
     </div>
     {RIDGE}
@@ -372,7 +371,7 @@ page("vision.html", "Vision – MuggliOnline", f"""<main class="wrap">
 
 # ---------------- Über Anja ----------------
 page("ueber-anja.html", "Über Anja – MuggliOnline", f"""<main class="wrap">
-{hero("Über Anja", "Über mich", "Dr. Anja Muggli", "Dozentin Erziehungswissenschaften · Englischlehrperson")}
+{hero("Über Anja", "", "Dr. Anja Muggli", "Dozentin Erziehungswissenschaften · Englischlehrperson")}
   <section class="section">
     <div class="about">
       <div class="photo"><img src="foto-anja.jpg" alt="Porträt von Dr. Anja Muggli" width="560" height="672"></div>
