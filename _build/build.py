@@ -199,8 +199,8 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
         <div class="body">
           <div class="kicker"><span class="badge live">Verfügbar</span></div>
           <h3>Bullet-Journal-Generator</h3>
-          <p>Erstelle druckfertige A5-Seiten für dein Bullet Journal: Tagesplaner, Wochen- und Monatsübersicht oder Habit-Tracker, mit Punkten, Kästchen oder Linien. Dazu kommt eine Bibliothek mit 19 fertig gestalteten Vorlagen zum Drucken oder Herunterladen.</p>
-          <div class="tags"><span>A5</span><span>Druckfertig</span><span>19 Vorlagen</span><span>Bald mit KI</span></div>
+          <p>Erstelle druckfertige A5-Seiten für dein Bullet Journal: Tagesplaner, Wochen- und Monatsübersicht oder Habit-Tracker, mit Punkten, Kästchen oder Linien. Dazu kommt eine Bibliothek mit 27 fertig gestalteten Vorlagen zum Drucken oder Herunterladen.</p>
+          <div class="tags"><span>A5</span><span>Druckfertig</span><span>27 Vorlagen</span><span>Bald mit KI</span></div>
           <span class="go">App öffnen →</span>
         </div>
       </a>
@@ -259,9 +259,16 @@ page("bullet-journal.html", "Bullet-Journal-Generator – MuggliOnline", f"""<ma
   </section>
   <section class="section" id="vorlagen">
     <h2>Vorlagen-Bibliothek</h2>
-    <p class="intro">Fertig gestaltete Seiten zum Ausdrucken. Klicke auf eine Vorlage, um sie gross anzusehen, zu drucken oder als PDF herunterzuladen. Alle Vorlagen sind im Format A5.</p>
+    <p class="intro">Fertig gestaltete Seiten zum Ausdrucken: Notizseiten, Wochen- und Monatsplaner, To-do-Listen und illustrierte Seiten. Klicke auf eine Vorlage, um sie gross anzusehen, zu drucken oder als PDF herunterzuladen. Alle Vorlagen sind im Format A5.</p>
     <div class="filter" id="filter">
-      <button class="on" data-f="alle">Alle</button><button data-f="To-do">To-do-Listen</button><button data-f="1 Feld">1 Feld</button><button data-f="2 Felder">2 Felder</button><button data-f="3 Felder">3 Felder</button><button data-f="4 Felder">4 Felder</button>
+      <button class="alle on" data-f="alle">Alle</button>
+      <button data-f="To-do" style="--chip:#e1efe8"><img src="vorlagen/icons/todo.png" alt="" aria-hidden="true">To-do-Listen</button>
+      <button data-f="Notizen" style="--chip:#f4ece2"><img src="vorlagen/icons/notizen.png" alt="" aria-hidden="true">Notizen</button>
+      <button data-f="Planer" style="--chip:#ebe7f6"><img src="vorlagen/icons/planer.png" alt="" aria-hidden="true">Planer</button>
+      <button data-f="1 Feld" style="--chip:#e3ecf4"><img src="vorlagen/icons/f1.png" alt="" aria-hidden="true">1 Feld</button>
+      <button data-f="2 Felder" style="--chip:#f6e6ea"><img src="vorlagen/icons/f2.png" alt="" aria-hidden="true">2 Felder</button>
+      <button data-f="3 Felder" style="--chip:#e7f0e3"><img src="vorlagen/icons/f3.png" alt="" aria-hidden="true">3 Felder</button>
+      <button data-f="4 Felder" style="--chip:#fbe9df"><img src="vorlagen/icons/f4.png" alt="" aria-hidden="true">4 Felder</button>
     </div>
     <div class="lib" id="lib"></div>
   </section>

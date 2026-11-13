@@ -10,7 +10,7 @@
       const v = daten[i];
       return `<button class="tpl" type="button" data-i="${i}" aria-label="${v.titel} ansehen">
         <img src="vorlagen/vorschau/${v.datei}-klein.jpg" alt="Vorschau ${v.titel}" loading="lazy" width="300" height="426">
-        <b>${v.titel}</b><span>${v.kategorie}</span></button>`;
+        <b>${v.titel}</b></button>`;
     }).join('');
   }
 
