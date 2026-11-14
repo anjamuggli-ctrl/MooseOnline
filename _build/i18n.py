@@ -11,11 +11,11 @@ ROOT = Path(__file__).resolve().parent.parent
 D = json.loads((Path(__file__).parent / "i18n.json").read_text())
 TEXTE, JS, KAT, TITEL = D["texte"], D["js"], D["kategorien"], D["titel"]
 
-SPRACHEN = [("de", "Deutsch"), ("rm", "Romontsch"), ("en", "English"),
-            ("it", "Italiano"), ("fr", "Français"), ("es", "Español")]
+SPRACHEN = [("de", "Deutsch"), ("rm", "Rumantsch"), ("en", "English"),
+            ("it", "Italiano"), ("fr", "Français")]
 NEUTRAL = {"Muggli", "Online", "›", "×", "✨", "Aa", "Hi!", "A5", "4 mm", "5 mm", "6 mm", "LinkedIn",
            "Bullet Journal", "Basic English", "Writing", "Dr. Anja Muggli", "Apps",
-           "© 2026 MuggliOnline · Anja Muggli, Chur", "Agenda", "A", "B", "C", "is", "are", "OSI Model", "Smart City", "Software Tutorial", "IT Job Abroad", "Cybersecurity & Data Protection", "anja@mugglionline.ch"}
+           "© 2026 MuggliOnline · Anja Muggli, Chur", "Agenda", "A", "B", "C", "is", "are", "OSI Model", "Smart City", "Software Tutorial", "IT Job Abroad", "Cybersecurity & Data Protection", "Deutsch", "Rumantsch", "English", "Italiano", "Français", "DE", "RM", "EN", "IT", "FR", "anja@mugglionline.ch"}
 ATTRS = ("alt", "title", "aria-label", "placeholder")
 GLOBUS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>'
 
@@ -45,15 +45,17 @@ def hreflang(lang, datei):
 
 
 class Uebersetzer(HTMLParser):
-    def __init__(self, lang, fehlend):
+    def __init__(self, lang, fehlend, roh=False):
         super().__init__(convert_charrefs=True)
-        self.lang, self.out, self.fehlend = lang, [], fehlend
+        self.lang, self.out, self.fehlend, self.roh = lang, [], fehlend, roh
         self.in_json = False
 
     def tr(self, text):
+        if self.roh:
+            return text
         if text in NEUTRAL or not text or text.isdigit():
             return text
-        if text in TEXTE:
+        if text in TEXTE and self.lang in TEXTE[text]:
             return TEXTE[text][self.lang]
         self.fehlend.add(text)
         return text
@@ -127,10 +129,24 @@ fehlend = set()
 for p in seiten:
     de = p.read_text()
     for code, _ in SPRACHEN[1:]:
+        quelle, koerper = de, None
+        m = re.search(r"<!--BODY:([\w-]+)-->(.*?)<!--/BODY-->", de, re.S)
+        if m:
+            ldir = ROOT / "_build" / m.group(1) / code
+            teile = sorted(ldir.glob("*.html")) if ldir.is_dir() else []
+            if teile:
+                # Ganzer Seiteninhalt liegt in dieser Sprache vor: nur Pfade anpassen
+                k = Uebersetzer(code, fehlend, roh=True)
+                k.feed("".join(f.read_text() for f in teile)); k.close()
+                koerper = "".join(k.out)
+                quelle = de[:m.start()] + "<!--BODYSLOT-->" + de[m.end():]
         u = Uebersetzer(code, fehlend)
-        u.feed(de); u.close()
+        u.feed(quelle); u.close()
+        html = "".join(u.out)
+        if koerper is not None:
+            html = html.replace("<!--BODYSLOT-->", koerper)
         ordner = ROOT / code; ordner.mkdir(exist_ok=True)
-        (ordner / p.name).write_text(fertig("".join(u.out), code, p.name))
+        (ordner / p.name).write_text(fertig(html, code, p.name))
     p.write_text(fertig(de, "de", p.name))
 
 if fehlend:

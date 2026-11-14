@@ -356,7 +356,7 @@ page("lernbegleitung.html", "Lernprozesse individuell begleiten – MuggliOnline
 {hero('<a href="didaktik.html">Pädagogik</a> › Begleitung', "Pädagogik · Thema", "Lernprozesse individuell begleiten", "Was sagt die Wissenschaft? Theorien und Konzepte, Verknüpfungen, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
   <section class="section">
 {einleitung("Worum es geht", ["Lernende einer Klasse stehen nie am selben Ort. Individuelle Lernbegleitung heisst, Denkwege und Lernbedingungen sichtbar zu machen, die Unterstützung darauf abzustimmen und zu prüfen, ob die Lernenden fachlich und in ihrer Selbstregulation weiterkommen.", "Diese Seite verbindet zentrale Theorien – von Wygotskis Zone der nächsten Entwicklung über Scaffolding und Feedback bis zum selbstregulierten Lernen – mit Gesprächsmodellen, Werkzeugen und einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis gezielt springen."], 1)}
-{LB_BODY}
+<!--BODY:lernbegleitung-->{LB_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Begleitung individueller Lernprozesse: Theorien, Konzepte, Spannungsfelder und Werkzeuge für die Unterrichtspraxis, wissenschaftlich fundiert.")
 
@@ -367,7 +367,7 @@ page("lernvoraussetzungen.html", "Lernvoraussetzungen berücksichtigen – Muggl
 {hero('<a href="didaktik.html">Pädagogik</a> › Lernvoraussetzungen', "Pädagogik · Thema", "Lernvoraussetzungen berücksichtigen", "Was bringen Lernende mit, wie nehme ich das wahr, und was folgt daraus für den Unterricht? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten.")}
   <section class="section">
 {einleitung("Worum es geht", ["Lernende bringen Vorwissen, Strategien, Motivation, Gefühle, Entwicklungsthemen und Beziehungserfahrungen mit. Ob daraus Schwierigkeiten werden, hängt davon ab, wie gut Unterricht und Voraussetzungen zueinander passen.", "Diese Seite klärt zuerst, was Lernvoraussetzungen sind, stellt dann zentrale Bereiche vor (vom INVO-Modell über Lernschwierigkeiten bis zur Gruppe), zeigt, wie die eigene Wahrnehmung das Bild verzerren kann, und führt zur Bedingungsanalyse, zur Binnendifferenzierung und zu einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
-{LV_BODY}
+<!--BODY:lernvoraussetzungen-->{LV_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Lernvoraussetzungen berücksichtigen: INVO-Modell, Vorwissen, Lernschwierigkeiten, Wahrnehmung, Bedingungsanalyse und Binnendifferenzierung, wissenschaftlich fundiert.")
 
