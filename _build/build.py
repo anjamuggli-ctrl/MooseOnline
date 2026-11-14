@@ -106,7 +106,7 @@ def page(filename, title, body, active=None, description="", extra_head=""):
 <footer>
   <div class="wrap">
     <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
-    <nav><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
 <script>document.addEventListener('click',function(e){{document.querySelectorAll('.lang.open').forEach(function(l){{if(!l.contains(e.target))l.classList.remove('open')}})}});</script>
@@ -504,7 +504,7 @@ page("kontakt.html", "Kontakt – MuggliOnline", f"""<main class="wrap">
 {hero("Kontakt", "Kontakt", "Kontakt", "Fragen, Anregungen oder Interesse an einer Zusammenarbeit? Ich freue mich auf deine Nachricht.")}
   <section class="section">
     <div class="grid2">
-{plan("E-Mail", "Die E-Mail-Adresse wird hier bald ergänzt.", badge="Folgt")}
+      <div class="plan"><h3>E-Mail</h3><p>Schreib mir gerne eine E-Mail.</p><p style="margin-top:16px"><a class="btn green" href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a></p></div>
 {plan("LinkedIn", "Der Link zu meinem LinkedIn-Profil wird hier bald ergänzt.", badge="Folgt")}
     </div>
   </section>
