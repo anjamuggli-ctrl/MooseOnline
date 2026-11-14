@@ -74,7 +74,7 @@
   footer a:hover{color:var(--green)}
 
   /* ---------- Mobil ---------- */
-  @media (max-width:1000px){
+  @media (max-width:1240px){
     .burger{display:block}
     .menu{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--sand);border-bottom:1px solid var(--line);padding:10px 20px 18px}
     .menu.open{display:flex}

@@ -2120,6 +2120,104 @@
    "it": "Esercizi da facili a impegnativi",
    "fr": "Exercices du plus simple au plus exigeant",
    "es": "Ejercicios de fáciles a exigentes"
+  },
+  "Auf Anfrage": {
+   "rm": "Sin dumonda",
+   "en": "On request",
+   "it": "Su richiesta",
+   "fr": "Sur demande",
+   "es": "Por encargo"
+  },
+  "Du hast eine Idee für eine App für deinen Unterricht? Ich erstelle gerne individuelle Apps, die genau zu deiner Klasse passen.": {
+   "rm": "Has ti ina idea per ina app per tia instrucziun? Jeu creel bugen apps individualas che sefan exact per tia classa.",
+   "en": "Do you have an idea for an app for your classroom? I'm happy to build custom apps tailored to your class.",
+   "it": "Hai un'idea per un'app per le tue lezioni? Creo volentieri app su misura per la tua classe.",
+   "fr": "Tu as une idée d'appli pour tes cours ? Je crée volontiers des applis sur mesure, adaptées à ta classe.",
+   "es": "¿Tienes una idea para una app para tus clases? Creo con gusto apps personalizadas a la medida de tu grupo."
+  },
+  "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:": {
+   "rm": "Cheu sas ti emprender independentamein e sepreparar sin examens. Planisau ein:",
+   "en": "Here you can learn independently and prepare for exams in a targeted way. Planned:",
+   "it": "Qui puoi imparare in autonomia e prepararti in modo mirato agli esami. Previsti:",
+   "fr": "Ici, tu peux apprendre en autonomie et te préparer de façon ciblée aux examens. Prévu :",
+   "es": "Aquí puedes aprender por tu cuenta y prepararte para los exámenes de forma específica. Previsto:"
+  },
+  "Kompakte Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten, jeweils mit Quellenangaben.": {
+   "rm": "Resumaziuns cumpactas tier teorias e concepts pedagogics e didactics, adina cun indicaziuns da fontaunas.",
+   "en": "Concise summaries of educational and didactic theories and concepts, always with references.",
+   "it": "Sintesi compatte di teorie e concetti pedagogici e didattici, sempre con le fonti.",
+   "fr": "Synthèses concises de théories et concepts pédagogiques et didactiques, toujours avec les sources.",
+   "es": "Resúmenes concisos de teorías y conceptos pedagógicos y didácticos, siempre con referencias."
+  },
+  "MuggliOnline bündelt Unterrichtsmaterialien und Projektideen für Lehrpersonen, Erklärungen und Übungen für Lernende, Grundlagen aus Pädagogik und Didaktik sowie kleine Web-Apps für Schule und Alltag.": {
+   "rm": "MuggliOnline unescha materials d'instrucziun ed ideas da projects per persunas d'instrucziun, explicaziuns ed exercizis per emprendists, fundaments da pedagogia e didactica sco era pintgas web-apps per scola e mintgadi.",
+   "en": "MuggliOnline brings together teaching materials and project ideas for teachers, explanations and exercises for learners, foundations of education and didactics, and small web apps for school and everyday life.",
+   "it": "MuggliOnline riunisce materiali didattici e idee di progetto per docenti, spiegazioni ed esercizi per allievi, basi di pedagogia e didattica e piccole web app per la scuola e la vita quotidiana.",
+   "fr": "MuggliOnline réunit du matériel pédagogique et des idées de projets pour les enseignant·e·s, des explications et des exercices pour les apprenant·e·s, des bases de pédagogie et de didactique ainsi que de petites applis web pour l'école et le quotidien.",
+   "es": "MuggliOnline reúne materiales didácticos e ideas de proyectos para docentes, explicaciones y ejercicios para estudiantes, fundamentos de pedagogía y didáctica, y pequeñas apps web para la escuela y el día a día."
+  },
+  "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.": {
+   "rm": "Examens per exercitar sut cundiziuns realas, cun soluziuns per sezs controllar.",
+   "en": "Practice tests under real conditions, with answer keys for self-checking.",
+   "it": "Verifiche per esercitarsi in condizioni reali, con soluzioni per l'autocorrezione.",
+   "fr": "Des examens pour s'entraîner en conditions réelles, avec corrigés pour s'autoévaluer.",
+   "es": "Exámenes para practicar en condiciones reales, con soluciones para autocorregirse."
+  },
+  "Pädagogik & Didaktik": {
+   "rm": "Pedagogia & didactica",
+   "en": "Education & Didactics",
+   "it": "Pedagogia & didattica",
+   "fr": "Pédagogie & didactique",
+   "es": "Pedagogía y didáctica"
+  },
+  "Pädagogik und Didaktik – MuggliOnline": {
+   "rm": "Pedagogia e didactica – MuggliOnline",
+   "en": "Education and Didactics – MuggliOnline",
+   "it": "Pedagogia e didattica – MuggliOnline",
+   "fr": "Pédagogie et didactique – MuggliOnline",
+   "es": "Pedagogía y didáctica – MuggliOnline"
+  },
+  "Verknüpfungen": {
+   "rm": "Colligiaziuns",
+   "en": "Connections",
+   "it": "Collegamenti",
+   "fr": "Liens",
+   "es": "Conexiones"
+  },
+  "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen.": {
+   "rm": "Explicaziuns capeivlas tier temas impurtonts, cun exempels.",
+   "en": "Clear explanations of key topics, with examples.",
+   "it": "Spiegazioni chiare su temi importanti, con esempi.",
+   "fr": "Des explications claires sur des thèmes importants, avec exemples.",
+   "es": "Explicaciones claras sobre temas importantes, con ejemplos."
+  },
+  "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht.": {
+   "rm": "Tgei munta la teoria per la pratica? Moduls concrets per l'instrucziun.",
+   "en": "What does the theory mean in practice? Concrete approaches for the classroom.",
+   "it": "Che cosa significa la teoria per la pratica? Approcci concreti per le lezioni.",
+   "fr": "Que signifie la théorie pour la pratique ? Des pistes concrètes pour la classe.",
+   "es": "¿Qué significa la teoría para la práctica? Enfoques concretos para el aula."
+  },
+  "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.": {
+   "rm": "Utensils per planisar, realisar e reflectar l'instrucziun.",
+   "en": "Tools for planning, teaching and reflecting on lessons.",
+   "it": "Strumenti per pianificare, svolgere e riflettere sulle lezioni.",
+   "fr": "Des outils pour planifier, conduire et analyser l'enseignement.",
+   "es": "Herramientas para planificar, impartir y reflexionar sobre las clases."
+  },
+  "Zusammenhänge zwischen Theorien, Konzepten und dem Unterrichtsalltag.": {
+   "rm": "Connexs denter teorias, concepts ed il mintgadi da scola.",
+   "en": "Links between theories, concepts and everyday teaching.",
+   "it": "Collegamenti tra teorie, concetti e quotidianità scolastica.",
+   "fr": "Liens entre théories, concepts et quotidien de la classe.",
+   "es": "Relaciones entre teorías, conceptos y el día a día en el aula."
+  },
+  "› Pädagogik und Didaktik": {
+   "rm": "› Pedagogia e didactica",
+   "en": "› Education and Didactics",
+   "it": "› Pedagogia e didattica",
+   "fr": "› Pédagogie et didactique",
+   "es": "› Pedagogía y didáctica"
   }
  },
  "js": {

@@ -20,8 +20,8 @@ JS_V = {n: version((ROOT / n).read_text()) for n in ("bullet-journal.js", "vorla
 MENU = [
     ("vision.html", "Vision"),
     ("english.html", "Englisch"),
-    ("didaktik.html", "Didaktik"),
     ("lernende.html", "Für Lernende"),
+    ("didaktik.html", "Pädagogik & Didaktik"),
     ("werkstatt.html", "App-Werkstatt"),
     ("ueber-anja.html", "Über Anja"),
 ]
@@ -236,8 +236,8 @@ LINE2 = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" 
 kacheln = "\n".join(
     f'''      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true"><g {LINE2}>{art}</g></svg></div><span class="badge">In Vorbereitung</span><h3>{titel}</h3><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul></div>'''
     for titel, punkte, art in AUFGABENFORMEN)
-page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
-{hero("Englisch", "Für Lehrpersonen", "Englisch", "Unterrichtsmaterialien, Projektideen und Vorlagen, geordnet nach Aufgabenform.")}
+page("english.html", "Englisch für Lehrpersonen – MuggliOnline", f"""<main class="wrap">
+{hero("Englisch", "", "Englisch für Lehrpersonen", "Unterrichtsmaterialien, Projektideen und Vorlagen. Sie wurden für den Englischunterricht erstellt, können aber auch in anderen Fächern verwendet werden.")}
   <section class="section">
     <article class="vrow einleitung-bar">{silhouette(2)}<div class="vhead"><h2>Aufgabenformen</h2></div><div class="vtext"><p>Die Materialien wurden für den Englischunterricht an der Berufsschule erstellt, lassen sich aber übersetzen und in anderen Fächern einsetzen.</p><p>Sie sind nach Aufgabenform geordnet. Zu den meisten gibt es Vorlagen und Bewertungsraster.</p></div></article>
     <div class="grid3">
@@ -308,25 +308,26 @@ for datei, titel, text, punkte, lern in EN_BEREICHE:
   </section>
 </main>""", active="english.html", description=text)
 
-area("didaktik.html", "Didaktik", "Für Lehrpersonen",
-     "Didaktik Zyklus 2",
-     "Hilfsmittel, Unterrichtsvorlagen und Zusammenfassungen für die Praxis, fachlich fundiert und direkt einsetzbar.",
+area("didaktik.html", "Pädagogik und Didaktik", "",
+     "Pädagogik und Didaktik",
+     "Zusammenfassungen, Verknüpfungen und Handlungsansätze zu wissenschaftlich fundierten Theorien und Konzepten, teils mit Instrumenten für die Praxis.",
      "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:",
-     [plan("Hilfsmittel", "Praktische Werkzeuge für Planung, Durchführung und Reflexion von Unterricht."),
-      plan("Unterrichtsvorlagen", "Vorlagen, die sich direkt an die eigene Klasse anpassen lassen."),
-      plan("Zusammenfassungen", "Kompakte Zusammenfassungen zu didaktischen Themen, jeweils mit Quellenangaben.")])
+     [plan("Zusammenfassungen", "Kompakte Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten, jeweils mit Quellenangaben."),
+      plan("Verknüpfungen", "Zusammenhänge zwischen Theorien, Konzepten und dem Unterrichtsalltag."),
+      plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
+      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2")
 
-area("lernende.html", "Für Lernende", "6. Klasse und Oberstufe",
+area("lernende.html", "Für Lernende", "",
      "Für Lernende",
-     "Probeprüfungen und Übungen zur Vorbereitung auf Prüfungen in verschiedenen Themen, mit Lösungen zur Selbstkontrolle.",
-     "Hier kannst du dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
-     [plan("Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen."),
-      plan("Übungsserien", "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen."),
-      plan("Selbstkontrolle", "Lösungen und Tipps, damit du selbst überprüfen kannst, wo du stehst.")])
+     "Erklärungen, Übungen und Probeprüfungen mit Lösungen für verschiedene Fächer und Stufen, zum eigenständigen Lernen.",
+     "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
+     [plan("Erklärungen", "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen."),
+      plan("Übungen", "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen."),
+      plan("Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")])
 
 # ---------------- App-Werkstatt ----------------
 page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
-{hero("App-Werkstatt", "Werkzeuge", "App-Werkstatt", "Kleine Web-Apps für Schule und Alltag. Einzelne Apps nutzen künftig KI und sind dann passwortgeschützt.")}
+{hero("App-Werkstatt", "", "App-Werkstatt", "Kleine Web-Apps für Schule und Alltag. Gerne erstelle ich auch individuelle Apps für deinen Unterricht! Einfach Kontakt aufnehmen :)")}
   <section class="section">
     <h2>Apps</h2>
     <p class="intro">Die Apps laufen direkt im Browser, ohne Installation.</p>
@@ -352,7 +353,7 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
       </a>
     </div>
     <div class="grid2" style="margin-top:-56px">
-{plan("Weitere Apps", "Weitere kleine Werkzeuge für Unterricht und Alltag sind in Planung.")}
+      <div class="plan" style="border-style:solid"><span class="badge live">Auf Anfrage</span><h3>Individuelle Apps</h3><p>Du hast eine Idee für eine App für deinen Unterricht? Ich erstelle gerne individuelle Apps, die genau zu deiner Klasse passen.</p><p style="margin-top:14px"><a class="btn green" href="kontakt.html">Kontakt aufnehmen</a></p></div>
 {plan("KI-Funktionen", "Apps mit KI werden mit einem Passwort geschützt, damit nur berechtigte Personen sie nutzen können.", badge="Bald")}
     </div>
   </section>
