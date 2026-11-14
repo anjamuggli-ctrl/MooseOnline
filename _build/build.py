@@ -18,11 +18,11 @@ CSS_V = version(CSS)
 JS_V = {n: version((ROOT / n).read_text()) for n in ("bullet-journal.js", "vorlagen.js")}
 
 MENU = [
-    ("vision.html", "Vision"),
-    ("english.html", "Englisch"),
-    ("lernende.html", "Für Lernende"),
-    ("didaktik.html", "Pädagogik & Didaktik"),
+    ("english.html", "Lehrpersonen"),
+    ("lernende.html", "Lernende"),
+    ("didaktik.html", "Pädagogik"),
     ("werkstatt.html", "App-Werkstatt"),
+    ("vision.html", "Vision"),
     ("ueber-anja.html", "Über Anja"),
 ]
 
@@ -236,8 +236,8 @@ LINE2 = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" 
 kacheln = "\n".join(
     f'''      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true"><g {LINE2}>{art}</g></svg></div><span class="badge">In Vorbereitung</span><h3>{titel}</h3><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul></div>'''
     for titel, punkte, art in AUFGABENFORMEN)
-page("english.html", "Englisch für Lehrpersonen – MuggliOnline", f"""<main class="wrap">
-{hero("Englisch", "", "Englisch für Lehrpersonen", "Unterrichtsmaterialien, Projektideen und Vorlagen. Sie wurden für den Englischunterricht erstellt, können aber auch in anderen Fächern verwendet werden.")}
+page("english.html", "Lehrpersonen – MuggliOnline", f"""<main class="wrap">
+{hero("Lehrpersonen", "", "Lehrpersonen", "Unterrichtsmaterialien, Projektideen und Vorlagen. Sie wurden für den Englischunterricht erstellt, können aber auch in anderen Fächern verwendet werden.")}
   <section class="section">
     <article class="vrow einleitung-bar">{silhouette(2)}<div class="vhead"><h2>Aufgabenformen</h2></div><div class="vtext"><p>Die Materialien wurden für den Englischunterricht an der Berufsschule erstellt, lassen sich aber übersetzen und in anderen Fächern einsetzen.</p><p>Sie sind nach Aufgabenform geordnet. Zu den meisten gibt es Vorlagen und Bewertungsraster.</p></div></article>
     <div class="grid3">
@@ -286,7 +286,7 @@ for datei, titel, text, punkte, lern in EN_BEREICHE:
     if lern == "nur-lp":
         themen = "\n".join(themen_karte(t, d) for t, d in INFORMATIK_THEMEN)
         page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
-{hero(f'<a href="english.html">Englisch</a> › {titel}', "Für Lehrpersonen", titel, text)}
+{hero(f'<a href="english.html">Lehrpersonen</a> › {titel}', "Für Lehrpersonen", titel, text)}
   <section class="section">
     <article class="vrow einleitung-bar">{silhouette(1)}<div class="vhead"><h2>Themenbereiche</h2></div><div class="vtext"><p>{INFORMATIK_INTRO}</p><p>{INFORMATIK_INTRO2}</p></div></article>
     <div class="grid3">
@@ -299,7 +299,7 @@ for datei, titel, text, punkte, lern in EN_BEREICHE:
     spalte = lambda h, intro, items: (f'''    <div><h2>{h}</h2><p class="intro">{intro}</p><div class="stack">'''
                                       + "".join(plan(t, d) for t, d in items) + "</div></div>")
     page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
-{hero(f'<a href="english.html">Englisch</a> › {titel}', "Englisch", titel, text)}
+{hero(f'<a href="english.html">Lehrpersonen</a> › {titel}', "Englisch", titel, text)}
   <section class="section">
     <div class="grid2">
 {spalte("Für Lehrpersonen", "Materialien für den eigenen Unterricht.", LEHRPERSONEN)}
@@ -308,8 +308,8 @@ for datei, titel, text, punkte, lern in EN_BEREICHE:
   </section>
 </main>""", active="english.html", description=text)
 
-area("didaktik.html", "Pädagogik und Didaktik", "",
-     "Pädagogik und Didaktik",
+area("didaktik.html", "Pädagogik", "",
+     "Pädagogik",
      "Zusammenfassungen, Verknüpfungen und Handlungsansätze zu wissenschaftlich fundierten Theorien und Konzepten, teils mit Instrumenten für die Praxis.",
      "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:",
      [plan("Zusammenfassungen", "Kompakte Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten, jeweils mit Quellenangaben."),
@@ -317,8 +317,8 @@ area("didaktik.html", "Pädagogik und Didaktik", "",
       plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
       plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2")
 
-area("lernende.html", "Für Lernende", "",
-     "Für Lernende",
+area("lernende.html", "Lernende", "",
+     "Lernende",
      "Erklärungen, Übungen und Probeprüfungen mit Lösungen für verschiedene Fächer und Stufen, zum eigenständigen Lernen.",
      "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
      [plan("Erklärungen", "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen."),

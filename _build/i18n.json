@@ -2218,6 +2218,69 @@
    "it": "› Pedagogia e didattica",
    "fr": "› Pédagogie et didactique",
    "es": "› Pedagogía y didáctica"
+  },
+  "Lehrpersonen": {
+   "rm": "Persunas d'instrucziun",
+   "en": "Teachers",
+   "it": "Docenti",
+   "fr": "Enseignant·e·s",
+   "es": "Docentes"
+  },
+  "Lernende": {
+   "rm": "Emprendists",
+   "en": "Learners",
+   "it": "Allievi",
+   "fr": "Apprenant·e·s",
+   "es": "Estudiantes"
+  },
+  "Pädagogik": {
+   "rm": "Pedagogia",
+   "en": "Pedagogy",
+   "it": "Pedagogia",
+   "fr": "Pédagogie",
+   "es": "Pedagogía"
+  },
+  "Lehrpersonen – MuggliOnline": {
+   "rm": "Persunas d'instrucziun – MuggliOnline",
+   "en": "Teachers – MuggliOnline",
+   "it": "Docenti – MuggliOnline",
+   "fr": "Enseignant·e·s – MuggliOnline",
+   "es": "Docentes – MuggliOnline"
+  },
+  "› Lehrpersonen": {
+   "rm": "› Persunas d'instrucziun",
+   "en": "› Teachers",
+   "it": "› Docenti",
+   "fr": "› Enseignant·e·s",
+   "es": "› Docentes"
+  },
+  "Lernende – MuggliOnline": {
+   "rm": "Emprendists – MuggliOnline",
+   "en": "Learners – MuggliOnline",
+   "it": "Allievi – MuggliOnline",
+   "fr": "Apprenant·e·s – MuggliOnline",
+   "es": "Estudiantes – MuggliOnline"
+  },
+  "› Lernende": {
+   "rm": "› Emprendists",
+   "en": "› Learners",
+   "it": "› Allievi",
+   "fr": "› Apprenant·e·s",
+   "es": "› Estudiantes"
+  },
+  "Pädagogik – MuggliOnline": {
+   "rm": "Pedagogia – MuggliOnline",
+   "en": "Pedagogy – MuggliOnline",
+   "it": "Pedagogia – MuggliOnline",
+   "fr": "Pédagogie – MuggliOnline",
+   "es": "Pedagogía – MuggliOnline"
+  },
+  "› Pädagogik": {
+   "rm": "› Pedagogia",
+   "en": "› Pedagogy",
+   "it": "› Pedagogia",
+   "fr": "› Pédagogie",
+   "es": "› Pedagogía"
   }
  },
  "js": {
