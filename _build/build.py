@@ -328,12 +328,22 @@ THEMA_BEGLEITUNG = f"""      <a class="plan thema entile" href="lernbegleitung.h
         <ul><li>Zone der nächsten Entwicklung: Hilfe wirkt nur im individuellen Lernfenster</li><li>Scaffolding: so viel Hilfe wie nötig, so wenig wie möglich</li><li>Feedback, das Weiterlernen ermöglicht</li><li>Selbstreguliertes Lernen und das Turbinen-Modell</li><li>Lernbegleitungsgespräche mit dem GROW-Modell</li><li>Spannungsfelder, Toolbox und Planungs-Check für die Praxis</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+LV_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round">'
+    '<circle cx="62" cy="64" r="30" stroke="#3f5d4a" stroke-width="2.6"/><circle cx="62" cy="64" r="9" fill="#3f5d4a" opacity=".35" stroke="none"/>'
+    '<circle cx="112" cy="40" r="20" stroke="#3f5d4a" stroke-width="2.6" opacity=".6"/><circle cx="118" cy="88" r="22" stroke="#3f5d4a" stroke-width="2.6" opacity=".45"/>'
+    '<path d="M150 64 H182" stroke="#cdc6b6" stroke-width="2.4" stroke-dasharray="2 7"/></g>'
+    '<g fill="#a8682f"><circle cx="196" cy="64" r="11"/></g><circle cx="196" cy="64" r="17" fill="none" stroke="#a8682f" stroke-width="1.5" opacity=".5"/></svg>')
+THEMA_LV = f"""      <a class="plan thema entile" href="lernvoraussetzungen.html"><div class="thema-art">{LV_ART}</div><span class="badge live">Neu</span><h3>Lernvoraussetzungen</h3>
+        <p>Hier geht es um die Berücksichtigung der Lernvoraussetzungen: Was bringen Lernende mit, wie erfasse ich das möglichst unverzerrt, und was folgt daraus für die Planung? Die Seite verbindet Lernpsychologie, Entwicklung, Heil- und Sonderpädagogik und Sozialpsychologie mit der Bedingungsanalyse.</p>
+        <ul><li>Das INVO-Modell: fünf Bereiche individueller Voraussetzungen</li><li>Vorwissen als wichtigster Anknüpfungspunkt</li><li>Lernschwierigkeiten und Behinderung als Passungsfrage</li><li>Entwicklungsaufgaben, Bindung und die Gruppe</li><li>Wahrnehmungsfehler erkennen: beschreiben vor deuten</li><li>Bedingungsanalyse, Binnendifferenzierung und Planungs-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 area("didaktik.html", "Pädagogik", "",
      "Pädagogik",
      "Zusammenfassungen, Verknüpfungen und Handlungsansätze zu wissenschaftlich fundierten Theorien und Konzepten, teils mit Instrumenten für die Praxis.",
      "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:",
      [THEMA_BEGLEITUNG,
-      plan("Verknüpfungen", "Zusammenhänge zwischen Theorien, Konzepten und dem Unterrichtsalltag."),
+      THEMA_LV,
       plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
       plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
@@ -349,6 +359,17 @@ page("lernbegleitung.html", "Lernprozesse individuell begleiten – MuggliOnline
 {LB_BODY}
   </section>
 </main>""", active="didaktik.html", description="Begleitung individueller Lernprozesse: Theorien, Konzepte, Spannungsfelder und Werkzeuge für die Unterrichtspraxis, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Thema Lernvoraussetzungen ----------------
+ACTIVE["lernvoraussetzungen.html"] = "didaktik.html"
+LV_BODY = "".join((B / "lernvoraussetzungen" / f).read_text() for f in sorted(p.name for p in (B / "lernvoraussetzungen").glob("*.html")))
+page("lernvoraussetzungen.html", "Lernvoraussetzungen berücksichtigen – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernvoraussetzungen', "Pädagogik · Thema", "Lernvoraussetzungen berücksichtigen", "Was bringen Lernende mit, wie nehme ich das wahr, und was folgt daraus für den Unterricht? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Lernende bringen Vorwissen, Strategien, Motivation, Gefühle, Entwicklungsthemen und Beziehungserfahrungen mit. Ob daraus Schwierigkeiten werden, hängt davon ab, wie gut Unterricht und Voraussetzungen zueinander passen.", "Diese Seite klärt zuerst, was Lernvoraussetzungen sind, stellt dann zentrale Bereiche vor (vom INVO-Modell über Lernschwierigkeiten bis zur Gruppe), zeigt, wie die eigene Wahrnehmung das Bild verzerren kann, und führt zur Bedingungsanalyse, zur Binnendifferenzierung und zu einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+{LV_BODY}
+  </section>
+</main>""", active="didaktik.html", description="Lernvoraussetzungen berücksichtigen: INVO-Modell, Vorwissen, Lernschwierigkeiten, Wahrnehmung, Bedingungsanalyse und Binnendifferenzierung, wissenschaftlich fundiert.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",

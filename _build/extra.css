@@ -278,7 +278,8 @@
   .lb-karte a:hover rect{filter:brightness(.96)}
   .lb-karte a:hover text{text-decoration:underline}
   @media (max-width:1000px){
-    .lb-layout{grid-template-columns:1fr;gap:20px}
+    .lb-layout{grid-template-columns:minmax(0,1fr);gap:20px}
+    .lb-inhalt{min-width:0}
     .lb-toc{position:static;max-height:none}
     .lb-toc:not([open]){padding-bottom:18px}
     .lb-g4{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -305,3 +306,26 @@
   .lb-g5 .lb-card{font-size:14.5px;padding:16px}
   .lb-g5 .lb-card h3{font-size:17px}
   .lb-g4 .lb-card{font-size:15px}
+  /* Themenseite Lernvoraussetzungen */
+  .lb-matrix.zwei{grid-template-columns:170px repeat(2,minmax(0,1fr))}
+  .lb-tab-wrap{overflow-x:auto;margin:16px 0;border-radius:14px;border:1px solid var(--line)}
+  .lb-tab{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;min-width:640px}
+  .lb-tab th{background:var(--text);color:#fff;text-align:left;padding:12px 14px;vertical-align:top}
+  .lb-tab th small,.lb-tab td small{display:block;font-weight:400;opacity:.8;font-size:12.5px;margin-top:2px}
+  .lb-tab td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;color:#3d4b41}
+  .lb-tab td:first-child{width:30%;background:var(--sand)}
+  .lb-tab td.bsp{font-family:Caveat,cursive;font-size:19px;line-height:1.25;color:#45524a}
+  .lb-tab td:last-child.bsp{color:var(--pr)}
+  .lb-quiz{display:grid;gap:10px;margin:14px 0 22px}
+  .lb-quiz .frage{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .lb-quiz .frage p{flex:1 1 320px;margin:0;font-family:Caveat,cursive;font-size:21px;color:var(--text)}
+  .lb-quiz button{font:inherit;font-size:14.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--sand);cursor:pointer;color:var(--green-dark)}
+  .lb-quiz .aufl{display:none;flex-basis:100%;font-size:14.5px;color:#3d4b41;padding-top:6px}
+  .lb-quiz .fertig .aufl{display:block}
+  .lb-quiz .fertig button{cursor:default;opacity:.55}
+  .lb-quiz .fertig button.gewaehlt{opacity:1}
+  .lb-quiz .richtig{border-color:#a9c2ad;background:var(--green-light)}
+  .lb-quiz .richtig button.gewaehlt{background:var(--green);color:#fff;border-color:var(--green)}
+  .lb-quiz .falsch{border-color:#dcb7c0;background:var(--spL)}
+  .lb-quiz .falsch button.gewaehlt{background:var(--sp);color:#fff;border-color:var(--sp)}
+  @media (max-width:720px){ .lb-matrix.zwei{grid-template-columns:1fr} }
