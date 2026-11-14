@@ -420,3 +420,11 @@
   .lb-quiz .falsch{border-color:#dcb7c0;background:var(--spL)}
   .lb-quiz .falsch button.gewaehlt{background:var(--sp);color:#fff;border-color:var(--sp)}
   @media (max-width:720px){ .lb-matrix.zwei{grid-template-columns:1fr} }
+  .lb-h3{font-family:Fraunces,serif;color:var(--green-dark);font-size:21px;margin:28px 0 10px}
+  .lb-dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+  .lb-dl .lb-card{display:flex;flex-direction:column}
+  .lb-dl .lb-card p{flex:1;margin:4px 0 10px}
+  .lb-dl .knopf{display:flex;gap:8px;flex-wrap:wrap}
+  .lb-dl .knopf a{font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--sand);color:var(--green-dark)}
+  .lb-dl .knopf a:hover{background:var(--green-light)}
+  @media (max-width:720px){ .lb-dl{grid-template-columns:1fr} }
