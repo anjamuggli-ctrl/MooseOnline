@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernprozesse individuell begleiten – MuggliOnline</title>
+<meta name="description" content="Begleitung individueller Lernprozesse: Theorien, Konzepte, Spannungsfelder und Werkzeuge für die Unterrichtspraxis, wissenschaftlich fundiert.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=29ae5301">
+<link rel="alternate" hreflang="de" href="../lernbegleitung.html">
+<link rel="alternate" hreflang="rm" href="../rm/lernbegleitung.html">
+<link rel="alternate" hreflang="en" href="../en/lernbegleitung.html">
+<link rel="alternate" hreflang="it" href="../it/lernbegleitung.html">
+<link rel="alternate" hreflang="fr" href="../fr/lernbegleitung.html">
+<link rel="alternate" hreflang="es" href="../es/lernbegleitung.html">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Página de inicio de MuggliOnline">
+      <svg aria-hidden="true" viewBox="0 0 100 100">
+  <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clippath></defs>
+  <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
+  <g clip-path="url(#inner)">
+    <!-- hintere Bergkette als M -->
+    <polygon points="10,68 44,33 58,47 73,29 100,52 100,100 10,100" fill="#87a48f"/>
+    <polygon points="44,33 58,47 52,100 48,100" fill="#6f8f78" opacity=".0"/>
+    <polygon points="44,33 58,47 54,60" fill="#6f8f78"/>
+    <polygon points="73,29 100,52 100,70 76,56" fill="#6f8f78"/>
+    <polygon points="44.0,33.0 50.5,39.5 46.9,36.9 44.1,39.7 40.8,36.7 37.7,39.5" fill="#ffffff"/>
+    <polygon points="73.0,29.0 80.6,35.5 76.4,32.9 74.1,35.7 70.3,32.7 67.6,35.5" fill="#ffffff"/>
+    <!-- vordere Bergkette als M -->
+    <polygon points="8,92 49,57 63,69 79,52 100,66 100,100 8,100" fill="#3f5d4a"/>
+    <polygon points="49,57 63,69 58,82" fill="#2f4a39"/>
+    <polygon points="79,52 100,66 100,84 82,72" fill="#2f4a39"/>
+  </g>
+
+  <path d="M91.95,42.60 A42.6,42.6 0 0 1 8.33,58.86" fill="none" stroke="#2f4a39" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M6.03,48.46 L6.10,47.02 L6.22,45.57 L6.39,44.13 L6.61,42.70 L6.87,41.27 L7.19,39.85 L7.54,38.45 L7.95,37.05 L8.40,35.68 L8.89,34.31 L9.43,32.97 L10.01,31.64 L10.64,30.33 L11.31,29.04 L12.02,27.78 L12.78,26.54 L13.57,25.32 L14.40,24.14 L15.28,22.98 L16.18,21.85 L17.13,20.75 L18.11,19.68 L19.13,18.65 L20.18,17.65 L21.26,16.68 L22.38,15.75 L23.52,14.86 L24.69,14.01 L25.89,13.19 L27.12,12.42 L28.37,11.68 L29.65,10.99 L30.94,10.34 L32.26,9.73 L33.60,9.17 L34.95,8.65 L36.32,8.18 L37.71,7.75 L39.11,7.37 L40.52,7.03 L41.94,6.74 L43.37,6.50 L44.81,6.31 L46.25,6.16 L47.70,6.06 L49.15,6.01 L50.60,6.00 L52.05,6.05 L53.49,6.14 L54.94,6.28 L56.38,6.46 L57.81,6.70 L59.23,6.98 L60.64,7.31 L62.05,7.68 L63.43,8.10 L64.81,8.57 L66.17,9.08 L67.51,9.63 L68.83,10.23 L70.13,10.87 L71.41,11.56 L72.66,12.28 L73.89,13.05 L75.10,13.86 L76.27,14.71 L77.42,15.59 L78.54,16.51 L79.63,17.47 L80.69,18.47 L81.71,19.50 L82.70,20.56 L83.65,21.65 L84.57,22.78 L85.45,23.93 L86.29,25.11 L87.09,26.32 L87.85,27.56 L88.57,28.82 L89.24,30.10 L89.88,31.40 L90.47,32.73 L91.02,34.07 L91.52,35.43 L91.98,36.81 L92.39,38.20 L92.75,39.60 L93.07,41.02 L93.35,42.44 L93.57,43.88 L90.80,44.27 L90.55,42.93 L90.25,41.61 L89.90,40.30 L89.50,39.00 L89.06,37.73 L88.57,36.47 L88.03,35.23 L87.46,34.01 L86.85,32.82 L86.19,31.65 L85.50,30.50 L84.77,29.38 L84.00,28.29 L83.20,27.23 L82.36,26.20 L81.49,25.20 L80.59,24.23 L79.65,23.30 L78.69,22.40 L77.70,21.54 L76.69,20.71 L75.65,19.91 L74.58,19.16 L73.49,18.44 L72.38,17.77 L71.26,17.13 L70.11,16.53 L68.95,15.97 L67.77,15.46 L66.58,14.98 L65.37,14.55 L64.16,14.16 L62.93,13.81 L61.70,13.50 L60.46,13.24 L59.22,13.02 L57.97,12.84 L56.73,12.70 L55.48,12.61 L54.23,12.56 L52.98,12.55 L51.74,12.58 L50.51,12.66 L49.28,12.77 L48.06,12.93 L46.85,13.13 L45.65,13.36 L44.46,13.64 L43.28,13.96 L42.12,14.31 L40.98,14.70 L39.86,15.13 L38.75,15.60 L37.66,16.10 L36.59,16.63 L35.55,17.20 L34.53,17.80 L33.53,18.44 L32.56,19.10 L31.61,19.80 L30.70,20.52 L29.80,21.28 L28.94,22.06 L28.11,22.86 L27.31,23.69 L26.54,24.55 L25.80,25.42 L25.09,26.32 L24.42,27.24 L23.78,28.17 L23.18,29.13 L22.61,30.10 L22.07,31.08 L21.57,32.08 L21.11,33.09 L20.68,34.12 L20.29,35.15 L19.93,36.19 L19.61,37.24 L19.33,38.29 L19.08,39.35 L18.88,40.42 L18.70,41.48 L18.57,42.55 L18.47,43.62 L18.41,44.68 L18.38,45.74 L18.39,46.80 L18.44,47.85 L18.52,48.90 Z" fill="#2f4a39"/>
+  <g stroke="#f4f1ea" stroke-width="1.15" stroke-linecap="round"><line x1="7.53" y1="37.05" x2="12.51" y2="38.57"/><line x1="10.38" y1="29.97" x2="14.77" y2="32.19"/><line x1="14.39" y1="23.48" x2="18.11" y2="26.25"/><line x1="19.46" y1="17.77" x2="22.46" y2="20.94"/><line x1="25.43" y1="13.02" x2="27.69" y2="16.43"/><line x1="32.13" y1="9.36" x2="33.67" y2="12.86"/><line x1="39.35" y1="6.90" x2="40.20" y2="10.36"/><line x1="46.89" y1="5.71" x2="47.12" y2="9.02"/><line x1="54.52" y1="5.83" x2="54.21" y2="8.88"/><line x1="62.01" y1="7.26" x2="61.25" y2="9.98"/></g>
+  <!-- Kopf: links in der Mitte, nach unten geneigt -->
+  <path d="M6.03,48.46
+           C4.2,53.6 3.6,58.2 3.5,62.6 C3.5,65.6 3.4,68.2 3.8,69.8 C4.2,71.4 5.6,72 7.2,71.6
+           L9.6,71 C10,73.6 10.4,76.4 10.8,79.4 C12,77 13,74.6 13.6,72.4
+           L18.2,65.8 C19.8,63.4 20.6,60.2 20.4,56.8 C20.2,54 19.4,51.8 18.52,48.90 Z" fill="#2f4a39"/>
+  <path d="M18.6,54.6 C22.4,53 26.4,53.2 29,54.8 C25.8,56.4 22,57.2 18.2,57 Z" fill="#2f4a39"/>
+  <path d="M7.6,56.6 C8.8,55.6 10.6,55.6 11.6,56.4 C10.4,57.6 8.8,57.8 7.6,56.6 Z" fill="#f4f1ea"/>
+  <path d="M4.4,68.4 l1.2,-0.2" stroke="#f4f1ea" stroke-width=".75" stroke-linecap="round"/>
+</svg>
+      <span class="name">Muggli<span>Online</span></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="english.html">Docentes</a></li>
+      <li><a href="lernende.html">Estudiantes</a></li>
+      <li><a href="didaktik.html" class="active">Pedagogía</a></li>
+      <li><a href="werkstatt.html">Taller de apps</a></li>
+      <li><a href="vision.html">Visión</a></li>
+      <li><a href="ueber-anja.html">Sobre Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Contacto</a></li>
+    </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Elegir idioma" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>ES</button><ul class="lang-list"><li><a href="../lernbegleitung.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/lernbegleitung.html" hreflang="rm" lang="rm">Romontsch<small>RM</small></a></li><li><a href="../en/lernbegleitung.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="../it/lernbegleitung.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li><li><a href="../fr/lernbegleitung.html" hreflang="fr" lang="fr">Français<small>FR</small></a></li><li><a href="../es/lernbegleitung.html" hreflang="es" lang="es" class="aktiv">Español<small>ES</small></a></li></ul></div>
+    <button class="burger" aria-label="Abrir el menú" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="inner">
+      <div class="crumbs"><a href="index.html">Inicio</a> › <a href="didaktik.html">Pedagogía</a> › Begleitung</div>
+      <div class="kicker">Pädagogik · Thema</div>
+      <h1>Lernprozesse individuell begleiten</h1>
+      <p class="lead">Was sagt die Wissenschaft? Theorien und Konzepte, Verknüpfungen, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:150px"><path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/><path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/><path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg><svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:150px"><g fill="#2a3a4b"><g transform="translate(60 88.8) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(92 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(380 97.6) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(870 96.5) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1090 87.7) scale(1.15)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1126 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg>
+  </section>
+  <section class="section">
+    <article class="vrow einleitung-bar"><svg class="vsil" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,120 L0,64 L110,40 L200,66 L300,44 L380,72 L480,26 L580,60 L660,50 L760,78 L860,38 L960,64 L1080,30 L1200,58 L1200,120 Z" fill="#c9d8cb"/><path d="M0,120 L0,92 L180,100 L330,84 L500,98 L640,88 L820,102 L990,84 L1200,98 L1200,120 Z" fill="#9fb8a5"/></svg><svg class="vtrees" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#34475c"><g transform="translate(40 96) scale(0.8)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(980 92) scale(1.0)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1010 98) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1150 94) scale(0.95)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg><div class="vhead"><h2>Worum es geht</h2></div><div class="vtext"><p>Lernende einer Klasse stehen nie am selben Ort. Individuelle Lernbegleitung heisst, Denkwege und Lernbedingungen sichtbar zu machen, die Unterstützung darauf abzustimmen und zu prüfen, ob die Lernenden fachlich und in ihrer Selbstregulation weiterkommen.</p><p>Diese Seite verbindet zentrale Theorien – von Wygotskis Zone der nächsten Entwicklung über Scaffolding und Feedback bis zum selbstregulierten Lernen – mit Gesprächsmodellen, Werkzeugen und einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis gezielt springen.</p></div></article>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+   <defs>
+    <symbol id="lbi-th" viewBox="0 0 24 24"><path d="M3 5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM21 5c-3-1.5-6-1.5-9 0v14c3-1.5 6-1.5 9 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lbi-ge" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lbi-sp" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M4 7h16M4 7l-3 6a3 3 0 0 0 6 0zM20 7l-3 6a3 3 0 0 0 6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lbi-pr" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <marker id="lbm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b7368"/></marker>
+    <marker id="lbm-pr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a8682f"/></marker>
+    <marker id="lbm-th" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3f5d4a"/></marker>
+    <marker id="lbm-ge" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4a6178"/></marker>
+    <marker id="lbm-sp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9b4d5e"/></marker>
+   </defs>
+  </svg>
+
+  <div class="lb lb-layout">
+   <details class="lb-toc" id="lb-toc" open>
+    <summary>Inhalt</summary>
+    <div class="teil">Einstieg</div>
+    <ol><li><a href="#ausgangspunkt">Ausgangspunkt</a></li><li><a href="#landkarte">Landkarte der Konzepte</a></li></ol>
+    <div class="teil">A · Was ist es?</div>
+    <ol><li><a href="#begriff">Eine Phase im Lernprozess</a></li><li><a href="#merkmale">Vier Merkmale</a></li></ol>
+    <div class="teil">B · Was muss ich verstehen?</div>
+    <ol><li><a href="#zpe">Zone der nächsten Entwicklung</a></li><li><a href="#lernfenster">Viele Lernfenster</a></li><li><a href="#scaffolding">Scaffolding</a></li><li><a href="#diagnose">Diagnose und Förderung</a></li><li><a href="#formativ">Formative Bilanzierung</a></li><li><a href="#feedback">Feedback</a></li><li><a href="#srl">Selbstreguliertes Lernen</a></li><li><a href="#strategien">Hürden beim Strategieeinsatz</a></li><li><a href="#annahmen">Vier Annahmen</a></li><li><a href="#dialog">Dialogisches Lernen</a></li><li><a href="#haltung">Haltung</a></li><li><a href="#kompetenzen">Kompetenzen der Lehrperson</a></li></ol>
+    <div class="teil">C · Wie gehe ich vor?</div>
+    <ol><li><a href="#gespraech">Lernbegleitungsgespräch</a></li><li><a href="#hindernisse">Lernhindernisse verstehen</a></li><li><a href="#zyklus">Handlungszyklus</a></li><li><a href="#toolbox">Toolbox</a></li><li><a href="#check">Planungs-Check</a></li></ol>
+    <div class="teil">D · Spannungsfelder</div>
+    <ol><li><a href="#spannungsfelder">Sieben Antinomien</a></li></ol>
+    <div class="teil">Abschluss</div>
+    <ol><li><a href="#reflexion">Reflexion und Kernaussagen</a></li><li><a href="#literatur">Literatur</a></li></ol>
+    <div class="lb-prog" aria-hidden="true"><span id="lb-prog"></span></div>
+   </details>
+
+   <div class="lb-inhalt">
+
+    <!-- ===== Einstieg ===== -->
+    <section class="lb-kap" id="ausgangspunkt">
+     <span class="lb-kick">Einstieg</span>
+     <h2>Ausgangspunkt: eine alltägliche Situation</h2>
+     <div class="lb-ausgang">
+      <div class="lb-hand">«Ich weiss nicht, was machen.<br>Können Sie mir helfen?»</div>
+      <p style="max-width:620px;margin:18px auto 0;color:#45524a">Der Reflex ist, sofort zu erklären oder die Lösung zu zeigen. Die Forschung zur Lernbegleitung rät zu einem Zwischenschritt: <b>zuerst verstehen, dann passend dosieren.</b></p>
+     </div>
+     <div class="lb-g2">
+      <div class="lb-box ge">
+       <div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang · drei Fragen vor jeder Hilfe</div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">1</span><div><b>Wo steht die Person?</b> Was kann sie schon allein, was noch nicht? <a class="lb-weiter" href="#zpe">→ Zone der nächsten Entwicklung</a></div></div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">2</span><div><b>Wo genau stockt es?</b> Sache, Strategie, Motivation, Gefühl oder Umfeld? <a class="lb-weiter" href="#diagnose">→ Diagnose</a></div></div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">3</span><div><b>Was ist die kleinste Hilfe, die weiterbringt?</b> <a class="lb-weiter" href="#scaffolding">→ Scaffolding</a></div></div>
+      </div>
+      <div>
+       <div class="lb-card top" style="--c:var(--pr)">
+        <h3>Leitgedanke</h3>
+        Individuelle Lernbegleitung macht <b>Denkwege und Lernbedingungen sichtbar</b>, stimmt die <b>Unterstützung</b> darauf ab und prüft, ob die Lernenden <b>fachlich und in ihrer Selbstregulation</b> weiterkommen.
+       </div>
+       <div class="lb-card" style="margin-top:14px">
+        <h3>So liest du diese Seite</h3>
+        Die Seite ist in vier Teile gegliedert: <b>A</b> Was ist es? · <b>B</b> Was muss ich verstehen? · <b>C</b> Wie gehe ich vor? · <b>D</b> Wo wird es schwierig? Über das Inhaltsverzeichnis kannst du jederzeit springen.
+        <div class="lb-legende">
+         <span><i style="background:var(--th)"></i>Theorie</span><span><i style="background:var(--ge)"></i>Gedankengang</span><span><i style="background:var(--sp)"></i>Spannungsfeld</span><span><i style="background:var(--pr)"></i>Praxis</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="lb-src">Alle Aussagen stützen sich auf die im <a href="#literatur" style="text-decoration:underline">Literaturverzeichnis</a> genannten Quellen. Hinweise mit «eigene Synthese» verbinden mehrere Quellen. Originalabbildungen sind als Bildzitate gekennzeichnet und werden im Text besprochen; alle anderen Grafiken sind eigene Darstellungen.</p>
+    </section>
+
+    <section class="lb-kap" id="landkarte">
+     <span class="lb-kick">Überblick</span>
+     <h2>Wie die Konzepte zusammenhängen</h2>
+     <p class="lb-lead">Die Theorien stammen aus verschiedenen Traditionen: Entwicklungspsychologie, Lehr-Lern-Forschung, Heilpädagogik, Beratung und konstruktivistische Didaktik. Sie greifen aber ineinander. Klicke auf ein Konzept, um direkt dorthin zu springen.</p>
+     <svg class="lb-svg lb-karte" viewBox="0 0 1000 480" role="img" aria-label="Landkarte der Konzepte rund um individuelle Lernbegleitung">
+      <g fill="none" stroke-width="2.2">
+       <path d="M215 95 C 300 95 330 150 390 185" stroke="#3f5d4a" marker-end="url(#lbm-th)"/>
+       <path d="M215 235 C 300 235 330 230 385 228" stroke="#3f5d4a" marker-end="url(#lbm-th)"/>
+       <path d="M215 375 C 300 375 330 300 390 268" stroke="#4a6178" marker-end="url(#lbm-ge)"/>
+       <path d="M610 185 C 670 150 700 95 785 95" stroke="#a8682f" marker-end="url(#lbm-pr)"/>
+       <path d="M615 228 C 680 228 700 235 785 235" stroke="#a8682f" marker-end="url(#lbm-pr)"/>
+       <path d="M610 268 C 670 300 700 375 785 375" stroke="#a8682f" marker-end="url(#lbm-pr)"/>
+       <path d="M120 125 V 200" stroke="#3f5d4a" marker-end="url(#lbm-th)" stroke-dasharray="5 4"/>
+       <path d="M880 125 V 200" stroke="#a8682f" marker-end="url(#lbm-pr)" stroke-dasharray="5 4"/>
+       <path d="M880 265 V 340" stroke="#a8682f" marker-end="url(#lbm-pr)" stroke-dasharray="5 4"/>
+       <path d="M500 340 V 395" stroke="#9b4d5e" marker-start="url(#lbm-sp)" stroke-dasharray="5 4"/>
+       <path d="M790 395 C 640 455 360 455 215 400" stroke="#4a6178" marker-end="url(#lbm-ge)" stroke-dasharray="6 5"/>
+      </g>
+      <g font-size="13" fill="#6b7368" font-style="italic" class="serif">
+       <text x="268" y="112">definiert den Raum</text><text x="232" y="222">liefert Werkzeuge</text><text x="228" y="318">zeigt den Stand</text>
+       <text x="680" y="112">zielt auf</text><text x="640" y="222">geschieht im</text><text x="690" y="318">verlangt</text>
+       <text x="128" y="168">überbrückt durch</text><text x="888" y="168">wird gestärkt durch</text><text x="888" y="308">in Gesprächen</text>
+       <text x="512" y="372">rahmt alles</text><text x="640" y="472">Wirkung prüfen → neu verstehen</text>
+      </g>
+      <circle cx="500" cy="228" r="112" fill="#2f3a32"/>
+      <text x="500" y="212" fill="#fff" font-size="22" text-anchor="middle" class="serif">Individuelle</text>
+      <text x="500" y="240" fill="#fff" font-size="22" text-anchor="middle" class="serif">Lernbegleitung</text>
+      <a href="#zpe"><rect x="25" y="55" width="190" height="72" rx="12" fill="#e7ede6" stroke="#3f5d4a" stroke-width="1.5"/><text x="120" y="86" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Zone der nächsten</text><text x="120" y="104" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Entwicklung</text><text x="120" y="120" font-size="11" fill="#3f5d4a" text-anchor="middle">Wygotski</text></a>
+      <a href="#scaffolding"><rect x="25" y="200" width="190" height="72" rx="12" fill="#e7ede6" stroke="#3f5d4a" stroke-width="1.5"/><text x="120" y="232" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Scaffolding &amp; Feedback</text><text x="120" y="252" font-size="11" fill="#3f5d4a" text-anchor="middle">Wood/Bruner/Ross · Hattie/Timperley</text></a>
+      <a href="#diagnose"><rect x="25" y="340" width="190" height="72" rx="12" fill="#e4eaf0" stroke="#4a6178" stroke-width="1.5"/><text x="120" y="368" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Diagnose &amp; formative</text><text x="120" y="386" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Bilanzierung</text><text x="120" y="402" font-size="11" fill="#4a6178" text-anchor="middle">Tönnissen et al. · Fraefel 2023</text></a>
+      <a href="#srl"><rect x="785" y="55" width="190" height="72" rx="12" fill="#f6ebdc" stroke="#a8682f" stroke-width="1.5"/><text x="880" y="86" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Selbstreguliertes</text><text x="880" y="104" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Lernen</text><text x="880" y="120" font-size="11" fill="#a8682f" text-anchor="middle">Karlen &amp; Mejeh · Turbinen-Modell</text></a>
+      <a href="#dialog"><rect x="785" y="200" width="190" height="72" rx="12" fill="#f6ebdc" stroke="#a8682f" stroke-width="1.5"/><text x="880" y="232" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Dialogisches Lernen</text><text x="880" y="252" font-size="11" fill="#a8682f" text-anchor="middle">Ruf &amp; Gallin · Ich–Du–Wir</text></a>
+      <a href="#gespraech"><rect x="785" y="340" width="190" height="72" rx="12" fill="#f6ebdc" stroke="#a8682f" stroke-width="1.5"/><text x="880" y="372" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Lernbegleitungs-</text><text x="880" y="390" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">gespräch</text><text x="880" y="405" font-size="11" fill="#a8682f" text-anchor="middle">Kremers &amp; Schlüter · GROW</text></a>
+      <a href="#haltung"><rect x="380" y="395" width="240" height="56" rx="12" fill="#f5e6ea" stroke="#9b4d5e" stroke-width="1.5"/><text x="500" y="420" font-size="15" font-weight="700" fill="#2f3a32" text-anchor="middle">Haltung</text><text x="500" y="440" font-size="11" fill="#9b4d5e" text-anchor="middle">Ermöglichungsdidaktik · Arnold &amp; Schön</text></a>
+     </svg>
+     <p class="lb-cap">Eigene Darstellung.</p>
+    </section>
+
+    <!-- ===== Teil A ===== -->
+    <div class="lb-teil"><b>A</b><span>Was ist es?<small>Begriff, Phasen und Merkmale der Lernprozessbegleitung</small></span></div>
+
+    <section class="lb-kap" id="begriff">
+     <span class="lb-kick">A · Begriff</span>
+     <h2>Lernprozessbegleitung: eine Phase im ganzen Lernprozess</h2>
+     <p class="lb-lead">Lernbegleitung findet überall statt, wo Menschen von anderen lernen. In der Schule meint sie eine bestimmte Phase, die in einen vollständigen Lernprozess eingebettet ist (Fraefel, S. 126).</p>
+     <div class="lb-pfeil">
+      <div style="background:#6f8f78"><b>initiieren</b><small>Problemstellung, Input, Lernziel, Aktivität</small></div>
+      <div style="background:#a8682f"><b>begleiten</b><small>Feedback, Hilfe in der Sache, Hinweise zum Vorgehen, Strategien vermitteln</small></div>
+      <div style="background:#4a6178"><b>auslaufen / evaluieren</b><small>neue Herausforderungen, Bewertung</small></div>
+     </div>
+     <svg class="lb-svg" viewBox="0 0 1000 120" role="img" aria-label="Die Unterstützung von aussen nimmt ab, die Selbstständigkeit nimmt zu">
+      <path d="M40 20 C 300 20 420 25 520 50 S 760 98 960 100" fill="none" stroke="#a8682f" stroke-width="4"/>
+      <path d="M40 100 C 300 100 420 95 520 70 S 760 22 960 20" fill="none" stroke="#3f5d4a" stroke-width="4" stroke-dasharray="10 6"/>
+      <text x="45" y="13" font-size="14" fill="#a8682f" font-weight="700">Unterstützung von aussen: viel …</text>
+      <text x="955" y="116" font-size="14" fill="#a8682f" font-weight="700" text-anchor="end">… wird zurückgenommen</text>
+      <text x="45" y="116" font-size="14" fill="#3f5d4a" font-weight="700">Selbstständigkeit: gering …</text>
+      <text x="955" y="13" font-size="14" fill="#3f5d4a" font-weight="700" text-anchor="end">… flexibel, auf andere Kontexte übertragbar</text>
+     </svg>
+     <p class="lb-cap">Eigene Darstellung nach Fraefel, S. 126.</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Rahmenkonzept</div>Der Normalverlauf gleicht einer <b>Lehre</b> (Cognitive Apprenticeship; Collins, Brown &amp; Newman, 1989): Anfangs wird viel gezeigt und gestützt, mit wachsender Vertrautheit braucht es immer weniger direkte Unterstützung.<span class="lb-src">Fraefel, S. 126</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Wer schliesst die Lücke?</div><b>Estudiantes</b> können ihren Einsatz steigern und wirksamere Strategien nutzen. Möglich, aber unerwünscht: Ziele verwässern oder aufgeben. <b>Lehrende</b> können passende, herausfordernde Ziele setzen und mit Feedback und Strategien beistehen.<span class="lb-src">Fraefel, S. 126</span></div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang</div>Lernbegleitung hat ein <b>Ziel: sich überflüssig machen.</b> Karlen nutzt dafür ein Bild: Zu Beginn der Lernreise braucht es eine <i>Lotsin</i>; mit der Zeit übernehmen die Lernenden selbst das Steuer.<span class="lb-src">Karlen, 2026, S. 16</span></div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="merkmale">
+     <span class="lb-kick">A · Merkmale</span>
+     <h2>Vier Merkmale guter Lernprozessbegleitung</h2>
+     <p class="lb-lead">Urban Fraefel beschreibt vier Merkmale. Zusammen erklären sie, warum Lernbegleitung anspruchsvoll ist und warum sie in jeder Unterrichtsform möglich sein muss.</p>
+     <div class="lb-g2">
+      <div class="lb-card top" style="--c:var(--pr)"><span class="lb-num" style="--c:var(--pr)">1</span><h3>individualisiert</h3>Lernende haben unterschiedliche Voraussetzungen und brauchen je andere Unterstützung. Mit der ganzen Klasse ist Begleitung deshalb stark erschwert.</div>
+      <div class="lb-card top" style="--c:var(--th)"><span class="lb-num" style="--c:var(--th)">2</span><h3>Scaffolds &amp; Feedbacks</h3>Lehrpersonen unterstützen mit Gerüsten, die den Graben zwischen aktuellem Können und Lernziel überbrücken.</div>
+      <div class="lb-card top" style="--c:var(--ge)"><span class="lb-num" style="--c:var(--ge)">3</span><h3>setzt Diagnose voraus</h3>Hilfreiche Scaffolds verlangen gute Kenntnis der aktuellen Lernprozesse: Sie müssen zu Stand, Schwierigkeiten und Bedürfnissen passen.</div>
+      <div class="lb-card top" style="--c:var(--sp)"><span class="lb-num" style="--c:var(--sp)">4</span><h3>methodenunabhängig</h3>Gute Begleitung ist in jeder Methode möglich, von direktiv bis offen, sofern <b>individuelle Interaktionen</b> stattfinden können.</div>
+     </div>
+     <p class="lb-src">Fraefel, S. 128–129</p>
+     <div class="lb-g2">
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang · Was folgt aus Merkmal 4?</div>Ob Lernende begleitet werden, entscheidet nicht die Unterrichtsform. Ein <b>Wochenplan oder Lernatelier ist noch keine Lernbegleitung</b>, und ein lehrergeleiteter Input schliesst sie nicht aus. Entscheidend ist, ob <i>Zeit und Gelegenheit für individuelle Interaktion</i> geplant sind. <a class="lb-weiter" href="#annahmen">→ SRL ist nicht SOL</a></div>
+      <blockquote class="lb-zitat">[Scaffolds sind] Stützen, die den Schülerinnen und Schülern helfen, den Graben zwischen den aktuellen Fähigkeiten und den angestrebten Lernzielen zu überbrücken.<cite>Fraefel, S. 128 (vgl. Wood, Bruner &amp; Ross, 1976)</cite></blockquote>
+     </div>
+    </section>
+
+    <!-- ===== Teil B ===== -->
+    <div class="lb-teil"><b>B</b><span>Was muss ich verstehen?<small>Theorien und Konzepte, die Lernbegleitung begründen</small></span></div>
+
+    <section class="lb-kap" id="zpe">
+     <span class="lb-kick">B · Rahmentheorie</span>
+     <h2>Wissen entsteht zuerst im Sozialen: die Zone der nächsten Entwicklung</h2>
+     <p class="lb-lead">Lew Wygotski (1896–1934) stellte fest, dass in der Entwicklung eines Kindes alles <b>zuerst auf sozialer Ebene</b> geschieht, bevor es im Innern Gestalt annimmt. Höhere geistige Funktionen beruhen auf realen Beziehungen zwischen Menschen (Fraefel, S. 127).</p>
+     <div class="lb-g2" style="align-items:start">
+      <figure class="lb-fig" style="margin:0">
+       <img src="../img/paedagogik/zpd.jpg" alt="Zone der proximalen Entwicklung: Bereits Gelerntes, Konsolidieren, herausfordernde neue Ziele und zu schwierige Ziele" width="1011" height="676">
+       <figcaption><b>Bildzitat</b> · Fraefel, U., Lernprozesse begleiten, Abb. 9, S. 127 (nach Vygotsky &amp; Cole 1934/1978; Tharp &amp; Gallimore 1991; Fraefel 2007).</figcaption>
+      </figure>
+      <div>
+       <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Was ist die ZPE?</div>Die <b>Zone der proximalen (nächsten) Entwicklung</b>, auch «Lernfenster» genannt, ist die Distanz zwischen dem, was jemand <i>allein</i> erreichen kann, und dem, was er oder sie <i>mit Anleitung oder mit fähigeren Peers</i> meistert. Lernende und Fortgeschrittene handeln eine Zeit lang gemeinsam.<span class="lb-src">Fraefel, S. 127, nach Vygotsky &amp; Cole (1934/1978, S. 86)</span></div>
+       <div class="lb-box ge" style="margin-top:14px"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang</div>Die ZPE ist <b>keine Eigenschaft der Person</b>, sondern beschreibt das Verhältnis von Person, Aufgabe und verfügbarer Hilfe. Dieselbe Aufgabe kann für die eine Person «Konsolidieren» und für die andere «zu schwierig» sein. Hilfe wirkt nur im grauen Bereich.</div>
+      </div>
+     </div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin-top:8px">Die vier Bereiche der Grafik</h3>
+     <div class="lb-zonen">
+      <div style="background:#fff;border:1px solid var(--line)"><b>Bereits Gelerntes</b>auffrischen · keine Hilfe nötig</div>
+      <div style="background:#ecebe6"><b>Konsolidieren</b>automatisieren · mit Selbsthilfe oder wenig Hilfe erreichbar</div>
+      <div style="background:#dcdad3"><b>Herausfordernde neue Ziele</b>mit Hilfe von anderen erreichbar: Lehrperson, Eltern, Peers</div>
+      <div style="background:#fff;border:1px dashed #cdc6b6"><b>Zu schwierige Ziele</b>auch mit Hilfe nicht erreichbar</div>
+     </div>
+     <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Praxis · Sek I / Sek II</div>Beim Verstehen eines anspruchsvollen Textes braucht eine Person eine <b>Begriffsklärung</b>, eine andere einen <b>Hinweis zur Struktur</b>, eine dritte schon einen <b>Transferauftrag</b>. Auch ältere Lernende können in einem neuen Fachgebiet enge Anleitung brauchen.<span class="lb-src">SitKo-Workshopguide, S. 4 (eigene Synthese)</span></div>
+    </section>
+
+    <section class="lb-kap" id="lernfenster">
+     <span class="lb-kick">B · Individuelle Lernfenster</span>
+     <h2>Eine Klasse, viele Lernfenster</h2>
+     <figure class="lb-fig">
+      <img src="../img/paedagogik/lernfenster.jpg" alt="Individuelle, parallele Lernprozesse: Jede Zeile ist eine lernende Person mit einem eigenen Lernfenster; eine Unterstützung für die ganze Gruppe trifft nicht alle" width="1350" height="609">
+      <figcaption><b>Bildzitat</b> · Fraefel, U., Lernprozesse begleiten, Abb. 10, S. 128. Jede Zeile ist eine lernende Person, grau ihr Lernfenster zu derselben Kompetenz. Das gestrichelte Rechteck steht für eine Unterstützung, die der ganzen Gruppe gilt.</figcaption>
+     </figure>
+     <blockquote class="lb-zitat">Was immer die Lehrperson tut, sie wird nur einen Teil der Lernenden erreichen […].<cite>Fraefel, S. 128</cite></blockquote>
+     <div class="lb-g2">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Adaptiver Unterricht</div>Helmke &amp; Weinert (1997) nennen adaptiven Unterricht «das aussichtsreichste unterrichtliche Konzept», um auf grosse, stabile Unterschiede zwischen Lernenden zu reagieren. Adaptivität entsteht durch <b>Unterrichtsorganisation</b> (z. B. Stationen, Planarbeit) oder durch <b>situative Anpassung</b> im Moment.<span class="lb-src">Leuchter &amp; Schwerzmann Humbel, im Berner-Auszug, S. 134</span></div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang · drei Folgerungen</div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">1</span><div>Individualisieren heisst, <b>auf den Lernstand zu reagieren</b>. Es ist kein Etikett für eine Unterrichtsform.</div></div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">2</span><div>Wer adaptiv handeln will, muss <b>zuerst wissen, wo jemand steht</b>.</div></div>
+       <div class="lb-step"><span class="lb-num" style="--c:#4a6178">3</span><div>Die Planung braucht <b>Zeitfenster für Einzelinteraktion</b> und Aufträge für die anderen.</div></div>
+      </div>
+     </div>
+     <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Leitfrage für die Planung</div><b>Wen erreicht meine geplante Hilfe, und wer braucht einen anderen Impuls?</b> Beschreibe zwei Lernende mit unterschiedlichem Vorwissen und entwirf für beide je eine Unterstützung.<span class="lb-src">SitKo-Workshopguide, S. 3</span></div>
+    </section>
+
+    <section class="lb-kap" id="scaffolding">
+     <span class="lb-kick">B · Scaffolding</span>
+     <h2>Fördern, stützen, loslassen</h2>
+     <p class="lb-lead">Ein Gerüst (engl. <i>scaffold</i>) ist nur so lange sinnvoll, wie das Gebäude es braucht. Hilfen sollen die Herausforderung bearbeitbar machen, ohne den Denkprozess zu übernehmen, und werden mit wachsender Sicherheit zurückgenommen.</p>
+     <svg class="lb-svg" viewBox="0 0 640 265" role="img" aria-label="Gerüst, das mit wachsendem Gebäude abgebaut wird: fördern, stützen, loslassen" style="max-width:720px;margin-left:auto;margin-right:auto">
+      <line x1="10" y1="235" x2="630" y2="235" stroke="#cdc6b6" stroke-width="2"/>
+      <rect x="70" y="175" width="90" height="60" fill="#a8682f" rx="3"/>
+      <g stroke="#3f5d4a" stroke-width="4" stroke-linecap="round"><path d="M50 235V110 M180 235V110 M50 110H180 M50 150H180 M50 195H180 M50 235L180 110"/></g>
+      <rect x="285" y="120" width="90" height="115" fill="#a8682f" rx="3"/>
+      <g stroke="#3f5d4a" stroke-width="4" stroke-linecap="round" opacity=".55"><path d="M265 235V100 M265 100H310"/></g>
+      <rect x="500" y="60" width="90" height="175" fill="#a8682f" rx="3"/>
+      <g fill="#fff" opacity=".35"><rect x="512" y="75" width="18" height="18"/><rect x="560" y="75" width="18" height="18"/><rect x="512" y="115" width="18" height="18"/><rect x="560" y="115" width="18" height="18"/><rect x="295" y="135" width="18" height="18"/><rect x="345" y="135" width="18" height="18"/></g>
+      <path d="M200 160 H245" stroke="#6b7368" stroke-width="2" marker-end="url(#lbm)"/><path d="M415 160 H460" stroke="#6b7368" stroke-width="2" marker-end="url(#lbm)"/>
+      <g text-anchor="middle" class="serif" font-size="21" fill="#2f3a32"><text x="115" y="28">fördern</text><text x="330" y="28">stützen</text><text x="545" y="28">loslassen</text></g>
+      <g text-anchor="middle" font-size="12.5" fill="#6b7368"><text x="115" y="50">viel Struktur, Modellieren</text><text x="330" y="50">gezielte Hinweise, Fragen</text><text x="545" y="50">Hilfe ausblenden, Transfer</text><text x="115" y="257">neu, wenig vertraut</text><text x="330" y="257">in Übung</text><text x="545" y="257">eigenständig verfügbar</text></g>
+     </svg>
+     <p class="lb-cap" style="text-align:center">Eigene Darstellung.</p>
+     <div class="lb-g2">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Was zum Scaffolding gehört</div>
+       <ul><li>Gliederung, die Komplexität reduziert</li><li>Fokussierungshilfen auf wichtige Aspekte</li><li>Denkanstösse, Hinweise auf ungelöste Fragen und Widersprüche</li><li>Aufforderung, Vermutungen mitzuteilen und zu prüfen</li><li>Aufforderung, Aussagen zu begründen und Lernwege zu reflektieren</li><li>Wichtige Äusserungen zusammenfassen und hervorheben</li></ul>
+       <span class="lb-src">Möller (2006), im Berner-Auszug, S. 137</span></div>
+      <div>
+       <blockquote class="lb-zitat" style="margin-top:0">Die Lehrkraft sollte so viel Hilfe wie notwendig und so wenig Hilfe wie möglich anbieten […].<cite>Möller (2006) nach Reiser (2004), im Berner-Auszug, S. 137</cite></blockquote>
+       <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Spannungsfeld</div>Möller hält es für <b>naiv</b> zu glauben, Handeln und Experimentieren allein führten zu verstandenem Wissen. Offene, entdeckende Lernformen gelingen nur mit passender Unterstützung (S. 137).</div>
+      </div>
+     </div>
+     <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Praxis · Hilfen abstufen (eigene Synthese)</div>
+      <p style="margin-bottom:10px">Für dieselbe Aufgabe drei bis vier Hilfen vorbereiten, von klein nach gross. Zuerst die kleinste anbieten.</p>
+      <div class="lb-g4" style="margin:0">
+       <div class="lb-card"><span class="lb-num" style="--c:var(--pr)">1</span><h3>Rückfrage</h3>«Was hast du schon versucht?»</div>
+       <div class="lb-card"><span class="lb-num" style="--c:var(--pr)">2</span><h3>Fokus- oder Strategiehinweis</h3>«Schau dir zuerst Abschnitt 2 an.»</div>
+       <div class="lb-card"><span class="lb-num" style="--c:var(--pr)">3</span><h3>Teilschritt modellieren</h3>laut denkend vorzeigen</div>
+       <div class="lb-card"><span class="lb-num" style="--c:var(--pr)">4</span><h3>gemeinsam lösen</h3>dann eine ähnliche Aufgabe allein</div>
+      </div>
+      <p style="margin-top:10px">Prüffrage: <b>Woran erkenne ich, dass eine Hilfe zurückgenommen werden kann?</b></p>
+      <span class="lb-src">nach SitKo-Workshopguide, S. 4 und 11; Möller (2006)</span>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="diagnose">
+     <span class="lb-kick">B · Diagnose und Förderung</span>
+     <h2>Verstehen, bevor wir helfen</h2>
+     <p class="lb-lead">Tönnissen, Link, Hengartner &amp; Hagmann-von Arx (2024) beobachteten in der Ausbildung, dass der diagnostische Prozess oft <b>übersprungen</b> und direkt zur Förderung übergegangen wurde. Ihre Antwort ist ein Kreislauf in Form einer «liegenden Acht».</p>
+     <svg class="lb-svg" viewBox="0 30 620 240" role="img" aria-label="Liegende Acht: links der Diagnose-Kreislauf, rechts der Förder-Kreislauf, in der Mitte die Ausgangslage" style="max-width:680px;margin-left:auto;margin-right:auto">
+      <path d="M310 150 C 250 60 60 40 40 150 C 60 260 250 240 310 150 C 370 60 560 40 580 150 C 560 260 370 240 310 150 Z" fill="none" stroke="#e9e3d6" stroke-width="26" stroke-linejoin="round"/>
+      <path d="M310 150 C 250 60 60 40 40 150 C 60 260 250 240 310 150" fill="none" stroke="#4a6178" stroke-width="3" marker-end="url(#lbm-ge)"/>
+      <path d="M310 150 C 370 60 560 40 580 150 C 560 260 370 240 310 150" fill="none" stroke="#a8682f" stroke-width="3" marker-end="url(#lbm-pr)"/>
+      <circle cx="175" cy="150" r="52" fill="#e4eaf0"/><circle cx="445" cy="150" r="52" fill="#f6ebdc"/>
+      <text x="175" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#4a6178">Diagnose</text><text x="175" y="164" text-anchor="middle" font-size="11.5" fill="#4a6178">wenn unklar</text>
+      <text x="445" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#a8682f">Förderung</text><text x="445" y="164" text-anchor="middle" font-size="11.5" fill="#a8682f">wenn klar</text>
+      <rect x="245" y="128" width="130" height="44" rx="22" fill="#2f3a32"/>
+      <text x="310" y="147" text-anchor="middle" font-size="11.5" fill="#fff" font-weight="700">Ausgangslage:</text><text x="310" y="162" text-anchor="middle" font-size="11.5" fill="#fff">Person · Umfeld</text>
+     </svg>
+     <div class="lb-g2" style="margin-top:0">
+      <div class="lb-card top" style="--c:var(--ge)"><h3>Diagnose-Kreislauf</h3><ol style="margin-left:18px"><li>Fragestellung, ggf. Hypothese</li><li>Methoden wählen</li><li>anwenden, auswerten</li><li>Frage beantworten</li><li>theoriegeleitet interpretieren</li></ol></div>
+      <div class="lb-card top" style="--c:var(--pr)"><h3>Förder-Kreislauf</h3><ol style="margin-left:18px"><li>Entwicklungsbedarf priorisieren</li><li>Ziele formulieren</li><li>Massnahmen bei der Person <i>und</i> im Unterricht ableiten</li><li>Förderplanung</li><li>umsetzen</li><li>Wirkung evaluieren → zurück zur Diagnose</li></ol></div>
+     </div>
+     <p class="lb-cap">Eigene, vereinfachte Darstellung in Anlehnung an den Diagnostik-Förder-Kreislauf (Tönnissen et al., 2024, S. 304–307). Die Originalabbildung ist nicht wiedergegeben.</p>
+     <div class="lb-g2">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Passung statt Defizit</div>Lern- und Verhaltensschwierigkeiten werden als <b>Passungsproblematik</b> zwischen individuellen Voraussetzungen, Aktivität und Partizipation sowie Umweltfaktoren (z. B. Unterrichtsqualität) verstanden.<span class="lb-src">Tönnissen et al., 2024, S. 305</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Zwei Förderstrategien</div><b>remedial:</b> fehlende Voraussetzungen bei der Person direkt aufbauen<br><b>kompensatorisch:</b> den Unterricht an die Bedürfnisse anpassen<span class="lb-src">nach Trautmann &amp; Wischer (2007), in Tönnissen et al., 2024, S. 307</span></div>
+     </div>
+     <blockquote class="lb-zitat">… auch die Stillen, die Zurückgezogenen, die Ängstlichen […], die ebenfalls hoch belastet sein können, aber oft wenig Aufmerksamkeit erfahren …<cite>Ahrbeck (2022, S. 260), zitiert in Tönnissen et al., 2024, S. 310</cite></blockquote>
+     <div class="lb-g3">
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Transfer in den Regelunterricht</div>Das Modell stammt aus der Heil- und Sonderpädagogik und ersetzt keine spezialisierte Diagnostik. Als <b>Denkfigur</b> hilft es trotzdem: erst eine Frage formulieren, dann beobachten; nicht nur fragen «Was fehlt dem Kind?», sondern auch «Was erschwert der Unterricht?».</div>
+      <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Kritik der Autor:innen selbst</div>Das Modell wirkt linear. In der Praxis springt man zurück, und Lernende können für verschiedene Aspekte an verschiedenen Punkten stehen (S. 310).</div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Praxis</div><b>Beobachtung</b> gilt als «Königsdisziplin» der Diagnostik (S. 306). Sie geht in jedes pädagogische Handeln ein.</div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="formativ">
+     <span class="lb-kick">B · Formative Beurteilung</span>
+     <h2>Lernstand erfahren, ohne zu prüfen</h2>
+     <blockquote class="lb-zitat">Das assessment wird erst dann formativ, wenn diese Informationen so genutzt werden, dass der Unterricht zu Gunsten der Schüler:innen verbessert wird.<cite>Fraefel, 2023, S. 138, nach Black &amp; Wiliam (1998)</cite></blockquote>
+     <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang</div>Formativ ist keine Methode, sondern eine <b>Verwendung</b>. Eine Information über den Lernstand, die keine Konsequenz hat, ist Datensammlung. Darum: nur fragen, wenn Zeit für eine Reaktion eingeplant ist.</div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin:24px 0 4px">Ein Spektrum: von informell bis benotet</h3>
+     <div class="lb-g4" style="margin-top:10px">
+      <div class="lb-card top" style="--c:#4a6178"><h3>A · informell</h3>Gespräche, Beobachtung, Produkte sichten<span class="lb-src">immer · für die Lernenden</span></div>
+      <div class="lb-card top" style="--c:#7f93a6"><h3>B · Klasse befragen</h3>kurze schriftliche Befragungen (CATs)<span class="lb-src">nach Bedarf · für die Lehrperson</span></div>
+      <div class="lb-card top" style="--c:#b39878"><h3>C · unbenotet prüfen</h3>Tests, Produkte, gezeigte Kompetenzen<span class="lb-src">mehrmals pro Einheit</span></div>
+      <div class="lb-card top" style="--c:#a8682f"><h3>D · benotet prüfen</h3>formell, unter fairen Bedingungen<span class="lb-src">höchstens einmal pro Einheit</span></div>
+     </div>
+     <p class="lb-cap">A und B: formative assessment von Prozess und Fortschritt · C und D: summative Beurteilung. Eigene, vereinfachte Darstellung nach Fraefel, 2023, Tab. 8, S. 137 (in Anlehnung an Dolin et al., 2017).</p>
+     <div class="lb-g2">
+      <div class="lb-card top" style="--c:#b0a69a"><h3>✗ Was in der Regel nicht funktioniert</h3><ul><li><b>«Habt ihr das verstanden?»</b> Lernende wissen oft nicht einmal, <i>was</i> sie nicht verstanden haben.</li><li><b>Handheben, Ampel, Daumen:</b> binäre Minimalinformation, ein vages Stimmungsbild.</li><li><b>Ankreuzbögen:</b> Statistik ohne klare Konsequenz.</li><li><b>Kurztests:</b> erinnern an Prüfungen und erzeugen Druck.</li></ul><span class="lb-src">Fraefel, 2023, S. 139</span></div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Was gehaltvolle Hinweise liefert</div><ul><li><b>«Assessment on the fly»:</b> beobachten, nachfragen, Produkte sichten</li><li><b>Der verwirrendste Punkt:</b> «Was war der verwirrendste Punkt in dieser Stunde?» (schriftlich, kurz)</li><li><b>Nicht im Prüfungsmodus:</b> Selbsteinschätzung zu Verstehen und Schwierigkeiten</li><li><b>Anonymer Briefkasten</b> für Unbehagen, Lob, Wünsche</li></ul><span class="lb-src">Fraefel, 2023, S. 138–140 (CATs nach Angelo &amp; Cross, 1993)</span></div>
+     </div>
+     <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Dilemma für Berufseinsteigende</div>Rückmeldungen der Klasse können verlangen, Tempo, Vorgehen oder Erklärungen sofort anzupassen. Das bedeutet mehr Aufwand und Unsicherheit. Fraefel rät, nur dann zu fragen, <b>wenn genügend Zeit bleibt</b>, den Verlauf zu überdenken (S. 140).</div>
+    </section>
+
+    <section class="lb-kap" id="feedback">
+     <span class="lb-kick">B · Feedback</span>
+     <h2>Feedback, das Weiterlernen ermöglicht</h2>
+     <p class="lb-lead">Feedback sind Informationen zu Aspekten des Könnens oder Verstehens einer Person, von Lehrpersonen, Peers, Texten oder von sich selbst (Hattie &amp; Timperley, 2007). Wirksam ist es, wenn es <b>die richtige Ebene trifft und die richtigen Fragen stellt</b> (Fraefel, S. 129).</p>
+     <div class="lb-matrix" role="table" aria-label="Phasen und Ebenen von Feedback">
+      <div class="leer"></div>
+      <div class="kopf">Wohin?<small>Ziele klären</small></div><div class="kopf">Wie läuft es?<small>Stand, Probleme, Fortschritt</small></div><div class="kopf">Was nachher?<small>Ausblick, nächste Schritte</small></div>
+      <div class="zeile" style="background:#a8682f">Aufgabe<small>Sachebene</small></div>
+      <div class="zelle" data-k="Wohin?" style="background:#f6ebdc">Ist klar, was getan werden soll und wozu?<i>klären, warum es sich lohnt</i></div>
+      <div class="zelle oft" data-k="Wie läuft es?" style="background:#f6ebdc">Bewältigen sie die Aufgabe? Wo liegt das sachliche Problem?<i>sachliche Korrektur, Hinweise</i></div>
+      <div class="zelle" data-k="Was nachher?" style="background:#f6ebdc">Wie lässt sich das Gelernte anwenden, ausbauen?<i>Anwendungsaufgabe zeigen</i></div>
+      <div class="zeile" style="background:#3f5d4a">Strategien<small>aufgabenbezogen</small></div>
+      <div class="zelle" data-k="Wohin?" style="background:#e7ede6">Welche Strategien sind hier zu lernen?<i>besprechen, warum es wiederholt stockt</i></div>
+      <div class="zelle" data-k="Wie läuft es?" style="background:#e7ede6">Wie werden Strategien angewendet, optimiert?<i>Vorgehen zur Selbstkorrektur vorschlagen</i></div>
+      <div class="zelle" data-k="Was nachher?" style="background:#e7ede6">Wozu befähigt die Strategie? Nächste Schritte?<i>an anspruchsvollerem Problem üben</i></div>
+      <div class="zeile" style="background:#4a6178">Selbstregulation<small>überwachen, steuern</small></div>
+      <div class="zelle" data-k="Wohin?" style="background:#e4eaf0">Welche Schritte zu mehr Selbstregulation sind nötig?<i>z. B. aktives Hilfesuchen</i></div>
+      <div class="zelle" data-k="Wie läuft es?" style="background:#e4eaf0">Gelingt angemessene Selbstregulation?<i>zeigen, woran Hilfesuchen scheitert</i></div>
+      <div class="zelle" data-k="Was nachher?" style="background:#e4eaf0">Was ermöglicht noch mehr Selbstständigkeit?<i>gemeinsam herausfinden</i></div>
+      <div class="zeile" style="background:#9b4d5e">Person<small>nur mit Bezug!</small></div>
+      <div class="zelle person" data-k="Qualitätskriterium">Enthält die Aussage Informationen, die helfen, es künftig besser zu machen?<i>Lob oder Tadel ohne Bezug zu Aufgabe oder Strategie sind praktisch wirkungslos.</i></div>
+     </div>
+     <p class="lb-cap">Eigene, vereinfachte Darstellung nach Fraefel, Abb. 11, S. 130 (nach Hattie &amp; Timperley, 2007). Gestrichelt: die zwei Felder, auf die sich im Alltag die meisten Feedbacks beschränken.</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Befund aus dem Unterrichtsalltag</div>Die meisten Feedbacks betreffen nur zwei Felder: <b>Stand und Probleme bei der Aufgabe</b> und <b>persönliche Bemerkungen ohne Informationsgehalt</b>. Professionelle Feedbacks nutzen auch <b>Ziele und Fortsetzungen</b> sowie <b>Strategien</b>.<span class="lb-src">Fraefel, S. 129</span></div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Conexiones</div><ul><li><b>ZPE:</b> Feedback zeigt den nächsten <i>erreichbaren</i> Schritt.</li><li><b>SRL:</b> Die Zeile «Selbstregulation» ist die Brücke zur <a href="#srl" style="text-decoration:underline">Turbine</a>.</li><li><b>Formativ:</b> Feedback wirkt erst, wenn es genutzt werden kann.</li></ul></div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Übung</div>Ordne eine eigene Rückmeldung einem Feld zu. Ergänze sie um einen <b>überprüfbaren nächsten Schritt</b> und eine <b>Gelegenheit</b>, ihn umzusetzen.<span class="lb-src">SitKo-Workshopguide, S. 5</span></div>
+     </div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin-top:28px">Ein Beispiel: vom Kommentar zur Weiterarbeit</h3>
+     <p style="color:#45524a;max-width:760px">Eine Schülerin (Sek I/II) hat den ersten Entwurf einer Erörterung abgegeben. Die Argumente sind gut, aber unverbunden aneinandergereiht. So kann Feedback auf den verschiedenen Ebenen klingen <span class="lb-src" style="display:inline">(eigene Beispiele zur Matrix)</span>:</p>
+     <div class="lb-g4">
+      <div class="lb-card top" style="--c:#b0a69a"><span class="lb-src" style="margin:0 0 6px">Typisch, wenig hilfreich</span><div class="lb-hand" style="--c:#6b7368">«Gut gemacht, aber noch etwas durcheinander.»</div><p style="font-size:14px;margin-top:8px;color:var(--muted)">Person und Aufgabe vermischt, keine Information darüber, <i>was</i> durcheinander ist und <i>wie</i> es besser wird.</p></div>
+      <div class="lb-card top" style="--c:#a8682f"><span class="lb-src" style="margin:0 0 6px;color:#a8682f;font-weight:700">Aufgabe</span><div class="lb-hand">«Deine drei Argumente stimmen. Es fehlen Übergänge, die zeigen, wie sie zusammenhängen.»</div></div>
+      <div class="lb-card top" style="--c:#3f5d4a"><span class="lb-src" style="margin:0 0 6px;color:#3f5d4a;font-weight:700">Strategie</span><div class="lb-hand">«Markiere in jedem Absatz den Kernsatz und schreib daneben: stützt, widerspricht, ergänzt?»</div></div>
+      <div class="lb-card top" style="--c:#4a6178"><span class="lb-src" style="margin:0 0 6px;color:#4a6178;font-weight:700">Selbstregulation</span><div class="lb-hand">«Woran merkst du beim nächsten Text selbst, ob der rote Faden hält?»</div></div>
+     </div>
+     <p class="lb-cap">Je weiter rechts, desto mehr Verantwortung bleibt bei der lernenden Person.</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Strategien loben, nicht Talent</div>Positives, <b>prozessorientiertes Feedback</b> («Du hast eine gute Strategie gewählt») stärkt die Selbstwirksamkeit bei der Strategieanwendung.<span class="lb-src">Karlen &amp; Mejeh, 2026, S. 58–59</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Entwicklungsperspektive</div>Ruf &amp; Gallin geben im Lernjournal Rückmeldungen mit Häklein: ✓ erfüllt, ✓✓ eigenständige, persönliche Leistung, ✓✓✓ «Wurf». Misslingt etwas, gibt es eine <b>zweite Chance</b>.<span class="lb-src">Ruf &amp; Gallin, 2011, S. 46–47</span></div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Checkliste für jedes Feedback</div><ul><li>Weiss die Person, <b>wo sie steht</b>?</li><li>Weiss sie, <b>was sie als Nächstes tut</b>?</li><li>Hat sie <b>Zeit und Gelegenheit</b>, es zu nutzen?</li><li>Betrifft es Aufgabe, Strategie oder Selbstregulation, nicht nur die Person?</li></ul></div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="srl">
+     <span class="lb-kick">B · Selbstreguliertes Lernen</span>
+     <h2>Selbstregulation braucht Begleitung</h2>
+     <div class="lb-card top" style="--c:var(--th);font-size:17px">
+      <span class="lb-src" style="margin:0 0 6px;color:var(--th);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12px">Definition</span>
+      <span style="font-family:Fraunces,serif;font-style:italic">«Selbstreguliertes Lernen bezeichnet die Fähigkeit, je nach Lernsituation und -aufgabe verschiedene Vorbereitungs-, Überwachungs- und Steuerungsmassnahmen zu ergreifen, um mithilfe geeigneter Strategien die gewünschten Ziele zu erreichen.»</span>
+      <span class="lb-src">Karlen &amp; Mejeh, 2026, S. 43</span>
+     </div>
+     <div class="lb-g2" style="align-items:start">
+      <figure class="lb-fig" style="margin:0">
+       <img src="../img/paedagogik/turbine.jpg" alt="Das Turbinen-Modell des selbstregulierten Lernens: drei Phasen im inneren Ring, sechs Kompetenzaspekte im äusseren Ring" width="1038" height="990">
+       <figcaption><b>Bildzitat</b> · Karlen &amp; Mejeh (2026), Abb. 2.1: Das Turbinen-Modell des selbstregulierten Lernens, S. 43 (in Anlehnung an Karlen &amp; Held, 2025). In: Karlen, Y. (Hrsg.), <i>Gewusst wie!</i></figcaption>
+      </figure>
+      <div>
+       <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>So ist die Turbine aufgebaut</div>
+        <div class="lb-step"><span class="lb-num">1</span><div><b>Drei Phasen</b> (innerer Ring, nach Zimmerman, 2000): Vorbereitung → Durchführung → Reflexion</div></div>
+        <div class="lb-step"><span class="lb-num">2</span><div><b>Sechs Kompetenzaspekte</b> (äusserer Ring): Kognition, Metakognition, Motivation, Emotionen, Ressourcen, Mindset, alle gleich zentral</div></div>
+        <div class="lb-step"><span class="lb-num">3</span><div><b>Ziel</b> (Zentrum): sich als wirksam erleben, Beziehungen gestalten, eigenverantwortlich handeln</div></div>
+        <span class="lb-src">Karlen &amp; Mejeh, 2026, S. 42–46</span></div>
+       <div class="lb-box ge" style="margin-top:14px"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang</div>Kognition und Metakognition allein erklären Erfolg oder Misserfolg nicht. Wenn jemand «nicht weiterkommt», kann die Ursache auch in <b>Gefühlen</b> (Angst vor dem Versagen), in den <b>Ressourcen</b> (Lärm, Handy, keine Zeit) oder im <b>Mindset</b> («Ich bin halt nicht gut in Mathe») liegen. Die Turbine ist darum auch ein <b>Diagnose-Raster</b>.</div>
+      </div>
+     </div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin-top:26px">Drei Phasen, drei Begleitfragen</h3>
+     <div class="lb-pfeil">
+      <div style="background:#6f8f78"><b>Vorbereitung</b><small>Aufgabe analysieren, Vorwissen aktivieren, Ziel setzen, Strategie wählen, Zeit und Lernort organisieren, sich einstimmen</small><small style="margin-top:8px;font-family:Fraunces,serif;font-style:italic;font-size:16px">«Was ist dein Plan?»</small></div>
+      <div style="background:#a8682f"><b>Durchführung</b><small>Strategien anwenden, Fortschritt überwachen, Konzentration halten, Frust und Überforderung regulieren, Hilfe suchen</small><small style="margin-top:8px;font-family:Fraunces,serif;font-style:italic;font-size:16px">«Woran merkst du, dass es klappt?»</small></div>
+      <div style="background:#4a6178"><b>Reflexion</b><small>Ziel erreicht? Welche Strategien halfen? Ursachen zuschreiben, Schlüsse für das nächste Mal ziehen</small><small style="margin-top:8px;font-family:Fraunces,serif;font-style:italic;font-size:16px">«Was machst du nächstes Mal gleich?»</small></div>
+     </div>
+     <p class="lb-cap">Eigene Darstellung nach Karlen &amp; Mejeh, 2026, S. 48–52 und Tab. 2.1–2.2; Begleitfragen: eigene Formulierungen.</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Attribution: der heimliche Motor</div>Wer Erfolg auf <b>eigene Anstrengung und wirksame Strategien</b> zurückführt («Ich habe mich gut vorbereitet»), entwickelt höhere Selbstwirksamkeit (Weiner, 1986). In der Reflexion lohnt es sich deshalb, nach dem <i>Warum</i> zu fragen.<span class="lb-src">Karlen &amp; Mejeh, 2026, S. 51–52</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Drei Formen von Strategiewissen</div><b>deklarativ:</b> was eine Strategie ist<br><b>prozedural:</b> wie man sie anwendet<br><b>konditional:</b> wann und warum sie sinnvoll ist<br>Dazu braucht es <b>Strategiemotivation</b>: Selbstwirksamkeit und die Überzeugung, dass sie hilft.<span class="lb-src">Karlen &amp; Mejeh, 2026, S. 56–58 (Pressley et al., 1987)</span></div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Strategien gezielt aufbauen</div><ul><li>schrittweise einführen und <b>modellieren</b></li><li>an einem <b>Fachinhalt</b> üben, Nutzen sichtbar machen</li><li>Lernende an der <b>Auswahl</b> beteiligen</li><li>Transfer auf andere Aufgaben ausdrücklich besprechen</li></ul><span class="lb-src">Karlen &amp; Mejeh, 2026, S. 56–59</span></div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="strategien">
+     <span class="lb-kick">B · Hürden beim Strategieeinsatz</span>
+     <h2>«Sie wendet die Strategie einfach nicht an.» Warum?</h2>
+     <p class="lb-lead">Karlen &amp; Mejeh unterscheiden drei typische Hürden. Von aussen sieht man bei allen dasselbe Verhalten, doch jede braucht eine andere Hilfe. Probiere den Entscheidungsbaum mit einem konkreten Fall aus deinem Unterricht aus.</p>
+     <div class="lb-baum" id="lb-baum" aria-live="polite">
+      <div data-schritt="start">
+       <div class="frage">Gelingt die Strategie, wenn du sie erklärst und ausdrücklich dazu aufforderst?</div>
+       <div class="knoepfe"><button type="button" data-geh="mediation">Nein</button><button type="button" data-geh="f2">Ja</button></div>
+      </div>
+      <div data-schritt="f2" hidden>
+       <div class="pfad">Gelingt auf Aufforderung: ja</div>
+       <div class="frage">Warum setzt sie die Strategie nicht von sich aus ein?</div>
+       <div class="knoepfe"><button type="button" data-geh="produktion">Sie denkt nicht daran</button><button type="button" data-geh="nutzung">Es lohnt sich für sie nicht</button></div>
+      </div>
+      <div data-schritt="mediation" hidden>
+       <div class="ergebnis" style="background:var(--spL);border-left:5px solid var(--sp)"><h3 style="font-family:Fraunces,serif;color:var(--sp)">Mediationsdefizit</h3><p>Es fehlt notwendiges Wissen oder eine Grundfähigkeit, deshalb bleibt auch eine gut gemeinte Erklärung wirkungslos. <i>Beispiel: Sie markiert alles, weil sie Wichtiges noch nicht von Nebensächlichem trennen kann.</i></p><p style="margin-top:8px"><b>Hilfe:</b> Vorwissen klären, ausführlich erklären, modellieren, gemeinsam üben.</p></div>
+      </div>
+      <div data-schritt="produktion" hidden>
+       <div class="ergebnis" style="background:var(--prL);border-left:5px solid var(--pr)"><h3 style="font-family:Fraunces,serif;color:var(--pr)">Produktionsdefizit</h3><p>Sie kennt und beherrscht die Strategie, nutzt sie aber nur auf Aufforderung. Oft denkt sie nicht daran oder sieht den Nutzen in der konkreten Situation nicht. <i>Beispiel: Selbsterklärungen nur, wenn sie ausdrücklich verlangt werden.</i></p><p style="margin-top:8px"><b>Hilfe:</b> regelmässige Impulse, gezielte Erinnerungen, konkrete Anwendungssituationen, Routinen.</p></div>
+      </div>
+      <div data-schritt="nutzung" hidden>
+       <div class="ergebnis" style="background:var(--thL);border-left:5px solid var(--th)"><h3 style="font-family:Fraunces,serif;color:var(--th)">Nutzungsdefizit</h3><p>Sie kennt die Strategie und ihren Nutzen, der Aufwand erscheint ihr aber zu gross. Sie greift lieber zu bequemeren, weniger wirksamen Methoden. <i>Beispiel: lieber den Text nochmals lesen, statt eigene Fragen dazu zu formulieren.</i></p><p style="margin-top:8px"><b>Hilfe:</b> den Nutzen an einer konkreten Aufgabe erleben und reflektieren lassen, den Einstieg entlasten.</p></div>
+      </div>
+      <p style="margin-top:14px"><button type="button" class="lb-btn" id="lb-baum-reset">↺ Neu beginnen</button></p>
+     </div>
+     <p class="lb-cap" style="margin-top:8px">Eigene Darstellung als Entscheidungsbaum nach Karlen &amp; Mejeh, 2026, S. 64–65.</p>
+     <div class="lb-g2">
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang</div>Wer sofort «nochmals erklärt», hilft nur beim Mediationsdefizit. Beim Nutzungsdefizit verstärkt mehr Erklären eher den Eindruck, die Strategie sei aufwendig.</div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Leitfrage</div><b>Fehlt Verständnis, fehlt der selbstständige Einsatz oder fehlt die Bereitschaft, den Aufwand zu investieren?</b> Am besten fragt man die lernende Person direkt.<span class="lb-src">SitKo-Workshopguide, S. 7</span></div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="annahmen">
+     <span class="lb-kick">B · Verbreitete Annahmen prüfen</span>
+     <h2>Vier Annahmen und was die Forschung dazu sagt</h2>
+     <p class="lb-lead">Klicke auf eine Annahme, um zu sehen, was die Quellen dazu sagen.</p>
+     <div class="lb-g2">
+      <details class="lb-mythos"><summary><span class="lb-hand">«Bei uns gibt es ein Lernatelier, also lernen sie selbstreguliert.»</span><em>Stimmt das?</em></summary><div><b>SOL ist nicht SRL.</b> Selbstorganisiertes Lernen ist eine <i>Unterrichtsform</i> mit Freiräumen. SRL sind die <i>Kompetenzen</i>, die man braucht, um darin und im klassischen Unterricht erfolgreich zu lernen.<span class="lb-src">Karlen &amp; Mejeh, 2026, S. 44</span></div></details>
+      <details class="lb-mythos"><summary><span class="lb-hand">«Sie hat gute Noten, also kann sie lernen.»</span><em>Stimmt das?</em></summary><div>Schulischer Erfolg ist <b>kein verlässlicher Hinweis</b>, dass jemand gelernt hat, wie man lernt. Manche wissen, wie man Prüfungen besteht, aber nicht, wie man sich Wissen langfristig aneignet. Spätestens bei Übergängen geraten sie ins Straucheln.<span class="lb-src">Karlen, 2026, Einleitung, S. 14–15</span></div></details>
+      <details class="lb-mythos"><summary><span class="lb-hand">«Das kommt mit dem Alter von selbst.»</span><em>Stimmt das?</em></summary><div>Beim Übergang in die Sekundarstufe <b>nimmt die Strategienutzung teilweise sogar ab</b>, obwohl das Strategiewissen wächst. Für die Sek II sind die Befunde uneinheitlich. Gezielter Unterricht fördert SRL aber.<span class="lb-src">Karlen &amp; Mejeh, 2026, S. 66–67</span></div></details>
+      <details class="lb-mythos"><summary><span class="lb-hand">«Man muss ihnen nur Freiraum geben.»</span><em>Stimmt das?</em></summary><div>Hohe Anforderungen an die Selbstorganisation <b>ohne Strategieförderung</b> stärken nicht die Selbstregulation, sondern erzeugen <b>Lernfrust</b>.<span class="lb-src">Karlen, 2026, Einleitung, S. 17</span></div></details>
+     </div>
+     <div class="lb-g2" style="align-items:center">
+      <svg class="lb-svg" viewBox="0 0 400 345" role="img" aria-label="Konzentrische Ebenen: Strategien, Aufgaben, Lernumgebung und Lernkultur, Schulstrukturen; Lernbegleitung verbindet alle Ebenen" style="max-width:380px;margin:0 auto">
+       <circle cx="200" cy="165" r="160" fill="#f4f1ea"/><circle cx="200" cy="165" r="122" fill="#e9e3d6"/><circle cx="200" cy="165" r="84" fill="#e7ede6"/><circle cx="200" cy="165" r="46" fill="#3f5d4a"/>
+       <g text-anchor="middle" font-size="13" fill="#2f3a32"><text x="200" y="24">Schulstrukturen</text><text x="200" y="62">Lernumgebung &amp; -kultur</text><text x="200" y="101">Aufgaben</text><text x="200" y="170" fill="#fff" font-weight="700">Strategien</text></g>
+       <circle cx="200" cy="165" r="140" fill="none" stroke="#a8682f" stroke-width="2.5" stroke-dasharray="6 6"/>
+       <path d="M60 300 C 140 250 120 200 162 150" fill="none" stroke="#a8682f" stroke-width="3" marker-end="url(#lbm-pr)"/>
+       <text x="8" y="322" font-size="14" font-weight="700" fill="#a8682f">Lernbegleitung</text><text x="8" y="338" font-size="12" fill="#a8682f">verbindet alle Ebenen</text>
+      </svg>
+      <div>
+       <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>SRL ganzheitlich fördern</div>Lernbegleitung beginnt mit der <b>Diagnose von SRL-Kompetenzen</b> und zeigt sich in Strategieimpulsen, Scaffolding und individuellem Feedback. Einzelne Lehrpersonen können jederzeit mit den inneren Kreisen beginnen, auch wenn es noch kein schulweites Konzept gibt.<span class="lb-src">Karlen, 2026, S. 15–16</span></div>
+       <p class="lb-cap" style="margin-top:10px">Grafik: eigene Darstellung nach Karlen, 2026, Abb. E.1, S. 16.</p>
+      </div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="dialog">
+     <span class="lb-kick">B · Dialogisches Lernen</span>
+     <h2>Denkwege sichtbar machen: die Welt des Singulären</h2>
+     <div class="lb-g2" style="align-items:start">
+      <div>
+       <figure class="lb-fig" style="margin-top:0">
+        <img src="../img/paedagogik/frage-loesung-ich.jpg" alt="Frage, Lösung und Ich: oben die Welt des Regulären mit Produktion und Rezeption, unten die Welt des Singulären" width="875" height="492">
+        <figcaption><b>Bildzitat</b> · Ruf &amp; Gallin (2011), <i>Dialogisches Lernen in Sprache und Mathematik</i>, Bd. 1, S. 24. Oben die Welt des <b>Regulären</b> (Fragen und Lösungen der Fachleute), unten die Welt des <b>Singulären</b> (das Ich der lernenden Person).</figcaption>
+       </figure>
+       <blockquote class="lb-zitat">Nicht die Kunst des Erklärens ist jetzt gefragt, sondern die Kunst des Zuhörens.<cite>Ruf &amp; Gallin, 2011, S. 24</cite></blockquote>
+      </div>
+      <div>
+       <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Kernidee</div>Zuerst interessiert, was <b>zwischen der lernenden Person und dem Stoff</b> geschieht: Vorwissen, Fragen, Vorstellungen, erste Versuche. Die Lehrperson stellt ihr Fachwissen <i>vorerst</i> zurück. Erst im Austausch nähern sich die singulären Positionen den Regularitäten des Fachs an.<span class="lb-src">Ruf &amp; Gallin, 2011, S. 24–25</span></div>
+       <svg class="lb-svg" viewBox="0 0 520 150" role="img" aria-label="Ich, Du, Wir: Ich mache das so! Wie machst du es? Das machen wir ab.">
+        <circle cx="80" cy="70" r="58" fill="#a8682f"/><circle cx="260" cy="70" r="58" fill="#3f5d4a"/><circle cx="440" cy="70" r="58" fill="#4a6178"/>
+        <path d="M140 70 H195" stroke="#6b7368" stroke-width="2.5" marker-end="url(#lbm)"/><path d="M320 70 H375" stroke="#6b7368" stroke-width="2.5" marker-end="url(#lbm)"/>
+        <g text-anchor="middle" fill="#fff"><text x="80" y="66" font-size="22" font-weight="700" class="serif">Ich</text><text x="260" y="66" font-size="22" font-weight="700" class="serif">Du</text><text x="440" y="66" font-size="22" font-weight="700" class="serif">Wir</text><text x="80" y="88" font-size="11.5">Ich mache das so!</text><text x="260" y="88" font-size="11.5">Wie machst du es?</text><text x="440" y="88" font-size="11.5">Das machen wir ab.</text></g>
+        <g text-anchor="middle" font-size="12" fill="#6b7368"><text x="80" y="145">eigener Zugang</text><text x="260" y="145">Austausch</text><text x="440" y="145">tragfähiger Konsens</text></g>
+       </svg>
+       <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Abstand: Defizit oder Chance?</div>Am Anfang liegen Person und Sache weit auseinander. Wer diesen Abstand <b>so schnell wie möglich überwinden</b> will, entwertet das Denken der Lernenden. Wer ihn als <b>Spannungsfeld</b> nutzt, gewinnt daraus die Dynamik des Lernens (S. 24).</div>
+      </div>
+     </div>
+     <div class="lb-g2">
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Lernspuren statt nur Endprodukte</div>Das <b>Lernjournal</b> ist eine Werkstatt: Texte entstehen spontan und werden nicht korrigiert. Wege, Irrwege, Fragen und Strategien werden sichtbar. Rückmeldungen deuten diese Spuren aus einer <b>Entwicklungsperspektive</b>.<span class="lb-src">Ruf &amp; Gallin, 2011, S. 46–47</span></div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Lernspur-Fragen zu einer Aufgabe</div><ul><li>Welche Frage ist bei dir entstanden?</li><li>Was hast du versucht?</li><li>Wo stockt dein Denken?</li><li>Welche Rückmeldung würde dir weiterhelfen?</li></ul><span class="lb-src">SitKo-Workshopguide, S. 10</span></div>
+     </div>
+     <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Verknüpfung</div>Das Singuläre ist der Ort der <b>Diagnose</b>: Was Lernende im Journal oder Gespräch zeigen, macht ihre Zone der nächsten Entwicklung sichtbar. Offenheit am Anfang heisst nicht, fachliche Ansprüche aufzugeben.</div>
+    </section>
+
+    <section class="lb-kap" id="haltung">
+     <span class="lb-kick">B · Haltung</span>
+     <h2>Ermöglichen statt erzeugen</h2>
+     <blockquote class="lb-zitat">Lehrende können zwar belehren, doch die Aneignungsbewegung des lernenden Individuums folgt eigenen Mustern […].<cite>Arnold &amp; Schön, 2019, S. 53. Der Mensch ist demnach «zwar lernfähig, aber auch unbelehrbar» (ebd., nach Arnold &amp; Siebert, 1995).</cite></blockquote>
+     <div class="lb-g2">
+      <div class="lb-card top" style="--c:#b0a69a"><h3>Erzeugungsdidaktik</h3><ul><li>linear, fremdorganisiert, vorhersagbar</li><li>stellvertretende Erschliessung</li><li>Planung und Kontrolle von Lehrschritten</li><li>lehren, vermitteln, führen</li><li>Nachvollzug vorgegebenen Wissens</li></ul></div>
+      <div class="lb-card top" style="--c:var(--sp)"><h3>Ermöglichungsdidaktik</h3><ul><li>nichtlinear, selbstorganisiert, offen</li><li>selbstständige Erschliessung</li><li>Begleitung von Lernprojekten</li><li>begleiten, beraten, unterstützen</li><li>Konstruktion reflexiven Wissens</li></ul></div>
+     </div>
+     <p class="lb-cap">Eigene, gekürzte Darstellung nach Arnold &amp; Schön, 2019, Tab. 10, S. 54 (nach Arnold &amp; Pätzold, 2002). Die Gegenüberstellung ist ein Reflexionsmodell; in der Praxis gibt es Mischformen (S. 89).</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Kompetenzen von «Lernermöglichern»</div><ul><li><b>Umgang mit Unsicherheit:</b> gerade in unsicheren Phasen entfalten sich Aneignungsdynamiken</li><li><b>Wirkungsoffenheit:</b> Lerneffekte lassen sich nicht sicher bewirken</li><li><b>Lernarrangement:</b> vielfältige Lernwege eröffnen</li><li><b>Lernbegleitung:</b> sich zurücknehmen, Ressourcenperson sein</li><li><b>Beobachterhaltung:</b> eigene verzerrende Interventionen erkennen</li></ul><span class="lb-src">Arnold &amp; Schön, 2019, Tab. 15, S. 68 (nach Arnold, 2003)</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Drei Grundbedürfnisse</div>Nach der Selbstbestimmungstheorie (Deci &amp; Ryan) entscheidet nicht die Organisationsform über den Lernerfolg, sondern ob ein Setting <b>Kompetenz, Autonomie und soziale Eingebundenheit</b> erlebbar macht.<span class="lb-src">Arnold &amp; Schön, 2019, S. 90</span></div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Wichtig</div>Auch Ermöglichungsdidaktik heisst nicht «laufen lassen»: Lernende sollen selbst entscheiden können, ob sie eine <b>detaillierte Anleitung</b> brauchen. Und sie brauchen <b>Feedback</b>.<span class="lb-src">Arnold &amp; Schön, 2019, S. 90</span></div>
+     </div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin-top:26px">SPASS: fünf Kriterien für lebendiges, nachhaltiges Lernen</h3>
+     <p style="color:#45524a;max-width:760px">Arnold bündelt fünf Kriterien als <b>Reflexionshilfe</b> für die eigene Planung. Sie sind kein Rezept und kein Wirkungsbeweis, sondern Fragen an das eigene Angebot.</p>
+     <div class="lb-g5">
+      <div class="lb-card top" style="--c:var(--sp)"><div style="font-family:Fraunces,serif;font-size:36px;line-height:1;color:var(--sp)">S</div><h3>selbstgesteuert</h3>Lernende bestimmen Wege mit und prüfen Ergebnisse selbst. Die Lehrperson ist <b>prozessverantwortlich</b>.</div>
+      <div class="lb-card top" style="--c:var(--pr)"><div style="font-family:Fraunces,serif;font-size:36px;line-height:1;color:var(--pr)">P</div><h3>produktiv</h3>Vorwissen wird eingebunden; Raum für Neugier und Perspektivenwechsel.</div>
+      <div class="lb-card top" style="--c:var(--go)"><div style="font-family:Fraunces,serif;font-size:36px;line-height:1;color:var(--go)">A</div><h3>aktivierend</h3>konkrete Aufträge; Lösungswege selbst planen, durchführen, prüfen.</div>
+      <div class="lb-card top" style="--c:var(--th)"><div style="font-family:Fraunces,serif;font-size:36px;line-height:1;color:var(--th)">S</div><h3>situativ</h3>Bezug zur Situation der Lerngruppe; Praxisbeispiele und Transfer.</div>
+      <div class="lb-card top" style="--c:var(--ge)"><div style="font-family:Fraunces,serif;font-size:36px;line-height:1;color:var(--ge)">S</div><h3>sozial</h3>Wertschätzung, Zeit für Fragen und Feedback, Emotionen wahrnehmen, kooperieren.</div>
+     </div>
+     <p class="lb-cap">Eigene, gekürzte Darstellung nach Arnold &amp; Schön, 2019, Tab. 22, S. 108 (nach Arnold, 2012a).</p>
+     <div class="lb-g3">
+      <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Eigenverantwortung ≠ Verantwortung abgeben</div>Die Lehrkraft gibt nach und nach didaktische Entscheidungen ab, bleibt aber <b>verantwortlich für ihr Angebot</b> und prüft, ob es die Handlungsmöglichkeiten der Lernenden tatsächlich erweitert.<span class="lb-src">Arnold &amp; Schön, 2019, S. 91</span></div>
+      <blockquote class="lb-zitat" style="margin:0">Handle stets so, dass du die Anzahl der Möglichkeiten vergrösserst!<cite>Heinz von Foerster (1988), zitiert in Arnold &amp; Schön, 2019, S. 92</cite></blockquote>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Übung zur eigenen Planung</div>Wähle <b>zwei Kriterien</b>, die deine Planung schon erfüllt, und begründe sie an einer konkreten Lernhandlung. Ergänze ein <b>drittes Kriterium</b> und überlege, welche Begleitung es dafür braucht.<span class="lb-src">SitKo-Workshopguide, S. 12</span></div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="kompetenzen">
+     <span class="lb-kick">B · Was Lehrpersonen dafür brauchen</span>
+     <h2>Lernbegleitung ist eine orchestrierte Kompetenz</h2>
+     <p class="lb-lead">Professionelle Lernbegleitung entsteht aus mehreren Kompetenzbereichen, die sich überlagern. Entscheidend ist, wie gut die Lehrperson sie <b>je nach Bedarf orchestrieren</b> kann (Fraefel, S. 131).</p>
+     <div class="lb-g3" style="margin-bottom:0">
+      <div class="lb-card top" style="--c:var(--pr)"><h3>Fachdidaktische Kompetenz</h3><ul><li>Sache und Struktur der Aufgaben</li><li>typische Schwierigkeiten, Zeitaufwand</li><li>vielfältige Erklärstrategien</li><li>Problemlösestrategien</li></ul></div>
+      <div class="lb-card top" style="--c:var(--ge)"><h3>Diagnostische Kompetenz</h3><ul><li>Lernstand erkennen</li><li>Lernschwierigkeiten erkennen</li><li>Lernpotenzial erkennen</li><li>setzt Fachdidaktik voraus</li></ul></div>
+      <div class="lb-card top" style="--c:var(--sp)"><h3>Kommunikative und soziale Kompetenz</h3><ul><li>psychologisches Wissen</li><li>Wissen über Feedback</li><li>Prioritäten setzen</li><li>den richtigen «Ton» treffen</li></ul></div>
+     </div>
+     <svg class="lb-svg" viewBox="0 0 1000 60" aria-hidden="true" style="margin:0"><path d="M165 4 C165 40 440 30 470 56" fill="none" stroke="#a8682f" stroke-width="3" marker-end="url(#lbm-pr)"/><path d="M500 4 V54" stroke="#4a6178" stroke-width="3" marker-end="url(#lbm-ge)"/><path d="M835 4 C835 40 560 30 530 56" fill="none" stroke="#9b4d5e" stroke-width="3" marker-end="url(#lbm-sp)"/></svg>
+     <div class="lb-card" style="background:var(--text);color:#e9e3d6;border:0">
+      <h3 style="color:#fff">Kompetenz der Lernprozessbegleitung</h3>
+      <div class="lb-g2" style="margin:6px 0 0"><ul><li>passende, herausfordernde Lernziele setzen</li><li>Adaptivität; das richtige Niveau treffen</li><li>korrekte Feedbacks zu Aufgaben und Strategien</li></ul><ul><li>relevante Ebenen erkennen</li><li>sprachlich angemessen intervenieren</li><li>Wirkung des Feedbacks abschätzen</li></ul></div>
+     </div>
+     <p class="lb-cap" style="margin-top:8px">Eigene Darstellung nach Fraefel, Abb. 12, S. 131.</p>
+     <div class="lb-g2">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Qualitätsansprüche (Kanton Zürich)</div><ol style="margin-left:18px"><li>differenzierte Lernangebote</li><li>individuelle Förderung: Lernleistungen regelmässig erfassen, konstruktiv auf Denkwege eingehen, differenziert rückmelden</li><li>eigenverantwortliches Lernen: Lerntechniken einführen, Selbstbeurteilung</li><li>Zusammenarbeit im Team, sorgfältige Stufenübertritte</li></ol><span class="lb-src">Bildungsdirektion Kanton Zürich (2017), im Berner-Auszug, S. 136</span></div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Gedankengang für die Ausbildung</div>Am Anfang des Berufs kann man nicht alles gleichzeitig. Hilfreich ist, <b>einen Bereich bewusst zu üben</b>, z. B. eine Woche lang nur Strategie-Feedback zu geben, und die anderen mitlaufen zu lassen. Fraefel nennt die Lernbegleitung bewusst eine <i>komplexe und anspruchsvolle</i> Tätigkeit.</div>
+     </div>
+    </section>
+
+    <!-- ===== Teil C ===== -->
+    <div class="lb-teil"><b>C</b><span>Wie gehe ich vor?<small>Gespräche, Handlungszyklus, Werkzeuge und Planungs-Check</small></span></div>
+
+    <section class="lb-kap" id="gespraech">
+     <span class="lb-kick">C · Das Lernbegleitungsgespräch</span>
+     <h2>Ein Lernbegleitungsgespräch strukturieren: GROW</h2>
+     <p class="lb-lead">Ein lösungsorientiertes Gespräch ist kein nettes Plaudern, bei dem das Ziel aus dem Blick gerät, sondern klar strukturiert (Kremers &amp; Schlüter, 2018, S. 25). Das GROW-Modell nach Whitmore gliedert es in vier Phasen.</p>
+     <div class="lb-g4">
+      <div class="lb-card top" style="--c:#3f5d4a"><div style="font-family:Fraunces,serif;font-size:40px;line-height:1;color:#3f5d4a">G</div><h3>Goal · Ziel klären</h3><p style="font-size:14.5px;color:var(--muted)">Orientierungsphase: Kontakt, Zeitrahmen, Anliegen</p><div class="lb-hand" style="font-size:17px;margin-top:8px">Was ist dein Thema? Was soll am Schluss erreicht sein?</div></div>
+      <div class="lb-card top" style="--c:#4a6178"><div style="font-family:Fraunces,serif;font-size:40px;line-height:1;color:#4a6178">R</div><h3>Reality · Ist-Situation</h3><p style="font-size:14.5px;color:var(--muted)">Klärungsphase, meist die längste</p><div class="lb-hand" style="font-size:17px;margin-top:8px">Wo genau liegen die Probleme? Was hat dazu geführt?</div></div>
+      <div class="lb-card top" style="--c:#b8902f"><div style="font-family:Fraunces,serif;font-size:40px;line-height:1;color:#b8902f">O</div><h3>Options · Möglichkeiten</h3><p style="font-size:14.5px;color:var(--muted)">Lösungsideen sammeln und prüfen</p><div class="lb-hand" style="font-size:17px;margin-top:8px">Welche Möglichkeiten gibt es? Was spricht jeweils dafür und dagegen?</div></div>
+      <div class="lb-card top" style="--c:#a8682f"><div style="font-family:Fraunces,serif;font-size:40px;line-height:1;color:#a8682f">W</div><h3>Will · Handlungsplan</h3><p style="font-size:14.5px;color:var(--muted)">konkrete nächste Schritte festlegen</p><div class="lb-hand" style="font-size:17px;margin-top:8px">Was ist für dich das Ergebnis? Was sind deine nächsten Schritte?</div></div>
+     </div>
+     <p class="lb-cap">Eigene Darstellung nach Kremers &amp; Schlüter, 2018, S. 25–27 (GROW nach Whitmore, 2006).</p>
+     <div class="lb-g3">
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Wer verantwortet was?</div><b>Lehrperson (Coach):</b> den <b>Prozess</b>, also Raum, Zeit, Struktur, Wertschätzung, Ressourcenorientierung und gute Fragen.<br><b>Lernende (Coachee):</b> den <b>Inhalt</b>: mein Thema, mein Ziel, meine Lösung, mein nächster Schritt.<span class="lb-src">Kremers &amp; Schlüter, 2018, S. 9–10</span></div>
+      <div class="lb-box th"><div class="lbl"><svg><use href="#lbi-th"/></svg>Beratung in fünf Phasen</div><ol style="margin-left:18px"><li>Beziehung aufbauen</li><li>Anliegen aus Sicht der Lernenden konkretisieren</li><li>Beratungs- und Lösungsebene finden</li><li>Impulse geben, Gewohnheiten durchkreuzen</li><li>mit konkretem Ergebnis abschliessen</li></ol><span class="lb-src">Arnold &amp; Schön, 2019, S. 69 (nach Brüggemann et al., 2014). Fast deckungsgleich mit GROW, betont aber den Kontakt.</span></div>
+      <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Beraten und bewerten</div>Kremers &amp; Schlüter raten, <b>Beratung und Bewertung möglichst zu trennen</b> (S. 25). Wo dieselbe Lehrperson beides tut: Zweck und Verwendung der Gesprächsinformationen offen klären. Arnold &amp; Schön: Beratung steht in einem <b>Spannungsverhältnis zur Mündigkeit</b> (S. 69).</div>
+     </div>
+     <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Praxis · Kurzform im Unterricht (3–5 Minuten)</div><b>G</b> «Was willst du heute fertig haben?» → <b>R</b> «Zeig mir, wo du stehst. Was hast du schon versucht?» → <b>O</b> «Was könntest du jetzt tun? Was noch?» → <b>W</b> «Was machst du als Erstes? Wann schaue ich wieder vorbei?»<br>Beobachtungsfrage für Übungen: <i>Wird zuerst verstanden oder sofort geraten? Ist der nächste Schritt konkret und von der lernenden Person mitgetragen?</i><span class="lb-src">eigene Verdichtung nach Kremers &amp; Schlüter, 2018; Beobachtungsfrage: SitKo-Workshopguide, S. 9</span></div>
+    </section>
+
+    <section class="lb-kap" id="hindernisse">
+     <span class="lb-kick">C · Lernhindernisse verstehen</span>
+     <h2>Was steckt hinter «Ich kann das nicht»?</h2>
+     <p class="lb-lead">Kremers &amp; Schlüter zeigen ein Lerncoaching mit einer Schülerin, die vor jeder Klassenarbeit verzweifelt. Das <b>Selbstmanagement-Prozess-Modell</b> trennt vier Bereiche und macht so sichtbar, dass es nicht nur um Lerntechnik geht.</p>
+     <div class="lb-g2">
+      <div class="lb-card" style="background:#f4f1ea"><h3 style="color:#6b7368">1 · Auslösende Situation</h3><div class="lb-hand" style="font-size:17px;--c:#45524a">Abend vor der Klassenarbeit, nach 20 Uhr · Nachbar mit lauter Musik · Bruder kommt dreimal rein · WhatsApp-Lerngruppe pingt dauernd · Schreibtisch voller Bücher</div></div>
+      <div class="lb-card" style="background:var(--spL)"><h3 style="color:var(--sp)">2 · Emotion und Körper</h3><div class="lb-hand" style="font-size:17px;--c:#45524a">Wut auf mich selbst · Müdigkeit, brennende Augen · Verzweiflung: Wo fange ich an? · früher stolz, jetzt Angst zu versagen</div></div>
+      <div class="lb-card" style="background:var(--geL)"><h3 style="color:var(--ge)">3 · Kognition (Gedanken)</h3><div class="lb-hand" style="font-size:17px;--c:#45524a">«Da liegt ein Riesenhaufen Arbeit.» · «Das schaffe ich nie.» · «Im Unterricht sah es einfacher aus.» · «Ich höre erst auf, wenn ich es kann, und wenn es Mitternacht wird.»</div></div>
+      <div class="lb-card" style="background:var(--thL)"><h3 style="color:var(--th)">4 · Bisherige Strategien</h3><div class="lb-hand" style="font-size:17px;--c:#45524a">abschreiben, abdecken, aufsagen · erst am Vorabend lernen · Internetrecherche, Videos · WhatsApp-Gruppe: Austausch und Ablenkung zugleich</div></div>
+     </div>
+     <p class="lb-cap">Eigene Darstellung des Fallbeispiels nach Kremers &amp; Schlüter, 2018, S. 84–86 (gekürzt, sinngemäss).</p>
+     <div class="lb-g3">
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Ergebnis: ihr eigener Plan (Will)</div><ul><li>Handy und Computer die erste Stunde offline</li><li>Wochenlernplan, früher anfangen, Wiederholungen einplanen</li><li>klare Zwischenschritte, danach darf ich aufhören</li><li>Fachbegriffe visualisieren statt abschreiben</li></ul><span class="lb-src">Kremers &amp; Schlüter, 2018, S. 84–85</span></div>
+      <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Expertin für Lernen ↔ Expertin ihrer selbst</div>Die Lehrperson braucht <b>Wissen über Lernstrategien</b>. Gleichzeitig soll sie der Schülerin zutrauen, nur jene Lösungen zu wählen, die sie realistisch und motiviert umsetzen kann. Wenn sie abends lernen will, ist das ihr Weg (S. 85).</div>
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Verknüpfung zur SRL-Turbine</div>Die vier Felder treffen genau die Aspekte, die Karlen &amp; Mejeh über die Kognition hinaus betonen: <b>Ressourcen</b> (Störungen), <b>Emotionen</b> (Angst), <b>Mindset</b> («schaffe ich nie») und <b>Kognition</b> (wenig wirksame Strategien). Das Gespräch ist zugleich Diagnose und Förderung.</div>
+     </div>
+     <div class="note"><span>🌱</span><span><b>Prinzip:</b> Selbstwirksamkeit stärken, Ressourcen und Erfolge hervorheben, ermutigen und den Weg der kleinen Schritte gehen (Kremers &amp; Schlüter, 2018, S. 85).</span></div>
+    </section>
+
+    <section class="lb-kap" id="zyklus">
+     <span class="lb-kick">C · Synthese</span>
+     <h2>Sechs Schritte der Lernbegleitung</h2>
+     <p class="lb-lead">Die Quellen lassen sich zu einem Handlungszyklus verdichten (eigene Synthese, nach den Leitideen des SitKo-Workshopguides, S. 1). Er ist kein starres Ablaufschema: Wie beim Diagnostik-Förder-Kreislauf springt man in der Praxis vor und zurück.</p>
+     <div class="lb-g2" style="align-items:center">
+      <svg class="lb-svg" viewBox="0 0 520 470" role="img" aria-label="Zyklus: Verstehen, Dosieren, Rückmelden, Selbstregulation aufbauen, Wirkung prüfen; im Zentrum Lernende beteiligen" style="max-width:460px;margin:0 auto">
+       <circle cx="260" cy="235" r="168" fill="none" stroke="#e9e3d6" stroke-width="34"/>
+       <g fill="none" stroke-width="5"><path d="M300 72 A168 168 0 0 1 412 160" stroke="#4a6178" marker-end="url(#lbm-ge)"/><path d="M425 280 A168 168 0 0 1 345 385" stroke="#3f5d4a" marker-end="url(#lbm-th)"/><path d="M220 400 A168 168 0 0 1 112 320" stroke="#a8682f" marker-end="url(#lbm-pr)"/><path d="M95 200 A168 168 0 0 1 180 88" stroke="#9b4d5e" marker-end="url(#lbm-sp)"/></g>
+       <circle cx="260" cy="235" r="92" fill="#2f3a32"/>
+       <text x="260" y="228" text-anchor="middle" font-size="19" fill="#fff" class="serif">Estudiantes</text><text x="260" y="252" text-anchor="middle" font-size="19" fill="#fff" class="serif">beteiligen</text>
+       <g font-weight="700" fill="#fff" text-anchor="middle" font-size="22"><circle cx="260" cy="67" r="40" fill="#4a6178"/><text x="260" y="75">1</text><circle cx="420" cy="220" r="40" fill="#3f5d4a"/><text x="420" y="228">2</text><circle cx="300" cy="402" r="40" fill="#b8902f"/><text x="300" y="410">3</text><circle cx="140" cy="380" r="40" fill="#a8682f"/><text x="140" y="388">4</text><circle cx="96" cy="180" r="40" fill="#9b4d5e"/><text x="96" y="188">5</text></g>
+       <g font-size="15" font-weight="700" fill="#2f3a32"><text x="310" y="40">Verstehen</text><text x="440" y="285">Dosieren</text><text x="350" y="450">Rückmelden</text><text x="30" y="445">Selbstregulation</text><text x="10" y="112">Wirkung prüfen</text></g>
+      </svg>
+      <div>
+       <div class="lb-card" style="border-left:5px solid #4a6178;margin-bottom:10px"><b style="color:#4a6178">1 Verstehen, bevor wir helfen.</b> Vorwissen, Denkwege, Strategieeinsatz, Ressourcen und Barrieren erkunden; Person <i>und</i> Unterrichtsbedingungen betrachten. <a class="lb-weiter" href="#diagnose">→ Diagnose</a></div>
+       <div class="lb-card" style="border-left:5px solid #3f5d4a;margin-bottom:10px"><b style="color:#3f5d4a">2 Unterstützung passend dosieren.</b> Aufgaben und Hilfen auf die ZPE abstimmen; bei wachsender Kompetenz zurücknehmen. <a class="lb-weiter" href="#scaffolding">→ Scaffolding</a></div>
+       <div class="lb-card" style="border-left:5px solid #b8902f;margin-bottom:10px"><b style="color:#9a7520">3 Feedback in Weiterarbeit übersetzen.</b> Ziel, Stand und nächsten Schritt klären; Aufgabe, Vorgehen und Selbstregulation ansprechen. <a class="lb-weiter" href="#feedback">→ Feedback</a></div>
+       <div class="lb-card" style="border-left:5px solid #a8682f;margin-bottom:10px"><b style="color:#a8682f">4 Selbstregulation ausdrücklich aufbauen.</b> Vorbereitung, Durchführung, Reflexion begleiten; Motivation, Emotionen, Ressourcen und Mindsets einbeziehen. <a class="lb-weiter" href="#srl">→ SRL</a></div>
+       <div class="lb-card" style="border-left:5px solid #9b4d5e;margin-bottom:10px"><b style="color:#9b4d5e">5 Wirkung prüfen und nachsteuern.</b> Beobachtbare Anzeichen für Fortschritt festlegen und die Ergebnisse nutzen. <a class="lb-weiter" href="#formativ">→ formativ</a></div>
+       <div class="lb-card" style="border-left:5px solid #2f3a32"><b>Im Zentrum: Lernende beteiligen.</b> Zuhören, Lernspuren nutzen, Anliegen klären, Schritte gemeinsam vereinbaren. <a class="lb-weiter" href="#dialog">→ Dialog</a></div>
+      </div>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="toolbox">
+     <span class="lb-kick">C · Toolbox</span>
+     <h2>Acht Werkzeuge für den Unterricht</h2>
+     <div class="lb-g4">
+      <div class="lb-card top" style="--c:#4a6178"><span class="badge" style="background:var(--geL);color:#4a6178;border-color:#cdd8e2">Verstehen</span><h3 style="margin-top:8px">Der verwirrendste Punkt</h3>Am Ende einer Sequenz schriftlich: «Was war der verwirrendste Punkt?» Antworten sichten und in der nächsten Stunde darauf reagieren.<span class="lb-src">Fraefel, 2023, S. 140</span></div>
+      <div class="lb-card top" style="--c:#4a6178"><span class="badge" style="background:var(--geL);color:#4a6178;border-color:#cdd8e2">Verstehen</span><h3 style="margin-top:8px">Lernspur-Fragen</h3>Aufgabe ergänzen um: Welche Frage ist entstanden? Was hast du versucht? Wo stockt dein Denken? Welche Rückmeldung hilft dir?<span class="lb-src">Ruf &amp; Gallin; SitKo-Guide, S. 10</span></div>
+      <div class="lb-card top" style="--c:#3f5d4a"><span class="badge live">Dosieren</span><h3 style="margin-top:8px">Hilfen-Treppe</h3>Für eine Kernaufgabe drei bis vier abgestufte Hilfen vorbereiten: Rückfrage, Hinweis, Modellieren, gemeinsam lösen. Immer mit der kleinsten beginnen.<span class="lb-src">nach Möller (2006); SitKo-Guide, S. 4</span></div>
+      <div class="lb-card top" style="--c:#3f5d4a"><span class="badge live">Dosieren</span><h3 style="margin-top:8px">Strategie-Check</h3>Wird eine Strategie nicht genutzt: Mediations-, Produktions- oder Nutzungsdefizit? <a class="lb-weiter" href="#strategien">→ Entscheidungsbaum</a><span class="lb-src">Karlen &amp; Mejeh, 2026, S. 64–65</span></div>
+      <div class="lb-card top" style="--c:#b8902f"><span class="badge" style="background:var(--goL);color:#8a6d3b;border-color:#eadcb4">Rückmelden</span><h3 style="margin-top:8px">Feedback-Matrix</h3>Eigene Rückmeldungen einem Feld zuordnen. Fehlen Ziele, Ausblick oder Strategien? Um einen überprüfbaren nächsten Schritt ergänzen.<span class="lb-src">Fraefel, S. 130; SitKo-Guide, S. 5</span></div>
+      <div class="lb-card top" style="--c:#a8682f"><span class="badge" style="background:var(--prL);color:#a8682f;border-color:#ecd5bb">Selbstregulation</span><h3 style="margin-top:8px">Drei Phasenfragen</h3>Vorher: «Was ist dein Plan?» Während: «Woran merkst du, dass es klappt?» Nachher: «Was half, was machst du nächstes Mal gleich?»<span class="lb-src">nach Karlen &amp; Mejeh, 2026, S. 48–52</span></div>
+      <div class="lb-card top" style="--c:#a8682f"><span class="badge" style="background:var(--prL);color:#a8682f;border-color:#ecd5bb">Gespräch</span><h3 style="margin-top:8px">GROW in 5 Minuten</h3>Ziel → Ist-Situation → Optionen → nächster Schritt. Die Lehrperson führt den Prozess, die lernende Person den Inhalt.<span class="lb-src">Kremers &amp; Schlüter, 2018, S. 26–27</span></div>
+      <div class="lb-card top" style="--c:#9b4d5e"><span class="badge" style="background:var(--spL);color:#9b4d5e;border-color:#e7c9d1">Gespräch</span><h3 style="margin-top:8px">Vier-Felder-Blick</h3>Bei Blockaden gemeinsam notieren: Situation, Gefühle, Gedanken, bisherige Strategien. Dann Lösungen pro Feld suchen.<span class="lb-src">Kremers &amp; Schlüter, 2018, S. 86</span></div>
+     </div>
+     <div class="lb-box sp"><div class="lbl"><svg><use href="#lbi-sp"/></svg>Vorsicht</div>Werkzeuge ersetzen nicht die Haltung. Ein GROW-Gespräch, in dem die Lehrperson das Ziel schon kennt und nur noch «abfragt», ist kein Coaching. Eine Feedback-Matrix, die nie zu Weiterarbeit führt, ist kein formatives Feedback.</div>
+    </section>
+
+    <section class="lb-kap" id="check">
+     <span class="lb-kick">C · Planungs-Check</span>
+     <h2>Die eigene Unterrichtsplanung auf Lernbegleitung prüfen</h2>
+     <p class="lb-lead">Acht Fragen, direkt auf eine Lektion oder Unterrichtseinheit anwendbar (eigene Synthese aus den Quellen, aus dem SitKo-Workshopguide, S. 11). Hake ab, was deine Planung schon abdeckt: <span class="lb-zaehler" id="lb-zaehler">0 von 8</span></p>
+     <ul class="lb-check" id="lb-check">
+      <li><label><input type="checkbox"><span><b>1 Lernziel</b>Was soll eine konkrete lernende Person als Nächstes fachlich <i>und</i> strategisch können?</span></label></li>
+      <li><label><input type="checkbox"><span><b>2 Diagnosefenster</b>Welche Beobachtung, Lernspur oder Frage macht ihren Stand sichtbar?</span></label></li>
+      <li><label><input type="checkbox"><span><b>3 Passende Hilfe</b>Welche Unterstützung folgt aus welchem Befund? Was wäre die kleinere Hilfe?</span></label></li>
+      <li><label><input type="checkbox"><span><b>4 Rückmeldung</b>Erfährt die Person, wo sie steht und was sie konkret weiter tun kann?</span></label></li>
+      <li><label><input type="checkbox"><span><b>5 Selbstregulation</b>Was wird geplant, überwacht und reflektiert? Welche Strategie wird vermittelt?</span></label></li>
+      <li><label><input type="checkbox"><span><b>6 Beziehung und Beteiligung</b>Wo kann die Person ihre Perspektive, Interessen und Hilfebedürfnisse einbringen?</span></label></li>
+      <li><label><input type="checkbox"><span><b>7 Wirkung</b>Welches beobachtbare Signal zeigt, ob die Unterstützung wirkt?</span></label></li>
+      <li><label><input type="checkbox"><span><b>8 Organisation</b>Wann habe ich Zeit für individuelle Interaktion? Was tun die anderen Lernenden?</span></label></li>
+     </ul>
+     <div class="lb-g2">
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Verknüpfung</div>Frage 2 und 7 bilden den Diagnostik-Förder-Kreislauf ab, Frage 3 und 4 Scaffolding und Feedback, Frage 5 die SRL-Turbine, Frage 6 Dialog und Ermöglichungsdidaktik.</div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Tipp für Praktika</div>Nicht alle acht Fragen in jeder Lektion: Pro Planung <b>zwei Fragen</b> bewusst vertiefen und in der Nachbesprechung auswerten.</div>
+     </div>
+    </section>
+
+    <!-- ===== Teil D ===== -->
+    <div class="lb-teil"><b>D</b><span>Wo wird es schwierig?<small>Spannungsfelder, die sich nicht auflösen, aber gestalten lassen</small></span></div>
+
+    <section class="lb-kap" id="spannungsfelder">
+     <span class="lb-kick">D · Antinomien im Handeln</span>
+     <h2>Sieben Spannungsfelder</h2>
+     <p class="lb-lead">Lernbegleitung bewegt sich zwischen Polen, die beide berechtigt sind. Die Kunst liegt nicht darin, einen Pol zu wählen, sondern die Balance situativ und begründet zu finden (Zusammenstellung: eigene Synthese aus den Quellen). <b>Probier es aus:</b> Denk an eine konkrete Situation aus deinem Unterricht und schiebe den Regler dorthin, wo du gehandelt hast.</p>
+     <div class="lb-achse"><div class="pole"><span>helfen, stützen</span><span>loslassen</span></div><div class="mitte">so viel wie nötig, so wenig wie möglich</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen helfen und loslassen"><p><b>Helfen kann abhängig machen.</b> Scaffolds sollen ausgeblendet werden (Fraefel); Beratung steht in Spannung zur Mündigkeit (Arnold &amp; Schön, S. 69). <span class="weg">→ Hilfen abstufen, Rücknahme planen.</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>die einzelne Person</span><span>die ganze Klasse</span></div><div class="mitte">Was tun die anderen, während ich begleite?</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen Einzelperson und Klasse"><p><b>Gruppenhilfe trifft nur einen Teil der Lernfenster</b> (Fraefel, S. 128), Einzelbegleitung kostet Zeit für alle. <span class="weg">→ Aufträge planen, die selbstständiges Arbeiten erlauben; Peers als Helfende einbeziehen.</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>singulär, offen</span><span>regulär, Fachnorm</span></div><div class="mitte">eigene Denkwege würdigen und fachlich weiterführen</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen singulär und regulär"><p><b>Zuhören statt sofort korrigieren</b> (Ruf &amp; Gallin, S. 24), ohne die fachlichen Ansprüche aufzugeben. <span class="weg">→ zuerst Lernspur, dann Austausch, dann Konsens (Ich–Du–Wir).</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>beraten</span><span>bewerten</span></div><div class="mitte">Vertrauen ↔ Beurteilungsauftrag</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen beraten und bewerten"><p><b>Wer offen über Schwierigkeiten spricht, riskiert eine schlechtere Note.</b> Kremers &amp; Schlüter raten zur Trennung (S. 25); Fraefel trennt formativ und benotet (2023, S. 137). <span class="weg">→ Rollen und Verwendung der Informationen offenlegen.</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>Fremdsteuerung</span><span>Selbststeuerung</span></div><div class="mitte">Struktur geben, um Freiheit zu ermöglichen</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen Fremd- und Selbststeuerung"><p><b>Freiraum allein erzeugt Lernfrust</b> (Karlen, 2026, S. 17); in der Praxis gibt es immer Mischformen (Arnold &amp; Schön, S. 89). <span class="weg">→ Freiräume mit Strategieförderung koppeln; die Steuerung schrittweise übergeben.</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>sofort handeln</span><span>erst verstehen</span></div><div class="mitte">Handlungsdruck ↔ Diagnose</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen sofort handeln und erst verstehen"><p><b>Diagnose wird oft übersprungen</b> (Tönnissen et al., S. 304), und eine Rückmeldung der Klasse verlangt sofortige Anpassung (Fraefel, 2023, S. 140). <span class="weg">→ eine Rückfrage vor jeder Hilfe; Befragungen nur, wenn Zeit für eine Reaktion bleibt.</span></p></div>
+     <div class="lb-achse"><div class="pole"><span>planen</span><span>offen bleiben</span></div><div class="mitte">Planbarkeit ↔ Wirkungsoffenheit</div><input type="range" min="0" max="100" value="50" aria-label="Position zwischen planen und offen bleiben"><p><b>Lernen lässt sich nicht erzeugen</b> (Arnold &amp; Schön, S. 53), informelle Diagnose ist im Detail nicht planbar (Fraefel, 2023, S. 138). <span class="weg">→ Gelegenheiten planen (Zeitfenster, Diagnosefenster, abgestufte Hilfen), nicht die Wirkung.</span></p></div>
+     <div class="lb-g2">
+      <div class="lb-box ge"><div class="lbl"><svg><use href="#lbi-ge"/></svg>Warum «Antinomien»?</div>Die Spannungen sind keine Fehler, die man mit der richtigen Methode beseitigt. Sie gehören zur Struktur pädagogischen Handelns. Professionell ist, sie zu <b>erkennen, zu benennen und Entscheidungen zu begründen</b>, zum Beispiel im Unterrichtsentwurf oder im Mentoratsgespräch.</div>
+      <div class="lb-box pr"><div class="lbl"><svg><use href="#lbi-pr"/></svg>Reflexionsübung</div>Wähle <b>zwei Achsen</b>. Was spricht für die Position, die du gewählt hast? Was hätte die Gegenposition ermöglicht? Was würdest du nächstes Mal verschieben, und woran würdest du merken, ob es wirkt?</div>
+     </div>
+    </section>
+
+    <!-- ===== Abschluss ===== -->
+    <section class="lb-kap" id="reflexion">
+     <span class="lb-kick">Abschluss</span>
+     <h2>Das Wichtigste in fünf Sätzen</h2>
+     <div class="lb-g5">
+      <div class="lb-card top" style="--c:#4a6178"><span class="lb-num" style="--c:#4a6178">1</span><p style="margin-top:8px">Lernen geschieht zuerst im Austausch; Hilfe wirkt nur im <b>Lernfenster</b>, und das ist für jede Person woanders.</p></div>
+      <div class="lb-card top" style="--c:#3f5d4a"><span class="lb-num" style="--c:#3f5d4a">2</span><p style="margin-top:8px">Gute Hilfe ist <b>so klein wie möglich</b> und wird zurückgenommen, sobald sie nicht mehr nötig ist.</p></div>
+      <div class="lb-card top" style="--c:#b8902f"><span class="lb-num" style="--c:#b8902f">3</span><p style="margin-top:8px">Feedback wirkt, wenn es <b>Ziel, Stand und nächsten Schritt</b> klärt und Strategien statt Personen anspricht.</p></div>
+      <div class="lb-card top" style="--c:#a8682f"><span class="lb-num" style="--c:#a8682f">4</span><p style="margin-top:8px">Selbstregulation kommt <b>nicht von selbst</b>: Strategien, Motivation, Gefühle und Ressourcen brauchen Begleitung.</p></div>
+      <div class="lb-card top" style="--c:#9b4d5e"><span class="lb-num" style="--c:#9b4d5e">5</span><p style="margin-top:8px"><b>Zuerst verstehen</b>, dann handeln, dann prüfen, ob es wirkt, und zwar gemeinsam mit den Lernenden.</p></div>
+     </div>
+     <h3 style="font-family:Fraunces,serif;color:var(--green-dark);font-size:20px;margin-top:26px">Fragen an mich als Lehrperson</h3>
+     <div class="lb-g3">
+      <div class="lb-card top" style="--c:var(--sp)"><h3>Haltung und Verantwortung</h3><ul><li>Wo stärke ich die Lernenden in ihrer Eigenverantwortung, und wo könnte ich mehr Partizipation zulassen?</li><li>Wie gehe ich mit Lernenden um, die die Verantwortung für ihr Lernen auf mich «abladen»?</li><li>Wie schaffe ich es, dass Lernende ihre Erwartungen und Sichtweisen offenlegen?</li></ul><span class="lb-src">Arnold &amp; Schön, 2019, S. 92–93</span></div>
+      <div class="lb-card top" style="--c:var(--th)"><h3>Selbstreguliertes Lernen</h3><ul><li>Wie kommuniziere ich, warum Strategien ein wichtiger Teil des Lernens sind?</li><li>Welche Strategien nutze ich selbst, und was bedeutet das für meine Rolle?</li><li>Wie spiegelt sich mein «Warum» von SRL in Zielen, Aufgaben und Feedback?</li></ul><span class="lb-src">Karlen, 2026, S. 27</span></div>
+      <div class="lb-card top" style="--c:var(--pr)"><h3>Meine Praxis</h3><ul><li>Welche Feedback-Felder nutze ich häufig, welche fast nie?</li><li>Wann habe ich zuletzt eine Hilfe gegeben, ohne vorher zu fragen, was die Person schon versucht hat?</li><li>Welche stillen Lernenden habe ich diese Woche nicht wahrgenommen?</li></ul><span class="lb-src">eigene Fragen nach Fraefel; Tönnissen et al.</span></div>
+     </div>
+     <div class="lb-ausgang" style="margin-top:22px">
+      <div class="lb-hand" style="font-size:24px">«Ich weiss nicht, was machen. Können Sie mir helfen?»</div>
+      <p style="max-width:620px;margin:12px auto 0;color:#45524a">Die vielleicht wirksamste erste Antwort ist eine Frage: <b>«Zeig mir, wo du stehst. Was hast du schon versucht?»</b> Damit beginnen Diagnose, Beziehung und Selbstregulation zugleich.</p>
+     </div>
+    </section>
+
+    <section class="lb-kap" id="literatur">
+     <span class="lb-kick">Anhang</span>
+     <h2>Literatur und Bildnachweis</h2>
+     <details class="lb-lit" open>
+      <summary>Hauptquellen</summary>
+      <p>Arnold, R. &amp; Schön, M. (2019). <i>Ermöglichungsdidaktik. Ein Lernbuch.</i> Bern: hep.</p>
+      <p>Fraefel, U. (2023). <i>Erfolgreichen Unterricht planen. Pragmatisch, praktisch, professionell</i> (Kap. 10: Bilanzierung und Überprüfung). Münster: Waxmann (UTB).</p>
+      <p>Fraefel, U. Lernprozesse begleiten. In H. Berner, U. Fraefel &amp; B. Zumsteg (Hrsg.), <i>Didaktisch handeln und denken 1. Fokus angeleitetes Lernen</i> (Kap. 6, S. 123–138).</p>
+      <p>Karlen, Y. (Hrsg.). (2026). <i>Gewusst wie! Selbstreguliertes Lernen im Schulalltag verankern.</i> Bern: hep. Darin: Karlen, Y., Einleitung (S. 13–17), und Karlen, Y. &amp; Mejeh, M., Kap. 2: Was ist selbstreguliertes Lernen? (S. 39–67).</p>
+      <p>Kremers, T. &amp; Schlüter, N. (2018). <i>Coaching in der Schule. Ein Praxisbuch für lösungsorientierte Beratung.</i> Essen: Neue Deutsche Schule Verlagsgesellschaft.</p>
+      <p>Ruf, U. &amp; Gallin, P. (2011). <i>Dialogisches Lernen in Sprache und Mathematik. Band 1: Austausch unter Ungleichen.</i> Seelze: Kallmeyer/Klett.</p>
+      <p>Tönnissen, L., Link, P.-C., Hengartner, O. &amp; Hagmann-von Arx, P. (2024). Der Diagnostik-Förder-Kreislauf in der Heil- und Sonderpädagogik. <i>Zeitschrift für Heilpädagogik, 75</i>(7), 303–311.</p>
+     </details>
+     <details class="lb-lit" style="margin-top:12px">
+      <summary>In den Hauptquellen zitiert (Sekundärverweise)</summary>
+      <p>Black, P. &amp; Wiliam, D. (1998) · Collins, A., Brown, J. S. &amp; Newman, S. E. (1989) · Deci, E. L. &amp; Ryan, R. M. (1993) · Hattie, J. &amp; Timperley, H. (2007). The power of feedback. <i>Review of Educational Research, 77</i>(1), 81–112 · Helmke, A. &amp; Weinert, F. E. (1997) · Möller, K. (2006) · Reiser, B. (2004) · Vygotsky, L. S. &amp; Cole, M. (1978). <i>Mind in society</i> · Whitmore, J. (2006) · Wood, D., Bruner, J. S. &amp; Ross, G. (1976) · Zimmerman, B. J. (2000). Die vollständigen Angaben finden sich in den Literaturverzeichnissen der Hauptquellen.</p>
+     </details>
+     <details class="lb-lit" style="margin-top:12px">
+      <summary>Weitere Grundlage und Bildnachweis</summary>
+      <p>Muggli, A. (2026). <i>SitKo: Lernprozesse individuell begleiten. Workshopguide Sek I/II</i> (unveröffentlichtes Kursmaterial, PH Graubünden).</p>
+      <p>Vier Originalabbildungen sind als <b>Bildzitate</b> (Art. 25 URG) mit Quellenangabe wiedergegeben und werden im Text besprochen: Fraefel, Abb. 9 und 10; Karlen &amp; Mejeh (2026), Abb. 2.1; Ruf &amp; Gallin (2011), S. 24. Alle übrigen Grafiken sind eigene Darstellungen, teils in Anlehnung an die genannten Quellen.</p>
+     </details>
+     <p style="margin-top:22px"><a class="btn outline" href="didaktik.html">← Zurück zur Übersicht Pädagogik</a> <a class="btn green" href="#ausgangspunkt" style="margin-left:6px">↑ Nach oben</a></p>
+    </section>
+
+   </div>
+  </div>
+
+<script>
+(function(){
+  // Inhaltsverzeichnis: aktives Kapitel und Lesefortschritt
+  var links=[].slice.call(document.querySelectorAll('.lb-toc a'));
+  var kap=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
+  var bar=document.getElementById('lb-prog');
+  function update(){
+    var y=window.scrollY+140, aktiv=null;
+    kap.forEach(function(k){ if(k.getBoundingClientRect().top+window.scrollY<=y) aktiv=k.id; });
+    links.forEach(function(a){ a.classList.toggle('aktiv', a.getAttribute('href')==='#'+aktiv); });
+    var inhalt=document.querySelector('.lb-inhalt');
+    if(inhalt&&bar){ var top=inhalt.getBoundingClientRect().top+window.scrollY, h=inhalt.offsetHeight-window.innerHeight; bar.style.width=Math.max(0,Math.min(100,(window.scrollY-top+200)/h*100))+'%'; }
+  }
+  window.addEventListener('scroll',update,{passive:true}); update();
+  var toc=document.getElementById('lb-toc');
+  if(toc && window.matchMedia('(max-width:1000px)').matches){ toc.removeAttribute('open'); }
+  links.forEach(function(a){ a.addEventListener('click',function(){ if(window.matchMedia('(max-width:1000px)').matches) toc.removeAttribute('open'); }); });
+  // Entscheidungsbaum
+  var baum=document.getElementById('lb-baum');
+  if(baum){
+    function zeige(id){ baum.querySelectorAll('[data-schritt]').forEach(function(s){ s.hidden=(s.getAttribute('data-schritt')!==id); }); }
+    baum.addEventListener('click',function(e){ var b=e.target.closest('[data-geh]'); if(b) zeige(b.getAttribute('data-geh')); });
+    document.getElementById('lb-baum-reset').addEventListener('click',function(){ zeige('start'); });
+  }
+  // Planungs-Check
+  var check=document.getElementById('lb-check'), z=document.getElementById('lb-zaehler');
+  if(check){ check.addEventListener('change',function(){ z.textContent=check.querySelectorAll('input:checked').length+' von 8'; }); }
+})();
+</script>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Contacto</a><a href="impressum.html">Aviso legal</a><a href="datenschutz.html">Privacidad</a></nav>
+  </div>
+</footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
+</body>
+</html>

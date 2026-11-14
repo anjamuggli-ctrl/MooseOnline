@@ -315,16 +315,40 @@ for datei, titel, text, punkte, lern in EN_BEREICHE:
   </section>
 </main>""", active="english.html", description=text)
 
+# ---------------- Pädagogik: Themenkarten ----------------
+BEGLEITUNG_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M24 104 C70 98 74 70 110 64 S 160 40 170 22" stroke="#cdc6b6" stroke-width="2.4" stroke-dasharray="2 7"/>'
+    '<path d="M44 110 V70 M84 110 V58 M44 70 H84 M44 90 H84 M44 110 L84 70" stroke="#3f5d4a" stroke-width="2.6"/>'
+    '<path d="M112 92 V54 M140 92 V46 M112 54 H140" stroke="#3f5d4a" stroke-width="2.6" opacity=".55"/>'
+    '<path d="M160 50 V36" stroke="#3f5d4a" stroke-width="2.6" opacity=".25"/></g>'
+    '<g fill="#a8682f"><circle cx="24" cy="104" r="6"/><circle cx="66" cy="86" r="6.5"/><circle cx="110" cy="64" r="7"/><circle cx="148" cy="40" r="7.5"/><circle cx="172" cy="20" r="9"/></g>'
+    '<circle cx="172" cy="20" r="14" fill="none" stroke="#a8682f" stroke-width="1.5" opacity=".5"/></svg>')
+THEMA_BEGLEITUNG = f"""      <a class="plan thema entile" href="lernbegleitung.html"><div class="thema-art">{BEGLEITUNG_ART}</div><span class="badge live">Neu</span><h3>Begleitung</h3>
+        <p>Hier geht es um die Begleitung individueller Lernprozesse: Wie unterstütze ich Lernende so, dass sie fachlich weiterkommen und zunehmend selbstständig lernen? Die Seite fasst zusammen, was die Forschung dazu sagt, und zeigt, wie sich das im Unterricht umsetzen lässt.</p>
+        <ul><li>Zone der nächsten Entwicklung: Hilfe wirkt nur im individuellen Lernfenster</li><li>Scaffolding: so viel Hilfe wie nötig, so wenig wie möglich</li><li>Feedback, das Weiterlernen ermöglicht</li><li>Selbstreguliertes Lernen und das Turbinen-Modell</li><li>Lernbegleitungsgespräche mit dem GROW-Modell</li><li>Spannungsfelder, Toolbox und Planungs-Check für die Praxis</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 area("didaktik.html", "Pädagogik", "",
      "Pädagogik",
      "Zusammenfassungen, Verknüpfungen und Handlungsansätze zu wissenschaftlich fundierten Theorien und Konzepten, teils mit Instrumenten für die Praxis.",
      "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:",
-     [plan("Zusammenfassungen", "Kompakte Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten, jeweils mit Quellenangaben."),
+     [THEMA_BEGLEITUNG,
       plan("Verknüpfungen", "Zusammenhänge zwischen Theorien, Konzepten und dem Unterrichtsalltag."),
       plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
-      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2",
+      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
+
+# ---------------- Pädagogik: Thema Begleitung ----------------
+ACTIVE["lernbegleitung.html"] = "didaktik.html"
+LB_BODY = "".join((B / "lernbegleitung" / f).read_text() for f in sorted(p.name for p in (B / "lernbegleitung").glob("*.html")))
+page("lernbegleitung.html", "Lernprozesse individuell begleiten – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Begleitung', "Pädagogik · Thema", "Lernprozesse individuell begleiten", "Was sagt die Wissenschaft? Theorien und Konzepte, Verknüpfungen, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Lernende einer Klasse stehen nie am selben Ort. Individuelle Lernbegleitung heisst, Denkwege und Lernbedingungen sichtbar zu machen, die Unterstützung darauf abzustimmen und zu prüfen, ob die Lernenden fachlich und in ihrer Selbstregulation weiterkommen.", "Diese Seite verbindet zentrale Theorien – von Wygotskis Zone der nächsten Entwicklung über Scaffolding und Feedback bis zum selbstregulierten Lernen – mit Gesprächsmodellen, Werkzeugen und einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis gezielt springen."], 1)}
+{LB_BODY}
+  </section>
+</main>""", active="didaktik.html", description="Begleitung individueller Lernprozesse: Theorien, Konzepte, Spannungsfelder und Werkzeuge für die Unterrichtspraxis, wissenschaftlich fundiert.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",
