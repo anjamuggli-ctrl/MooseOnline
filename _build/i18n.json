@@ -1812,6 +1812,90 @@
    "it": "Quattro aree per docenti e allievi. I contenuti crescono continuamente.",
    "fr": "Quatre domaines pour enseignant·e·s et apprenant·e·s. Les contenus s'enrichissent au fil du temps.",
    "es": "Cuatro áreas para docentes y estudiantes. Los contenidos crecen continuamente."
+  },
+  "Unterrichtsmaterialien, Projektideen und Vorlagen. Sie wurden für den Englischunterricht erstellt, können aber auch in anderen Fächern verwendet werden.": {
+   "rm": "Materials d'instrucziun, ideas da projects e models. Els ein vegni creai per l'instrucziun d'englais, san denton era vegnir duvrai en auters roms.",
+   "en": "Teaching materials, project ideas and templates. They were created for English classes but can also be used in other subjects.",
+   "it": "Materiali didattici, idee di progetto e modelli. Sono stati creati per l'insegnamento dell'inglese, ma possono essere usati anche in altre materie.",
+   "fr": "Matériel pédagogique, idées de projets et modèles. Conçus pour l'enseignement de l'anglais, ils peuvent aussi être utilisés dans d'autres disciplines.",
+   "es": "Materiales didácticos, ideas de proyectos y plantillas. Se crearon para las clases de inglés, pero también pueden usarse en otras asignaturas."
+  },
+  "Projektideen": {
+   "rm": "Ideas da projects",
+   "en": "Project ideas",
+   "it": "Idee di progetto",
+   "fr": "Idées de projets",
+   "es": "Ideas de proyectos"
+  },
+  "Erklärungen, Übungen und Probeprüfungen mit Lösungen für verschiedene Fächer und Stufen, zum eigenständigen Lernen.": {
+   "rm": "Explicaziuns, exercizis ed examens da prova cun soluziuns per differents roms e scalems, per emprender independentamein.",
+   "en": "Explanations, exercises and practice tests with answers for various subjects and levels, for independent learning.",
+   "it": "Spiegazioni, esercizi e verifiche di prova con soluzioni per diverse materie e livelli, per imparare in autonomia.",
+   "fr": "Explications, exercices et examens blancs avec corrigés pour différentes disciplines et différents niveaux, pour apprendre en autonomie.",
+   "es": "Explicaciones, ejercicios y simulacros con soluciones para distintas asignaturas y niveles, para aprender de forma autónoma."
+  },
+  "Erklärungen": {
+   "rm": "Explicaziuns",
+   "en": "Explanations",
+   "it": "Spiegazioni",
+   "fr": "Explications",
+   "es": "Explicaciones"
+  },
+  "Lösungen": {
+   "rm": "Soluziuns",
+   "en": "Answers",
+   "it": "Soluzioni",
+   "fr": "Corrigés",
+   "es": "Soluciones"
+  },
+  "Pädagogik und Didaktik": {
+   "rm": "Pedagogia e didactica",
+   "en": "Education and Didactics",
+   "it": "Pedagogia e didattica",
+   "fr": "Pédagogie et didactique",
+   "es": "Pedagogía y didáctica"
+  },
+  "Zusammenfassungen, Verknüpfungen und Handlungsansätze zu wissenschaftlich fundierten Theorien und Konzepten, teils mit Instrumenten für die Praxis.": {
+   "rm": "Resumaziuns, colligiaziuns e moduls d'agir tier teorias e concepts fundai scientificamein, per part cun instruments per la pratica.",
+   "en": "Summaries, connections and practical approaches to research-based theories and concepts, some with tools for classroom practice.",
+   "it": "Sintesi, collegamenti e approcci operativi su teorie e concetti scientificamente fondati, in parte con strumenti per la pratica.",
+   "fr": "Synthèses, liens et pistes d'action sur des théories et concepts scientifiquement fondés, parfois avec des outils pour la pratique.",
+   "es": "Resúmenes, conexiones y enfoques prácticos sobre teorías y conceptos con base científica, en parte con herramientas para la práctica."
+  },
+  "Handlungsansätze": {
+   "rm": "Moduls d'agir",
+   "en": "Practical approaches",
+   "it": "Approcci operativi",
+   "fr": "Pistes d'action",
+   "es": "Enfoques prácticos"
+  },
+  "Instrumente für die Praxis": {
+   "rm": "Instruments per la pratica",
+   "en": "Tools for practice",
+   "it": "Strumenti per la pratica",
+   "fr": "Outils pour la pratique",
+   "es": "Herramientas para la práctica"
+  },
+  "Kleine Web-Apps für Schule und Alltag. Gerne erstelle ich auch individuelle Apps für deinen Unterricht! Einfach Kontakt aufnehmen :)": {
+   "rm": "Pintgas web-apps per scola e mintgadi. Jeu creel bugen era apps individualas per tia instrucziun! Prender simplamein contact :)",
+   "en": "Small web apps for school and everyday life. I'm also happy to create custom apps for your classroom! Just get in touch :)",
+   "it": "Piccole web app per la scuola e la vita quotidiana. Creo volentieri anche app su misura per le tue lezioni! Basta contattarmi :)",
+   "fr": "De petites applis web pour l'école et le quotidien. Je crée aussi volontiers des applis sur mesure pour tes cours ! Il suffit de me contacter :)",
+   "es": "Pequeñas apps web para la escuela y el día a día. ¡También creo con gusto apps personalizadas para tus clases! Solo tienes que contactarme :)"
+  },
+  "Web-Apps": {
+   "rm": "Web-apps",
+   "en": "Web apps",
+   "it": "Web app",
+   "fr": "Applis web",
+   "es": "Apps web"
+  },
+  "Individuelle Apps": {
+   "rm": "Apps individualas",
+   "en": "Custom apps",
+   "it": "App su misura",
+   "fr": "Applis sur mesure",
+   "es": "Apps personalizadas"
   }
  },
  "js": {
