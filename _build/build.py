@@ -132,12 +132,19 @@ def plan(title, text, bullets=(), badge="In Vorbereitung"):
     return f"""      <div class="plan"><span class="badge">{badge}</span><h3>{title}</h3><p>{text}</p>{ul}</div>"""
 
 
-def area(filename, crumb, kicker, h1, lead, intro, plans, note="", cols="grid3"):
+def einleitung(titel, absaetze, v=1):
+    """Cremefarbener Einleitungsbalken mit Bergen und Tannen (wie auf der Vision-Seite)."""
+    return (f'    <article class="vrow einleitung-bar">{silhouette(v)}<div class="vhead"><h2>{titel}</h2></div>'
+            f'<div class="vtext">{"".join(f"<p>{p}</p>" for p in absaetze)}</div></article>')
+
+
+def area(filename, crumb, kicker, h1, lead, intro, plans, note="", cols="grid3", bar=None):
+    oben = einleitung(*bar) if bar else f"""    <h2>Was hier entsteht</h2>
+    <p class="intro">{intro}</p>"""
     body = f"""<main class="wrap">
 {hero(crumb, kicker, h1, lead)}
   <section class="section">
-    <h2>Was hier entsteht</h2>
-    <p class="intro">{intro}</p>
+{oben}
     <div class="{cols}">
 {chr(10).join(plans)}
     </div>
@@ -315,7 +322,9 @@ area("didaktik.html", "Pädagogik", "",
      [plan("Zusammenfassungen", "Kompakte Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten, jeweils mit Quellenangaben."),
       plan("Verknüpfungen", "Zusammenhänge zwischen Theorien, Konzepten und dem Unterrichtsalltag."),
       plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
-      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2")
+      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2",
+     bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
+          "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
 
 area("lernende.html", "Lernende", "",
      "Lernende",
@@ -323,14 +332,15 @@ area("lernende.html", "Lernende", "",
      "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
      [plan("Erklärungen", "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen."),
       plan("Übungen", "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen."),
-      plan("Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")])
+      plan("Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")],
+     bar=("Selbstständig lernen", ["Hier findest du Erklärungen, Übungen und Probeprüfungen, mit denen du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten kannst.",
+          "Zu allen Übungen gibt es Lösungen. So kannst du selbst überprüfen, wo du stehst, und gezielt weiterüben."], 0))
 
 # ---------------- App-Werkstatt ----------------
 page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
 {hero("App-Werkstatt", "", "App-Werkstatt", "Kleine Web-Apps für Schule und Alltag. Gerne erstelle ich auch individuelle Apps für deinen Unterricht! Einfach Kontakt aufnehmen :)")}
   <section class="section">
-    <h2>Apps</h2>
-    <p class="intro">Die Apps laufen direkt im Browser, ohne Installation.</p>
+{einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
       <a class="card wide" href="bullet-journal.html">
         <div class="art">

@@ -2281,6 +2281,69 @@
    "it": "› Pedagogia",
    "fr": "› Pédagogie",
    "es": "› Pedagogía"
+  },
+  "Selbstständig lernen": {
+   "rm": "Emprender independentamein",
+   "en": "Learning independently",
+   "it": "Imparare in autonomia",
+   "fr": "Apprendre en autonomie",
+   "es": "Aprender de forma autónoma"
+  },
+  "Hier findest du Erklärungen, Übungen und Probeprüfungen, mit denen du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten kannst.": {
+   "rm": "Cheu anflas ti explicaziuns, exercizis ed examens da prova, cun ils quals ti sas emprender independentamein e sepreparar sin examens.",
+   "en": "Here you will find explanations, exercises and practice tests to help you learn independently and prepare for exams.",
+   "it": "Qui trovi spiegazioni, esercizi e verifiche di prova per imparare in autonomia e prepararti in modo mirato agli esami.",
+   "fr": "Tu trouveras ici des explications, des exercices et des examens blancs pour apprendre en autonomie et te préparer de façon ciblée aux examens.",
+   "es": "Aquí encontrarás explicaciones, ejercicios y simulacros para aprender por tu cuenta y prepararte para los exámenes."
+  },
+  "Zu allen Übungen gibt es Lösungen. So kannst du selbst überprüfen, wo du stehst, und gezielt weiterüben.": {
+   "rm": "Tier tut ils exercizis dat ei soluziuns. Aschia sas ti controllar sez nua che ti stas ed exercitar vinavon.",
+   "en": "All exercises come with answers, so you can check where you stand and keep practicing in a targeted way.",
+   "it": "Tutti gli esercizi hanno le soluzioni. Così puoi verificare da solo a che punto sei e continuare a esercitarti in modo mirato.",
+   "fr": "Tous les exercices sont accompagnés de corrigés. Tu peux ainsi vérifier toi-même où tu en es et continuer à t'entraîner de façon ciblée.",
+   "es": "Todos los ejercicios tienen soluciones. Así puedes comprobar en qué punto estás y seguir practicando de forma específica."
+  },
+  "Theorie trifft Praxis": {
+   "rm": "Teoria entaupa pratica",
+   "en": "Where theory meets practice",
+   "it": "La teoria incontra la pratica",
+   "fr": "Quand la théorie rencontre la pratique",
+   "es": "La teoría se encuentra con la práctica"
+  },
+  "Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.": {
+   "rm": "Cheu anflas ti resumaziuns tier teorias e concepts pedagogics e didactics. Ellas sesbasan sin fontaunas scientificas, che vegnan adina indicadas.",
+   "en": "Here you will find summaries of educational and didactic theories and concepts. They are based on research-based sources, which are always cited.",
+   "it": "Qui trovi sintesi di teorie e concetti pedagogici e didattici. Si basano su fonti scientificamente fondate, sempre indicate.",
+   "fr": "Tu trouveras ici des synthèses de théories et concepts pédagogiques et didactiques. Elles s'appuient sur des sources scientifiquement fondées, toujours indiquées.",
+   "es": "Aquí encontrarás resúmenes de teorías y conceptos pedagógicos y didácticos. Se basan en fuentes con fundamento científico, siempre citadas."
+  },
+  "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis.": {
+   "rm": "Colligiaziuns e moduls d'agir mussan tgei che la teoria munta pil mintgadi da scola. Per part dat ei era instruments per la pratica.",
+   "en": "Connections and practical approaches show what theory means for everyday teaching. Some come with tools for classroom practice.",
+   "it": "Collegamenti e approcci operativi mostrano che cosa significa la teoria per la quotidianità scolastica. In parte ci sono anche strumenti per la pratica.",
+   "fr": "Les liens et pistes d'action montrent ce que la théorie signifie pour le quotidien de la classe. Certains sont accompagnés d'outils pour la pratique.",
+   "es": "Las conexiones y los enfoques prácticos muestran qué significa la teoría para el día a día en el aula. Algunos incluyen herramientas para la práctica."
+  },
+  "Apps für Schule und Alltag": {
+   "rm": "Apps per scola e mintgadi",
+   "en": "Apps for school and everyday life",
+   "it": "App per la scuola e la vita quotidiana",
+   "fr": "Applis pour l'école et le quotidien",
+   "es": "Apps para la escuela y el día a día"
+  },
+  "Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.": {
+   "rm": "Las apps funcziuneschan directamein el navigatur, senza installaziun e senza annunzia.",
+   "en": "The apps run directly in your browser, with no installation and no sign-up.",
+   "it": "Le app funzionano direttamente nel browser, senza installazione e senza registrazione.",
+   "fr": "Les applis fonctionnent directement dans le navigateur, sans installation ni inscription.",
+   "es": "Las apps funcionan directamente en el navegador, sin instalación ni registro."
+  },
+  "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um.": {
+   "rm": "Singulas apps vegnan pli tard a duvrar KI e ein lu protegidas cun pled-clav. Has ti ina idea per in'atgna app? Jeu realiseschel ella bugen per tia instrucziun.",
+   "en": "Some apps will use AI in the future and will then be password-protected. Have an idea for your own app? I'm happy to build it for your classroom.",
+   "it": "In futuro alcune app useranno l'IA e saranno protette da password. Hai un'idea per un'app tutta tua? La realizzo volentieri per le tue lezioni.",
+   "fr": "Certaines applis utiliseront bientôt l'IA et seront alors protégées par un mot de passe. Tu as une idée d'appli ? Je la réalise volontiers pour tes cours.",
+   "es": "En el futuro, algunas apps usarán IA y estarán protegidas con contraseña. ¿Tienes una idea para tu propia app? La desarrollo con gusto para tus clases."
   }
  },
  "js": {
