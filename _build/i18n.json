@@ -1896,6 +1896,230 @@
    "it": "App su misura",
    "fr": "Applis sur mesure",
    "es": "Apps personalizadas"
+  },
+  "Aufgabenformen": {
+   "rm": "Furmas d'incumbensas",
+   "en": "Task types",
+   "it": "Tipi di attività",
+   "fr": "Types de tâches",
+   "es": "Tipos de tareas"
+  },
+  "Aufträge für informative Poster und Infografiken": {
+   "rm": "Incumbensas per posters informativs ed infograficas",
+   "en": "Assignments for informative posters and infographics",
+   "it": "Consegne per poster informativi e infografiche",
+   "fr": "Consignes pour des affiches informatives et des infographies",
+   "es": "Encargos para pósteres informativos e infografías"
+  },
+  "Bewertungsraster für Produkt und Prozess": {
+   "rm": "Rasters da valitaziun per product e process",
+   "en": "Rubrics for product and process",
+   "it": "Griglie di valutazione per prodotto e processo",
+   "fr": "Grilles d'évaluation pour le produit et le processus",
+   "es": "Rúbricas para el producto y el proceso"
+  },
+  "Bewertungsraster für das Schreiben": {
+   "rm": "Rasters da valitaziun per scriver",
+   "en": "Writing rubrics",
+   "it": "Griglie di valutazione per la scrittura",
+   "fr": "Grilles d'évaluation pour l'écrit",
+   "es": "Rúbricas para la escritura"
+  },
+  "Checklisten und Beispieltexte": {
+   "rm": "Glistas da controlla e texts d'exempel",
+   "en": "Checklists and sample texts",
+   "it": "Liste di controllo e testi d'esempio",
+   "fr": "Listes de contrôle et textes modèles",
+   "es": "Listas de control y textos de ejemplo"
+  },
+  "Die Materialien wurden für den Englischunterricht an der Berufsschule erstellt, lassen sich aber übersetzen und in anderen Fächern einsetzen.": {
+   "rm": "Ils materials ein vegni creai per l'instrucziun d'englais alla scola professiunala, san denton vegnir translatai e duvrai en auters roms.",
+   "en": "The materials were created for English classes at vocational school, but they can be translated and used in other subjects.",
+   "it": "I materiali sono stati creati per l'insegnamento dell'inglese nella scuola professionale, ma possono essere tradotti e usati in altre materie.",
+   "fr": "Le matériel a été conçu pour l'enseignement de l'anglais en école professionnelle, mais il peut être traduit et utilisé dans d'autres disciplines.",
+   "es": "Los materiales se crearon para las clases de inglés en la formación profesional, pero pueden traducirse y usarse en otras asignaturas."
+  },
+  "Digitalität": {
+   "rm": "Digitalitad",
+   "en": "Digital learning",
+   "it": "Digitalità",
+   "fr": "Numérique",
+   "es": "Digitalidad"
+  },
+  "Einzel-Projekte": {
+   "rm": "Projects individuals",
+   "en": "Individual projects",
+   "it": "Progetti individuali",
+   "fr": "Projets individuels",
+   "es": "Proyectos individuales"
+  },
+  "Erklärungen mit Beispielen": {
+   "rm": "Explicaziuns cun exempels",
+   "en": "Explanations with examples",
+   "it": "Spiegazioni con esempi",
+   "fr": "Explications avec exemples",
+   "es": "Explicaciones con ejemplos"
+  },
+  "Feedback- und Bewertungsraster": {
+   "rm": "Rasters da feedback e da valitaziun",
+   "en": "Feedback and grading rubrics",
+   "it": "Griglie di feedback e di valutazione",
+   "fr": "Grilles de feedback et d'évaluation",
+   "es": "Rúbricas de retroalimentación y evaluación"
+  },
+  "Gestaltungstipps und Vorlagen": {
+   "rm": "Tips da concepziun e models",
+   "en": "Design tips and templates",
+   "it": "Consigli di impaginazione e modelli",
+   "fr": "Conseils de mise en page et modèles",
+   "es": "Consejos de diseño y plantillas"
+  },
+  "Gruppen-Projekte": {
+   "rm": "Projects en gruppas",
+   "en": "Group projects",
+   "it": "Progetti di gruppo",
+   "fr": "Projets de groupe",
+   "es": "Proyectos en grupo"
+  },
+  "Klare Aufträge mit Zwischenschritten und Checklisten": {
+   "rm": "Incumbensas claras cun pass intermediars e glistas da controlla",
+   "en": "Clear assignments with milestones and checklists",
+   "it": "Consegne chiare con tappe intermedie e liste di controllo",
+   "fr": "Des consignes claires avec étapes intermédiaires et listes de contrôle",
+   "es": "Encargos claros con pasos intermedios y listas de control"
+  },
+  "Lösungen zur Selbstkontrolle": {
+   "rm": "Soluziuns per sezs controllar",
+   "en": "Answer keys for self-checking",
+   "it": "Soluzioni per l'autocorrezione",
+   "fr": "Corrigés pour l'autocorrection",
+   "es": "Soluciones para autocorregirse"
+  },
+  "Posters": {
+   "rm": "Posters",
+   "en": "Posters",
+   "it": "Poster",
+   "fr": "Affiches",
+   "es": "Pósteres"
+  },
+  "Projektaufträge mit Zeitplan und Meilensteinen": {
+   "rm": "Incumbensas da project cun plan da temps e tappas",
+   "en": "Project assignments with schedules and milestones",
+   "it": "Consegne di progetto con calendario e tappe",
+   "fr": "Consignes de projet avec calendrier et jalons",
+   "es": "Encargos de proyecto con calendario e hitos"
+  },
+  "Projekte mit digitalen Werkzeugen und KI": {
+   "rm": "Projects cun utensils digitals e KI",
+   "en": "Projects with digital tools and AI",
+   "it": "Progetti con strumenti digitali e IA",
+   "fr": "Projets avec des outils numériques et l'IA",
+   "es": "Proyectos con herramientas digitales e IA"
+  },
+  "Präsentationen": {
+   "rm": "Preschentaziuns",
+   "en": "Presentations",
+   "it": "Presentazioni",
+   "fr": "Présentations",
+   "es": "Presentaciones"
+  },
+  "Raster für Inhalt und Gestaltung": {
+   "rm": "Rasters per cuntegn e concepziun",
+   "en": "Rubrics for content and design",
+   "it": "Griglie per contenuto e grafica",
+   "fr": "Grilles pour le contenu et la mise en forme",
+   "es": "Rúbricas para contenido y diseño"
+  },
+  "Raster für die Bewertung von Gruppe und Einzelnen": {
+   "rm": "Rasters per valitar la gruppa ed ils singuls",
+   "en": "Rubrics for assessing the group and individuals",
+   "it": "Griglie per valutare il gruppo e i singoli",
+   "fr": "Grilles pour évaluer le groupe et chaque membre",
+   "es": "Rúbricas para evaluar al grupo y a cada persona"
+  },
+  "Redemittel und Vorlagen für Präsentationen": {
+   "rm": "Expressiuns utilas e models per preschentaziuns",
+   "en": "Useful phrases and templates for presentations",
+   "it": "Espressioni utili e modelli per presentazioni",
+   "fr": "Expressions utiles et modèles pour les présentations",
+   "es": "Expresiones útiles y plantillas para presentaciones"
+  },
+  "Reflektierter Umgang mit Medien und Daten": {
+   "rm": "Contact reflectau cun medias e datas",
+   "en": "Thoughtful use of media and data",
+   "it": "Uso consapevole di media e dati",
+   "fr": "Usage réfléchi des médias et des données",
+   "es": "Uso reflexivo de medios y datos"
+  },
+  "Schreibaufträge für verschiedene Textsorten wie E-Mail, Bericht oder Anleitung": {
+   "rm": "Incumbensas da scriver per differentas sorts da texts sco e-mail, rapport ni instrucziun",
+   "en": "Writing tasks for different text types such as emails, reports or instructions",
+   "it": "Compiti di scrittura per diversi tipi di testo come e-mail, rapporto o istruzioni",
+   "fr": "Consignes d'écriture pour différents types de textes : e-mail, rapport ou mode d'emploi",
+   "es": "Tareas de escritura para distintos tipos de texto, como correos, informes o instrucciones"
+  },
+  "Schreiben": {
+   "rm": "Scriver",
+   "en": "Writing",
+   "it": "Scrittura",
+   "fr": "Écrire",
+   "es": "Escritura"
+  },
+  "Selbstständig ein Thema recherchieren und aufbereiten": {
+   "rm": "Retscherscar independentamein in tema e preparar el",
+   "en": "Research and present a topic independently",
+   "it": "Ricercare ed elaborare un tema in autonomia",
+   "fr": "Rechercher et présenter un thème en autonomie",
+   "es": "Investigar y preparar un tema de forma autónoma"
+  },
+  "Sie sind nach Aufgabenform geordnet. Zu den meisten gibt es Vorlagen und Bewertungsraster.": {
+   "rm": "Els ein ordinai tenor furma d'incumbensa. Tier ils pli biars dat ei models e rasters da valitaziun.",
+   "en": "They are organized by task type. Most come with templates and grading rubrics.",
+   "it": "Sono ordinati per tipo di attività. Per la maggior parte ci sono modelli e griglie di valutazione.",
+   "fr": "Ils sont classés par type de tâche. La plupart sont accompagnés de modèles et de grilles d'évaluation.",
+   "es": "Están ordenados por tipo de tarea. La mayoría incluye plantillas y rúbricas de evaluación."
+  },
+  "Tipps zu Aufbau, Körpersprache und Visualisierung": {
+   "rm": "Tips davart structura, lungatg dil tgierp e visualisaziun",
+   "en": "Tips on structure, body language and visuals",
+   "it": "Consigli su struttura, linguaggio del corpo e visualizzazione",
+   "fr": "Conseils sur la structure, la gestuelle et la visualisation",
+   "es": "Consejos sobre estructura, lenguaje corporal y apoyo visual"
+  },
+  "Tutorials, Videos und Online-Aufgaben": {
+   "rm": "Tutorials, videos ed incumbensas online",
+   "en": "Tutorials, videos and online tasks",
+   "it": "Tutorial, video e attività online",
+   "fr": "Tutoriels, vidéos et activités en ligne",
+   "es": "Tutoriales, vídeos y tareas en línea"
+  },
+  "Unterrichtsmaterialien, Projektideen und Vorlagen für den Englischunterricht, geordnet nach Aufgabenform.": {
+   "rm": "Materials d'instrucziun, ideas da projects e models per l'instrucziun d'englais, ordinai tenor furma d'incumbensa.",
+   "en": "Teaching materials, project ideas and templates for English classes, organized by task type.",
+   "it": "Materiali didattici, idee di progetto e modelli per l'inglese, ordinati per tipo di attività.",
+   "fr": "Matériel pédagogique, idées de projets et modèles pour l'anglais, classés par type de tâche.",
+   "es": "Materiales didácticos, ideas de proyectos y plantillas para inglés, ordenados por tipo de tarea."
+  },
+  "Unterrichtsmaterialien, Projektideen und Vorlagen, geordnet nach Aufgabenform.": {
+   "rm": "Materials d'instrucziun, ideas da projects e models, ordinai tenor furma d'incumbensa.",
+   "en": "Teaching materials, project ideas and templates, organized by task type.",
+   "it": "Materiali didattici, idee di progetto e modelli, ordinati per tipo di attività.",
+   "fr": "Matériel pédagogique, idées de projets et modèles, classés par type de tâche.",
+   "es": "Materiales didácticos, ideas de proyectos y plantillas, ordenados por tipo de tarea."
+  },
+  "Zusammenarbeit mit verteilten Rollen": {
+   "rm": "Collaboraziun cun rollas repartidas",
+   "en": "Teamwork with assigned roles",
+   "it": "Collaborazione con ruoli distribuiti",
+   "fr": "Collaboration avec des rôles répartis",
+   "es": "Colaboración con roles repartidos"
+  },
+  "Übungen von einfach bis anspruchsvoll": {
+   "rm": "Exercizis da sempels tochen pretensius",
+   "en": "Exercises from easy to challenging",
+   "it": "Esercizi da facili a impegnativi",
+   "fr": "Exercices du plus simple au plus exigeant",
+   "es": "Ejercicios de fáciles a exigentes"
   }
  },
  "js": {

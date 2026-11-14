@@ -194,27 +194,57 @@ LEHRPERSONEN = [("Unterrichtsmaterialien", "Arbeitsblätter, Texte und Aufgaben 
 for datei, *_ in EN_BEREICHE:
     ACTIVE[datei] = "english.html"
 
+AUFGABENFORMEN = [
+    ("Einzel-Projekte", [
+        "Selbstständig ein Thema recherchieren und aufbereiten",
+        "Klare Aufträge mit Zwischenschritten und Checklisten",
+        "Bewertungsraster für Produkt und Prozess"],
+     '<circle cx="110" cy="34" r="13"/><path d="M84 92 c0 -22 12 -34 26 -34 s26 12 26 34"/><rect x="138" y="40" width="40" height="52" rx="4" fill="#e7ede6"/><path d="M146 54 h24 M146 64 h24 M146 74 h16"/><path d="M40 100 h140"/>'),
+    ("Gruppen-Projekte", [
+        "Zusammenarbeit mit verteilten Rollen",
+        "Projektaufträge mit Zeitplan und Meilensteinen",
+        "Raster für die Bewertung von Gruppe und Einzelnen"],
+     '<circle cx="70" cy="40" r="11"/><path d="M48 92 c0 -18 10 -28 22 -28 s22 10 22 28"/><circle cx="150" cy="40" r="11"/><path d="M128 92 c0 -18 10 -28 22 -28 s22 10 22 28"/><circle cx="110" cy="32" r="13" fill="#e7ede6"/><path d="M84 96 c0 -22 12 -34 26 -34 s26 12 26 34" fill="#e7ede6"/>'),
+    ("Präsentationen", [
+        "Redemittel und Vorlagen für Präsentationen",
+        "Tipps zu Aufbau, Körpersprache und Visualisierung",
+        "Feedback- und Bewertungsraster"],
+     '<rect x="70" y="14" width="96" height="62" rx="4" fill="#e7ede6"/><path d="M118 76 v20 M100 102 l18 -6 18 6"/><path d="M84 62 v-12 M100 62 v-22 M116 62 v-16 M132 62 v-28 M148 62 v-20" stroke-width="5"/><circle cx="40" cy="44" r="10"/><path d="M22 100 c0 -20 8 -32 18 -32 s18 10 18 26 M50 60 l24 -16"/>'),
+    ("Grammatik", [
+        "Erklärungen mit Beispielen",
+        "Übungen von einfach bis anspruchsvoll",
+        "Lösungen zur Selbstkontrolle"],
+     '<rect x="42" y="52" width="40" height="40" rx="5" fill="#e7ede6"/><rect x="90" y="52" width="40" height="40" rx="5"/><rect x="138" y="52" width="40" height="40" rx="5" fill="#e7ede6"/><rect x="66" y="10" width="40" height="40" rx="5"/><rect x="114" y="10" width="40" height="40" rx="5" fill="#e7ede6"/>'
+     '<text x="62" y="80" text-anchor="middle" font-family="Fraunces, serif" font-size="22" fill="#3f5d4a" stroke="none">A</text><text x="110" y="80" text-anchor="middle" font-family="Fraunces, serif" font-size="22" fill="#3f5d4a" stroke="none">B</text><text x="158" y="80" text-anchor="middle" font-family="Fraunces, serif" font-size="22" fill="#3f5d4a" stroke="none">C</text><text x="86" y="38" text-anchor="middle" font-family="Fraunces, serif" font-size="20" fill="#3f5d4a" stroke="none">is</text><text x="134" y="38" text-anchor="middle" font-family="Fraunces, serif" font-size="20" fill="#3f5d4a" stroke="none">are</text>'),
+    ("Schreiben", [
+        "Schreibaufträge für verschiedene Textsorten wie E-Mail, Bericht oder Anleitung",
+        "Checklisten und Beispieltexte",
+        "Bewertungsraster für das Schreiben"],
+     '<rect x="50" y="14" width="86" height="96" rx="4" fill="#e7ede6"/><path d="M62 34 h62 M62 48 h62 M62 62 h62 M62 76 h40"/><path d="M178 18 l12 12 -46 46 -16 4 4 -16 z" fill="#fff"/><path d="M168 28 l12 12"/>'),
+    ("Posters", [
+        "Aufträge für informative Poster und Infografiken",
+        "Gestaltungstipps und Vorlagen",
+        "Raster für Inhalt und Gestaltung"],
+     '<rect x="60" y="14" width="100" height="94" rx="3" fill="#fff"/><circle cx="70" cy="22" r="3" fill="#3f5d4a"/><circle cx="150" cy="22" r="3" fill="#3f5d4a"/><rect x="72" y="32" width="76" height="34" rx="2" fill="#e7ede6"/><path d="M80 60 l14 -14 10 10 8 -6 14 10"/><circle cx="132" cy="42" r="4"/><path d="M72 78 h76 M72 88 h56 M72 98 h66"/>'),
+    ("Digitalität", [
+        "Projekte mit digitalen Werkzeugen und KI",
+        "Reflektierter Umgang mit Medien und Daten",
+        "Tutorials, Videos und Online-Aufgaben"],
+     '<rect x="56" y="20" width="108" height="66" rx="5" fill="#e7ede6"/><path d="M42 98 h136 l-10 -12 h-116 z"/><circle cx="88" cy="52" r="5"/><circle cx="112" cy="38" r="5"/><circle cx="134" cy="58" r="5"/><circle cx="108" cy="68" r="5"/><path d="M92 50 l16 -9 M116 41 l15 14 M130 61 l-17 6 M104 66 l-12 -11"/><path d="M178 20 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#3f5d4a"/>'),
+]
+LINE2 = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"'
 kacheln = "\n".join(
-    f'''      <a class="plan entile" href="{datei}"><span class="badge live">{"Für Lehrpersonen" if _ == "nur-lp" else "Für Lehrpersonen und Lernende"}</span><h3>{titel}</h3><p>{text}</p><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul><span class="go">Zum Bereich →</span></a>'''
-    for datei, titel, text, punkte, _ in EN_BEREICHE)
+    f'''      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true"><g {LINE2}>{art}</g></svg></div><span class="badge">In Vorbereitung</span><h3>{titel}</h3><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul></div>'''
+    for titel, punkte, art in AUFGABENFORMEN)
 page("english.html", "Englisch – MuggliOnline", f"""<main class="wrap">
-{hero("Englisch", "Für Lehrpersonen und Lernende", "Englisch", "Übungen für Lernende und Materialien für Lehrpersonen, von Basic English bis Fachenglisch an Berufsschulen.")}
+{hero("Englisch", "Für Lehrpersonen", "Englisch", "Unterrichtsmaterialien, Projektideen und Vorlagen, geordnet nach Aufgabenform.")}
   <section class="section">
-    <h2>Wähle deinen Bereich</h2>
-    <p class="intro">Jeder Bereich bietet Übungen für Lernende und Materialien für Lehrpersonen.</p>
-    <div class="grid2">
+    <article class="vrow einleitung-bar">{silhouette(2)}<div class="vhead"><h2>Aufgabenformen</h2></div><div class="vtext"><p>Die Materialien wurden für den Englischunterricht an der Berufsschule erstellt, lassen sich aber übersetzen und in anderen Fächern einsetzen.</p><p>Sie sind nach Aufgabenform geordnet. Zu den meisten gibt es Vorlagen und Bewertungsraster.</p></div></article>
+    <div class="grid3">
 {kacheln}
     </div>
   </section>
-</main>""", active="english.html", description="Englisch für Lernende und Lehrpersonen.")
-
-INFORMATIK_THEMEN = [
-    ("OSI Model", "Die sieben Schichten des OSI-Modells verstehen und auf Englisch erklären."),
-    ("Smart City", "Vernetzte Technologien in der Stadt der Zukunft erkunden und präsentieren."),
-    ("Software Tutorial", "Eine Software Schritt für Schritt erklären und ein eigenes Tutorial erstellen."),
-    ("IT Job Abroad", "Stelleninserate lesen, sich bewerben und ein Vorstellungsgespräch üben."),
-    ("Cybersecurity & Data Protection", "Risiken im Netz erkennen und Massnahmen zum Datenschutz diskutieren."),
-]
+</main>""", active="english.html", description="Unterrichtsmaterialien, Projektideen und Vorlagen für den Englischunterricht, geordnet nach Aufgabenform.")
 
 LINE = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"'
 THEMEN_ART = {
@@ -239,11 +269,20 @@ THEMEN_ART = {
 def themen_karte(titel, text):
     return (f'      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{THEMEN_ART[titel]}</svg></div>'
             f'<span class="badge">In Vorbereitung</span><h3>{titel}</h3><p>{text}</p></div>')
+INFORMATIK_THEMEN = [
+    ("OSI Model", "Die sieben Schichten des OSI-Modells verstehen und auf Englisch erklären."),
+    ("Smart City", "Vernetzte Technologien in der Stadt der Zukunft erkunden und präsentieren."),
+    ("Software Tutorial", "Eine Software Schritt für Schritt erklären und ein eigenes Tutorial erstellen."),
+    ("IT Job Abroad", "Stelleninserate lesen, sich bewerben und ein Vorstellungsgespräch üben."),
+    ("Cybersecurity & Data Protection", "Risiken im Netz erkennen und Massnahmen zum Datenschutz diskutieren."),
+]
 INFORMATIK_INTRO = ("Unter den folgenden Themenbereichen findest du Unterrichtsideen mit Materialien und Bewertungsrastern. "
     "Sie wurden für den Unterricht in Technischem Englisch an der Berufsschule entwickelt, lassen sich aber übersetzen und für andere Fächer anpassen.")
 INFORMATIK_INTRO2 = ("Weil sie für den Fremdsprachenunterricht gedacht sind, ist das sprachliche Niveau entsprechend angepasst. "
     "In der Erstsprache eignen sie sich deshalb auch gut als Projekte in der Oberstufe oder in der 6. Klasse.")
 for datei, titel, text, punkte, lern in EN_BEREICHE:
+    if lern != "nur-lp":
+        continue
     if lern == "nur-lp":
         themen = "\n".join(themen_karte(t, d) for t, d in INFORMATIK_THEMEN)
         page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
