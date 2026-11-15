@@ -2839,6 +2839,136 @@
    "rm": "PDF",
    "en": "PDF",
    "it": "PDF"
+  },
+  "Lerngespräche führen": {
+   "rm": "Manar discurs d'emprender",
+   "en": "Leading learning conversations",
+   "it": "Condurre colloqui di apprendimento"
+  },
+  "Lerngespräche führen – MuggliOnline": {
+   "rm": "Manar discurs d'emprender – MuggliOnline",
+   "en": "Leading learning conversations – MuggliOnline",
+   "it": "Condurre colloqui di apprendimento – MuggliOnline"
+  },
+  "› Lerngespräche führen": {
+   "rm": "› Manar discurs d'emprender",
+   "en": "› Leading learning conversations",
+   "it": "› Condurre colloqui di apprendimento"
+  },
+  "Instrumente: Lerngespräche führen": {
+   "rm": "Instruments: manar discurs d'emprender",
+   "en": "Tools: leading learning conversations",
+   "it": "Strumenti: condurre colloqui di apprendimento"
+  },
+  "8 Instrumente": {
+   "rm": "8 instruments",
+   "en": "8 tools",
+   "it": "8 strumenti"
+  },
+  "Alle 8 Instrumente in einer Datei": {
+   "rm": "Tut ils 8 instruments en ina datoteca",
+   "en": "All 8 tools in one file",
+   "it": "Tutti e 8 gli strumenti in un file"
+  },
+  "Acht Instrumente und ein Gesprächs-Check": {
+   "rm": "Otg instruments ed in check dal discurs",
+   "en": "Eight tools and a conversation check",
+   "it": "Otto strumenti e un controllo del colloquio"
+  },
+  "Gesprächsformen und Feedbackebenen": {
+   "rm": "Furmas da discurs e nivels da feedback",
+   "en": "Conversation formats and feedback levels",
+   "it": "Forme di colloquio e livelli di feedback"
+  },
+  "Haltung, Sprache und Gleichwürdigkeit": {
+   "rm": "Attitude, lingua ed egualitad da dignitad",
+   "en": "Stance, language and equal dignity",
+   "it": "Atteggiamento, linguaggio e pari dignità"
+  },
+  "Selbstwirksamkeit, Lernstrategien und Fehler": {
+   "rm": "Autoefficacitad, strategias d'emprender e sbagls",
+   "en": "Self-efficacy, learning strategies and mistakes",
+   "it": "Autoefficacia, strategie di apprendimento ed errori"
+  },
+  "GROW, lösungsorientierte Fragen und «Ich schaffs»": {
+   "rm": "GROW, dumondas orientadas a la soluziun ed «Ich schaffs»",
+   "en": "GROW, solution-focused questions and Kids’ Skills (“Ich schaffs”)",
+   "it": "GROW, domande orientate alla soluzione e «Ich schaffs»"
+  },
+  "Kritik, WOWW, dialogisches Lernen und Standortgespräche": {
+   "rm": "Critica, WOWW, emprender dialogic e discurs da posiziun",
+   "en": "Criticism, WOWW, dialogic learning and progress reviews",
+   "it": "Critica, WOWW, apprendimento dialogico e colloqui di valutazione"
+  },
+  "Gesprächsleitfaden Lerngespräch": {
+   "rm": "Guida per il discurs d'emprender",
+   "en": "Learning conversation guide",
+   "it": "Guida al colloquio di apprendimento"
+  },
+  "Fragekarten «lösungsorientiert fragen»": {
+   "rm": "Cartas da dumondas «dumandar orientà a la soluziun»",
+   "en": "Question cards “Asking solution-focused questions”",
+   "it": "Carte di domande «Chiedere in modo orientato alla soluzione»"
+  },
+  "Feedback-Planer": {
+   "rm": "Planisader da feedback",
+   "en": "Feedback planner",
+   "it": "Pianificatore del feedback"
+  },
+  "«Ich schaffs»-Plan für Jugendliche": {
+   "rm": "Plan «Ich schaffs» per giuvenils",
+   "en": "“Ich schaffs” plan for adolescents",
+   "it": "Piano «Ich schaffs» per adolescenti"
+  },
+  "Kritische Rückmeldung vorbereiten": {
+   "rm": "Preparar in feedback critic",
+   "en": "Preparing critical feedback",
+   "it": "Preparare un feedback critico"
+  },
+  "WOWW-Beobachtungsbogen und Klassenskala": {
+   "rm": "Fegl d'observaziun WOWW e scala da la classa",
+   "en": "WOWW observation sheet and class scale",
+   "it": "Scheda di osservazione WOWW e scala della classe"
+  },
+  "Standortgespräch: Vorbereitung und Fördervereinbarung": {
+   "rm": "Discurs da posiziun: preparaziun e cunvegna da promoziun",
+   "en": "Progress review: preparation and support agreement",
+   "it": "Colloquio di valutazione: preparazione e accordo di sostegno"
+  },
+  "Gesprächsreflexion": {
+   "rm": "Reflexiun dal discurs",
+   "en": "Conversation reflection",
+   "it": "Riflessione sul colloquio"
+  },
+  "Diese Seite klärt zuerst, was ein Lerngespräch ausmacht, welche Formen und Feedbackebenen es gibt und welche Haltung und Sprache tragen. Dann zeigt sie, wie Gespräche Selbstwirksamkeit, Lernstrategien und den Umgang mit Fehlern stärken, und stellt Modelle für die Praxis vor, von GROW über lösungsorientierte Fragen und «Ich schaffs» bis zum Standortgespräch. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen.": {
+   "rm": "Questa pagina declera l'emprim tge che caracterisescha in discurs d'emprender, tge furmas e nivels da feedback ch'i dat e tge attitude e lingua ch'èn decisivas. Lura mussa ella, co che discurs rinforzan l'autoefficacitad, las strategias d'emprender ed il maletg dals sbagls, e preschenta models per la pratica, da GROW sur dumondas orientadas a la soluziun ed «Ich schaffs» fin al discurs da posiziun. Ti la pos lavurar tras da sura engiu u siglir via la tavla da cuntegn.",
+   "en": "This page first clarifies what makes a learning conversation, which formats and feedback levels exist, and which stance and language matter. It then shows how conversations strengthen self-efficacy, learning strategies and the way students handle mistakes, and presents models for practice, from GROW to solution-focused questions and “Ich schaffs” to progress reviews. You can work through it from top to bottom or jump around using the table of contents.",
+   "it": "Questa pagina chiarisce anzitutto che cosa caratterizza un colloquio di apprendimento, quali forme e livelli di feedback esistono e quali atteggiamento e linguaggio contano. Mostra poi come i colloqui rafforzano l'autoefficacia, le strategie di apprendimento e il rapporto con gli errori, e presenta modelli per la pratica, da GROW alle domande orientate alla soluzione e a «Ich schaffs», fino al colloquio di valutazione. Puoi leggerla dall'alto in basso o saltare tramite l'indice."
+  },
+  "Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.": {
+   "rm": "Instruments gratuits per la pratica e l'instrucziun, ordinads tenor cumpetenza d'agir: accumpagnar process d'emprender, resguardar las premissas d'emprender, analisar l'emprender, manar discurs d'emprender.",
+   "en": "Free tools for teaching practice and the classroom, organized by professional competency: supporting learning processes, taking learning prerequisites into account, analyzing learning, leading learning conversations.",
+   "it": "Strumenti gratuiti per il tirocinio e l'insegnamento, ordinati per competenza operativa: accompagnare i processi di apprendimento, tenere conto dei prerequisiti, analizzare l'apprendimento, condurre colloqui di apprendimento."
+  },
+  "Lehrpersonen sprechen ständig mit Lernenden: kurz im Vorbeigehen, in Coachinggesprächen, bei Rückmeldungen zu Arbeiten und in Standortgesprächen mit Eltern. Lerngespräche sind die Gespräche, in denen das Lernen selbst zum Thema wird: Wo stehst du, wohin willst du, und was ist dein nächster Schritt?": {
+   "rm": "Persunas d'instrucziun discurran adina puspè cun scolaras e scolars: curt en il passar, en discurs da coaching, cun feedbacks tar lavurs ed en discurs da posiziun cun ils geniturs. Discurs d'emprender èn ils discurs, en ils quals l'emprender sez daventa il tema: Nua stas ti, nua vuls ti ir, e tge è tes proxim pass?",
+   "en": "Teachers talk with students all the time: briefly in passing, in coaching conversations, when giving feedback on work and in progress reviews with parents. Learning conversations are the ones in which learning itself becomes the topic: Where are you now, where do you want to go, and what is your next step?",
+   "it": "Gli insegnanti parlano continuamente con gli allievi: brevemente di passaggio, in colloqui di coaching, nei feedback sui lavori e nei colloqui di valutazione con i genitori. I colloqui di apprendimento sono quelli in cui l'apprendimento stesso diventa il tema: dove sei, dove vuoi arrivare e qual è il tuo prossimo passo?"
+  },
+  "Lerngespräche führen: Gesprächsformen, Feedbackebenen, Haltung und Sprache, Selbstwirksamkeit, GROW, lösungsorientierte Fragen, Ich schaffs, Kritik, WOWW, dialogisches Lernen und Standortgespräche, wissenschaftlich fundiert.": {
+   "rm": "Manar discurs d'emprender: furmas da discurs, nivels da feedback, attitude e lingua, autoefficacitad, GROW, dumondas orientadas a la soluziun, Ich schaffs, critica, WOWW, emprender dialogic e discurs da posiziun, fundà scientificamain.",
+   "en": "Leading learning conversations: conversation formats, feedback levels, stance and language, self-efficacy, GROW, solution-focused questions, Kids’ Skills (Ich schaffs), criticism, WOWW, dialogic learning and progress reviews, research-based.",
+   "it": "Condurre colloqui di apprendimento: forme di colloquio, livelli di feedback, atteggiamento e linguaggio, autoefficacia, GROW, domande orientate alla soluzione, Ich schaffs, critica, WOWW, apprendimento dialogico e colloqui di valutazione, su basi scientifiche."
+  },
+  "Vom kurzen Feedback im Unterricht bis zum Standortgespräch mit Eltern: Hier geht es darum, wie Gespräche das Lernen voranbringen. Die Seite verbindet Feedbackforschung, Selbstwirksamkeit und lösungsorientierte Beratung mit konkreten Gesprächsmodellen.": {
+   "rm": "Dal curt feedback en l'instrucziun fin al discurs da posiziun cun ils geniturs: Qua sa tracti da co che discurs fan avanzar l'emprender. La pagina collia la perscrutaziun dal feedback, l'autoefficacitad e la cussegliaziun orientada a la soluziun cun models da discurs concrets.",
+   "en": "From brief feedback in class to progress reviews with parents: this topic is about how conversations move learning forward. The page connects feedback research, self-efficacy and solution-focused counseling with concrete conversation models.",
+   "it": "Dal breve feedback in classe al colloquio di valutazione con i genitori: qui si tratta di come i colloqui fanno progredire l'apprendimento. La pagina collega la ricerca sul feedback, l'autoefficacia e la consulenza orientata alla soluzione con modelli di colloquio concreti."
+  },
+  "Wie bringen Gespräche das Lernen voran? Theorien, Gesprächsformen, Modelle, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.": {
+   "rm": "Co fan discurs avanzar l'emprender? Teorias, furmas da discurs, models, champs da tensiun e pussaivladads d'agir per la pratica.",
+   "en": "How do conversations move learning forward? Theories, conversation formats, models, tensions and options for action in practice.",
+   "it": "Come fanno i colloqui a far progredire l'apprendimento? Teorie, forme di colloquio, modelli, tensioni e possibilità d'azione per la pratica."
   }
  },
  "js": {
