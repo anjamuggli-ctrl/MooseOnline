@@ -323,7 +323,7 @@ BEGLEITUNG_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" 
     '<path d="M160 50 V36" stroke="#3f5d4a" stroke-width="2.6" opacity=".25"/></g>'
     '<g fill="#a8682f"><circle cx="24" cy="104" r="6"/><circle cx="66" cy="86" r="6.5"/><circle cx="110" cy="64" r="7"/><circle cx="148" cy="40" r="7.5"/><circle cx="172" cy="20" r="9"/></g>'
     '<circle cx="172" cy="20" r="14" fill="none" stroke="#a8682f" stroke-width="1.5" opacity=".5"/></svg>')
-THEMA_BEGLEITUNG = f"""      <a class="plan thema entile" href="lernbegleitung.html"><div class="thema-art">{BEGLEITUNG_ART}</div><span class="badge live">Neu</span><h3>Begleitung</h3>
+THEMA_BEGLEITUNG = f"""      <a class="plan thema entile" href="lernbegleitung.html"><div class="thema-art">{BEGLEITUNG_ART}</div><span class="badge live">Neu</span><h3>Lernprozesse begleiten</h3>
         <p>Hier geht es um die Begleitung individueller Lernprozesse: Wie unterstütze ich Lernende so, dass sie fachlich weiterkommen und zunehmend selbstständig lernen? Die Seite fasst zusammen, was die Forschung dazu sagt, und zeigt, wie sich das im Unterricht umsetzen lässt.</p>
         <ul><li>Zone der nächsten Entwicklung: Hilfe wirkt nur im individuellen Lernfenster</li><li>Scaffolding: so viel Hilfe wie nötig, so wenig wie möglich</li><li>Feedback, das Weiterlernen ermöglicht</li><li>Selbstreguliertes Lernen und das Turbinen-Modell</li><li>Lernbegleitungsgespräche mit dem GROW-Modell</li><li>Spannungsfelder, Toolbox und Planungs-Check für die Praxis</li></ul>
         <span class="go">Zum Thema →</span></a>"""
@@ -333,10 +333,29 @@ LV_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-l
     '<circle cx="112" cy="40" r="20" stroke="#3f5d4a" stroke-width="2.6" opacity=".6"/><circle cx="118" cy="88" r="22" stroke="#3f5d4a" stroke-width="2.6" opacity=".45"/>'
     '<path d="M150 64 H182" stroke="#cdc6b6" stroke-width="2.4" stroke-dasharray="2 7"/></g>'
     '<g fill="#a8682f"><circle cx="196" cy="64" r="11"/></g><circle cx="196" cy="64" r="17" fill="none" stroke="#a8682f" stroke-width="1.5" opacity=".5"/></svg>')
-THEMA_LV = f"""      <a class="plan thema entile" href="lernvoraussetzungen.html"><div class="thema-art">{LV_ART}</div><span class="badge live">Neu</span><h3>Lernvoraussetzungen</h3>
+THEMA_LV = f"""      <a class="plan thema entile" href="lernvoraussetzungen.html"><div class="thema-art">{LV_ART}</div><span class="badge live">Neu</span><h3>Lernvoraussetzungen berücksichtigen</h3>
         <p>Hier geht es um die Berücksichtigung der Lernvoraussetzungen: Was bringen Lernende mit, wie erfasse ich das möglichst unverzerrt, und was folgt daraus für die Planung? Die Seite verbindet Lernpsychologie, Entwicklung, Heil- und Sonderpädagogik und Sozialpsychologie mit der Bedingungsanalyse.</p>
         <ul><li>Das INVO-Modell: fünf Bereiche individueller Voraussetzungen</li><li>Vorwissen als wichtigster Anknüpfungspunkt</li><li>Lernschwierigkeiten und Behinderung als Passungsfrage</li><li>Entwicklungsaufgaben, Bindung und die Gruppe</li><li>Wahrnehmungsfehler erkennen: beschreiben vor deuten</li><li>Bedingungsanalyse, Binnendifferenzierung und Planungs-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
+
+LA_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round">'
+    '<path d="M20 100 H200" stroke="#cdc6b6" stroke-width="2"/>'
+    '<path d="M30 92 L62 78 L94 84 L126 60 L158 52 L190 30" stroke="#3f5d4a" stroke-width="2.6"/>'
+    '<circle cx="132" cy="52" r="26" stroke="#a8682f" stroke-width="2.6"/><path d="M151 71 L174 94" stroke="#a8682f" stroke-width="5"/></g>'
+    '<g fill="#3f5d4a"><circle cx="30" cy="92" r="4.5"/><circle cx="62" cy="78" r="4.5"/><circle cx="94" cy="84" r="4.5"/><circle cx="126" cy="60" r="5"/><circle cx="158" cy="52" r="4.5"/><circle cx="190" cy="30" r="5.5"/></g></svg>')
+THEMA_LA = f"""      <a class="plan thema entile" href="lernanalyse.html"><div class="thema-art">{LA_ART}</div><span class="badge live">Neu</span><h3>Lernen analysieren</h3>
+        <p>Hier geht es um das genaue Hinschauen: Was ist Lernen, woran erkenne ich es bei Kindern und Jugendlichen, und wie nutze ich Beobachtungen, Lernspuren und Gespräche für passende Förderung? Die Seite verbindet Lernpsychologie, Entwicklung und pädagogische Diagnostik.</p>
+        <ul><li>Was Lernen ist und wie es sich im Jugendalter verändert</li><li>Vorgehen, Ergebnisse und Fortschritte lesen</li><li>Hindernisse, Stärken und Begabungen erkennen</li><li>Diagnostik-Förder-Kreislauf und Beobachtungsprotokolle</li><li>Urteilsfehler erkennen und Entscheide gut begründen</li><li>Neun Instrumente und ein Analyse-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
+INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
+    '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
+    '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
+    '<path d="M148 76 V100 M138 90 L148 100 L158 90" stroke="#a8682f" stroke-width="3"/></g></svg>')
+THEMA_INSTR = f"""      <a class="plan thema entile" href="instrumente.html"><div class="thema-art">{INSTR_ART}</div><span class="badge live">Gratis</span><h3>Instrumente</h3>
+        <p>Raster, Bögen und Leitfäden für Praktikum und Unterricht, geordnet nach Handlungskompetenz. Alle Instrumente dürfen gratis heruntergeladen, genutzt und angepasst werden.</p>
+        <ul><li>als bearbeitbare Word-Datei oder als PDF</li><li>einzeln oder als Sammlung pro Thema</li><li>mit Quellenangaben zur Theorie</li></ul>
+        <span class="go">Zu den Instrumenten →</span></a>"""
 
 area("didaktik.html", "Pädagogik", "",
      "Pädagogik",
@@ -344,16 +363,16 @@ area("didaktik.html", "Pädagogik", "",
      "Die Inhalte stützen sich auf wissenschaftlich fundierte Quellen. Geplant sind:",
      [THEMA_BEGLEITUNG,
       THEMA_LV,
-      plan("Handlungsansätze", "Was bedeutet die Theorie für die Praxis? Konkrete Ansätze für den Unterricht."),
-      plan("Instrumente für die Praxis", "Werkzeuge für Planung, Durchführung und Reflexion von Unterricht.")], cols="grid2 themen",
+      THEMA_LA,
+      THEMA_INSTR], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
 
 # ---------------- Pädagogik: Thema Begleitung ----------------
 ACTIVE["lernbegleitung.html"] = "didaktik.html"
 LB_BODY = "".join((B / "lernbegleitung" / f).read_text() for f in sorted(p.name for p in (B / "lernbegleitung").glob("*.html")))
-page("lernbegleitung.html", "Lernprozesse individuell begleiten – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="didaktik.html">Pädagogik</a> › Begleitung', "Pädagogik · Thema", "Lernprozesse individuell begleiten", "Was sagt die Wissenschaft? Theorien und Konzepte, Verknüpfungen, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+page("lernbegleitung.html", "Lernprozesse begleiten – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernprozesse begleiten', "Pädagogik · Thema", "Lernprozesse begleiten", "Was sagt die Wissenschaft? Theorien und Konzepte, Verknüpfungen, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
   <section class="section">
 {einleitung("Worum es geht", ["Lernende einer Klasse stehen nie am selben Ort. Individuelle Lernbegleitung heisst, Denkwege und Lernbedingungen sichtbar zu machen, die Unterstützung darauf abzustimmen und zu prüfen, ob die Lernenden fachlich und in ihrer Selbstregulation weiterkommen.", "Diese Seite verbindet zentrale Theorien – von Wygotskis Zone der nächsten Entwicklung über Scaffolding und Feedback bis zum selbstregulierten Lernen – mit Gesprächsmodellen, Werkzeugen und einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis gezielt springen."], 1)}
 <!--BODY:lernbegleitung-->{LB_BODY}<!--/BODY-->
@@ -364,12 +383,71 @@ page("lernbegleitung.html", "Lernprozesse individuell begleiten – MuggliOnline
 ACTIVE["lernvoraussetzungen.html"] = "didaktik.html"
 LV_BODY = "".join((B / "lernvoraussetzungen" / f).read_text() for f in sorted(p.name for p in (B / "lernvoraussetzungen").glob("*.html")))
 page("lernvoraussetzungen.html", "Lernvoraussetzungen berücksichtigen – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="didaktik.html">Pädagogik</a> › Lernvoraussetzungen', "Pädagogik · Thema", "Lernvoraussetzungen berücksichtigen", "Was bringen Lernende mit, wie nehme ich das wahr, und was folgt daraus für den Unterricht? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten.")}
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernvoraussetzungen berücksichtigen', "Pädagogik · Thema", "Lernvoraussetzungen berücksichtigen", "Was bringen Lernende mit, wie nehme ich das wahr, und was folgt daraus für den Unterricht? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten.")}
   <section class="section">
 {einleitung("Worum es geht", ["Lernende bringen Vorwissen, Strategien, Motivation, Gefühle, Entwicklungsthemen und Beziehungserfahrungen mit. Ob daraus Schwierigkeiten werden, hängt davon ab, wie gut Unterricht und Voraussetzungen zueinander passen.", "Diese Seite klärt zuerst, was Lernvoraussetzungen sind, stellt dann zentrale Bereiche vor (vom INVO-Modell über Lernschwierigkeiten bis zur Gruppe), zeigt, wie die eigene Wahrnehmung das Bild verzerren kann, und führt zur Bedingungsanalyse, zur Binnendifferenzierung und zu einem Planungs-Check. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
 <!--BODY:lernvoraussetzungen-->{LV_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Lernvoraussetzungen berücksichtigen: INVO-Modell, Vorwissen, Lernschwierigkeiten, Wahrnehmung, Bedingungsanalyse und Binnendifferenzierung, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Thema Lernen analysieren ----------------
+ACTIVE["lernanalyse.html"] = "didaktik.html"
+LA_BODY = "".join((B / "lernanalyse" / f).read_text() for f in sorted(p.name for p in (B / "lernanalyse").glob("*.html")))
+page("lernanalyse.html", "Lernen analysieren – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernen analysieren', "Pädagogik · Thema", "Lernen analysieren", "Was ist Lernen, woran erkenne ich es, und was folgt daraus? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Gezielt fördern kann nur, wer versteht, wie Lernende lernen. Weil Lernen im Kopf stattfindet, bleiben dafür nur Spuren: Vorgehen, Ergebnisse, Fehler, Fortschritte und Äusserungen. Lernen zu analysieren heisst, diese Spuren sorgfältig zu sammeln, vorsichtig zu deuten und daraus passende Lernangebote abzuleiten.", "Diese Seite klärt zuerst, was Lernen ist und wie Kinder und Jugendliche lernen. Dann zeigt sie, worauf sich der Blick richten kann, mit welchen Methoden sich Lernen erfassen lässt, wo das eigene Urteil verzerrt sein kann und was aus der Analyse folgt, bis hin zu Zusammenarbeit, Abklärung und Laufbahnentscheiden. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+<!--BODY:lernanalyse-->{LA_BODY}<!--/BODY-->
+  </section>
+</main>""", active="didaktik.html", description="Lernen analysieren: Lernbegriff, Lernen im Jugendalter, Lernprozesse und Ergebnisse, Fortschritte, Hindernisse und Begabungen, Diagnostik-Förder-Kreislauf, Beobachtung und Urteilsfehler, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Instrumente ----------------
+ACTIVE["instrumente.html"] = "didaktik.html"
+INSTRUMENTE = [
+    ("Lernprozesse begleiten", "lernbegleitung.html", BEGLEITUNG_ART, None, []),
+    ("Lernvoraussetzungen berücksichtigen", "lernvoraussetzungen.html", LV_ART,
+     ("downloads/lernvoraussetzungen/Instrumente_Lernvoraussetzungen", "Alle 4 Instrumente in einer Datei"),
+     [("Bedingungsanalyse-Raster", "LV1_Bedingungsanalyse-Raster"),
+      ("Beobachtungsbogen «Beschreiben vor Deuten»", "LV2_Beobachtungsbogen_Beschreiben_vor_Deuten"),
+      ("Leitfaden «Verdacht auf Lernschwierigkeiten»", "LV3_Leitfaden_Verdacht_auf_Lernschwierigkeiten"),
+      ("Differenzierungs-Planer", "LV4_Differenzierungs-Planer")]),
+    ("Lernen analysieren", "lernanalyse.html", LA_ART,
+     ("downloads/lernanalyse/Instrumente_Lernen_analysieren", "Alle 9 Instrumente in einer Datei"),
+     [("Beobachtungsprotokoll «Beschreiben, deuten, prüfen»", "LA1_Beobachtungsprotokoll"),
+      ("Lernspuren-Analyse «Die Logik einer Lösung»", "LA2_Lernspuren-Analyse"),
+      ("Lernverlaufsbogen", "LA3_Lernverlaufsbogen"),
+      ("Single-Point-Rubric", "LA4_Single-Point-Rubric"),
+      ("Hypothesen-Fächer «Was bremst das Lernen?»", "LA5_Hypothesen-Faecher"),
+      ("Stärken- und Potenzialprofil", "LA6_Staerken-und-Potenzialprofil"),
+      ("Passungs-Check für die eigene Lektion", "LA7_Passungs-Check"),
+      ("Vorbereitung Standort- oder Übertrittsgespräch", "LA8_Gespraechsvorbereitung"),
+      ("Lernjournal für Lernende", "LA9_Lernjournal")]),
+]
+def instr_kachel(titel, href, art, alle, liste):
+    ordner = href.replace(".html", "").replace("lernbegleitung", "lernbegleitung")
+    if liste:
+        dl = ordner if ordner != "lernanalyse" else "lernanalyse"
+        items = "".join(
+            f'<li><span>{name}</span><span class="dl"><a href="downloads/{dl}/{datei}.docx" download>Word</a><a href="downloads/{dl}/{datei}.pdf" target="_blank" rel="noopener">PDF</a></span></li>'
+            for name, datei in liste)
+        alle_html = (f'<div class="instr-alle"><span>{alle[1]}</span><span class="dl"><a href="{alle[0]}.docx" download>Word</a>'
+                     f'<a href="{alle[0]}.pdf" target="_blank" rel="noopener">PDF</a></span></div>')
+        inhalt = f'<ul class="instr-liste" tabindex="0" aria-label="Instrumente: {titel}">{items}</ul>{alle_html}'
+        badge = f'<span class="badge live">{len(liste)} Instrumente</span>'
+    else:
+        inhalt = '<p class="instr-leer">Die Instrumente zu diesem Thema sind in Vorbereitung. Bis dahin findest du Werkzeuge und einen Planungs-Check direkt auf der Themenseite.</p>'
+        badge = '<span class="badge">In Vorbereitung</span>'
+    return (f'      <div class="plan thema instr"><div class="thema-art">{art}</div>{badge}<h3>{titel}</h3>{inhalt}'
+            f'<a class="go" href="{href}">Zum Thema →</a></div>')
+page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Instrumente', "Pädagogik", "Instrumente", "Raster, Bögen und Leitfäden für Praktikum und Unterricht, gratis zum Herunterladen.")}
+  <section class="section">
+{einleitung("Frei nutzbar", ["Die Instrumente sind nach Handlungskompetenz geordnet. Jede Kachel gehört zu einem Thema auf der Pädagogik-Seite, wo die Theorie dazu erklärt ist.", "Alle Instrumente dürfen gratis heruntergeladen, genutzt und für den eigenen Unterricht angepasst werden, als bearbeitbare Word-Datei oder als PDF zum Ausdrucken. Ich freue mich über einen Hinweis auf die Quelle mugglionline.ch."], 2)}
+    <div class="grid3 instr-grid">
+{chr(10).join(instr_kachel(*k) for k in INSTRUMENTE)}
+    </div>
+  </section>
+</main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",

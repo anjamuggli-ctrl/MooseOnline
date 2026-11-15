@@ -428,3 +428,15 @@
   .lb-dl .knopf a{font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--sand);color:var(--green-dark)}
   .lb-dl .knopf a:hover{background:var(--green-light)}
   @media (max-width:720px){ .lb-dl{grid-template-columns:1fr} }
+  .instr-grid{align-items:stretch}
+  .instr{display:flex;flex-direction:column;border-style:solid}
+  .instr .instr-liste{list-style:none;margin:12px 24px 0;padding:0 6px 0 0;max-height:300px;overflow-y:auto;border-top:1px solid var(--line);scrollbar-width:thin}
+  .instr .instr-liste li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink,#2f3a32)}
+  .instr .instr-liste li+li{margin-top:0}
+  .instr .dl{display:flex;gap:6px;flex-shrink:0}
+  .instr .dl a{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--sand);color:var(--green-dark);white-space:nowrap}
+  .instr .dl a:hover{background:var(--green-light)}
+  .instr .instr-alle{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 24px 0;padding:10px 12px;background:#f4f7f3;border-radius:10px;font-size:14px;font-weight:600;color:var(--green-dark)}
+  .instr .instr-leer{color:var(--muted);font-size:15px}
+  .instr .go{margin:auto 24px 0;padding-top:16px;font-weight:600;color:var(--green);font-size:15px}
+  .instr .badge{align-self:flex-start}
