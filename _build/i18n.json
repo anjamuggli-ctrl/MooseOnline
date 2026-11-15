@@ -2569,6 +2569,276 @@
    "rm": "Al tema →",
    "it": "Vai al tema →",
    "fr": "Vers le thème →"
+  },
+  "Lernprozesse begleiten": {
+   "rm": "Accumpagnar process d'emprender",
+   "en": "Supporting learning processes",
+   "it": "Accompagnare i processi di apprendimento"
+  },
+  "Lernen analysieren": {
+   "rm": "Analisar l'emprender",
+   "en": "Analyzing learning",
+   "it": "Analizzare l'apprendimento"
+  },
+  "Hier geht es um das genaue Hinschauen: Was ist Lernen, woran erkenne ich es bei Kindern und Jugendlichen, und wie nutze ich Beobachtungen, Lernspuren und Gespräche für passende Förderung? Die Seite verbindet Lernpsychologie, Entwicklung und pädagogische Diagnostik.": {
+   "rm": "Qua sa tracti da guardar exact: Tge è emprender, co enconusch jau quai tar uffants e giuvenils, e co dovr jau observaziuns, fastizs d'emprender e discurs per in promoviment adequat? La pagina collia psicologia da l'emprender, svilup e diagnostica pedagogica.",
+   "en": "This topic is about looking closely: What is learning, how can I recognize it in children and adolescents, and how do I use observations, learning traces and conversations for well-matched support? The page connects the psychology of learning, development and educational assessment.",
+   "it": "Qui si tratta di guardare con attenzione: che cos'è l'apprendimento, come lo riconosco nei bambini e negli adolescenti, e come uso osservazioni, tracce di apprendimento e colloqui per un sostegno adeguato? La pagina collega psicologia dell'apprendimento, sviluppo e diagnostica pedagogica."
+  },
+  "Was Lernen ist und wie es sich im Jugendalter verändert": {
+   "rm": "Tge ch'emprender è e co ch'el sa mida en la giuventetgna",
+   "en": "What learning is and how it changes in adolescence",
+   "it": "Che cos'è l'apprendimento e come cambia nell'adolescenza"
+  },
+  "Vorgehen, Ergebnisse und Fortschritte lesen": {
+   "rm": "Leger il proceder, ils resultats ed ils progress",
+   "en": "Reading approaches, results and progress",
+   "it": "Leggere procedimenti, risultati e progressi"
+  },
+  "Hindernisse, Stärken und Begabungen erkennen": {
+   "rm": "Enconuscher impediments, fermezzas e talents",
+   "en": "Recognizing obstacles, strengths and talents",
+   "it": "Riconoscere ostacoli, punti di forza e talenti"
+  },
+  "Diagnostik-Förder-Kreislauf und Beobachtungsprotokolle": {
+   "rm": "Ciclus da diagnostica e promoziun e protocols d'observaziun",
+   "en": "The assessment–support cycle and observation records",
+   "it": "Ciclo diagnosi–sostegno e protocolli di osservazione"
+  },
+  "Urteilsfehler erkennen und Entscheide gut begründen": {
+   "rm": "Enconuscher sbagls da giudicament e motivar bain decisiuns",
+   "en": "Recognizing judgment errors and justifying decisions well",
+   "it": "Riconoscere errori di giudizio e motivare bene le decisioni"
+  },
+  "Neun Instrumente und ein Analyse-Check": {
+   "rm": "Nov instruments ed in check d'analisa",
+   "en": "Nine tools and an analysis check",
+   "it": "Nove strumenti e un controllo dell'analisi"
+  },
+  "Gratis": {
+   "rm": "Gratuit",
+   "en": "Free",
+   "it": "Gratuito"
+  },
+  "Instrumente": {
+   "rm": "Instruments",
+   "en": "Tools",
+   "it": "Strumenti"
+  },
+  "Raster, Bögen und Leitfäden für Praktikum und Unterricht, geordnet nach Handlungskompetenz. Alle Instrumente dürfen gratis heruntergeladen, genutzt und angepasst werden.": {
+   "rm": "Rasters, fegls e guidas per la pratica e l'instrucziun, ordinads tenor cumpetenza d'agir. Tut ils instruments pon vegnir chargiads giu, duvrads ed adattads gratuitamain.",
+   "en": "Grids, forms and guides for teaching practice and the classroom, organized by professional competency. All tools may be downloaded, used and adapted free of charge.",
+   "it": "Griglie, schede e guide per il tirocinio e l'insegnamento, ordinate per competenza operativa. Tutti gli strumenti possono essere scaricati, usati e adattati gratuitamente."
+  },
+  "als bearbeitbare Word-Datei oder als PDF": {
+   "rm": "sco datoteca Word modifitgabla u sco PDF",
+   "en": "as an editable Word file or as a PDF",
+   "it": "come file Word modificabile o come PDF"
+  },
+  "einzeln oder als Sammlung pro Thema": {
+   "rm": "singuls u sco collecziun per tema",
+   "en": "individually or as a collection per topic",
+   "it": "singolarmente o come raccolta per tema"
+  },
+  "mit Quellenangaben zur Theorie": {
+   "rm": "cun indicaziuns da funtaunas tar la teoria",
+   "en": "with references to the theory",
+   "it": "con indicazioni delle fonti teoriche"
+  },
+  "Zu den Instrumenten →": {
+   "rm": "Als instruments →",
+   "en": "Go to the tools →",
+   "it": "Agli strumenti →"
+  },
+  "Instrumente – MuggliOnline": {
+   "rm": "Instruments – MuggliOnline",
+   "en": "Tools – MuggliOnline",
+   "it": "Strumenti – MuggliOnline"
+  },
+  "› Instrumente": {
+   "rm": "› Instruments",
+   "en": "› Tools",
+   "it": "› Strumenti"
+  },
+  "Raster, Bögen und Leitfäden für Praktikum und Unterricht, gratis zum Herunterladen.": {
+   "rm": "Rasters, fegls e guidas per la pratica e l'instrucziun, gratuit per chargiar giu.",
+   "en": "Grids, forms and guides for teaching practice and the classroom, free to download.",
+   "it": "Griglie, schede e guide per il tirocinio e l'insegnamento, da scaricare gratuitamente."
+  },
+  "Frei nutzbar": {
+   "rm": "Liber da duvrar",
+   "en": "Free to use",
+   "it": "Liberamente utilizzabili"
+  },
+  "Die Instrumente sind nach Handlungskompetenz geordnet. Jede Kachel gehört zu einem Thema auf der Pädagogik-Seite, wo die Theorie dazu erklärt ist.": {
+   "rm": "Ils instruments èn ordinads tenor cumpetenza d'agir. Mintga plattina tutga tar in tema sin la pagina da pedagogia, nua che la teoria vegn declerada.",
+   "en": "The tools are organized by professional competency. Each tile belongs to a topic on the Pedagogy page, where the theory behind it is explained.",
+   "it": "Gli strumenti sono ordinati per competenza operativa. Ogni riquadro appartiene a un tema della pagina Pedagogia, dove ne è spiegata la teoria."
+  },
+  "Alle Instrumente dürfen gratis heruntergeladen, genutzt und für den eigenen Unterricht angepasst werden, als bearbeitbare Word-Datei oder als PDF zum Ausdrucken. Ich freue mich über einen Hinweis auf die Quelle mugglionline.ch.": {
+   "rm": "Tut ils instruments pon vegnir chargiads giu, duvrads ed adattads gratuitamain per l'atgna instrucziun, sco datoteca Word modifitgabla u sco PDF per stampar. Jau ma legrel d'in renviament a la funtauna mugglionline.ch. Ils documents èn per tudestg.",
+   "en": "All tools may be downloaded, used and adapted for your own teaching free of charge, as an editable Word file or as a PDF to print. I appreciate a reference to the source, mugglionline.ch. The documents are in German.",
+   "it": "Tutti gli strumenti possono essere scaricati, usati e adattati gratuitamente per il proprio insegnamento, come file Word modificabile o come PDF da stampare. Mi fa piacere un riferimento alla fonte mugglionline.ch. I documenti sono in tedesco."
+  },
+  "Die Instrumente zu diesem Thema sind in Vorbereitung. Bis dahin findest du Werkzeuge und einen Planungs-Check direkt auf der Themenseite.": {
+   "rm": "Ils instruments tar quest tema èn en preparaziun. Fin lura chattas ti utensils ed in check da planisaziun directamain sin la pagina dal tema.",
+   "en": "The tools for this topic are in preparation. Until then, you will find tools and a planning check directly on the topic page.",
+   "it": "Gli strumenti per questo tema sono in preparazione. Nel frattempo trovi strumenti e un controllo della pianificazione direttamente sulla pagina del tema."
+  },
+  "4 Instrumente": {
+   "rm": "4 instruments",
+   "en": "4 tools",
+   "it": "4 strumenti"
+  },
+  "9 Instrumente": {
+   "rm": "9 instruments",
+   "en": "9 tools",
+   "it": "9 strumenti"
+  },
+  "Bedingungsanalyse-Raster": {
+   "rm": "Raster per l'analisa da las cundiziuns",
+   "en": "Grid for analyzing learning conditions",
+   "it": "Griglia per l'analisi delle condizioni"
+  },
+  "Beobachtungsbogen «Beschreiben vor Deuten»": {
+   "rm": "Fegl d'observaziun «Descriver avant interpretar»",
+   "en": "Observation sheet “Describe before interpreting”",
+   "it": "Scheda di osservazione «Descrivere prima di interpretare»"
+  },
+  "Leitfaden «Verdacht auf Lernschwierigkeiten»": {
+   "rm": "Guida «Suspect da difficultads d'emprender»",
+   "en": "Guide “Suspected learning difficulties”",
+   "it": "Guida «Sospetto di difficoltà di apprendimento»"
+  },
+  "Differenzierungs-Planer": {
+   "rm": "Planisader da differenziaziun",
+   "en": "Differentiation planner",
+   "it": "Pianificatore della differenziazione"
+  },
+  "Alle 4 Instrumente in einer Datei": {
+   "rm": "Tut ils 4 instruments en ina datoteca",
+   "en": "All 4 tools in one file",
+   "it": "Tutti e 4 gli strumenti in un file"
+  },
+  "Alle 9 Instrumente in einer Datei": {
+   "rm": "Tut ils 9 instruments en ina datoteca",
+   "en": "All 9 tools in one file",
+   "it": "Tutti e 9 gli strumenti in un file"
+  },
+  "Beobachtungsprotokoll «Beschreiben, deuten, prüfen»": {
+   "rm": "Protocol d'observaziun «Descriver, interpretar, examinar»",
+   "en": "Observation record “Describe, interpret, check”",
+   "it": "Protocollo di osservazione «Descrivere, interpretare, verificare»"
+  },
+  "Lernspuren-Analyse «Die Logik einer Lösung»": {
+   "rm": "Analisa da fastizs d'emprender «La logica d'ina soluziun»",
+   "en": "Learning-trace analysis “The logic of a solution”",
+   "it": "Analisi delle tracce di apprendimento «La logica di una soluzione»"
+  },
+  "Lernverlaufsbogen": {
+   "rm": "Fegl dal decurs d'emprender",
+   "en": "Learning progress record",
+   "it": "Scheda del percorso di apprendimento"
+  },
+  "Single-Point-Rubric": {
+   "rm": "Single-Point-Rubric",
+   "en": "Single-point rubric",
+   "it": "Single-point rubric"
+  },
+  "Hypothesen-Fächer «Was bremst das Lernen?»": {
+   "rm": "Ventagl d'ipotesas «Tge franescha l'emprender?»",
+   "en": "Hypothesis fan “What is slowing learning down?”",
+   "it": "Ventaglio di ipotesi «Che cosa frena l'apprendimento?»"
+  },
+  "Stärken- und Potenzialprofil": {
+   "rm": "Profil da fermezzas e potenzials",
+   "en": "Strengths and potential profile",
+   "it": "Profilo dei punti di forza e del potenziale"
+  },
+  "Passungs-Check für die eigene Lektion": {
+   "rm": "Check da la cunvegnientscha per l'atgna lecziun",
+   "en": "Fit check for your own lesson",
+   "it": "Controllo della corrispondenza per la propria lezione"
+  },
+  "Vorbereitung Standort- oder Übertrittsgespräch": {
+   "rm": "Preparaziun dal discurs da posiziun u da transiziun",
+   "en": "Preparing a progress review or transition meeting",
+   "it": "Preparazione del colloquio di valutazione o di passaggio"
+  },
+  "Lernjournal für Lernende": {
+   "rm": "Diari d'emprender per scolaras e scolars",
+   "en": "Learning journal for students",
+   "it": "Diario di apprendimento per gli allievi"
+  },
+  "Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren.": {
+   "rm": "Instruments gratuits per la pratica e l'instrucziun, ordinads tenor cumpetenza d'agir: accumpagnar process d'emprender, resguardar las premissas d'emprender, analisar l'emprender.",
+   "en": "Free tools for teaching practice and the classroom, organized by professional competency: supporting learning processes, taking learning prerequisites into account, analyzing learning.",
+   "it": "Strumenti gratuiti per il tirocinio e l'insegnamento, ordinati per competenza operativa: accompagnare i processi di apprendimento, tenere conto dei prerequisiti, analizzare l'apprendimento."
+  },
+  "Instrumente: Lernvoraussetzungen berücksichtigen": {
+   "rm": "Instruments: resguardar las premissas d'emprender",
+   "en": "Tools: taking learning prerequisites into account",
+   "it": "Strumenti: tenere conto dei prerequisiti di apprendimento"
+  },
+  "Instrumente: Lernen analysieren": {
+   "rm": "Instruments: analisar l'emprender",
+   "en": "Tools: analyzing learning",
+   "it": "Strumenti: analizzare l'apprendimento"
+  },
+  "Lernen analysieren – MuggliOnline": {
+   "rm": "Analisar l'emprender – MuggliOnline",
+   "en": "Analyzing learning – MuggliOnline",
+   "it": "Analizzare l'apprendimento – MuggliOnline"
+  },
+  "› Lernen analysieren": {
+   "rm": "› Analisar l'emprender",
+   "en": "› Analyzing learning",
+   "it": "› Analizzare l'apprendimento"
+  },
+  "Was ist Lernen, woran erkenne ich es, und was folgt daraus? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.": {
+   "rm": "Tge è emprender, co enconusch jau quai e tge resulta da quai? Teorias, concepts, champs da tensiun e pussaivladads d'agir per la pratica.",
+   "en": "What is learning, how do I recognize it, and what follows from it? Theories, concepts, tensions and options for action in practice.",
+   "it": "Che cos'è l'apprendimento, come lo riconosco e che cosa ne consegue? Teorie, concetti, tensioni e possibilità d'azione per la pratica."
+  },
+  "Gezielt fördern kann nur, wer versteht, wie Lernende lernen. Weil Lernen im Kopf stattfindet, bleiben dafür nur Spuren: Vorgehen, Ergebnisse, Fehler, Fortschritte und Äusserungen. Lernen zu analysieren heisst, diese Spuren sorgfältig zu sammeln, vorsichtig zu deuten und daraus passende Lernangebote abzuleiten.": {
+   "rm": "Promover a moda sistematica po be tgi chapescha co che scolaras e scolars emprendan. Perquai che l'emprender ha lieu en il chau, restan be fastizs: proceder, resultats, sbagls, progress ed expressiuns. Analisar l'emprender vul dir rimnar quests fastizs cun quità, als interpretar cun precauziun e deducir da quai purschidas d'emprender adequatas.",
+   "en": "Only those who understand how students learn can support them in a targeted way. Because learning happens in the mind, all we have are traces: approaches, results, errors, progress and statements. Analyzing learning means collecting these traces carefully, interpreting them cautiously and deriving well-matched learning opportunities from them.",
+   "it": "Può sostenere in modo mirato solo chi capisce come imparano gli allievi. Poiché l'apprendimento avviene nella mente, restano solo tracce: procedimenti, risultati, errori, progressi ed enunciati. Analizzare l'apprendimento significa raccogliere queste tracce con cura, interpretarle con prudenza e ricavarne offerte di apprendimento adeguate."
+  },
+  "Diese Seite klärt zuerst, was Lernen ist und wie Kinder und Jugendliche lernen. Dann zeigt sie, worauf sich der Blick richten kann, mit welchen Methoden sich Lernen erfassen lässt, wo das eigene Urteil verzerrt sein kann und was aus der Analyse folgt, bis hin zu Zusammenarbeit, Abklärung und Laufbahnentscheiden. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen.": {
+   "rm": "Questa pagina declera l'emprim tge ch'emprender è e co ch'uffants e giuvenils emprendan. Lura mussa ella, sin tge ch'il sguard po sa drizzar, cun tge metodas ch'ins po registrar l'emprender, nua che l'agen giudicament po esser sfurmà e tge che resulta da l'analisa, fin tar la collavuraziun, l'examinaziun e las decisiuns da carriera. Ti la pos lavurar tras da sura engiu u siglir via la tavla da cuntegn.",
+   "en": "This page first clarifies what learning is and how children and adolescents learn. It then shows what to look at, which methods can capture learning, where your own judgment may be biased and what follows from the analysis, including collaboration, referrals and decisions about educational pathways. You can work through it from top to bottom or jump around using the table of contents.",
+   "it": "Questa pagina chiarisce anzitutto che cos'è l'apprendimento e come imparano bambini e adolescenti. Mostra poi su che cosa può concentrarsi lo sguardo, con quali metodi si può rilevare l'apprendimento, dove il proprio giudizio può essere distorto e che cosa ne consegue, fino alla collaborazione, agli accertamenti e alle decisioni sul percorso scolastico. Puoi leggerla dall'alto in basso o saltare tramite l'indice."
+  },
+  "Lernen analysieren: Lernbegriff, Lernen im Jugendalter, Lernprozesse und Ergebnisse, Fortschritte, Hindernisse und Begabungen, Diagnostik-Förder-Kreislauf, Beobachtung und Urteilsfehler, wissenschaftlich fundiert.": {
+   "rm": "Analisar l'emprender: concept d'emprender, emprender en la giuventetgna, process e resultats d'emprender, progress, impediments e talents, ciclus da diagnostica e promoziun, observaziun e sbagls da giudicament, fundà scientificamain.",
+   "en": "Analyzing learning: the concept of learning, learning in adolescence, learning processes and results, progress, obstacles and talents, the assessment–support cycle, observation and judgment errors, research-based.",
+   "it": "Analizzare l'apprendimento: concetto di apprendimento, apprendimento nell'adolescenza, processi e risultati, progressi, ostacoli e talenti, ciclo diagnosi–sostegno, osservazione ed errori di giudizio, su basi scientifiche."
+  },
+  "Lernprozesse begleiten – MuggliOnline": {
+   "rm": "Accumpagnar process d'emprender – MuggliOnline",
+   "en": "Supporting learning processes – MuggliOnline",
+   "it": "Accompagnare i processi di apprendimento – MuggliOnline"
+  },
+  "› Lernprozesse begleiten": {
+   "rm": "› Accumpagnar process d'emprender",
+   "en": "› Supporting learning processes",
+   "it": "› Accompagnare i processi di apprendimento"
+  },
+  "› Lernvoraussetzungen berücksichtigen": {
+   "rm": "› Resguardar las premissas d'emprender",
+   "en": "› Taking learning prerequisites into account",
+   "it": "› Tenere conto dei prerequisiti di apprendimento"
+  },
+  "Word": {
+   "rm": "Word",
+   "en": "Word",
+   "it": "Word"
+  },
+  "PDF": {
+   "rm": "PDF",
+   "en": "PDF",
+   "it": "PDF"
   }
  },
  "js": {
