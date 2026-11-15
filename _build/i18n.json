@@ -2969,6 +2969,61 @@
    "rm": "Co fan discurs avanzar l'emprender? Teorias, furmas da discurs, models, champs da tensiun e pussaivladads d'agir per la pratica.",
    "en": "How do conversations move learning forward? Theories, conversation formats, models, tensions and options for action in practice.",
    "it": "Come fanno i colloqui a far progredire l'apprendimento? Teorie, forme di colloquio, modelli, tensioni e possibilità d'azione per la pratica."
+  },
+  "Lernfenster-Planer": {
+   "rm": "Planisader da la fanestra d'emprender",
+   "en": "Learning window planner",
+   "it": "Pianificatore della finestra di apprendimento"
+  },
+  "Hilfen-Treppe (Scaffolding)": {
+   "rm": "Stgala d'agids (scaffolding)",
+   "en": "Support ladder (scaffolding)",
+   "it": "Scala degli aiuti (scaffolding)"
+  },
+  "Formative Kurzerhebung": {
+   "rm": "Curta enquista formativa",
+   "en": "Quick formative check",
+   "it": "Rilevazione formativa breve"
+  },
+  "Feedback-Matrix": {
+   "rm": "Matrix da feedback",
+   "en": "Feedback matrix",
+   "it": "Matrice del feedback"
+  },
+  "Begleitbogen selbstreguliertes Lernen": {
+   "rm": "Fegl d'accumpagnament per l'emprender autoregulà",
+   "en": "Self-regulated learning observation sheet",
+   "it": "Scheda di accompagnamento dell'apprendimento autoregolato"
+  },
+  "Strategie-Check «Warum nutzt sie die Strategie nicht?»": {
+   "rm": "Check da strategias «Pertge na dovra ella betg la strategia?»",
+   "en": "Strategy check “Why isn’t she using the strategy?”",
+   "it": "Controllo delle strategie «Perché non usa la strategia?»"
+  },
+  "Vier-Felder-Blick bei Lernblockaden": {
+   "rm": "Sguard da quatter champs tar blocadas d'emprender",
+   "en": "Four-field view for learning blocks",
+   "it": "Sguardo a quattro campi sui blocchi di apprendimento"
+  },
+  "Lernspur-Blatt für Lernende": {
+   "rm": "Fegl da fastizs d'emprender per scolaras e scolars",
+   "en": "Learning trace sheet for students",
+   "it": "Scheda delle tracce di apprendimento per gli allievi"
+  },
+  "Planungs-Check Lernbegleitung": {
+   "rm": "Check da planisaziun per l'accumpagnament d'emprender",
+   "en": "Planning check for learning support",
+   "it": "Controllo della pianificazione per l'accompagnamento"
+  },
+  "Instrumente: Lernprozesse begleiten": {
+   "rm": "Instruments: accumpagnar process d'emprender",
+   "en": "Tools: supporting learning processes",
+   "it": "Strumenti: accompagnare i processi di apprendimento"
+  },
+  "Neun Instrumente, Toolbox und Planungs-Check": {
+   "rm": "Nov instruments, toolbox e check da planisaziun",
+   "en": "Nine tools, a toolbox and a planning check",
+   "it": "Nove strumenti, toolbox e controllo della pianificazione"
   }
  },
  "js": {

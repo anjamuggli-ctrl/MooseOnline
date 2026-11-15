@@ -325,7 +325,7 @@ BEGLEITUNG_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" 
     '<circle cx="172" cy="20" r="14" fill="none" stroke="#a8682f" stroke-width="1.5" opacity=".5"/></svg>')
 THEMA_BEGLEITUNG = f"""      <a class="plan thema entile" href="lernbegleitung.html"><div class="thema-art">{BEGLEITUNG_ART}</div><span class="badge live">Neu</span><h3>Lernprozesse begleiten</h3>
         <p>Hier geht es um die Begleitung individueller Lernprozesse: Wie unterstütze ich Lernende so, dass sie fachlich weiterkommen und zunehmend selbstständig lernen? Die Seite fasst zusammen, was die Forschung dazu sagt, und zeigt, wie sich das im Unterricht umsetzen lässt.</p>
-        <ul><li>Zone der nächsten Entwicklung: Hilfe wirkt nur im individuellen Lernfenster</li><li>Scaffolding: so viel Hilfe wie nötig, so wenig wie möglich</li><li>Feedback, das Weiterlernen ermöglicht</li><li>Selbstreguliertes Lernen und das Turbinen-Modell</li><li>Lernbegleitungsgespräche mit dem GROW-Modell</li><li>Spannungsfelder, Toolbox und Planungs-Check für die Praxis</li></ul>
+        <ul><li>Zone der nächsten Entwicklung: Hilfe wirkt nur im individuellen Lernfenster</li><li>Scaffolding: so viel Hilfe wie nötig, so wenig wie möglich</li><li>Feedback, das Weiterlernen ermöglicht</li><li>Selbstreguliertes Lernen und das Turbinen-Modell</li><li>Lernbegleitungsgespräche mit dem GROW-Modell</li><li>Neun Instrumente, Toolbox und Planungs-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
 LV_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round">'
@@ -425,7 +425,17 @@ page("lerngespraeche.html", "Lerngespräche führen – MuggliOnline", f"""<main
 # ---------------- Pädagogik: Instrumente ----------------
 ACTIVE["instrumente.html"] = "didaktik.html"
 INSTRUMENTE = [
-    ("Lernprozesse begleiten", "lernbegleitung.html", BEGLEITUNG_ART, None, []),
+    ("Lernprozesse begleiten", "lernbegleitung.html", BEGLEITUNG_ART,
+     ("downloads/lernbegleitung/Instrumente_Lernprozesse_begleiten", "Alle 9 Instrumente in einer Datei"),
+     [("Lernfenster-Planer", "LB1_Lernfenster-Planer"),
+      ("Hilfen-Treppe (Scaffolding)", "LB2_Hilfen-Treppe"),
+      ("Formative Kurzerhebung", "LB3_Formative-Kurzerhebung"),
+      ("Feedback-Matrix", "LB4_Feedback-Matrix"),
+      ("Begleitbogen selbstreguliertes Lernen", "LB5_SRL-Begleitbogen"),
+      ("Strategie-Check «Warum nutzt sie die Strategie nicht?»", "LB6_Strategie-Check"),
+      ("Vier-Felder-Blick bei Lernblockaden", "LB7_Vier-Felder-Blick"),
+      ("Lernspur-Blatt für Lernende", "LB8_Lernspur-Blatt"),
+      ("Planungs-Check Lernbegleitung", "LB9_Planungs-Check")]),
     ("Lernvoraussetzungen berücksichtigen", "lernvoraussetzungen.html", LV_ART,
      ("downloads/lernvoraussetzungen/Instrumente_Lernvoraussetzungen", "Alle 4 Instrumente in einer Datei"),
      [("Bedingungsanalyse-Raster", "LV1_Bedingungsanalyse-Raster"),
