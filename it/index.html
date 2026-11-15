@@ -13,7 +13,6 @@
 <link rel="alternate" hreflang="rm" href="../rm/index.html">
 <link rel="alternate" hreflang="en" href="../en/index.html">
 <link rel="alternate" hreflang="it" href="../it/index.html">
-<link rel="alternate" hreflang="fr" href="../fr/index.html">
 </head>
 <body>
 
@@ -52,15 +51,15 @@
       <span class="name">Muggli<span>Online</span></span>
     </a>
     <ul class="menu" id="menu">
+      <li><a href="didaktik.html">Pedagogia</a></li>
       <li><a href="english.html">Docenti</a></li>
       <li><a href="lernende.html">Allievi</a></li>
-      <li><a href="didaktik.html">Pedagogia</a></li>
       <li><a href="werkstatt.html">Officina delle app</a></li>
       <li><a href="vision.html">Visione</a></li>
       <li><a href="ueber-anja.html">Su Anja</a></li>
       <li><a class="cta" href="kontakt.html">Contatto</a></li>
     </ul>
-    <div class="lang"><button class="lang-btn" type="button" aria-label="Scegli la lingua" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>IT</button><ul class="lang-list"><li><a href="../index.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/index.html" hreflang="rm" lang="rm">Rumantsch<small>RM</small></a></li><li><a href="../en/index.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="../it/index.html" hreflang="it" lang="it" class="aktiv">Italiano<small>IT</small></a></li><li><a href="../fr/index.html" hreflang="fr" lang="fr">Français<small>FR</small></a></li></ul></div>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Scegli la lingua" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>IT</button><ul class="lang-list"><li><a href="../index.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/index.html" hreflang="rm" lang="rm">Rumantsch<small>RM</small></a></li><li><a href="../en/index.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="../it/index.html" hreflang="it" lang="it" class="aktiv">Italiano<small>IT</small></a></li></ul></div>
     <button class="burger" aria-label="Apri il menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -93,6 +92,32 @@
     </div>
 
     <div class="cards">
+
+      <!-- 3 Didaktik -->
+      <a class="card" id="didaktik" href="didaktik.html">
+        <div class="art">
+          <svg viewBox="0 0 220 140" aria-hidden="true">
+            <path d="M0,140 L0,104 L60,84 L110,100 L170,78 L220,96 L220,140 Z" fill="#cfdacd"/>
+            <circle cx="172" cy="36" r="16" fill="#e9e3d6"/>
+            <!-- wachsende Tannen -->
+            <g fill="#6f8f78"><polygon points="62,96 50,120 74,120"/><polygon points="62,104 46,130 78,130"/><rect x="59" y="130" width="6" height="10"/></g>
+            <g fill="#3f5d4a"><polygon points="104,62 86,98 122,98"/><polygon points="104,76 82,114 126,114"/><polygon points="104,92 78,130 130,130"/><rect x="100" y="130" width="8" height="10"/></g>
+            <g fill="#2f4a39"><polygon points="152,82 138,108 166,108"/><polygon points="152,94 134,124 170,124"/><rect x="149" y="124" width="6" height="16"/></g>
+            <!-- Glühbirne -->
+            <g transform="translate(36,20)">
+              <path d="M16,0 a16,16 0 0 1 10,28.5 v7 h-20 v-7 A16,16 0 0 1 16,0 z" fill="#2f4a39"/>
+              <rect x="8" y="38" width="16" height="4" rx="2" fill="#2f4a39"/>
+              <path d="M11,22 l5,-9 l5,9" fill="none" stroke="#e9e3d6" stroke-width="2.2" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Pedagogia</h3>
+          <p>Sintesi, collegamenti e approcci operativi su teorie e concetti scientificamente fondati, in parte con strumenti per la pratica.</p>
+          <div class="tags"><span>Sintesi</span><span>Approcci operativi</span><span>Strumenti per la pratica</span></div>
+          <span class="go">Ai materiali →</span>
+        </div>
+      </a>
 
       <!-- 1 Englisch für Lehrpersonen -->
       <a class="card" id="english-lehrpersonen" href="english.html">
@@ -150,31 +175,6 @@
         </div>
       </a>
 
-      <!-- 3 Didaktik -->
-      <a class="card" id="didaktik" href="didaktik.html">
-        <div class="art">
-          <svg viewBox="0 0 220 140" aria-hidden="true">
-            <path d="M0,140 L0,104 L60,84 L110,100 L170,78 L220,96 L220,140 Z" fill="#cfdacd"/>
-            <circle cx="172" cy="36" r="16" fill="#e9e3d6"/>
-            <!-- wachsende Tannen -->
-            <g fill="#6f8f78"><polygon points="62,96 50,120 74,120"/><polygon points="62,104 46,130 78,130"/><rect x="59" y="130" width="6" height="10"/></g>
-            <g fill="#3f5d4a"><polygon points="104,62 86,98 122,98"/><polygon points="104,76 82,114 126,114"/><polygon points="104,92 78,130 130,130"/><rect x="100" y="130" width="8" height="10"/></g>
-            <g fill="#2f4a39"><polygon points="152,82 138,108 166,108"/><polygon points="152,94 134,124 170,124"/><rect x="149" y="124" width="6" height="16"/></g>
-            <!-- Glühbirne -->
-            <g transform="translate(36,20)">
-              <path d="M16,0 a16,16 0 0 1 10,28.5 v7 h-20 v-7 A16,16 0 0 1 16,0 z" fill="#2f4a39"/>
-              <rect x="8" y="38" width="16" height="4" rx="2" fill="#2f4a39"/>
-              <path d="M11,22 l5,-9 l5,9" fill="none" stroke="#e9e3d6" stroke-width="2.2" stroke-linejoin="round"/>
-            </g>
-          </svg>
-        </div>
-        <div class="body">
-          <h3>Pedagogia</h3>
-          <p>Sintesi, collegamenti e approcci operativi su teorie e concetti scientificamente fondati, in parte con strumenti per la pratica.</p>
-          <div class="tags"><span>Sintesi</span><span>Approcci operativi</span><span>Strumenti per la pratica</span></div>
-          <span class="go">Ai materiali →</span>
-        </div>
-      </a>
 
       <!-- 5 App-Werkstatt -->
       <a class="card" id="werkstatt" href="werkstatt.html">

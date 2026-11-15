@@ -18,9 +18,9 @@ CSS_V = version(CSS)
 JS_V = {n: version((ROOT / n).read_text()) for n in ("bullet-journal.js", "vorlagen.js")}
 
 MENU = [
+    ("didaktik.html", "Pädagogik"),
     ("english.html", "Lehrpersonen"),
     ("lernende.html", "Lernende"),
-    ("didaktik.html", "Pädagogik"),
     ("werkstatt.html", "App-Werkstatt"),
     ("vision.html", "Vision"),
     ("ueber-anja.html", "Über Anja"),
