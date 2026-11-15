@@ -356,3 +356,35 @@
   .themen .thema.breit > :not(.thema-art){grid-column:2}
   .themen .thema.breit .badge{margin-top:22px;justify-self:start}
   @media (max-width:720px){ .themen .thema.breit{display:flex} .themen .thema.breit .thema-art{border-right:none;border-bottom:1px dashed #cdc6b6;margin-bottom:14px} }
+  /* ── Lerngespräche führen ── */
+  .lg-fm{display:grid;grid-template-columns:150px repeat(3,minmax(0,1fr));gap:8px;margin:16px 0 10px;font-size:14.5px}
+  .lg-fm .kopf{background:var(--text);color:#fff;border-radius:10px;padding:10px 12px;font-weight:700}
+  .lg-fm .kopf small{display:block;font-weight:400;opacity:.8;font-size:12.5px}
+  .lg-fm .zeile{color:#fff;border-radius:10px;padding:10px 12px;font-weight:700;display:flex;align-items:center}
+  .lg-fm button{font:inherit;font-weight:700;font-size:18px;color:var(--th);background:var(--thL);border:2px solid transparent;border-radius:10px;padding:14px 8px;cursor:pointer;transition:background .15s,border-color .15s}
+  .lg-fm button:hover,.lg-fm button:focus-visible{border-color:var(--th)}
+  .lg-fm button.an{background:var(--th);color:#fff}
+  .lg-fm-text{background:#fff;border:1px dashed var(--th);border-radius:12px;padding:14px 18px;min-height:52px;color:#3d4b41;font-size:15.5px}
+  .lg-fm-text:empty::before{content:attr(data-leer);color:var(--muted);font-style:italic}
+  .lg-flip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+  .lg-flip{font:inherit;text-align:left;background:#fff;border:1px solid var(--line);border-left:5px solid var(--sp);border-radius:12px;padding:16px 18px;cursor:pointer;min-height:96px;color:#3d4b41;font-size:15px;line-height:1.5}
+  .lg-flip .hinten{display:none}
+  .lg-flip .vorne::after{content:" ↻";color:var(--muted);font-size:13px}
+  .lg-flip.offen{border-left-color:var(--th);background:var(--thL)}
+  .lg-flip.offen .vorne{display:none}.lg-flip.offen .hinten{display:block}
+  .lg-flip small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+  .lg-phasen td small{display:block;color:var(--muted);font-weight:400;font-size:12.5px}
+  .lg-schritte{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 6px}
+  .lg-schritte .gruppe{background:#fff;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:12px;padding:14px 16px}
+  .lg-schritte .gruppe>b{display:block;color:var(--c);font-family:Fraunces,serif;font-size:18px;margin-bottom:6px}
+  .lg-schritte ol{margin:0;padding-left:22px;font-size:14.5px;color:#3d4b41}
+  .lg-schritte li{margin:4px 0}
+  .lg-weg{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px}
+  .lg-weg>div{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--muted)}
+  .lg-weg>div b{display:block;color:var(--text);font-size:15px;margin:6px 0 2px}
+  .lg-haeklein{display:grid;gap:8px;margin:10px 0}
+  .lg-haeklein>div{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:15px}
+  .lg-haeklein span{min-width:58px;text-align:center;font-weight:700;font-size:20px;color:var(--th)}
+  @media (max-width:820px){ .lg-schritte{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:720px){ .lg-fm{grid-template-columns:repeat(3,minmax(0,1fr))} .lg-fm .leer{display:none} .lg-fm .zeile{grid-column:1 / -1} .lg-flip-grid,.lg-schritte{grid-template-columns:1fr} }
+  .lg-phasen td:first-child{width:20%}

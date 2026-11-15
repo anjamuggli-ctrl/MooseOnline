@@ -348,6 +348,15 @@ THEMA_LA = f"""      <a class="plan thema entile" href="lernanalyse.html"><div c
         <ul><li>Was Lernen ist und wie es sich im Jugendalter verändert</li><li>Vorgehen, Ergebnisse und Fortschritte lesen</li><li>Hindernisse, Stärken und Begabungen erkennen</li><li>Diagnostik-Förder-Kreislauf und Beobachtungsprotokolle</li><li>Urteilsfehler erkennen und Entscheide gut begründen</li><li>Neun Instrumente und ein Analyse-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+LG_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">'
+    '<path d="M28 22 H120 a10 10 0 0 1 10 10 V66 a10 10 0 0 1 -10 10 H64 L44 94 V76 H28 a10 10 0 0 1 -10 -10 V32 a10 10 0 0 1 10 -10 Z" fill="#e7ede6" stroke="#3f5d4a"/>'
+    '<path d="M110 46 H192 a10 10 0 0 1 10 10 V86 a10 10 0 0 1 -10 10 H180 V112 L160 96 H110 a10 10 0 0 1 -10 -10 V56 a10 10 0 0 1 10 -10 Z" fill="#fff" stroke="#a8682f"/>'
+    '<path d="M36 40 H108 M36 54 H92" stroke="#3f5d4a"/><path d="M118 64 H184 M118 78 H170" stroke="#a8682f"/></g></svg>')
+THEMA_LG = f"""      <a class="plan thema entile" href="lerngespraeche.html"><div class="thema-art">{LG_ART}</div><span class="badge live">Neu</span><h3>Lerngespräche führen</h3>
+        <p>Vom kurzen Feedback im Unterricht bis zum Standortgespräch mit Eltern: Hier geht es darum, wie Gespräche das Lernen voranbringen. Die Seite verbindet Feedbackforschung, Selbstwirksamkeit und lösungsorientierte Beratung mit konkreten Gesprächsmodellen.</p>
+        <ul><li>Gesprächsformen und Feedbackebenen</li><li>Haltung, Sprache und Gleichwürdigkeit</li><li>Selbstwirksamkeit, Lernstrategien und Fehler</li><li>GROW, lösungsorientierte Fragen und «Ich schaffs»</li><li>Kritik, WOWW, dialogisches Lernen und Standortgespräche</li><li>Acht Instrumente und ein Gesprächs-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
@@ -364,6 +373,7 @@ area("didaktik.html", "Pädagogik", "",
      [THEMA_BEGLEITUNG,
       THEMA_LV,
       THEMA_LA,
+      THEMA_LG,
       THEMA_INSTR], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
@@ -401,6 +411,17 @@ page("lernanalyse.html", "Lernen analysieren – MuggliOnline", f"""<main class=
   </section>
 </main>""", active="didaktik.html", description="Lernen analysieren: Lernbegriff, Lernen im Jugendalter, Lernprozesse und Ergebnisse, Fortschritte, Hindernisse und Begabungen, Diagnostik-Förder-Kreislauf, Beobachtung und Urteilsfehler, wissenschaftlich fundiert.")
 
+# ---------------- Pädagogik: Thema Lerngespräche führen ----------------
+ACTIVE["lerngespraeche.html"] = "didaktik.html"
+LG_BODY = "".join((B / "lerngespraeche" / f).read_text() for f in sorted(p.name for p in (B / "lerngespraeche").glob("*.html")))
+page("lerngespraeche.html", "Lerngespräche führen – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lerngespräche führen', "Pädagogik · Thema", "Lerngespräche führen", "Wie bringen Gespräche das Lernen voran? Theorien, Gesprächsformen, Modelle, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Lehrpersonen sprechen ständig mit Lernenden: kurz im Vorbeigehen, in Coachinggesprächen, bei Rückmeldungen zu Arbeiten und in Standortgesprächen mit Eltern. Lerngespräche sind die Gespräche, in denen das Lernen selbst zum Thema wird: Wo stehst du, wohin willst du, und was ist dein nächster Schritt?", "Diese Seite klärt zuerst, was ein Lerngespräch ausmacht, welche Formen und Feedbackebenen es gibt und welche Haltung und Sprache tragen. Dann zeigt sie, wie Gespräche Selbstwirksamkeit, Lernstrategien und den Umgang mit Fehlern stärken, und stellt Modelle für die Praxis vor, von GROW über lösungsorientierte Fragen und «Ich schaffs» bis zum Standortgespräch. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+<!--BODY:lerngespraeche-->{LG_BODY}<!--/BODY-->
+  </section>
+</main>""", active="didaktik.html", description="Lerngespräche führen: Gesprächsformen, Feedbackebenen, Haltung und Sprache, Selbstwirksamkeit, GROW, lösungsorientierte Fragen, Ich schaffs, Kritik, WOWW, dialogisches Lernen und Standortgespräche, wissenschaftlich fundiert.")
+
 # ---------------- Pädagogik: Instrumente ----------------
 ACTIVE["instrumente.html"] = "didaktik.html"
 INSTRUMENTE = [
@@ -422,6 +443,16 @@ INSTRUMENTE = [
       ("Passungs-Check für die eigene Lektion", "LA7_Passungs-Check"),
       ("Vorbereitung Standort- oder Übertrittsgespräch", "LA8_Gespraechsvorbereitung"),
       ("Lernjournal für Lernende", "LA9_Lernjournal")]),
+    ("Lerngespräche führen", "lerngespraeche.html", LG_ART,
+     ("downloads/lerngespraeche/Instrumente_Lerngespraeche_fuehren", "Alle 8 Instrumente in einer Datei"),
+     [("Gesprächsleitfaden Lerngespräch", "LG1_Gespraechsleitfaden"),
+      ("Fragekarten «lösungsorientiert fragen»", "LG2_Fragekarten"),
+      ("Feedback-Planer", "LG3_Feedback-Planer"),
+      ("«Ich schaffs»-Plan für Jugendliche", "LG4_Ich-schaffs-Plan"),
+      ("Kritische Rückmeldung vorbereiten", "LG5_Kritische_Rueckmeldung"),
+      ("WOWW-Beobachtungsbogen und Klassenskala", "LG6_WOWW-Beobachtung"),
+      ("Standortgespräch: Vorbereitung und Fördervereinbarung", "LG7_Standortgespraech"),
+      ("Gesprächsreflexion", "LG8_Gespraechsreflexion")]),
 ]
 def instr_kachel(titel, href, art, alle, liste):
     ordner = href.replace(".html", "").replace("lernbegleitung", "lernbegleitung")
@@ -447,7 +478,7 @@ page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
 {chr(10).join(instr_kachel(*k) for k in INSTRUMENTE)}
     </div>
   </section>
-</main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren.")
+</main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",
