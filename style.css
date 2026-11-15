@@ -441,3 +441,9 @@
   .instr .instr-leer{color:var(--muted);font-size:15px}
   .instr .go{margin:auto 24px 0;padding-top:16px;font-weight:600;color:var(--green);font-size:15px}
   .instr .badge{align-self:flex-start}
+  /* Instrumente-Kachel: immer zuunterst über die ganze Breite */
+  .themen .thema.breit{grid-column:1/-1;display:grid;grid-template-columns:300px 1fr;grid-auto-rows:min-content;column-gap:8px;padding-bottom:22px}
+  .themen .thema.breit .thema-art{grid-column:1;grid-row:1/span 6;border-bottom:none;border-right:1px dashed #cdc6b6;margin:0;align-items:center}
+  .themen .thema.breit > :not(.thema-art){grid-column:2}
+  .themen .thema.breit .badge{margin-top:22px;justify-self:start}
+  @media (max-width:720px){ .themen .thema.breit{display:flex} .themen .thema.breit .thema-art{border-right:none;border-bottom:1px dashed #cdc6b6;margin-bottom:14px} }

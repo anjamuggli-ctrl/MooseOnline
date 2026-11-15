@@ -352,7 +352,7 @@ INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" strok
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
     '<path d="M148 76 V100 M138 90 L148 100 L158 90" stroke="#a8682f" stroke-width="3"/></g></svg>')
-THEMA_INSTR = f"""      <a class="plan thema entile" href="instrumente.html"><div class="thema-art">{INSTR_ART}</div><span class="badge live">Gratis</span><h3>Instrumente</h3>
+THEMA_INSTR = f"""      <a class="plan thema entile breit" href="instrumente.html"><div class="thema-art">{INSTR_ART}</div><span class="badge live">Gratis</span><h3>Instrumente</h3>
         <p>Raster, Bögen und Leitfäden für Praktikum und Unterricht, geordnet nach Handlungskompetenz. Alle Instrumente dürfen gratis heruntergeladen, genutzt und angepasst werden.</p>
         <ul><li>als bearbeitbare Word-Datei oder als PDF</li><li>einzeln oder als Sammlung pro Thema</li><li>mit Quellenangaben zur Theorie</li></ul>
         <span class="go">Zu den Instrumenten →</span></a>"""
