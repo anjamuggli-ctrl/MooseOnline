@@ -599,3 +599,23 @@
   .ex-qr p{color:#45524a;font-size:15.5px;margin:0}
   .ex-qr-url{margin-top:6px!important;font-weight:700;color:var(--green)!important;word-break:break-all}
   @media (max-width:640px){ .ex-qr{flex-direction:column;align-items:flex-start} .ex-qr-code{width:140px} }
+  /* ── Klassenseiten ── */
+  .ex-video-wrap{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:18px;align-items:start}
+  .ex-video{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#1f2a23}
+  .ex-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .ex-qr-video{flex-direction:column;align-items:flex-start;margin:0}
+  .ex-qr-video .ex-qr-code{width:160px;flex:none}
+  .ex-diagramm-wrap{background:#fbfaf6;border:1px solid var(--line);border-radius:12px;padding:10px;margin:6px 0 12px}
+  .ex-diagramm{width:100%;height:auto;display:block}
+  .ex-mark circle,.ex-mark rect{fill:#2f3a32}
+  .ex-mark text{fill:#fff;font:700 14px Inter,system-ui,sans-serif}
+  .ex-mark-b rect{fill:#a8682f}
+  .ex-nummer{display:inline-flex;width:30px;height:30px;border-radius:50%;background:#2f3a32;color:#fff;align-items:center;justify-content:center;font-size:14px;font-weight:700;padding:0 4px;min-width:30px;box-sizing:border-box;white-space:nowrap}
+  .ex-paare-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 22px}
+  .ex-paare-2 .ex-paar{grid-template-columns:auto minmax(0,1fr)}
+  .ex-paare-2 .ex-paar .ex-nummer{width:auto;border-radius:16px;padding:0 10px}
+  .ex-term-kurz{width:40px}
+  .ex-paare .ex-paar:has(.ex-term-kurz){grid-template-columns:40px minmax(0,1fr)}
+  @media (max-width:900px){ .ex-video-wrap{grid-template-columns:1fr} .ex-qr-video{flex-direction:row;align-items:center} }
+  @media (max-width:640px){ .ex-paare-2{grid-template-columns:1fr} .ex-qr-video{flex-direction:column;align-items:flex-start} }
+  @media (max-width:640px){ .ex-diagramm-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch} .ex-diagramm{min-width:640px} .ex-diagramm-wrap::after{content:"← swipe to see the whole drawing →";display:block;text-align:center;color:var(--muted);font-size:12.5px;margin-top:4px;position:sticky;left:0} }

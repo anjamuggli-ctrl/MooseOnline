@@ -3094,6 +3094,86 @@
    "rm": "A l'examen da prova →",
    "en": "To the practice test →",
    "it": "Alla verifica di prova →"
+  },
+  "Deine Klasse": {
+   "rm": "Tia classa",
+   "en": "Your class",
+   "it": "La tua classe"
+  },
+  "Energy and the Environment": {
+   "rm": "Energy and the Environment",
+   "en": "Energy and the Environment",
+   "it": "Energy and the Environment"
+  },
+  "Hier findest du eine Kachel für jede Klasse. Wähle deine Klasse aus: Dort findest du Übungen, Videos und Probeprüfungen zum aktuellen Thema.": {
+   "rm": "Qua chattas ti ina plattina per mintga classa. Tscherna tia classa: là chattas ti exercizis, videos ed examens da prova tar il tema actual.",
+   "en": "Here you will find one tile for each class. Choose your class: there you will find exercises, videos and practice tests on the current topic.",
+   "it": "Qui trovi un riquadro per ogni classe. Scegli la tua classe: lì trovi esercizi, video e verifiche di prova sul tema attuale."
+  },
+  "Nuclear Energy": {
+   "rm": "Nuclear Energy",
+   "en": "Nuclear Energy",
+   "it": "Nuclear Energy"
+  },
+  "Nuclear Energy: video and tasks": {
+   "rm": "Nuclear Energy: video and tasks",
+   "en": "Nuclear Energy: video and tasks",
+   "it": "Nuclear Energy: video and tasks"
+  },
+  "Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr": {
+   "rm": "Polimecanicras e polimecanichers, modul G, 2. onn d'emprendissadi",
+   "en": "Polymechanics apprentices, G module, 2nd year",
+   "it": "Polimeccaniche e polimeccanici, modulo G, 2° anno di tirocinio"
+  },
+  "PomE24B": {
+   "rm": "PomE24B",
+   "en": "PomE24B",
+   "it": "PomE24B"
+  },
+  "PomG25A": {
+   "rm": "PomG25A",
+   "en": "PomG25A",
+   "it": "PomG25A"
+  },
+  "PomE24B · Technical English": {
+   "rm": "PomE24B · Technical English",
+   "en": "PomE24B · Technical English",
+   "it": "PomE24B · Technical English"
+  },
+  "PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.": {
+   "rm": "PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.",
+   "en": "PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.",
+   "it": "PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers."
+  },
+  "PomE24B: Energy and the Environment – MuggliOnline": {
+   "rm": "PomE24B: Energy and the Environment – MuggliOnline",
+   "en": "PomE24B: Energy and the Environment – MuggliOnline",
+   "it": "PomE24B: Energy and the Environment – MuggliOnline"
+  },
+  "Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II": {
+   "rm": "Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II",
+   "en": "Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II",
+   "it": "Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II"
+  },
+  "Zur Klassenseite →": {
+   "rm": "A la pagina da la classa →",
+   "en": "To the class page →",
+   "it": "Alla pagina della classe →"
+  },
+  "Übungen, Probeprüfungen und Material für meine Klassen, mit Lösungen zum selbstständigen Lernen.": {
+   "rm": "Exercizis, examens da prova e material per mias classas, cun soluziuns per emprender independentamain.",
+   "en": "Exercises, practice tests and materials for my classes, with solutions for independent learning.",
+   "it": "Esercizi, verifiche di prova e materiale per le mie classi, con soluzioni per imparare in modo autonomo."
+  },
+  "› PomE24B": {
+   "rm": "› PomE24B",
+   "en": "› PomE24B",
+   "it": "› PomE24B"
+  },
+  "› PomG25A": {
+   "rm": "› PomG25A",
+   "en": "› PomG25A",
+   "it": "› PomG25A"
   }
  },
  "js": {

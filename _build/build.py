@@ -490,43 +490,54 @@ page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
   </section>
 </main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.")
 
-# ---------------- Lernende: Probeprüfungen ----------------
-PROBEPRUEFUNGEN = """      <a class="plan plan-link" href="probepruefungen.html"><span class="badge live">Neu</span><h3>Probeprüfungen</h3><p>Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.</p><span class="go">Zu den Probeprüfungen →</span></a>"""
+# ---------------- Lernende: Klassen ----------------
 EXAM_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 98 L60 82 L110 96 L170 76 L220 90 L220 120 Z" fill="#cfdacd"/>'
     '<rect x="70" y="10" width="80" height="100" rx="6" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/>'
     '<g stroke="#9fb3a5" stroke-width="3" stroke-linecap="round"><path d="M100 32 H136 M100 56 H136 M100 80 H128"/></g>'
     '<g fill="none" stroke="#a8682f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M80 31 l5 5 l8 -10 M80 55 l5 5 l8 -10"/></g>'
     '<rect x="80" y="74" width="12" height="12" rx="2" fill="none" stroke="#3f5d4a" stroke-width="2.5"/>'
     '<g transform="rotate(35 172 70)"><rect x="166" y="36" width="10" height="50" rx="2" fill="#6f8f78"/><polygon points="166,86 176,86 171,97" fill="#2f4a39"/></g></svg>')
-ACTIVE["probepruefungen.html"] = "lernende.html"
-page("probepruefungen.html", "Probeprüfungen – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › Probeprüfungen', "Lernende", "Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")}
-  <section class="section">
-{einleitung("So übst du", ["Jede Kachel gehört zu einer Prüfung. Die Übungen laufen direkt im Browser, auch auf dem Handy, und deine Antworten bleiben auf deinem Gerät gespeichert.", "Am Schluss klickst du auf «Check my answers» und vergleichst deine Antworten mit den Lösungen."], 0)}
-    <div class="grid3 themen">
-      <a class="plan thema entile" href="pomg25a-materials.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Technical English</span><h3>PomG25A: Properties of Materials Exam</h3>
-        <p>Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)</p>
-        <span class="go">Zur Probeprüfung →</span></a>
-    </div>
-  </section>
-</main>""", active="lernende.html", description="Probeprüfungen zum Üben, mit Lösungen zur Selbstkontrolle.")
+ENERGY_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 100 L50 86 L110 98 L170 80 L220 92 L220 120 Z" fill="#cfdacd"/>'
+    '<g fill="#e7ebe7" stroke="#b8c2b9" stroke-width="1.5"><circle cx="78" cy="20" r="12"/><circle cx="94" cy="13" r="14"/><circle cx="111" cy="21" r="11"/></g>'
+    '<path d="M68 104 Q80 70 72 34 H116 Q108 70 120 104 Z" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/>'
+    '<rect x="132" y="66" width="48" height="38" rx="4" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/><path d="M144 66 Q156 46 168 66" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/>'
+    '<g fill="none" stroke="#a8682f" stroke-width="2"><ellipse cx="156" cy="85" rx="12" ry="5"/><ellipse cx="156" cy="85" rx="12" ry="5" transform="rotate(60 156 85)"/><ellipse cx="156" cy="85" rx="12" ry="5" transform="rotate(-60 156 85)"/></g>'
+    '<circle cx="156" cy="85" r="2.5" fill="#a8682f"/></svg>')
+KLASSEN = [
+ f"""      <a class="plan thema entile" href="pomg25a-materials.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Technical English</span><h3>PomG25A</h3>
+        <p>Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr</p>
+        <ul><li>Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II</li></ul>
+        <span class="go">Zur Probeprüfung →</span></a>""",
+ f"""      <a class="plan thema entile" href="pome24b-energy.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>PomE24B</h3>
+        <p>Energy and the Environment</p>
+        <ul><li>Nuclear Energy: video and tasks</li></ul>
+        <span class="go">Zur Klassenseite →</span></a>""",
+]
 ACTIVE["pomg25a-materials.html"] = "lernende.html"
 POM_BODY = "".join((B / "pomg25a" / f).read_text() for f in sorted(p.name for p in (B / "pomg25a").glob("*.html")))
 page("pomg25a-materials.html", "PomG25A: Properties of Materials Exam – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › <a href="probepruefungen.html">Probeprüfungen</a>', "Probeprüfung · Technical English", "PomG25A: Properties of Materials Exam", "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)")}
+{hero('<a href="lernende.html">Lernende</a> › PomG25A', "Probeprüfung · Technical English", "PomG25A: Properties of Materials Exam", "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)")}
   <section class="section">
 <!--BODY:pomg25a-->{POM_BODY}<!--/BODY-->
   </section>
 </main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
 
+ACTIVE["pome24b-energy.html"] = "lernende.html"
+PE_BODY = "".join((B / "pome24b" / f).read_text() for f in sorted(p.name for p in (B / "pome24b").glob("*.html")))
+page("pome24b-energy.html", "PomE24B: Energy and the Environment – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › PomE24B', "PomE24B · Technical English", "Energy and the Environment", "Nuclear Energy")}
+  <section class="section">
+<!--BODY:pome24b-->{PE_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.")
+
 area("lernende.html", "Lernende", "",
      "Lernende",
-     "Erklärungen, Übungen und Probeprüfungen mit Lösungen für verschiedene Fächer und Stufen, zum eigenständigen Lernen.",
-     "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
-     [plan("Erklärungen", "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen."),
-      plan("Übungen", "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen."),
-      PROBEPRUEFUNGEN],
-     bar=("Selbstständig lernen", ["Hier findest du Erklärungen, Übungen und Probeprüfungen, mit denen du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten kannst.",
+     "Übungen, Probeprüfungen und Material für meine Klassen, mit Lösungen zum selbstständigen Lernen.",
+     "",
+     KLASSEN,
+     cols="grid2 themen",
+     bar=("Deine Klasse", ["Hier findest du eine Kachel für jede Klasse. Wähle deine Klasse aus: Dort findest du Übungen, Videos und Probeprüfungen zum aktuellen Thema.",
           "Zu allen Übungen gibt es Lösungen. So kannst du selbst überprüfen, wo du stehst, und gezielt weiterüben."], 0))
 
 # ---------------- App-Werkstatt ----------------
