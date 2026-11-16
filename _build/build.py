@@ -490,13 +490,25 @@ page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
   </section>
 </main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.")
 
+# ---------------- Lernende: Probeprüfungen ----------------
+PROBEPRUEFUNGEN = """      <div class="plan"><span class="badge live">Neu</span><h3>Probeprüfungen</h3><p>Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.</p>
+        <a class="mini-kachel" href="pomg24a-materials.html"><b>PomG24A: Properties of Materials Exam</b><span>Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)</span><span class="go">Zu den Übungen →</span></a></div>"""
+ACTIVE["pomg24a-materials.html"] = "lernende.html"
+POM_BODY = "".join((B / "pomg24a" / f).read_text() for f in sorted(p.name for p in (B / "pomg24a").glob("*.html")))
+page("pomg24a-materials.html", "PomG24A: Properties of Materials Exam – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › Probeprüfungen', "Probeprüfung · Technical English", "PomG24A: Properties of Materials Exam", "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)")}
+  <section class="section">
+<!--BODY:pomg24a-->{POM_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
+
 area("lernende.html", "Lernende", "",
      "Lernende",
      "Erklärungen, Übungen und Probeprüfungen mit Lösungen für verschiedene Fächer und Stufen, zum eigenständigen Lernen.",
      "Hier kannst du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten. Geplant sind:",
      [plan("Erklärungen", "Verständliche Erklärungen zu wichtigen Themen, mit Beispielen."),
       plan("Übungen", "Kurze Übungen zu einzelnen Themen, um gezielt Lücken zu schliessen."),
-      plan("Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")],
+      PROBEPRUEFUNGEN],
      bar=("Selbstständig lernen", ["Hier findest du Erklärungen, Übungen und Probeprüfungen, mit denen du selbstständig lernen und dich gezielt auf Prüfungen vorbereiten kannst.",
           "Zu allen Übungen gibt es Lösungen. So kannst du selbst überprüfen, wo du stehst, und gezielt weiterüben."], 0))
 

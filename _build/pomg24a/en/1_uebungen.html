@@ -1,0 +1,410 @@
+  <div class="ex" id="ex" lang="en">
+   <div class="ex-intro">
+    <div>
+     <h2>How to use this page</h2>
+     <p>These exercises help you prepare for the exam on <b>Study Packet II: Properties of Materials</b> (OneNote: 2. Properties of Materials). Work through the parts in any order. Your answers are saved in this browser, so you can stop and come back later.</p>
+     <ul>
+      <li><b>Drag and drop:</b> drag a word or definition into the right place. On a phone or tablet you can also tap a word first and then tap the place where it belongs. Drag it back to the box to remove it.</li>
+      <li><b>Writing tasks:</b> answer in <b>complete sentences</b>, as in the exam.</li>
+      <li>When you are done, click <b>Check my answers</b> at the bottom. Drag-and-drop and true/false tasks are corrected. For writing tasks you see a <b>model answer</b>: compare it with your own text. There is more than one correct way to answer.</li>
+     </ul>
+    </div>
+    <nav class="ex-toc" aria-label="Parts">
+     <b>Parts</b>
+     <a href="#teil-a">A · Fill in the blanks</a>
+     <a href="#teil-b">B · Matching</a>
+     <a href="#teil-c">C · Sorting and labelling</a>
+     <a href="#teil-d">D · Categories table</a>
+     <a href="#teil-e">E · True or false?</a>
+     <a href="#teil-f">F · Vocabulary</a>
+     <a href="#teil-g">G · Short answers</a>
+     <a href="#teil-h">H · Open-ended questions</a>
+    </nav>
+   </div>
+   <div id="ex-root"><p class="ex-noscript">Please turn on JavaScript to use the exercises.</p></div>
+   <div class="ex-bottom" id="ex-bottom">
+    <button type="button" class="ex-btn haupt" id="ex-check">Check my answers</button>
+    <button type="button" class="ex-btn" id="ex-hide" hidden>Hide corrections</button>
+    <button type="button" class="ex-btn leise" id="ex-reset">Start again</button>
+    <div class="ex-score" id="ex-score" hidden></div>
+   </div>
+  </div>
+<script>
+(function(){
+"use strict";
+/* ================= DATA ================= */
+var GAPS = [
+ { id:"a1", title:"A1 · Mechanical properties", hint:"Use each word only once. Two words are not needed.",
+   extra:["density","conductors"],
+   text:"The ability of a material to resist forces without breaking, bending or changing in a permanent way is called [[strength]]. When a weight hangs on the end of a rope, this weight is called the [[load]]. The force inside the rope that makes it stretch is called the [[stress]], and the actual change, the stretching, is called the [[strain]]. Stress that makes a material longer is called [[tensile]] stress. Stress that makes a material shorter is called [[compressive]] stress, and stress that divides a material into layers is called [[shearing]] stress. When molten aluminium is poured into a mould and keeps its new shape, this shows its [[plasticity]]. Metals that can be hammered or rolled into thin sheets have good [[malleability]]. Copper can be stretched into a thin wire because of its [[ductility]]. The springs in vehicles work because of [[elasticity]]. The resistance of a material to surface abrasion, scratching and indentation is its [[hardness]]. A material that is hard but easily broken shows [[brittleness]]. Good resistance to [[fatigue]] means that a material can resist repeated stress cycles and tension." },
+ { id:"a2", title:"A2 · Thermal properties", hint:"Use each word only once. Two words are not needed.",
+   extra:["gas","half"],
+   text:"Thermal properties describe how a material behaves when its [[temperature]] changes. [[Thermal conductivity]] is the ability of a material to conduct heat. In general, [[metals]] have a high thermal conductivity because they can transmit heat energy. Cooling solutions for electronics or turbines often use materials such as [[copper]], aluminium and silver. Buildings and furnaces use materials with a low thermal conductivity, such as [[polystyrene]] and alumina, for [[insulation]]. [[Thermal expansion]] is the change in dimensions that happens when the temperature goes up or down. Heat causes expansion because it increases the [[vibrations]] of atoms or molecules. Aluminium expands [[twice]] as much as iron under the same temperature increase. The [[melting point]] is the temperature at which a material turns suddenly from solid to [[liquid]]. For metals, the maximum operating temperature is usually around [[two thirds]] of the melting temperature." },
+ { id:"a3", title:"A3 · Electrical-magnetic and chemical properties", hint:"Use each word only once. Two words are not needed.",
+   extra:["heat","layers"],
+   text:"Electrical conductivity is the ability of a material to conduct electrical [[charge]]. Rubber and glass let so few [[electrons]] through that the current is hardly noticeable. These materials are called [[insulators]]. Metals conduct current readily, so they are called [[conductors]]. Among the best metallic conductors are [[silver]], copper, gold and aluminium. Electrical [[resistivity]] is the ability of a material to resist, or oppose, the transport of electrical charge. A chemical property becomes evident during a [[chemical reaction]]. Chemical properties can help to [[identify]] an unknown substance or to separate it from other substances. Resistance to chemicals is the ability of a material to resist chemical attack and to withstand [[corrosion]] processes such as [[oxidation]]. The [[atomic volume]] is the volume occupied by a gram-atom of an element in the solid state, and [[density]] is the mass of material per unit volume (kg/m³)." },
+ { id:"a4", title:"A4 · Conductors and insulators", hint:"Use each word only once. Two words are not needed.",
+   extra:["brittle","melt"],
+   text:"Some materials let [[heat]] pass or flow through them easily. They are called thermal [[conductors]]. Materials that do not let heat pass through them easily are called thermal [[insulators]]. Metal [[saucepans]] are good conductors: they let the heat from the cooker pass through to the water and food inside. Wood, cork, plastic and [[oven gloves]] are good insulators. Heat only moves from [[hot]] things to [[colder]] things. As a general rule, materials that conduct heat well are also good conductors of [[electricity]]. This is why [[copper]] is used for electrical wires. Each wire is covered in [[plastic]], so that electricity does not flow out and give you a [[shock]]." }
+];
+
+var MATCH = [
+ { id:"b1", title:"B1 · Mechanical properties", pairs:[
+   ["strength","the ability to resist forces without breaking, bending, shattering or changing permanently"],
+   ["plasticity","the ability to be permanently changed in shape, for example in a mould"],
+   ["malleability","the property that allows metals to be hammered or rolled into thin sheets"],
+   ["ductility","the ability to change shape permanently without breaking, usually by stretching, for example into a wire"],
+   ["elasticity","the ability to return to the original shape or volume after a force has changed it"],
+   ["hardness","the resistance to surface abrasion, scratching and indentation"],
+   ["brittleness","the property of a material that is hard but easily broken"],
+   ["fatigue","the ability to resist repeated stress cycles and tension"] ]},
+ { id:"b2", title:"B2 · Forces and stress", pairs:[
+   ["load","the weight or force that is applied to a material"],
+   ["stress","the force inside a material that causes it to change"],
+   ["strain","the actual change in the material, for example the stretching"],
+   ["tensile stress","the stress that causes a material to stretch"],
+   ["compressive stress","the stress that causes a material to get shorter"],
+   ["shearing stress","the stress that causes a material to divide into layers"] ]},
+ { id:"b3", title:"B3 · Thermal, electrical-magnetic and chemical properties", pairs:[
+   ["thermal conductivity","the ability of a material to conduct heat"],
+   ["thermal expansion","the change in dimensions when the temperature is increased or decreased"],
+   ["melting point","the temperature at which a material turns suddenly from solid to liquid"],
+   ["electrical conductivity","the ability of a material to conduct electrical charge"],
+   ["electrical resistivity","the ability of a material to oppose the transport of electrical charge"],
+   ["resistance to chemicals","the ability to resist chemical attack and corrosion processes such as oxidation"],
+   ["atomic volume","the volume occupied by a gram-atom of an element in the solid state"],
+   ["density","the mass of material per unit volume (kg/m³)"] ]},
+ { id:"b4", title:"B4 · Technical definitions", pairs:[
+   ["brittleness","the tendency to fracture without appreciable deformation and under low stress"],
+   ["strain","the state of a material which is distorted by forces acting on it"],
+   ["plasticity","a property by which deformation due to a stress is largely retained after the stress is removed"],
+   ["hardness","resistance to cutting, indentation and abrasion"],
+   ["insulator","a material that lets so few electrons through that the current is hardly noticeable"],
+   ["conductor","a material, such as a metal, that conducts electrical current readily"] ]}
+];
+
+var SORT = { id:"c1", title:"C1 · Sort the properties into the four categories",
+  hint:"Drag each property into the right category. The grouping follows the Study Packet.",
+  cats:["mechanical","thermal","electrical-magnetic","chemical"],
+  items:[["strength","mechanical"],["plasticity","mechanical"],["malleability","mechanical"],["ductility","mechanical"],["elasticity","mechanical"],["hardness","mechanical"],["brittleness","mechanical"],["fatigue","mechanical"],
+   ["thermal conductivity","thermal"],["thermal expansion","thermal"],["melting point","thermal"],
+   ["electrical conductivity","electrical-magnetic"],["electrical resistivity","electrical-magnetic"],
+   ["resistance to chemicals","chemical"],["atomic volume","chemical"],["density","chemical"]] };
+
+var CATS = [
+ ["Mechanical properties","Mechanical properties describe how a material reacts when a force is applied to it. They show, for example, whether the material resists the force, changes its shape permanently, returns to its original shape or breaks.","strength (e.g. of steel), elasticity (springs in vehicles), ductility (copper wire)"],
+ ["Thermal properties","Thermal properties describe how a material behaves when its temperature changes. They include thermal conductivity, thermal expansion and the melting point.","copper has a high thermal conductivity; aluminium expands twice as much as iron"],
+ ["Electrical-magnetic properties","Electrical-magnetic properties describe how well a material conducts or resists electrical charge. Conductors let current through readily, while insulators let hardly any current through.","silver and copper are good conductors; rubber and glass are insulators"],
+ ["Chemical properties","Chemical properties become evident during a chemical reaction. They help to identify, purify or separate a substance and show, for example, how well a material resists chemical attack and corrosion.","resistance to chemicals, e.g. a material that withstands oxidation (rust)"]
+];
+
+var TF = [
+ ["Strength is the most common mechanical property.",true,""],
+ ["The force inside a rope that causes it to stretch is called the load.",false,"The force inside a rope that causes it to stretch is called the stress. (The load is the weight that is applied.)"],
+ ["Shearing stress causes a material to divide into layers.",true,""],
+ ["When an elastic material is stretched, the change is permanent.",false,"When an elastic material is stretched, the change is temporary; it returns to its original shape."],
+ ["Gold is one of the most malleable metals.",true,""],
+ ["A brick can be stretched into a thin wire because of its ductility.",false,"Copper can be stretched into a thin wire; the shape of a brick can only be changed by breaking it."],
+ ["On the standard scale of hardness, chalk is the softest material.",false,"On the standard scale of hardness, soapstone is the softest material (and diamond is the hardest)."],
+ ["Metals in general have a low thermal conductivity.",false,"Metals in general have a high thermal conductivity because they can transmit heat energy."],
+ ["Aluminium expands twice as much as iron under the same temperature increase.",true,""],
+ ["For metals, the maximum operating temperature is usually about half of the melting temperature.",false,"For metals, the maximum operating temperature is usually around two thirds of the melting temperature."],
+ ["Rubber and glass are good electrical conductors.",false,"Rubber and glass are insulators; metals such as silver and copper are good conductors."],
+ ["Chemical properties can be useful to identify an unknown substance.",true,""]
+];
+
+var VOC = [
+ ["brittleness","Sprödigkeit"],["conductivity","Leitfähigkeit"],["density","Dichte"],["ductility","Dehnbarkeit, Verformbarkeit (z. B. zu Draht)"],
+ ["elasticity","Elastizität"],["expansion","Ausdehnung"],["fatigue","Ermüdung (Materialermüdung)"],["hardness","Härte"],
+ ["layer","Schicht"],["malleability","Hämmerbarkeit, Formbarkeit (z. B. zu Blech)"],["to melt","schmelzen"],["plasticity","Plastizität, plastische Verformbarkeit"],
+ ["resistivity","spezifischer elektrischer Widerstand"],["resistance","Widerstand, Beständigkeit"],["to shear","scheren, abscheren"],["to shatter","zerspringen, zersplittern"],
+ ["to strain","dehnen, beanspruchen"],["to stretch","dehnen, strecken"],["load","Last, Belastung"],["to cool","abkühlen"],
+ ["strength","Festigkeit"],["melting point","Schmelzpunkt"],["insulator","Isolator, Dämmstoff"],["to withstand","standhalten, aushalten"]
+];
+
+var SHORT = [
+ ["What is the most common mechanical property, and what does it mean?","The most common mechanical property is strength. It is the ability of a material to resist forces without breaking, bending, shattering or changing in a permanent way."],
+ ["What three changes can a material undergo due to stress?","A material can stretch, it can get shorter, or it can divide into layers."],
+ ["What is the difference between malleability and ductility?","Malleability is the property that allows metals to be hammered or rolled into thin sheets. Ductility is the ability to change shape permanently without breaking, usually by stretching, for example into a thin wire."],
+ ["Name three metals with good ductility.","Aluminium, gold, iron, nickel and silver have good ductility. Copper, for example, can be stretched into a thin wire."],
+ ["Give two everyday examples of elasticity.","The springs in vehicles are an example of elasticity. The rubber and the air in balls are also elastic, because they return to their original shape."],
+ ["Which material is the softest and which is the hardest on the standard scale of hardness?","Soapstone is the softest material on the standard scale of hardness, and diamond is the hardest."],
+ ["What is thermal conductivity?","Thermal conductivity is the ability of a material to conduct heat."],
+ ["Which materials are more able to transmit heat energy?","Metals are more able to transmit heat energy, for example copper, aluminium and silver. That is why they have a high thermal conductivity."],
+ ["What is meant by thermal expansion, and why does heat cause it?","Thermal expansion is the change in dimensions of a material when the temperature increases or decreases. Heat causes expansion because it increases the vibrations of the atoms or molecules in the material."],
+ ["Do all materials expand in the same way? Give an example.","No, different materials expand by different amounts when the temperature rises by one degree. For example, aluminium expands twice as much as iron under the same temperature increase."],
+ ["What happens when the temperature reaches the melting point?","When the temperature reaches the melting point, the material turns suddenly from solid to liquid. For metals, the maximum operating temperature is usually around two thirds of the melting temperature."],
+ ["What is the difference between insulators and conductors?","Conductors, such as metals, let electrical current pass through them readily. Insulators, such as rubber and glass, let so few electrons through that the current is hardly noticeable."],
+ ["Which are the best electrical conductors?","Metals are in general the best conductors. Silver, copper, gold and aluminium are among the best metallic conductors."],
+ ["Why can chemical properties be useful?","Chemical properties can be useful to identify an unknown substance, to purify it or to separate it from other substances."],
+ ["What is density, and in which unit is it measured?","Density is the mass of a material per unit volume. It is measured in kilograms per cubic metre (kg/m³)."],
+ ["Why are electrical wires covered in plastic?","Electrical wires are covered in plastic because plastic is an insulator. It stops the electricity from flowing out of the wire and giving someone a shock."]
+];
+
+var OPEN = [
+ ["In complete sentences, explain the difference between elasticity and plasticity. Give an example for each.","Elasticity is the ability of a material to return to its original shape or volume after a force has changed it. For example, the springs in a vehicle are pressed together and then go back to their original shape. Plasticity is the ability of a material to be changed in shape permanently. For example, molten aluminium is poured into a mould, and after it has cooled down it keeps its new shape. So the change is temporary with elasticity, but permanent with plasticity.","exam"],
+ ["In complete sentences, define electrical conductivity and electrical resistivity. Give an example of a material for each property.","Electrical conductivity is the ability of a material to conduct electrical charge. Copper has a high electrical conductivity, so it is used for electrical wires. Electrical resistivity is the ability of a material to resist, or oppose, the transport of electrical charge. Rubber has a very high resistivity, so it is used as an insulator around cables.","exam"],
+ ["How is hardness determined? Describe how a material with high hardness is tested compared to one with low hardness.","Hardness is the resistance of a material to surface abrasion, scratching and indentation. It is determined by testing how easily the surface can be scratched or pressed in. On the standard scale of hardness, a harder material can scratch a softer one; soapstone is the softest material and diamond is the hardest. A material with high hardness, such as corundum, can only be scratched by an even harder material like diamond, while a material with low hardness, such as chalk or gypsum, can be scratched very easily. In the workshop, hardness can also be tested by pressing a hard tip into the surface: the smaller the indentation, the harder the material.","exam"],
+ ["Explain what high and low thermal conductivity are. Then describe an example from a manufacturing process where materials with high thermal conductivity are used, and explain why. Do the same for low thermal conductivity.","A material with high thermal conductivity conducts heat very well, while a material with low thermal conductivity conducts heat badly and is used for insulation. In injection moulding or die casting, moulds and cooling plates are often made of metals such as copper or aluminium. They have a high thermal conductivity, so they take the heat away from the part quickly and the part becomes solid faster. Furnaces for heat treatment, for example for hardening steel, are lined with materials with a low thermal conductivity such as alumina. They keep the heat inside the furnace, save energy and stop the outside of the furnace from getting dangerously hot.","exam"],
+ ["Explain the words load, stress and strain with your own example from the workshop (not the rope from the Study Packet).","When I clamp a long steel bar in a vice and hang a heavy toolbox on the free end, the toolbox is the load, because it is the weight that is applied to the bar. The forces inside the bar that make it bend are the stress. The actual change, the small bending of the bar, is the strain.","new"],
+ ["Describe the three types of stress (tensile, compressive and shearing). For each, give an example of a part or situation where it occurs.","Tensile stress causes a material to stretch. A steel cable on a crane that lifts a load is under tensile stress. Compressive stress causes a material to get shorter. The columns of a building or a workpiece in a press are under compressive stress. Shearing stress causes a material to divide into layers. When a sheet of metal is cut with shears or a bolt is loaded from the side, it is under shearing stress.","new"],
+ ["Compare brittleness and ductility. Why is a brittle material a bad choice for a part that has to be bent or formed?","A ductile material can be changed in shape permanently without breaking, for example copper can be stretched into a thin wire. A brittle material is hard but breaks easily, and its shape can only be changed by breaking it, like a brick. A part that has to be bent or formed must not break during the process, so a ductile material is a better choice. A brittle material would crack or shatter.","new"],
+ ["Copper wires in electrical cables are covered in plastic. Explain why, using the words conductor and insulator.","Copper is used for the wires because it is a very good conductor: it lets electrical current flow through it readily. Plastic is an insulator, so it lets almost no current through. The plastic covering keeps the electricity inside the wire, so it cannot flow out and give someone a shock.","new"],
+ ["You have just machined an aluminium part, and it is still warm. Why should you not measure the exact dimensions right away? Use the term thermal expansion.","Because of thermal expansion, a material changes its dimensions when the temperature changes. The warm aluminium part is a little bigger than at room temperature, so the measurement would not be correct. Aluminium expands about twice as much as iron, so the difference can be important for exact dimensions. I should let the part cool down to room temperature before I measure it.","new"],
+ ["Think of a machine part that is exposed to repeated stress cycles. Explain why its resistance to fatigue is important.","A spring in a vehicle is pressed together and released again thousands of times. Fatigue is about the ability to resist such repeated stress cycles and tension. If a material has poor fatigue resistance, it can crack or break after many cycles, even if the load is not very high. That is why springs, shafts and gears must be made of materials with good fatigue resistance.","new"],
+ ["What is resistance to chemicals? Describe a situation where this property is important and explain why.","Resistance to chemicals is the ability of a material to resist chemical attack and to withstand corrosion processes such as oxidation. It is important for parts that are used outdoors or in contact with water or chemicals, for example railings, boat parts or containers for cleaning liquids. If the material did not resist corrosion, it would rust or be damaged, become weaker and have to be replaced.","new"],
+ ["Choose a material for each of the following and explain your choice with its properties: (a) the handle of a saucepan, (b) a cooling plate for electronics, (c) a spring.","(a) The handle of a saucepan should be made of plastic or wood, because these materials have a low thermal conductivity. They do not let the heat pass to the hand. (b) A cooling plate for electronics should be made of copper or aluminium, because these metals have a high thermal conductivity and take the heat away quickly. (c) A spring should be made of spring steel, because it has good elasticity and returns to its original shape after it has been pressed together.","new"],
+ ["Explain why molten aluminium can be poured into a mould to make a part, and name the property this shows.","This shows the plasticity of aluminium. Plasticity is the ability of a material to be permanently changed in shape. When the aluminium is molten, it takes the shape of the mould. After it has cooled down, it can be removed from the mould and keeps its new shape.","new"]
+];
+
+var LABEL = { id:"c2", title:"C2 · Label the sketches",
+  hint:"Drag the correct type of stress under each sketch.",
+  items:["tensile stress","compressive stress","shearing stress"] };
+var ROPE = { id:"c3", title:"C3 · Load, stress and strain",
+  hint:"A weight hangs on a rope. Drag the right term to each description.",
+  items:[["the weight that is applied","load"],["the force inside the rope that causes it to stretch","stress"],["the actual change: the rope gets longer","strain"]] };
+var EXPLAIN3 = [
+ ["Tensile stress","Tensile stress is the stress that causes a material to stretch. The forces pull the material apart in opposite directions, so it gets longer."],
+ ["Compressive stress","Compressive stress is the stress that causes a material to get shorter. The forces push the material together from opposite sides."],
+ ["Shearing stress","Shearing stress is the stress that causes a material to divide into layers. The forces act in opposite directions but are slightly offset, so one layer slides over the other."]
+];
+
+/* ================= HELPERS ================= */
+var KEY = "mo_pomg24a_materials_v1";
+var state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+state.z = state.z || {}; state.t = state.t || {}; state.r = state.r || {};
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function norm(s){ return String(s).trim().toLowerCase(); }
+function shuffle(arr, seed){ var a = arr.slice(), s = 0; for (var i=0;i<seed.length;i++) s = (s*31 + seed.charCodeAt(i)) >>> 0;
+  for (var j=a.length-1;j>0;j--){ s = (s*1103515245 + 12345) >>> 0; var k = s % (j+1); var t=a[j]; a[j]=a[k]; a[k]=t; } return a; }
+var root = document.getElementById("ex-root");
+var H = "";
+function part(id, letter, title, text){ H += '<section class="ex-teil" id="'+id+'"><div class="ex-teil-kopf"><span class="ex-buchst">'+letter+'</span><div><h2>'+title+'</h2>'+(text?'<p>'+text+'</p>':'')+'</div></div>'; }
+function endpart(){ H += '</section>'; }
+function chip(group, cid, val, label){ return '<button type="button" class="ex-chip" draggable="false" data-g="'+group+'" data-id="'+cid+'" data-val="'+esc(val)+'">'+esc(label||val)+'</button>'; }
+function bank(group, chips){ return '<div class="ex-bank" data-g="'+group+'" data-bank="1" aria-label="Word box">'+chips+'</div>'; }
+
+/* ---- A: gap fills ---- */
+part("teil-a","A","Fill in the blanks","Drag the words from the box into the gaps.");
+GAPS.forEach(function(g){
+  var n = 0, words = [];
+  var body = esc(g.text).replace(/\[\[(.+?)\]\]/g, function(_, w){ n++; w = w.toLowerCase(); words.push(w);
+    return '<span class="ex-zone ex-gap" tabindex="0" data-g="'+g.id+'" data-z="'+g.id+'_'+n+'" data-ans="'+esc(w)+'"><i>'+n+'</i></span>'; });
+  var all = words.concat(g.extra).map(function(w,i){ return [g.id+'_c'+i, w]; });
+  var chips = shuffle(all, g.id).map(function(c){ return chip(g.id, c[0], c[1]); }).join("");
+  H += '<div class="ex-aufgabe"><h3>'+g.title+'</h3><p class="ex-hint">'+g.hint+'</p>'+bank(g.id, chips)+'<p class="ex-text">'+body+'</p></div>';
+});
+endpart();
+
+/* ---- B: matching ---- */
+part("teil-b","B","Matching","Drag each definition to the matching term.");
+MATCH.forEach(function(m){
+  var chips = shuffle(m.pairs.map(function(p,i){ return [m.id+'_c'+i, p[1], p[0]]; }), m.id).map(function(c){ return chip(m.id, c[0], c[2], c[1]); }).join("");
+  var rows = m.pairs.map(function(p,i){ return '<div class="ex-paar"><span class="ex-term">'+esc(p[0])+'</span><span class="ex-zone ex-slot" tabindex="0" data-g="'+m.id+'" data-z="'+m.id+'_'+i+'" data-ans="'+esc(p[0])+'" data-show="'+esc(p[1])+'"><i>drop definition here</i></span></div>'; }).join("");
+  H += '<div class="ex-aufgabe"><h3>'+m.title+'</h3><div class="ex-match">'+'<div class="ex-paare">'+rows+'</div>'+bank(m.id, chips).replace('class="ex-bank"','class="ex-bank ex-bank-def"')+'</div></div>';
+});
+endpart();
+
+/* ---- C: sorting and labelling ---- */
+part("teil-c","C","Sorting and labelling","Drag the words into the right places.");
+(function(){
+  var chips = shuffle(SORT.items.map(function(it,i){ return [SORT.id+'_c'+i, it[0], it[1]]; }), SORT.id).map(function(c){ return chip(SORT.id, c[0], c[2], c[1]); }).join("");
+  var cats = SORT.cats.map(function(c){ return '<div class="ex-kat"><b>'+c+' properties</b><div class="ex-zone ex-eimer" tabindex="0" data-g="'+SORT.id+'" data-z="'+SORT.id+'_'+c+'" data-ans="'+c+'" data-multi="1"></div></div>'; }).join("");
+  H += '<div class="ex-aufgabe"><h3>'+SORT.title+'</h3><p class="ex-hint">'+SORT.hint+'</p>'+bank(SORT.id, chips)+'<div class="ex-kats">'+cats+'</div></div>';
+  var lc = shuffle(LABEL.items.map(function(w,i){ return [LABEL.id+'_c'+i, w]; }), LABEL.id).map(function(c){ return chip(LABEL.id, c[0], c[1]); }).join("");
+  var svgs = [
+   '<svg viewBox="0 0 220 110" aria-label="Sketch 1"><rect x="60" y="38" width="100" height="34" rx="3" fill="#e7ede6" stroke="#3f5d4a" stroke-width="2"/><path d="M58 55 H18 M24 47 L14 55 L24 63 M162 55 H202 M196 47 L206 55 L196 63" stroke="#a8682f" stroke-width="3" fill="none"/></svg>',
+   '<svg viewBox="0 0 220 110" aria-label="Sketch 2"><rect x="70" y="38" width="80" height="34" rx="3" fill="#e7ede6" stroke="#3f5d4a" stroke-width="2"/><path d="M14 55 H62 M54 47 L64 55 L54 63 M206 55 H158 M166 47 L156 55 L166 63" stroke="#a8682f" stroke-width="3" fill="none"/></svg>',
+   '<svg viewBox="0 0 220 110" aria-label="Sketch 3"><rect x="60" y="22" width="100" height="32" rx="3" fill="#e7ede6" stroke="#3f5d4a" stroke-width="2"/><rect x="72" y="56" width="100" height="32" rx="3" fill="#e4eaf0" stroke="#4a6178" stroke-width="2"/><path d="M200 38 H168 M176 30 L166 38 L176 46 M20 72 H62 M54 64 L64 72 L54 80" stroke="#a8682f" stroke-width="3" fill="none"/></svg>'
+  ];
+  var sk = LABEL.items.map(function(w,i){ return '<figure class="ex-skizze">'+svgs[i]+'<span class="ex-zone ex-slot" tabindex="0" data-g="'+LABEL.id+'" data-z="'+LABEL.id+'_'+i+'" data-ans="'+w+'"><i>drop label here</i></span></figure>'; }).join("");
+  H += '<div class="ex-aufgabe"><h3>'+LABEL.title+'</h3><p class="ex-hint">'+LABEL.hint+'</p>'+bank(LABEL.id, lc)+'<div class="ex-skizzen">'+sk+'</div>';
+  H += '<p class="ex-hint" style="margin-top:16px">In the exam you draw these sketches yourself. Now explain each type of stress in one or two <b>complete sentences</b>.</p><div class="ex-fragen">';
+  EXPLAIN3.forEach(function(e,i){ H += frage('c2t'+i, e[0], e[1], 3); });
+  H += '</div></div>';
+  var rc = shuffle(ROPE.items.map(function(it,i){ return [ROPE.id+'_c'+i, it[1]]; }), ROPE.id).map(function(c){ return chip(ROPE.id, c[0], c[1]); }).join("");
+  var rope = '<svg class="ex-seil" viewBox="0 0 160 200" aria-hidden="true"><rect x="20" y="8" width="120" height="12" fill="#6b7368"/><path d="M80 20 V120" stroke="#a8682f" stroke-width="5"/><path d="M80 120 V140" stroke="#a8682f" stroke-width="5" stroke-dasharray="4 3"/><rect x="52" y="140" width="56" height="44" rx="4" fill="#3f5d4a"/><text x="80" y="168" fill="#fff" font-size="14" text-anchor="middle" font-weight="700">50 kg</text><path d="M104 40 V112 M98 104 L104 114 L110 104" stroke="#4a6178" stroke-width="2.5" fill="none"/></svg>';
+  var rows = ROPE.items.map(function(it,i){ return '<div class="ex-paar"><span class="ex-term ex-term-lang">'+esc(it[0])+'</span><span class="ex-zone ex-slot ex-slot-kurz" tabindex="0" data-g="'+ROPE.id+'" data-z="'+ROPE.id+'_'+i+'" data-ans="'+it[1]+'"><i>drop here</i></span></div>'; }).join("");
+  H += '<div class="ex-aufgabe"><h3>'+ROPE.title+'</h3><p class="ex-hint">'+ROPE.hint+'</p><div class="ex-seil-wrap">'+rope+'<div>'+bank(ROPE.id, rc)+'<div class="ex-paare">'+rows+'</div></div></div></div>';
+})();
+endpart();
+
+/* ---- D: categories table ---- */
+part("teil-d","D","Categories table","Based on their properties, materials can be divided into four categories. Describe each category in complete sentences and give an example.");
+H += '<div class="ex-aufgabe"><div class="ex-tab-wrap"><table class="ex-tab"><thead><tr><th>Category name</th><th>Description (complete sentences)</th><th>Example</th></tr></thead><tbody>';
+CATS.forEach(function(c,i){ H += '<tr><th scope="row">'+c[0]+'</th><td><textarea class="ex-in" data-t="d'+i+'a" rows="4" aria-label="Description of '+c[0]+'"></textarea><div class="ex-model" hidden><b>Model answer</b>'+esc(c[1])+'</div></td><td><textarea class="ex-in" data-t="d'+i+'b" rows="4" aria-label="Example for '+c[0]+'"></textarea><div class="ex-model" hidden><b>Possible examples</b>'+esc(c[2])+'</div></td></tr>'; });
+H += '</tbody></table></div></div>';
+endpart();
+
+/* ---- E: true / false ---- */
+part("teil-e","E","True or false?","Tick T (true) or F (false). If a statement is false, correct it. <b>Note:</b> do not simply make it negative. <i>Unacceptable:</i> “Chalk isn’t the softest material.” <i>Acceptable:</i> “Soapstone is the softest material.”");
+H += '<div class="ex-aufgabe"><div class="ex-tf">';
+TF.forEach(function(t,i){ H += '<div class="ex-tf-zeile" data-tf="'+i+'" data-ans="'+(t[1]?"T":"F")+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(t[0])+'</p><div class="ex-tf-wahl" role="radiogroup" aria-label="Statement '+(i+1)+'"><label><input type="radio" name="tf'+i+'" value="T"><span>T</span></label><label><input type="radio" name="tf'+i+'" value="F"><span>F</span></label></div><textarea class="ex-in ex-korr" data-t="e'+i+'" rows="2" placeholder="If false: write the correct sentence."></textarea><div class="ex-model" hidden>'+(t[1]?'<b>This statement is true.</b>':'<b>Model correction</b>'+esc(t[2]))+'</div></div>'; });
+H += '</div></div>';
+endpart();
+
+/* ---- F: vocabulary ---- */
+part("teil-f","F","Vocabulary","Write the German term or a short German explanation (Umschreibung).");
+H += '<div class="ex-aufgabe"><div class="ex-voc">';
+VOC.forEach(function(v,i){ H += '<label class="ex-voc-zeile"><span>'+esc(v[0])+'</span><input type="text" class="ex-in" data-t="f'+i+'" autocomplete="off" spellcheck="false"><em class="ex-model" hidden>'+esc(v[1])+'</em></label>'; });
+H += '</div></div>';
+endpart();
+
+/* ---- G: short answers ---- */
+function frage(id, q, model, rows){ return '<div class="ex-frage"><label for="q_'+id+'"><b>'+esc(q)+'</b></label><textarea class="ex-in" id="q_'+id+'" data-t="'+id+'" rows="'+(rows||3)+'"></textarea><div class="ex-model" hidden><b>Model answer</b>'+esc(model)+'</div></div>'; }
+part("teil-g","G","Short answer questions","Answer in <b>complete sentences</b>.");
+H += '<div class="ex-aufgabe"><ol class="ex-liste">';
+SHORT.forEach(function(s,i){ H += '<li>'+frage('g'+i, s[0], s[1], 3)+'</li>'; });
+H += '</ol></div>';
+endpart();
+
+/* ---- H: open-ended ---- */
+part("teil-h","H","Open-ended questions","Answer in <b>complete sentences</b>. Explain your answers and give examples. Questions marked “exam style” are similar to the practice exam.");
+H += '<div class="ex-aufgabe"><ol class="ex-liste">';
+OPEN.forEach(function(o,i){ H += '<li>'+(o[2]==="exam"?'<span class="ex-tag">exam style</span>':'')+frage('h'+i, o[0], o[1], 6)+'</li>'; });
+H += '</ol></div>';
+endpart();
+
+root.innerHTML = H;
+
+/* ================= DRAG & DROP ================= */
+function chipsOf(el){ return [].slice.call(el.querySelectorAll(".ex-chip")); }
+function bankOf(g){ return root.querySelector('.ex-bank[data-g="'+g+'"]'); }
+function place(ch, zone, noSave){
+  if (!zone) return;
+  var from = ch.parentNode;
+  if (zone.dataset.bank) { zone.appendChild(ch); }
+  else if (zone.dataset.multi) { zone.appendChild(ch); }
+  else {
+    var old = zone.querySelector(".ex-chip");
+    if (old && old !== ch) { if (from && from.classList.contains("ex-zone") && !from.dataset.multi && !from.dataset.bank) from.appendChild(old); else bankOf(old.dataset.g).appendChild(old); }
+    zone.appendChild(ch);
+  }
+  [from, zone].forEach(function(z){ if (z && z.classList && z.classList.contains("ex-zone")) z.classList.toggle("voll", !!z.querySelector(".ex-chip")); });
+  if (!noSave) { record(); clearMarks(); }
+}
+function record(){
+  state.z = {};
+  [].forEach.call(root.querySelectorAll(".ex-zone"), function(z){ var ids = chipsOf(z).map(function(c){ return c.dataset.id; }); if (ids.length) state.z[z.dataset.z] = ids; });
+  save();
+}
+var sel = null;
+function select(ch){ if (sel) sel.classList.remove("gewaehlt"); sel = (sel === ch) ? null : ch; if (sel) sel.classList.add("gewaehlt"); root.classList.toggle("ex-waehlt", !!sel); }
+var drag = null;
+root.addEventListener("pointerdown", function(e){
+  var ch = e.target.closest(".ex-chip"); if (!ch || e.button > 0) return;
+  drag = { ch: ch, x: e.clientX, y: e.clientY, moved: false, ghost: null, id: e.pointerId };
+});
+document.addEventListener("pointermove", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+  if (!drag.moved) {
+    drag.moved = true; var r = drag.ch.getBoundingClientRect();
+    drag.ox = drag.x - r.left; drag.oy = drag.y - r.top;
+    var gh = drag.ch.cloneNode(true); gh.classList.add("ex-ghost"); gh.style.width = r.width + "px"; document.body.appendChild(gh); drag.ghost = gh;
+    drag.ch.classList.add("ex-quelle"); if (sel) select(sel);
+  }
+  e.preventDefault();
+  drag.ghost.style.left = (e.clientX - drag.ox) + "px"; drag.ghost.style.top = (e.clientY - drag.oy) + "px";
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (z && z.dataset.g === drag.ch.dataset.g) z.classList.add("ueber");
+}, { passive: false });
+document.addEventListener("pointerup", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var d = drag; drag = null;
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (!d.moved) return;
+  d.ghost.remove(); d.ch.classList.remove("ex-quelle");
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  if (z && z.dataset.g === d.ch.dataset.g) place(d.ch, z);
+  d.ch.dataset.justDragged = "1"; setTimeout(function(){ delete d.ch.dataset.justDragged; }, 50);
+});
+document.addEventListener("pointercancel", function(){ if (drag && drag.ghost) { drag.ghost.remove(); drag.ch.classList.remove("ex-quelle"); } drag = null; });
+root.addEventListener("click", function(e){
+  var ch = e.target.closest(".ex-chip");
+  if (ch) {
+    if (ch.dataset.justDragged) return;
+    if (sel && sel !== ch && sel.dataset.g === ch.dataset.g && ch.parentNode.classList.contains("ex-zone") && !ch.parentNode.dataset.multi) { place(sel, ch.parentNode); select(sel); return; }
+    select(ch); return;
+  }
+  var z = e.target.closest(".ex-zone, .ex-bank");
+  if (z && sel && z.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, z); }
+});
+root.addEventListener("keydown", function(e){
+  if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("ex-zone")) {
+    e.preventDefault(); if (sel && e.target.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, e.target); }
+  }
+  if (e.key === "Escape" && sel) select(sel);
+});
+
+/* ================= TEXT INPUTS ================= */
+[].forEach.call(root.querySelectorAll("[data-t]"), function(inp){
+  if (state.t[inp.dataset.t]) inp.value = state.t[inp.dataset.t];
+  inp.addEventListener("input", function(){ state.t[inp.dataset.t] = inp.value; save(); });
+});
+[].forEach.call(root.querySelectorAll('.ex-tf input[type="radio"]'), function(r){
+  var i = r.name.slice(2); if (state.r[i] === r.value) r.checked = true;
+  r.addEventListener("change", function(){ state.r[i] = r.value; save(); clearMarks(); });
+});
+/* restore placed chips */
+Object.keys(state.z).forEach(function(zid){
+  var z = root.querySelector('.ex-zone[data-z="'+zid+'"]'); if (!z) return;
+  state.z[zid].forEach(function(cid){ var c = root.querySelector('.ex-chip[data-id="'+cid+'"]'); if (c) place(c, z, true); });
+});
+
+/* ================= CHECK ================= */
+var checked = false;
+function clearMarks(){
+  if (!checked) return; checked = false;
+  [].forEach.call(root.querySelectorAll(".ok, .bad"), function(x){ x.classList.remove("ok","bad"); });
+  [].forEach.call(root.querySelectorAll(".ex-loesung"), function(x){ x.remove(); });
+  document.getElementById("ex-score").hidden = true;
+}
+function check(){
+  clearMarks(); checked = true;
+  var res = {}; function add(k, ok){ res[k] = res[k] || [0,0]; res[k][1]++; if (ok) res[k][0]++; }
+  [].forEach.call(root.querySelectorAll(".ex-zone"), function(z){
+    var part = z.closest(".ex-teil").id;
+    if (z.dataset.multi) {
+      chipsOf(z).forEach(function(c){ var ok = c.dataset.val === z.dataset.ans; c.classList.add(ok ? "ok" : "bad"); });
+      return;
+    }
+    var c = z.querySelector(".ex-chip"), ok = !!c && norm(c.dataset.val) === norm(z.dataset.ans);
+    z.classList.add(ok ? "ok" : "bad"); add(part, ok);
+    if (!ok) { var s = document.createElement("span"); s.className = "ex-loesung"; s.textContent = "✓ " + (z.dataset.show || z.dataset.ans); z.insertAdjacentElement("afterend", s); }
+  });
+  /* sorting task: every item counts, also items left in the box */
+  var sb = bankOf(SORT.id);
+  SORT.items.forEach(function(it, i){
+    var c = root.querySelector('.ex-chip[data-id="'+SORT.id+'_c'+i+'"]');
+    var ok = c.parentNode.classList.contains("ex-eimer") && c.dataset.val === c.parentNode.dataset.ans;
+    add("teil-c", ok);
+    if (!ok) { c.classList.add("bad"); var s = document.createElement("span"); s.className = "ex-loesung ex-loesung-chip"; s.textContent = "→ " + it[1]; c.appendChild(s); }
+  });
+  [].forEach.call(root.querySelectorAll(".ex-tf-zeile"), function(row){
+    var r = row.querySelector("input:checked"), ok = !!r && r.value === row.dataset.ans;
+    row.classList.add(ok ? "ok" : "bad"); add("teil-e", ok);
+  });
+  [].forEach.call(root.querySelectorAll(".ex-model"), function(m){ m.hidden = false; });
+  var names = { "teil-a":"A · Fill in the blanks", "teil-b":"B · Matching", "teil-c":"C · Sorting and labelling", "teil-e":"E · True or false" };
+  var tot = [0,0], rows = "";
+  Object.keys(names).forEach(function(k){ if (!res[k]) return; tot[0]+=res[k][0]; tot[1]+=res[k][1]; rows += '<li><span>'+names[k]+'</span><b>'+res[k][0]+' / '+res[k][1]+'</b></li>'; });
+  var sc = document.getElementById("ex-score");
+  sc.innerHTML = '<h3>Your result</h3><p class="ex-gesamt">'+tot[0]+' of '+tot[1]+' correct</p><ul>'+rows+'</ul><p>Parts D, F, G and H have no points here. Compare your texts with the <b>model answers</b>, which are now shown under each question. Correct answers are green, wrong ones are red with the correct solution next to them. Fix your answers and check again.</p>';
+  sc.hidden = false;
+  document.getElementById("ex-hide").hidden = false;
+}
+document.getElementById("ex-check").addEventListener("click", function(){ check(); document.getElementById("ex-score").scrollIntoView({ behavior: "smooth", block: "center" }); });
+document.getElementById("ex-hide").addEventListener("click", function(){
+  clearMarks(); [].forEach.call(root.querySelectorAll(".ex-model"), function(m){ m.hidden = true; }); this.hidden = true;
+});
+document.getElementById("ex-reset").addEventListener("click", function(){
+  if (!window.confirm("Delete all your answers and start again?")) return;
+  state = { z:{}, t:{}, r:{} }; save(); location.reload();
+});
+})();
+</script>
