@@ -508,9 +508,9 @@ KLASSEN = [
         <p>Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr</p>
         <ul><li>Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II</li></ul>
         <span class="go">Zur Probeprüfung →</span></a>""",
- f"""      <a class="plan thema entile" href="pome24b-energy.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>PomE24B</h3>
+ f"""      <a class="plan thema entile" href="pome24b.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>PomE24B</h3>
         <p>Energy and the Environment</p>
-        <ul><li>Nuclear Energy: video and tasks</li></ul>
+        <ul><li>Nuclear Energy: video and tasks</li><li>Practice for the Exam</li></ul>
         <span class="go">Zur Klassenseite →</span></a>""",
 ]
 ACTIVE["pomg25a-materials.html"] = "lernende.html"
@@ -522,11 +522,27 @@ page("pomg25a-materials.html", "PomG25A: Properties of Materials Exam – Muggli
   </section>
 </main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
 
-ACTIVE["pome24b-energy.html"] = "lernende.html"
-PE_BODY = "".join((B / "pome24b" / f).read_text() for f in sorted(p.name for p in (B / "pome24b").glob("*.html")))
-page("pome24b-energy.html", "PomE24B: Energy and the Environment – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › PomE24B', "PomE24B · Technical English", "Energy and the Environment", "Nuclear Energy")}
+ACTIVE["pome24b.html"] = "lernende.html"
+page("pome24b.html", "PomE24B – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › PomE24B', "Technical English", "PomE24B", "Energy and the Environment")}
   <section class="section">
+{einleitung("How to use this page", ["This is the page for the class PomE24B. Each tile below belongs to one part of the unit “Energy and the Environment”. Click a tile to open it. Work through the parts in the order your teacher tells you.", "On each page you will find tasks that you can do directly in your browser, also on your phone. Your answers are saved on your device. When you have finished, click “Check my answers” and compare your answers with the solutions."], 0)}
+    <div class="grid2 themen">
+      <a class="plan thema entile" href="pome24b-nuclear.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Unit 9</span><h3>Nuclear Energy</h3>
+        <p>Gap-fill text in the book, a video about how a nuclear power plant works, and tasks with model answers.</p>
+        <span class="go">Open →</span></a>
+      <div class="plan thema entile"><div class="thema-art">{EXAM_ART}</div><span class="badge">In preparation</span><h3>Energy and the Environment</h3>
+        <p>Practice for the Exam</p></div>
+    </div>
+  </section>
+</main>""", active="lernende.html", description="PomE24B, Technical English: Energy and the Environment, nuclear energy and practice for the exam.")
+
+ACTIVE["pome24b-nuclear.html"] = "lernende.html"
+PE_BODY = "".join((B / "pome24b" / f).read_text() for f in sorted(p.name for p in (B / "pome24b").glob("*.html")))
+page("pome24b-nuclear.html", "PomE24B: Nuclear Energy – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">PomE24B</a> › Nuclear Energy', "PomE24B · Energy and the Environment", "Nuclear Energy", "How does a nuclear power plant produce electricity? A gap-fill text, a video and tasks to practise the technical vocabulary.")}
+  <section class="section">
+{einleitung("How to use this page", ["Work through the page from top to bottom: first the gap-fill text in your book, then the video, then the tasks A to F. You can watch the video here or scan the QR code to watch it on your phone. Pause it as often as you need.", "Drag the words into the right places (on a phone: tap a word, then tap the place) and answer the questions in complete sentences. Your answers are saved in this browser. At the bottom, click “Check my answers” to see your result and the model answers."], 0)}
 <!--BODY:pome24b-->{PE_BODY}<!--/BODY-->
   </section>
 </main>""", active="lernende.html", description="PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.")
