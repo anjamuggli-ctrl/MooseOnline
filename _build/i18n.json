@@ -3025,25 +3025,25 @@
    "en": "Nine tools, a toolbox and a planning check",
    "it": "Nove strumenti, toolbox e controllo della pianificazione"
   },
-  "PomG24A: Properties of Materials Exam": {
-   "rm": "PomG24A: Properties of Materials Exam",
-   "en": "PomG24A: Properties of Materials Exam",
-   "it": "PomG24A: Properties of Materials Exam"
+  "PomG25A: Properties of Materials Exam": {
+   "rm": "PomG25A: Properties of Materials Exam",
+   "en": "PomG25A: Properties of Materials Exam",
+   "it": "PomG25A: Properties of Materials Exam"
   },
-  "PomG24A: Properties of Materials Exam – MuggliOnline": {
-   "rm": "PomG24A: Properties of Materials Exam – MuggliOnline",
-   "en": "PomG24A: Properties of Materials Exam – MuggliOnline",
-   "it": "PomG24A: Properties of Materials Exam – MuggliOnline"
+  "PomG25A: Properties of Materials Exam – MuggliOnline": {
+   "rm": "PomG25A: Properties of Materials Exam – MuggliOnline",
+   "en": "PomG25A: Properties of Materials Exam – MuggliOnline",
+   "it": "PomG25A: Properties of Materials Exam – MuggliOnline"
   },
   "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)": {
    "rm": "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)",
    "en": "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)",
    "it": "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)"
   },
-  "Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.": {
-   "rm": "Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.",
-   "en": "Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.",
-   "it": "Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers."
+  "Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.": {
+   "rm": "Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.",
+   "en": "Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.",
+   "it": "Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers."
   },
   "Probeprüfung · Technical English": {
    "rm": "Examen da prova · Technical English",
@@ -3054,6 +3054,46 @@
    "rm": "› Examens da prova",
    "en": "› Practice tests",
    "it": "› Verifiche di prova"
+  },
+  "Am Schluss klickst du auf «Check my answers» und vergleichst deine Antworten mit den Lösungen.": {
+   "rm": "A la fin cliccas ti sin «Check my answers» e cumparegleschas tias respostas cun las soluziuns.",
+   "en": "At the end, click “Check my answers” and compare your answers with the solutions.",
+   "it": "Alla fine clicchi su «Check my answers» e confronti le tue risposte con le soluzioni."
+  },
+  "Jede Kachel gehört zu einer Prüfung. Die Übungen laufen direkt im Browser, auch auf dem Handy, und deine Antworten bleiben auf deinem Gerät gespeichert.": {
+   "rm": "Mintga plattina appartegna ad in examen. Ils exercizis funcziunan directamain en il navigatur, er sin il telefonin, e tias respostas restan memorisadas sin tes apparat.",
+   "en": "Each tile belongs to one exam. The exercises run directly in the browser, also on your phone, and your answers stay saved on your device.",
+   "it": "Ogni riquadro corrisponde a un esame. Gli esercizi funzionano direttamente nel browser, anche sul telefono, e le tue risposte restano salvate sul tuo dispositivo."
+  },
+  "Probeprüfungen zum Üben, mit Lösungen zur Selbstkontrolle.": {
+   "rm": "Examens da prova per exercitar, cun soluziuns per l'autocontroll.",
+   "en": "Practice tests with solutions for self-checking.",
+   "it": "Verifiche di prova per esercitarsi, con soluzioni per l'autocontrollo."
+  },
+  "Probeprüfungen – MuggliOnline": {
+   "rm": "Examens da prova – MuggliOnline",
+   "en": "Practice tests – MuggliOnline",
+   "it": "Verifiche di prova – MuggliOnline"
+  },
+  "So übst du": {
+   "rm": "Uschia exercitas ti",
+   "en": "How to practise",
+   "it": "Come esercitarti"
+  },
+  "Technical English": {
+   "rm": "Technical English",
+   "en": "Technical English",
+   "it": "Technical English"
+  },
+  "Zu den Probeprüfungen →": {
+   "rm": "Als examens da prova →",
+   "en": "To the practice tests →",
+   "it": "Alle verifiche di prova →"
+  },
+  "Zur Probeprüfung →": {
+   "rm": "A l'examen da prova →",
+   "en": "To the practice test →",
+   "it": "Alla verifica di prova →"
   }
  },
  "js": {

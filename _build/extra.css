@@ -498,3 +498,13 @@
   .mini-kachel .go{color:var(--green);font-weight:700;margin-top:6px}
   @media (max-width:900px){ .ex-intro{grid-template-columns:1fr} .ex-kats{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-match{grid-template-columns:1fr} .ex-bank-def{position:static;max-height:none} .ex-score ul{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:640px){ .ex-aufgabe{padding:16px} .ex-paar{grid-template-columns:1fr} .ex-paar .ex-loesung{grid-column:1} .ex-skizzen,.ex-voc{grid-template-columns:1fr} .ex-seil-wrap{grid-template-columns:1fr} .ex-tf-zeile{grid-template-columns:28px minmax(0,1fr)} .ex-tf-wahl{grid-column:2;justify-content:flex-start} .ex-tf-zeile .ex-korr,.ex-tf-zeile .ex-model{grid-column:1 / 3} .ex-kats{grid-template-columns:1fr} .ex-text{line-height:2.15;font-size:16px} }
+  a.plan-link{display:block;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s,box-shadow .15s}
+  a.plan-link:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 8px 20px rgba(47,58,50,.08)}
+  a.plan-link .go{display:inline-block;margin-top:12px;color:var(--green);font-weight:700;font-size:15px}
+  .ex-qr{display:flex;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 24px;margin-bottom:18px}
+  .ex-qr-code{flex:0 0 150px;width:150px}
+  .ex-qr-svg{width:100%;height:auto;display:block;border-radius:6px}
+  .ex-qr h2{font-family:Fraunces,serif;color:var(--green-dark);font-size:22px;margin:0 0 6px}
+  .ex-qr p{color:#45524a;font-size:15.5px;margin:0}
+  .ex-qr-url{margin-top:6px!important;font-weight:700;color:var(--green)!important;word-break:break-all}
+  @media (max-width:640px){ .ex-qr{flex-direction:column;align-items:flex-start} .ex-qr-code{width:140px} }

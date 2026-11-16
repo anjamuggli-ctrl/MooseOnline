@@ -491,16 +491,33 @@ page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
 </main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.")
 
 # ---------------- Lernende: Probeprüfungen ----------------
-PROBEPRUEFUNGEN = """      <div class="plan"><span class="badge live">Neu</span><h3>Probeprüfungen</h3><p>Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.</p>
-        <a class="mini-kachel" href="pomg24a-materials.html"><b>PomG24A: Properties of Materials Exam</b><span>Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)</span><span class="go">Zu den Übungen →</span></a></div>"""
-ACTIVE["pomg24a-materials.html"] = "lernende.html"
-POM_BODY = "".join((B / "pomg24a" / f).read_text() for f in sorted(p.name for p in (B / "pomg24a").glob("*.html")))
-page("pomg24a-materials.html", "PomG24A: Properties of Materials Exam – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › Probeprüfungen', "Probeprüfung · Technical English", "PomG24A: Properties of Materials Exam", "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)")}
+PROBEPRUEFUNGEN = """      <a class="plan plan-link" href="probepruefungen.html"><span class="badge live">Neu</span><h3>Probeprüfungen</h3><p>Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.</p><span class="go">Zu den Probeprüfungen →</span></a>"""
+EXAM_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 98 L60 82 L110 96 L170 76 L220 90 L220 120 Z" fill="#cfdacd"/>'
+    '<rect x="70" y="10" width="80" height="100" rx="6" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/>'
+    '<g stroke="#9fb3a5" stroke-width="3" stroke-linecap="round"><path d="M100 32 H136 M100 56 H136 M100 80 H128"/></g>'
+    '<g fill="none" stroke="#a8682f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M80 31 l5 5 l8 -10 M80 55 l5 5 l8 -10"/></g>'
+    '<rect x="80" y="74" width="12" height="12" rx="2" fill="none" stroke="#3f5d4a" stroke-width="2.5"/>'
+    '<g transform="rotate(35 172 70)"><rect x="166" y="36" width="10" height="50" rx="2" fill="#6f8f78"/><polygon points="166,86 176,86 171,97" fill="#2f4a39"/></g></svg>')
+ACTIVE["probepruefungen.html"] = "lernende.html"
+page("probepruefungen.html", "Probeprüfungen – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › Probeprüfungen', "Lernende", "Probeprüfungen", "Prüfungen zum Üben unter echten Bedingungen, mit Lösungen zur Selbstkontrolle.")}
   <section class="section">
-<!--BODY:pomg24a-->{POM_BODY}<!--/BODY-->
+{einleitung("So übst du", ["Jede Kachel gehört zu einer Prüfung. Die Übungen laufen direkt im Browser, auch auf dem Handy, und deine Antworten bleiben auf deinem Gerät gespeichert.", "Am Schluss klickst du auf «Check my answers» und vergleichst deine Antworten mit den Lösungen."], 0)}
+    <div class="grid3 themen">
+      <a class="plan thema entile" href="pomg25a-materials.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Technical English</span><h3>PomG25A: Properties of Materials Exam</h3>
+        <p>Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)</p>
+        <span class="go">Zur Probeprüfung →</span></a>
+    </div>
   </section>
-</main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG24A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
+</main>""", active="lernende.html", description="Probeprüfungen zum Üben, mit Lösungen zur Selbstkontrolle.")
+ACTIVE["pomg25a-materials.html"] = "lernende.html"
+POM_BODY = "".join((B / "pomg25a" / f).read_text() for f in sorted(p.name for p in (B / "pomg25a").glob("*.html")))
+page("pomg25a-materials.html", "PomG25A: Properties of Materials Exam – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="probepruefungen.html">Probeprüfungen</a>', "Probeprüfung · Technical English", "PomG25A: Properties of Materials Exam", "Practice Exercises to the Exam about Study Packet II (OneNote: 2. Properties of Materials)")}
+  <section class="section">
+<!--BODY:pomg25a-->{POM_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",
