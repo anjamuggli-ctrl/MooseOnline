@@ -252,18 +252,18 @@ SMART_CITY_ART = f'''<g {LINE2}><path d="M20 106 h180"/><rect x="34" y="56" widt
 <g fill="none" stroke="#a8682f" stroke-width="2.4" stroke-linecap="round"><circle cx="190" cy="20" r="7"/><path d="M190 6 v4 M190 30 v4 M176 20 h4 M200 20 h4"/></g>'''
 AUFTRAEGE = [
     dict(datei="auftrag-smart-city.html", ordner="auftrag-smart-city", titel="Smart City Projekt",
-         kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART,
+         kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART, bild="img/smart-city/stadt-realitaetsnah.jpg",
          badge="Gruppen-Arbeit · Real bis Berufsschule",
-         text="Gruppen planen als Firma eine «Smart City» und bewerben sich mit einer Offerte beim «City Board», gespielt von der Klasse.",
+         text="Gruppen planen als Firma eine «Smart City» und bewerben sich mit einer Offerte beim «Stadtrat», gespielt von der Klasse.",
          punkte=["Fächer: Englisch, Deutsch, RZG/Geografie, Medien und Informatik, WAH/Wirtschaft, ABU",
                  "Kompetenzen: recherchieren, planen, budgetieren, argumentieren, präsentieren",
                  "Gruppenarbeit mit Rollen und Gruppenvertrag",
                  "Projektmanagement nach Stufe: von der Vorlage bis HERMES",
                  "Digitalität: Arbeitsjournal, digitale Werkzeuge, Optionen mit und ohne KI",
                  "BNE: erneuerbare Energie, Mobilität, lebenswerte Stadt",
-                 "Lernende bewerten als City Board mit und schätzen sich selbst ein"],
-         lead="Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem City Board.",
-         einleitung=["In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt das City Board, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.",
+                 "Lernende bewerten als Stadtrat mit und schätzen sich selbst ein"],
+         lead="Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem Stadtrat.",
+         einleitung=["In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt den Stadtrat, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.",
                      "Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen."]),
 ]
 AUFGABEN_SEITEN = {
@@ -277,7 +277,9 @@ AUFGABEN_INTRO = {
     "Digitalität": "Hier findest du Aufträge, in denen digitale Werkzeuge und KI eine wichtige Rolle spielen. Sie zeigen, wann KI das Lernen unterstützt und wann bewusst ohne gearbeitet wird.",
 }
 def auftrag_kachel(a):
-    return (f'      <a class="plan thema entile" href="{a["datei"]}"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{a["art"]}</svg></div>'
+    kopf = (f'<div class="thema-art bild"><img src="{a["bild"]}" alt="" loading="lazy"></div>' if a.get("bild")
+            else f'<div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{a["art"]}</svg></div>')
+    return (f'      <a class="plan thema entile" href="{a["datei"]}">{kopf}'
             f'<span class="badge live">{a["badge"]}</span><h3>{a["titel"]}</h3><p>{a["text"]}</p>'
             f'<ul>{"".join(f"<li>{x}</li>" for x in a["punkte"])}</ul><span class="go">Zum Auftrag →</span></a>')
 def auftraege_in(kat):
