@@ -1442,13 +1442,6 @@
    "fr": "Prêt à imprimer",
    "es": "Listo para imprimir"
   },
-  "27 Vorlagen": {
-   "rm": "27 models",
-   "en": "27 templates",
-   "it": "27 modelli",
-   "fr": "27 modèles",
-   "es": "27 plantillas"
-  },
   "Bald mit KI": {
    "rm": "Proximamain cun IA",
    "en": "AI coming soon",
@@ -3289,6 +3282,13 @@
    "it": "Incarico",
    "fr": "Mandat",
    "es": "Tarea"
+  },
+  "31 Vorlagen": {
+   "rm": "31 models",
+   "en": "31 templates",
+   "it": "31 modelli",
+   "fr": "31 modèles",
+   "es": "31 plantillas"
   }
  },
  "js": {
@@ -3797,6 +3797,34 @@
    "it": "Mese enrosadira",
    "fr": "Mois alpenglow",
    "es": "Mes arrebol alpino"
+  },
+  "Masterarbeit Salbei": {
+   "rm": "Lavur da master Salvia",
+   "en": "Master's Thesis Sage",
+   "it": "Tesi di master Salvia",
+   "fr": "Mémoire de master Sauge",
+   "es": "Tesis de máster Salvia"
+  },
+  "Masterarbeit Sand": {
+   "rm": "Lavur da master Sablun",
+   "en": "Master's Thesis Sand",
+   "it": "Tesi di master Sabbia",
+   "fr": "Mémoire de master Sable",
+   "es": "Tesis de máster Arena"
+  },
+  "Bachelorarbeit Minze": {
+   "rm": "Lavur da bachelor Menta",
+   "en": "Bachelor's Thesis Mint",
+   "it": "Tesi di bachelor Menta",
+   "fr": "Mémoire de bachelor Menthe",
+   "es": "Tesis de grado Menta"
+  },
+  "Bachelorarbeit Lavendel": {
+   "rm": "Lavur da bachelor Lavanda",
+   "en": "Bachelor's Thesis Lavender",
+   "it": "Tesi di bachelor Lavanda",
+   "fr": "Mémoire de bachelor Lavande",
+   "es": "Tesis de grado Lavanda"
   }
  }
 }
