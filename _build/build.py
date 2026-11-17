@@ -250,6 +250,14 @@ SMART_CITY_ART = f'''<g {LINE2}><path d="M20 106 h180"/><rect x="34" y="56" widt
 <path d="M73 20 a12 12 0 0 1 16 0 M68 14 a19 19 0 0 1 26 0" /><circle cx="81" cy="27" r="1.6" fill="#3f5d4a"/>
 <circle cx="47" cy="44" r="4"/><circle cx="113" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><path d="M51 42 l58 8 M117 51 l55 -2" stroke-dasharray="3 4"/></g>
 <g fill="none" stroke="#a8682f" stroke-width="2.4" stroke-linecap="round"><circle cx="190" cy="20" r="7"/><path d="M190 6 v4 M190 30 v4 M176 20 h4 M200 20 h4"/></g>'''
+TRAUMJOB_ART = '''<rect x="0" y="0" width="220" height="120" rx="10" fill="#efe9f6"/><circle cx="178" cy="30" r="11" fill="#f2c97e"/>
+<path d="M0 120 L58 52 L86 78 L128 30 L168 74 L196 56 L220 70 L220 120 Z" fill="#c4b8dd"/>
+<path d="M120 38 L128 30 L137 40 L130 44 Z M52 59 L58 52 L64 60 Z" fill="#fff" opacity=".85"/>
+<path d="M0 120 L40 88 L78 104 L128 62 L176 98 L220 86 L220 120 Z" fill="#8c78b3"/>
+<path d="M60 120 C 80 108, 120 112, 112 96 S 118 74, 128 62" stroke="#fff" stroke-width="2.4" fill="none" stroke-dasharray="4 5" stroke-linecap="round"/>
+<path d="M128 62 v-22" stroke="#4b3a6e" stroke-width="2.4" stroke-linecap="round"/><path d="M129 40 l15 5 l-15 5 Z" fill="#f2c97e" stroke="#4b3a6e" stroke-width="1.6" stroke-linejoin="round"/>
+<g stroke="#a8682f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M34 120 v-38"/><path d="M34 86 h20 l6 5 l-6 5 h-20 Z M34 98 h-18 l-6 5 l6 5 h18 Z" fill="#f4e4d7"/></g>
+<g fill="#3f6b5a"><path d="M176 120 l-7 0 l7 -20 l7 20 Z"/><path d="M190 120 l-6 0 l6 -15 l6 15 Z"/></g>'''
 AUFTRAEGE = [
     dict(datei="auftrag-smart-city.html", ordner="auftrag-smart-city", titel="Smart City Projekt",
          kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART, bild="img/smart-city/stadt-realitaetsnah.jpg",
@@ -265,6 +273,20 @@ AUFTRAEGE = [
          lead="Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem Stadtrat.",
          einleitung=["In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt den Stadtrat, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.",
                      "Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen."]),
+    dict(datei="auftrag-traumjob.html", ordner="auftrag-traumjob", titel="Mein Traumjob",
+         kategorien=["Einzel-Projekte", "Präsentationen", "Posters", "Schreiben", "Digitalität"], art=TRAUMJOB_ART,
+         badge="Einzel-Projekt · Real bis Berufsschule",
+         text="Lernende erkunden ihren Traumberuf bei einem Betrieb in der Region, bereiten eine Bewerbung vor und zeigen ihren Plan auf einem Poster oder in einem digitalen Portfolio.",
+         punkte=["Fächer: Berufliche Orientierung, Deutsch, Fremdsprachen, WAH, ABU, Medien und Informatik",
+                 "Kompetenzen: sich selbst einschätzen, recherchieren, Bewerbung schreiben, Gespräch führen, präsentieren",
+                 "Einzelarbeit mit Lernpartnerin oder Lernpartner",
+                 "Poster (Real, Sek) oder digitales Portfolio (Gymnasium, Berufsschule)",
+                 "Variante Region für die Berufswahl, Variante Ausland für den Fremdsprachenunterricht",
+                 "Digitalität: Optionen mit und ohne KI, Datenschutz bei Bewerbungen",
+                 "Schlusspräsentation als Berufsmesse oder mit Vorstellungsgespräch"],
+         lead="Ein Einzel-Projekt zur Berufswahl: Beruf, Betrieb und Arbeitsort erkunden, eine Bewerbung vorbereiten und den eigenen Plan präsentieren.",
+         einleitung=["Die Lernenden stellen sich vor, sie hätten ihre Ausbildung abgeschlossen oder stünden kurz vor der Lehrstellensuche. Sie wählen einen Beruf, der sie interessiert, und suchen dafür einen echten Betrieb in der Region. Sie recherchieren, was der Beruf verlangt, wie der Betrieb arbeitet und wie ihr Arbeitsweg und Alltag aussehen würden. Dann bereiten sie eine Bewerbung vor und üben das Vorstellungsgespräch. Zum Schluss zeigen sie ihren Plan auf einem Poster oder in einem digitalen Portfolio und präsentieren ihn. Im Fremdsprachenunterricht gibt es eine Variante mit einem Arbeitsort im Ausland.",
+                     "Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen."]),
 ]
 AUFGABEN_SEITEN = {
     "Einzel-Projekte": "lp-einzel-projekte.html", "Gruppen-Arbeiten": "lp-gruppen-arbeiten.html",
@@ -272,6 +294,9 @@ AUFGABEN_SEITEN = {
     "Posters": "lp-posters.html", "Digitalität": "lp-digitalitaet.html",
 }
 AUFGABEN_INTRO = {
+    "Einzel-Projekte": "Hier findest du Aufträge, in denen Lernende selbstständig an einem persönlichen Projekt arbeiten und dabei begleitet werden.",
+    "Posters": "Hier findest du Aufträge, deren Ergebnis ein Poster ist, oft mit einer kurzen Präsentation oder einer Ausstellung.",
+    "Schreiben": "Hier findest du Aufträge mit echten Schreibanlässen, zum Beispiel Bewerbungen, Offerten oder Berichte.",
     "Gruppen-Arbeiten": "Hier findest du Aufträge, in denen Lernende in Gruppen planen, recherchieren und ein gemeinsames Produkt erarbeiten.",
     "Präsentationen": "Hier findest du Aufträge, die mit einer Präsentation enden, mit Hinweisen zu Vorbereitung, Probe und Bewertung.",
     "Digitalität": "Hier findest du Aufträge, in denen digitale Werkzeuge und KI eine wichtige Rolle spielen. Sie zeigen, wann KI das Lernen unterstützt und wann bewusst ohne gearbeitet wird.",

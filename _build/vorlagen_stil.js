@@ -106,7 +106,7 @@ function mit(farbname, motiv = "berge") {
       const n = kopfFelder.length, b = Math.floor(breite / n);
       out.push(leer(80), new Table({ width: { size: b * n, type: WidthType.DXA }, columnWidths: Array(n).fill(b), rows: [new TableRow({ children:
         kopfFelder.map(k => new TableCell({ width: { size: b, type: WidthType.DXA }, borders: { top: OHNE, left: OHNE, right: OHNE, bottom: { style: BorderStyle.SINGLE, size: 6, color: F.rand } },
-          margins: { top: 60, bottom: 40, left: 60, right: 200 }, children: [new Paragraph({ children: [r(k, { size: 16, bold: true, color: F.dunkel })], spacing: { after: 160 } })] })) })] }));
+          margins: { top: 60, bottom: 40, left: 60, right: 200 }, children: [new Paragraph({ children: runs(k, { size: 16, bold: true, color: F.dunkel }), spacing: { after: 160 } })] })) })] }));
     }
     out.push(leer(160));
     return out;
