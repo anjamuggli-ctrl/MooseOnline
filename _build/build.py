@@ -207,7 +207,7 @@ AUFGABENFORMEN = [
         "Klare Aufträge mit Zwischenschritten und Checklisten",
         "Bewertungsraster für Produkt und Prozess"],
      '<circle cx="110" cy="34" r="13"/><path d="M84 92 c0 -22 12 -34 26 -34 s26 12 26 34"/><rect x="138" y="40" width="40" height="52" rx="4" fill="#e7ede6"/><path d="M146 54 h24 M146 64 h24 M146 74 h16"/><path d="M40 100 h140"/>'),
-    ("Gruppen-Projekte", [
+    ("Gruppen-Arbeiten", [
         "Zusammenarbeit mit verteilten Rollen",
         "Projektaufträge mit Zeitplan und Meilensteinen",
         "Raster für die Bewertung von Gruppe und Einzelnen"],
@@ -240,9 +240,85 @@ AUFGABENFORMEN = [
      '<rect x="56" y="20" width="108" height="66" rx="5" fill="#e7ede6"/><path d="M42 98 h136 l-10 -12 h-116 z"/><circle cx="88" cy="52" r="5"/><circle cx="112" cy="38" r="5"/><circle cx="134" cy="58" r="5"/><circle cx="108" cy="68" r="5"/><path d="M92 50 l16 -9 M116 41 l15 14 M130 61 l-17 6 M104 66 l-12 -11"/><path d="M178 20 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#3f5d4a"/>'),
 ]
 LINE2 = 'fill="none" stroke="#3f5d4a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"'
-kacheln = "\n".join(
-    f'''      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true"><g {LINE2}>{art}</g></svg></div><span class="badge">In Vorbereitung</span><h3>{titel}</h3><ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul></div>'''
-    for titel, punkte, art in AUFGABENFORMEN)
+
+# ---------------- Lehrpersonen: Aufträge ----------------
+# Jeder Auftrag erscheint als Kachel auf allen Seiten der Aufgabenformen, zu denen er passt.
+# Der Inhalt der Auftragsseite liegt in _build/<ordner>/*.html (Übersetzungen später in Unterordnern en/, it/, rm/).
+SMART_CITY_ART = f'''<g {LINE2}><path d="M20 106 h180"/><rect x="34" y="56" width="26" height="50" rx="2"/><rect x="66" y="36" width="30" height="70" rx="2" fill="#e7ede6"/>
+<rect x="102" y="64" width="22" height="42" rx="2"/><rect x="130" y="28" width="28" height="78" rx="2" fill="#e7ede6"/><rect x="164" y="60" width="24" height="46" rx="2"/>
+<path d="M74 48 h6 M84 48 h4 M74 60 h6 M84 60 h4 M74 72 h6 M138 40 h5 M147 40 h5 M138 52 h5 M147 52 h5 M138 64 h5 M147 64 h5"/>
+<path d="M73 20 a12 12 0 0 1 16 0 M68 14 a19 19 0 0 1 26 0" /><circle cx="81" cy="27" r="1.6" fill="#3f5d4a"/>
+<circle cx="47" cy="44" r="4"/><circle cx="113" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><path d="M51 42 l58 8 M117 51 l55 -2" stroke-dasharray="3 4"/></g>
+<g fill="none" stroke="#a8682f" stroke-width="2.4" stroke-linecap="round"><circle cx="190" cy="20" r="7"/><path d="M190 6 v4 M190 30 v4 M176 20 h4 M200 20 h4"/></g>'''
+AUFTRAEGE = [
+    dict(datei="auftrag-smart-city.html", ordner="auftrag-smart-city", titel="Smart City Projekt",
+         kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART,
+         badge="Gruppen-Arbeit · Real bis Berufsschule",
+         text="Gruppen planen als Firma eine «Smart City» und bewerben sich mit einer Offerte beim «City Board», gespielt von der Klasse.",
+         punkte=["Fächer: Englisch, Deutsch, RZG/Geografie, Medien und Informatik, WAH/Wirtschaft, ABU",
+                 "Kompetenzen: recherchieren, planen, budgetieren, argumentieren, präsentieren",
+                 "Gruppenarbeit mit Rollen und Gruppenvertrag",
+                 "Projektmanagement nach Stufe: von der Vorlage bis HERMES",
+                 "Digitalität: Arbeitsjournal, digitale Werkzeuge, Optionen mit und ohne KI",
+                 "BNE: erneuerbare Energie, Mobilität, lebenswerte Stadt",
+                 "Lernende bewerten als City Board mit und schätzen sich selbst ein"],
+         lead="Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem City Board.",
+         einleitung=["In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt das City Board, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.",
+                     "Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen."]),
+]
+AUFGABEN_SEITEN = {
+    "Einzel-Projekte": "lp-einzel-projekte.html", "Gruppen-Arbeiten": "lp-gruppen-arbeiten.html",
+    "Präsentationen": "lp-praesentationen.html", "Grammatik": "lp-grammatik.html", "Schreiben": "lp-schreiben.html",
+    "Posters": "lp-posters.html", "Digitalität": "lp-digitalitaet.html",
+}
+AUFGABEN_INTRO = {
+    "Gruppen-Arbeiten": "Hier findest du Aufträge, in denen Lernende in Gruppen planen, recherchieren und ein gemeinsames Produkt erarbeiten.",
+    "Präsentationen": "Hier findest du Aufträge, die mit einer Präsentation enden, mit Hinweisen zu Vorbereitung, Probe und Bewertung.",
+    "Digitalität": "Hier findest du Aufträge, in denen digitale Werkzeuge und KI eine wichtige Rolle spielen. Sie zeigen, wann KI das Lernen unterstützt und wann bewusst ohne gearbeitet wird.",
+}
+def auftrag_kachel(a):
+    return (f'      <a class="plan thema entile" href="{a["datei"]}"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{a["art"]}</svg></div>'
+            f'<span class="badge live">{a["badge"]}</span><h3>{a["titel"]}</h3><p>{a["text"]}</p>'
+            f'<ul>{"".join(f"<li>{x}</li>" for x in a["punkte"])}</ul><span class="go">Zum Auftrag →</span></a>')
+def auftraege_in(kat):
+    return [a for a in AUFTRAEGE if kat in a["kategorien"]]
+def form_kachel(titel, punkte, art):
+    svg = f'<div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true"><g {LINE2}>{art}</g></svg></div>'
+    liste = f'<ul>{"".join(f"<li>{x}</li>" for x in punkte)}</ul>'
+    n = len(auftraege_in(titel))
+    if not n:
+        return f'      <div class="plan thema">{svg}<span class="badge">In Vorbereitung</span><h3>{titel}</h3>{liste}</div>'
+    return (f'      <a class="plan thema entile" href="{AUFGABEN_SEITEN[titel]}">{svg}<span class="badge live">{n} {"Auftrag" if n == 1 else "Aufträge"}</span>'
+            f'<h3>{titel}</h3>{liste}<span class="go">Zu den Aufträgen →</span></a>')
+kacheln = "\n".join(form_kachel(t, p, a) for t, p, a in AUFGABENFORMEN)
+for titel, punkte, art in AUFGABENFORMEN:
+    liste = auftraege_in(titel)
+    if not liste:
+        continue
+    datei = AUFGABEN_SEITEN[titel]
+    ACTIVE[datei] = "english.html"
+    page(datei, f"{titel} – MuggliOnline", f"""<main class="wrap">
+{hero(f'<a href="english.html">Lehrpersonen</a> › {titel}', "Für Lehrpersonen · Aufgabenform", titel, " · ".join(punkte))}
+  <section class="section">
+{einleitung("Aufträge", [AUFGABEN_INTRO.get(titel, "") + " Jeder Auftrag enthält Angaben zu Stufen, Lektionen und Noten, einen kurzen Ablauf für Lehrpersonen und Vorlagen zum Herunterladen.", "Hinweis: Viele Aufträge passen in mehrere Aufgabenformen. Sie erscheinen deshalb auf allen passenden Seiten, zum Beispiel unter Gruppen-Arbeiten, Präsentationen und Digitalität."], 2)}
+    <div class="grid2 themen">
+{chr(10).join(auftrag_kachel(a) for a in liste)}
+    </div>
+  </section>
+</main>""", active="english.html", description=f"{titel}: Aufträge für den Unterricht mit Ablauf, Kompetenzen und Vorlagen.")
+
+for a in AUFTRAEGE:
+    ACTIVE[a["datei"]] = "english.html"
+    erste = AUFGABEN_SEITEN[a["kategorien"][0]]
+    inhalt = "".join((B / a["ordner"] / f).read_text() for f in sorted(x.name for x in (B / a["ordner"]).glob("*.html")))
+    page(a["datei"], f"{a['titel']} – MuggliOnline", f"""<main class="wrap">
+{hero(f'<a href="english.html">Lehrpersonen</a> › <a href="{erste}">{a["kategorien"][0]}</a> › {a["titel"]}', "Für Lehrpersonen · Auftrag", a["titel"], a["lead"])}
+  <section class="section">
+{einleitung("Worum es geht", a["einleitung"], 0)}
+<!--BODY:{a["ordner"]}-->{inhalt}<!--/BODY-->
+  </section>
+</main>""", active="english.html", description=a["lead"])
+
 page("english.html", "Lehrpersonen – MuggliOnline", f"""<main class="wrap">
 {hero("Lehrpersonen", "", "Lehrpersonen", "Unterrichtsmaterialien, Projektideen und Vorlagen. Sie wurden für den Englischunterricht erstellt, können aber auch in anderen Fächern verwendet werden.")}
   <section class="section">
@@ -274,6 +350,9 @@ THEMEN_ART = {
 <g font-family="Inter, sans-serif" font-size="11" fill="#9fb3a5"><text x="20" y="30">1010</text><text x="30" y="60">0110</text><text x="18" y="90">1101</text><text x="166" y="34">0011</text><text x="176" y="64">1001</text><text x="164" y="94">0101</text></g>''',
 }
 def themen_karte(titel, text):
+    if titel == "Smart City":
+        return (f'      <a class="plan thema entile" href="auftrag-smart-city.html"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{THEMEN_ART[titel]}</svg></div>'
+                f'<span class="badge live">Auftrag</span><h3>{titel}</h3><p>{text}</p><span class="go">Zum Auftrag →</span></a>')
     return (f'      <div class="plan thema"><div class="thema-art"><svg viewBox="0 0 220 120" aria-hidden="true">{THEMEN_ART[titel]}</svg></div>'
             f'<span class="badge">In Vorbereitung</span><h3>{titel}</h3><p>{text}</p></div>')
 INFORMATIK_THEMEN = [
@@ -508,7 +587,7 @@ KLASSEN = [
         <p>Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr</p>
         <ul><li>Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II</li></ul>
         <span class="go">Zur Probeprüfung →</span></a>""",
- f"""      <a class="plan thema entile" href="pome24b.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>PomE24B</h3>
+ f"""      <a class="plan thema entile" href="pome24b.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>Pome24B</h3>
         <p>Energy and the Environment</p>
         <ul><li>Nuclear Energy: video and tasks</li><li>Practice for the Exam</li></ul>
         <span class="go">Zur Klassenseite →</span></a>""",
@@ -523,10 +602,10 @@ page("pomg25a-materials.html", "PomG25A: Properties of Materials Exam – Muggli
 </main>""", active="lernende.html", description="Practice exercises for the Technical English exam Properties of Materials (PomG25A): fill in the blanks, matching, sorting, true or false, vocabulary, short answers and open-ended questions with model answers.")
 
 ACTIVE["pome24b.html"] = "lernende.html"
-page("pome24b.html", "PomE24B – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › PomE24B', "Technical English", "PomE24B", "Energy and the Environment")}
+page("pome24b.html", "Pome24B – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › Pome24B', "Technical English", "Pome24B", "Energy and the Environment")}
   <section class="section">
-{einleitung("How to use this page", ["This is the page for the class PomE24B. Each tile below belongs to one part of the unit “Energy and the Environment”. Click a tile to open it. Work through the parts in the order your teacher tells you.", "On each page you will find tasks that you can do directly in your browser, also on your phone. Your answers are saved on your device. When you have finished, click “Check my answers” and compare your answers with the solutions."], 0)}
+{einleitung("How to use this page", ["This is the page for the class Pome24B. Each tile below belongs to one part of the unit “Energy and the Environment”. Click a tile to open it. Work through the parts in the order your teacher tells you.", "On each page you will find tasks that you can do directly in your browser, also on your phone. Your answers are saved on your device. When you have finished, click “Check my answers” and compare your answers with the solutions."], 0)}
     <div class="grid2 themen">
       <a class="plan thema entile" href="pome24b-nuclear.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Unit 9</span><h3>Nuclear Energy</h3>
         <p>Gap-fill text in the book, a video about how a nuclear power plant works, and tasks with model answers.</p>
@@ -535,17 +614,17 @@ page("pome24b.html", "PomE24B – MuggliOnline", f"""<main class="wrap">
         <p>Practice for the Exam</p></div>
     </div>
   </section>
-</main>""", active="lernende.html", description="PomE24B, Technical English: Energy and the Environment, nuclear energy and practice for the exam.")
+</main>""", active="lernende.html", description="Pome24B, Technical English: Energy and the Environment, nuclear energy and practice for the exam.")
 
 ACTIVE["pome24b-nuclear.html"] = "lernende.html"
 PE_BODY = "".join((B / "pome24b" / f).read_text() for f in sorted(p.name for p in (B / "pome24b").glob("*.html")))
-page("pome24b-nuclear.html", "PomE24B: Nuclear Energy – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">PomE24B</a> › Nuclear Energy', "PomE24B · Energy and the Environment", "Nuclear Energy", "How does a nuclear power plant produce electricity? A gap-fill text, a video and tasks to practise the technical vocabulary.")}
+page("pome24b-nuclear.html", "Pome24B: Nuclear Energy – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Nuclear Energy', "Pome24B · Energy and the Environment", "Nuclear Energy", "How does a nuclear power plant produce electricity? A gap-fill text, a video and tasks to practise the technical vocabulary.")}
   <section class="section">
 {einleitung("How to use this page", ["Work through the page from top to bottom: first the gap-fill text in your book, then the video, then the tasks A to F. You can watch the video here or scan the QR code to watch it on your phone. Pause it as often as you need.", "Drag the words into the right places (on a phone: tap a word, then tap the place) and answer the questions in complete sentences. Your answers are saved in this browser. At the bottom, click “Check my answers” to see your result and the model answers."], 0)}
 <!--BODY:pome24b-->{PE_BODY}<!--/BODY-->
   </section>
-</main>""", active="lernende.html", description="PomE24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.")
+</main>""", active="lernende.html", description="Pome24B, Energy and the Environment: nuclear energy, with a video and interactive tasks with model answers.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",

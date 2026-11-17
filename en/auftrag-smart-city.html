@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart City Projekt – MuggliOnline</title>
+<meta name="description" content="Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem City Board.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=e58f97ef">
+<link rel="alternate" hreflang="de" href="../auftrag-smart-city.html">
+<link rel="alternate" hreflang="rm" href="../rm/auftrag-smart-city.html">
+<link rel="alternate" hreflang="en" href="../en/auftrag-smart-city.html">
+<link rel="alternate" hreflang="it" href="../it/auftrag-smart-city.html">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="MuggliOnline home page">
+      <svg aria-hidden="true" viewBox="0 0 100 100">
+  <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clippath></defs>
+  <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
+  <g clip-path="url(#inner)">
+    <!-- hintere Bergkette als M -->
+    <polygon points="10,68 44,33 58,47 73,29 100,52 100,100 10,100" fill="#87a48f"/>
+    <polygon points="44,33 58,47 52,100 48,100" fill="#6f8f78" opacity=".0"/>
+    <polygon points="44,33 58,47 54,60" fill="#6f8f78"/>
+    <polygon points="73,29 100,52 100,70 76,56" fill="#6f8f78"/>
+    <polygon points="44.0,33.0 50.5,39.5 46.9,36.9 44.1,39.7 40.8,36.7 37.7,39.5" fill="#ffffff"/>
+    <polygon points="73.0,29.0 80.6,35.5 76.4,32.9 74.1,35.7 70.3,32.7 67.6,35.5" fill="#ffffff"/>
+    <!-- vordere Bergkette als M -->
+    <polygon points="8,92 49,57 63,69 79,52 100,66 100,100 8,100" fill="#3f5d4a"/>
+    <polygon points="49,57 63,69 58,82" fill="#2f4a39"/>
+    <polygon points="79,52 100,66 100,84 82,72" fill="#2f4a39"/>
+  </g>
+
+  <path d="M91.95,42.60 A42.6,42.6 0 0 1 8.33,58.86" fill="none" stroke="#2f4a39" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M6.03,48.46 L6.10,47.02 L6.22,45.57 L6.39,44.13 L6.61,42.70 L6.87,41.27 L7.19,39.85 L7.54,38.45 L7.95,37.05 L8.40,35.68 L8.89,34.31 L9.43,32.97 L10.01,31.64 L10.64,30.33 L11.31,29.04 L12.02,27.78 L12.78,26.54 L13.57,25.32 L14.40,24.14 L15.28,22.98 L16.18,21.85 L17.13,20.75 L18.11,19.68 L19.13,18.65 L20.18,17.65 L21.26,16.68 L22.38,15.75 L23.52,14.86 L24.69,14.01 L25.89,13.19 L27.12,12.42 L28.37,11.68 L29.65,10.99 L30.94,10.34 L32.26,9.73 L33.60,9.17 L34.95,8.65 L36.32,8.18 L37.71,7.75 L39.11,7.37 L40.52,7.03 L41.94,6.74 L43.37,6.50 L44.81,6.31 L46.25,6.16 L47.70,6.06 L49.15,6.01 L50.60,6.00 L52.05,6.05 L53.49,6.14 L54.94,6.28 L56.38,6.46 L57.81,6.70 L59.23,6.98 L60.64,7.31 L62.05,7.68 L63.43,8.10 L64.81,8.57 L66.17,9.08 L67.51,9.63 L68.83,10.23 L70.13,10.87 L71.41,11.56 L72.66,12.28 L73.89,13.05 L75.10,13.86 L76.27,14.71 L77.42,15.59 L78.54,16.51 L79.63,17.47 L80.69,18.47 L81.71,19.50 L82.70,20.56 L83.65,21.65 L84.57,22.78 L85.45,23.93 L86.29,25.11 L87.09,26.32 L87.85,27.56 L88.57,28.82 L89.24,30.10 L89.88,31.40 L90.47,32.73 L91.02,34.07 L91.52,35.43 L91.98,36.81 L92.39,38.20 L92.75,39.60 L93.07,41.02 L93.35,42.44 L93.57,43.88 L90.80,44.27 L90.55,42.93 L90.25,41.61 L89.90,40.30 L89.50,39.00 L89.06,37.73 L88.57,36.47 L88.03,35.23 L87.46,34.01 L86.85,32.82 L86.19,31.65 L85.50,30.50 L84.77,29.38 L84.00,28.29 L83.20,27.23 L82.36,26.20 L81.49,25.20 L80.59,24.23 L79.65,23.30 L78.69,22.40 L77.70,21.54 L76.69,20.71 L75.65,19.91 L74.58,19.16 L73.49,18.44 L72.38,17.77 L71.26,17.13 L70.11,16.53 L68.95,15.97 L67.77,15.46 L66.58,14.98 L65.37,14.55 L64.16,14.16 L62.93,13.81 L61.70,13.50 L60.46,13.24 L59.22,13.02 L57.97,12.84 L56.73,12.70 L55.48,12.61 L54.23,12.56 L52.98,12.55 L51.74,12.58 L50.51,12.66 L49.28,12.77 L48.06,12.93 L46.85,13.13 L45.65,13.36 L44.46,13.64 L43.28,13.96 L42.12,14.31 L40.98,14.70 L39.86,15.13 L38.75,15.60 L37.66,16.10 L36.59,16.63 L35.55,17.20 L34.53,17.80 L33.53,18.44 L32.56,19.10 L31.61,19.80 L30.70,20.52 L29.80,21.28 L28.94,22.06 L28.11,22.86 L27.31,23.69 L26.54,24.55 L25.80,25.42 L25.09,26.32 L24.42,27.24 L23.78,28.17 L23.18,29.13 L22.61,30.10 L22.07,31.08 L21.57,32.08 L21.11,33.09 L20.68,34.12 L20.29,35.15 L19.93,36.19 L19.61,37.24 L19.33,38.29 L19.08,39.35 L18.88,40.42 L18.70,41.48 L18.57,42.55 L18.47,43.62 L18.41,44.68 L18.38,45.74 L18.39,46.80 L18.44,47.85 L18.52,48.90 Z" fill="#2f4a39"/>
+  <g stroke="#f4f1ea" stroke-width="1.15" stroke-linecap="round"><line x1="7.53" y1="37.05" x2="12.51" y2="38.57"/><line x1="10.38" y1="29.97" x2="14.77" y2="32.19"/><line x1="14.39" y1="23.48" x2="18.11" y2="26.25"/><line x1="19.46" y1="17.77" x2="22.46" y2="20.94"/><line x1="25.43" y1="13.02" x2="27.69" y2="16.43"/><line x1="32.13" y1="9.36" x2="33.67" y2="12.86"/><line x1="39.35" y1="6.90" x2="40.20" y2="10.36"/><line x1="46.89" y1="5.71" x2="47.12" y2="9.02"/><line x1="54.52" y1="5.83" x2="54.21" y2="8.88"/><line x1="62.01" y1="7.26" x2="61.25" y2="9.98"/></g>
+  <!-- Kopf: links in der Mitte, nach unten geneigt -->
+  <path d="M6.03,48.46
+           C4.2,53.6 3.6,58.2 3.5,62.6 C3.5,65.6 3.4,68.2 3.8,69.8 C4.2,71.4 5.6,72 7.2,71.6
+           L9.6,71 C10,73.6 10.4,76.4 10.8,79.4 C12,77 13,74.6 13.6,72.4
+           L18.2,65.8 C19.8,63.4 20.6,60.2 20.4,56.8 C20.2,54 19.4,51.8 18.52,48.90 Z" fill="#2f4a39"/>
+  <path d="M18.6,54.6 C22.4,53 26.4,53.2 29,54.8 C25.8,56.4 22,57.2 18.2,57 Z" fill="#2f4a39"/>
+  <path d="M7.6,56.6 C8.8,55.6 10.6,55.6 11.6,56.4 C10.4,57.6 8.8,57.8 7.6,56.6 Z" fill="#f4f1ea"/>
+  <path d="M4.4,68.4 l1.2,-0.2" stroke="#f4f1ea" stroke-width=".75" stroke-linecap="round"/>
+</svg>
+      <span class="name">Muggli<span>Online</span></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="didaktik.html">Pedagogy</a></li>
+      <li><a href="english.html" class="active">Teachers</a></li>
+      <li><a href="lernende.html">Learners</a></li>
+      <li><a href="werkstatt.html">App Workshop</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="ueber-anja.html">About Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Contact</a></li>
+    </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Choose language" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>EN</button><ul class="lang-list"><li><a href="../auftrag-smart-city.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/auftrag-smart-city.html" hreflang="rm" lang="rm">Rumantsch<small>RM</small></a></li><li><a href="../en/auftrag-smart-city.html" hreflang="en" lang="en" class="aktiv">English<small>EN</small></a></li><li><a href="../it/auftrag-smart-city.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li></ul></div>
+    <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="inner">
+      <div class="crumbs"><a href="index.html">Home</a> › <a href="english.html">Teachers</a> › <a href="lp-gruppen-arbeiten.html">Group work</a> › Smart City Projekt</div>
+      <div class="kicker">Für Lehrpersonen · Auftrag</div>
+      <h1>Smart City Projekt</h1>
+      <p class="lead">Ein Gruppenprojekt mit Recherche, Projektmanagement, digitalen Medien und einer Offerte-Präsentation vor dem City Board.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:150px"><path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/><path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/><path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg><svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:150px"><g fill="#2a3a4b"><g transform="translate(60 88.8) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(92 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(380 97.6) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(870 96.5) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1090 87.7) scale(1.15)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1126 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg>
+  </section>
+  <section class="section">
+    <article class="vrow einleitung-bar"><svg class="vsil" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,120 L0,78 L90,52 L170,70 L260,30 L340,62 L420,48 L520,80 L600,40 L700,70 L800,34 L900,66 L1000,50 L1100,74 L1200,46 L1200,120 Z" fill="#c9d8cb"/><path d="M0,120 L0,96 L150,80 L300,98 L450,84 L620,100 L780,86 L950,102 L1100,88 L1200,96 L1200,120 Z" fill="#9fb8a5"/></svg><svg class="vtrees" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#34475c"><g transform="translate(60 92) scale(1.0)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(88 96) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1030 94) scale(0.9)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1060 98) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1120 92) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg><div class="vhead"><h2>What it’s about</h2></div><div class="vtext"><p>In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt das City Board, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.</p><p>Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen.</p></div></article>
+<!--BODY:auftrag-smart-city-->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+   <defs>
+    <symbol id="aui-th" viewBox="0 0 24 24"><path d="M3 5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM21 5c-3-1.5-6-1.5-9 0v14c3-1.5 6-1.5 9 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="aui-ki" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 8.5l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z" fill="currentColor"/></symbol>
+    <symbol id="aui-bne" viewBox="0 0 24 24"><path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15M5 19l7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+   </defs>
+  </svg>
+ <div class="lb au">
+
+  <section class="au-kap" id="hauptschritte" style="margin-top:10px">
+   <h2>Hauptschritte der Lernenden</h2>
+   <p class="lb-lead">So erleben die Lernenden das Projekt. Jeder Schritt endet mit einem sichtbaren Ergebnis, das ins Arbeitsjournal kommt.</p>
+   <div class="au-pfeile">
+    <div><span>1</span><b>Firma gründen</b>Gruppe bilden, Rollen wählen, Gruppenvertrag unterschreiben.</div>
+    <div><span>2</span><b>Methode kennen</b>Ein Projektmanagement-Modell kennenlernen und den Projektplan anlegen.</div>
+    <div><span>3</span><b>Recherchieren</b>Smart City verstehen, Stadt untersuchen, Ideen sammeln. Quellen ins Journal.</div>
+    <div><span>4</span><b>Offerte schreiben</b>Idee, Phasen, Zeitplan und Budget. Zwischen-Check bei der Lehrperson.</div>
+    <div><span>5</span><b>Präsentation</b>Folien gestalten, Fragen des City Boards voraussehen, proben.</div>
+    <div><span>6</span><b>Präsentieren und bewerten</b>Offerte präsentieren, als City Board andere beurteilen, sich selbst einschätzen.</div>
+   </div>
+  </section>
+
+  <section class="au-kap" id="auf-einen-blick">
+   <h2>Auf einen Blick</h2>
+   <div class="au-fakten">
+    <div class="au-fakt"><small>Sozialform</small><b>Gruppen à 3–4</b>mit festen Rollen</div>
+    <div class="au-fakt"><small>Zeitbedarf</small><b>10–14 Lektionen</b>à 45 Minuten, je nach Stufe</div>
+    <div class="au-fakt"><small>Noten</small><b>1½ bis 2 Noten</b>Offerte ½, Präsentation 1, optional Prozess ½</div>
+    <div class="au-fakt"><small>Produkte</small><b>Offerte und Präsentation</b>dazu Arbeitsjournal und Projektplan</div>
+   </div>
+   <h3 class="lb-h3">Stufen: Wissenswertes für Lehrpersonen</h3>
+   <p>Klicke auf eine Stufe. Die Angaben zum Zeitbedarf sind Richtwerte für Klassen mit fünf bis sieben Gruppen.</p>
+   <div class="au-stufen">
+
+    <details>
+     <summary><i style="--c:#a8682f"></i><b>Realschule</b><span>Zyklus 3 · 7. bis 9. Klasse · Grundansprüche</span></summary>
+     <table class="au-tab">
+      <tr><th>Geeignete Fächer</th><td>Englisch, Deutsch, Räume, Zeiten, Gesellschaften (RZG), Medien und Informatik, Wirtschaft, Arbeit, Haushalt (WAH); gut als fächerübergreifendes Projekt</td></tr>
+      <tr><th>Kompetenzen gemäss Lehrplan 21</th><td><ul>
+       <li><code>RZG.2.3</code> die Dynamik in städtischen und ländlichen Räumen analysieren; <code>RZG.2.4</code> Mobilität und Transport untersuchen</li>
+       <li><code>MI.1.2</code> Informationen aus verschiedenen Quellen beschaffen und beurteilen; <code>MI.1.3</code> Medienbeiträge produzieren; <code>MI.1.4</code> mit Medien kommunizieren und kooperieren</li>
+       <li><code>D.3</code> bzw. <code>FS2E.3</code> monologisch sprechen und präsentieren (mit Stichwortkarte)</li>
+       <li>Überfachlich: Kooperationsfähigkeit, Informationen nutzen, Aufgaben und Probleme lösen</li>
+       <li>BNE: fächerübergreifende Themen «Natürliche Umwelt und Ressourcen» und «Wirtschaft und Konsum»</li></ul></td></tr>
+      <tr><th>Anpassungen</th><td><ul><li>Projektplan als fertige Vorlage in vier Schritten (Informieren, Planen, Realisieren, Auswerten)</li><li>Lehrperson schlägt Rollen vor, Gruppen eher durch die Lehrperson bilden</li><li>Budget mit vorgegebener Preisliste oder groben Kategorien</li><li>KI nur als Demonstration durch die Lehrperson am Beamer</li><li>Präsentation 5–7 Minuten</li></ul></td></tr>
+      <tr><th>Lektionen à 45 Min.</th><td>ca. 14</td></tr>
+      <tr><th>Noten</th><td>1½: Offerte ½, Präsentation 1 (optional Prozessnote ½)</td></tr>
+     </table>
+    </details>
+
+    <details>
+     <summary><i style="--c:#4a6178"></i><b>Sekundarschule</b><span>Zyklus 3 · 7. bis 9. Klasse · erweiterte Ansprüche</span></summary>
+     <table class="au-tab">
+      <tr><th>Geeignete Fächer</th><td>Englisch, Deutsch, RZG, Natur und Technik (NT), Medien und Informatik, WAH; gut als fächerübergreifendes Projekt</td></tr>
+      <tr><th>Kompetenzen gemäss Lehrplan 21</th><td><ul>
+       <li><code>RZG.2.3</code>, <code>RZG.2.4</code> städtische Räume und Mobilität analysieren; <code>RZG.3</code> Mensch-Umwelt-Beziehungen analysieren</li>
+       <li><code>NT.3</code> Energieumwandlungen analysieren (erneuerbare Energie in der Stadt)</li>
+       <li><code>MI.1.2</code>, <code>MI.1.3</code>, <code>MI.1.4</code> Informationen beurteilen, Medienbeiträge produzieren, digital zusammenarbeiten</li>
+       <li><code>D.3</code>, <code>D.4</code> bzw. <code>FS2E.3</code>, <code>FS2E.4</code> präsentieren und Sachtexte schreiben</li>
+       <li>Überfachlich: Kooperationsfähigkeit, Konfliktfähigkeit, Selbstreflexion</li>
+       <li>BNE: Perspektiven Umwelt, Gesellschaft und Wirtschaft verbinden</li></ul></td></tr>
+      <tr><th>Anpassungen</th><td><ul><li>Lernende lernen das Modell IPERKA kennen und füllen den Projektplan selbst aus</li><li>Kanban-Board (Papier oder digital) für die Aufgabenverteilung</li><li>KI in klar bezeichneten Phasen mit Protokoll, nur mit von der Schule freigegebenen Tools</li><li>Präsentation 8–10 Minuten</li></ul></td></tr>
+      <tr><th>Lektionen à 45 Min.</th><td>ca. 12</td></tr>
+      <tr><th>Noten</th><td>1½ bis 2: Offerte ½, Präsentation 1, Prozessnote ½ (optional)</td></tr>
+     </table>
+    </details>
+
+    <details>
+     <summary><i style="--c:#3f5d4a"></i><b>Gymnasium</b><span>Sekundarstufe II · auch Untergymnasium</span></summary>
+     <table class="au-tab">
+      <tr><th>Geeignete Fächer</th><td>Englisch und andere Sprachfächer, Geografie, Informatik, Wirtschaft und Recht; ideal für interdisziplinären Unterricht</td></tr>
+      <tr><th>Rahmenlehrplan 2024</th><td><ul>
+       <li>Transversale Unterrichtsbereiche: Bildung für nachhaltige Entwicklung, Digitalität, Interdisziplinarität, Wissenschaftspropädeutik</li>
+       <li>Geografie: Stadtentwicklung, Raumplanung, Energie und Ressourcen</li>
+       <li>Sprachfächer: sachbezogen argumentieren, Fachsprache verwenden, vor Publikum präsentieren und auf Fragen reagieren</li>
+       <li>Informatik und Wirtschaft: Daten, Vernetzung, Kosten-Nutzen-Abwägung</li>
+       <li>Überfachlich: selbstständig planen, Quellen kritisch beurteilen, im Team arbeiten</li></ul></td></tr>
+      <tr><th>Anpassungen</th><td><ul><li>Lernende vergleichen ein klassisches Phasenmodell (z. B. HERMES) mit einem agilen Vorgehen und begründen ihre Wahl</li><li>Zeitplan als Gantt-Diagramm, Budget mit belegten Kostenschätzungen</li><li>Offerte mit Quellenverzeichnis</li><li>KI selbstständig nach KI-Ampel, mit Protokoll und Faktencheck</li><li>Präsentation 10–12 Minuten plus Fragerunde</li></ul></td></tr>
+      <tr><th>Lektionen à 45 Min.</th><td>ca. 12, teilweise mit Arbeit ausserhalb des Unterrichts</td></tr>
+      <tr><th>Noten</th><td>1½ bis 2: Offerte ½, Präsentation 1, Prozessnote ½ (optional)</td></tr>
+     </table>
+    </details>
+
+    <details>
+     <summary><i style="--c:#9b4d5e"></i><b>Berufsschule</b><span>Sekundarstufe II · 1. bis 3. Lehrjahr</span></summary>
+     <table class="au-tab">
+      <tr><th>Geeignete Fächer</th><td>Englisch bzw. Fremdsprache, Allgemeinbildender Unterricht (ABU, Aspekte Ökologie, Technologie, Wirtschaft), berufskundlicher Unterricht (z. B. Informatik, Elektro, Polymechanik)</td></tr>
+      <tr><th>Handlungskompetenzen</th><td><ul>
+       <li>Fachkompetenz: Fachwissen auf eine realitätsnahe Kundenanfrage anwenden, Fachbegriffe korrekt verwenden</li>
+       <li>Methodenkompetenz: ein Projekt nach HERMES strukturieren, Zeitplan und Budget erstellen, Informationen beschaffen und bewerten</li>
+       <li>Sozialkompetenz: im Team Rollen übernehmen, Absprachen einhalten, Konflikte ansprechen</li>
+       <li>Selbstkompetenz: Verantwortung für Termine übernehmen, eigene Arbeit einschätzen, KI und digitale Medien reflektiert nutzen</li></ul></td></tr>
+      <tr><th>Anpassungen</th><td><ul><li>Lernende recherchieren das HERMES-Modell der Bundesverwaltung selbst und übertragen die Phasen auf ihre Offerte</li><li>Bezug zum eigenen Beruf: Welche Fachleute braucht es in welcher Phase?</li><li>Präsentation wie vor einer echten Kundin (Kleidung, Auftreten, Fachsprache)</li><li>KI selbstständig nach KI-Ampel</li></ul></td></tr>
+      <tr><th>Lektionen à 45 Min.</th><td>ca. 10 (zum Beispiel fünf Doppellektionen)</td></tr>
+      <tr><th>Noten</th><td>1½: Offerte ½, Präsentation 1 (optional Prozessnote ½)</td></tr>
+     </table>
+    </details>
+   </div>
+   <p class="lb-cap" style="margin-top:8px">Kompetenzcodes nach Lehrplan 21 (D-EDK, 2016); Gymnasium nach dem Rahmenlehrplan Gymnasiale Maturitätsschulen (EDK, 2024). Kantonale Lehrpläne können abweichen.</p>
+  </section>
+
+  <section class="au-kap" id="ablauf">
+   <h2>Ablauf für Lehrpersonen</h2>
+   <p class="lb-lead">Sieben Schritte, kurz und direkt umsetzbar. Rechts findest du jeweils, was die Forschung dazu sagt. Die blauen Kästen zeigen Optionen mit und ohne KI.</p>
+   <nav class="au-nav" aria-label="Schritte">
+    <a href="#s1"><span>1</span>Vorbereiten</a><a href="#s2"><span>2</span>Einführen</a><a href="#s3"><span>3</span>Gruppen und Rollen</a><a href="#s4"><span>4</span>Planen und recherchieren</a><a href="#s5"><span>5</span>Begleiten</a><a href="#s6"><span>6</span>Präsentieren und bewerten</a><a href="#s7"><span>7</span>Abschliessen</a><a href="#downloads"><span>↓</span>Templates</a>
+   </nav>
+  </section>
+
+  <!-- ===== Schritt 1 ===== -->
+  <section class="au-schritt" id="s1">
+   <div class="au-kopf"><span class="au-nr">1</span><h2>Vorbereiten</h2><span class="au-zeit">vor dem Projekt · ca. 1 Stunde</span></div>
+   <div class="au-haupt">
+    <ol class="au-todo">
+     <li><b>Stufe und Fach festlegen</b> und oben die passenden Anpassungen wählen.</li>
+     <li><b>Stadt bestimmen.</b> Im Original ist es Sarajevo (Lehrmittel Englisch). Gut funktionieren auch die eigene Gemeinde, eine Partnerstadt oder eine Stadt, die gerade im Unterricht vorkommt.</li>
+     <li><b>Variante wählen</b> oder die Gruppen wählen lassen (siehe unten).</li>
+     <li><b>Termine setzen:</b> Zwischen-Check der Offerte, Probe, Präsentationstag, Abgabe auf Teams vor Lektionsbeginn.</li>
+     <li><b>Digitalen Raum einrichten:</b> pro Gruppe einen Abschnitt im Klassennotizbuch (OneNote) oder einen Teams-Kanal, dazu die Vorlagen.</li>
+     <li><b>KI-Ampel festlegen</b> und mit der Klasse besprechen (unten). Nur Tools verwenden, die die Schule freigegeben hat.</li>
+     <li><b>Grading rubrics</b> anpassen und von Anfang an zeigen.</li>
+    </ol>
+
+    <h3>Zwei Varianten</h3>
+    <div class="au-var">
+     <div><h4>Realitätsnah</h4>Nur Technologien, die es heute gibt oder die schon in Pilotprojekten laufen, zum Beispiel smarte Strassenbeleuchtung, Sharing-Angebote, Solardächer oder Sensoren für Parkplätze. Kosten werden mit Quellen belegt.
+      <p class="pro"><b>Stärkt:</b> Recherche, Quellenkritik, realistische Budgets</p></div>
+     <div><h4>Fantasy</h4>Zukunftsideen sind erlaubt, zum Beispiel fliegende Taxis, selbstreinigende Strassen oder Gebäude, die Strom speichern. Regel: Jede Idee braucht eine plausible Erklärung, einen klaren Nutzen und eine begründete Kostenschätzung.
+      <p class="pro"><b>Stärkt:</b> Kreativität, Argumentieren, vorausschauendes Denken</p></div>
+    </div>
+    <p><b>BNE als feste Regel:</b> Jede Offerte enthält mindestens eine Komponente zu erneuerbarer Energie oder Ressourcen und zeigt den Nutzen für Umwelt, Gesellschaft und Wirtschaft.</p>
+
+    <h3>Digitale Werkzeuge und KI im ganzen Projekt</h3>
+    <div class="au-tabelle-wrap"><table class="au-tab">
+     <thead><tr><th>Phase</th><th>Werkzeuge ohne KI</th><th>KI-Option</th><th>Warum</th></tr></thead>
+     <tbody>
+      <tr><th>Einführung</th><td>Bilder, Padlet oder Whiteboard</td><td>KI-Bild «Unsere Stadt 2040» als Gesprächsanlass (Lehrperson)</td><td>Interesse wecken, Fiktion und Realität unterscheiden</td></tr>
+      <tr><th>Recherche</th><td>Browser, Arbeitsjournal in OneNote mit Screenshots</td><td>Suchbegriffe finden, eigene Ideenliste ergänzen lassen</td><td>Informationskompetenz: Quellen finden und prüfen</td></tr>
+      <tr><th>Planung</th><td>Kanban (Planner, Papier), Tabelle für Zeitplan und Budget</td><td>Budget auf Plausibilität prüfen lassen, Werte danach belegen</td><td>Projektmanagement und Umgang mit Zahlen</td></tr>
+      <tr><th>Offerte</th><td>Word oder OneNote mit Vorlage</td><td>nur Rückmeldung zu Aufbau und Verständlichkeit</td><td>eigene Sprachproduktion bleibt bei den Lernenden</td></tr>
+      <tr><th>Präsentation</th><td>PowerPoint, Canva, Google Slides</td><td>Bilder für die Fantasy-Variante (gekennzeichnet), KI als Probepublikum</td><td>Medien produzieren, Urheberrecht, Kennzeichnung</td></tr>
+      <tr><th>Abgabe</th><td>Teams-Aufgabe</td><td>–</td><td>verbindliche Termine</td></tr>
+     </tbody></table></div>
+
+    <h3>KI-Ampel für die Klasse</h3>
+    <div class="au-ampel">
+     <div class="gruen"><b>Grün: erlaubt</b><ul><li>nach dem eigenen Brainstorming weitere Ideen holen</li><li>Suchbegriffe und Fragen finden</li><li>Rückmeldung zu Aufbau und Verständlichkeit</li><li>Fragen des City Boards üben</li></ul></div>
+     <div class="gelb"><b>Gelb: nur mit Protokoll</b><ul><li>Fakten und Kosten erfragen, danach mit einer Quelle belegen</li><li>Bilder erzeugen, auf der Folie kennzeichnen</li><li>Zusammenfassungen langer Texte, danach im Original prüfen</li></ul></div>
+     <div class="rot"><b>Rot: nicht erlaubt</b><ul><li>Sätze oder ganze Abschnitte der Offerte schreiben oder übersetzen lassen</li><li>Präsentationstext erzeugen lassen</li><li>Personendaten oder Fotos von Mitlernenden eingeben</li></ul></div>
+    </div>
+    <p>Jede KI-Nutzung kommt ins Arbeitsjournal: Eingabe (Prompt), kurz die Antwort, was übernommen wurde und wie es geprüft wurde. In der Volksschule gelten die Altersvorgaben der Anbieter und die kantonalen Vorgaben. Dort ist die Demonstration durch die Lehrperson oft die bessere Wahl.</p>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Projektbasiertes Lernen hat in einer Meta-Analyse einen <b>mittleren bis grossen Effekt</b> auf die Leistung (d = 0.71) im Vergleich zu traditionellem Unterricht. Die Wirkung hing unter anderem von der Unterrichtszeit und der Unterstützung durch Informationstechnologie ab.<span class="lb-src">Chen &amp; Yang, 2019</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Bewertungsraster, die von Anfang an bekannt sind, wirken positiv auf <b>Leistung, Selbstregulation und Selbstwirksamkeit</b>. Sie zeigen den Lernenden, wie gute Arbeit aussieht.<span class="lb-src">Panadero et al., 2023</span></div>
+    <div class="au-th bne"><div class="lbl"><svg><use href="#aui-bne"/></svg>BNE</div>Die UNESCO nennt Schlüsselkompetenzen für nachhaltige Entwicklung, darunter <b>vernetztes und vorausschauendes Denken</b> sowie Zusammenarbeit. Eine Stadt der Zukunft zu planen, fordert alle drei.<span class="lb-src">UNESCO, 2017</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 2 ===== -->
+  <section class="au-schritt" id="s2">
+   <div class="au-kopf"><span class="au-nr">2</span><h2>Einführen</h2><span class="au-zeit">1 Lektion</span></div>
+   <div class="au-haupt">
+    <ol class="au-todo">
+     <li><b>Einstieg (5 Min.):</b> Bild einer Stadt zeigen und fragen: «Was nervt euch in einer Stadt? Was würde das Leben dort besser machen?»</li>
+     <li><b>Denkzeit geben (Think-Pair-Share, 10 Min.):</b> 1 Minute still allein notieren, 3 Minuten zu zweit austauschen, dann einige Ideen im Plenum sammeln. Nach jeder Frage mindestens 3 bis 5 Sekunden warten, bevor jemand aufgerufen wird.</li>
+     <li><b>Begriff klären (10 Min.):</b> Was ist eine Smart City? Die Ideen der Klasse den Bereichen zuordnen, zum Beispiel Mobilität, Energie, Umwelt, Verwaltung, Gesundheit und Wohnen.</li>
+     <li><b>Auftrag vorstellen (10 Min.):</b> Rolle der Klasse als Firmen, Rolle des City Boards, Abgaben, Termine, Bewertungsraster und KI-Ampel.</li>
+     <li><b>Variante wählen und Fragen klären (10 Min.):</b> Fragen sammeln, ein Ticket zum Abschluss: «Was ist mir klar, was noch nicht?»</li>
+    </ol>
+    <p><b>Material für die Lernenden:</b> Eine gut verständliche Einführung bietet das Programm Smart City Schweiz von EnergieSchweiz (<a href="https://www.local-energy.swiss/programme/smart-city/was-ist-eine-smart-city.html" target="_blank" rel="noopener" style="text-decoration:underline">local-energy.swiss</a>). Für Englisch eignet sich der Artikel der Monash University (<a href="https://www.monash.edu/indonesia/news/what-is-smart-city-and-implementation-in-real-world" target="_blank" rel="noopener" style="text-decoration:underline">monash.edu</a>).</p>
+    <div class="au-ki"><div class="kopf"><svg><use href="#aui-ki"/></svg>Digital und KI</div>
+     <div class="spalten">
+      <div><b>Ohne KI</b>Fotos realer Smart-City-Projekte aus der Schweiz zeigen. Die Klasse vermutet, was die Technik bewirkt.</div>
+      <div><b>Mit KI</b>Die Lehrperson lässt live ein Bild «Unsere Stadt im Jahr 2040» erzeugen. Die Klasse sucht: Was ist realistisch, was Fantasie, was fehlt?</div>
+     </div>
+     <p class="warum"><b>Warum:</b> Das KI-Bild wird zum Anlass, kritisch hinzuschauen, statt zur fertigen Antwort. So lernen die Lernenden schon am ersten Tag, KI-Ergebnisse zu prüfen.</p>
+    </div>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Warten Lehrpersonen nach einer Frage <b>mindestens drei Sekunden</b>, antworten Lernende ausführlicher, begründeter und es beteiligen sich mehr von ihnen.<span class="lb-src">Rowe, 1986</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Wer auswählen darf, erlebt mehr <b>Autonomie</b>. Autonomie, Kompetenzerleben und soziale Eingebundenheit fördern die Motivation von innen heraus. Die Wahl der Variante nutzt das gezielt.<span class="lb-src">Ryan &amp; Deci, 2000</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 3 ===== -->
+  <section class="au-schritt" id="s3">
+   <div class="au-kopf"><span class="au-nr">3</span><h2>Gruppen bilden und Rollen verteilen</h2><span class="au-zeit">1 Lektion</span></div>
+   <div class="au-haupt">
+    <p>Gruppen von <b>drei bis vier</b> Lernenden funktionieren am besten. In Fünfergruppen hat oft jemand nichts zu tun.</p>
+    <h3>Wer bildet die Gruppen?</h3>
+    <div class="au-var">
+     <div><h4>A · Die Lehrperson bildet die Gruppen</h4>
+      <ol><li>Lernende kreuzen auf einem Zettel an, was sie gut können: recherchieren, rechnen, gestalten, präsentieren.</li><li>Pro Gruppe je eine Stärke verteilen, Leistung und Sprache mischen.</li><li>Niemanden allein «isolieren», zum Beispiel als einzige Person ohne Freundin oder Freund in der Gruppe.</li><li>Gruppen bekannt geben und begründen: «In einer Firma suchst du dir das Team auch nicht aus.»</li></ol>
+      <p class="pro"><b>Vorteile:</b> ausgewogene Teams, niemand bleibt übrig, nahe an der Berufswelt</p>
+      <p class="contra"><b>Nachteile:</b> anfangs weniger Zusammenhalt, mehr Vorbereitung, manchmal Widerstand</p></div>
+     <div><h4>B · Die Lernenden bilden die Gruppen</h4>
+      <ol><li>Regeln vorgeben: 3 bis 4 Personen, mindestens eine Person, die gern gestaltet, und eine, die gern rechnet.</li><li>«Firmen-Markt»: Wer eine Idee hat, stellt sie in 30 Sekunden vor. Die anderen schliessen sich an.</li><li>Die Lehrperson prüft die Regeln und hilft bei Lücken diskret.</li></ol>
+      <p class="pro"><b>Vorteile:</b> hohe Zufriedenheit und Motivation, schneller Zusammenhalt</p>
+      <p class="contra"><b>Nachteile:</b> Freundesgruppen sind oft sehr ähnlich, «Übrigbleiben» kann kränken, grosse Leistungsunterschiede zwischen Gruppen</p></div>
+    </div>
+    <p><b>Mischform (Tipp):</b> Alle schreiben verdeckt zwei Wunschpersonen auf. Die Lehrperson bildet ausgewogene Gruppen, in denen jede Person mindestens einen Wunsch erfüllt bekommt.</p>
+
+    <h3>Die vier Rollen</h3>
+    <div class="au-rollen">
+     <div style="--c:#3f5d4a"><b>Projektleitung</b>führt Kanban und Zeitplan, leitet kurze Sitzungen, ist Kontakt zur Lehrperson</div>
+     <div style="--c:#4a6178"><b>Recherche und Qualität</b>sammelt und prüft Quellen, achtet auf das Arbeitsjournal, macht den Faktencheck</div>
+     <div style="--c:#a8682f"><b>Finanzen und Planung</b>erstellt das Budget, rechnet nach, plant die Dauer der Phasen</div>
+     <div style="--c:#9b4d5e"><b>Design und Kommunikation</b>gestaltet Folien und Grafiken, organisiert die Probe</div>
+    </div>
+    <p>Alle recherchieren, schreiben und präsentieren mit. Die Rolle bedeutet zusätzliche Verantwortung. In Dreiergruppen übernimmt die Projektleitung auch die Finanzen.</p>
+    <h3>So lernen die Lernenden, Rollen zu verteilen</h3>
+    <ol class="au-todo">
+     <li><b>Rollenkarten lesen</b> (5 Min., Vorlage SC4).</li>
+     <li><b>Stärken-Runde:</b> Jede Person sagt, was sie gut kann und was sie in diesem Projekt lernen möchte.</li>
+     <li><b>Rollen wählen und begründen.</b> Wenn zwei dieselbe Rolle wollen: Wer möchte sie lernen, wer kann sie schon? Beides ist ein guter Grund.</li>
+     <li><b>Gruppenvertrag ausfüllen:</b> Regeln, Kommunikation, was passiert, wenn jemand Abmachungen nicht einhält. Alle unterschreiben.</li>
+     <li><b>Nach dem Zwischen-Check</b> kurz prüfen: Passt die Verteilung noch?</li>
+    </ol>
+    <p>In der Realschule schlägt die Lehrperson die Rollen vor und die Gruppe bestätigt oder tauscht.</p>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Kooperatives Lernen wirkt, wenn zwei Bedingungen erfüllt sind: <b>positive Abhängigkeit</b> (wir erreichen das Ziel nur gemeinsam) und <b>individuelle Verantwortlichkeit</b> (jeder Beitrag ist sichtbar).<span class="lb-src">Johnson &amp; Johnson, 2009</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>In Gruppen strengen sich Menschen oft weniger an, wenn ihr eigener Beitrag nicht erkennbar ist (<b>Social Loafing</b>). Der Effekt wird kleiner, wenn Beiträge sichtbar und bewertbar sind. Rollen und Journal helfen dabei.<span class="lb-src">Karau &amp; Williams, 1993</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Selbst gewählte Gruppen berichten von mehr <b>Zufriedenheit und Zusammenhalt</b>. Sie sind aber oft einseitig zusammengesetzt. Für gemischte Teams von drei bis vier Personen, gebildet durch die Lehrperson, sprechen sich Oakley und Kolleginnen aus.<span class="lb-src">Chapman et al., 2006; Oakley et al., 2004</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Feste Rollen verteilen Verantwortung und verhindern, dass wenige Lernende die Gruppe dominieren. Das stärkt die Beteiligung aller.<span class="lb-src">Cohen &amp; Lotan, 2014</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 4 ===== -->
+  <section class="au-schritt" id="s4">
+   <div class="au-kopf"><span class="au-nr">4</span><h2>Planen und recherchieren</h2><span class="au-zeit">3–4 Lektionen</span></div>
+   <div class="au-haupt">
+    <h3>Projektmanagement je nach Stufe</h3>
+    <div class="au-tabelle-wrap"><table class="au-tab">
+     <thead><tr><th>Stufe</th><th>Modell</th><th>So arbeiten die Lernenden</th></tr></thead>
+     <tbody>
+      <tr><th>Real</th><td>Vier Schritte: Informieren, Planen, Realisieren, Auswerten (vereinfachtes IPERKA)</td><td>Vorlage SC3 ist vorbereitet, die Lehrperson erklärt sie in 10 Minuten. Keine eigene Recherche zum Modell.</td></tr>
+      <tr><th>Sek</th><td>IPERKA: Informieren, Planen, Entscheiden, Realisieren, Kontrollieren, Auswerten</td><td>Kurzen Text lesen (z. B. <a href="https://de.wikipedia.org/wiki/Modell_der_vollst%C3%A4ndigen_Handlung" target="_blank" rel="noopener" style="text-decoration:underline">Modell der vollständigen Handlung</a>), Phasen in SC3 eintragen, Kanban-Board anlegen</td></tr>
+      <tr><th>Gymnasium</th><td>Phasenmodell mit Meilensteinen und Gantt-Diagramm, Vergleich mit agilem Vorgehen (Kanban)</td><td>Modelle selbst recherchieren, Wahl begründen, Zeit, Kosten und Qualität abwägen</td></tr>
+      <tr><th>Berufsschule</th><td>HERMES, die Projektmanagementmethode der Bundesverwaltung</td><td>Auf <a href="https://www.hermes.admin.ch" target="_blank" rel="noopener" style="text-decoration:underline">hermes.admin.ch</a> die Phasen recherchieren und auf die Offerte übertragen (Initialisierung, Konzept, Realisierung, Einführung, Abschluss)</td></tr>
+     </tbody></table></div>
+
+    <h3>Ablauf in der Gruppe</h3>
+    <ol class="au-todo">
+     <li><b>Allein brainstormen (5 Min.):</b> Jede Person notiert Ideen für die Stadt, bevor die Gruppe spricht.</li>
+     <li><b>Recherchieren:</b> Smart-City-Bereiche, die gewählte Stadt (Grösse, Probleme, Stärken), Beispiele aus echten Städten.</li>
+     <li><b>Komponenten auswählen:</b> 3 bis 5 Ideen, mindestens eine zu erneuerbarer Energie oder Ressourcen.</li>
+     <li><b>Projektplan erstellen:</b> Phasen, Dauer und Kosten pro Phase, Aufgaben im Kanban-Board.</li>
+     <li><b>Jede Lektion mit 5 Minuten Standup beginnen:</b> Was haben wir erledigt? Was machen wir heute? Wo hängen wir?</li>
+    </ol>
+
+    <h3>Arbeitsjournal: Recherche sichtbar machen</h3>
+    <p>Jede Gruppe führt ein digitales Arbeitsjournal, zum Beispiel einen Abschnitt im OneNote-Klassennotizbuch (Vorlage SC5). Für jede genutzte Website kommt ein Eintrag hinein:</p>
+    <ul class="au-punkte"><li>ein <b>Screenshot</b> der wichtigen Stelle (Windows: <b>Windows + Shift + S</b>, Mac: <b>Cmd + Shift + 4</b>)</li><li>die <b>URL</b> und das <b>Datum</b></li><li>in eigenen Worten: <b>Was habe ich hier gelernt?</b> und <b>Wie vertrauenswürdig ist die Quelle?</b> (Wer hat sie geschrieben? Wann? Mit welchem Ziel?)</li><li>jede <b>KI-Nutzung</b> im KI-Protokoll</li></ul>
+    <p>Das Journal zeigt den Lernweg, macht Beiträge sichtbar und ist Grundlage für Zwischen-Checks und die optionale Prozessnote.</p>
+
+    <div class="au-ki"><div class="kopf"><svg><use href="#aui-ki"/></svg>Digital und KI</div>
+     <div class="spalten">
+      <div><b>Ohne KI</b><ul><li>Suchmaschine mit Suchbegriffen auf Deutsch und Englisch</li><li>Quellen nach Herausgeber beurteilen</li><li>Budget mit Preisliste der Lehrperson oder recherchierten Richtwerten</li></ul></div>
+      <div><b>Mit KI</b><ul><li><b>nach</b> dem eigenen Brainstorming: «Welche Bereiche einer Smart City fehlen auf unserer Liste?»</li><li>Suchbegriffe finden lassen, dann selbst suchen</li><li>Faktencheck: drei Aussagen der KI mit einer Quelle prüfen und im Journal festhalten, ob sie stimmen</li><li>Budget auf Plausibilität prüfen lassen, Werte danach belegen</li></ul></div>
+     </div>
+     <p class="warum"><b>Warum:</b> Zuerst selbst denken, dann KI: So bleibt die Denkarbeit bei den Lernenden, und die KI erweitert ihre Ideen, statt sie zu ersetzen. Der Faktencheck macht sichtbar, dass KI sich irren kann, und übt Quellenkritik.</p>
+    </div>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Die Projektmethode lebt davon, dass Lernende ihr Vorgehen <b>selbst planen und steuern</b>. Damit das gelingt, braucht es einen klaren Rahmen, Fixpunkte und Zwischenbesinnungen.<span class="lb-src">Frey, 2012</span></div>
+    <div class="au-th ki"><div class="lbl"><svg><use href="#aui-ki"/></svg>KI und Lernen</div>In einem Feldexperiment mit fast 1000 Lernenden verbesserte freier Zugang zu GPT-4 die Übungsleistung. Ohne KI schnitten dieselben Lernenden danach aber <b>17 % schlechter</b> ab als die Kontrollgruppe. Eine Version, die nur Hinweise gab, hatte diesen Nachteil nicht.<span class="lb-src">Bastani et al., 2025</span></div>
+    <div class="au-th ki"><div class="lbl"><svg><use href="#aui-ki"/></svg>KI und Lernen</div>Wer Denkarbeit an ein Werkzeug auslagert, wird entlastet, behält aber oft weniger (<b>kognitives Auslagern</b>). Deshalb kommt die KI erst nach dem eigenen Denken zum Einsatz.<span class="lb-src">Risko &amp; Gilbert, 2016</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 5 ===== -->
+  <section class="au-schritt" id="s5">
+   <div class="au-kopf"><span class="au-nr">5</span><h2>Begleiten und Zwischen-Checks</h2><span class="au-zeit">während 4–5 Lektionen</span></div>
+   <div class="au-haupt">
+    <p>Während die Gruppen arbeiten, geht die Lehrperson von Gruppe zu Gruppe. Drei Meilensteine geben Halt (Vorlage SC6):</p>
+    <div class="au-tabelle-wrap"><table class="au-tab">
+     <thead><tr><th>Meilenstein</th><th>Was die Gruppe zeigt</th><th>Worauf du achtest</th></tr></thead>
+     <tbody>
+      <tr><th>M1 · Ideen</th><td>Projektplan, Rollen, Liste der Komponenten, erste Quellen im Journal</td><td>Passt die Idee zur Stadt? Ist BNE dabei? Ist die Arbeit verteilt?</td></tr>
+      <tr><th>M2 · Offerte</th><td>ausgefüllte Offerte-Vorlage (SC2). Erst danach geht es an die Präsentation.</td><td>Sind Phasen, Zeitplan und Budget nachvollziehbar? In eigenen Worten geschrieben?</td></tr>
+      <tr><th>M3 · Probe</th><td>Probe-Präsentation vor einer anderen Gruppe</td><td>Zeit, freies Sprechen, Folien unterstützen statt ersetzen</td></tr>
+     </tbody></table></div>
+    <h3>Kurzes Coaching (3–5 Minuten pro Gruppe)</h3>
+    <ol class="au-todo">
+     <li><b>Ziel:</b> «Was wollt ihr heute fertig haben?»</li>
+     <li><b>Stand:</b> «Zeigt mir euer Kanban-Board. Wo steht ihr?»</li>
+     <li><b>Möglichkeiten:</b> «Was könntet ihr tun, wenn ihr nicht weiterkommt?»</li>
+     <li><b>Nächster Schritt:</b> «Wer macht was bis wann?»</li>
+    </ol>
+    <p>Diese Fragen folgen dem GROW-Modell. Mehr dazu auf der Seite <a href="lerngespraeche.html" style="text-decoration:underline">Leading learning conversations</a>. Hilf zuerst mit einer Frage, dann mit einem Hinweis und erst zuletzt mit einer Lösung (<a href="lernbegleitung.html" style="text-decoration:underline">Hilfen-Treppe</a>).</p>
+    <h3>Wenn es in der Gruppe nicht läuft</h3>
+    <ul class="au-punkte"><li>Gemeinsam den Gruppenvertrag lesen: Was war abgemacht?</li><li>Jede Person sagt, was sie bisher beigetragen hat. Das Journal zeigt es.</li><li>Eine konkrete Abmachung bis zur nächsten Lektion treffen und notieren.</li><li>Die Lernenden wissen von Anfang an: Probleme früh melden, nicht erst am Abgabetag.</li></ul>
+    <div class="au-ki"><div class="kopf"><svg><use href="#aui-ki"/></svg>Digital und KI</div>
+     <div class="spalten">
+      <div><b>Ohne KI</b>Gegenseitiges Feedback: Zwei Gruppen tauschen ihre Offerten und geben mit dem Raster SC7 je zwei Stärken und eine Frage zurück.</div>
+      <div><b>Mit KI</b>Die Gruppe lässt sich Rückmeldung zur Offerte geben, zum Beispiel: «Was ist für eine Stadtverwaltung unklar?» Die KI darf nichts umformulieren. Die Gruppe entscheidet, welche Rückmeldung sie umsetzt, und notiert es im Journal.</div>
+     </div>
+     <p class="warum"><b>Warum:</b> Rückmeldungen beurteilen und gezielt umsetzen ist selbst eine wichtige Kompetenz. Die Formulierung bleibt bei den Lernenden, so wie es auch die Abgaberegeln verlangen.</p>
+    </div>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Formative Beurteilung, also laufende Rückmeldungen, die den Unterricht und das Lernen steuern, gehört zu den <b>wirksamsten Massnahmen</b> für bessere Leistungen.<span class="lb-src">Black &amp; Wiliam, 1998</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Gutes Feedback beantwortet drei Fragen: <b>Wohin gehe ich? Wo stehe ich? Was ist der nächste Schritt?</b> Am wirksamsten ist es auf der Ebene der Aufgabe, des Vorgehens und der Selbstregulation, kaum auf der Ebene der Person.<span class="lb-src">Hattie &amp; Timperley, 2007</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 6 ===== -->
+  <section class="au-schritt" id="s6">
+   <div class="au-kopf"><span class="au-nr">6</span><h2>Präsentieren und bewerten</h2><span class="au-zeit">2–3 Lektionen</span></div>
+   <div class="au-haupt">
+    <ol class="au-todo">
+     <li><b>Bühne schaffen:</b> Das Zimmer wird zum Sitzungssaal. Das City Board sitzt vorne, die Gruppe tritt als Firma auf.</li>
+     <li><b>City-Board-Notizen verteilen</b> (SC9) und vorher an einem Beispiel üben: Was ist ein starkes, was ein schwaches Budget?</li>
+     <li><b>Präsentation</b> (je nach Stufe 5–12 Minuten), danach <b>Fragerunde</b> des City Boards (3–5 Minuten).</li>
+     <li><b>Lehrperson bewertet</b> mit Raster SC8, das City Board notiert parallel.</li>
+     <li><b>Am Schluss:</b> Das City Board kürt pro Kategorie eine Gewinnerfirma mit Begründung und vergibt den Gesamtauftrag.</li>
+    </ol>
+
+    <h3>Wie die City-Board-Notizen in die Bewertung einfliessen können</h3>
+    <div class="au-var">
+     <div><h4>1 · Nur als Rückmeldung</h4>Die Notizen gehen als Feedback an die Gruppen, die Kategoriengewinner werden gefeiert. Die Note setzt die Lehrperson.
+      <p class="pro"><b>Gut für:</b> den ersten Versuch, jüngere Klassen, ein entspanntes Klima</p></div>
+     <div><h4>2 · Die Beobachtung wird bewertet</h4>Die Qualität der eigenen City-Board-Notizen (genau, begründet, fair) fliesst in die Prozessnote der <b>beobachtenden</b> Person ein, nicht in die Note der präsentierenden Gruppe.
+      <p class="pro"><b>Gut für:</b> aufmerksames Zuhören, Kriterien verstehen</p></div>
+     <div><h4>3 · Peer-Anteil an der Note</h4>Der Durchschnitt der City-Board-Punkte zählt zum Beispiel 10 bis 20 Prozent der Präsentationsnote. Die eigene Gruppe bewertet sich nicht, die höchste und die tiefste Bewertung werden gestrichen.
+      <p class="contra"><b>Achtung:</b> nur mit geübten Kriterien und transparent angekündigt</p></div>
+     <div><h4>4 · Zuschlag als Bonus</h4>Die Gruppe, die den Auftrag erhält, oder die Kategoriengewinner bekommen einen kleinen Bonus, zum Beispiel einen Punkt.
+      <p class="contra"><b>Achtung:</b> fördert Wettbewerb, darum klein halten und mit Begründungen verbinden</p></div>
+    </div>
+
+    <h3>Selbsteinschätzung der Gruppe</h3>
+    <ol class="au-todo">
+     <li>Vor der Präsentation füllt die Gruppe das Raster SC8 für sich selbst aus (Vorlage SC10).</li>
+     <li>Nach der Bewertung vergleicht die Lehrperson mit der Gruppe: Wo liegen wir mehr als eine Stufe auseinander, und warum?</li>
+     <li><b>Option Beitragsverteilung:</b> Jede Person verteilt vertraulich 100 Punkte auf alle Gruppenmitglieder, sich selbst eingeschlossen, und begründet kurz. Bei deutlichen Unterschieden folgt ein Gespräch. Die Lehrperson kann die Einzelnote dann leicht anpassen, wenn das vorher angekündigt war.</li>
+    </ol>
+    <h3>Noten berechnen</h3>
+    <p>Offerte (Raster SC7) ½ Note, Präsentation (Raster SC8) 1 Note, optional Prozessnote ½ (Journal, Zwischen-Checks, Zusammenarbeit, City-Board-Notizen). Umrechnung zum Beispiel mit <b>Note = Punkte ÷ Maximum × 5 + 1</b>, gerundet nach den Vorgaben der Schule.</p>
+    <div class="au-ki"><div class="kopf"><svg><use href="#aui-ki"/></svg>Digital und KI</div>
+     <div class="spalten">
+      <div><b>Ohne KI</b>Probe vor einer anderen Gruppe, die als City Board drei kritische Fragen stellt.</div>
+      <div><b>Mit KI</b>Die Gruppe lässt die KI kritische Fragen einer Stadtverwaltung zur Offerte stellen und übt die Antworten mündlich. KI-Bilder auf den Folien sind gekennzeichnet («Bild: KI-generiert»).</div>
+     </div>
+     <p class="warum"><b>Warum:</b> Spontan auf Fragen zu reagieren ist anspruchsvoll. Die KI liefert viele Übungsfragen. Antworten müssen die Lernenden selbst, denn genau das wird bewertet.</p>
+    </div>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Peer Assessment verbessert die Leistung im Vergleich zu keiner Beurteilung (g = 0.31) und auch im Vergleich zur Beurteilung durch die Lehrperson. Die Autoren empfehlen es vor allem als <b>formative</b> Praxis.<span class="lb-src">Double et al., 2020</span></div>
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Selbsteinschätzung stärkt die Selbstregulation und vor allem die <b>Selbstwirksamkeit</b> (Effektstärke 0.73 in einer Meta-Analyse).<span class="lb-src">Panadero et al., 2017</span></div>
+   </aside>
+  </section>
+
+  <!-- ===== Schritt 7 ===== -->
+  <section class="au-schritt" id="s7">
+   <div class="au-kopf"><span class="au-nr">7</span><h2>Abschliessen und reflektieren</h2><span class="au-zeit">½–1 Lektion</span></div>
+   <div class="au-haupt">
+    <ol class="au-todo">
+     <li><b>Lessons learned (10 Min.):</b> Jede Gruppe beantwortet: Was hat gut funktioniert? Was würden wir beim nächsten Projekt anders machen? Das entspricht der Abschlussphase eines echten Projekts.</li>
+     <li><b>Reflexion zur KI (10 Min.):</b> Wo hat KI geholfen, wo hat sie Fehler gemacht, wo haben wir bewusst ohne gearbeitet?</li>
+     <li><b>Persönliches Ziel:</b> Jede Person notiert eine Kompetenz, die sie weiterentwickeln will.</li>
+     <li><b>Rückmeldung an die Lehrperson:</b> Was hat beim Lernen geholfen? Was sollte ich ändern?</li>
+    </ol>
+    <div class="au-ki"><div class="kopf"><svg><use href="#aui-ki"/></svg>Digital und KI</div>
+     <div class="spalten">
+      <div><b>Ohne KI</b>Kurze Umfrage (Forms) zum Projekt, Resultate gemeinsam anschauen.</div>
+      <div><b>Mit KI</b>Die Klasse sammelt anonym alle KI-Protokolle und sortiert gemeinsam: hilfreich, fehlerhaft, unnötig. Daraus entstehen eigene KI-Regeln für das nächste Projekt.</div>
+     </div>
+     <p class="warum"><b>Warum:</b> Ein guter Umgang mit KI entsteht nicht durch Verbote allein, sondern durch Erfahrungen, die gemeinsam ausgewertet werden.</p>
+    </div>
+   </div>
+   <aside class="au-rand">
+    <div class="au-th"><div class="lbl"><svg><use href="#aui-th"/></svg>Aus der Forschung</div>Selbstreguliertes Lernen ist ein Kreislauf aus Planen, Ausführen und <b>Reflektieren</b>. Erst die Reflexion verbindet die Erfahrung mit dem nächsten Projekt.<span class="lb-src">Zimmerman, 2002</span></div>
+    <div class="au-th ki"><div class="lbl"><svg><use href="#aui-ki"/></svg>KI und Lernen</div>Sprachmodelle bieten Chancen für das Lernen, verlangen aber von Lernenden und Lehrpersonen <b>neue Kompetenzen</b>: Ergebnisse kritisch prüfen, Grenzen kennen, verantwortungsvoll nutzen.<span class="lb-src">Kasneci et al., 2023</span></div>
+   </aside>
+  </section>
+
+  <section class="au-kap" id="downloads" style="margin-top:60px;padding-top:30px;border-top:1px solid var(--line)">
+   <h2>Vorlagen zum Herunterladen</h2>
+   <p class="lb-lead">Alle Vorlagen gibt es als bearbeitbare Word-Datei und als PDF. Sie dürfen frei genutzt und angepasst werden, zum Beispiel für die eigene Stadt oder Stufe.</p>
+   <div class="au-dl">
+    <ul>
+     <li><span>SC1 · Auftragsblatt für Lernende<small>Auftrag, Varianten, Hauptschritte, Termine, Regeln und KI-Ampel</small></span><span class="dl"><a href="../downloads/smart-city/SC1_Auftragsblatt.docx" download>Word</a><a href="../downloads/smart-city/SC1_Auftragsblatt.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC2 · Offerte-Vorlage<small>Firma, Idee, Komponenten, Phasen, Zeitplan, Budget, Zielgruppe, Nutzen</small></span><span class="dl"><a href="../downloads/smart-city/SC2_Offerte-Vorlage.docx" download>Word</a><a href="../downloads/smart-city/SC2_Offerte-Vorlage.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC3 · Projektplan<small>vereinfachtes IPERKA mit Zeitplan, Budget und Kanban-Board</small></span><span class="dl"><a href="../downloads/smart-city/SC3_Projektplan.docx" download>Word</a><a href="../downloads/smart-city/SC3_Projektplan.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC4 · Rollenkarten und Gruppenvertrag<small>vier Rollen, Stärken-Runde, Abmachungen</small></span><span class="dl"><a href="../downloads/smart-city/SC4_Rollenkarten_und_Gruppenvertrag.docx" download>Word</a><a href="../downloads/smart-city/SC4_Rollenkarten_und_Gruppenvertrag.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC5 · Arbeitsjournal<small>Quellenprotokoll mit Screenshots und KI-Protokoll, auch als OneNote-Struktur</small></span><span class="dl"><a href="../downloads/smart-city/SC5_Arbeitsjournal.docx" download>Word</a><a href="../downloads/smart-city/SC5_Arbeitsjournal.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC6 · Zwischen-Checks für die Lehrperson<small>drei Meilensteine mit Notizen und Vereinbarungen</small></span><span class="dl"><a href="../downloads/smart-city/SC6_Zwischen-Check.docx" download>Word</a><a href="../downloads/smart-city/SC6_Zwischen-Check.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC7 · Bewertungsraster Offerte<small>½ Note, mit Punkteskala 0 bis 3</small></span><span class="dl"><a href="../downloads/smart-city/SC7_Bewertungsraster_Offerte.docx" download>Word</a><a href="../downloads/smart-city/SC7_Bewertungsraster_Offerte.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC8 · Bewertungsraster Präsentation<small>1 Note: Einstieg, Inhalt und Auftritt</small></span><span class="dl"><a href="../downloads/smart-city/SC8_Bewertungsraster_Praesentation.docx" download>Word</a><a href="../downloads/smart-city/SC8_Bewertungsraster_Praesentation.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC9 · City-Board-Notizen<small>Notizblatt für die Klasse mit Kategoriengewinnern</small></span><span class="dl"><a href="../downloads/smart-city/SC9_City-Board-Notizen.docx" download>Word</a><a href="../downloads/smart-city/SC9_City-Board-Notizen.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+     <li><span>SC10 · Selbsteinschätzung der Gruppe<small>Selbsteinschätzung, Beitragsverteilung und Reflexion</small></span><span class="dl"><a href="../downloads/smart-city/SC10_Selbsteinschaetzung.docx" download>Word</a><a href="../downloads/smart-city/SC10_Selbsteinschaetzung.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+    </ul>
+    <div class="alle"><span>Alle 10 Vorlagen in einer Datei</span><span class="dl"><a href="../downloads/smart-city/Smart_City_alle_Vorlagen.docx" download>Word</a><a href="../downloads/smart-city/Smart_City_alle_Vorlagen.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+   </div>
+  </section>
+
+  <section class="au-kap" id="literatur">
+   <h2>Quellen</h2>
+   <details class="lb-lit" open>
+    <summary>Literatur und Links</summary>
+    <p>Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., &amp; Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. <i>Proceedings of the National Academy of Sciences, 122</i>(26), e2422633122. https://doi.org/10.1073/pnas.2422633122</p>
+    <p>Black, P., &amp; Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education: Principles, Policy &amp; Practice, 5</i>(1), 7–74.</p>
+    <p>Chapman, K. J., Meuter, M., Toy, D., &amp; Wright, L. (2006). Can't we pick our own groups? The influence of group selection method on group dynamics and outcomes. <i>Journal of Management Education, 30</i>(4), 557–569.</p>
+    <p>Chen, C.-H., &amp; Yang, Y.-C. (2019). Revisiting the effects of project-based learning on students' academic achievement: A meta-analysis investigating moderators. <i>Educational Research Review, 26</i>, 71–81.</p>
+    <p>Cohen, E. G., &amp; Lotan, R. A. (2014). <i>Designing groupwork: Strategies for the heterogeneous classroom</i> (3rd ed.). Teachers College Press.</p>
+    <p>D-EDK – Deutschschweizer Erziehungsdirektoren-Konferenz. (2016). <i>Lehrplan 21</i>. https://www.lehrplan21.ch</p>
+    <p>Double, K. S., McGrane, J. A., &amp; Hopfenbeck, T. N. (2020). The impact of peer assessment on academic performance: A meta-analysis of control group studies. <i>Educational Psychology Review, 32</i>(2), 481–509.</p>
+    <p>EDK – Schweizerische Konferenz der kantonalen Erziehungsdirektorinnen und -direktoren. (2024). <i>Rahmenlehrplan Gymnasiale Maturitätsschulen</i>. Bern: EDK.</p>
+    <p>EnergieSchweiz, Programm Smart City Schweiz. (o. J.). <i>Was ist eine Smart City?</i> https://www.local-energy.swiss/programme/smart-city/was-ist-eine-smart-city.html</p>
+    <p>Frey, K. (2012). <i>Die Projektmethode: Der Weg zum bildenden Tun</i> (12. Aufl.). Beltz.</p>
+    <p>Hattie, J., &amp; Timperley, H. (2007). The power of feedback. <i>Review of Educational Research, 77</i>(1), 81–112.</p>
+    <p>HERMES. (2022). <i>HERMES Projektmanagementmethode</i>. Schweizerische Bundeskanzlei. https://www.hermes.admin.ch</p>
+    <p>Johnson, D. W., &amp; Johnson, R. T. (2009). An educational psychology success story: Social interdependence theory and cooperative learning. <i>Educational Researcher, 38</i>(5), 365–379.</p>
+    <p>Karau, S. J., &amp; Williams, K. D. (1993). Social loafing: A meta-analytic review and theoretical integration. <i>Journal of Personality and Social Psychology, 65</i>(4), 681–706.</p>
+    <p>Kasneci, E., et al. (2023). ChatGPT for good? On opportunities and challenges of large language models for education. <i>Learning and Individual Differences, 103</i>, 102274.</p>
+    <p>Monash University Indonesia. (o. J.). <i>Smart city: Definition, components, and translation into real-world studio projects</i>. https://www.monash.edu/indonesia/news/what-is-smart-city-and-implementation-in-real-world</p>
+    <p>Oakley, B., Felder, R. M., Brent, R., &amp; Elhajj, I. (2004). Turning student groups into effective teams. <i>Journal of Student Centered Learning, 2</i>(1), 9–34.</p>
+    <p>Panadero, E., Jonsson, A., &amp; Botella, J. (2017). Effects of self-assessment on self-regulated learning and self-efficacy: Four meta-analyses. <i>Educational Research Review, 22</i>, 74–98.</p>
+    <p>Panadero, E., Jonsson, A., Pinedo, L., &amp; Fernández-Castilla, B. (2023). Effects of rubrics on academic performance, self-regulated learning, and self-efficacy: A meta-analytic review. <i>Educational Psychology Review, 35</i>(4), 113.</p>
+    <p>Risko, E. F., &amp; Gilbert, S. J. (2016). Cognitive offloading. <i>Trends in Cognitive Sciences, 20</i>(9), 676–688.</p>
+    <p>Rowe, M. B. (1986). Wait time: Slowing down may be a way of speeding up! <i>Journal of Teacher Education, 37</i>(1), 43–50.</p>
+    <p>Ryan, R. M., &amp; Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <i>American Psychologist, 55</i>(1), 68–78.</p>
+    <p>UNESCO. (2017). <i>Education for Sustainable Development Goals: Learning objectives</i>. UNESCO.</p>
+    <p>Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. <i>Theory Into Practice, 41</i>(2), 64–70.</p>
+   </details>
+   <p class="lb-cap" style="margin-top:12px">Grundlage: eigene Unterrichtsmaterialien für Technical English an der Berufsschule (Smart City Project Proposal), übersetzt und für verschiedene Stufen erweitert.</p>
+  </section>
+
+ </div>
+<!--/BODY-->
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Contact</a><a href="impressum.html">Legal notice</a><a href="datenschutz.html">Privacy</a></nav>
+  </div>
+</footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
+</body>
+</html>
