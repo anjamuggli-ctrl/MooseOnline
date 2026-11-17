@@ -12,6 +12,7 @@ const IMG = path.join(__dirname, "..", "img", "smart-city");
 const W = S.W_HOCH, WQ = S.W_QUER;
 const KZ = (nr, t) => `Smart City Projekt · Vorlage ${nr} · ${t}`;
 const F = S.FARBEN;
+S.projekt("terrakotta", "stadt"); // gleicher Kopf für alle Smart-City-Vorlagen
 
 // zwei Bilder nebeneinander mit Bildlegende
 function bildPaar(v, links, rechts) {
@@ -20,6 +21,14 @@ function bildPaar(v, links, rechts) {
     children: [new Paragraph({ children: [S.bild(path.join(IMG, datei), 8.2, 4.6)], alignment: AlignmentType.CENTER, spacing: { after: 40 } }),
       new Paragraph({ children: S.runs(legende, { size: 17, color: v.F.dunkel }), alignment: AlignmentType.CENTER, spacing: { after: 0 } })] });
   return [new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [b, b], rows: [new TableRow({ children: [zelle(links), zelle(rechts)] })] }), v.leer()];
+}
+// mehrere Bilder nebeneinander, proportional eingepasst
+function bildReihe(v, liste, hoeheCm = 3.6) {
+  const b = Math.floor(W / liste.length);
+  return [new Table({ width: { size: b * liste.length, type: WidthType.DXA }, columnWidths: Array(liste.length).fill(b), rows: [new TableRow({ children: liste.map(([datei, legende]) =>
+    new TableCell({ width: { size: b, type: WidthType.DXA }, borders: S.OHNE_RAND, margins: { top: 0, bottom: 0, left: 60, right: 60 },
+      children: [new Paragraph({ children: [S.bild(path.join(IMG, datei), b / 567 - 0.3, hoeheCm)], alignment: AlignmentType.CENTER, spacing: { after: 30 } }),
+        new Paragraph({ children: S.runs(legende, { size: 16, color: v.F.dunkel, bold: true }), alignment: AlignmentType.CENTER, spacing: { after: 0 } })] })) })] }), v.leer()];
 }
 // farbige Spalten ohne Rahmen (KI-Ampel, Kanban)
 function farbSpalten(spalten, hoehe) {
@@ -79,10 +88,10 @@ const SC2 = v.abschnitt(KZ("SC2", "Offerte"), [
   v.h("2 · Die Stadt"),
   ...v.felder(W, ["Name, Land, Einwohnerzahl", "Drei Herausforderungen der Stadt", "Stärken der Stadt", "Quellen (Kürzel aus dem Journal)"]),
   v.h("3 · Unsere Idee"),
-  new Paragraph({ children: [S.bild(path.join(IMG, "stadt-illustration-gemeinschaft.jpg"), 16.9, 4.2)], alignment: AlignmentType.CENTER, spacing: { after: 40 } }),
-  v.klein("Zur Inspiration: Wie fühlt sich das Leben in eurer Stadt nach dem Projekt an? (Bild: KI-generiert)"),
+  ...bildReihe(v, [["stadt-illustration-gemeinschaft.jpg", "Wie lebt es sich in eurer Stadt?"], ["flugtaxi.jpg", "Fantasy: Was wäre möglich?"]], 4.4),
   ...v.felder(W, ["Variante", "Unsere Vision in zwei bis drei Sätzen: So sieht die Stadt nach unserem Projekt aus."], 900),
   v.h("4 · Lieferobjekte: Was bekommt die Stadt?"),
+  ...bildReihe(v, [["haltestelle.jpg", "Mobilität"], ["energie.jpg", "Energie"], ["wasser-recycling.jpg", "Wasser und Recycling"]], 3.0),
   ...v.tabelle([2300, 2600, 2400, 2338], ["Komponente", "Was ist das? Wie funktioniert es?", "Welches Problem löst es?", "Nachhaltigkeit: Umwelt, Gesellschaft, Wirtschaft"], Array.from({ length: 5 }, () => ["", "", "", ""]), { hoehe: 900 }),
   v.h("5 · Phasen, Zeitplan und Budget"),
   v.p("Nutzt die Phasen eures Projektmanagement-Modells (zum Beispiel IPERKA oder HERMES)."),
@@ -132,6 +141,7 @@ const rolle = (name, f, aufgaben, frage, gut) => new TableCell({ width: { size: 
     new Paragraph({ children: S.runs("**Passt zu dir, wenn** " + gut, { size: 18 }), spacing: { after: 0 } })] });
 const SC4 = v.abschnitt(KZ("SC4", "Rollen und Gruppenvertrag"), [
   ...v.kopf({ kicker: "Vorlage SC4 · für Lernende", titel: "Rollenkarten", unter: "Alle recherchieren, schreiben und präsentieren mit. Die Rolle bedeutet zusätzliche Verantwortung. Bei drei Personen übernimmt die Projektleitung auch die Finanzen." }),
+  new Paragraph({ children: [S.bild(path.join(IMG, "team-modell.jpg"), 7.5, 4.2)], alignment: AlignmentType.CENTER, spacing: { after: 120 } }),
   new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W / 2, W / 2], rows: [
     new TableRow({ height: { value: 2600, rule: "atLeast" }, children: [
       rolle("Projektleitung", F.bergsee, ["führt das Kanban-Board und den Zeitplan", "leitet die Standups am Lektionsbeginn", "ist Kontaktperson zur Lehrperson"], "Sind wir im Zeitplan?", "du gern den Überblick behältst oder das lernen möchtest."),

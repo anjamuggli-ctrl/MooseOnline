@@ -39,10 +39,19 @@ def berge(bg, hinten, vorne, akzent, motiv):
         s.append(f'<path d="M200 {H} L300 110 L345 140 L420 70 L490 130 L{W} 110 L{W} {H} Z" fill="{vorne}"/>')
         s.append(f'<path d="M260 {H} C 300 170, 380 175, 370 140 S 400 95, 420 72" stroke="#fff" stroke-width="3" fill="none" stroke-dasharray="6 7" stroke-linecap="round" opacity=".9"/>')
         s.append(f'<path d="M420 72 v-34" stroke="{akzent}" stroke-width="3" stroke-linecap="round"/><path d="M421 38 l22 7 l-22 7 Z" fill="#F2C97E" stroke="{akzent}" stroke-width="2" stroke-linejoin="round"/>')
+    elif motiv == "traumjob":
+        # Weg zum Gipfel mit Fahne, Wegweiser und kleinem Dorf
+        s.append(f'<path d="M200 {H} L300 110 L345 140 L420 70 L490 130 L{W} 110 L{W} {H} Z" fill="{vorne}"/>')
+        s.append(f'<path d="M230 {H} C 290 170, 380 178, 372 140 S 400 95, 420 72" stroke="#fff" stroke-width="3" fill="none" stroke-dasharray="6 7" stroke-linecap="round" opacity=".9"/>')
+        s.append(f'<path d="M420 72 v-34" stroke="{akzent}" stroke-width="3" stroke-linecap="round"/><path d="M421 38 l22 7 l-22 7 Z" fill="#F2C97E" stroke="{akzent}" stroke-width="2" stroke-linejoin="round"/>')
+        s.append(f'<g stroke="{akzent}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M250 {H} v-52"/><path d="M250 {H-50} h30 l8 7 l-8 7 h-30 Z M250 {H-32} h-28 l-8 7 l8 7 h28 Z" fill="{bg}"/></g>')
+        for hx, hb, hh in [(440, 26, 30), (472, 22, 24), (500, 26, 34)]:
+            s.append(f'<path d="M{hx} {H} v-{hh} l{hb/2} -{hb*0.45} l{hb/2} {hb*0.45} v{hh} Z" fill="{bg}" stroke="{akzent}" stroke-width="2.5" stroke-linejoin="round"/>')
+            s.append(f'<rect x="{hx+hb/2-4}" y="{H-hh+8}" width="8" height="8" fill="{akzent}"/>')
     else:
         s.append(f'<path d="M200 {H} L300 110 L345 140 L420 70 L490 130 L{W} 110 L{W} {H} Z" fill="{vorne}"/>')
     # Tannen
-    for tx, th in [(170, 34), (186, 26), (500, 30)]:
+    for tx, th in [(170, 34), (186, 26)] + ([] if motiv == "traumjob" else [(500, 30)]):
         s.append(f'<path d="M{tx} {H} l{-th*0.32} 0 l{th*0.32} {-th} l{th*0.32} {th} Z" fill="{akzent}"/>')
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">{"".join(s)}</svg>'
 
@@ -52,7 +61,7 @@ async def main():
         b = await p.chromium.launch(executable_path="/usr/bin/google-chrome")
         pg = await b.new_page(viewport={"width": W, "height": H}, device_scale_factor=2)
         for name, f in FARBEN.items():
-            for motiv in ("stadt", "weg", "berge"):
+            for motiv in ("stadt", "weg", "berge", "traumjob"):
                 await pg.set_content(f'<html><body style="margin:0">{berge(*f, motiv)}</body></html>')
                 await pg.locator("svg").screenshot(path=str(OUT / f"banner-{name}-{motiv}.png"))
         await b.close()

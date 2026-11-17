@@ -260,7 +260,7 @@ TRAUMJOB_ART = '''<rect x="0" y="0" width="220" height="120" rx="10" fill="#efe9
 <g fill="#3f6b5a"><path d="M176 120 l-7 0 l7 -20 l7 20 Z"/><path d="M190 120 l-6 0 l6 -15 l6 15 Z"/></g>'''
 AUFTRAEGE = [
     dict(datei="auftrag-smart-city.html", ordner="auftrag-smart-city", titel="Smart City Projekt",
-         kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART, bild="img/smart-city/stadt-realitaetsnah.jpg",
+         kategorien=["Gruppen-Arbeiten", "Präsentationen", "Digitalität"], art=SMART_CITY_ART, bild="img/smart-city/stadt-nacht-vernetzt.jpg",
          badge="Gruppen-Arbeit · Real bis Berufsschule",
          text="Gruppen planen als Firma eine «Smart City» und bewerben sich mit einer Offerte beim «Stadtrat», gespielt von der Klasse.",
          punkte=["Fächer: Englisch, Deutsch, RZG/Geografie, Medien und Informatik, WAH/Wirtschaft, ABU",
@@ -274,7 +274,7 @@ AUFTRAEGE = [
          einleitung=["In kleinen Gruppen gründen die Lernenden eine Firma und bewerben sich mit einer Offerte um den Auftrag, eine Stadt zur «Smart City» zu machen. Die Stadt ist frei wählbar, zum Beispiel die eigene Gemeinde. Sie recherchieren, was eine Smart City ausmacht, entwickeln eigene Ideen mit Bezug zu nachhaltiger Entwicklung, planen Phasen, Zeitplan und Budget und präsentieren ihre Offerte. Die übrige Klasse spielt den Stadtrat, macht sich Notizen und vergibt am Schluss den Auftrag. Es gibt eine realitätsnahe Variante und eine Fantasy-Variante, in der auch fliegende Taxis erlaubt sind.",
                      "Unten findest du zuerst die Hauptschritte der Lernenden und die wichtigsten Angaben pro Stufe. Danach folgt der Ablauf für Lehrpersonen in sieben Schritten, jeweils mit Optionen mit und ohne KI, Hinweisen aus der Forschung und Vorlagen zum Herunterladen."]),
     dict(datei="auftrag-traumjob.html", ordner="auftrag-traumjob", titel="Mein Traumjob",
-         kategorien=["Einzel-Projekte", "Präsentationen", "Posters", "Schreiben", "Digitalität"], art=TRAUMJOB_ART,
+         kategorien=["Einzel-Projekte", "Präsentationen", "Posters", "Schreiben", "Digitalität"], art=TRAUMJOB_ART, bild="img/traumjob/velowerkstatt.jpg",
          badge="Einzel-Projekt · Real bis Berufsschule",
          text="Lernende erkunden ihren Traumberuf bei einem Betrieb in der Region, bereiten eine Bewerbung vor und zeigen ihren Plan auf einem Poster oder in einem digitalen Portfolio.",
          punkte=["Fächer: Berufliche Orientierung, Deutsch, Fremdsprachen, WAH, ABU, Medien und Informatik",

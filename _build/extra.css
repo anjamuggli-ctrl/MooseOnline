@@ -664,3 +664,4 @@
   @media (max-width:720px){.au-bildband img{height:200px}.au-kibild img{height:160px}}
   .au-svgband svg{width:100%;height:300px;display:block}
   @media (max-width:720px){.au-svgband svg{height:180px}}
+  .au-haupt > .au-kibild{margin:14px 0 16px;border:1px solid var(--line)}

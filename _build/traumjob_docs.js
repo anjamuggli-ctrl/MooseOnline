@@ -10,6 +10,17 @@ fs.mkdirSync(OUT, { recursive: true });
 const W = S.W_HOCH;
 const KZ = (nr, t) => `Mein Traumjob · Vorlage ${nr} · ${t}`;
 const F = S.FARBEN;
+S.projekt("lavendel", "traumjob"); // gleicher Kopf für alle Traumjob-Vorlagen
+const IMG = path.join(__dirname, "..", "img", "traumjob");
+const bildMitte = (datei, b, h, legende) => [new Paragraph({ children: [S.bild(path.join(IMG, datei), b, h)], alignment: AlignmentType.CENTER, spacing: { after: legende ? 30 : 140 } }),
+  ...(legende ? [new Paragraph({ children: S.runs(legende, { size: 16, color: "6B7368" }), alignment: AlignmentType.CENTER, spacing: { after: 120 } })] : [])];
+function bildReihe(liste, hoeheCm) {
+  const b = Math.floor(W / liste.length);
+  return [new Table({ width: { size: b * liste.length, type: WidthType.DXA }, columnWidths: Array(liste.length).fill(b), rows: [new TableRow({ children: liste.map(([datei, legende, f]) =>
+    new TableCell({ width: { size: b, type: WidthType.DXA }, borders: S.OHNE_RAND, margins: { top: 0, bottom: 0, left: 60, right: 60 },
+      children: [new Paragraph({ children: [S.bild(path.join(IMG, datei), b / 567 - 0.3, hoeheCm)], alignment: AlignmentType.CENTER, spacing: { after: 40 } }),
+        new Paragraph({ children: S.runs(legende, { size: 17, color: f.dunkel }), alignment: AlignmentType.CENTER, spacing: { after: 0 } })] })) })] }), new Paragraph({ children: [], spacing: { after: 120 } })];
+}
 
 function farbSpalten(spalten, hoehe) {
   const b = Math.floor(W / spalten.length);
@@ -30,9 +41,8 @@ const TJ1 = v.abschnitt(KZ("TJ1", "Auftragsblatt"), [
   v.p("Stell dir vor, du hast deine Ausbildung abgeschlossen oder suchst bald eine Lehrstelle. Welcher Beruf würde zu dir passen? In welchem Betrieb würdest du gern arbeiten? Wie sähe dein Alltag aus?"),
   v.p("In diesem Projekt findest du es heraus. Du erkundest einen Beruf und einen echten Betrieb, bereitest eine Bewerbung vor und zeigst deinen Plan auf einem **Poster** oder in einem **digitalen Portfolio**. Zum Schluss präsentierst du ihn."),
   v.h("Meine Variante"),
-  ...farbSpalten([
-    ["[] Region", "Ein Betrieb in meiner Region. Ich erkunde meinen Arbeitsweg und die Ortschaft. Alles auf Deutsch.", F.bergsee],
-    ["[] Ausland", "Eine Stelle in einem Land, in dem meine Fremdsprache gesprochen wird. Alles in der Fremdsprache, dazu Bewilligungen und Wohnen.", F.gletscher]]),
+  ...bildReihe([["velowerkstatt.jpg", "[] **Region:** ein Betrieb in meiner Region, mein Arbeitsweg, alles auf Deutsch", F.bergsee],
+    ["ankunft-arbeitsort.jpg", "[] **Ausland:** eine Stelle im Land meiner Fremdsprache, dazu Bewilligung und Wohnen", F.gletscher]], 4.6),
   v.h("Meine Schritte"),
   ...v.tabelle([500, 2300, 3800, 1800, 1238], ["", "Schritt", "Was ich mache", "Vorlage", "Termin"], [
     [{ text: "**1**", fill: true }, "Traumberuf entdecken", "Interessen-Check, Berufe erkunden, einen Beruf wählen", "TJ2, TJ6", ""],
@@ -57,12 +67,14 @@ v = S.mit("bergsee", "weg");
 const TJ2 = v.abschnitt(KZ("TJ2", "Recherche-Heft"), [
   ...v.kopf({ kicker: "Vorlage TJ2 · für Lernende", titel: "Recherche-Heft", unter: "Fülle für jeden Teil den Steckbrief aus. Notiere die Quellen im Lernjournal (TJ6).", felder: ["Name", "Variante"] }),
   v.h("Teil 1 · Mein Traumberuf", F.lavendel),
+  ...bildMitte("interessen-laptop.jpg", 6.5, 3.6),
   ...v.tabelle([3000, W - 3000], null, [["Das mache ich gern", ""], ["Das fällt mir leicht", ""], ["Ergebnis meines Interessen-Checks", ""], ["Drei Berufe, die mich interessieren", ""]], { label: true, hoehe: 560, farbe: F.lavendel }),
   v.p("**Steckbrief Beruf:** ____________________________________", { before: 80 }),
   ...v.felder(W, ["Typische Tätigkeiten im Alltag", "Ausbildung (Dauer, Schule, Abschluss)", "Anforderungen: Schulfächer, Fähigkeiten, Eigenschaften", "Weiterbildungen und Karriere", "Darum passt der Beruf zu mir"], 620),
   v.h("Teil 2 · Mein Traumbetrieb", F.terrakotta),
   ...v.tabelle([3000, W - 3000], null, [["Name und Ort", ""], ["Produkte oder Dienstleistungen", ""], ["Grösse, Geschichte, Kundschaft", ""], ["Werte und Arbeitsklima", ""], ["Ausbildungsplätze oder offene Stellen", ""], ["Warum dieser Betrieb und nicht ein anderer?", ""]], { label: true, hoehe: 620, farbe: F.terrakotta }),
   v.h("Teil 3 · Mein Arbeitsort", F.gletscher),
+  ...bildMitte("buero-rollstuhl.jpg", 6.5, 3.4),
   ...v.tabelle([3000, W - 3000], null, [["Arbeitsweg (Verkehrsmittel, Umsteigen)", ""], ["Pendelzeit pro Tag", ""], ["Das gibt es in der Ortschaft", ""], ["Freizeit nach der Arbeit", ""], ["Vergleich mit meinem Wohnort", ""]], { label: true, hoehe: 560, farbe: F.gletscher }),
   v.h("Teil 4 · Rahmenbedingungen", F.alpenrose),
   ...v.tabelle([3000, W - 3000], null, [["Lohn im Lehrjahr bzw. Einstiegslohn", ""], ["Arbeitszeit pro Woche", ""], ["Ferien", ""], ["Berufsschule (Tage, Ort)", ""], ["Variante Ausland: Bewilligung, Anerkennung meines Abschlusses (nur offizielle Quellen)", ""]], { label: true, hoehe: 560, farbe: F.alpenrose }),
@@ -108,6 +120,7 @@ const karte = (titel, fragen, f) => new TableCell({ width: { size: W / 2, type: 
   children: [new Paragraph({ children: [S.r(titel, { size: 22, bold: true, color: f.dunkel })], spacing: { after: 80 } }), ...punkte(fragen)] });
 const TJ4 = v.abschnitt(KZ("TJ4", "Vorstellungsgespräch"), [
   ...v.kopf({ kicker: "Vorlage TJ4 · für Lernende", titel: "Vorstellungsgespräch üben", unter: "Zu dritt: Eine Person bewirbt sich, eine stellt Fragen, eine beobachtet. Nach jedem Gespräch tauscht ihr die Rollen. Die Karten könnt ihr ausschneiden." }),
+  ...bildMitte("vorstellungsgespraech.jpg", 7.5, 3.2),
   new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W / 2, W / 2], rows: [
     new TableRow({ height: { value: 2400, rule: "atLeast" }, children: [
       karte("Über dich", ["Erzählen Sie etwas über sich.", "Was sind Ihre Stärken? Nennen Sie ein Beispiel.", "Woran möchten Sie noch arbeiten?"], F.bergsee),
@@ -121,8 +134,8 @@ const TJ4 = v.abschnitt(KZ("TJ4", "Vorstellungsgespräch"), [
   ...v.tabelle([4638, 1000, 1000, 1000, 2000], ["", "noch nicht", "teilweise", "gut", "Beispiel / Tipp"], [
     ["Begrüssung, Blickkontakt, Haltung", "[]", "[]", "[]", ""], ["Antworten mit Beispielen", "[]", "[]", "[]", ""], ["Wissen über Beruf und Betrieb", "[]", "[]", "[]", ""],
     ["Deutliche Sprache, passendes Tempo", "[]", "[]", "[]", ""], ["Eigene Fragen an den Betrieb", "[]", "[]", "[]", ""], ["Verabschiedung", "[]", "[]", "[]", ""]], { mitte: true, streifen: true }),
-  v.p("**Das war besonders gut:**"), ...v.linien(2),
-  v.p("**Mein Tipp für das nächste Mal:**", { before: 80 }), ...v.linien(2),
+  v.p("**Das war besonders gut:**"), ...v.linien(1),
+  v.p("**Mein Tipp für das nächste Mal:**", { before: 80 }), ...v.linien(1),
 ]);
 
 // ---------- TJ5 Poster- und Portfolio-Planer ----------
@@ -210,6 +223,7 @@ const fbKarte = f => new TableCell({ width: { size: W / 2, type: WidthType.DXA }
     new Paragraph({ children: S.runs("Von: ______________", { size: 16 }), spacing: { after: 0 } })] });
 const TJ10 = v.abschnitt(KZ("TJ10", "Berufsmesse und Selbsteinschätzung"), [
   ...v.kopf({ kicker: "Vorlage TJ10 · für Lernende", titel: "Berufsmesse: Feedbackkarten", unter: "Besuche drei bis vier Stände. Fülle für jeden Stand eine Karte aus und gib sie ab. Die Karten zählen nicht zur Note." }),
+  ...bildMitte("berufsmesse.jpg", 8, 4.2),
   new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W / 2, W / 2], rows: [
     new TableRow({ children: [fbKarte(F.bergsee), fbKarte(F.terrakotta)] }),
     new TableRow({ children: [fbKarte(F.gletscher), fbKarte(F.alpenrose)] }),

@@ -34,10 +34,28 @@ function runs(x, o = {}) {
   });
   return out;
 }
-const bild = (datei, breiteCm, hoeheCm) => new ImageRun({
-  type: datei.endsWith(".png") ? "png" : "jpg", data: fs.readFileSync(datei),
-  transformation: { width: Math.round(breiteCm * 37.8), height: Math.round(hoeheCm * 37.8) },
-});
+// Bildgrösse aus der Datei lesen (PNG und JPEG), damit Bilder nie verzerrt werden
+function bildMasse(buf) {
+  if (buf[0] === 0x89 && buf[1] === 0x50) return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) };
+  let i = 2;
+  while (i < buf.length) {
+    if (buf[i] !== 0xFF) { i++; continue; }
+    const m = buf[i + 1], len = buf.readUInt16BE(i + 2);
+    if (m >= 0xC0 && m <= 0xCF && m !== 0xC4 && m !== 0xC8 && m !== 0xCC) return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+    i += 2 + len;
+  }
+  throw new Error("Bildgrösse nicht lesbar");
+}
+// bild(datei, maxBreiteCm, maxHoeheCm): passt das Bild proportional in den Rahmen ein
+const bild = (datei, breiteCm, hoeheCm) => {
+  const data = fs.readFileSync(datei), m = bildMasse(data);
+  let b = breiteCm, h = breiteCm * m.h / m.w;
+  if (hoeheCm && h > hoeheCm) { h = hoeheCm; b = hoeheCm * m.w / m.h; }
+  return new ImageRun({ type: datei.endsWith(".png") ? "png" : "jpg", data, transformation: { width: Math.round(b * 37.8), height: Math.round(h * 37.8) } });
+};
+// Kopfbild pro Projekt einheitlich: S.projekt("terrakotta", "stadt")
+let PROJEKT = { farbe: "bergsee", motiv: "berge" };
+const projekt = (farbe, motiv) => { PROJEKT = { farbe, motiv }; };
 const OHNE = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
 const OHNE_RAND = { top: OHNE, bottom: OHNE, left: OHNE, right: OHNE };
 
@@ -90,23 +108,23 @@ function mit(farbname, motiv = "berge") {
 
   // Kopfbereich: farbige Karte mit Titel links und Bergen rechts
   function kopf({ kicker, titel, unter, breite = W_HOCH, felder: kopfFelder }) {
-    const bildB = 3400, textB = breite - bildB;
+    const bildB = 3400, textB = breite - bildB, K = FARBEN[PROJEKT.farbe];
     const text = [
-      new Paragraph({ children: [r(kicker.toUpperCase(), { size: 15, bold: true, color: F.dunkel, spacing: 40 })], spacing: { after: 60 } }),
-      new Paragraph({ children: [r(titel, { size: 34, bold: true, color: F.dunkel })], spacing: { after: 80, line: 300 } }),
+      new Paragraph({ children: [r(kicker.toUpperCase(), { size: 15, bold: true, color: K.dunkel, spacing: 40 })], spacing: { after: 60 } }),
+      new Paragraph({ children: [r(titel, { size: 34, bold: true, color: K.dunkel })], spacing: { after: 80, line: 300 } }),
       ...(unter ? [new Paragraph({ children: runs(unter, { size: 17, color: TEXT }), spacing: { after: 40 } })] : []),
     ];
-    const bildP = new Paragraph({ children: [bild(path.join(BILDER, `banner-${farbname}-${motiv}.png`), 6.0, 2.26)], alignment: AlignmentType.RIGHT, spacing: { after: 0 } });
+    const bildP = new Paragraph({ children: [bild(path.join(BILDER, `banner-${PROJEKT.farbe}-${PROJEKT.motiv}.png`), 6.0, 2.26)], alignment: AlignmentType.RIGHT, spacing: { after: 0 } });
     const t = new Table({ width: { size: breite, type: WidthType.DXA }, columnWidths: [textB, bildB], rows: [new TableRow({ children: [
-      zelle(text, textB, { fill: F.hell, ohneRand: true, valign: VerticalAlign.CENTER, pad: 160 }),
-      zelle([bildP], bildB, { fill: F.hell, ohneRand: true, valign: VerticalAlign.BOTTOM, pad: 0 }),
+      zelle(text, textB, { fill: K.hell, ohneRand: true, valign: VerticalAlign.CENTER, pad: 160 }),
+      zelle([bildP], bildB, { fill: K.hell, ohneRand: true, valign: VerticalAlign.BOTTOM, pad: 0 }),
     ] })] });
     const out = [t];
     if (kopfFelder) {
       const n = kopfFelder.length, b = Math.floor(breite / n);
       out.push(leer(80), new Table({ width: { size: b * n, type: WidthType.DXA }, columnWidths: Array(n).fill(b), rows: [new TableRow({ children:
-        kopfFelder.map(k => new TableCell({ width: { size: b, type: WidthType.DXA }, borders: { top: OHNE, left: OHNE, right: OHNE, bottom: { style: BorderStyle.SINGLE, size: 6, color: F.rand } },
-          margins: { top: 60, bottom: 40, left: 60, right: 200 }, children: [new Paragraph({ children: runs(k, { size: 16, bold: true, color: F.dunkel }), spacing: { after: 160 } })] })) })] }));
+        kopfFelder.map(k => new TableCell({ width: { size: b, type: WidthType.DXA }, borders: { top: OHNE, left: OHNE, right: OHNE, bottom: { style: BorderStyle.SINGLE, size: 6, color: K.rand } },
+          margins: { top: 60, bottom: 40, left: 60, right: 200 }, children: [new Paragraph({ children: runs(k, { size: 16, bold: true, color: K.dunkel }), spacing: { after: 160 } })] })) })] }));
     }
     out.push(leer(160));
     return out;
@@ -126,9 +144,9 @@ function mit(farbname, motiv = "berge") {
     return {
       properties: { page: { size: { width: 11906, height: 16838, orientation: quer ? PageOrientation.LANDSCAPE : PageOrientation.PORTRAIT },
         margin: { top: 1000, bottom: 1000, left: 1134, right: 1134, header: 500, footer: 500 } } },
-      headers: { default: new Header({ children: [new Paragraph({ children: [r(kopfzeile, { size: 15, color: F.dunkel })],
-        border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: F.rand, space: 4 } } })] }) },
-      footers: { default: new Footer({ children: [new Paragraph({ children: [r("mugglionline.ch · Vorlage frei nutzbar und anpassbar mit Quellenangabe", { size: 15, color: GRAU }), r("\t", { size: 15 }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 15, color: F.dunkel, bold: true })],
+      headers: { default: new Header({ children: [new Paragraph({ children: [r(kopfzeile, { size: 15, color: FARBEN[PROJEKT.farbe].dunkel })],
+        border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: FARBEN[PROJEKT.farbe].rand, space: 4 } } })] }) },
+      footers: { default: new Footer({ children: [new Paragraph({ children: [r("mugglionline.ch · Vorlage frei nutzbar und anpassbar mit Quellenangabe", { size: 15, color: GRAU }), r("\t", { size: 15 }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 15, color: FARBEN[PROJEKT.farbe].dunkel, bold: true })],
         tabStops: [{ type: "right", position: quer ? W_QUER : W_HOCH }] })] }) },
       children: kinder,
     };
@@ -139,4 +157,4 @@ function mit(farbname, motiv = "berge") {
 const STIL = { default: { document: { run: { font: FONT, size: 20, color: TEXT } } } };
 const NUM = { config: [{ reference: "punkte", levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 360, hanging: 240 } } } }] }] };
 
-module.exports = { mit, FARBEN, STIL, NUM, W_HOCH, W_QUER, bild, runs, r, box, OHNE_RAND };
+module.exports = { mit, projekt, FARBEN, STIL, NUM, W_HOCH, W_QUER, bild, runs, r, box, OHNE_RAND };
