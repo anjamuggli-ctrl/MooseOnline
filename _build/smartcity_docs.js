@@ -244,7 +244,7 @@ const SC7 = abschnitt("SC7", "Bewertungsraster Offerte", [
   kicker("Vorlage SC7 · Bewertung · ½ Note"), titel("Bewertungsraster Offerte"),
   unter("Firma: ________________________   Mitglieder: _______________________________________________"),
   legende,
-  ...tabelle([5038, 650, 650, 650, 650, 2000], ["Kriterium", "0", "1", "2", "3", "Bemerkung"], [...rasterZeilen(SC7_KRIT), [{ text: "**Total**", fill: SAND }, { text: "", span: 4 }, "____ / 36"]], { mitte: true }),
+  ...tabelle([5038, 650, 650, 650, 650, 2000], ["Kriterium", "0", "1", "2", "3", "Feedback"], [...rasterZeilen(SC7_KRIT), [{ text: "**Total**", fill: SAND }, { text: "**____ / 36**", span: 4, align: AlignmentType.CENTER, fill: SAND }, ""]], { mitte: true }),
   p("Rechtschreibung wird nicht bewertet. Wurden ganze Sätze mit Übersetzer oder KI geschrieben, wird das Kriterium «in eigenen Worten» mit 0 bewertet und die Lehrperson bespricht das mit der Gruppe."),
   p("**Note:** Punkte ÷ 36 × 5 + 1 = ________ (gerundet nach den Vorgaben der Schule)"),
   h("Rückmeldung"), ...linien(4),
@@ -257,9 +257,9 @@ const SC8_TEIL = [
 const raster8 = () => {
   const out = [];
   SC8_TEIL.forEach(([teil, krit, max]) => {
-    const kopf = ["Kriterium", "0", "1", "2", "3", "Punkte"];
+    const kopf = ["Kriterium", "0", "1", "2", "3", "Feedback"];
     const zeilen = krit.map(t => [t, "[]", "[]", max >= 2 ? "[]" : "–", max >= 3 ? "[]" : "–", ""]);
-    zeilen.push([{ text: `**Total ${teil}**`, fill: SAND }, { text: "", span: 4 }, `____ / ${krit.length * max}`]);
+    zeilen.push([{ text: `**Total ${teil}**`, fill: SAND }, { text: `**____ / ${krit.length * max}**`, span: 4, align: AlignmentType.CENTER, fill: SAND }, ""]);
     out.push(h(teil), ...tabelle([5038, 650, 650, 650, 650, 2000], kopf, zeilen, { mitte: true }));
   });
   return out;
