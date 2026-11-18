@@ -399,7 +399,7 @@ function T_tf(id, title, hint, rows){
   var b = '<div class="ex-tf">';
   rows.forEach(function(t,i){ var nm = id+'_'+i;
     b += '<div class="ex-tf-zeile" data-ans="'+(t[1]?"T":"F")+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(t[0])+'</p><div class="ex-tf-wahl" role="radiogroup" aria-label="Statement '+(i+1)+'"><label><input type="radio" name="'+nm+'" value="T"><span>T</span></label><label><input type="radio" name="'+nm+'" value="F"><span>F</span></label></div>'
-      + (t[1] ? '' : '<textarea class="ex-in ex-korr" data-t="'+nm+'" rows="2" placeholder="If false: write the correct sentence."></textarea>')
+      + '<textarea class="ex-in ex-korr" data-t="'+nm+'" rows="2" placeholder="If false: write the correct sentence."></textarea>'
       + '<div class="ex-model" hidden>'+(t[1]?'<b>This statement is true.</b>'+esc(t[2]||""):'<b>This statement is false. Model correction</b>'+esc(t[2]))+'</div></div>'; });
   task(id, title, hint, b+'</div>');
 }
