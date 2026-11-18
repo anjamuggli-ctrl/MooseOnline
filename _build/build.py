@@ -637,8 +637,8 @@ page("pome24b.html", "Pome24B – MuggliOnline", f"""<main class="wrap">
       <a class="plan thema entile" href="pome24b-nuclear.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Unit 9</span><h3>Nuclear Energy</h3>
         <p>Gap-fill text in the book, a video about how a nuclear power plant works, and tasks with model answers.</p>
         <span class="go">Open →</span></a>
-      <a class="plan thema entile" href="pome24b-exam.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Practice exam</span><h3>Energy and the Environment</h3>
-        <p>Practice for the Exam: eight sections with labelling, gap-fill texts, statistics and critical-thinking questions, each with its own answer check.</p>
+      <a class="plan thema entile" href="pome24b-exam.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Unit 9 Practice Exercises</span><h3>Energy and the Environment</h3>
+        <p>Practice exercises to the entire Unit 9 as preparation for the exam: eight sections with labelling, gap-fill texts, statistics and critical-thinking questions, each with its own answer check.</p>
         <span class="go">Open →</span></a>
     </div>
   </section>
@@ -656,12 +656,12 @@ page("pome24b-nuclear.html", "Pome24B: Nuclear Energy – MuggliOnline", f"""<ma
 
 ACTIVE["pome24b-exam.html"] = "lernende.html"
 PX_BODY = "".join((B / "pome24b_exam" / f).read_text() for f in sorted(p.name for p in (B / "pome24b_exam").glob("*.html")))
-page("pome24b-exam.html", "Pome24B: Practice Exam Energy and the Environment – MuggliOnline", f"""<main class="wrap">
-{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Practice Exam', "Pome24B · Energy and the Environment", "Practice Exam: Energy and the Environment", "Greenhouse effect, sea levels, solar, water, wind and nuclear power, statistics and the island project: practise for the exam section by section.")}
+page("pome24b-exam.html", "Pome24B: Unit 9 Practice Exercises – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Practice Exercises', "Pome24B · Energy and the Environment", "Practice Exercises: Energy and the Environment", "Practice exercises to the entire Unit 9 as preparation for the exam: greenhouse effect, sea levels, solar, water, wind and nuclear power, statistics and the island project, section by section.")}
   <section class="section">
 <!--BODY:pome24b_exam-->{PX_BODY}<!--/BODY-->
   </section>
-</main>""", active="lernende.html", description="Pome24B, Technical English: practice exam Energy and the Environment with labelling tasks, gap-fill texts, charts to interpret and critical-thinking questions with model answers.")
+</main>""", active="lernende.html", description="Pome24B, Technical English: Unit 9 practice exercises (Energy and the Environment) as preparation for the exam, with labelling tasks, gap-fill texts, charts to interpret and critical-thinking questions with model answers.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",

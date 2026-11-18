@@ -1,8 +1,9 @@
   <div class="ex ex-pruefung" id="ex" lang="en">
    <div class="ex-intro">
     <div>
-     <h2>Practice exam: Energy and the Environment</h2>
-     <p>This practice exam covers the pages of Unit 9 that come in the exam: the greenhouse effect (p. 119), rising sea levels (pp. 122–123), converting energy and solar power (pp. 124–126), water power (pp. 126–128), wind power (p. 129), nuclear power and the island project (pp. 130–131). Section 7 trains you to read and interpret statistics.</p>
+     <h2>Practice exercises: Energy and the Environment</h2>
+     <p>These practice exercises cover the <b>entire Unit 9</b> and help you prepare for the exam. They are not the exam itself: the exam will look different, but it tests the same content and skills. So if you can do these exercises well, you are well prepared.</p>
+     <p>The exercises cover all the pages of Unit 9 that come in the exam: the greenhouse effect (p. 119), rising sea levels (pp. 122–123), converting energy and solar power (pp. 124–126), water power (pp. 126–128), wind power (p. 129), nuclear power and the island project (pp. 130–131). Section 7 trains you to read and interpret statistics.</p>
      <ul>
       <li>Work section by section. At the end of each section, click <b>Check answers</b> to see your result for this section.</li>
       <li>Drag the words into the right places (on a phone: tap a word, then tap the place). Answer the open questions in <b>complete sentences</b>, then compare with the model answers.</li>
@@ -795,7 +796,7 @@ document.getElementById("ex-check").addEventListener("click", function(){
   [].forEach.call(root.querySelectorAll(".ex-sek"), function(sec, i){ var t = check(sec); all[0] += t[0]; all[1] += t[1];
     rows += '<li><span><a href="#'+sec.id+'">Section '+(i+1)+'</a></span><b>'+t[0]+' / '+t[1]+'</b></li>'; });
   var sc = document.getElementById("ex-score");
-  sc.innerHTML = '<h3>Your result for the whole practice exam</h3><p class="ex-gesamt">'+all[0]+' of '+all[1]+' correct ('+Math.round(100*all[0]/Math.max(1,all[1]))+'%)</p><ul>'+rows+'</ul><p>Click a section to go back to it. The results and the model answers are now shown in every section.</p>';
+  sc.innerHTML = '<h3>Your result for all practice exercises</h3><p class="ex-gesamt">'+all[0]+' of '+all[1]+' correct ('+Math.round(100*all[0]/Math.max(1,all[1]))+'%)</p><ul>'+rows+'</ul><p>Click a section to go back to it. The results and the model answers are now shown in every section.</p>';
   sc.hidden = false; document.getElementById("ex-hide").hidden = false;
   sc.scrollIntoView({ behavior: "smooth", block: "center" });
 });
