@@ -1,0 +1,406 @@
+  <div class="ex ex-pruefung" id="ex" lang="it">
+   <div class="ex-intro">
+    <div>
+     <h2 lang="de">So arbeitest du mit dieser Seite</h2>
+     <p lang="de">Diese Übungen wiederholen die ganze <b>Unità 4 «Un nuovo compagno»</b> als Vorbereitung auf die Prüfung. Es gibt drei Abschnitte: Personen beschreiben, die Schule und «Di chi è?», die Verben und die Aussprache.</p>
+     <ul lang="de">
+      <li>Arbeite einen Abschnitt nach dem anderen durch. Am Ende jedes Abschnitts klickst du auf <b>«Controlla le mie risposte»</b> (Kontrolliere meine Antworten).</li>
+      <li>Ziehe die Wörter an die richtige Stelle (auf dem Handy: Wort antippen, dann den Platz antippen). Bei manchen Aufgaben schreibst du die Antwort selbst ins Feld.</li>
+      <li>Grün heisst richtig, rot heisst falsch, daneben steht die Lösung. Korrigiere deine Fehler und kontrolliere noch einmal.</li>
+      <li>Deine Antworten bleiben in diesem Browser gespeichert. Du kannst also eine Pause machen und später weiterarbeiten.</li>
+     </ul>
+    </div>
+    <nav class="ex-toc" id="ex-toc" aria-label="Sezioni"><b>Sezioni</b></nav>
+   </div>
+   <div id="ex-root"><p class="ex-noscript">Bitte aktiviere JavaScript, um die Übungen zu nutzen.</p></div>
+   <div class="ex-bottom" id="ex-bottom">
+    <button type="button" class="ex-btn haupt" id="ex-check">Controlla tutte le risposte</button>
+    <button type="button" class="ex-btn" id="ex-hide" hidden>Nascondi tutte le correzioni</button>
+    <button type="button" class="ex-btn leise" id="ex-reset">Ricomincia</button>
+    <div class="ex-score" id="ex-score" hidden></div>
+   </div>
+  </div>
+<script>
+(function(){
+"use strict";
+/* ================= HELPERS ================= */
+var KEY = "mo_primar6_italiano4_v1";
+var state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+state.z = state.z || {}; state.t = state.t || {}; state.r = state.r || {};
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function norm(s){ return String(s).trim().toLowerCase(); }
+function shuffle(arr, seed){ var a = arr.slice(), s = 0; for (var i=0;i<seed.length;i++) s = (s*31 + seed.charCodeAt(i)) >>> 0;
+  for (var j=a.length-1;j>0;j--){ s = (s*1103515245 + 12345) >>> 0; var k = s % (j+1); var t=a[j]; a[j]=a[k]; a[k]=t; } return a; }
+var root = document.getElementById("ex-root");
+var H = "", SEKS = [];
+function sek(n, color, kicker, title, text){
+  SEKS.push([n, title]);
+  H += '<section class="ex-sek" id="sek-'+n+'" style="--sc:'+color+'"><div class="ex-sek-kopf"><span class="ex-sek-nr">'+n+'</span><div><span class="ex-sek-kicker">'+kicker+'</span><h2>'+title+'</h2>'+(text?'<p>'+text+'</p>':'')+'</div></div>';
+}
+function endsek(n){ H += '<div class="ex-sek-fuss"><button type="button" class="ex-btn haupt ex-sek-check">Controlla le mie risposte</button><button type="button" class="ex-btn ex-sek-hide" hidden>Nascondi le correzioni</button><div class="ex-score" hidden></div></div></section>'; }
+function task(id, title, hint, body){ H += '<div class="ex-aufgabe" id="t-'+id+'" data-name="'+esc(title.replace(/<[^>]+>/g,""))+'"><h3>'+title+'</h3>'+(hint?'<p class="ex-hint">'+hint+'</p>':'')+body+'</div>'; }
+function chip(group, cid, val, label){ return '<button type="button" class="ex-chip" data-g="'+group+'" data-id="'+cid+'" data-val="'+esc(val)+'">'+esc(label||val)+'</button>'; }
+function bank(group, chips, cls, sort){ return '<div class="ex-bank'+(cls?' '+cls:'')+'" data-g="'+group+'" data-bank="1"'+(sort?' data-sort="1"':'')+' aria-label="Parole">'+chips+'</div>'; }
+function slotRow(group, zid, label, ans, show, cls){ return '<div class="ex-paar"><span class="ex-term'+(cls||'')+'">'+label+'</span><span class="ex-zone ex-slot" tabindex="0" data-g="'+group+'" data-z="'+zid+'" data-ans="'+esc(ans)+'"'+(show?' data-show="'+esc(show)+'"':'')+'><i>trascina qui</i></span></div>'; }
+function frage(id, q, model, rows, tag){ return '<div class="ex-frage">'+(tag?'<span class="ex-tag">'+tag+'</span>':'')+'<label for="q_'+id+'"><b>'+q+'</b></label><textarea class="ex-in" id="q_'+id+'" data-t="'+id+'" rows="'+(rows||3)+'"></textarea><div class="ex-model" hidden><b>Esempio di risposta</b>'+model+'</div></div>'; }
+function quelle(s){ return '<p class="ex-quelle">'+s+'</p>'; }
+function chart(no, title, svg, src){ return '<figure class="ex-chart"><figcaption><span class="ex-chart-nr">Chart '+no+'</span> '+title+'</figcaption><div class="ex-diagramm-wrap">'+svg+'</div>'+quelle(src)+'</figure>'; }
+
+function T_label(id, title, hint, svg, items, credit){
+  var chips = shuffle(items.map(function(it,i){ return [id+'_c'+i, it[1]]; }), id).map(function(c){ return chip(id, c[0], c[1]); }).join("");
+  var rows = items.map(function(it,i){ return slotRow(id, id+'_'+i, '<span class="ex-nummer">'+it[0]+'</span>', it[1]); }).join("");
+  task(id, title, hint, (svg?'<div class="ex-diagramm-wrap">'+svg+'</div>':'')+(credit?quelle(credit):'')+bank(id, chips)+'<div class="ex-paare ex-paare-2">'+rows+'</div>');
+}
+function T_order(id, title, hint, steps){
+  var chips = shuffle(steps.map(function(s,i){ return [id+'_c'+i, 's'+i, s]; }), id).map(function(c){ return chip(id, c[0], c[1], c[2]); }).join("");
+  var rows = steps.map(function(s,i){ return slotRow(id, id+'_'+i, '<span class="ex-nummer">'+(i+1)+'</span>', 's'+i, s, ' ex-term-kurz'); }).join("");
+  task(id, title, hint, '<div class="ex-match"><div class="ex-paare">'+rows+'</div>'+bank(id, chips, 'ex-bank-def')+'</div>');
+}
+function T_gaps(id, title, hint, text, extra){
+  var n = 0, words = [];
+  var body = esc(text).replace(/\[\[(.+?)\]\]/g, function(_, w){ n++; words.push(w);
+    return '<span class="ex-zone ex-gap" tabindex="0" data-g="'+id+'" data-z="'+id+'_'+n+'" data-ans="'+esc(w)+'"><i>'+n+'</i></span>'; });
+  var chips = shuffle(words.concat(extra).map(function(w,i){ return [id+'_c'+i, w]; }), id).map(function(c){ return chip(id, c[0], c[1]); }).join("");
+  task(id, title, hint, bank(id, chips)+'<p class="ex-text">'+body+'</p>');
+}
+function T_match(id, title, hint, pairs, cls){
+  var chips = shuffle(pairs.map(function(p,i){ return [id+'_c'+i, p[1], p[0]]; }), id).map(function(c){ return chip(id, c[0], c[2], c[1]); }).join("");
+  var rows = pairs.map(function(p,i){ return slotRow(id, id+'_'+i, esc(p[0]), p[0], p[1], cls); }).join("");
+  task(id, title, hint, '<div class="ex-match"><div class="ex-paare">'+rows+'</div>'+bank(id, chips, 'ex-bank-def')+'</div>');
+}
+function T_sort(id, title, hint, cats, items){
+  var chips = shuffle(items.map(function(it,i){ return [id+'_c'+i, it[1], it[0]]; }), id).map(function(c){ return chip(id, c[0], c[1], c[2]); }).join("");
+  var boxes = cats.map(function(c){ return '<div class="ex-kat"><b>'+esc(c)+'</b><div class="ex-zone ex-eimer" tabindex="0" data-g="'+id+'" data-z="'+id+'_'+esc(c)+'" data-ans="'+esc(c)+'" data-multi="1"></div></div>'; }).join("");
+  task(id, title, hint, bank(id, chips, '', true)+'<div class="ex-kats ex-kats-'+cats.length+'">'+boxes+'</div>');
+}
+function T_tf(id, title, hint, rows){
+  var b = '<div class="ex-tf">';
+  rows.forEach(function(t,i){ var nm = id+'_'+i;
+    b += '<div class="ex-tf-zeile" data-ans="'+(t[1]?"T":"F")+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(t[0])+'</p><div class="ex-tf-wahl" role="radiogroup" aria-label="Statement '+(i+1)+'"><label><input type="radio" name="'+nm+'" value="T"><span>T</span></label><label><input type="radio" name="'+nm+'" value="F"><span>F</span></label></div>'
+      + '<textarea class="ex-in ex-korr" data-t="'+nm+'" rows="2" placeholder="If false: write the correct sentence."></textarea>'
+      + '<div class="ex-model" hidden>'+(t[1]?'<b>This statement is true.</b>'+esc(t[2]||""):'<b>This statement is false. Model correction</b>'+esc(t[2]))+'</div></div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_mc(id, title, hint, qs, before){
+  var b = (before||'') + '<div class="ex-mc">';
+  qs.forEach(function(q,i){ var nm = id+'_'+i;
+    b += '<div class="ex-mc-q" data-ans="'+q[2]+'"><p><span class="ex-nr">'+(i+1)+'</span>'+esc(q[0])+'</p><div class="ex-mc-opt" role="radiogroup">'
+      + q[1].map(function(o,k){ return '<label><input type="radio" name="'+nm+'" value="'+k+'"><span>'+esc(o)+'</span></label>'; }).join("")
+      + '</div>'+(q[3]?'<div class="ex-model" hidden><b>Spiegazione</b>'+esc(q[3])+'</div>':'')+'</div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_voc(id, title, hint, rows){
+  var b = '<div class="ex-voc">';
+  rows.forEach(function(r,i){ b += '<div class="ex-voc-zeile"><span>'+esc(r[0])+'</span><input class="ex-in" type="text" data-t="'+id+'_'+i+'" aria-label="English for '+esc(r[0])+'" autocomplete="off"><div class="ex-model" hidden>'+esc(r[1])+'</div></div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_open(id, title, hint, qs, before){
+  var b = (before||'') + '<ol class="ex-liste">';
+  qs.forEach(function(q,i){ b += '<li>'+frage(id+'_'+i, q[0], q[1], q[2]||4, q[3])+'</li>'; });
+  task(id, title, hint, b+'</ol>');
+}
+
+/* =====================================================================
+
+/* ================= EXTRA TASK TYPES (typing) ================= */
+function inp(id, ans, w){ var len = Math.max.apply(null, ans.split("|").map(function(a){ return a.length; }));
+  return '<input class="ex-in ex-scrivi" type="text" data-t="'+id+'" data-ans="'+esc(ans)+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Scrivi la risposta" style="width:'+(w||len+3)+'ch">'; }
+function T_type(id, title, hint, lines, before){
+  var n = 0, b = (before||'') + '<ol class="ex-liste ex-scrivi-liste">';
+  lines.forEach(function(l){ b += '<li>' + esc(l).replace(/\[\[(.+?)\]\]/g, function(_, a){ n++; return inp(id+'_'+n, a); }) + '</li>'; });
+  task(id, title, hint, b + '</ol>');
+}
+function T_konj(id, title, hint, verbs){
+  var pr = ["io","tu","lui/lei","noi","voi","loro"], b = '<div class="ex-konj">';
+  verbs.forEach(function(v,k){ b += '<table class="ex-konj-tab"><thead><tr><th colspan="2">'+esc(v[0])+'</th></tr></thead><tbody>';
+    v[1].forEach(function(f,i){ b += '<tr><td>'+pr[i]+'</td><td>'+inp(id+'_'+k+'_'+i, f, 12)+'</td></tr>'; });
+    b += '</tbody></table>'; });
+  task(id, title, hint, b + '</div>');
+}
+function T_vf(id, title, hint, rows, before){
+  var b = (before||'') + '<div class="ex-tf">';
+  rows.forEach(function(t,i){ var nm = id+'_'+i;
+    b += '<div class="ex-tf-zeile" data-ans="'+t[1]+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(t[0])+'</p><div class="ex-tf-wahl" role="radiogroup" aria-label="Frase '+(i+1)+'">'
+      + [["V","vero"],["F","falso"],["?","non c’è nel testo"]].map(function(o){ return '<label title="'+o[1]+'"><input type="radio" name="'+nm+'" value="'+o[0]+'"><span>'+o[0]+'</span></label>'; }).join("")
+      + '</div>' + (t[2] ? '<div class="ex-model" hidden><b>Spiegazione</b>'+esc(t[2])+'</div>' : '') + '</div>'; });
+  task(id, title, hint, b + '</div>');
+}
+
+/* =====================================================================
+   SEZIONE 1 · DESCRIVERE UNA PERSONA
+   ===================================================================== */
+sek(1, "#2e7d4f", "Sezione 1 · Libro pp. 52–55, 57", "Descrivere una persona", "L’aspetto fisico e il carattere. <i>(Personen beschreiben: Aussehen und Charakter.)</i>");
+T_match("s1a", "1A · I contrari", "Abbina ogni aggettivo al suo contrario. <i>(Ziehe zu jedem Adjektiv das Gegenteil.)</i>", [
+  ["avaro","generoso"],["attivo","pigro"],["attento","distratto"],["ordinato","disordinato"],["scherzoso","serio"],["antipatico","simpatico"],
+  ["noioso","divertente"],["buono","cattivo"],["triste","allegro"],["coraggioso","pauroso"],["aperto","chiuso"]], " ex-term-kurz");
+T_sort("s1b", "1B · Aspetto fisico o carattere?", "Metti ogni parola nella scatola giusta. <i>(Aussehen oder Charakter? Ziehe jedes Wort in die richtige Box.)</i>", ["aspetto fisico","carattere"], [
+  ["alto","aspetto fisico"],["basso","aspetto fisico"],["magro","aspetto fisico"],["robusto","aspetto fisico"],["biondo","aspetto fisico"],["castano","aspetto fisico"],["riccio","aspetto fisico"],["grasso","aspetto fisico"],
+  ["timido","carattere"],["goloso","carattere"],["pigro","carattere"],["studioso","carattere"],["chiacchierone","carattere"],["curioso","carattere"],["generoso","carattere"],["gentile","carattere"]]);
+T_type("s1c", "1C · Maschile e femminile, singolare e plurale", "Scrivi l’aggettivo nella forma giusta. Attenzione: alcuni aggettivi non cambiano! <i>(Schreibe das Adjektiv in der richtigen Form. Achtung: Einige Adjektive verändern sich nicht!)</i>", [
+  "Marco è simpatico. Anche Giulia è [[simpatica]].",
+  "Luca è timido. Anche Sara è [[timida]].",
+  "Paolo è goloso. Anche Anna è [[golosa]].",
+  "Tommaso è chiacchierone. Anche Elena è [[chiacchierona]].",
+  "Dario è intelligente. Anche Marta è [[intelligente]].",
+  "Filippo è disordinato. Anche Chiara è [[disordinata]].",
+  "Giorgio è divertente. Anche Lisa è [[divertente]].",
+  "Gianni e Pietro (alto) sono [[alti]].",
+  "Sonia e Daniela (biondo) sono [[bionde]].",
+  "I miei compagni (simpatico) sono [[simpatici]]."]);
+T_gaps("s1d", "1D · Una nuova compagna", "Completa il testo. Tre parole non servono. <i>(Ergänze den Text. Drei Wörter brauchst du nicht.)</i>",
+  "In classe c’è una nuova compagna. Si chiama Emma e viene da Lugano. Emma è [[alta]] e magra. Ha i capelli [[lunghi]] e [[ricci]] e gli [[occhi]] verdi. Il suo amico Nico invece è [[basso]] e robusto: ha i capelli [[corti]] e neri e porta gli [[occhiali]]. Emma è molto [[sportiva]]: gioca a pallavolo tutti i giorni. Nico è [[studioso]], ma a volte è un po’ [[distratto]] e dimentica i libri a casa.",
+  ["barba","pigra","grassi"]);
+T_mc("s1e", "1E · Scegli la risposta giusta", "<i>(Wähle die richtige Antwort.)</i>", [
+  ["Matilde ___ i capelli rossi.", ["è","ha","sono","hanno"], 1, "Per i capelli e gli occhi usiamo «avere»: Matilde ha i capelli rossi."],
+  ["Sonia e Daniela ___ alte e magre.", ["hanno","ha","sono","è"], 2, "Per descrivere com’è una persona usiamo «essere». Sonia e Daniela = loro → sono."],
+  ["Damiano ___ molto intelligente.", ["ha","è","hanno","sono"], 1, "Damiano è intelligente (essere)."],
+  ["Una persona con i capelli neri è …", ["bionda","castana","mora","rossa"], 2, "Per i capelli neri possiamo dire anche «È mora» (oder «È moro»)."],
+  ["Gli occhi marroni si chiamano anche occhi …", ["castani","mori","biondi","ricci"], 0, "Per gli occhi marroni possiamo usare anche l’aggettivo «castani»."],
+  ["Trova l’intruso: alto – basso – magro – goloso", ["alto","basso","magro","goloso"], 3, "«Goloso» descrive il carattere, le altre parole l’aspetto fisico."],
+  ["Il professore ha la barba e i …", ["capelli lisci","baffi","occhiali","ricci"], 1, "Il professor Ghirardi ha la barba e i baffi (Schnurrbart)."]]);
+T_type("s1f", "1F · Vocabolario", "Scrivi la parola in italiano (forma maschile). <i>(Schreibe das Wort auf Italienisch, männliche Form.)</i>", [
+  "neugierig → [[curioso]]", "schüchtern → [[timido]]", "faul → [[pigro]]", "naschhaft → [[goloso]]", "fleissig → [[studioso]]", "gesprächig → [[chiacchierone]]",
+  "lustig → [[divertente|allegro|scherzoso]]", "unordentlich → [[disordinato]]", "grosszügig → [[generoso]]", "zerstreut → [[distratto]]",
+  "lockig (Haare) → [[riccio|ricci]]", "die Brille → [[gli occhiali|occhiali]]"]);
+T_open("s1g", "1G · Adesso tocca a te!", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
+  ["Descrivi il tuo migliore amico o la tua migliore amica (4–5 frasi): come si chiama, com’è (aspetto fisico) e che carattere ha.",
+   "Il mio migliore amico si chiama Luca. È alto e magro. Ha i capelli corti e castani e gli occhi azzurri. È simpatico e molto sportivo: gioca a calcio tutti i giorni. A volte è un po’ disordinato, ma è sempre generoso.", 5, "Scrivere"]]);
+endsek(1);
+
+/* =====================================================================
+   SEZIONE 2 · LA SCUOLA E «DI CHI È?»
+   ===================================================================== */
+sek(2, "#b0392e", "Sezione 2 · Libro pp. 55–56, 59–60", "La scuola e «Di chi è?»", "I luoghi della scuola, gli aggettivi e i pronomi possessivi. <i>(Die Orte in der Schule und die Possessivpronomen.)</i>");
+T_gaps("s2a", "2A · I luoghi della scuola", "Dove succede? Completa le frasi. Due parole non servono. <i>(Wo passiert das? Zwei Wörter brauchst du nicht.)</i>",
+  "Facciamo ginnastica in [[palestra]]. Gli studenti fanno gli esperimenti nel [[laboratorio di scienze]]. Gli insegnanti fanno una pausa nella [[sala professori]]. I genitori chiedono informazioni in [[segreteria]]. Il preside lavora in [[presidenza]]. Oggi tutte le classi ascoltano una conferenza in [[aula magna]]. Quando c’è il sole, facciamo ricreazione in [[cortile]]. Il distributore delle merendine è nel [[corridoio]]. Domani c’è una gara di atletica al [[campo sportivo]].",
+  ["mensa","biblioteca"]);
+T_type("s2b", "2B · I possessivi", "Scrivi il possessivo con l’articolo. <i>(Schreibe das Possessiv mit dem Artikel, z. B. «il mio».)</i>", [
+  "(io) [[i miei]] quaderni", "(tu) [[la tua]] gomma", "(lui/lei) [[il suo]] zaino", "(noi) [[la nostra]] aula", "(voi) [[le vostre]] matite", "(loro) [[la loro]] scuola",
+  "(io) [[la mia]] bicicletta", "(tu) [[i tuoi]] libri", "(lui/lei) [[le sue]] scarpe", "(noi) [[i nostri]] professori", "(voi) [[il vostro]] cane", "(loro) [[i loro]] genitori"],
+  '<div class="ex-merke"><b>Ricorda</b><table><tr><th></th><th>maschile sing.</th><th>maschile plur.</th><th>femminile sing.</th><th>femminile plur.</th></tr><tr><td>io</td><td>il mio</td><td>i miei</td><td>la mia</td><td>le mie</td></tr><tr><td>tu</td><td>il tuo</td><td>i tuoi</td><td>la tua</td><td>le tue</td></tr><tr><td>lui/lei</td><td>il suo</td><td>i suoi</td><td>la sua</td><td>le sue</td></tr><tr><td>noi</td><td>il nostro</td><td>i nostri</td><td>la nostra</td><td>le nostre</td></tr><tr><td>voi</td><td>il vostro</td><td>i vostri</td><td>la vostra</td><td>le vostre</td></tr><tr><td>loro</td><td>il loro</td><td>i loro</td><td>la loro</td><td>le loro</td></tr></table><p>Prova prima senza guardare la tabella! <i>(Versuche es zuerst, ohne in die Tabelle zu schauen!)</i></p></div>');
+T_gaps("s2c", "2C · Di chi è?", "Completa il dialogo con i possessivi. Tre parole non servono. <i>(Ergänze den Dialog. Drei Wörter brauchst du nicht.)</i>",
+  "Luca: Di chi è questo astuccio? – Marta: È [[il mio]]! Grazie! – Luca: E queste matite sono [[tue]]? – Marta: No, non sono [[mie]], sono di Elisa. – Luca: E il libro di inglese? È di Paolo? – Marta: Sì, è [[suo]]. – Luca: Ragazzi, questa è [[la vostra]] classe? – Gianni: No, [[la nostra]] classe è la seconda B. – Luca: E questi zaini sono di Gianni e Pietro? – Marta: Sì, sono [[i loro]].",
+  ["la sua","i miei","il tuo"]);
+T_mc("s2d", "2D · Scegli il possessivo giusto", "<i>(Wähle das richtige Possessiv.)</i>", [
+  ["Rafael ha un cane. È ___ cane.", ["la sua","il suo","il loro","i suoi"], 1, "Rafael = lui → suo; cane è maschile singolare → il suo cane."],
+  ["Sonia e Daniela hanno una casa grande. ___ casa è grande.", ["La sua","Le loro","La loro","Il loro"], 2, "Sonia e Daniela = loro; casa è femminile singolare → la loro casa."],
+  ["Io e mio fratello abbiamo due gatti. Sono ___ gatti.", ["i nostri","le nostre","i vostri","i loro"], 0, "Io e mio fratello = noi; gatti è maschile plurale → i nostri gatti."],
+  ["Il professor Ghirardi ha la barba. ___ barba è nera.", ["Il suo","La sua","La loro","Le sue"], 1, "Barba è femminile singolare → la sua barba."],
+  ["Marta, sono ___ penne?", ["le tue","i tuoi","la tua","le mie"], 0, "Marta = tu; penne è femminile plurale → le tue penne."]]);
+T_vf("s2e", "2E · Leggere: la scuola di Vallebella", "Leggi il testo. Le frasi sono vere (V), false (F) o l’informazione non c’è nel testo (?)? <i>(Richtig, falsch oder steht nicht im Text?)</i>", [
+  ["A Vallebella abitano circa duecento persone.", "V", "Nel testo: «dove abitano circa duecento persone»."],
+  ["Nella scuola ci sono due classi.", "F", "La scuola ha solo una classe."],
+  ["Due alunni frequentano la quinta.", "V", "«due la quinta»."],
+  ["La maestra Laura ha i capelli biondi.", "?", "Il testo non dice niente sui capelli della maestra."],
+  ["La scuola ha una grande palestra.", "F", "La scuola non ha una palestra: gli alunni fanno ginnastica nel cortile o sul campo sportivo."],
+  ["La maestra è giovane e paziente.", "V", "«È giovane, simpatica e molto paziente»."],
+  ["Gli alunni mangiano a scuola a mezzogiorno.", "?", "Il testo non dice dove mangiano gli alunni."]],
+  '<div class="ex-lesetext"><b>La scuola di Vallebella</b><p>Vallebella è un piccolo paese in montagna, dove abitano circa duecento persone. La scuola elementare ha solo una classe con sei alunni: tre frequentano la quarta, due la quinta e uno la prima. C’è una sola maestra, la maestra Laura. È giovane, simpatica e molto paziente. La scuola non ha una palestra: quando c’è il sole, gli alunni fanno ginnastica nel cortile o sul campo sportivo del paese. Gli alunni sono buoni amici e giocano sempre insieme durante la ricreazione.</p></div>');
+endsek(2);
+
+/* =====================================================================
+   SEZIONE 3 · I VERBI
+   ===================================================================== */
+sek(3, "#2a6f97", "Sezione 3 · Libro pp. 58–59", "I verbi e la pronuncia", "Verbi in -care e -gare, verbi in -isc-, il verbo «fare» e la lettera «g». <i>(Verben auf -care/-gare, Verben mit -isc-, «fare» und die Aussprache von «g».)</i>");
+T_konj("s3a", "3A · Coniuga i verbi", "Scrivi le forme del presente. Attenzione alla «h» e a «-isc-»! <i>(Schreibe die Formen im Präsens. Achtung auf das «h» und auf «-isc-»!)</i>", [
+  ["giocare", ["gioco","giochi","gioca","giochiamo","giocate","giocano"]],
+  ["pagare", ["pago","paghi","paga","paghiamo","pagate","pagano"]],
+  ["capire", ["capisco","capisci","capisce","capiamo","capite","capiscono"]],
+  ["finire", ["finisco","finisci","finisce","finiamo","finite","finiscono"]],
+  ["fare", ["faccio","fai","fa","facciamo","fate","fanno"]]]);
+T_sort("s3b", "3B · Chi è?", "A quale pronome appartiene il verbo? Metti ogni verbo nella scatola giusta. <i>(Zu welchem Pronomen gehört das Verb?)</i>", ["io","tu","lui/lei","noi","voi","loro"], [
+  ["capisco","io"],["faccio","io"],["paghi","tu"],["arrossisci","tu"],["tossisce","lui/lei"],["dimentica","lui/lei"],
+  ["giochiamo","noi"],["spieghiamo","noi"],["preferite","voi"],["fate","voi"],["spediscono","loro"],["litigano","loro"]]);
+T_type("s3c", "3C · Completa le frasi", "Scrivi il verbo nella forma giusta. <i>(Schreibe das Verb in der richtigen Form.)</i>", [
+  "Noi (giocare) [[giochiamo]] a calcio nel cortile.",
+  "Tu (dimenticare) [[dimentichi]] sempre l’astuccio a casa!",
+  "Il professore (spiegare) [[spiega]] la grammatica.",
+  "Sonia e Daniela (finire) [[finiscono]] i compiti e poi vanno in palestra.",
+  "Io non (capire) [[capisco]] questo esercizio.",
+  "Ragazzi, voi (fare) [[fate]] la verifica oggi?",
+  "Quando è imbarazzata, Elena (arrossire) [[arrossisce]].",
+  "Io (pagare) [[pago]] la merendina.",
+  "Tu (preferire) [[preferisci]] la pizza o la pasta?",
+  "Gli studenti (fare) [[fanno]] ricreazione in cortile.",
+  "Noi (pulire) [[puliamo]] l’aula prima delle vacanze.",
+  "Io (fare) [[faccio]] ginnastica in palestra."]);
+T_sort("s3d", "3D · Come si pronuncia la «g»?", "La «g» ha un suono dolce (come in «gelato») o duro (come in «gatto»)? <i>(Wird das «g» weich wie in «gelato» oder hart wie in «gatto» ausgesprochen?)</i>", ["suono dolce (gelato)","suono duro (gatto)"], [
+  ["giorno","suono dolce (gelato)"],["gennaio","suono dolce (gelato)"],["giostra","suono dolce (gelato)"],["agenzia","suono dolce (gelato)"],["gioia","suono dolce (gelato)"],
+  ["ghianda","suono duro (gatto)"],["funghi","suono duro (gatto)"],["righello","suono duro (gatto)"],["aragosta","suono duro (gatto)"],["spaghetti","suono duro (gatto)"]]);
+T_open("s3e", "3E · Scrivere", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
+  ["Riscrivi il testo alla 3ª persona singolare (lui). Comincia così: «Si chiama Leo, …»<br><span class=\"ex-zitat\">«Mi chiamo Leo, ho 12 anni e abito a Coira. Frequento la sesta classe. Sono alto e magro e ho i capelli castani. Sono un po’ timido, ma molto curioso. Nel tempo libero gioco a calcio e faccio i compiti con mio fratello.»</span>",
+   "Si chiama Leo, ha 12 anni e abita a Coira. Frequenta la sesta classe. È alto e magro e ha i capelli castani. È un po’ timido, ma molto curioso. Nel tempo libero gioca a calcio e fa i compiti con suo fratello.<br><i>Attenzione: «mio fratello» diventa «suo fratello».</i>", 5],
+  ["Scrivi un’email a un amico o a un’amica (5–6 frasi): descrivi la tua scuola e un compagno o una compagna di classe.",
+   "Caro Maurizio,<br>ti descrivo la mia scuola. È grande e molto bella. C’è una palestra, un’aula magna e un cortile, dove facciamo ricreazione quando c’è il sole. La mia classe non è grande: siamo diciotto studenti. Il mio compagno di banco si chiama Nico. È basso e robusto e ha i capelli neri. È molto simpatico e divertente, ma un po’ disordinato! E la tua scuola com’è?<br>Ciao,<br>Anna", 7, "Scrivere"]]);
+endsek(3);
+
+root.innerHTML = H;
+var toc = document.getElementById("ex-toc");
+SEKS.forEach(function(s){ toc.insertAdjacentHTML("beforeend", '<a href="#sek-'+s[0]+'">'+s[0]+' · '+s[1]+'</a>'); });
+
+/* ================= DRAG & DROP ================= */
+function chipsOf(el){ return [].slice.call(el.querySelectorAll(".ex-chip")); }
+function bankOf(g){ return root.querySelector('.ex-bank[data-g="'+g+'"]'); }
+function place(ch, zone, noSave){
+  if (!zone) return;
+  var from = ch.parentNode;
+  if (zone.dataset.bank) { zone.appendChild(ch); }
+  else {
+    var old = zone.querySelector(".ex-chip");
+    if (old && old !== ch) { if (from && from.classList.contains("ex-zone")) from.appendChild(old); else bankOf(old.dataset.g).appendChild(old); }
+    zone.appendChild(ch);
+  }
+  [from, zone].forEach(function(z){ if (z && z.classList && z.classList.contains("ex-zone")) z.classList.toggle("voll", !!z.querySelector(".ex-chip")); });
+  if (!noSave) { record(); clearMarks(zone.closest(".ex-sek")); }
+}
+function record(){
+  state.z = {};
+  [].forEach.call(root.querySelectorAll(".ex-zone"), function(z){ var ids = chipsOf(z).map(function(c){ return c.dataset.id; }); if (ids.length) state.z[z.dataset.z] = ids; });
+  save();
+}
+var sel = null;
+function select(ch){ if (sel) sel.classList.remove("gewaehlt"); sel = (sel === ch) ? null : ch; if (sel) sel.classList.add("gewaehlt"); root.classList.toggle("ex-waehlt", !!sel); }
+var drag = null;
+root.addEventListener("pointerdown", function(e){
+  var ch = e.target.closest(".ex-chip"); if (!ch || e.button > 0) return;
+  drag = { ch: ch, x: e.clientX, y: e.clientY, moved: false, ghost: null, id: e.pointerId };
+});
+document.addEventListener("pointermove", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+  if (!drag.moved) {
+    drag.moved = true; var r = drag.ch.getBoundingClientRect();
+    drag.ox = drag.x - r.left; drag.oy = drag.y - r.top;
+    var gh = drag.ch.cloneNode(true); gh.classList.add("ex-ghost"); gh.style.width = r.width + "px"; document.body.appendChild(gh); drag.ghost = gh;
+    drag.ch.classList.add("ex-quelle"); if (sel) select(sel);
+  }
+  e.preventDefault();
+  drag.ghost.style.left = (e.clientX - drag.ox) + "px"; drag.ghost.style.top = (e.clientY - drag.oy) + "px";
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (z && z.dataset.g === drag.ch.dataset.g) z.classList.add("ueber");
+}, { passive: false });
+document.addEventListener("pointerup", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var d = drag; drag = null;
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (!d.moved) return;
+  d.ghost.remove(); d.ch.classList.remove("ex-quelle");
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  if (z && z.dataset.g === d.ch.dataset.g) place(d.ch, z);
+  d.ch.dataset.justDragged = "1"; setTimeout(function(){ delete d.ch.dataset.justDragged; }, 50);
+});
+document.addEventListener("pointercancel", function(){ if (drag && drag.ghost) { drag.ghost.remove(); drag.ch.classList.remove("ex-quelle"); } drag = null; });
+root.addEventListener("click", function(e){
+  var ch = e.target.closest(".ex-chip");
+  if (ch) {
+    if (ch.dataset.justDragged) return;
+    if (sel && sel !== ch && sel.dataset.g === ch.dataset.g && ch.parentNode.classList.contains("ex-zone")) { place(sel, ch.parentNode); select(sel); return; }
+    select(ch); return;
+  }
+  var z = e.target.closest(".ex-zone, .ex-bank");
+  if (z && sel && z.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, z); }
+});
+root.addEventListener("keydown", function(e){
+  if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("ex-zone")) {
+    e.preventDefault(); if (sel && e.target.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, e.target); }
+  }
+  if (e.key === "Escape" && sel) select(sel);
+});
+
+
+/* ================= TEXT INPUTS AND RADIOS ================= */
+[].forEach.call(root.querySelectorAll("[data-t]"), function(inp){
+  if (state.t[inp.dataset.t]) inp.value = state.t[inp.dataset.t];
+  inp.addEventListener("input", function(){ state.t[inp.dataset.t] = inp.value; save(); });
+});
+[].forEach.call(root.querySelectorAll('input[type="radio"]'), function(r){
+  if (state.r[r.name] === r.value) r.checked = true;
+  r.addEventListener("change", function(){ state.r[r.name] = r.value; save(); clearMarks(r.closest(".ex-sek")); });
+});
+Object.keys(state.z).forEach(function(zid){
+  var z = root.querySelector('.ex-zone[data-z="'+zid+'"]'); if (!z) return;
+  state.z[zid].forEach(function(cid){ var c = root.querySelector('.ex-chip[data-id="'+cid+'"]'); if (c) place(c, z, true); });
+});
+
+/* ================= CHECK ================= */
+function clean(s){ return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.!?]+$/,"").replace(/\s+/g," ").trim(); }
+[].forEach.call(root.querySelectorAll(".ex-scrivi"), function(f){ f.addEventListener("input", function(){ clearMarks(f.closest(".ex-sek")); }); });
+function clearMarks(sec){
+  if (!sec || !sec.dataset.checked) return; delete sec.dataset.checked;
+  [].forEach.call(sec.querySelectorAll(".ok, .bad, .richtig"), function(x){ x.classList.remove("ok","bad","richtig"); });
+  [].forEach.call(sec.querySelectorAll(".ex-loesung"), function(x){ x.remove(); });
+  sec.querySelector(".ex-sek-fuss .ex-score").hidden = true;
+  document.getElementById("ex-score").hidden = true;
+}
+function sol(text, chipStyle){ var s = document.createElement("span"); s.className = "ex-loesung" + (chipStyle ? " ex-loesung-chip" : ""); s.textContent = (chipStyle ? "→ " : "✓ ") + text; return s; }
+function check(sec){
+  clearMarks(sec); sec.dataset.checked = "1";
+  var res = [], tot = [0,0];
+  [].forEach.call(sec.querySelectorAll(".ex-aufgabe"), function(t){
+    var p = [0,0]; function add(ok){ p[1]++; if (ok) p[0]++; }
+    [].forEach.call(t.querySelectorAll(".ex-zone:not([data-multi])"), function(z){
+      var c = z.querySelector(".ex-chip"), ok = !!c && norm(c.dataset.val) === norm(z.dataset.ans);
+      z.classList.add(ok ? "ok" : "bad"); add(ok);
+      if (!ok) z.insertAdjacentElement("afterend", sol(z.dataset.show || z.dataset.ans));
+    });
+    [].forEach.call(t.querySelectorAll(".ex-bank[data-sort]"), function(b){
+      [].forEach.call(t.querySelectorAll('.ex-chip[data-g="'+b.dataset.g+'"]'), function(c){
+        var par = c.parentNode, ok = !!par.dataset.multi && c.dataset.val === par.dataset.ans;
+        c.classList.add(ok ? "ok" : "bad"); add(ok);
+        if (!ok) c.appendChild(sol(c.dataset.val, true));
+      });
+    });
+    [].forEach.call(t.querySelectorAll(".ex-tf-zeile"), function(row){
+      var r = row.querySelector("input:checked"), ok = !!r && r.value === row.dataset.ans;
+      row.classList.add(ok ? "ok" : "bad"); add(ok);
+    });
+    [].forEach.call(t.querySelectorAll(".ex-mc-q"), function(q){
+      var r = q.querySelector("input:checked"), ok = !!r && r.value === q.dataset.ans;
+      q.classList.add(ok ? "ok" : "bad"); add(ok);
+      var right = q.querySelector('input[value="'+q.dataset.ans+'"]'); if (right) right.parentNode.classList.add("richtig");
+    });
+    [].forEach.call(t.querySelectorAll(".ex-scrivi"), function(f){
+      var ok = f.dataset.ans.split("|").some(function(a){ return clean(a) === clean(f.value); });
+      f.classList.add(ok ? "ok" : "bad"); add(ok);
+      if (!ok) f.insertAdjacentElement("afterend", sol(f.dataset.ans.split("|")[0]));
+    });
+    if (p[1]) { res.push([t.dataset.name, p]); tot[0] += p[0]; tot[1] += p[1]; }
+  });
+  [].forEach.call(sec.querySelectorAll(".ex-model"), function(m){ m.hidden = false; });
+  var sc = sec.querySelector(".ex-sek-fuss .ex-score");
+  sc.innerHTML = '<h3>Il tuo risultato: '+esc(sec.querySelector("h2").textContent)+'</h3><p class="ex-gesamt">'+tot[0]+' risposte giuste su '+tot[1]+'</p><ul>'
+    + res.map(function(r){ return '<li><span>'+esc(r[0])+'</span><b>'+r[1][0]+' / '+r[1][1]+'</b></li>'; }).join("")
+    + '</ul><p>Le risposte giuste sono verdi, quelle sbagliate sono rosse e accanto c’è la soluzione. Per le domande aperte confronta il tuo testo con l’<b>esempio di risposta</b>. Correggi le risposte e controlla di nuovo.<br><i>(Grün = richtig, rot = falsch, daneben steht die Lösung. Bei den offenen Fragen vergleichst du deinen Text mit dem Beispiel.)</i></p>';
+  sc.hidden = false;
+  sec.querySelector(".ex-sek-hide").hidden = false;
+  return tot;
+}
+function hide(sec){ clearMarks(sec); [].forEach.call(sec.querySelectorAll(".ex-model"), function(m){ m.hidden = true; }); sec.querySelector(".ex-sek-hide").hidden = true; }
+root.addEventListener("click", function(e){
+  var b = e.target.closest(".ex-sek-check, .ex-sek-hide"); if (!b) return;
+  var sec = b.closest(".ex-sek");
+  if (b.classList.contains("ex-sek-check")) { check(sec); sec.querySelector(".ex-sek-fuss .ex-score").scrollIntoView({ behavior: "smooth", block: "center" }); }
+  else hide(sec);
+});
+document.getElementById("ex-check").addEventListener("click", function(){
+  var all = [0,0], rows = "";
+  [].forEach.call(root.querySelectorAll(".ex-sek"), function(sec, i){ var t = check(sec); all[0] += t[0]; all[1] += t[1];
+    rows += '<li><span><a href="#'+sec.id+'">Sezione '+(i+1)+'</a></span><b>'+t[0]+' / '+t[1]+'</b></li>'; });
+  var sc = document.getElementById("ex-score");
+  sc.innerHTML = '<h3>Il tuo risultato per tutte le sezioni</h3><p class="ex-gesamt">'+all[0]+' risposte giuste su '+all[1]+' ('+Math.round(100*all[0]/Math.max(1,all[1]))+'%)</p><ul>'+rows+'</ul><p>Clicca su una sezione per tornare lì. <i>(Klicke auf einen Abschnitt, um dorthin zurückzukehren.)</i></p>';
+  sc.hidden = false; document.getElementById("ex-hide").hidden = false;
+  sc.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+document.getElementById("ex-hide").addEventListener("click", function(){
+  [].forEach.call(root.querySelectorAll(".ex-sek"), hide); document.getElementById("ex-score").hidden = true; this.hidden = true;
+});
+document.getElementById("ex-reset").addEventListener("click", function(){
+  if (!window.confirm("Vuoi cancellare tutte le risposte e ricominciare? (Alle Antworten löschen?)")) return;
+  state = { z:{}, t:{}, r:{} }; save(); location.reload();
+});
+})();
+</script>

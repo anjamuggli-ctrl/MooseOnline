@@ -609,6 +609,12 @@ ENERGY_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 
     '<rect x="132" y="66" width="48" height="38" rx="4" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/><path d="M144 66 Q156 46 168 66" fill="#fff" stroke="#3f5d4a" stroke-width="2.5"/>'
     '<g fill="none" stroke="#a8682f" stroke-width="2"><ellipse cx="156" cy="85" rx="12" ry="5"/><ellipse cx="156" cy="85" rx="12" ry="5" transform="rotate(60 156 85)"/><ellipse cx="156" cy="85" rx="12" ry="5" transform="rotate(-60 156 85)"/></g>'
     '<circle cx="156" cy="85" r="2.5" fill="#a8682f"/></svg>')
+PRIMAR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 100 L60 86 L120 98 L180 82 L220 94 L220 120 Z" fill="#cfdacd"/>'
+    '<rect x="58" y="22" width="104" height="74" rx="6" fill="#3f5d4a"/><rect x="64" y="28" width="92" height="62" rx="3" fill="#4f7a5e"/>'
+    '<g fill="none" stroke="#e9e3d6" stroke-width="2.5" stroke-linecap="round"><path d="M74 44 H112 M74 58 H128 M74 72 H104"/></g>'
+    '<g transform="translate(128 60)"><rect x="0" y="0" width="7" height="18" fill="#2e7d4f"/><rect x="7" y="0" width="7" height="18" fill="#fff"/><rect x="14" y="0" width="7" height="18" fill="#b0392e"/></g>'
+    '<path d="M100 96 L96 112 M120 96 L124 112" stroke="#3f5d4a" stroke-width="3"/>'
+    '<g transform="rotate(35 178 70)"><rect x="172" y="40" width="9" height="44" rx="2" fill="#e0a526"/><polygon points="172,84 181,84 176.5,94" fill="#2f4a39"/></g></svg>')
 KLASSEN = [
  f"""      <a class="plan thema entile" href="pomg25a-materials.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Technical English</span><h3>PomG25A</h3>
         <p>Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr</p>
@@ -618,6 +624,10 @@ KLASSEN = [
         <p>Energy and the Environment</p>
         <ul><li>Nuclear Energy: video and tasks</li><li>Practice for the Exam</li></ul>
         <span class="go">Zur Klassenseite →</span></a>""",
+ f"""      <a class="plan thema entile" href="primar6.html"><div class="thema-art">{PRIMAR_ART}</div><span class="badge live">Primarschule</span><h3>6. Primarklasse</h3>
+        <p>Übungen zu verschiedenen Fächern der 6. Primarstufe, mit Selbstkontrolle</p>
+        <ul><li>Italiano Unità 4: Un nuovo compagno</li></ul>
+        <span class="go">Zu den Übungen →</span></a>""",
 ]
 ACTIVE["pomg25a-materials.html"] = "lernende.html"
 POM_BODY = "".join((B / "pomg25a" / f).read_text() for f in sorted(p.name for p in (B / "pomg25a").glob("*.html")))
@@ -662,6 +672,28 @@ page("pome24b-exam.html", "Pome24B: Unit 9 Practice Exercises – MuggliOnline",
 <!--BODY:pome24b_exam-->{PX_BODY}<!--/BODY-->
   </section>
 </main>""", active="lernende.html", description="Pome24B, Technical English: Unit 9 practice exercises (Energy and the Environment) as preparation for the exam, with labelling tasks, gap-fill texts, charts to interpret and critical-thinking questions with model answers.")
+
+ACTIVE["primar6.html"] = "lernende.html"
+page("primar6.html", "6. Primarklasse – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › 6. Primarklasse', "Primarschule", "6. Primarklasse", "Übungsaufgaben zu Fächern der 6. Primarstufe")}
+  <section class="section">
+{einleitung("So funktioniert diese Seite", ["Diese Seite enthält Übungsaufgaben zu verschiedenen Fächern der 6. Primarstufe. Die Übungen sind nach Fach und Thema eingeordnet: Jede Kachel gehört zu einem Thema aus dem Unterricht.", "Wenn du eine Kachel anklickst, gelangst du zu den Übungen. Du kannst sie direkt im Browser lösen, auch auf dem Handy. Am Ende jedes Abschnitts kontrollierst du deine Antworten selbst: Du siehst sofort, was richtig ist, und kannst deine Fehler verbessern."], 0)}
+    <div class="grid2 themen">
+      <a class="plan thema entile" href="primar6-italiano-4.html"><div class="thema-art">{PRIMAR_ART}</div><span class="badge live">Italienisch</span><h3>Italiano Unità 4</h3>
+        <p>Un nuovo compagno: Personen beschreiben, die Schule, «Di chi è?», Verben und Aussprache. Drei Abschnitte mit Selbstkontrolle als Vorbereitung auf die Prüfung.</p>
+        <span class="go">Zu den Übungen →</span></a>
+    </div>
+  </section>
+</main>""", active="lernende.html", description="6. Primarklasse: Übungsaufgaben nach Fach und Thema, mit Selbstkontrolle.")
+
+ACTIVE["primar6-italiano-4.html"] = "lernende.html"
+IT4_BODY = "".join((B / "primar6_ital4" / f).read_text() for f in sorted(p.name for p in (B / "primar6_ital4").glob("*.html")))
+page("primar6-italiano-4.html", "Italiano Unità 4: Un nuovo compagno – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="primar6.html">6. Primarklasse</a> › Italiano Unità 4', "6. Primarklasse · Italienisch", "Italiano Unità 4: Un nuovo compagno", "Übungen zur ganzen Unità 4 als Vorbereitung auf die Prüfung: Personen beschreiben, die Schule, Possessivpronomen, Verben und Aussprache.")}
+  <section class="section">
+<!--BODY:primar6_ital4-->{IT4_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Italienisch 6. Primarklasse, Unità 4 «Un nuovo compagno»: interaktive Übungen mit Selbstkontrolle.")
 
 area("lernende.html", "Lernende", "",
      "Lernende",
