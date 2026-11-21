@@ -194,7 +194,7 @@ function mcq(nm, ans, opts, q){ return '<div class="ex-mc-q" data-ans="'+ans+'">
 function T_fehler(id, title, hint, rows){
   var b = '<ol class="ex-liste ex-fall-liste">';
   rows.forEach(function(r,i){ b += '<li><p class="ex-fall-satz">'+esc(r[0])+'</p>'
-    + '<div class="ex-mc">'+mcq(id+'_'+i, r[1], FALL, '<span class="ex-mini">Welcher Fall ist hier richtig?</span>')+'</div>'
+    + '<div class="ex-mc">'+mcq(id+'_'+i, r[1], FALL, '<span class="ex-mini">Welcher Fall ist hier falsch?</span>')+'</div>'
     + '<label class="ex-mini" for="i_'+id+'_'+i+'">Schreibe den Satz richtig:</label>'+inp(id+'_s'+i, r[2], 0, 'ex-satz').replace('<input ', '<input id="i_'+id+'_'+i+'" ')
     + (r[3] ? '<div class="ex-model" hidden><b>Erklärung</b>'+esc(r[3])+'</div>' : '') + '</li>'; });
   task(id, title, hint, b + '</ol>');
@@ -207,18 +207,18 @@ function T_probe(id, title, hint, rows){
     b += '<li><p class="ex-fall-satz">'+r[0]+'</p>'
       + '<div class="ex-mc">'+mcq(id+'_'+i, r[2], f, '<span class="ex-mini">Welche Frage stellst du?</span>')+'</div>'
       + '<p class="ex-ersatz"><span class="ex-mini">Ersatzprobe mit «Hund»:</span> '+frame+'</p>'
-      + '<div class="ex-model" hidden><b>Lösung</b>'+esc(f[r[2]])+' → '+FALL[r[2]]+'. Ersatzprobe: '+esc(r[3].replace("___", r[4].split("|")[0]))+'</div></li>'; });
+      + '<div class="ex-model" hidden><b>Lösung: '+FALL[r[2]]+'</b>Frage: «'+esc(f[r[2]])+'» → '+FALL[r[2]]+'.<br>Ersatzprobe: «'+esc(r[3].replace("___", r[4].split("|")[0]))+'» – am Artikel «'+["der","den","dem","des"][r[2]]+'» siehst du, dass es der '+FALL[r[2]]+' ist.'+(r[5]?'<br>'+esc(r[5]):'')+'</div></li>'; });
   task(id, title, hint, b + '</ol>');
 }
 /* Text mit markierten Nomen: Fall bestimmen */
 function T_text(id, title, hint, text){
   var n = 0, items = [];
-  var body = esc(text).replace(/\[\[(.+?)\|([NADG])\]\]/g, function(_, w, k){ n++; items.push([w,k]); return '<u class="ex-markiert">'+w+'<sup>'+n+'</sup></u>'; });
+  var body = esc(text).replace(/\[\[(.+?)\|([NADG])(?:\|(.+?))?\]\]/g, function(_, w, k, x){ n++; items.push([w,k,x]); return '<u class="ex-markiert">'+w+'<sup>'+n+'</sup></u>'; });
   var b = '<p class="ex-lesetext ex-fall-text">'+body+'</p><div class="ex-tf">';
   items.forEach(function(it,i){ var nm = id+'_'+i;
     b += '<div class="ex-tf-zeile" data-ans="'+it[1]+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(it[0])+'</p><div class="ex-tf-wahl ex-fall-wahl" role="radiogroup" aria-label="Fall für '+esc(it[0])+'">'
       + ["N","A","D","G"].map(function(k,j){ return '<label title="'+FALL[j]+'"><input type="radio" name="'+nm+'" value="'+k+'"><span>'+KURZ[k]+'</span></label>'; }).join("")
-      + '</div><div class="ex-model" hidden><b>Lösung</b>'+FALL["NADG".indexOf(it[1])]+'</div></div>'; });
+      + '</div><div class="ex-model" hidden><b>Lösung: '+FALL["NADG".indexOf(it[1])]+'</b>'+esc(it[2]||'')+'</div></div>'; });
   task(id, title, hint, b + '</div>');
 }
 function T_tab(id, title, hint, cols){
@@ -226,14 +226,17 @@ function T_tab(id, title, hint, cols){
   cols.forEach(function(c,k){ b += '<table class="ex-konj-tab"><thead><tr><th colspan="2">'+esc(c[0])+'</th></tr></thead><tbody>';
     c[1].forEach(function(f,i){ b += '<tr><td>'+["Nom.","Akk.","Dat.","Gen."][i]+'</td><td>'+(i===0 ? '<b>'+esc(f)+'</b>' : inp(id+'_'+k+'_'+i, f, 14))+'</td></tr>'; });
     b += '</tbody></table>'; });
-  task(id, title, hint, b + '</div>');
+  task(id, title, hint, b + '</div>' + (TAB_X[id] ? '<div class="ex-model" hidden><b>Erklärung</b>'+TAB_X[id]+'</div>' : ''));
 }
+var TAB_X = {
+ d2a: "Bei <b>der Lehrer</b> (männlich) ändert sich der Artikel in jedem Fall: der – den – dem – des, und im Genitiv bekommt das Nomen ein <b>-s</b>: des Lehrers.<br>Bei <b>die Garage</b> (weiblich) heisst es im Nominativ und Akkusativ «die», im Dativ und Genitiv «der». Das Nomen selbst bleibt gleich.<br>Bei <b>das Wetter</b> (sächlich) sind Nominativ und Akkusativ gleich (das), dann dem und des, und im Genitiv kommt ein <b>-s</b> dazu: des Wetters.<br>In der Mehrzahl (<b>die Kinder</b>) heisst es die – die – den – der. Im Dativ Mehrzahl bekommt das Nomen ein <b>-n</b>: den Kindern.",
+ d4b: "1. Wem gebe ich einen Knochen? → <b>dem Hund</b> (Dativ).<br>2. Wessen Farbe ist blau? → <b>des Autos</b> (Genitiv, mit -s).<br>3. Wen besuchen wir? → <b>die Grossmutter</b> (Akkusativ). Ersatzprobe: Wir besuchen den Hund.<br>4. Mit wem spiele ich? → <b>den Kindern</b> (Dativ Mehrzahl, mit -n). Ersatzprobe: Ich spiele mit dem Hund.<br>5. Wer oder was erklärt die Aufgabe? → <b>Der Lehrer</b> (Nominativ)."};
 function T_type(id, title, hint, lines){
   var n = 0, b = '<ol class="ex-liste ex-scrivi-liste">';
   lines.forEach(function(l){ b += '<li>' + esc(l).replace(/\[\[(.+?)\]\]/g, function(_, a){ n++; return inp(id+'_'+n, a); }) + '</li>'; });
-  task(id, title, hint, b + '</ol>');
+  task(id, title, hint, b + '</ol>' + (TAB_X[id] ? '<div class="ex-model" hidden><b>Erklärung</b>'+TAB_X[id]+'</div>' : ''));
 }
-var H_FEHLER = "In jedem Satz steht ein Nomen im falschen Fall. Wähle den richtigen Fall und schreibe den Satz richtig ab.";
+var H_FEHLER = "In jedem Satz steht ein Nomen im falschen Fall. Wähle, welcher Fall falsch verwendet wurde, und schreibe den Satz richtig ab.";
 var H_PROBE = "Das unterstrichene Nomen ist gesucht. Wähle die richtige Frage (wie auf den Kärtchen) und schreibe dann die Ersatzprobe: Ersetze das Nomen durch «Hund» mit dem passenden Artikel.";
 var H_TEXT = "Bestimme den Fall der markierten Nomen. Tipp: Stelle die Frage oder mache die Ersatzprobe mit «Hund».";
 
@@ -241,16 +244,17 @@ var H_TEXT = "Bestimme den Fall der markierten Nomen. Tipp: Stelle die Frage ode
 sek(1, "#a8682f", "Abschnitt 1", "Die vier Fälle und ihre Namen", "Lateinische und deutsche Bezeichnungen, erste Fallfehler finden und Fälle bestimmen.");
 T_match("d1a", "1A · Wie heissen die vier Fälle?", "Ziehe zu jedem lateinischen Namen den deutschen Namen und die Frage.", [
   ["Nominativ","Wer-Fall · Frage: Wer oder was?"],["Akkusativ","Wen-Fall · Frage: Wen oder was?"],["Dativ","Wem-Fall · Frage: Wem?"],["Genitiv","Wessen-Fall · Frage: Wessen?"]], " ex-term-wort");
+H = H.replace(/<\/div>$/, '<div class="ex-model" hidden><b>Erklärung</b>Jeder Fall hat einen lateinischen und einen deutschen Namen. Den deutschen Namen bildest du aus dem Fragewort: <b>Wer</b> oder was? → Wer-Fall = Nominativ. <b>Wen</b> oder was? → Wen-Fall = Akkusativ. <b>Wem</b>? → Wem-Fall = Dativ. <b>Wessen</b>? → Wessen-Fall = Genitiv. Bei einem männlichen Nomen passen die Artikel dazu: der, den, dem, des.</div></div>');
 T_fehler("d1b", "1B · Finde den Fallfehler", H_FEHLER, [
-  ["Ich schenke den Lehrer ein Buch.", 2, "Ich schenke dem Lehrer ein Buch.", "Wem schenke ich ein Buch? → dem Lehrer (Dativ)."],
-  ["Der Hut der Mann liegt auf dem Tisch.", 3, "Der Hut des Mannes liegt auf dem Tisch.|Der Hut des Manns liegt auf dem Tisch.", "Wessen Hut liegt auf dem Tisch? → des Mannes (Genitiv)."],
-  ["Wir besuchen morgen dem Grossvater.", 1, "Wir besuchen morgen den Grossvater.|Morgen besuchen wir den Grossvater.", "Wen besuchen wir? → den Grossvater (Akkusativ)."]]);
+  ["Ich schenke den Lehrer ein Buch.", 1, "Ich schenke dem Lehrer ein Buch.", "Falsch: Akkusativ («den Lehrer»). Richtig: Dativ. Frage: Wem schenke ich ein Buch? → dem Lehrer. Ableseprobe: «Lehrer» ist männlich und Einzahl, «dem» zeigt den Dativ. «den Lehrer» wäre der Akkusativ, aber das Buch ist schon das, was ich schenke (Wen oder was?)."],
+  ["Der Hut der Mann liegt auf dem Tisch.", 0, "Der Hut des Mannes liegt auf dem Tisch.|Der Hut des Manns liegt auf dem Tisch.", "Falsch: Nominativ («der Mann»). Richtig: Genitiv. Frage: Wessen Hut liegt auf dem Tisch? → Der Hut gehört dem Mann, also Genitiv: des Mannes. Im Genitiv bekommt das männliche Nomen ein -es oder -s."],
+  ["Wir besuchen morgen dem Grossvater.", 2, "Wir besuchen morgen den Grossvater.|Morgen besuchen wir den Grossvater.", "Falsch: Dativ («dem Grossvater»). Richtig: Akkusativ. Frage: Wen besuchen wir? → den Grossvater. «besuchen» verlangt den Akkusativ: Wir besuchen den Hund, nicht «dem Hund»."]]);
 T_probe("d1c", "1C · Frage und Ersatzprobe", H_PROBE, [
   ["<u>Der Bus</u> fährt um acht Uhr ab.", "", 0, "___ fährt um acht Uhr ab.", "Der Hund"],
   ["Meine Schwester sucht <u>ihre Brille</u>.", "", 1, "Meine Schwester sucht ___.", "den Hund|ihren Hund"],
   ["Das Kind spielt mit <u>der Katze</u>.", "Mit", 2, "Das Kind spielt mit ___.", "dem Hund"]]);
 T_text("d1d", "1D · Fälle im Text bestimmen", H_TEXT,
-  "Am Morgen packt [[Lena|N]] ihre Sachen. Sie gibt [[dem Bruder|D]] einen Apfel. Dann nimmt sie [[den Rucksack|A]] und läuft zur Schule. Vor dem Schulhaus wartet schon der Freund [[ihres Bruders|G]].");
+  "Am Morgen packt [[Lena|N|Wer oder was packt die Sachen? → Lena. Lena tut etwas, darum Nominativ.]] ihre Sachen. Sie gibt [[dem Bruder|D|Wem gibt sie einen Apfel? → dem Bruder. «Bruder» ist männlich und Einzahl: «dem» zeigt den Dativ.]] einen Apfel. Dann nimmt sie [[den Rucksack|A|Wen oder was nimmt sie? → den Rucksack. «den» zeigt den Akkusativ.]] und läuft zur Schule. Vor dem Schulhaus wartet schon der Freund [[ihres Bruders|G|Wessen Freund wartet? → ihres Bruders. Der Freund gehört zum Bruder, darum Genitiv (mit -s am Ende).]].");
 endsek(1);
 
 /* ================= ABSCHNITT 2 ================= */
@@ -261,15 +265,15 @@ T_tab("d2a", "2A · Setze die Nomen in die vier Fälle", "Schreibe Artikel und N
   ["das Wetter", ["das Wetter","das Wetter","dem Wetter","des Wetters"]],
   ["die Kinder (Mehrzahl)", ["die Kinder","die Kinder","den Kindern","der Kinder"]]]);
 T_fehler("d2b", "2B · Finde den Fallfehler", H_FEHLER, [
-  ["Die Mutter kauft der Kinder neue Schuhe.", 2, "Die Mutter kauft den Kindern neue Schuhe.", "Wem kauft die Mutter Schuhe? → den Kindern (Dativ Mehrzahl, mit -n am Ende)."],
-  ["Das Fell den Hundes glänzt in der Sonne.", 3, "Das Fell des Hundes glänzt in der Sonne.|Das Fell des Hunds glänzt in der Sonne.", "Wessen Fell glänzt? → des Hundes (Genitiv)."],
-  ["Den Wind weht durch die Bäume.", 0, "Der Wind weht durch die Bäume.", "Wer oder was weht durch die Bäume? → der Wind (Nominativ)."]]);
+  ["Die Mutter kauft der Kinder neue Schuhe.", 3, "Die Mutter kauft den Kindern neue Schuhe.", "Falsch: Genitiv («der Kinder»). Richtig: Dativ. Frage: Wem kauft die Mutter Schuhe? → den Kindern. Ersatzprobe: Die Mutter kauft dem Hund Schuhe → Dativ. Im Dativ Mehrzahl heisst der Artikel «den» und das Nomen bekommt ein -n: den Kindern."],
+  ["Das Fell dem Hund glänzt in der Sonne.", 2, "Das Fell des Hundes glänzt in der Sonne.|Das Fell des Hunds glänzt in der Sonne.", "Falsch: Dativ («dem Hund»). Richtig: Genitiv. Frage: Wessen Fell glänzt? → Das Fell gehört dem Hund, also Genitiv: des Hundes (mit -es am Ende)."],
+  ["Den Wind weht durch die Bäume.", 1, "Der Wind weht durch die Bäume.", "Falsch: Akkusativ («Den Wind»). Richtig: Nominativ. Frage: Wer oder was weht durch die Bäume? → der Wind. Wer etwas tut, steht im Nominativ. Der Wind ist das Subjekt des Satzes."]]);
 T_probe("d2c", "2C · Frage und Ersatzprobe", H_PROBE, [
   ["Die Kinder bauen <u>einen Schneemann</u>.", "", 1, "Die Kinder bauen ___.", "den Hund|einen Hund"],
   ["Die Farbe <u>der Jacke</u> gefällt mir.", "", 3, "Die Farbe ___ gefällt mir.", "des Hundes|des Hunds"],
   ["Nach <u>der Pause</u> schreiben wir einen Test.", "Nach", 2, "Nach ___ schreiben wir einen Test.", "dem Hund"]]);
 T_text("d2d", "2D · Fälle im Text bestimmen", H_TEXT,
-  "Im Herbst fallen [[die Blätter|N]] von den Bäumen. Der Hausmeister holt [[den Rechen|A]] aus der Garage. Er hilft [[der Lehrerin|D]] beim Aufräumen. Das Laub [[der Bäume|G]] landet auf einem grossen Haufen.");
+  "Im Herbst fallen [[die Blätter|N|Wer oder was fällt von den Bäumen? → die Blätter. Ersatzprobe: Im Herbst fällt der Hund … → Nominativ.]] von den Bäumen. Der Hausmeister holt [[den Rechen|A|Wen oder was holt der Hausmeister? → den Rechen. «den» zeigt den Akkusativ.]] aus der Garage. Er hilft [[der Lehrerin|D|Wem hilft er? → der Lehrerin. Ersatzprobe: Er hilft dem Hund → Dativ.]] beim Aufräumen. Das Laub [[der Bäume|G|Wessen Laub landet auf dem Haufen? → der Bäume. Ersatzprobe: das Laub des Hundes → Genitiv.]] landet auf einem grossen Haufen.");
 endsek(2);
 
 /* ================= ABSCHNITT 3 ================= */
@@ -285,15 +289,15 @@ T_probe("d3b", "3B · Frage und Ersatzprobe", H_PROBE, [
   ["Wir beobachten <u>die Vögel</u> im Garten.", "", 1, "Wir beobachten ___ im Garten.", "den Hund"],
   ["Das Licht <u>der Lampe</u> ist sehr hell.", "", 3, "Das Licht ___ ist sehr hell.", "des Hundes|des Hunds"]]);
 T_text("d3c", "3C · Fälle im Text bestimmen", H_TEXT,
-  "[[Die Sonne|N]] scheint auf den Pausenplatz. Die Lehrerin erklärt [[der Klasse|D]] ein neues Spiel. Die Kinder holen [[die Bälle|A]] aus dem Schrank. Die Regeln [[des Spiels|G]] sind zum Glück einfach.");
+  "[[Die Sonne|N|Wer oder was scheint? → die Sonne. Ersatzprobe: Der Hund scheint … → Nominativ.]] scheint auf den Pausenplatz. Die Lehrerin erklärt [[der Klasse|D|Wem erklärt die Lehrerin das Spiel? → der Klasse. Ersatzprobe: Sie erklärt dem Hund das Spiel → Dativ.]] ein neues Spiel. Die Kinder holen [[die Bälle|A|Wen oder was holen die Kinder? → die Bälle. Ersatzprobe: Die Kinder holen den Hund → Akkusativ.]] aus dem Schrank. Die Regeln [[des Spiels|G|Wessen Regeln sind einfach? → des Spiels. «des» und das -s am Ende zeigen den Genitiv.]] sind zum Glück einfach.");
 endsek(3);
 
 /* ================= ABSCHNITT 4 ================= */
 sek(4, "#7d4f96", "Abschnitt 4", "Prüfungstraining: alles gemischt", "Jetzt kommt alles zusammen: Fehler finden, Wörter in den richtigen Fall setzen und Fälle bestimmen.");
 T_fehler("d4a", "4A · Finde den Fallfehler", H_FEHLER, [
-  ["Mit den Fahrrad fahre ich zur Schule.", 2, "Mit dem Fahrrad fahre ich zur Schule.|Ich fahre mit dem Fahrrad zur Schule.", "Mit wem oder womit fahre ich? → mit dem Fahrrad (Dativ)."],
-  ["Der Pfleger hilft die Patientin.", 2, "Der Pfleger hilft der Patientin.", "Wem hilft der Pfleger? → der Patientin (Dativ). Ersatzprobe: Der Pfleger hilft dem Hund."],
-  ["Ich frage dem Lehrer nach der Abfahrtszeit.", 1, "Ich frage den Lehrer nach der Abfahrtszeit.", "Wen frage ich? → den Lehrer (Akkusativ)."]]);
+  ["Mit den Bus fahre ich zur Schule.", 1, "Mit dem Bus fahre ich zur Schule.|Ich fahre mit dem Bus zur Schule.", "Falsch: Akkusativ («den Bus»). Richtig: Dativ. Frage: Womit (mit wem oder was) fahre ich? → mit dem Bus. Nach «mit» steht immer der Dativ. Ersatzprobe: mit dem Hund."],
+  ["Der Pfleger hilft den Mann.", 1, "Der Pfleger hilft dem Mann.", "Falsch: Akkusativ («den Mann»). Richtig: Dativ. Frage: Wem hilft der Pfleger? → dem Mann. «helfen» verlangt den Dativ. Ableseprobe: «Mann» ist männlich und Einzahl, «dem» zeigt den Dativ."],
+  ["Ich frage dem Lehrer nach der Abfahrtszeit.", 2, "Ich frage den Lehrer nach der Abfahrtszeit.", "Falsch: Dativ («dem Lehrer»). Richtig: Akkusativ. Frage: Wen frage ich? → den Lehrer. «fragen» verlangt den Akkusativ. Ableseprobe: «Lehrer» ist männlich und Einzahl, «den» zeigt den Akkusativ."]]);
 T_type("d4b", "4B · Setze das Nomen in den richtigen Fall", "Schreibe Artikel und Nomen in der richtigen Form.", [
   "Ich gebe (der Hund) [[dem Hund]] einen Knochen.",
   "Die Farbe (das Auto) [[des Autos]] ist blau.",
@@ -305,7 +309,7 @@ T_probe("d4c", "4C · Frage und Ersatzprobe", H_PROBE, [
   ["Der Koffer <u>meiner Mutter</u> ist rot.", "", 3, "Der Koffer ___ ist rot.", "des Hundes|des Hunds|meines Hundes"],
   ["Am Flughafen sehen wir <u>viele Flugzeuge</u>.", "", 1, "Am Flughafen sehen wir ___.", "den Hund|einen Hund"]]);
 T_text("d4d", "4D · Fälle im Text bestimmen", H_TEXT,
-  "In den Ferien fliegt [[die Familie Meier|N]] nach Spanien. Am Check-in-Schalter gibt der Vater [[der Angestellten|D]] die Pässe. Dann geben sie [[die Koffer|A]] ab. Im Flugzeug bringt der Steward [[den Kindern|D]] ein Getränk. Durch das Fenster sehen sie die Gipfel [[der Alpen|G]]. Nach der Landung holen sie [[das Gepäck|A]].");
+  "In den Ferien fliegt [[die Familie Meier|N|Wer oder was fliegt nach Spanien? → die Familie Meier. Ersatzprobe: Der Hund fliegt nach Spanien → Nominativ.]] nach Spanien. Am Check-in-Schalter gibt der Vater [[der Angestellten|D|Wem gibt der Vater die Pässe? → der Angestellten. Ersatzprobe: Der Vater gibt dem Hund die Pässe → Dativ.]] die Pässe. Dann geben sie [[die Koffer|A|Wen oder was geben sie ab? → die Koffer. Ersatzprobe: Sie geben den Hund ab → Akkusativ.]] ab. Im Flugzeug bringt der Steward [[den Kindern|D|Wem bringt der Steward ein Getränk? → den Kindern. Ersatzprobe: dem Hund → Dativ. Im Dativ Mehrzahl hat das Nomen ein -n.]] ein Getränk. Durch das Fenster sehen sie die Gipfel [[der Alpen|G|Wessen Gipfel sehen sie? → der Alpen. Ersatzprobe: die Gipfel des Hundes → Genitiv.]]. Nach der Landung holen sie [[das Gepäck|A|Wen oder was holen sie? → das Gepäck. Ersatzprobe: Sie holen den Hund → Akkusativ.]].");
 endsek(4);
 
 root.innerHTML = H;
