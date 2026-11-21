@@ -184,7 +184,7 @@ function T_open(id, title, hint, qs, before){
 /* =====================================================================
 
 /* ================= AUFGABENTYPEN «DIE VIER FÄLLE» ================= */
-var FALL = ["Nominativ (Wer-Fall)","Akkusativ (Wen-Fall)","Dativ (Wem-Fall)","Genitiv (Wessen-Fall)"];
+var FALL = ["Nominativ","Akkusativ","Dativ","Genitiv"];
 var KURZ = { N:"Nom.", A:"Akk.", D:"Dat.", G:"Gen." };
 function inp(id, ans, w, cls){ var len = Math.max.apply(null, ans.split("|").map(function(a){ return a.length; }));
   return '<input class="ex-in ex-scrivi'+(cls?' '+cls:'')+'" type="text" data-t="'+id+'" data-ans="'+esc(ans)+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Antwort"'+(cls?'':' style="width:'+(w||len+4)+'ch"')+'>'; }
