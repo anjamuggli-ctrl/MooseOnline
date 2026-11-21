@@ -8,7 +8,7 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=131743a5">
+<link rel="stylesheet" href="style.css?v=df202527">
 <link rel="alternate" hreflang="de" href="primar6-italiano-4.html">
 <link rel="alternate" hreflang="rm" href="rm/primar6-italiano-4.html">
 <link rel="alternate" hreflang="en" href="en/primar6-italiano-4.html">
@@ -205,6 +205,17 @@ function T_vf(id, title, hint, rows, before){
   task(id, title, hint, b + '</div>');
 }
 
+
+function T_wort(id, title, hint, rows){
+  var b = '<div class="ex-wort">';
+  rows.forEach(function(r,i){ b += '<label class="ex-wort-zeile"><span lang="de">'+esc(r[0])+'</span>'+inp(id+'_'+i, r[1], 18)+'</label>'; });
+  task(id, title, hint, b + '</div>');
+}
+function T_satz(id, title, hint, rows){
+  var b = '<ol class="ex-liste ex-satz-liste">';
+  rows.forEach(function(r,i){ b += '<li><p lang="de">'+esc(r[0])+'</p><input class="ex-in ex-scrivi ex-satz" type="text" data-t="'+id+'_'+i+'" data-ans="'+esc(r[1])+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Traduzione"></li>'; });
+  task(id, title, hint, b + '</ol>');
+}
 /* =====================================================================
    SEZIONE 1 · DESCRIVERE UNA PERSONA
    ===================================================================== */
@@ -241,7 +252,9 @@ T_type("s1f", "1F · Vocabolario", "Scrivi la parola in italiano (forma maschile
   "neugierig → [[curioso]]", "schüchtern → [[timido]]", "faul → [[pigro]]", "naschhaft → [[goloso]]", "fleissig → [[studioso]]", "gesprächig → [[chiacchierone]]",
   "lustig → [[divertente|allegro|scherzoso]]", "unordentlich → [[disordinato]]", "grosszügig → [[generoso]]", "zerstreut → [[distratto]]",
   "lockig (Haare) → [[riccio|ricci]]", "die Brille → [[gli occhiali|occhiali]]"]);
-T_open("s1g", "1G · Adesso tocca a te!", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
+T_wort("s1h", "1G · Vocabolario dell’Unità 4: persone", "Scrivi la parola in italiano. Scrivi i nomi <b>con l’articolo</b> (z. B. «la sorella») e gli aggettivi al maschile. <i>(Schreibe das Wort auf Italienisch. Nomen mit Artikel, Adjektive in der männlichen Form.)</i>", [["hoch, gross", "alto"], ["klein, niedrig", "basso"], ["blond", "biondo"], ["braun (Haare, Augen)", "castano"], ["dunkelhaarig", "moro"], ["dünn, mager", "magro"], ["dick", "grasso"], ["jung", "giovane"], ["lang", "lungo"], ["kurz", "corto"], ["(hell)blau", "azzurro"], ["die Haare", "i capelli"], ["das Aussehen", "l'aspetto"], ["der Charakter", "il carattere"], ["unsympathisch", "antipatico"], ["aufmerksam", "attento"], ["böse, schlecht", "cattivo"], ["mutig", "coraggioso"], ["unterhaltsam, lustig", "divertente"], ["langweilig", "noioso"], ["faul", "pigro"], ["ernst", "serio"], ["traurig", "triste"], ["reich", "ricco"], ["schnell", "veloce"], ["die Familie", "la famiglia"], ["die Schwester", "la sorella"], ["die Jacke", "la giacca"], ["die Freude", "la gioia"], ["lachen", "ridere"], ["werden", "diventare"], ["wirklich", "davvero"], ["wer", "chi"]]);
+T_satz("s1i", "1H · Traduci", "Traduci le frasi in italiano. <i>(Übersetze die Sätze ins Italienische. Wenn deine Antwort rot ist, vergleiche sie genau mit der Lösung: Manchmal gibt es mehrere richtige Möglichkeiten.)</i>", [["Meine Schwester ist gross und schlank.", "Mia sorella è alta e magra"], ["Sie hat lange, blonde Haare und blaue Augen.", "Ha i capelli lunghi e biondi e gli occhi azzurri|Lei ha i capelli lunghi e biondi e gli occhi azzurri"], ["Mein Freund Luca ist sehr lustig, aber ein bisschen faul.", "Il mio amico Luca è molto divertente, ma un po' pigro.|Il mio amico Luca è molto divertente però un po' pigro"], ["Der Lehrer hat einen Bart und einen Schnurrbart.", "Il maestro ha la barba e i baffi|Il professore ha la barba e i baffi|L'insegnante ha la barba e i baffi"], ["Wie ist Alice? – Sie ist sportlich und neugierig.", "Com'è Alice? – È sportiva e curiosa.|Com'è Alice Lei è sportiva e curiosa|Come è Alice È sportiva e curiosa"], ["Bist du mutig oder ängstlich?", "Sei coraggioso o pauroso?|Sei coraggiosa o paurosa|Tu sei coraggioso o pauroso|Tu sei coraggiosa o paurosa"], ["Meine Familie ist nicht reich, aber wir lachen viel.", "La mia famiglia non è ricca, ma ridiamo molto.|La mia famiglia non è ricca però ridiamo molto|La mia famiglia non è ricca ma noi ridiamo molto"]]);
+T_open("s1g", "1I · Adesso tocca a te!", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
   ["Descrivi il tuo migliore amico o la tua migliore amica (4–5 frasi): come si chiama, com’è (aspetto fisico) e che carattere ha.",
    "Il mio migliore amico si chiama Luca. È alto e magro. Ha i capelli corti e castani e gli occhi azzurri. È simpatico e molto sportivo: gioca a calcio tutti i giorni. A volte è un po’ disordinato, ma è sempre generoso.", 5, "Scrivere"]]);
 endsek(1);
@@ -266,7 +279,10 @@ T_mc("s2d", "2D · Scegli il possessivo giusto", "<i>(Wähle das richtige Posses
   ["Io e mio fratello abbiamo due gatti. Sono ___ gatti.", ["i nostri","le nostre","i vostri","i loro"], 0, "Io e mio fratello = noi; gatti è maschile plurale → i nostri gatti."],
   ["Il professor Ghirardi ha la barba. ___ barba è nera.", ["Il suo","La sua","La loro","Le sue"], 1, "Barba è femminile singolare → la sua barba."],
   ["Marta, sono ___ penne?", ["le tue","i tuoi","la tua","le mie"], 0, "Marta = tu; penne è femminile plurale → le tue penne."]]);
-T_vf("s2e", "2E · Leggere: la scuola di Vallebella", "Leggi il testo. Le frasi sono vere (V), false (F) o l’informazione non c’è nel testo (?)? <i>(Richtig, falsch oder steht nicht im Text?)</i>", [
+T_wort("s2f", "2E · Vocabolario: la scuola", "Scrivi la parola in italiano. Scrivi i nomi <b>con l’articolo</b> (z. B. «la sorella») e gli aggettivi al maschile. <i>(Schreibe das Wort auf Italienisch. Nomen mit Artikel, Adjektive in der männlichen Form.)</i>", [["die Turnhalle", "la palestra"], ["das Sekretariat", "la segreteria"], ["der Saal", "la sala"], ["das Zimmer (Raum)", "la stanza|la camera"], ["das Zimmer (Schlafzimmer)", "la camera|la stanza"], ["die Küche", "la cucina"], ["das Stockwerk", "il piano"], ["das Büro", "l'ufficio"], ["der Schüler", "lo scolaro"], ["die Schülerin", "la scolara"], ["der Lehrer", "il maestro"], ["die Lehrerin", "la maestra"], ["die Hausaufgaben", "i compiti"], ["die Aufgabe", "il compito"], ["die Tabelle", "la tabella"], ["der (süsse) Snack", "la merendina"], ["der Wettbewerb, das Rennen", "la gara"]]);
+T_wort("s2g", "2F · Vocabolario: la città e le gite", "Scrivi la parola in italiano. Scrivi i nomi <b>con l’articolo</b> (z. B. «la sorella») e gli aggettivi al maschile. <i>(Schreibe das Wort auf Italienisch. Nomen mit Artikel, Adjektive in der männlichen Form.)</i>", [["der Ausflug", "la gita"], ["die Tour, die Runde", "il giro"], ["der Ort", "il luogo"], ["das Museum", "il museo"], ["der Palast, das Gebäude", "il palazzo"], ["der Platz (in der Stadt)", "la piazza"], ["das Zentrum", "il centro"], ["das Städtchen", "la cittadina"], ["der Hügel", "la collina"], ["das Feld", "il campo"], ["die Wiese", "il prato"], ["der Fluss", "il fiume"], ["die Insel", "l'isola"], ["die Alpen", "le Alpi"], ["die Region", "la regione"], ["die Basilika", "la basilica"], ["der Tempel", "il tempio"], ["das Grab", "la tomba"], ["das Symbol", "il simbolo"], ["die Agentur, die Filiale", "l'agenzia"], ["national", "nazionale"], ["gebaut", "costruito"], ["herum, umher", "intorno"], ["zwischen, unter", "tra|fra"], ["ungefähr", "circa"]]);
+T_satz("s2h", "2G · Traduci", "Traduci le frasi in italiano. <i>(Übersetze die Sätze ins Italienische. Wenn deine Antwort rot ist, vergleiche sie genau mit der Lösung: Manchmal gibt es mehrere richtige Möglichkeiten.)</i>", [["Die Turnhalle ist im ersten Stock.", "La palestra è al primo piano"], ["Wem gehört dieses Heft? – Es gehört mir.", "Di chi è questo quaderno? – È mio.|Di chi è questo quaderno È il mio"], ["Sind das deine Bücher? – Nein, es sind Marcos Bücher.", "Sono i tuoi libri? – No, sono i libri di Marco.|Questi sono i tuoi libri No sono i libri di Marco|Sono i tuoi libri No sono di Marco|Questi sono i tuoi libri No sono di Marco"], ["Unsere Schule hat eine grosse Turnhalle.", "La nostra scuola ha una grande palestra|La nostra scuola ha una palestra grande"], ["Morgen machen wir einen Ausflug ins Museum.", "Domani facciamo una gita al museo"], ["Die Eltern fragen im Sekretariat nach Informationen.", "I genitori chiedono informazioni in segreteria|I genitori chiedono informazioni alla segreteria"], ["Ihre (loro) Lehrerin ist jung und nett.", "La loro maestra è giovane e simpatica|La loro maestra è giovane e gentile"], ["Die Insel liegt zwischen dem Fluss und den Hügeln.", "L'isola è tra il fiume e le colline|L'isola è fra il fiume e le colline|L'isola si trova tra il fiume e le colline"]]);
+T_vf("s2e", "2H · Leggere: la scuola di Vallebella", "Leggi il testo. Le frasi sono vere (V), false (F) o l’informazione non c’è nel testo (?)? <i>(Richtig, falsch oder steht nicht im Text?)</i>", [
   ["A Vallebella abitano circa duecento persone.", "V", "Nel testo: «dove abitano circa duecento persone»."],
   ["Nella scuola ci sono due classi.", "F", "La scuola ha solo una classe."],
   ["Due alunni frequentano la quinta.", "V", "«due la quinta»."],
@@ -306,7 +322,9 @@ T_type("s3c", "3C · Completa le frasi", "Scrivi il verbo nella forma giusta. <i
 T_sort("s3d", "3D · Come si pronuncia la «g»?", "La «g» ha un suono dolce (come in «gelato») o duro (come in «gatto»)? <i>(Wird das «g» weich wie in «gelato» oder hart wie in «gatto» ausgesprochen?)</i>", ["suono dolce (gelato)","suono duro (gatto)"], [
   ["giorno","suono dolce (gelato)"],["gennaio","suono dolce (gelato)"],["giostra","suono dolce (gelato)"],["agenzia","suono dolce (gelato)"],["gioia","suono dolce (gelato)"],
   ["ghianda","suono duro (gatto)"],["funghi","suono duro (gatto)"],["righello","suono duro (gatto)"],["aragosta","suono duro (gatto)"],["spaghetti","suono duro (gatto)"]]);
-T_open("s3e", "3E · Scrivere", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
+T_wort("s3f", "3E · Vocabolario: verbi e altre parole", "Scrivi la parola in italiano. Scrivi i nomi <b>con l’articolo</b> (z. B. «la sorella») e gli aggettivi al maschile. <i>(Schreibe das Wort auf Italienisch. Nomen mit Artikel, Adjektive in der männlichen Form.)</i>", [["(an)gehören", "appartenere"], ["müssen, sollen", "dovere"], ["beenden", "finire"], ["arbeiten", "lavorare"], ["streiten", "litigare"], ["(be)zahlen", "pagare"], ["tragen, bringen", "portare"], ["bevorzugen", "preferire"], ["beten", "pregare"], ["putzen", "pulire"], ["Ski fahren", "sciare"], ["erklären", "spiegare"], ["husten", "tossire"], ["der Abend", "la sera"], ["der Tag (Tagesablauf)", "la giornata"], ["die Sonne", "il sole"], ["üblich, gewöhnlich", "solito"], ["üblicherweise", "di solito"], ["fünfter", "quinto"], ["zu viel", "troppo"], ["die Erfahrung", "l'esperienza"], ["der Telefonanruf", "la telefonata"], ["das Paket", "il pacco"], ["die Süssigkeit, der Nachtisch", "il dolce"], ["das Fahrrad", "la bicicletta|la bici"], ["das Auto", "l'automobile|l'auto"], ["das Schiff, das Boot", "la barca"], ["nass", "bagnato"]]);
+T_satz("s3g", "3F · Traduci", "Traduci le frasi in italiano. <i>(Übersetze die Sätze ins Italienische. Wenn deine Antwort rot ist, vergleiche sie genau mit der Lösung: Manchmal gibt es mehrere richtige Möglichkeiten.)</i>", [["Ich verstehe die Aufgabe nicht.", "Non capisco il compito|Io non capisco il compito|Non capisco l'esercizio|Io non capisco l'esercizio"], ["Der Lehrer erklärt die Grammatik.", "Il maestro spiega la grammatica|Il professore spiega la grammatica|L'insegnante spiega la grammatica"], ["Normalerweise beende ich die Hausaufgaben am Abend.", "Di solito finisco i compiti la sera|Di solito io finisco i compiti la sera|Di solito finisco i compiti di sera"], ["Was machst du am Abend? – Ich mache die Hausaufgaben.", "Cosa fai la sera? – Faccio i compiti.|Che cosa fai la sera Faccio i compiti|Che fai la sera Faccio i compiti|Cosa fai la sera Io faccio i compiti"], ["Meine Schwester und ich streiten nie.", "Io e mia sorella non litighiamo mai|Mia sorella e io non litighiamo mai"], ["Er hustet und niest.", "Tossisce e starnutisce|Lui tossisce e starnutisce"], ["Ich bezahle den Snack.", "Pago la merendina|Io pago la merendina"], ["Am Samstag putzen wir das Zimmer.", "Sabato puliamo la camera|Il sabato puliamo la camera|Sabato puliamo la stanza|Il sabato puliamo la stanza|Sabato noi puliamo la camera"], ["Bevorzugst du das Fahrrad oder das Auto?", "Preferisci la bicicletta o l'automobile?|Preferisci la bici o l'auto|Preferisci la bicicletta o la macchina|Tu preferisci la bicicletta o l'automobile|Preferisci la bicicletta o l'auto"]]);
+T_open("s3e", "3G · Scrivere", "Scrivi frasi complete. <i>(Schreibe ganze Sätze.)</i>", [
   ["Riscrivi il testo alla 3ª persona singolare (lui). Comincia così: «Si chiama Leo, …»<br><span class=\"ex-zitat\">«Mi chiamo Leo, ho 12 anni e abito a Coira. Frequento la sesta classe. Sono alto e magro e ho i capelli castani. Sono un po’ timido, ma molto curioso. Nel tempo libero gioco a calcio e faccio i compiti con mio fratello.»</span>",
    "Si chiama Leo, ha 12 anni e abita a Coira. Frequenta la sesta classe. È alto e magro e ha i capelli castani. È un po’ timido, ma molto curioso. Nel tempo libero gioca a calcio e fa i compiti con suo fratello.<br><i>Attenzione: «mio fratello» diventa «suo fratello».</i>", 5],
   ["Scrivi un’email a un amico o a un’amica (5–6 frasi): descrivi la tua scuola e un compagno o una compagna di classe.",
@@ -404,7 +422,7 @@ Object.keys(state.z).forEach(function(zid){
 });
 
 /* ================= CHECK ================= */
-function clean(s){ return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.!?]+$/,"").replace(/\s+/g," ").trim(); }
+function clean(s){ return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.,!?;:«»"“”–—-]/g," ").replace(/\s+/g," ").replace(/' /g,"'").trim(); }
 [].forEach.call(root.querySelectorAll(".ex-scrivi"), function(f){ f.addEventListener("input", function(){ clearMarks(f.closest(".ex-sek")); }); });
 function clearMarks(sec){
   if (!sec || !sec.dataset.checked) return; delete sec.dataset.checked;
@@ -443,7 +461,7 @@ function check(sec){
     [].forEach.call(t.querySelectorAll(".ex-scrivi"), function(f){
       var ok = f.dataset.ans.split("|").some(function(a){ return clean(a) === clean(f.value); });
       f.classList.add(ok ? "ok" : "bad"); add(ok);
-      if (!ok) f.insertAdjacentElement("afterend", sol(f.dataset.ans.split("|")[0]));
+      if (!ok) { var a0 = f.dataset.ans.split("|")[0]; if (f.classList.contains("ex-satz") && !/[.?!]$/.test(a0)) a0 += "."; f.insertAdjacentElement("afterend", sol(a0)); }
     });
     if (p[1]) { res.push([t.dataset.name, p]); tot[0] += p[0]; tot[1] += p[1]; }
   });

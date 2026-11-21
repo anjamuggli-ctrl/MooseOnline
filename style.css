@@ -653,6 +653,15 @@
   .ex-merke p{margin:8px 0 0}
   .ex-lesetext{background:#fff;border:1px solid var(--line);border-left:5px solid var(--sc,var(--green));border-radius:12px;padding:14px 18px;margin-bottom:14px}
   .ex-lesetext p{margin:6px 0 0;font-size:16px;line-height:1.65}
+  .ex-wort{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px 18px}
+  .ex-wort-zeile{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;padding:6px 10px;background:#fff;border:1px solid var(--line);border-radius:10px;font-size:15px}
+  .ex-wort-zeile>span{flex:1 1 120px}
+  .ex-wort-zeile input.ex-scrivi{flex:0 1 18ch;margin:0}
+  .ex-wort-zeile .ex-loesung{flex-basis:100%;text-align:right}
+  .ex-satz-liste li{margin-bottom:12px}
+  .ex-satz-liste p{margin:0 0 6px;font-weight:600}
+  input.ex-scrivi.ex-satz{display:block;width:100%;box-sizing:border-box;margin:0;padding:8px 12px}
+  .ex-satz-liste .ex-loesung{display:inline-block;margin-top:6px}
   .ex-zitat{display:block;font-weight:400;font-style:italic;margin-top:6px;background:var(--sand);padding:8px 12px;border-radius:8px}
   @media (max-width:640px){ .ex-kats-6{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:900px){ .ex-sek-fuss .ex-score ul,.ex-pruefung .ex-bottom .ex-score ul{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-kats-3{grid-template-columns:1fr} }
