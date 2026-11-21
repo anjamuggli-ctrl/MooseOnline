@@ -699,6 +699,9 @@
   .ex-paare-2 .ex-paar{grid-template-columns:auto minmax(0,1fr)}
   .ex-paare-2 .ex-paar .ex-nummer{width:auto;border-radius:16px;padding:0 10px}
   .ex-term-kurz{width:40px}
+  .ex-paare .ex-paar:has(.ex-term-wort){grid-template-columns:minmax(110px,max-content) minmax(0,1fr)}
+  .ex-term-wort{white-space:nowrap}
+  .ex-zone:has(.ex-chip)>i{display:none}
   .ex-paare .ex-paar:has(.ex-term-kurz){grid-template-columns:40px minmax(0,1fr)}
   @media (max-width:900px){ .ex-video-wrap{grid-template-columns:1fr} .ex-qr-video{flex-direction:row;align-items:center} }
   @media (max-width:640px){ .ex-paare-2{grid-template-columns:1fr} .ex-qr-video{flex-direction:column;align-items:flex-start} }
