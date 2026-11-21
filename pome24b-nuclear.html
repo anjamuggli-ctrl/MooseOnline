@@ -264,9 +264,10 @@ function place(ch, zone, noSave){
   if (!zone) return;
   var from = ch.parentNode;
   if (zone.dataset.bank) { zone.appendChild(ch); }
+  else if (zone.dataset.multi) { zone.appendChild(ch); }
   else {
     var old = zone.querySelector(".ex-chip");
-    if (old && old !== ch) { if (from && from.classList.contains("ex-zone")) from.appendChild(old); else bankOf(old.dataset.g).appendChild(old); }
+    if (old && old !== ch) { if (from && from.classList.contains("ex-zone") && !from.dataset.multi && !from.dataset.bank) from.appendChild(old); else bankOf(old.dataset.g).appendChild(old); }
     zone.appendChild(ch);
   }
   [from, zone].forEach(function(z){ if (z && z.classList && z.classList.contains("ex-zone")) z.classList.toggle("voll", !!z.querySelector(".ex-chip")); });
