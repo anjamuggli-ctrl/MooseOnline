@@ -626,7 +626,7 @@ KLASSEN = [
         <span class="go">Zur Klassenseite →</span></a>""",
  f"""      <a class="plan thema entile" href="primar6.html"><div class="thema-art">{PRIMAR_ART}</div><span class="badge live">Primarschule</span><h3>6. Primarklasse</h3>
         <p>Übungen zu verschiedenen Fächern der 6. Primarstufe, mit Selbstkontrolle</p>
-        <ul><li>Italiano Unità 4: Un nuovo compagno</li></ul>
+        <ul><li>Italiano Unità 4: Un nuovo compagno</li><li>Deutsch: die vier Fälle</li></ul>
         <span class="go">Zu den Übungen →</span></a>""",
 ]
 ACTIVE["pomg25a-materials.html"] = "lernende.html"
@@ -682,9 +682,21 @@ page("primar6.html", "6. Primarklasse – MuggliOnline", f"""<main class="wrap">
       <a class="plan thema entile" href="primar6-italiano-4.html"><div class="thema-art">{PRIMAR_ART}</div><span class="badge live">Italienisch</span><h3>Italiano Unità 4</h3>
         <p>Un nuovo compagno: Personen beschreiben, die Schule, «Di chi è?», Verben und Aussprache. Drei Abschnitte mit Selbstkontrolle als Vorbereitung auf die Prüfung.</p>
         <span class="go">Zu den Übungen →</span></a>
+      <a class="plan thema entile" href="primar6-deutsch-faelle.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Deutsch</span><h3>Deutsch: die vier Fälle</h3>
+        <p>Probeprüfung in vier Abschnitten: die Namen der Fälle, Fallfehler finden und verbessern, Fragewörter und Ersatzprobe, Fälle im Text bestimmen.</p>
+        <span class="go">Zu den Übungen →</span></a>
     </div>
   </section>
 </main>""", active="lernende.html", description="6. Primarklasse: Übungsaufgaben nach Fach und Thema, mit Selbstkontrolle.")
+
+ACTIVE["primar6-deutsch-faelle.html"] = "lernende.html"
+DF_BODY = "".join((B / "primar6_de_faelle" / f).read_text() for f in sorted(p.name for p in (B / "primar6_de_faelle").glob("*.html")))
+page("primar6-deutsch-faelle.html", "Deutsch: die vier Fälle – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="primar6.html">6. Primarklasse</a> › Deutsch: die vier Fälle', "6. Primarklasse · Deutsch", "Deutsch: die vier Fälle", "Probeprüfung als Vorbereitung auf die Prüfung: Nominativ, Akkusativ, Dativ und Genitiv erkennen, bestimmen und richtig anwenden.")}
+  <section class="section">
+<!--BODY:primar6_de_faelle-->{DF_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Deutsch 6. Primarklasse: Probeprüfung zu den vier Fällen mit Fallproben, Fehlersätzen und Selbstkontrolle.")
 
 ACTIVE["primar6-italiano-4.html"] = "lernende.html"
 IT4_BODY = "".join((B / "primar6_ital4" / f).read_text() for f in sorted(p.name for p in (B / "primar6_ital4").glob("*.html")))

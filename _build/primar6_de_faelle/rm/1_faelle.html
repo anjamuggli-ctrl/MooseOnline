@@ -1,0 +1,403 @@
+  <div class="ex ex-pruefung" id="ex" lang="de">
+   <div class="ex-intro">
+    <div>
+     <h2>So arbeitest du mit dieser Seite</h2>
+     <p>Diese Probeprüfung übt alles zum Thema <b>«Die vier Fälle»</b>. Es gibt vier kurze Abschnitte. Am Ende jedes Abschnitts klickst du auf <b>«Meine Antworten prüfen»</b>.</p>
+     <p><b>Am Ende kannst du …</b></p>
+     <ul>
+      <li>die lateinischen und deutschen Namen der vier Fälle nennen (Abschnitt 1),</li>
+      <li>Wörter und Satzteile in die vier Fälle setzen (Abschnitte 2 und 4),</li>
+      <li>Fallfehler in Sätzen finden und verbessern (alle Abschnitte),</li>
+      <li>die Fallproben anwenden und weisst, wann du die Ableseprobe und wann die Ersatzprobe brauchst (Abschnitt 3 und in allen Abschnitten),</li>
+      <li>in einem Text die Fälle von Nomen bestimmen (alle Abschnitte).</li>
+     </ul>
+     <div class="ex-merke"><b>Merke: Ableseprobe</b><table><tr><th>Artikel</th><th>Fall</th><th>Frage</th></tr><tr><td>der</td><td>Nominativ (Wer-Fall)</td><td>Wer oder was?</td></tr><tr><td>den</td><td>Akkusativ (Wen-Fall)</td><td>Wen oder was?</td></tr><tr><td>dem</td><td>Dativ (Wem-Fall)</td><td>Wem?</td></tr><tr><td>des</td><td>Genitiv (Wessen-Fall)</td><td>Wessen?</td></tr></table><p>Ablesen geht nur bei männlichen Nomen in der Einzahl. Bei allen anderen Nomen machst du die <b>Ersatzprobe</b>: Ersetze das Nomen durch «der Hund» und lies dann den Fall am Artikel ab.</p></div>
+    </div>
+    <nav class="ex-toc" id="ex-toc" aria-label="Abschnitte"><b>Abschnitte</b></nav>
+   </div>
+   <div id="ex-root"><p class="ex-noscript">Bitte aktiviere JavaScript, um die Übungen zu nutzen.</p></div>
+   <div class="ex-bottom" id="ex-bottom">
+    <button type="button" class="ex-btn haupt" id="ex-check">Alle Antworten prüfen</button>
+    <button type="button" class="ex-btn" id="ex-hide" hidden>Alle Korrekturen ausblenden</button>
+    <button type="button" class="ex-btn leise" id="ex-reset">Neu beginnen</button>
+    <div class="ex-score" id="ex-score" hidden></div>
+   </div>
+  </div>
+<script>
+(function(){
+"use strict";
+/* ================= HELPERS ================= */
+var KEY = "mo_primar6_deutsch_faelle_v1";
+var state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+state.z = state.z || {}; state.t = state.t || {}; state.r = state.r || {};
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function norm(s){ return String(s).trim().toLowerCase(); }
+function shuffle(arr, seed){ var a = arr.slice(), s = 0; for (var i=0;i<seed.length;i++) s = (s*31 + seed.charCodeAt(i)) >>> 0;
+  for (var j=a.length-1;j>0;j--){ s = (s*1103515245 + 12345) >>> 0; var k = s % (j+1); var t=a[j]; a[j]=a[k]; a[k]=t; } return a; }
+var root = document.getElementById("ex-root");
+var H = "", SEKS = [];
+function sek(n, color, kicker, title, text){
+  SEKS.push([n, title]);
+  H += '<section class="ex-sek" id="sek-'+n+'" style="--sc:'+color+'"><div class="ex-sek-kopf"><span class="ex-sek-nr">'+n+'</span><div><span class="ex-sek-kicker">'+kicker+'</span><h2>'+title+'</h2>'+(text?'<p>'+text+'</p>':'')+'</div></div>';
+}
+function endsek(n){ H += '<div class="ex-sek-fuss"><button type="button" class="ex-btn haupt ex-sek-check">Meine Antworten prüfen</button><button type="button" class="ex-btn ex-sek-hide" hidden>Korrekturen ausblenden</button><div class="ex-score" hidden></div></div></section>'; }
+function task(id, title, hint, body){ H += '<div class="ex-aufgabe" id="t-'+id+'" data-name="'+esc(title.replace(/<[^>]+>/g,""))+'"><h3>'+title+'</h3>'+(hint?'<p class="ex-hint">'+hint+'</p>':'')+body+'</div>'; }
+function chip(group, cid, val, label){ return '<button type="button" class="ex-chip" data-g="'+group+'" data-id="'+cid+'" data-val="'+esc(val)+'">'+esc(label||val)+'</button>'; }
+function bank(group, chips, cls, sort){ return '<div class="ex-bank'+(cls?' '+cls:'')+'" data-g="'+group+'" data-bank="1"'+(sort?' data-sort="1"':'')+' aria-label="Wörter">'+chips+'</div>'; }
+function slotRow(group, zid, label, ans, show, cls){ return '<div class="ex-paar"><span class="ex-term'+(cls||'')+'">'+label+'</span><span class="ex-zone ex-slot" tabindex="0" data-g="'+group+'" data-z="'+zid+'" data-ans="'+esc(ans)+'"'+(show?' data-show="'+esc(show)+'"':'')+'><i>hierher ziehen</i></span></div>'; }
+function frage(id, q, model, rows, tag){ return '<div class="ex-frage">'+(tag?'<span class="ex-tag">'+tag+'</span>':'')+'<label for="q_'+id+'"><b>'+q+'</b></label><textarea class="ex-in" id="q_'+id+'" data-t="'+id+'" rows="'+(rows||3)+'"></textarea><div class="ex-model" hidden><b>Musterlösung</b>'+model+'</div></div>'; }
+function quelle(s){ return '<p class="ex-quelle">'+s+'</p>'; }
+function chart(no, title, svg, src){ return '<figure class="ex-chart"><figcaption><span class="ex-chart-nr">Chart '+no+'</span> '+title+'</figcaption><div class="ex-diagramm-wrap">'+svg+'</div>'+quelle(src)+'</figure>'; }
+
+function T_label(id, title, hint, svg, items, credit){
+  var chips = shuffle(items.map(function(it,i){ return [id+'_c'+i, it[1]]; }), id).map(function(c){ return chip(id, c[0], c[1]); }).join("");
+  var rows = items.map(function(it,i){ return slotRow(id, id+'_'+i, '<span class="ex-nummer">'+it[0]+'</span>', it[1]); }).join("");
+  task(id, title, hint, (svg?'<div class="ex-diagramm-wrap">'+svg+'</div>':'')+(credit?quelle(credit):'')+bank(id, chips)+'<div class="ex-paare ex-paare-2">'+rows+'</div>');
+}
+function T_order(id, title, hint, steps){
+  var chips = shuffle(steps.map(function(s,i){ return [id+'_c'+i, 's'+i, s]; }), id).map(function(c){ return chip(id, c[0], c[1], c[2]); }).join("");
+  var rows = steps.map(function(s,i){ return slotRow(id, id+'_'+i, '<span class="ex-nummer">'+(i+1)+'</span>', 's'+i, s, ' ex-term-kurz'); }).join("");
+  task(id, title, hint, '<div class="ex-match"><div class="ex-paare">'+rows+'</div>'+bank(id, chips, 'ex-bank-def')+'</div>');
+}
+function T_gaps(id, title, hint, text, extra){
+  var n = 0, words = [];
+  var body = esc(text).replace(/\[\[(.+?)\]\]/g, function(_, w){ n++; words.push(w);
+    return '<span class="ex-zone ex-gap" tabindex="0" data-g="'+id+'" data-z="'+id+'_'+n+'" data-ans="'+esc(w)+'"><i>'+n+'</i></span>'; });
+  var chips = shuffle(words.concat(extra).map(function(w,i){ return [id+'_c'+i, w]; }), id).map(function(c){ return chip(id, c[0], c[1]); }).join("");
+  task(id, title, hint, bank(id, chips)+'<p class="ex-text">'+body+'</p>');
+}
+function T_match(id, title, hint, pairs, cls){
+  var chips = shuffle(pairs.map(function(p,i){ return [id+'_c'+i, p[1], p[0]]; }), id).map(function(c){ return chip(id, c[0], c[2], c[1]); }).join("");
+  var rows = pairs.map(function(p,i){ return slotRow(id, id+'_'+i, esc(p[0]), p[0], p[1], cls); }).join("");
+  task(id, title, hint, '<div class="ex-match"><div class="ex-paare">'+rows+'</div>'+bank(id, chips, 'ex-bank-def')+'</div>');
+}
+function T_sort(id, title, hint, cats, items){
+  var chips = shuffle(items.map(function(it,i){ return [id+'_c'+i, it[1], it[0]]; }), id).map(function(c){ return chip(id, c[0], c[1], c[2]); }).join("");
+  var boxes = cats.map(function(c){ return '<div class="ex-kat"><b>'+esc(c)+'</b><div class="ex-zone ex-eimer" tabindex="0" data-g="'+id+'" data-z="'+id+'_'+esc(c)+'" data-ans="'+esc(c)+'" data-multi="1"></div></div>'; }).join("");
+  task(id, title, hint, bank(id, chips, '', true)+'<div class="ex-kats ex-kats-'+cats.length+'">'+boxes+'</div>');
+}
+function T_tf(id, title, hint, rows){
+  var b = '<div class="ex-tf">';
+  rows.forEach(function(t,i){ var nm = id+'_'+i;
+    b += '<div class="ex-tf-zeile" data-ans="'+(t[1]?"T":"F")+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(t[0])+'</p><div class="ex-tf-wahl" role="radiogroup" aria-label="Statement '+(i+1)+'"><label><input type="radio" name="'+nm+'" value="T"><span>T</span></label><label><input type="radio" name="'+nm+'" value="F"><span>F</span></label></div>'
+      + '<textarea class="ex-in ex-korr" data-t="'+nm+'" rows="2" placeholder="If false: write the correct sentence."></textarea>'
+      + '<div class="ex-model" hidden>'+(t[1]?'<b>This statement is true.</b>'+esc(t[2]||""):'<b>This statement is false. Model correction</b>'+esc(t[2]))+'</div></div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_mc(id, title, hint, qs, before){
+  var b = (before||'') + '<div class="ex-mc">';
+  qs.forEach(function(q,i){ var nm = id+'_'+i;
+    b += '<div class="ex-mc-q" data-ans="'+q[2]+'"><p><span class="ex-nr">'+(i+1)+'</span>'+esc(q[0])+'</p><div class="ex-mc-opt" role="radiogroup">'
+      + q[1].map(function(o,k){ return '<label><input type="radio" name="'+nm+'" value="'+k+'"><span>'+esc(o)+'</span></label>'; }).join("")
+      + '</div>'+(q[3]?'<div class="ex-model" hidden><b>Erklärung</b>'+esc(q[3])+'</div>':'')+'</div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_voc(id, title, hint, rows){
+  var b = '<div class="ex-voc">';
+  rows.forEach(function(r,i){ b += '<div class="ex-voc-zeile"><span>'+esc(r[0])+'</span><input class="ex-in" type="text" data-t="'+id+'_'+i+'" aria-label="English for '+esc(r[0])+'" autocomplete="off"><div class="ex-model" hidden>'+esc(r[1])+'</div></div>'; });
+  task(id, title, hint, b+'</div>');
+}
+function T_open(id, title, hint, qs, before){
+  var b = (before||'') + '<ol class="ex-liste">';
+  qs.forEach(function(q,i){ b += '<li>'+frage(id+'_'+i, q[0], q[1], q[2]||4, q[3])+'</li>'; });
+  task(id, title, hint, b+'</ol>');
+}
+
+/* =====================================================================
+
+/* ================= AUFGABENTYPEN «DIE VIER FÄLLE» ================= */
+var FALL = ["Nominativ (Wer-Fall)","Akkusativ (Wen-Fall)","Dativ (Wem-Fall)","Genitiv (Wessen-Fall)"];
+var KURZ = { N:"Nom.", A:"Akk.", D:"Dat.", G:"Gen." };
+function inp(id, ans, w, cls){ var len = Math.max.apply(null, ans.split("|").map(function(a){ return a.length; }));
+  return '<input class="ex-in ex-scrivi'+(cls?' '+cls:'')+'" type="text" data-t="'+id+'" data-ans="'+esc(ans)+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Antwort"'+(cls?'':' style="width:'+(w||len+4)+'ch"')+'>'; }
+function mcq(nm, ans, opts, q){ return '<div class="ex-mc-q" data-ans="'+ans+'">'+(q?'<p>'+q+'</p>':'')+'<div class="ex-mc-opt" role="radiogroup">'
+  + opts.map(function(o,k){ return '<label><input type="radio" name="'+nm+'" value="'+k+'"><span>'+esc(o)+'</span></label>'; }).join("") + '</div></div>'; }
+/* Satz mit Fallfehler: Fall wählen und Satz korrigieren */
+function T_fehler(id, title, hint, rows){
+  var b = '<ol class="ex-liste ex-fall-liste">';
+  rows.forEach(function(r,i){ b += '<li><p class="ex-fall-satz">'+esc(r[0])+'</p>'
+    + '<div class="ex-mc">'+mcq(id+'_'+i, r[1], FALL, '<span class="ex-mini">Welcher Fall ist hier richtig?</span>')+'</div>'
+    + '<label class="ex-mini" for="i_'+id+'_'+i+'">Schreibe den Satz richtig:</label>'+inp(id+'_s'+i, r[2], 0, 'ex-satz').replace('<input ', '<input id="i_'+id+'_'+i+'" ')
+    + (r[3] ? '<div class="ex-model" hidden><b>Erklärung</b>'+esc(r[3])+'</div>' : '') + '</li>'; });
+  task(id, title, hint, b + '</ol>');
+}
+/* Fragewort wählen und Ersatzprobe mit «Hund» schreiben */
+function T_probe(id, title, hint, rows){
+  var b = '<ol class="ex-liste ex-fall-liste">';
+  rows.forEach(function(r,i){ var p = r[1], f = ["wer oder was?","wen oder was?","wem?","wessen?"].map(function(w){ return p ? p+' '+w : w.charAt(0).toUpperCase()+w.slice(1); });
+    var frame = esc(r[3]).replace("___", inp(id+'_h'+i, r[4]));
+    b += '<li><p class="ex-fall-satz">'+r[0]+'</p>'
+      + '<div class="ex-mc">'+mcq(id+'_'+i, r[2], f, '<span class="ex-mini">Welche Frage stellst du?</span>')+'</div>'
+      + '<p class="ex-ersatz"><span class="ex-mini">Ersatzprobe mit «Hund»:</span> '+frame+'</p>'
+      + '<div class="ex-model" hidden><b>Lösung</b>'+esc(f[r[2]])+' → '+FALL[r[2]]+'. Ersatzprobe: '+esc(r[3].replace("___", r[4].split("|")[0]))+'</div></li>'; });
+  task(id, title, hint, b + '</ol>');
+}
+/* Text mit markierten Nomen: Fall bestimmen */
+function T_text(id, title, hint, text){
+  var n = 0, items = [];
+  var body = esc(text).replace(/\[\[(.+?)\|([NADG])\]\]/g, function(_, w, k){ n++; items.push([w,k]); return '<u class="ex-markiert">'+w+'<sup>'+n+'</sup></u>'; });
+  var b = '<p class="ex-lesetext ex-fall-text">'+body+'</p><div class="ex-tf">';
+  items.forEach(function(it,i){ var nm = id+'_'+i;
+    b += '<div class="ex-tf-zeile" data-ans="'+it[1]+'"><span class="ex-nr">'+(i+1)+'</span><p>'+esc(it[0])+'</p><div class="ex-tf-wahl ex-fall-wahl" role="radiogroup" aria-label="Fall für '+esc(it[0])+'">'
+      + ["N","A","D","G"].map(function(k,j){ return '<label title="'+FALL[j]+'"><input type="radio" name="'+nm+'" value="'+k+'"><span>'+KURZ[k]+'</span></label>'; }).join("")
+      + '</div><div class="ex-model" hidden><b>Lösung</b>'+FALL["NADG".indexOf(it[1])]+'</div></div>'; });
+  task(id, title, hint, b + '</div>');
+}
+function T_tab(id, title, hint, cols){
+  var b = '<div class="ex-konj ex-fall-tab">';
+  cols.forEach(function(c,k){ b += '<table class="ex-konj-tab"><thead><tr><th colspan="2">'+esc(c[0])+'</th></tr></thead><tbody>';
+    c[1].forEach(function(f,i){ b += '<tr><td>'+["Nom.","Akk.","Dat.","Gen."][i]+'</td><td>'+(i===0 ? '<b>'+esc(f)+'</b>' : inp(id+'_'+k+'_'+i, f, 14))+'</td></tr>'; });
+    b += '</tbody></table>'; });
+  task(id, title, hint, b + '</div>');
+}
+function T_type(id, title, hint, lines){
+  var n = 0, b = '<ol class="ex-liste ex-scrivi-liste">';
+  lines.forEach(function(l){ b += '<li>' + esc(l).replace(/\[\[(.+?)\]\]/g, function(_, a){ n++; return inp(id+'_'+n, a); }) + '</li>'; });
+  task(id, title, hint, b + '</ol>');
+}
+var H_FEHLER = "In jedem Satz steht ein Nomen im falschen Fall. Wähle den richtigen Fall und schreibe den Satz richtig ab.";
+var H_PROBE = "Das unterstrichene Nomen ist gesucht. Wähle die richtige Frage (wie auf den Kärtchen) und schreibe dann die Ersatzprobe: Ersetze das Nomen durch «Hund» mit dem passenden Artikel.";
+var H_TEXT = "Bestimme den Fall der markierten Nomen. Tipp: Stelle die Frage oder mache die Ersatzprobe mit «Hund».";
+
+/* ================= ABSCHNITT 1 ================= */
+sek(1, "#a8682f", "Abschnitt 1", "Die vier Fälle und ihre Namen", "Lateinische und deutsche Bezeichnungen, erste Fallfehler finden und Fälle bestimmen.");
+T_match("d1a", "1A · Wie heissen die vier Fälle?", "Ziehe zu jedem lateinischen Namen den deutschen Namen und die Frage.", [
+  ["Nominativ","Wer-Fall · Frage: Wer oder was?"],["Akkusativ","Wen-Fall · Frage: Wen oder was?"],["Dativ","Wem-Fall · Frage: Wem?"],["Genitiv","Wessen-Fall · Frage: Wessen?"]], " ex-term-wort");
+T_fehler("d1b", "1B · Finde den Fallfehler", H_FEHLER, [
+  ["Ich schenke den Lehrer ein Buch.", 2, "Ich schenke dem Lehrer ein Buch.", "Wem schenke ich ein Buch? → dem Lehrer (Dativ)."],
+  ["Der Hut der Mann liegt auf dem Tisch.", 3, "Der Hut des Mannes liegt auf dem Tisch.|Der Hut des Manns liegt auf dem Tisch.", "Wessen Hut liegt auf dem Tisch? → des Mannes (Genitiv)."],
+  ["Wir besuchen morgen dem Grossvater.", 1, "Wir besuchen morgen den Grossvater.|Morgen besuchen wir den Grossvater.", "Wen besuchen wir? → den Grossvater (Akkusativ)."]]);
+T_probe("d1c", "1C · Frage und Ersatzprobe", H_PROBE, [
+  ["<u>Der Bus</u> fährt um acht Uhr ab.", "", 0, "___ fährt um acht Uhr ab.", "Der Hund"],
+  ["Meine Schwester sucht <u>ihre Brille</u>.", "", 1, "Meine Schwester sucht ___.", "den Hund|ihren Hund"],
+  ["Das Kind spielt mit <u>der Katze</u>.", "Mit", 2, "Das Kind spielt mit ___.", "dem Hund"]]);
+T_text("d1d", "1D · Fälle im Text bestimmen", H_TEXT,
+  "Am Morgen packt [[Lena|N]] ihre Sachen. Sie gibt [[dem Bruder|D]] einen Apfel. Dann nimmt sie [[den Rucksack|A]] und läuft zur Schule. Vor dem Schulhaus wartet schon der Freund [[ihres Bruders|G]].");
+endsek(1);
+
+/* ================= ABSCHNITT 2 ================= */
+sek(2, "#2a6f97", "Abschnitt 2", "Wörter in die vier Fälle setzen", "Nomen mit Artikel durch die vier Fälle führen und Fehler korrigieren.");
+T_tab("d2a", "2A · Setze die Nomen in die vier Fälle", "Schreibe Artikel und Nomen. Achtung: Im Genitiv und manchmal im Dativ verändert sich auch das Nomen!", [
+  ["der Lehrer", ["der Lehrer","den Lehrer","dem Lehrer","des Lehrers"]],
+  ["die Garage", ["die Garage","die Garage","der Garage","der Garage"]],
+  ["das Wetter", ["das Wetter","das Wetter","dem Wetter","des Wetters"]],
+  ["die Kinder (Mehrzahl)", ["die Kinder","die Kinder","den Kindern","der Kinder"]]]);
+T_fehler("d2b", "2B · Finde den Fallfehler", H_FEHLER, [
+  ["Die Mutter kauft der Kinder neue Schuhe.", 2, "Die Mutter kauft den Kindern neue Schuhe.", "Wem kauft die Mutter Schuhe? → den Kindern (Dativ Mehrzahl, mit -n am Ende)."],
+  ["Das Fell den Hundes glänzt in der Sonne.", 3, "Das Fell des Hundes glänzt in der Sonne.|Das Fell des Hunds glänzt in der Sonne.", "Wessen Fell glänzt? → des Hundes (Genitiv)."],
+  ["Den Wind weht durch die Bäume.", 0, "Der Wind weht durch die Bäume.", "Wer oder was weht durch die Bäume? → der Wind (Nominativ)."]]);
+T_probe("d2c", "2C · Frage und Ersatzprobe", H_PROBE, [
+  ["Die Kinder bauen <u>einen Schneemann</u>.", "", 1, "Die Kinder bauen ___.", "den Hund|einen Hund"],
+  ["Die Farbe <u>der Jacke</u> gefällt mir.", "", 3, "Die Farbe ___ gefällt mir.", "des Hundes|des Hunds"],
+  ["Nach <u>der Pause</u> schreiben wir einen Test.", "Nach", 2, "Nach ___ schreiben wir einen Test.", "dem Hund"]]);
+T_text("d2d", "2D · Fälle im Text bestimmen", H_TEXT,
+  "Im Herbst fallen [[die Blätter|N]] von den Bäumen. Der Hausmeister holt [[den Rechen|A]] aus der Garage. Er hilft [[der Lehrerin|D]] beim Aufräumen. Das Laub [[der Bäume|G]] landet auf einem grossen Haufen.");
+endsek(2);
+
+/* ================= ABSCHNITT 3 ================= */
+sek(3, "#2e7d4f", "Abschnitt 3", "Die Fallproben", "Wann brauchst du die Ableseprobe, wann die Ersatzprobe?");
+T_mc("d3a", "3A · Ableseprobe oder Ersatzprobe?", "Wähle die richtige Antwort.", [
+  ["Wann kannst du die Ableseprobe direkt anwenden?", ["Wenn das Nomen weiblich ist.","Wenn das Nomen männlich und in der Einzahl ist.","Wenn das Nomen in der Mehrzahl ist.","Immer."], 1, "Nur bei männlichen Nomen in der Einzahl kannst du den Fall am Artikel ablesen: der = Nominativ, den = Akkusativ, dem = Dativ, des = Genitiv."],
+  ["Bei der Ersatzprobe ersetzt du das Nomen durch …", ["ein männliches Nomen in der Einzahl, zum Beispiel «der Hund».","ein weibliches Nomen, zum Beispiel «die Katze».","ein Pronomen, zum Beispiel «sie».","ein Verb."], 0, "Bei einem männlichen Nomen in der Einzahl sieht mensch den Fall am Artikel. Darum ersetzt du das Nomen durch «der Hund» und liest dann ab."],
+  ["In welchem Satz brauchst du die Ersatzprobe, weil du den Fall nicht direkt ablesen kannst?", ["Ich rufe den Arzt.","Ich danke dem Arzt.","Ich rufe die Ärztin.","Der Arzt kommt."], 2, "«die Ärztin» ist weiblich: «die» kann Nominativ oder Akkusativ sein. Ersatzprobe: Ich rufe den Hund. → Akkusativ."],
+  ["Ableseprobe: «Wir helfen dem Nachbarn.» Welcher Fall ist «dem Nachbarn»?", FALL, 2, "«dem» steht beim Dativ (Wem-Fall): Wem helfen wir?"]]);
+T_probe("d3b", "3B · Frage und Ersatzprobe", H_PROBE, [
+  ["Der Clown schenkt <u>den Kindern</u> Ballone.", "", 2, "Der Clown schenkt ___ Ballone.", "dem Hund"],
+  ["<u>Die Schnecke</u> kriecht über das Blatt.", "", 0, "___ kriecht über das Blatt.", "Der Hund"],
+  ["Wir beobachten <u>die Vögel</u> im Garten.", "", 1, "Wir beobachten ___ im Garten.", "den Hund"],
+  ["Das Licht <u>der Lampe</u> ist sehr hell.", "", 3, "Das Licht ___ ist sehr hell.", "des Hundes|des Hunds"]]);
+T_text("d3c", "3C · Fälle im Text bestimmen", H_TEXT,
+  "[[Die Sonne|N]] scheint auf den Pausenplatz. Die Lehrerin erklärt [[der Klasse|D]] ein neues Spiel. Die Kinder holen [[die Bälle|A]] aus dem Schrank. Die Regeln [[des Spiels|G]] sind zum Glück einfach.");
+endsek(3);
+
+/* ================= ABSCHNITT 4 ================= */
+sek(4, "#7d4f96", "Abschnitt 4", "Prüfungstraining: alles gemischt", "Jetzt kommt alles zusammen: Fehler finden, Wörter in den richtigen Fall setzen und Fälle bestimmen.");
+T_fehler("d4a", "4A · Finde den Fallfehler", H_FEHLER, [
+  ["Mit den Fahrrad fahre ich zur Schule.", 2, "Mit dem Fahrrad fahre ich zur Schule.|Ich fahre mit dem Fahrrad zur Schule.", "Mit wem oder womit fahre ich? → mit dem Fahrrad (Dativ)."],
+  ["Der Pfleger hilft die Patientin.", 2, "Der Pfleger hilft der Patientin.", "Wem hilft der Pfleger? → der Patientin (Dativ). Ersatzprobe: Der Pfleger hilft dem Hund."],
+  ["Ich frage dem Lehrer nach der Abfahrtszeit.", 1, "Ich frage den Lehrer nach der Abfahrtszeit.", "Wen frage ich? → den Lehrer (Akkusativ)."]]);
+T_type("d4b", "4B · Setze das Nomen in den richtigen Fall", "Schreibe Artikel und Nomen in der richtigen Form.", [
+  "Ich gebe (der Hund) [[dem Hund]] einen Knochen.",
+  "Die Farbe (das Auto) [[des Autos]] ist blau.",
+  "Wir besuchen (die Grossmutter) [[die Grossmutter]] im Altersheim.",
+  "Ich spiele mit (die Kinder) [[den Kindern]] Fussball.",
+  "(der Lehrer) [[Der Lehrer]] erklärt die Aufgabe."]);
+T_probe("d4c", "4C · Frage und Ersatzprobe", H_PROBE, [
+  ["Die Passagiere danken <u>der Pilotin</u>.", "", 2, "Die Passagiere danken ___.", "dem Hund"],
+  ["Der Koffer <u>meiner Mutter</u> ist rot.", "", 3, "Der Koffer ___ ist rot.", "des Hundes|des Hunds|meines Hundes"],
+  ["Am Flughafen sehen wir <u>viele Flugzeuge</u>.", "", 1, "Am Flughafen sehen wir ___.", "den Hund|einen Hund"]]);
+T_text("d4d", "4D · Fälle im Text bestimmen", H_TEXT,
+  "In den Ferien fliegt [[die Familie Meier|N]] nach Spanien. Am Check-in-Schalter gibt der Vater [[der Angestellten|D]] die Pässe. Dann geben sie [[die Koffer|A]] ab. Im Flugzeug bringt der Steward [[den Kindern|D]] ein Getränk. Durch das Fenster sehen sie die Gipfel [[der Alpen|G]]. Nach der Landung holen sie [[das Gepäck|A]].");
+endsek(4);
+
+root.innerHTML = H;
+var toc = document.getElementById("ex-toc");
+SEKS.forEach(function(s){ toc.insertAdjacentHTML("beforeend", '<a href="#sek-'+s[0]+'">'+s[0]+' · '+s[1]+'</a>'); });
+
+/* ================= DRAG & DROP ================= */
+function chipsOf(el){ return [].slice.call(el.querySelectorAll(".ex-chip")); }
+function bankOf(g){ return root.querySelector('.ex-bank[data-g="'+g+'"]'); }
+function place(ch, zone, noSave){
+  if (!zone) return;
+  var from = ch.parentNode;
+  if (zone.dataset.bank) { zone.appendChild(ch); }
+  else if (zone.dataset.multi) { zone.appendChild(ch); }
+  else {
+    var old = zone.querySelector(".ex-chip");
+    if (old && old !== ch) { if (from && from.classList.contains("ex-zone") && !from.dataset.multi && !from.dataset.bank) from.appendChild(old); else bankOf(old.dataset.g).appendChild(old); }
+    zone.appendChild(ch);
+  }
+  [from, zone].forEach(function(z){ if (z && z.classList && z.classList.contains("ex-zone")) z.classList.toggle("voll", !!z.querySelector(".ex-chip")); });
+  if (!noSave) { record(); clearMarks(zone.closest(".ex-sek")); }
+}
+function record(){
+  state.z = {};
+  [].forEach.call(root.querySelectorAll(".ex-zone"), function(z){ var ids = chipsOf(z).map(function(c){ return c.dataset.id; }); if (ids.length) state.z[z.dataset.z] = ids; });
+  save();
+}
+var sel = null;
+function select(ch){ if (sel) sel.classList.remove("gewaehlt"); sel = (sel === ch) ? null : ch; if (sel) sel.classList.add("gewaehlt"); root.classList.toggle("ex-waehlt", !!sel); }
+var drag = null;
+root.addEventListener("pointerdown", function(e){
+  var ch = e.target.closest(".ex-chip"); if (!ch || e.button > 0) return;
+  drag = { ch: ch, x: e.clientX, y: e.clientY, moved: false, ghost: null, id: e.pointerId };
+});
+document.addEventListener("pointermove", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+  if (!drag.moved) {
+    drag.moved = true; var r = drag.ch.getBoundingClientRect();
+    drag.ox = drag.x - r.left; drag.oy = drag.y - r.top;
+    var gh = drag.ch.cloneNode(true); gh.classList.add("ex-ghost"); gh.style.width = r.width + "px"; document.body.appendChild(gh); drag.ghost = gh;
+    drag.ch.classList.add("ex-quelle"); if (sel) select(sel);
+  }
+  e.preventDefault();
+  drag.ghost.style.left = (e.clientX - drag.ox) + "px"; drag.ghost.style.top = (e.clientY - drag.oy) + "px";
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (z && z.dataset.g === drag.ch.dataset.g) z.classList.add("ueber");
+}, { passive: false });
+document.addEventListener("pointerup", function(e){
+  if (!drag || e.pointerId !== drag.id) return;
+  var d = drag; drag = null;
+  [].forEach.call(root.querySelectorAll(".ueber"), function(x){ x.classList.remove("ueber"); });
+  if (!d.moved) return;
+  d.ghost.remove(); d.ch.classList.remove("ex-quelle");
+  var t = document.elementFromPoint(e.clientX, e.clientY), z = t && t.closest(".ex-zone, .ex-bank");
+  if (z && z.dataset.g === d.ch.dataset.g) place(d.ch, z);
+  d.ch.dataset.justDragged = "1"; setTimeout(function(){ delete d.ch.dataset.justDragged; }, 50);
+});
+document.addEventListener("pointercancel", function(){ if (drag && drag.ghost) { drag.ghost.remove(); drag.ch.classList.remove("ex-quelle"); } drag = null; });
+root.addEventListener("click", function(e){
+  var ch = e.target.closest(".ex-chip");
+  if (ch) {
+    if (ch.dataset.justDragged) return;
+    if (sel && sel !== ch && sel.dataset.g === ch.dataset.g && ch.parentNode.classList.contains("ex-zone")) { place(sel, ch.parentNode); select(sel); return; }
+    select(ch); return;
+  }
+  var z = e.target.closest(".ex-zone, .ex-bank");
+  if (z && sel && z.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, z); }
+});
+root.addEventListener("keydown", function(e){
+  if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("ex-zone")) {
+    e.preventDefault(); if (sel && e.target.dataset.g === sel.dataset.g) { var s = sel; select(s); place(s, e.target); }
+  }
+  if (e.key === "Escape" && sel) select(sel);
+});
+
+
+/* ================= TEXT INPUTS AND RADIOS ================= */
+[].forEach.call(root.querySelectorAll("[data-t]"), function(inp){
+  if (state.t[inp.dataset.t]) inp.value = state.t[inp.dataset.t];
+  inp.addEventListener("input", function(){ state.t[inp.dataset.t] = inp.value; save(); });
+});
+[].forEach.call(root.querySelectorAll('input[type="radio"]'), function(r){
+  if (state.r[r.name] === r.value) r.checked = true;
+  r.addEventListener("change", function(){ state.r[r.name] = r.value; save(); clearMarks(r.closest(".ex-sek")); });
+});
+Object.keys(state.z).forEach(function(zid){
+  var z = root.querySelector('.ex-zone[data-z="'+zid+'"]'); if (!z) return;
+  state.z[zid].forEach(function(cid){ var c = root.querySelector('.ex-chip[data-id="'+cid+'"]'); if (c) place(c, z, true); });
+});
+
+/* ================= CHECK ================= */
+function clean(s){ return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.,!?;:«»"“”–—-]/g," ").replace(/\s+/g," ").replace(/' /g,"'").trim(); }
+[].forEach.call(root.querySelectorAll(".ex-scrivi"), function(f){ f.addEventListener("input", function(){ clearMarks(f.closest(".ex-sek")); }); });
+function clearMarks(sec){
+  if (!sec || !sec.dataset.checked) return; delete sec.dataset.checked;
+  [].forEach.call(sec.querySelectorAll(".ok, .bad, .richtig"), function(x){ x.classList.remove("ok","bad","richtig"); });
+  [].forEach.call(sec.querySelectorAll(".ex-loesung"), function(x){ x.remove(); });
+  sec.querySelector(".ex-sek-fuss .ex-score").hidden = true;
+  document.getElementById("ex-score").hidden = true;
+}
+function sol(text, chipStyle){ var s = document.createElement("span"); s.className = "ex-loesung" + (chipStyle ? " ex-loesung-chip" : ""); s.textContent = (chipStyle ? "→ " : "✓ ") + text; return s; }
+function check(sec){
+  clearMarks(sec); sec.dataset.checked = "1";
+  var res = [], tot = [0,0];
+  [].forEach.call(sec.querySelectorAll(".ex-aufgabe"), function(t){
+    var p = [0,0]; function add(ok){ p[1]++; if (ok) p[0]++; }
+    [].forEach.call(t.querySelectorAll(".ex-zone:not([data-multi])"), function(z){
+      var c = z.querySelector(".ex-chip"), ok = !!c && norm(c.dataset.val) === norm(z.dataset.ans);
+      z.classList.add(ok ? "ok" : "bad"); add(ok);
+      if (!ok) z.insertAdjacentElement("afterend", sol(z.dataset.show || z.dataset.ans));
+    });
+    [].forEach.call(t.querySelectorAll(".ex-bank[data-sort]"), function(b){
+      [].forEach.call(t.querySelectorAll('.ex-chip[data-g="'+b.dataset.g+'"]'), function(c){
+        var par = c.parentNode, ok = !!par.dataset.multi && c.dataset.val === par.dataset.ans;
+        c.classList.add(ok ? "ok" : "bad"); add(ok);
+        if (!ok) c.appendChild(sol(c.dataset.val, true));
+      });
+    });
+    [].forEach.call(t.querySelectorAll(".ex-tf-zeile"), function(row){
+      var r = row.querySelector("input:checked"), ok = !!r && r.value === row.dataset.ans;
+      row.classList.add(ok ? "ok" : "bad"); add(ok);
+    });
+    [].forEach.call(t.querySelectorAll(".ex-mc-q"), function(q){
+      var r = q.querySelector("input:checked"), ok = !!r && r.value === q.dataset.ans;
+      q.classList.add(ok ? "ok" : "bad"); add(ok);
+      var right = q.querySelector('input[value="'+q.dataset.ans+'"]'); if (right) right.parentNode.classList.add("richtig");
+    });
+    [].forEach.call(t.querySelectorAll(".ex-scrivi"), function(f){
+      var ok = f.dataset.ans.split("|").some(function(a){ return clean(a) === clean(f.value); });
+      f.classList.add(ok ? "ok" : "bad"); add(ok);
+      if (!ok) { var a0 = f.dataset.ans.split("|")[0]; if (f.classList.contains("ex-satz") && !/[.?!]$/.test(a0)) a0 += "."; f.insertAdjacentElement("afterend", sol(a0)); }
+    });
+    if (p[1]) { res.push([t.dataset.name, p]); tot[0] += p[0]; tot[1] += p[1]; }
+  });
+  [].forEach.call(sec.querySelectorAll(".ex-model"), function(m){ m.hidden = false; });
+  var sc = sec.querySelector(".ex-sek-fuss .ex-score");
+  sc.innerHTML = '<h3>Dein Ergebnis: '+esc(sec.querySelector("h2").textContent)+'</h3><p class="ex-gesamt">'+tot[0]+' von '+tot[1]+' richtig</p><ul>'
+    + res.map(function(r){ return '<li><span>'+esc(r[0])+'</span><b>'+r[1][0]+' / '+r[1][1]+'</b></li>'; }).join("")
+    + '</ul><p>Grün heisst richtig, rot heisst falsch. Daneben oder darunter steht die Lösung. Verbessere deine Fehler und prüfe noch einmal.</p>';
+  sc.hidden = false;
+  sec.querySelector(".ex-sek-hide").hidden = false;
+  return tot;
+}
+function hide(sec){ clearMarks(sec); [].forEach.call(sec.querySelectorAll(".ex-model"), function(m){ m.hidden = true; }); sec.querySelector(".ex-sek-hide").hidden = true; }
+root.addEventListener("click", function(e){
+  var b = e.target.closest(".ex-sek-check, .ex-sek-hide"); if (!b) return;
+  var sec = b.closest(".ex-sek");
+  if (b.classList.contains("ex-sek-check")) { check(sec); sec.querySelector(".ex-sek-fuss .ex-score").scrollIntoView({ behavior: "smooth", block: "center" }); }
+  else hide(sec);
+});
+document.getElementById("ex-check").addEventListener("click", function(){
+  var all = [0,0], rows = "";
+  [].forEach.call(root.querySelectorAll(".ex-sek"), function(sec, i){ var t = check(sec); all[0] += t[0]; all[1] += t[1];
+    rows += '<li><span><a href="#'+sec.id+'">Abschnitt '+(i+1)+'</a></span><b>'+t[0]+' / '+t[1]+'</b></li>'; });
+  var sc = document.getElementById("ex-score");
+  sc.innerHTML = '<h3>Dein Ergebnis für alle Abschnitte</h3><p class="ex-gesamt">'+all[0]+' von '+all[1]+' richtig ('+Math.round(100*all[0]/Math.max(1,all[1]))+'%)</p><ul>'+rows+'</ul><p>Klicke auf einen Abschnitt, um dorthin zurückzukehren.</p>';
+  sc.hidden = false; document.getElementById("ex-hide").hidden = false;
+  sc.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+document.getElementById("ex-hide").addEventListener("click", function(){
+  [].forEach.call(root.querySelectorAll(".ex-sek"), hide); document.getElementById("ex-score").hidden = true; this.hidden = true;
+});
+document.getElementById("ex-reset").addEventListener("click", function(){
+  if (!window.confirm("Willst du alle Antworten löschen und neu beginnen?")) return;
+  state = { z:{}, t:{}, r:{} }; save(); location.reload();
+});
+})();
+</script>

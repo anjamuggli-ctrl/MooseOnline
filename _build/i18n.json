@@ -3454,6 +3454,41 @@
    "rm": "› Italiano Unità 4",
    "en": "› Italiano Unità 4",
    "it": "› Italiano Unità 4"
+  },
+  "6. Primarklasse · Deutsch": {
+   "rm": "6avla classa primara · Tudestg",
+   "en": "6th Grade · German",
+   "it": "6ª elementare · Tedesco"
+  },
+  "Deutsch 6. Primarklasse: Probeprüfung zu den vier Fällen mit Fallproben, Fehlersätzen und Selbstkontrolle.": {
+   "rm": "Tudestg 6avla classa primara: test d'exercizi tar ils quatter cas cun emprovas, frasas cun sbagls ed autocontrolla.",
+   "en": "German, 6th grade: practice test on the four cases with case tests, sentences with mistakes and self-check.",
+   "it": "Tedesco, 6ª elementare: verifica di prova sui quattro casi con prove dei casi, frasi con errori e autocorrezione."
+  },
+  "Deutsch: die vier Fälle": {
+   "rm": "Tudestg: ils quatter cas",
+   "en": "German: The Four Cases",
+   "it": "Tedesco: i quattro casi"
+  },
+  "Deutsch: die vier Fälle – MuggliOnline": {
+   "rm": "Tudestg: ils quatter cas – MuggliOnline",
+   "en": "German: The Four Cases – MuggliOnline",
+   "it": "Tedesco: i quattro casi – MuggliOnline"
+  },
+  "Probeprüfung als Vorbereitung auf die Prüfung: Nominativ, Akkusativ, Dativ und Genitiv erkennen, bestimmen und richtig anwenden.": {
+   "rm": "Test d'exercizi sco preparaziun per il test: enconuscher, determinar ed applitgar correctamain nominativ, accusativ, dativ e genitiv.",
+   "en": "Practice test to prepare for the test: recognizing, identifying and correctly using the nominative, accusative, dative and genitive.",
+   "it": "Verifica di prova per prepararsi alla verifica: riconoscere, determinare e usare correttamente nominativo, accusativo, dativo e genitivo."
+  },
+  "Probeprüfung in vier Abschnitten: die Namen der Fälle, Fallfehler finden und verbessern, Fragewörter und Ersatzprobe, Fälle im Text bestimmen.": {
+   "rm": "Test d'exercizi en quatter parts: ils nums dals cas, chattar e curreger sbagls, pleds da dumonda ed emprova da substituziun, determinar ils cas en in text.",
+   "en": "Practice test in four sections: the names of the cases, finding and correcting case mistakes, question words and the substitution test, identifying cases in a text.",
+   "it": "Verifica di prova in quattro sezioni: i nomi dei casi, trovare e correggere gli errori, le domande e la prova di sostituzione, determinare i casi in un testo."
+  },
+  "› Deutsch: die vier Fälle": {
+   "rm": "› Tudestg: ils quatter cas",
+   "en": "› German: The Four Cases",
+   "it": "› Tedesco: i quattro casi"
   }
  },
  "js": {

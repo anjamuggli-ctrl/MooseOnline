@@ -571,6 +571,20 @@
   .ex-satz-liste p{margin:0 0 6px;font-weight:600}
   input.ex-scrivi.ex-satz{display:block;width:100%;box-sizing:border-box;margin:0;padding:8px 12px}
   .ex-satz-liste .ex-loesung{display:inline-block;margin-top:6px}
+  .ex-fall-liste>li{margin-bottom:22px;padding-bottom:16px;border-bottom:1px dashed var(--line)}
+  .ex-fall-liste>li:last-child{border-bottom:0}
+  .ex-fall-satz{font-size:17px;font-weight:600;margin:0 0 8px}
+  .ex-fall-satz u,.ex-markiert{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--sc,var(--green))}
+  .ex-markiert sup{font-size:11px;font-weight:700;color:var(--sc,var(--green));margin-left:1px}
+  .ex-mini{display:block;font-size:13.5px;color:var(--muted);font-weight:600;margin:10px 0 4px}
+  .ex-fall-liste .ex-mc-q{padding:8px 12px}
+  .ex-fall-liste .ex-mc-q>p{margin:0 0 6px}
+  .ex-fall-liste .ex-mc-opt{margin-left:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ex-ersatz{margin:6px 0 0;font-size:16px;line-height:2.2}
+  .ex-ersatz .ex-mini{display:inline;margin:0 6px 0 0}
+  .ex-fall-text{font-size:16.5px;line-height:1.8}
+  .ex-fall-wahl span{width:54px;font-size:14px}
+  @media (max-width:640px){ .ex-fall-liste .ex-mc-opt{grid-template-columns:1fr 1fr} .ex-fall-wahl span{width:46px;font-size:13px} }
   .ex-zitat{display:block;font-weight:400;font-style:italic;margin-top:6px;background:var(--sand);padding:8px 12px;border-radius:8px}
   @media (max-width:640px){ .ex-kats-6{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:900px){ .ex-sek-fuss .ex-score ul,.ex-pruefung .ex-bottom .ex-score ul{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-kats-3{grid-template-columns:1fr} }
