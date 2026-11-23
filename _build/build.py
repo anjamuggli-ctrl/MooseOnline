@@ -463,6 +463,18 @@ THEMA_LG = f"""      <a class="plan thema entile" href="lerngespraeche.html"><di
         <ul><li>Gesprächsformen und Feedbackebenen</li><li>Haltung, Sprache und Gleichwürdigkeit</li><li>Selbstwirksamkeit, Lernstrategien und Fehler</li><li>GROW, lösungsorientierte Fragen und «Ich schaffs»</li><li>Kritik, WOWW, dialogisches Lernen und Standortgespräche</li><li>Acht Instrumente und ein Gesprächs-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+DIG_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
+    '<path d="M30 30 H92 a6 6 0 0 1 6 6 V88 H30 a6 6 0 0 1 -6 -6 V36 a6 6 0 0 1 6 -6 Z" fill="#e7ede6" stroke="#3f5d4a"/><path d="M38 46 H84 M38 58 H84 M38 70 H72" stroke="#3f5d4a"/>'
+    '<path d="M104 60 H122" stroke="#cdc6b6" stroke-dasharray="2 6"/>'
+    '<path d="M150 34 L176 50 L176 80 L150 96 L124 80 L124 50 Z" fill="#fff" stroke="#a8682f"/>'
+    '<path d="M150 34 V96 M124 50 L176 80 M176 50 L124 80" stroke="#a8682f" stroke-width="1.6" opacity=".6"/></g>'
+    '<g fill="#a8682f"><circle cx="150" cy="34" r="5"/><circle cx="176" cy="50" r="5"/><circle cx="176" cy="80" r="5"/><circle cx="150" cy="96" r="5"/><circle cx="124" cy="80" r="5"/><circle cx="124" cy="50" r="5"/></g>'
+    '<circle cx="194" cy="24" r="8" fill="#3f5d4a"/></svg>')
+THEMA_DIG = f"""      <a class="plan thema entile" href="digitalitaet.html"><div class="thema-art">{DIG_ART}</div><span class="badge live">Neu</span><h3>Lernen und Digitalität verbinden</h3>
+        <p>Vom Buch zum vernetzten Computer: Hier geht es darum, was Lernen in einer Kultur der Digitalität bedeutet und wie Lernangebote darauf antworten. Die Seite verbindet Stalder, Döbeli Honegger und Krommer mit Klafki, Projektunterricht, Spieltheorie und multimodalem Erklären.</p>
+        <ul><li>Digitalität, Leitmedienwechsel und die drei Formen nach Stalder</li><li>Was wichtiger wird: Filtern, Fragen, Nichtautomatisierbares</li><li>Unterrichten mit, über und trotz Medien</li><li>Digitale Identität, Medienkritik und Ethik der Automatisierung</li><li>Planen mit Klafki, multimodal erklären, Tools kriterienbasiert prüfen</li><li>Projekte, HERZ-Theorie des Spiels und ein Planungs-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
@@ -480,6 +492,7 @@ area("didaktik.html", "Pädagogik", "",
       THEMA_LV,
       THEMA_LA,
       THEMA_LG,
+      THEMA_DIG,
       THEMA_INSTR], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
@@ -527,6 +540,17 @@ page("lerngespraeche.html", "Lerngespräche führen – MuggliOnline", f"""<main
 <!--BODY:lerngespraeche-->{LG_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Lerngespräche führen: Gesprächsformen, Feedbackebenen, Haltung und Sprache, Selbstwirksamkeit, GROW, lösungsorientierte Fragen, Ich schaffs, Kritik, WOWW, dialogisches Lernen und Standortgespräche, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Thema Lernen und Digitalität ----------------
+ACTIVE["digitalitaet.html"] = "didaktik.html"
+DIG_BODY = "".join((B / "digitalitaet" / f).read_text() for f in sorted(p.name for p in (B / "digitalitaet").glob("*.html")))
+page("digitalitaet.html", "Lernen und Digitalität verbinden – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernen und Digitalität verbinden', "Pädagogik · Thema", "Lernen und Digitalität verbinden", "Was bedeutet Lernen in einer Kultur der Digitalität? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Das Leitmedium wechselt vom gedruckten Buch zu digitalen Netzwerken. Informationen sind im Überfluss vorhanden, Algorithmen sortieren vor, und KI übernimmt Aufgaben, die früher als Lernziele galten. Lernen heisst darum immer weniger, Wissen aufzunehmen, und immer mehr, verantwortungsvoll mit vielen Handlungsmöglichkeiten umzugehen.", "Diese Seite klärt zuerst, was Digitalität ist und welche Kompetenzen wichtiger werden. Dann fragt sie, warum und wie digitale Medien in die Schule gehören, mit Blick auf Identität, Medienkritik und Ethik, und zeigt, wie Lernangebote unter diesen Bedingungen geplant, erklärt, geprüft und gestaltet werden. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+<!--BODY:digitalitaet-->{DIG_BODY}<!--/BODY-->
+  </section>
+</main>""", active="didaktik.html", description="Lernen und Digitalität verbinden: Leitmedienwechsel, Kultur der Digitalität nach Stalder, Kompetenzen, Unterrichten mit, über und trotz Medien, Medienbildung, Ethik der Automatisierung, Klafki, multimodales Erklären, Tools evaluieren, Projekte und HERZ-Theorie, wissenschaftlich fundiert.")
 
 # ---------------- Pädagogik: Instrumente ----------------
 ACTIVE["instrumente.html"] = "didaktik.html"
