@@ -475,6 +475,17 @@ THEMA_DIG = f"""      <a class="plan thema entile" href="digitalitaet.html"><div
         <ul><li>Digitalität, Leitmedienwechsel und die drei Formen nach Stalder</li><li>Was wichtiger wird: Filtern, Fragen, Nichtautomatisierbares</li><li>Unterrichten mit, über und trotz Medien</li><li>Digitale Identität, Medienkritik und Ethik der Automatisierung</li><li>Planen mit Klafki, multimodal erklären, Tools kriterienbasiert prüfen</li><li>Projekte, HERZ-Theorie des Spiels und ein Planungs-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+BEU_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
+    '<rect x="26" y="18" width="78" height="92" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M38 38 H92 M38 54 H92 M38 70 H78" stroke="#3f5d4a"/>'
+    '<path d="M40 90 l6 6 l12 -12" stroke="#a8682f" stroke-width="3"/>'
+    '<circle cx="152" cy="44" r="16" fill="#fff" stroke="#a8682f"/><path d="M124 104 c0 -22 12 -34 28 -34 s28 12 28 34" fill="#fff" stroke="#a8682f"/>'
+    '<path d="M108 64 H126" stroke="#cdc6b6" stroke-dasharray="2 6"/></g>'
+    '<g fill="#3f5d4a"><circle cx="190" cy="22" r="7"/></g></svg>')
+THEMA_BEU = f"""      <a class="plan thema entile" href="beurteilung.html"><div class="thema-art">{BEU_ART}</div><span class="badge live">Neu</span><h3>Lernende in Beurteilungsprozesse involvieren</h3>
+        <p>Beurteilung ist nicht nur Sache der Lehrperson: Hier geht es darum, wie Lernende Ziele und Kriterien mitbestimmen, sich selbst und einander beurteilen und an Portfolio, Präsentation und Beurteilungsgespräch beteiligt sind. Die Seite verbindet Winter, Lötscher et al., Fraefel, Oser und Ruf &amp; Gallin.</p>
+        <ul><li>Begleitung und Allokation, formativ und summativ</li><li>Neue Beurteilungskultur und echte Partizipation</li><li>Ziele und Kriterien klären, Single-Point-Rubric</li><li>Selbst- und Peer-Beurteilung, dialogisches Lernen</li><li>Portfolio, Präsentation und angepasste Lernkontrollen</li><li>Gesamtbeurteilung, Laufbahn und ein Beurteilungs-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
@@ -493,6 +504,7 @@ area("didaktik.html", "Pädagogik", "",
       THEMA_LA,
       THEMA_LG,
       THEMA_DIG,
+      THEMA_BEU,
       THEMA_INSTR], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
@@ -551,6 +563,17 @@ page("digitalitaet.html", "Lernen und Digitalität verbinden – MuggliOnline", 
 <!--BODY:digitalitaet-->{DIG_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Lernen und Digitalität verbinden: Leitmedienwechsel, Kultur der Digitalität nach Stalder, Kompetenzen, Unterrichten mit, über und trotz Medien, Medienbildung, Ethik der Automatisierung, Klafki, multimodales Erklären, Tools evaluieren, Projekte und HERZ-Theorie, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Thema Beurteilung ----------------
+ACTIVE["beurteilung.html"] = "didaktik.html"
+BEU_BODY = "".join((B / "beurteilung" / f).read_text() for f in sorted(p.name for p in (B / "beurteilung").glob("*.html")))
+page("beurteilung.html", "Lernende in Beurteilungsprozesse involvieren – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Lernende in Beurteilungsprozesse involvieren', "Pädagogik · Thema", "Lernende in Beurteilungsprozesse involvieren", "Wie werden Lernende von Beurteilten zu Beteiligten? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten für die Praxis.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Heterogene Lern- und Leistungsvoraussetzungen sind im Schulalltag Realität. Auch bei der Beurteilung sollen Lernende einbezogen werden und ihre Leistungsanforderungen aktiv mitgestalten: Sie klären Ziele und Kriterien mit, beurteilen sich selbst und einander und bringen ihre Sicht in Gespräche und Entscheide ein.", "Diese Seite klärt zuerst, wozu beurteilt wird, was eine neue Beurteilungskultur ausmacht und was echte Partizipation ist. Dann zeigt sie, wie Lernende Kriterien mitbestimmen, sich selbst und einander beurteilen, und stellt Portfolio, Präsentation, angepasste Lernkontrollen und die Gesamtbeurteilung für Laufbahnentscheide vor. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+<!--BODY:beurteilung-->{BEU_BODY}<!--/BODY-->
+  </section>
+</main>""", active="didaktik.html", description="Lernende in Beurteilungsprozesse involvieren: Begleitung und Allokation, neue Beurteilungskultur, Partizipation, Erfolgskriterien, Single-Point-Rubric, Selbst- und Peer-Beurteilung, dialogisches Lernen, Portfolio, Präsentation, Lernkontrollen und Gesamtbeurteilung, wissenschaftlich fundiert.")
 
 # ---------------- Pädagogik: Instrumente ----------------
 ACTIVE["instrumente.html"] = "didaktik.html"
