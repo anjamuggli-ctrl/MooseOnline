@@ -615,6 +615,11 @@ PRIMAR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 
     '<g transform="translate(128 60)"><rect x="0" y="0" width="7" height="18" fill="#2e7d4f"/><rect x="7" y="0" width="7" height="18" fill="#fff"/><rect x="14" y="0" width="7" height="18" fill="#b0392e"/></g>'
     '<path d="M100 96 L96 112 M120 96 L124 112" stroke="#3f5d4a" stroke-width="3"/>'
     '<g transform="rotate(35 178 70)"><rect x="172" y="40" width="9" height="44" rx="2" fill="#e0a526"/><polygon points="172,84 181,84 176.5,94" fill="#2f4a39"/></g></svg>')
+GRAMMAR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 102 L70 88 L140 100 L220 86 V120 Z" fill="#cfdacd"/>'
+    '<rect x="28" y="20" width="96" height="62" rx="12" fill="#2f6f8f"/><path d="M54 82 L48 98 L70 82 Z" fill="#2f6f8f"/>'
+    '<text x="76" y="59" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff">ABC</text>'
+    '<rect x="134" y="40" width="74" height="48" rx="10" fill="#c9762b"/><path d="M186 88 L194 102 L172 88 Z" fill="#c9762b"/>'
+    '<text x="171" y="71" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#fff">-ing</text></svg>')
 KLASSEN = [
  f"""      <a class="plan thema entile" href="pomg25a-materials.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Technical English</span><h3>PomG25A</h3>
         <p>Polymechanikerinnen und Polymechaniker, G-Modul, 2. Lehrjahr</p>
@@ -628,6 +633,10 @@ KLASSEN = [
         <p>Übungen zu verschiedenen Fächern der 6. Primarstufe, mit Selbstkontrolle</p>
         <ul><li>Italiano Unità 4: Un nuovo compagno</li><li>Deutsch: die vier Fälle</li></ul>
         <span class="go">Zu den Übungen →</span></a>""",
+ f"""      <a class="plan thema entile" href="english-grammar.html"><div class="thema-art">{GRAMMAR_ART}</div><span class="badge live">English</span><h3>English Grammar</h3>
+        <p>Grammar notes and practice exercises with self-check</p>
+        <ul><li>Present Simple vs. Present Continuous</li><li>Present Perfect vs. Past Simple</li></ul>
+        <span class="go">To the grammar →</span></a>""",
 ]
 ACTIVE["pomg25a-materials.html"] = "lernende.html"
 POM_BODY = "".join((B / "pomg25a" / f).read_text() for f in sorted(p.name for p in (B / "pomg25a").glob("*.html")))
@@ -706,6 +715,35 @@ page("primar6-italiano-4.html", "Italiano Unità 4: Un nuovo compagno – Muggli
 <!--BODY:primar6_ital4-->{IT4_BODY}<!--/BODY-->
   </section>
 </main>""", active="lernende.html", description="Italienisch 6. Primarklasse, Unità 4 «Un nuovo compagno»: interaktive Übungen mit Selbstkontrolle.")
+
+ACTIVE["english-grammar.html"] = "lernende.html"
+page("english-grammar.html", "English Grammar – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › English Grammar', "Technical English", "English Grammar", "Grammar notes and practice exercises with self-check")}
+  <section class="section">
+{einleitung("How to use this page", ["Each tile covers one grammar topic. On every topic page, you first find the grammar notes: the rules with examples, the signal words and how to form the tenses.", "Below the notes, you practise: write the correct verb form into each box. At the end, click «Check my answers». You see at once which answers are correct, and for every gap you get the correct form and a short reason."], 0)}
+    <div class="grid2 themen">
+      <a class="plan thema entile" href="english-grammar-present.html"><div class="thema-art">{GRAMMAR_ART}</div><span class="badge live">Tenses</span><h3>Present Simple vs. Present Continuous</h3>
+        <p>Habits and facts or happening right now? Grammar notes, signal words, stative verbs and 20 practice sentences.</p>
+        <span class="go">Open →</span></a>
+      <a class="plan thema entile" href="english-grammar-past.html"><div class="thema-art">{GRAMMAR_ART}</div><span class="badge live">Tenses</span><h3>Present Perfect vs. Past Simple</h3>
+        <p>Finished or connected to now? Grammar notes, signal words and 20 practice sentences.</p>
+        <span class="go">Open →</span></a>
+    </div>
+  </section>
+</main>""", active="lernende.html", description="English Grammar: grammar notes and practice exercises with self-check.")
+
+for _f, _d, _t, _lead, _desc in [
+    ("english-grammar-present.html", "eng_present", "Present Simple vs. Present Continuous", "Habits, facts and timetables or actions happening right now: the rules, signal words and 20 practice sentences with self-check.", "English Grammar: Present Simple vs. Present Continuous – grammar notes and practice exercises with self-check."),
+    ("english-grammar-past.html", "eng_past", "Present Perfect vs. Past Simple", "Finished in the past or connected to now: the rules, signal words and 20 practice sentences with self-check.", "English Grammar: Present Perfect vs. Past Simple – grammar notes and practice exercises with self-check.")]:
+    ACTIVE[_f] = "lernende.html"
+    _body = "".join((B / _d / f).read_text() for f in sorted(p.name for p in (B / _d).glob("*.html")))
+    page(_f, f"{_t} – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="english-grammar.html">English Grammar</a> › ' + _t, "English Grammar", _t, _lead)}
+  <section class="section">
+{einleitung("How to use this page", ["First read the grammar notes: the rules with examples, the signal words and how to form the tenses.", "Then do the practice exercise below. Write the correct verb form into each box and click «Check my answers» at the end. Your answers are saved in this browser."], 0)}
+<!--BODY:{_d}-->{_body}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description=_desc)
 
 area("lernende.html", "Lernende", "",
      "Lernende",
