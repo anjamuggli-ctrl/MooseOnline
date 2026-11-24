@@ -486,6 +486,17 @@ THEMA_BEU = f"""      <a class="plan thema entile" href="beurteilung.html"><div 
         <ul><li>Begleitung und Allokation, formativ und summativ</li><li>Neue Beurteilungskultur und echte Partizipation</li><li>Ziele und Kriterien klären, Single-Point-Rubric</li><li>Selbst- und Peer-Beurteilung, dialogisches Lernen</li><li>Portfolio, Präsentation und angepasste Lernkontrollen</li><li>Gesamtbeurteilung, Laufbahn und ein Beurteilungs-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+KON_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
+    '<circle cx="62" cy="40" r="13" fill="#fff" stroke="#3f5d4a"/><path d="M38 100 c0 -24 10 -36 24 -36 s24 12 24 36" fill="#e7ede6" stroke="#3f5d4a"/>'
+    '<circle cx="158" cy="40" r="13" fill="#fff" stroke="#a8682f"/><path d="M134 100 c0 -24 10 -36 24 -36 s24 12 24 36" fill="#f6ebdc" stroke="#a8682f"/>'
+    '<path d="M92 58 l10 8 l-6 4 l12 10" stroke="#9b4d5e" stroke-width="3"/><path d="M128 58 l-10 8 l6 4 l-12 10" stroke="#9b4d5e" stroke-width="3"/>'
+    '<path d="M90 104 H130" stroke="#3f5d4a" stroke-width="3"/></g>'
+    '<g fill="#fff" font-size="11" font-weight="700" font-family="sans-serif" text-anchor="middle"><circle cx="20" cy="18" r="10" fill="#b8902f"/><text x="20" y="22">1</text><circle cx="42" cy="12" r="10" fill="#3a7d84"/><text x="42" y="16">2</text><circle cx="64" cy="8" r="10" fill="#6d5a8e"/><text x="64" y="12">3</text></g></svg>')
+THEMA_KON = f"""      <a class="plan thema entile" href="konflikte.html"><div class="thema-art">{KON_ART}</div><span class="badge live">Neu</span><h3>Umgang mit Konflikten, Gewalt und Mobbing</h3>
+        <p>Streit gehört zum Aufwachsen, Mobbing nicht: Hier geht es darum, Konflikt, Gewalt und Mobbing zu unterscheiden, Mobbing als Gruppenphänomen zu verstehen und stufengerecht vorzubeugen und einzugreifen, mit Bezug zu Zyklus 1, 2 und 3. Die Seite verbindet Alsaker, Schubarth, Jannan, den No Blame Approach und SchoolMatters.</p>
+        <ul><li>Konflikt, Aggression, Gewalt und Mobbing unterscheiden</li><li>Cybermobbing erkennen und rechtlich einordnen</li><li>Rollen in der Gruppe und der Mobbingprozess</li><li>Soziales Verhalten von Zyklus 1 bis Zyklus 3</li><li>Prävention, Programme und No Blame Approach</li><li>Intervention, Elternarbeit und ein Klassen-Check</li></ul>
+        <span class="go">Zum Thema →</span></a>"""
+
 INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
@@ -505,6 +516,7 @@ area("didaktik.html", "Pädagogik", "",
       THEMA_LG,
       THEMA_DIG,
       THEMA_BEU,
+      THEMA_KON,
       THEMA_INSTR], cols="grid2 themen",
      bar=("Theorie trifft Praxis", ["Hier findest du Zusammenfassungen zu pädagogischen und didaktischen Theorien und Konzepten. Sie stützen sich auf wissenschaftlich fundierte Quellen, die jeweils angegeben sind.",
           "Verknüpfungen und Handlungsansätze zeigen, was die Theorie für den Unterrichtsalltag bedeutet. Teilweise gibt es dazu Instrumente für die Praxis."], 1))
@@ -574,6 +586,17 @@ page("beurteilung.html", "Lernende in Beurteilungsprozesse involvieren – Muggl
 <!--BODY:beurteilung-->{BEU_BODY}<!--/BODY-->
   </section>
 </main>""", active="didaktik.html", description="Lernende in Beurteilungsprozesse involvieren: Begleitung und Allokation, neue Beurteilungskultur, Partizipation, Erfolgskriterien, Single-Point-Rubric, Selbst- und Peer-Beurteilung, dialogisches Lernen, Portfolio, Präsentation, Lernkontrollen und Gesamtbeurteilung, wissenschaftlich fundiert.")
+
+# ---------------- Pädagogik: Thema Konflikte, Gewalt und Mobbing ----------------
+ACTIVE["konflikte.html"] = "didaktik.html"
+KON_BODY = "".join((B / "konflikte" / f).read_text() for f in sorted(p.name for p in (B / "konflikte").glob("*.html")))
+page("konflikte.html", "Umgang mit Konflikten, Gewalt und Mobbing – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="didaktik.html">Pädagogik</a> › Umgang mit Konflikten, Gewalt und Mobbing', "Pädagogik · Thema", "Umgang mit Konflikten, Gewalt und Mobbing", "Wann ist ein Streit ein Streit, und wann ist es Mobbing? Theorien, Konzepte, Spannungsfelder und Handlungsmöglichkeiten für Zyklus 1, 2 und 3.")}
+  <section class="section">
+{einleitung("Worum es geht", ["Konflikte gehören zum Aufwachsen und fördern die soziale Entwicklung. Gewalt und Mobbing dagegen verletzen, isolieren und behindern das Lernen aller in der Klasse. Lehrpersonen müssen unterscheiden können, was vor ihnen liegt, und wissen, wie sie stufengerecht vorbeugen und eingreifen.", "Diese Seite klärt zuerst die Begriffe und zeigt, warum Mobbing ein Gruppenphänomen ist, wie es in Phasen verläuft und wie sich soziales Verhalten vom Kindergarten bis zur Oberstufe verändert. Dann stellt sie Prävention, Programme, den No Blame Approach, Intervention und Elternarbeit vor, jeweils mit Hinweisen zu Zyklus 1, 2 und 3. Du kannst sie von oben nach unten durcharbeiten oder über das Inhaltsverzeichnis springen."], 1)}
+<!--BODY:konflikte-->{KON_BODY}<!--/BODY-->
+  </section>
+</main>""", active="didaktik.html", description="Umgang mit Konflikten, Gewalt und Mobbing: Konflikt und Mobbing unterscheiden, Cybermobbing, Rollen in der Gruppe, Mobbingprozess, Entwicklung von Zyklus 1 bis 3, Prävention, FAUSTLOS, Be-Prox, No Blame Approach, Intervention und Elternarbeit, wissenschaftlich fundiert.")
 
 # ---------------- Pädagogik: Instrumente ----------------
 ACTIVE["instrumente.html"] = "didaktik.html"
