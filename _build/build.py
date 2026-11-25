@@ -821,6 +821,15 @@ page("pome24b-island-escape.html", "Pome24B: Island Escape – MuggliOnline", f"
   </section>
 </main>""", active="lernende.html", description="Island Escape: an escape game for Pome24B to review Unit 9 Energy and the Environment, with puzzles on the greenhouse effect, sea levels, energy conversion, nuclear power and the island project.")
 
+ACTIVE["lindenhof.html"] = "werkstatt.html"
+LH_BODY = "".join((B / "lindenhof" / f).read_text() for f in sorted(p.name for p in (B / "lindenhof").glob("*.html")))
+page("lindenhof.html", "Schulhaus Lindenhof – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="werkstatt.html">App-Werkstatt</a> › Schulhaus Lindenhof', "Lernspiel · Konflikte, Gewalt und Mobbing", "Schulhaus Lindenhof", "Ein kooperatives Fallspiel für angehende Lehrpersonen in Zyklus 1 und 2: Fälle über mehrere Wochen und Klassen, Entscheide mit Folgen und Theorie bei jedem Zug. Zur <a href=\"konflikte.html\" style=\"text-decoration:underline;color:inherit;font-weight:600\">Themenseite</a>.")}
+  <section class="section">
+<!--BODY:lindenhof-->{LH_BODY}<!--/BODY-->
+  </section>
+</main>""", active="werkstatt.html", description="Schulhaus Lindenhof: ein kooperatives, verzweigtes Fallspiel zu Konflikten, Gewalt und Mobbing in Zyklus 1 und 2, mit Wissenskarten und Theorie aus der Fachliteratur.")
+
 ACTIVE["power-town.html"] = "werkstatt.html"
 PTDE_BODY = "".join((B / "powertown_de" / f).read_text() for f in sorted(p.name for p in (B / "powertown_de").glob("*.html")))
 page("power-town.html", "Power Town – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
@@ -917,6 +926,17 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
   <section class="section">
 {einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
+      <a class="card" href="lindenhof.html">
+        <div class="art foto"><img src="img/lindenhof/lh-tile.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+        <div class="body">
+          <div class="kicker"><span class="badge live">Lernspiel</span></div>
+          <h3>Schulhaus Lindenhof</h3>
+          <p>Ein kooperatives Fallspiel zu Konflikten, Gewalt und Mobbing für 1 bis 4 Spielende an einem Gerät. Alle sind Lehrpersonen im selben Schulhaus, vom Kindergarten bis zur 6. Klasse. Die Fälle ziehen sich über mehrere Wochen und Klassen, und jeder Entscheid verändert den Verlauf. Nach jedem Zug zeigt ein Theorie-Kärtchen, was die Forschung dazu sagt, mit Link zur Themenseite und zu den Instrumenten.</p>
+          <p><b>Einsatz:</b> Lehrpersonenbildung für Zyklus 1 und 2 (Module Erziehungswissenschaften, Praktikumsvorbereitung), Weiterbildungen in Schulteams und Fallbesprechungen in Kollegien. Mit Auswertung und Fragen für die Nachbesprechung.</p>
+          <div class="tags"><span>1–4 Personen</span><span>40–75 Min.</span><span>Zyklus 1 und 2</span><span>Spielsprache Deutsch</span></div>
+          <span class="go">Spiel öffnen →</span>
+        </div>
+      </a>
       <a class="card" href="power-town.html">
         <div class="art foto"><img src="img/pome24b/games/pt-tile.jpg" alt="" loading="lazy"></div>
         <div class="body">

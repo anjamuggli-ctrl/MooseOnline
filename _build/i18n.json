@@ -4154,6 +4154,76 @@
    "en": "also in English",
    "it": "anche in inglese",
    "rm": "er en englais"
+  },
+  "1–4 Personen": {
+   "en": "1–4 people",
+   "it": "1–4 persone",
+   "rm": "1–4 persunas"
+  },
+  "40–75 Min.": {
+   "en": "40–75 min",
+   "it": "40–75 min.",
+   "rm": "40–75 min."
+  },
+  "Ein kooperatives Fallspiel für angehende Lehrpersonen in Zyklus 1 und 2: Fälle über mehrere Wochen und Klassen, Entscheide mit Folgen und Theorie bei jedem Zug. Zur": {
+   "en": "A cooperative case game (in German) for future teachers in cycles 1 and 2: cases spanning several weeks and classes, decisions with consequences and theory at every turn. Go to the",
+   "it": "Un gioco cooperativo di casi (in tedesco) per futuri docenti dei cicli 1 e 2: casi che durano diverse settimane e coinvolgono più classi, decisioni con conseguenze e teoria a ogni mossa. Vai alla",
+   "rm": "In gieu da cas cooperativ (en tudestg) per futuras persunas d'instrucziun dals ciclus 1 e 2: cas che duran pliras emnas e pertutgan pliras classas, decisiuns cun consequenzas e teoria a mintga trair. Tar la"
+  },
+  "Ein kooperatives Fallspiel zu Konflikten, Gewalt und Mobbing für 1 bis 4 Spielende an einem Gerät. Alle sind Lehrpersonen im selben Schulhaus, vom Kindergarten bis zur 6. Klasse. Die Fälle ziehen sich über mehrere Wochen und Klassen, und jeder Entscheid verändert den Verlauf. Nach jedem Zug zeigt ein Theorie-Kärtchen, was die Forschung dazu sagt, mit Link zur Themenseite und zu den Instrumenten.": {
+   "en": "A cooperative case game on conflict, violence and bullying for 1 to 4 players on one device. Everyone is a teacher in the same school, from kindergarten to year 6. The cases span several weeks and classes, and every decision changes the course of events. After each turn, a theory card shows what research says, with a link to the topic page and the tools. Game language: German.",
+   "it": "Un gioco cooperativo di casi su conflitti, violenza e mobbing per 1–4 giocatori su un solo dispositivo. Tutti sono docenti nella stessa scuola, dalla scuola dell'infanzia alla 6a classe. I casi durano diverse settimane e coinvolgono più classi, e ogni decisione cambia il seguito. Dopo ogni mossa, una scheda teorica mostra che cosa dice la ricerca, con link alla pagina tematica e agli strumenti. Lingua del gioco: tedesco.",
+   "rm": "In gieu da cas cooperativ davart conflicts, violenza e mobbing per 1–4 giugaders sin in apparat. Tuts èn persunas d'instrucziun en la medema chasa da scola, da la scolina fin la 6avla classa. Ils cas duran pliras emnas e pertutgan pliras classas, e mintga decisiun mida il decurs. Suenter mintga trair mussa ina carta da teoria tge che la perscrutaziun di, cun colliaziun a la pagina tematica ed als instruments. Lingua dal gieu: tudestg."
+  },
+  "Im Fallspiel": {
+   "en": "In the case game",
+   "it": "Nel gioco di casi",
+   "rm": "En il gieu da cas"
+  },
+  "Lehrpersonenbildung für Zyklus 1 und 2 (Module Erziehungswissenschaften, Praktikumsvorbereitung), Weiterbildungen in Schulteams und Fallbesprechungen in Kollegien. Mit Auswertung und Fragen für die Nachbesprechung.": {
+   "en": "Teacher education for cycles 1 and 2 (educational science modules, practicum preparation), in-service training for school teams and case discussions among staff. With an evaluation and questions for the debriefing.",
+   "it": "Formazione dei docenti per i cicli 1 e 2 (moduli di scienze dell'educazione, preparazione al tirocinio), formazione continua per team scolastici e discussioni di casi nei collegi. Con valutazione e domande per il debriefing.",
+   "rm": "Furmaziun da persunas d'instrucziun per ils ciclus 1 e 2 (moduls da scienzas da l'educaziun, preparaziun da la pratica), furmaziun supplementara per teams da scola e discussiuns da cas en collegis. Cun evaluaziun e dumondas per la discussiun finala."
+  },
+  "Lernspiel · Konflikte, Gewalt und Mobbing": {
+   "en": "Learning game · Conflict, violence and bullying",
+   "it": "Gioco didattico · Conflitti, violenza e mobbing",
+   "rm": "Gieu d'emprender · Conflicts, violenza e mobbing"
+  },
+  "Schulhaus Lindenhof": {
+   "en": "Schulhaus Lindenhof",
+   "it": "Schulhaus Lindenhof",
+   "rm": "Schulhaus Lindenhof"
+  },
+  "Schulhaus Lindenhof – App-Werkstatt – MuggliOnline": {
+   "en": "Schulhaus Lindenhof – App Workshop – MuggliOnline",
+   "it": "Schulhaus Lindenhof – Laboratorio app – MuggliOnline",
+   "rm": "Schulhaus Lindenhof – Ufficina d'apps – MuggliOnline"
+  },
+  "Schulhaus Lindenhof: ein kooperatives, verzweigtes Fallspiel zu Konflikten, Gewalt und Mobbing in Zyklus 1 und 2, mit Wissenskarten und Theorie aus der Fachliteratur.": {
+   "en": "Schulhaus Lindenhof: a cooperative, branching case game in German on conflict, violence and bullying in cycles 1 and 2, with knowledge cards and theory from the research literature.",
+   "it": "Schulhaus Lindenhof: un gioco di casi cooperativo e ramificato in tedesco su conflitti, violenza e mobbing nei cicli 1 e 2, con carte del sapere e teoria tratta dalla letteratura scientifica.",
+   "rm": "Schulhaus Lindenhof: in gieu da cas cooperativ e ramifitgà en tudestg davart conflicts, violenza e mobbing en ils ciclus 1 e 2, cun cartas da savida e teoria da la litteratura scientifica."
+  },
+  "Themenseite": {
+   "en": "topic page",
+   "it": "pagina tematica",
+   "rm": "pagina tematica"
+  },
+  "Zyklus 1 und 2": {
+   "en": "Cycles 1 and 2",
+   "it": "Cicli 1 e 2",
+   "rm": "Ciclus 1 e 2"
+  },
+  "in der App-Werkstatt entscheidet ihr als Team von Lehrpersonen über Fälle, die mehrere Wochen und Klassen betreffen. Nach jedem Zug verweist ein Theorie-Kärtchen auf diese Seite und auf die passenden Instrumente.": {
+   "en": "in the App Workshop, you decide as a team of teachers on cases that span several weeks and classes. After each turn, a theory card links to this page and to the matching tools.",
+   "it": "nel Laboratorio app decidete come team di docenti su casi che durano diverse settimane e coinvolgono più classi. Dopo ogni mossa, una scheda teorica rimanda a questa pagina e agli strumenti adatti.",
+   "rm": "en l'Ufficina d'apps decidais vus sco team da persunas d'instrucziun davart cas che duran pliras emnas e pertutgan pliras classas. Suenter mintga trair renviescha ina carta da teoria a questa pagina ed als instruments adattads."
+  },
+  "› Schulhaus Lindenhof": {
+   "en": "› Schulhaus Lindenhof",
+   "it": "› Schulhaus Lindenhof",
+   "rm": "› Schulhaus Lindenhof"
   }
  },
  "js": {

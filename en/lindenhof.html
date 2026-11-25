@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schulhaus Lindenhof – App Workshop – MuggliOnline</title>
+<meta name="description" content="Schulhaus Lindenhof: a cooperative, branching case game in German on conflict, violence and bullying in cycles 1 and 2, with knowledge cards and theory from the research literature.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=a675fe69">
+<link rel="alternate" hreflang="de" href="../lindenhof.html">
+<link rel="alternate" hreflang="rm" href="../rm/lindenhof.html">
+<link rel="alternate" hreflang="en" href="../en/lindenhof.html">
+<link rel="alternate" hreflang="it" href="../it/lindenhof.html">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="MuggliOnline home page">
+      <svg aria-hidden="true" viewBox="0 0 100 100">
+  <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clippath></defs>
+  <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
+  <g clip-path="url(#inner)">
+    <!-- hintere Bergkette als M -->
+    <polygon points="10,68 44,33 58,47 73,29 100,52 100,100 10,100" fill="#87a48f"/>
+    <polygon points="44,33 58,47 52,100 48,100" fill="#6f8f78" opacity=".0"/>
+    <polygon points="44,33 58,47 54,60" fill="#6f8f78"/>
+    <polygon points="73,29 100,52 100,70 76,56" fill="#6f8f78"/>
+    <polygon points="44.0,33.0 50.5,39.5 46.9,36.9 44.1,39.7 40.8,36.7 37.7,39.5" fill="#ffffff"/>
+    <polygon points="73.0,29.0 80.6,35.5 76.4,32.9 74.1,35.7 70.3,32.7 67.6,35.5" fill="#ffffff"/>
+    <!-- vordere Bergkette als M -->
+    <polygon points="8,92 49,57 63,69 79,52 100,66 100,100 8,100" fill="#3f5d4a"/>
+    <polygon points="49,57 63,69 58,82" fill="#2f4a39"/>
+    <polygon points="79,52 100,66 100,84 82,72" fill="#2f4a39"/>
+  </g>
+
+  <path d="M91.95,42.60 A42.6,42.6 0 0 1 8.33,58.86" fill="none" stroke="#2f4a39" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M6.03,48.46 L6.10,47.02 L6.22,45.57 L6.39,44.13 L6.61,42.70 L6.87,41.27 L7.19,39.85 L7.54,38.45 L7.95,37.05 L8.40,35.68 L8.89,34.31 L9.43,32.97 L10.01,31.64 L10.64,30.33 L11.31,29.04 L12.02,27.78 L12.78,26.54 L13.57,25.32 L14.40,24.14 L15.28,22.98 L16.18,21.85 L17.13,20.75 L18.11,19.68 L19.13,18.65 L20.18,17.65 L21.26,16.68 L22.38,15.75 L23.52,14.86 L24.69,14.01 L25.89,13.19 L27.12,12.42 L28.37,11.68 L29.65,10.99 L30.94,10.34 L32.26,9.73 L33.60,9.17 L34.95,8.65 L36.32,8.18 L37.71,7.75 L39.11,7.37 L40.52,7.03 L41.94,6.74 L43.37,6.50 L44.81,6.31 L46.25,6.16 L47.70,6.06 L49.15,6.01 L50.60,6.00 L52.05,6.05 L53.49,6.14 L54.94,6.28 L56.38,6.46 L57.81,6.70 L59.23,6.98 L60.64,7.31 L62.05,7.68 L63.43,8.10 L64.81,8.57 L66.17,9.08 L67.51,9.63 L68.83,10.23 L70.13,10.87 L71.41,11.56 L72.66,12.28 L73.89,13.05 L75.10,13.86 L76.27,14.71 L77.42,15.59 L78.54,16.51 L79.63,17.47 L80.69,18.47 L81.71,19.50 L82.70,20.56 L83.65,21.65 L84.57,22.78 L85.45,23.93 L86.29,25.11 L87.09,26.32 L87.85,27.56 L88.57,28.82 L89.24,30.10 L89.88,31.40 L90.47,32.73 L91.02,34.07 L91.52,35.43 L91.98,36.81 L92.39,38.20 L92.75,39.60 L93.07,41.02 L93.35,42.44 L93.57,43.88 L90.80,44.27 L90.55,42.93 L90.25,41.61 L89.90,40.30 L89.50,39.00 L89.06,37.73 L88.57,36.47 L88.03,35.23 L87.46,34.01 L86.85,32.82 L86.19,31.65 L85.50,30.50 L84.77,29.38 L84.00,28.29 L83.20,27.23 L82.36,26.20 L81.49,25.20 L80.59,24.23 L79.65,23.30 L78.69,22.40 L77.70,21.54 L76.69,20.71 L75.65,19.91 L74.58,19.16 L73.49,18.44 L72.38,17.77 L71.26,17.13 L70.11,16.53 L68.95,15.97 L67.77,15.46 L66.58,14.98 L65.37,14.55 L64.16,14.16 L62.93,13.81 L61.70,13.50 L60.46,13.24 L59.22,13.02 L57.97,12.84 L56.73,12.70 L55.48,12.61 L54.23,12.56 L52.98,12.55 L51.74,12.58 L50.51,12.66 L49.28,12.77 L48.06,12.93 L46.85,13.13 L45.65,13.36 L44.46,13.64 L43.28,13.96 L42.12,14.31 L40.98,14.70 L39.86,15.13 L38.75,15.60 L37.66,16.10 L36.59,16.63 L35.55,17.20 L34.53,17.80 L33.53,18.44 L32.56,19.10 L31.61,19.80 L30.70,20.52 L29.80,21.28 L28.94,22.06 L28.11,22.86 L27.31,23.69 L26.54,24.55 L25.80,25.42 L25.09,26.32 L24.42,27.24 L23.78,28.17 L23.18,29.13 L22.61,30.10 L22.07,31.08 L21.57,32.08 L21.11,33.09 L20.68,34.12 L20.29,35.15 L19.93,36.19 L19.61,37.24 L19.33,38.29 L19.08,39.35 L18.88,40.42 L18.70,41.48 L18.57,42.55 L18.47,43.62 L18.41,44.68 L18.38,45.74 L18.39,46.80 L18.44,47.85 L18.52,48.90 Z" fill="#2f4a39"/>
+  <g stroke="#f4f1ea" stroke-width="1.15" stroke-linecap="round"><line x1="7.53" y1="37.05" x2="12.51" y2="38.57"/><line x1="10.38" y1="29.97" x2="14.77" y2="32.19"/><line x1="14.39" y1="23.48" x2="18.11" y2="26.25"/><line x1="19.46" y1="17.77" x2="22.46" y2="20.94"/><line x1="25.43" y1="13.02" x2="27.69" y2="16.43"/><line x1="32.13" y1="9.36" x2="33.67" y2="12.86"/><line x1="39.35" y1="6.90" x2="40.20" y2="10.36"/><line x1="46.89" y1="5.71" x2="47.12" y2="9.02"/><line x1="54.52" y1="5.83" x2="54.21" y2="8.88"/><line x1="62.01" y1="7.26" x2="61.25" y2="9.98"/></g>
+  <!-- Kopf: links in der Mitte, nach unten geneigt -->
+  <path d="M6.03,48.46
+           C4.2,53.6 3.6,58.2 3.5,62.6 C3.5,65.6 3.4,68.2 3.8,69.8 C4.2,71.4 5.6,72 7.2,71.6
+           L9.6,71 C10,73.6 10.4,76.4 10.8,79.4 C12,77 13,74.6 13.6,72.4
+           L18.2,65.8 C19.8,63.4 20.6,60.2 20.4,56.8 C20.2,54 19.4,51.8 18.52,48.90 Z" fill="#2f4a39"/>
+  <path d="M18.6,54.6 C22.4,53 26.4,53.2 29,54.8 C25.8,56.4 22,57.2 18.2,57 Z" fill="#2f4a39"/>
+  <path d="M7.6,56.6 C8.8,55.6 10.6,55.6 11.6,56.4 C10.4,57.6 8.8,57.8 7.6,56.6 Z" fill="#f4f1ea"/>
+  <path d="M4.4,68.4 l1.2,-0.2" stroke="#f4f1ea" stroke-width=".75" stroke-linecap="round"/>
+</svg>
+      <span class="name">Muggli<span>Online</span></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="didaktik.html">Pedagogy</a></li>
+      <li><a href="english.html">Teachers</a></li>
+      <li><a href="lernende.html">Learners</a></li>
+      <li><a href="werkstatt.html" class="active">App Workshop</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="ueber-anja.html">About Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Contact</a></li>
+    </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Choose language" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>EN</button><ul class="lang-list"><li><a href="../lindenhof.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/lindenhof.html" hreflang="rm" lang="rm">Rumantsch<small>RM</small></a></li><li><a href="../en/lindenhof.html" hreflang="en" lang="en" class="aktiv">English<small>EN</small></a></li><li><a href="../it/lindenhof.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li></ul></div>
+    <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="inner">
+      <div class="crumbs"><a href="index.html">Home</a> › <a href="werkstatt.html">App Workshop</a> › Schulhaus Lindenhof</div>
+      <div class="kicker">Learning game · Conflict, violence and bullying</div>
+      <h1>Schulhaus Lindenhof</h1>
+      <p class="lead">A cooperative case game (in German) for future teachers in cycles 1 and 2: cases spanning several weeks and classes, decisions with consequences and theory at every turn. Go to the <a href="konflikte.html" style="text-decoration:underline;color:inherit;font-weight:600">topic page</a>.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:150px"><path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/><path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/><path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg><svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:150px"><g fill="#2a3a4b"><g transform="translate(60 88.8) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(92 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(380 97.6) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(870 96.5) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1090 87.7) scale(1.15)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1126 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg>
+  </section>
+  <section class="section">
+  <style>
+  .lh{--ink:#22302b;--mut:#5d6964;--line:#d9e0dc;--acc:#3f6b57;--warn:#b5532f;--ok:#4c8a55;--soft:#f3f6f4;color:var(--ink)}
+  .lh *{box-sizing:border-box}
+  .lh-panel{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:920px;margin:0 auto 16px}
+  .lh-hero{position:relative;aspect-ratio:3/1.15;background:linear-gradient(150deg,#35584a,#6f8f6a 55%,#c9a86a);display:flex;align-items:flex-end}
+  .lh-hero.sm{aspect-ratio:3/0.9}
+  .lh-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .lh-hero .emo{position:absolute;right:22px;top:14px;font-size:46px;opacity:.55}
+  .lh-hero .cap{position:relative;width:100%;padding:14px 20px;background:linear-gradient(transparent,rgba(12,20,16,.8));color:#fff}
+  .lh-hero .cap small{display:block;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.9;font-weight:700}
+  .lh-hero .cap b{font-family:Georgia,serif;font-size:clamp(21px,3.2vw,32px);line-height:1.15}
+  .lh-body{padding:18px 22px 22px}
+  .lh-body p{line-height:1.58}
+  .lh-btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer}
+  .lh-btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+  .lh-btn.sm{padding:7px 14px;font-size:14px}
+  .lh-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .lh-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .lh-chips button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+  .lh-chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .lh-input{border:1.5px solid var(--line);border-radius:10px;padding:8px 11px;font:inherit;min-width:0}
+  .lh-pl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+  .lh-pl label{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--mut)}
+  .lh-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+  .lh-cases label{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;gap:8px;align-items:flex-start;cursor:pointer;font-size:14px;line-height:1.4}
+  .lh-cases label b{display:block;font-size:15px}
+  .lh-role{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px 3px 4px;background:var(--rc);color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
+  .lh-role i{font-style:normal;background:rgba(255,255,255,.22);border-radius:999px;padding:1px 7px}
+  .lh-bar{position:sticky;top:70px;z-index:20;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:14px;padding:9px 14px;margin:0 auto 14px;max-width:920px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .lh-bar .wk{font-weight:800;font-size:17px;margin-right:6px}
+  .lh-bar .tm{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+  .lh-bar .tm span{background:rgba(255,255,255,.1);border-left:4px solid var(--rc);border-radius:8px;padding:3px 8px;font-size:13px}
+  .lh-bar button{background:transparent;color:#fff;border:1.5px solid #8fa39a;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+  .lh-who{margin:0 0 10px;font-size:15px;color:var(--mut)}
+  .lh-team{background:#fff6e5;border:1px solid #f0d7a6;border-radius:12px;padding:8px 12px;margin:0 0 12px;font-size:15px}
+  .lh-opts{display:grid;gap:10px;margin:14px 0 4px}
+  .lh-opt{display:flex;gap:12px;align-items:flex-start;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;font:inherit;line-height:1.45;cursor:pointer;transition:.15s}
+  .lh-opt:hover:not(:disabled){border-color:var(--acc);background:var(--soft)}
+  .lh-opt:disabled{opacity:.45;cursor:not-allowed}
+  .lh-opt .c{flex:0 0 auto;font-size:13px;font-weight:700;color:var(--mut);background:var(--soft);border-radius:999px;padding:2px 9px;margin-top:2px}
+  .lh-opt .c.z{color:var(--ok)}
+  .lh-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 16px;background:var(--soft);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:14px}
+  .lh-stat .m{height:8px;border-radius:99px;background:#dfe6e2;overflow:hidden;margin-top:4px}
+  .lh-stat .m i{display:block;height:100%;border-radius:99px}
+  .lh-fb{border-left:5px solid var(--acc);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px;margin:12px 0;line-height:1.55}
+  .lh-fb.ok{border-color:var(--ok)}.lh-fb.no{border-color:var(--warn)}
+  .lh-delta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .lh-delta span{font-size:13px;border-radius:999px;padding:3px 10px;background:#e9efe9}
+  .lh-delta .up{background:#e3f1e3;color:#2f6b37}.lh-delta .dn{background:#f8e3da;color:#8a3a1c}
+  .lh-th{display:flex;gap:12px;border:1px solid #cfe0d6;background:#f1f8f4;border-radius:14px;padding:11px 14px;margin:12px 0;font-size:14.5px;line-height:1.5}
+  .lh-th .ic{font-size:24px;line-height:1}
+  .lh-th b{display:block;font-size:15px}
+  .lh-th a{color:var(--acc);font-weight:700;text-decoration:underline}
+  .lh-th small{color:var(--mut)}
+  .lh-ins{display:inline-block;margin-top:4px}
+  .lh-q .lh-opt{align-items:center}
+  .lh-cases-st{display:grid;gap:10px;margin:10px 0}
+  .lh-cs{border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+  .lh-cs h4{margin:0 0 4px;font-size:16px}
+  .lh-end-badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700;color:#fff;margin-left:6px}
+  .lh-tl{list-style:none;padding:0;margin:8px 0 0;font-size:14px}
+  .lh-tl li{border-left:3px solid var(--line);padding:4px 0 6px 12px;margin-left:6px}
+  .lh-tl li small{color:var(--mut)}
+  .lh-score{font:800 52px/1 Georgia,serif;color:var(--acc)}
+  .lh-prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:10px 0}
+  .lh-prof div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
+  .lh-ov{position:fixed;inset:0;z-index:100000;background:rgba(15,25,20,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+  .lh-ovbox{background:#fff;border-radius:16px;max-width:680px;width:100%;max-height:88vh;overflow:auto;padding:20px 22px;line-height:1.55}
+  .lh-rules{padding-left:20px}.lh-rules li{margin:5px 0}
+  @media (max-width:600px){.lh-body{padding:14px}.lh-bar{top:60px}}
+  </style>
+  <div class="lh" id="lh"><noscript><p>Bitte JavaScript aktivieren, um das Spiel zu spielen.</p></noscript></div>
+  <script>
+(function(){
+var root = document.getElementById("lh"); if (!root) return;
+var BASE = window.SITE_BASE || (/\/(en|it|rm)\/[^\/]*$/.test(location.pathname) ? "../" : "");
+var IMG = BASE + "img/lindenhof/";
+var KEY = "mo_lindenhof_v1";
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function img(f, alt){ return '<img src="'+IMG+f+'" alt="'+esc(alt||"")+'" onerror="this.remove()">'; }
+function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+
+/* ================= ROLLEN ================= */
+var ROLES = ["kg","u12","u34","u56"];
+var RL = {kg:{n:"Kindergarten", s:"LP KG", c:"#c0773a", img:"lh-rolle-kg.jpg"}, u12:{n:"1./2. Klasse", s:"LP 1./2.", c:"#3f8a66", img:"lh-rolle-12.jpg"}, u34:{n:"3./4. Klasse", s:"LP 3./4.", c:"#3c6ea3", img:"lh-rolle-34.jpg"}, u56:{n:"5./6. Klasse", s:"LP 5./6.", c:"#86579f", img:"lh-rolle-56.jpg"}};
+var TIME = 3;
+
+/* ================= THEORIE-KÄRTCHEN (verlinkt auf die Themenseite) ================= */
+var TH = {
+ konflikt:{t:"Konflikt oder Mobbing?", x:"Konflikte sind wechselseitig und auf Augenhöhe, sie enden mit einer Lösung. Mobbing ist einseitig, wiederholt und beruht auf einem Kräfteungleichgewicht. Darum passen Aussprache und Streitschlichtung nicht zu Mobbing.", q:"Walker et al., 2026, Kap. 8.1; Jannan, 2010", a:"konflikt"},
+ gewalt:{t:"Aggression, Gewalt, Mobbing", x:"Jedes Mobbing ist Gewalt, aber nicht jede Gewalt ist Mobbing. Wer als «Schläger» etikettiert wird, übernimmt leicht diese Rolle: Person und Verhalten trennen.", q:"Schubarth, 2020, S. 36 ff.", a:"gewalt"},
+ mobbing:{t:"Merkmale von Mobbing", x:"Kräfteungleichgewicht, Häufigkeit, Dauer, kein Ausweg aus eigener Kraft und oft das Ziel, jemanden auszuschliessen. Die Merkmale gelten gemeinsam.", q:"Jannan, 2010; Walker et al., 2026", a:"mobbing"},
+ cyber:{t:"Cybermobbing", x:"Online gibt es keinen Rückzugsort, Inhalte werden geteilt und bleiben. Beweise sichern, blockieren, melden, Hilfe holen und Online- und Offline-Ebene zusammen anschauen.", q:"Walker et al., 2026, Kap. 8.5", a:"cyber"},
+ rollen:{t:"Rollen in der Gruppe", x:"Mobbende, Assistierende, Verstärkende, Verteidigende und Aussenstehende: Mobbing braucht Publikum. Greifen Kinder ein, endet es in mehr als der Hälfte der Fälle. Götti-Systeme stärken jüngere Kinder.", q:"Salmivalli et al., 1996; Hauser et al., 2009", a:"rollen"},
+ lohnt:{t:"Warum Mobbing sich «lohnt»", x:"Mobbende erleben Macht, Anerkennung und kaum Risiko. Erwachsene müssen «Halt sagen» und «Halt geben», ruhig und bestimmt, wie im Fall Fabian.", q:"Alsaker, 2012, Kap. 6", a:"lohnt"},
+ prozess:{t:"Der Mobbingprozess", x:"Testphase, Konsolidierungsphase, Manifestationsphase: Je weiter der Prozess fortgeschritten ist, desto weniger reicht Prävention. Wer erst reagiert, wenn Betroffene sich melden, steht oft schon in Phase 3.", q:"Schubarth, 2020, S. 137", a:"prozess"},
+ entwicklung:{t:"Entwicklung in den Zyklen", x:"Mobbing ist in den ersten Schuljahren am häufigsten, später seltener, aber stabiler. Im Zyklus 1 braucht es sofortige, ruhige und klare Reaktionen.", q:"Jannan, 2010; Schubarth, 2020", a:"entwicklung"},
+ faktoren:{t:"Risiko- und Schutzfaktoren", x:"Freundschaften, eine Klasse mit klarer Haltung und ein protektives Schulklima schützen. Risikomerkmale erhöhen nur die Wahrscheinlichkeit und sind nie die Schuld der Betroffenen.", q:"Walker et al., 2026, Kap. 8.2", a:"faktoren"},
+ praevention:{t:"Prävention auf drei Ebenen", x:"Primär für alle, sekundär bei ersten Anzeichen, tertiär nach Vorfällen, jeweils auf Ebene Kind, Klasse und Schule. Je besser die Prävention, desto seltener braucht es aufwändige Interventionen.", q:"Schubarth, 2020, S. 122 ff.", a:"praevention"},
+ programme:{t:"Programme nach Zyklus", x:"Faustlos, Be-Prox, das Gegen-Gewalt-Konzept, Klassenrat und Patenschaften, No Blame Approach. Peer-Mediation eignet sich für Konflikte, nicht für Mobbing.", q:"Schubarth, 2020", a:"programme"},
+ nba:{t:"No Blame Approach", x:"Gespräch mit den Betroffenen, Unterstützungsgruppe aus Mobbenden und Helfenden ohne Schuldzuweisung, Nachgespräche. Keine Warum-Fragen, die Verantwortung liegt bei der Gruppe.", q:"Blum & Beck, 2019; Schubarth, 2020, S. 187 f.", a:"nba"},
+ intervention:{t:"Erkennen und intervenieren", x:"Was schadet: Kinder es «selbst lösen» lassen, blossstellen, Betroffene versetzen, unvorbereitet konfrontieren. Was hilft: Alsakers sechs Strategien, vom Sensibilisieren bis zum Zusammenstehen.", q:"Alsaker, 2012; Walker et al., 2026, Kap. 8.4", a:"intervention"},
+ eltern:{t:"Mit Eltern zusammenarbeiten", x:"Ernst nehmen, unterstützen statt beschuldigen, laufend und vor allem positiv informieren. Eltern sollen die andere Seite nicht selbst konfrontieren.", q:"Jannan, 2010; Schubarth, 2020; Walker et al., 2026", a:"eltern"},
+ schweigen:{t:"Warum Kinder schweigen", x:"Scham, Angst, dass es schlimmer wird, das Gefühl, selbst schuld zu sein, und bei Jungen die Regel, nicht zu «petzen». Darum vertrauen sich Gemobbte oft spät an.", q:"Jannan, 2010, S. 13", a:"eltern"}
+};
+var INS = {KO1:["Konflikt oder Mobbing? Einschätzungsbogen","KO1_Konflikt-oder-Mobbing"], KO2:["Beobachtungsprotokoll Gruppe und Pause","KO2_Beobachtungsprotokoll"], KO3:["Klassenregeln gegen Mobbing erarbeiten","KO3_Klassenregeln"], KO4:["No Blame Approach: Leitfaden","KO4_No-Blame-Approach"], KO5:["Interventionsplan bei Mobbing","KO5_Interventionsplan"], KO6:["Elterngespräch vorbereiten","KO6_Elterngespraech"], KO7:["Cybermobbing: Was ich tun kann","KO7_Cybermobbing-Lernende"]};
+var TAGS = {beob:"Beobachten und Einordnen", grenze:"Grenzen setzen", klasse:"Klasse einbeziehen", team:"Zusammenarbeiten", eltern:"Eltern einbeziehen", abwarten:"Abwarten"};
+
+/* Option: [Text, Zeit, Wirkung, nächste Szene, Tags, Theorie, Rückmeldung, Instrument] */
+function O(t,c,e,n,tag,th,fb,ins){ return {t:t,c:c,e:e||{},n:n,tag:tag||"",th:th,fb:fb,ins:ins}; }
+
+/* ================= FÄLLE ================= */
+var CASES = {
+pause:{title:"Der Ball gehört uns", short:"Pausenplatz: Ein Drittklässler und eine Gruppe aus der 5. Klasse", img:"lh-fall-pause.jpg", emo:"⚽", roles:["u34","u56"], start:1, kid:"Elias", init:{b:3,k:5,e:6,p:1},
+ ends:{good:"Elias spielt wieder mit. Nico und seine Kollegen haben in der Gruppe neue Rollen gefunden, und die Zuschauenden haben gelernt, sich einzumischen.", ok:"Das Mobbing hat aufgehört. Ob es so bleibt, hängt davon ab, ob ihr dranbleibt.", mid:"Es ist ruhiger, aber nicht gut. Elias ist vorsichtig, die Gruppe hat ihre Muster kaum geändert.", bad:"Elias verlässt das Schulhaus oder zieht sich ganz zurück. Für Nicos Gruppe hat sich das Mobbing «gelohnt»."},
+ n:{
+ p1:{o:"u34", t:"Elias aus deiner 3. Klasse kommt diese Woche zum dritten Mal mit nasser, schmutziger Jacke aus der Pause. Auf deine Frage sagt er nur: «Nichts passiert.» Später meint ein Mitschüler leise: «Die Grossen aus der Fünften lassen ihn nie mitspielen und nehmen ihm immer den Ball weg.»", o2:[
+  O("Das ist Pausenplatz. Kinder müssen lernen, so etwas selbst zu regeln.",0,{b:1,p:1},"p2w","abwarten","intervention","Der Mythos, Kinder sollten Mobbing selbst lösen, gehört zu dem, was schadet: Ohne Erwachsene eskaliert es leicht. Noch ist offen, ob es ein Konflikt oder Mobbing ist, doch Wegschauen klärt das nicht."),
+  O("Ich beobachte die nächsten Pausen gezielt und notiere, wer was tut.",1,{},"p2o","beob","prozess","Gut: Aufmerksames Beobachten in der Test- und der Konsolidierungsphase ist entscheidend, weil sich Gemobbte oft erst spät anvertrauen (Walker et al., 2026, Kap. 8.3).","KO2"),
+  O("Ich spreche Elias in einem ruhigen Moment allein an, ohne ihn zu drängen.",1,{},"p2g","beob","schweigen","Kinder schweigen oft aus Scham, aus Angst vor Verschlimmerung oder weil sie sich selbst schuldig fühlen (Jannan, 2010). Ein ruhiges Einzelgespräch ohne Druck öffnet eine Tür."),
+  O("In der nächsten Pause hole ich Elias und die Fünftklässler zusammen, damit sie sich vor mir aussprechen und die Sache klären.",1,{b:2,k:-1},"p2x","grenze","konflikt","Riskant: Mobbende und Betroffene unvorbereitet zu konfrontieren, gehört zu dem, was schadet (Alsaker, 2012; Walker et al., 2026). Eine Aussprache setzt gleich starke Seiten voraus, und das ist hier wohl nicht gegeben.")]},
+ p2o:{o:"u34", t:"Deine Notizen nach vier Pausen: Dreimal nehmen Nico aus der 5. Klasse und zwei Kollegen Elias den Ball weg und rufen ihm «Zwerg» nach. Etwa zehn Kinder schauen zu, einige lachen. Elias steht danach allein bei der Linde. Wie ordnest du das ein?", o2:[
+  O("Ein Konflikt um den Ball. Die Streitschlichtenden der 6. Klasse sollen vermitteln.",0,{b:1},"p3m","","konflikt","Hier fehlt das Gleichgewicht: älter, zu dritt, wiederholt, mit Publikum. Peer-Mediation eignet sich für Konflikte, nicht für Mobbing (Schubarth, 2020)."),
+  O("Beginnendes Mobbing: wiederholt, mit Kräfteungleichgewicht und Publikum. Ich informiere die Lehrperson der 5./6. Klasse.",1,{},"p3t","beob team","mobbing","Treffend: Kräfteungleichgewicht, Häufigkeit und Ausschluss sind erkennbar, die Dauer gilt es noch zu klären (Jannan, 2010; Walker et al., 2026). Mobbing ist ein Gruppenphänomen, darum braucht es die andere Klasse.","KO1"),
+  O("Ein paar grobe Szenen. Ich mache eine allgemeine Durchsage zu Fairplay auf dem Pausenplatz.",0,{p:1},"p3w","","rollen","Allgemeine Appelle erreichen die Zuschauenden selten: Sie fühlen sich umso weniger verantwortlich, je mehr andere auch zusehen (Verantwortungsdiffusion; Walker et al., 2026).")]},
+ p2g:{o:"u34", t:"Elias erzählt stockend: «Die Grossen sagen, ich sei ein Zwerg und eine Petze. Wenn ich es jemandem sage, wird alles schlimmer.» Er bittet dich, niemandem etwas zu erzählen.", o2:[
+  O("Ich verspreche ihm, es für mich zu behalten, und unternehme vorerst nichts.",0,{b:1,p:1},"p3w","abwarten","schweigen","Verständlich, aber dieses Versprechen kannst du nicht halten, ohne Elias allein zu lassen. Besser: offen sagen, was du als Nächstes tust, und ihn dabei mitreden lassen."),
+  O("Ich danke ihm, sage, dass es nicht seine Schuld ist, und erkläre, was ich als Nächstes tue, ohne ihn blosszustellen.",1,{b:-1},"p3t","beob team","schweigen","So bleibt Elias handlungsfähig und erlebt sich nicht nur als «Opfer» (Walker et al., 2026). Du nimmst ihn ernst und übernimmst als Erwachsene die Verantwortung."),
+  O("Ich rate ihm, sich zu wehren und zurückzurufen.",0,{b:1},"p3w","","mobbing","Gemobbte können die Situation definitionsgemäss nicht aus eigener Kraft beenden (Jannan, 2010). Der Ratschlag schiebt die Verantwortung zurück zum Kind.")]},
+ p2w:{o:"u34", t:"Am Montag will Elias nicht mehr in die Pause und bleibt im Schulzimmer. Am Nachmittag ruft seine Mutter an: Er habe seit einer Woche jeden Morgen Bauchweh.", o2:[
+  O("Ich beruhige sie: Das gebe sich wieder, Kinder hätten solche Phasen.",0,{b:1,e:-2,p:1},"pEsk","abwarten","mobbing","Körperliche Beschwerden und Angst vor der Schule können Folgen von Mobbing sein (Walker et al., 2026). Die Mutter fühlt sich nicht ernst genommen."),
+  O("Ich nehme ihre Sorge ernst, vereinbare ein Gespräch und kläre parallel mit der Lehrperson der 5./6. Klasse, was in der Pause los ist.",2,{e:1},"p3t","eltern team","eltern","Gut: Eltern sollen wissen, dass die Schule Mobbing nicht toleriert, und früh einbezogen werden (Walker et al., 2026; Schubarth, 2020).","KO6")]},
+ p2x:{o:"u34", t:"Bei der Aussprache sagt Nico vor allen: «Wir haben ja gar nichts gemacht.» Seither nennen die Fünftklässler Elias nur noch «Petze», und auch Kinder aus deiner Klasse machen mit.", o2:[
+  O("Ich ziehe die Schulsozialarbeit bei und spreche mich mit der Lehrperson der 5./6. Klasse ab.",2,{},"p3t","team","intervention","Lehrpersonen kennen ihre Grenzen und ziehen früh die Schulsozialarbeit bei (Walker et al., 2026, Kap. 8.4.2). Gut, dass du umschwenkst."),
+  O("Ich sorge dafür, dass Nico vor seiner Klasse bestraft wird. Alle sollen sehen, dass so etwas Folgen hat.",1,{k:-2,b:1},"p3s","grenze","intervention","Ein Kind vor der Klasse blosszustellen, schadet, auch ein mobbendes (Alsaker, 2012). Strafen allein können kontraproduktiv wirken (Walker et al., 2026).")]},
+ p3m:{o:"u56", t:"Die Streitschlichtenden deiner 6. Klasse kommen zu dir: «Die Schlichtung mit Elias und Nico hat nicht funktioniert. Elias hat kaum etwas gesagt, Nico hat nur gelacht.»", o2:[
+  O("Ich frage mich, ob das überhaupt ein Konflikt auf Augenhöhe ist, und setze mich mit der Lehrperson der 3./4. Klasse zusammen.",1,{},"p3t","beob team","konflikt","Richtig erkannt: Wo eine Seite unterlegen ist, kann sie nicht gleichberechtigt verhandeln. Walker et al. (2026) raten davon ab, Mobbende und Betroffene gegenüberzustellen."),
+  O("Wir versuchen es nochmals, diesmal leite ich die Schlichtung selbst.",1,{b:2,p:1},"pEsk","","konflikt","Auch mit einer Erwachsenen am Tisch bleibt das Ungleichgewicht. Für Elias ist die zweite Gegenüberstellung eine weitere Niederlage vor Publikum.")]},
+ p3w:{o:"u56", t:"Die Pausenaufsicht ruft dich: Nico und zwei Kollegen aus deiner Klasse haben Elias’ Znüni in den Abfall geworfen. Ein Kreis von Kindern steht darum herum und lacht.", o2:[
+  O("Ich gehe sofort hin, stoppe die Situation ruhig und bestimmt, kümmere mich um Elias und informiere die Lehrperson der 3./4. Klasse.",1,{b:-1},"p3t","grenze team","lohnt","«Halt sagen» und «Halt geben»: Wo Kinder klare Grenzen von Erwachsenen erleben, gibt es weniger Mobbing (Alsaker, 2012)."),
+  O("Es ist nicht meine Aufsicht, und das betroffene Kind ist nicht in meiner Klasse.",0,{b:2,k:-1,p:1},"pEsk","abwarten","intervention","Die Mobbenden sind in deiner Klasse. Alsakers sechste Strategie heisst «Zusammenstehen»: Das Kollegium zieht am gleichen Strick (Schubarth, 2020).")]},
+ p3s:{o:"u56", t:"Nico sitzt zwei Nachmittage nach. In der Klasse gilt er seither als «cool», und Elias wird neu auf dem Schulweg abgepasst.", o2:[
+  O("Ich spreche mich mit der Lehrperson der 3./4. Klasse und der Schulsozialarbeit ab, um gemeinsam vorzugehen.",2,{},"p3t","team","lohnt","Die Strafe hat Nico Aufmerksamkeit gebracht: Mobbing «lohnt» sich, solange die Gruppe es belohnt (Alsaker, 2012). Jetzt braucht es die Gruppe."),
+  O("Ich verschärfe die Strafe.",1,{b:1,k:-1,p:1},"pEsk","grenze","lohnt","Mehr Strafe ändert nichts daran, dass die Gruppe Nico Anerkennung gibt. Nicht beschuldigende, lösungsorientierte Interventionen wirken oft besser (Walker et al., 2026).")]},
+ pEsk:{o:"u34", t:"Elias’ Eltern schreiben der Schulleitung: Ihr Sohn werde seit Wochen fertiggemacht, und niemand unternehme etwas. Sie wollen ihn in ein anderes Schulhaus versetzen lassen.", o2:[
+  O("Ich unterstütze die Versetzung, dann ist wenigstens Ruhe.",0,{},"end_bad","","intervention","Betroffene zu versetzen verschiebt das Problem und bestätigt die Mobbenden. Es ist nur in Ausnahmefällen sinnvoll (Alsaker, 2012; Walker et al., 2026)."),
+  O("Ich bitte um ein Gespräch mit Eltern, Schulleitung, Schulsozialarbeit und der Lehrperson der 5./6. Klasse und schlage einen Interventionsplan vor.",2,{e:2},"p3t","eltern team","prozess","Ihr seid in der Manifestationsphase: Prävention reicht nicht mehr, es braucht Intervention (Schubarth, 2020). Ein gemeinsamer Plan gibt den Eltern Vertrauen zurück.","KO5")]},
+ p3t:{o:["u34","u56"], t:"Fallbesprechung mit Frau Caduff von der Schulsozialarbeit. Ihr wisst jetzt: Elias wird seit Wochen von Nico und zwei Kollegen ausgegrenzt und beschimpft, viele schauen zu. Wie geht ihr vor?", o2:[
+  O("No Blame Approach: zuerst ein Gespräch mit Elias, dann eine Unterstützungsgruppe aus Nico, seinen Kollegen und hilfsbereiten Kindern, ohne Schuldzuweisung.",2,{},"p4nb","klasse team","nba","Der No Blame Approach gilt als besonders geeignet für die Primarschule und übergibt der Gruppe die Verantwortung für die Verbesserung (Blum & Beck, 2019; Schubarth, 2020).","KO4"),
+  O("Gegen-Gewalt-Konzept nach Jannan: Gespräche mit Elias und mit den Mobbenden, dann eine Klassenstunde, in der Mitschülerinnen und Mitschüler als «Trainer» Rückmeldung geben.",2,{},"p4tr","klasse team","programme","Ein strukturiertes Konzept in fünf Schritten, das als besonders geeignet für jüngere Schülerinnen und Schüler gilt (Schubarth, 2020, nach Jannan)."),
+  O("Neue Pausenregel: Der Fussballplatz gehört nur noch der Mittelstufe.",1,{k:-1},"p4reg","","praevention","Eine Regel auf Ebene Schule kann Vorfälle reduzieren, verändert aber die Gruppendynamik nicht. Elias verliert dabei seinen Spielplatz."),
+  O("Elias soll ein Selbstbehauptungstraining besuchen, damit er stärker auftritt und sich künftig selbst wehren kann.",1,{},"p4sb","","faktoren","Elias zu stärken kann ergänzen, verschiebt aber die Verantwortung auf ihn. Risikomerkmale sind nie die Schuld der Betroffenen (Walker et al., 2026).")]},
+ p4nb:{o:"u56", t:"Du leitest die Unterstützungsgruppe: Nico, seine zwei Kollegen und drei Kinder, die sich für Elias einsetzen könnten. Nico schaut misstrauisch. Wie beginnst du?", o2:[
+  O("«Warum habt ihr das gemacht?» Erst wenn das geklärt ist, suchen wir nach Lösungen.",0,{k:-1},"p5mid","","nba","Im No Blame Approach werden den Mobbenden keine Warum-Fragen gestellt. Über Probleme sprechen erzeugt Probleme (Blum & Beck, 2019)."),
+  O("Ich erzähle, wie es Elias gerade geht, ohne Schuldige zu nennen, und frage: «Was könnt ihr tun, damit es ihm in der Pause besser geht?»",1,{b:-2,k:2},"p5nb","klasse","nba","Genau so: Die Kinder werden als Expertinnen und Experten für das Gruppengeschehen angesprochen, die Verantwortung liegt bei der Gruppe (Blum & Beck, 2019).")]},
+ p4tr:{o:"u56", t:"Die Klassenstunde mit den «Trainern» steht an. Wie bereitest du sie vor?", o2:[
+  O("Ich lasse die Klasse spontan sagen, was sie von Nicos Verhalten hält.",0,{k:-2},"p5mid","","intervention","Ohne Vorbereitung wird daraus schnell ein Tribunal. Ein Kind vor der Klasse blosszustellen, schadet (Alsaker, 2012)."),
+  O("Mit klaren Regeln: Rückmeldungen beschreiben Verhalten, nicht die Person. Nico und seine Kollegen sind vorher informiert, und am Schluss sagen alle, was sie ab morgen anders machen.",1,{b:-2,k:1},"p5nb","klasse grenze","gewalt","Person und Verhalten zu trennen, verhindert Etikettierung (Schubarth, 2020). Die Klasse wird zur Ressource.")]},
+ p4reg:{o:"u34", t:"Elias darf nicht mehr auf den grossen Platz. Er sagt traurig: «Jetzt bin ich ganz allein. Die anderen aus meiner Klasse spielen ja auch Fussball.»", o2:[
+  O("Ich richte mit der 5./6. Klasse ein Götti-System ein: Ältere Kinder begleiten jüngere in der Pause, auch Elias.",2,{b:-1,k:1},"p5mid","klasse team","rollen","Götti- und Patensysteme stärken jüngere Kinder und machen aus Zuschauenden Verteidigende (Hauser et al., 2009)."),
+  O("Er gewöhnt sich daran.",0,{b:1},"end_mid","abwarten","faktoren","Freundschaften schützen gerade schüchterne Kinder (Walker et al., 2026). Elias verliert gerade sein Netz.")]},
+ p4sb:{o:"u34", t:"Elias tritt nach dem Training mutiger auf. Doch die Gruppe macht weiter, und jetzt lachen auch Kinder aus deiner Klasse mit.", o2:[
+  O("Jetzt beziehen wir die Gruppe ein: No Blame Approach mit der Lehrperson der 5./6. Klasse.",2,{},"p4nb","team klasse","rollen","Mobbing lebt von der Gruppendynamik, darum muss die Intervention dort ansetzen (Walker et al., 2026)."),
+  O("Weiter abwarten, das Training braucht Zeit, bis es wirkt.",0,{b:2,p:1},"end_bad","abwarten","prozess","Mit jeder Woche verschieben sich die Normen der Gruppe. In der Manifestationsphase haben die Mobbenden die Definitionsmacht (Schubarth, 2020).")]},
+ p5nb:{o:"u34", t:"Nachgespräch mit Elias nach einer Woche. Er erzählt, dass ihn zwei Sechstklässler zum Fussball holen und Nico ihn in Ruhe lässt.", o2:[
+  O("Ich führe auch mit der Gruppe Nachgespräche, würdige, was gelungen ist, und gebe den Eltern eine positive Rückmeldung.",1,{b:-1,k:1,e:1},"end_good","eltern klasse","nba","Nachgespräche sind fester Teil des Ansatzes. Positive Rückmeldungen an Eltern empfiehlt auch Schubarth (2020)."),
+  O("Super, damit ist der Fall erledigt.",0,{},"end_ok","","praevention","Ohne Nachgespräche drohen Rückfälle. Tertiärprävention heisst: Rückfälle verhindern und alle Beteiligten begleiten (Schubarth, 2020).")]},
+ p5mid:{o:"u34", t:"Es ist ruhiger geworden. Trotzdem wirkt Elias vorsichtig, und einer von Nicos Kollegen nennt ihn noch immer «Petze».", o2:[
+  O("Nachgespräche mit Elias und der Gruppe, ein Pausen-Götti und ein Gespräch mit den Eltern.",2,{b:-1,k:1},"end_ok","team eltern","praevention","Dranbleiben lohnt sich: Begleitung nach Vorfällen gehört zur Tertiärprävention (Schubarth, 2020)."),
+  O("Ich schliesse den Fall ab.",0,{},"end_mid","","prozess","Der Prozess ist gebremst, aber nicht gelöst.")]}
+ }},
+
+chat:{title:"Klassenchat 6b", short:"Cybermobbing in der 6. Klasse, das bis in den Kindergarten reicht", img:"lh-fall-chat.jpg", emo:"📱", roles:["u56","kg"], start:2, kid:"Mia", init:{b:4,k:5,e:6,p:2},
+ ends:{good:"Die Bilder sind gesichert, gemeldet und gelöscht, die Klasse hat eigene Chatregeln, und Mia fühlt sich wieder sicher. Auch Luca ist entlastet.", ok:"Mia geht es besser, aber noch sind nicht alle Fäden verknüpft.", mid:"Das Mobbing ist leiser geworden, aber nicht vorbei. Mia bleibt vorsichtig, Luca unsicher.", bad:"Mia zieht sich zurück, die Familie verliert das Vertrauen in die Schule. Die Gruppe hat gelernt, dass Cybermobbing folgenlos bleibt."},
+ n:{
+ c1:{o:"kg", t:"Luca aus deinem Kindergarten ist seit Tagen still, will nicht mehr in die Bauecke und klammert sich beim Abschied an seine Mutter. Beim Abholen sagt sie beiläufig: «Bei uns ist gerade viel los. Seine grosse Schwester Mia hat Ärger in einem Chat.»", o2:[
+  O("Ich biete der Mutter ein kurzes Gespräch an. Mit ihrem Einverständnis informiere ich die Lehrperson der 5./6. Klasse.",1,{},"c2","eltern team","eltern","Eltern sind im Zyklus 1 enge Partner (Alsaker, 2012). Du klärst die Weitergabe mit der Mutter ab, statt über ihren Kopf hinweg zu handeln."),
+  O("Das ist eine Familiensache.",0,{b:1},"c2late","abwarten","cyber","Cybermobbing kennt keinen Rückzugsort und reicht bis ins Kinderzimmer, auch zu Geschwistern (Walker et al., 2026)."),
+  O("Ich sage im Morgenkreis, dass Luca gerade traurig ist und alle besonders lieb zu ihm sein sollen.",0,{k:-1},"c2late","klasse","schweigen","Gut gemeint, doch so steht Luca vor allen im Mittelpunkt. Gefühle benennen gelingt besser im Einzelkontakt oder allgemein, ohne Namen.")]},
+ c2:{o:"u56", t:"Von der Kindergartenlehrperson erfährst du: Im Klassenchat deiner 6. Klasse kursieren seit drei Wochen bearbeitete Fotos von Mia mit Spottnamen. Jede Woche kommt ein neues dazu. 18 von 22 Kindern sind im Chat.", o2:[
+  O("Ich verlange von allen, den Chat sofort zu löschen, damit die Bilder verschwinden und niemand sie weiter teilen kann.",1,{},"c3loss","grenze","cyber","Verständlich, aber zuerst Beweise sichern (Screenshots), dann löschen (Walker et al., 2026). Ganz löschen lassen sich Inhalte ohnehin kaum."),
+  O("Ich spreche Mia allein, sichere mit ihr und den Eltern Screenshots und informiere Schulleitung und Schulsozialarbeit.",2,{e:1},"c3t","eltern team","cyber","Beweise sichern, blockieren, melden und Hilfe holen sind die zentralen Schritte bei Cybermobbing (Walker et al., 2026, Kap. 8.5).","KO7"),
+  O("Der Chat ist Freizeit. Dafür ist die Schule nicht zuständig.",0,{b:2,p:1},"c3esk","abwarten","cyber","Wer online gemobbt wird, wird meist auch offline gemobbt (Walker et al., 2026). Die Klasse ist dieselbe.")]},
+ c2late:{o:"u56", t:"Mias Vater steht wütend in deinem Schulzimmer. Er hat den Vater von Tim angerufen, der die Bilder gemacht haben soll, und ihm gedroht. Nun verlangt er, dass Tim die Schule verlässt.", o2:[
+  O("Ich höre zu, nehme ihn ernst und lade zu einem Gespräch mit Schulleitung und Schulsozialarbeit ein. Ich bitte ihn, nicht selbst auf andere Familien zuzugehen.",2,{e:1},"c3t","eltern team","eltern","Eltern sollen nicht über den Kopf des Kindes und der Schule hinweg handeln, sonst wird das Mobbing meist schlimmer (Jannan, 2010).","KO6"),
+  O("Ich erkläre ihm, dass ein privater Klassenchat nicht Sache der Schule ist.",0,{e:-3,b:1,p:1},"c3esk","","eltern","Eltern sollen wissen, dass die Schule Mobbing und Cybermobbing nicht toleriert und Vorfälle begleitet (Walker et al., 2026).")]},
+ c3loss:{o:"u56", t:"Der Chat ist gelöscht. Zwei Tage später taucht eine der Montagen in einer anderen Gruppe auf. Mias Eltern fragen nach Belegen, und du hast keine.", o2:[
+  O("Mit Mia und den Eltern sichern wir, was noch auffindbar ist, und ziehen die Schulsozialarbeit bei.",2,{},"c3t","team eltern","cyber","Verfügbarkeit ist typisch für Cybermobbing: Inhalte werden kopiert und geteilt (Walker et al., 2026)."),
+  O("Ich habe getan, was ich konnte.",0,{b:2},"end_bad","abwarten","cyber","Mia bleibt mit dem Problem allein.")]},
+ c3esk:{o:"u56", t:"Mia kommt seit drei Tagen nicht mehr zur Schule. Die Eltern überlegen, Anzeige zu erstatten.", o2:[
+  O("Krisengespräch mit Schulleitung, Schulsozialarbeit und Eltern. Wir prüfen auch, ob einzelne Handlungen strafbar sind und die Polizei beigezogen werden soll.",2,{e:1},"c3t","team eltern","cyber","Cybermobbing ist kein eigener Straftatbestand, einzelne Handlungen wie unbefugte Bildaufnahmen oder Beschimpfung können es aber sein (Walker et al., 2026).","KO5"),
+  O("Ich warte ab, bis sich die Lage beruhigt.",0,{b:2},"end_bad","abwarten","prozess","In der Manifestationsphase hilft nur noch Intervention (Schubarth, 2020).")]},
+ c3t:{o:["u56","kg"], t:"Fallbesprechung mit der Schulsozialarbeit: die Lehrperson der 5./6. Klasse für Mia und die Klasse, die Kindergartenlehrperson für Luca. Wie teilt ihr euch die Aufgaben?", o2:[
+  O("Wir holen Mia und Tim an einen Tisch, damit sie sich aussprechen und Tim sich entschuldigt.",1,{b:2},"c4bad","","konflikt","Walker et al. (2026) raten ausdrücklich davon ab, Mobbende und Betroffene gegenüberzustellen. Mia ist unterlegen."),
+  O("Ein Elternabend der 6. Klasse zum Thema Cybermobbing, ohne Namen zu nennen, mit Fachperson und Informationen zu Anlaufstellen.",1,{e:1},"c4mid","eltern","praevention","Sensibilisieren ist Alsakers erste Strategie. Für einen laufenden Fall reicht es aber nicht."),
+  O("Arbeitsteilung: In der 6. Klasse eine Unterstützungsgruppe ohne Schuldzuweisung und Chatregeln mit der Klasse. Im Kindergarten ist die Lehrperson für Luca da und hält Kontakt zur Mutter.",2,{b:-2,k:1},"c4good","team klasse eltern","nba","Beide Ebenen sind im Blick: die Gruppe, die das Mobbing trägt, und das Geschwisterkind, das mitbelastet ist.","KO4")]},
+ c4good:{o:"u56", t:"Die Unterstützungsgruppe hat Ideen gesammelt, Tim schlägt selbst vor, die Bilder zu melden. Nun geht es um die Klasse als Ganzes.", o2:[
+  O("Ich verbiete Handys und Chats bis zum Schuljahresende.",0,{k:-1},"c5mid","grenze","cyber","Ein Verbot verlagert das Geschehen nur. Im Zyklus 2 lohnt es sich, Datenschutz, das Erkennen von Cybermobbing und Anlaufstellen zu thematisieren (Walker et al., 2026)."),
+  O("Wir erarbeiten gemeinsam Chatregeln, besprechen Anlaufstellen wie die 147 und prüfen die Regeln im Klassenrat.",1,{b:-1,k:2},"c5","klasse","programme","Regeln, die die Klasse selbst aushandelt und regelmässig überprüft, tragen besser (Schubarth, 2020). Mia entscheidet mit, was angesprochen wird.","KO3")]},
+ c4mid:{o:"u56", t:"Der Elternabend war gut besucht. Doch Mia erzählt, dass in einer privaten Gruppe weiterhin Bilder von ihr geteilt werden.", o2:[
+  O("Jetzt intervenieren wir gezielt mit der Schulsozialarbeit: eine Unterstützungsgruppe ohne Schuldzuweisung.",2,{},"c4good","team klasse","nba","Prävention und Intervention ergänzen sich: Bei einem laufenden Fall braucht es beides (Schubarth, 2020)."),
+  O("Wir haben genug getan, jetzt sind die Eltern gefordert.",0,{b:1},"end_mid","abwarten","schweigen","Mia erlebt, dass die Erwachsenen das Problem nicht lösen. Genau das fürchten viele Kinder (Jannan, 2010).")]},
+ c4bad:{o:"u56", t:"Bei der Aussprache schweigt Mia. Tim entschuldigt sich halbherzig. Am Abend entsteht eine neue Chatgruppe: «6b ohne Mia».", o2:[
+  O("Ich schwenke um: Mit der Schulsozialarbeit bilden wir eine Unterstützungsgruppe ohne Schuldzuweisung.",2,{},"c4good","team","nba","Gut umgeschwenkt: Was nicht funktioniert, wird durch etwas anderes ersetzt (Blum & Beck, 2019)."),
+  O("Sie haben sich ausgesprochen. Damit ist der Fall abgeschlossen.",0,{b:2},"end_bad","","konflikt","Die Aussprache hat die Machtverhältnisse bestätigt.")]},
+ c5:{o:"kg", t:"Luca baut wieder Türme mit anderen Kindern und lacht. Seine Mutter schaut beim Abholen kurz herein.", o2:[
+  O("Ich erzähle ihr, was mir bei Luca Positives auffällt, und wir vereinbaren, in Kontakt zu bleiben.",1,{e:1},"end_good","eltern","eltern","Laufend informieren, mit Schwerpunkt auf positiven Rückmeldungen (Schubarth, 2020)."),
+  O("Ich lasse es dabei bewenden, es läuft ja wieder.",0,{},"end_ok","","eltern","Es läuft gut. Eine kurze positive Rückmeldung hätte das Vertrauen zusätzlich gestärkt.")]},
+ c5mid:{o:"kg", t:"Luca wirkt weiterhin unsicher. Die Mutter erzählt, zu Hause gebe es wegen des Handyverbots viel Streit mit Mia.", o2:[
+  O("Ich biete ein Gespräch an und tausche mich mit der Lehrperson der 5./6. Klasse aus.",1,{e:1},"end_ok","eltern team","eltern","Schule und Eltern sprechen sich im Zyklus 2 zu Regeln und Anlaufstellen ab, ohne Panik zu verbreiten (Walker et al., 2026)."),
+  O("Das ist nicht meine Baustelle.",0,{},"end_mid","","intervention","Zusammenstehen heisst auch, über die Stufen hinweg zu denken (Alsaker, nach Schubarth, 2020).")]}
+ }},
+
+kiga:{title:"Ich bestimme hier!", short:"Aggression im Kindergarten und der Übertritt in die 1. Klasse", img:"lh-fall-kiga.jpg", emo:"🧱", roles:["kg","u12"], start:1, kid:"Lea", init:{b:3,k:6,e:6,p:1},
+ ends:{good:"Noah erlebt, dass sich Aggression nicht lohnt und Hilfsbereitschaft schon. Lea und Amir spielen wieder sicher.", ok:"Es ist besser geworden. Für den Übertritt in die 1. Klasse bleibt noch etwas zu tun.", mid:"Noah ist gebremst, aber nicht begleitet. Lea bleibt vorsichtig.", bad:"Lea wechselt den Kindergarten, Noah hat Mitläufer gefunden. Das Muster zieht mit in die 1. Klasse."},
+ n:{
+ k1:{o:"kg", t:"Zum dritten Mal an diesem Morgen reisst Noah den Turm von Lea ein und schubst sie. Lea weint, die anderen Kinder weichen zurück. Noah ruft: «Ich bestimme hier, was gespielt wird!»", o2:[
+  O("Das ist normales Tobspiel unter Kindergartenkindern, sie machen das unter sich aus.",0,{b:1,p:1},"k2w","abwarten","konflikt","Ob ein Spiel einvernehmlich ist, erkennt mensch daran, ob beide freiwillig mitmachen, die Rollen wechseln und lachen (Schubarth, 2020). Hier ist das nicht so."),
+  O("Sofort, ruhig und klar: «Stopp. Hier bestimme ich, wie wir miteinander spielen.» Dann tröste ich Lea und benenne, was sie fühlt.",1,{b:-1},"k2g","grenze","lohnt","Wie im Fall Fabian bei Alsaker (2012): Jüngere Kinder brauchen die unmittelbare Erfahrung, dass aggressives Verhalten nichts bringt, und eine ruhige, bestimmte Erwachsene."),
+  O("Vor allen: «Noah, du bist immer der, der alles kaputt macht!»",0,{k:-1},"k2l","grenze","gewalt","Etikettierung: Wer als «Schläger» abgestempelt wird, übernimmt die Rolle. Person und Verhalten trennen (Schubarth, 2020).")]},
+ k2g:{o:"kg", t:"Noah testet weiter, aber seltener. Beim Beobachten fällt dir auf: Er richtet sich immer wieder gegen dieselben zwei Kinder, Lea und Amir.", o2:[
+  O("Im Morgenkreis üben wir «Stopp sagen» und «Hilfe holen», ohne Namen zu nennen.",1,{k:1},"k3k","klasse","rollen","Jüngere Kindergartenkinder wissen oft nicht, was sie tun sollen. Konkrete Handlungsmöglichkeiten sollten geübt werden (Hauser et al., 2009)."),
+  O("Ich notiere meine Beobachtungen und lade Noahs Mutter zu einem Gespräch ein, das mit etwas Positivem beginnt.",1,{},"k3e","eltern beob","eltern","Eltern brauchen Unterstützung statt Vorwürfen (Alsaker, 2012). Beobachtungen machen das Gespräch konkret.","KO2")]},
+ k2w:{o:"kg", t:"Zwei weitere Kinder machen jetzt mit, wenn Noah Lea den Weg versperrt. Lea will morgens nicht mehr in den Kindergarten.", o2:[
+  O("Ab sofort setze ich klare Grenzen und lade Noahs und Leas Eltern zu je einem Gespräch ein.",2,{b:-1},"k3e","grenze eltern","lohnt","Aggressive Kinder finden schon im Kindergarten Mitläufer. Merken diese früh, dass Mobbing keine Zuwendung bringt, verliert es schnell an Reiz (Alsaker, 2012)."),
+  O("Ich warte noch ab. Kinder in diesem Alter verändern sich schnell.",0,{b:2,p:1},"k3esk","abwarten","entwicklung","Mobbing gibt es schon im Kindergarten, oft körperlich und offen. Interventionen wirken in diesem Alter am stärksten (Schubarth, 2020).")]},
+ k2l:{o:"kg", t:"Noah sagt jetzt selbst: «Ich bin halt der Böse.» Die anderen Kinder nennen ihn so, und er verhält sich danach.", o2:[
+  O("Ich biete Noah bewusst Beziehung an: Ich spiele mit ihm, lobe gelungene Momente und bleibe beim Verhalten klar.",2,{k:1},"k2g","grenze","praevention","Auf Ebene Kind: Beziehungsangebote, Wärme und das Trennen von Person und Verhalten (Schubarth, 2020)."),
+  O("Er bekommt Auszeiten, bis er sich besser benimmt.",1,{b:1,k:-1},"k3esk","grenze","gewalt","Auszeiten allein verändern das Bild nicht, das Noah und die Gruppe von ihm haben.")]},
+ k3e:{o:"kg", t:"Im Gespräch sagt Noahs Mutter: «Zu Hause gebe ich meistens nach, sonst schreit er stundenlang. Ich bin am Ende.»", o2:[
+  O("Ich mache ihr klar, dass ihr Erziehungsstil das Problem verursacht und sie zu Hause konsequenter sein muss.",0,{e:-3},"k4bad","eltern","lohnt","Sie weiss das wahrscheinlich längst. Schuldzuweisungen führen meist zum Rückzug. Eltern brauchen Unterstützung (Alsaker, 2012)."),
+  O("Ich höre zu, anerkenne ihre Mühe und vereinbare mit ihr, dass Aggression zu Hause wie im Kindergarten nichts bringt. Dazu ein Hinweis auf die Elternberatung.",1,{e:2,b:-1},"k4t","eltern","lohnt","Kommt ein Kind zu Hause mit Aggression durch, lernt es, dass sie sich lohnt (Patterson, nach Alsaker, 2012). Gemeinsame Abmachungen unterbrechen das.","KO6")]},
+ k3k:{o:"kg", t:"Die Kinder sagen jetzt «Stopp» zu Noah. Er wird wütend und geht in der gemeinsamen Pause auf kleinere Kinder der 1. Klasse los.", o2:[
+  O("Ich informiere die Lehrperson der 1./2. Klasse, die in dieser Pause Aufsicht hat, und schlage ein gemeinsames Vorgehen vor.",1,{},"k4t","team","intervention","Alle kennen ihre Rolle und arbeiten zusammen (Walker et al., 2026, Kap. 8.4.2)."),
+  O("Für die Pause bin ich nicht zuständig.",0,{b:1,p:1},"k3esk","abwarten","intervention","Alsakers Strategie «Zusammenstehen»: Das Kollegium zieht am gleichen Strick.")]},
+ k3esk:{o:"kg", t:"Leas Eltern wollen sie in einen anderen Kindergarten geben. Amir weint jeden Morgen, und mehrere Kinder machen bei Noah mit.", o2:[
+  O("Ich ziehe Schulleitung und Schulsozialarbeit bei und lade die Lehrperson der 1./2. Klasse zu einer Fallbesprechung ein.",2,{e:1},"k4t","team","intervention","Lehrpersonen kennen ihre Grenzen und ziehen früh die Schulsozialarbeit bei (Walker et al., 2026).","KO5"),
+  O("Ein Wechsel ist für Lea vielleicht das Beste.",0,{},"end_bad","","intervention","Betroffene zu versetzen verschiebt das Problem und bestätigt die Mobbenden (Alsaker, 2012).")]},
+ k4bad:{o:"kg", t:"Noahs Mutter meldet sich nicht mehr. Im Kindergarten wird es nicht besser.", o2:[
+  O("Ich ziehe die Schulsozialarbeit bei und biete ein neues Gespräch an, das mit Noahs Stärken beginnt.",2,{e:2},"k4t","eltern team","eltern","Laufend informieren, mit Schwerpunkt auf positiven Rückmeldungen, und gemeinsam Lösungen suchen (Schubarth, 2020)."),
+  O("Wenn die Mutter nicht will, kann ich nichts machen.",0,{b:1},"end_mid","abwarten","eltern","Im Zyklus 1 sind Eltern besonders eng einzubeziehen (Alsaker, 2012).")]},
+ k4t:{o:["kg","u12"], t:"Die Lehrperson der 1./2. Klasse erzählt: Noah schubst in der Pause Kleinere. Im Sommer kommt er in die 1. Klasse. Was plant ihr gemeinsam?", o2:[
+  O("Noah darf nicht mehr in die gemeinsame Pause, bis er sich an die Regeln hält.",1,{k:-1},"k5mid","grenze","lohnt","Ausschluss schützt kurzfristig, lehrt Noah aber nichts und isoliert ihn."),
+  O("Gleiche Regeln im Kindergarten und auf dem Pausenplatz, je ein Götti aus der 2. Klasse für Noah und für Lea, regelmässiger Austausch.",2,{b:-2,k:2},"k5good","team klasse","rollen","Götti-Systeme (Hauser et al., 2009) und gleiche Reaktionen aller Erwachsenen («Zusammenstehen», Alsaker) wirken zusammen."),
+  O("In beiden Stufen führen wir Faustlos ein: Lektionen zu Empathie, Impulskontrolle und dem Umgang mit Wut.",2,{k:1},"k5prog","klasse","programme","Faustlos ist für Kindergarten und Unterstufe gedacht (Schubarth, 2020). Programme wirken in diesem Alter am stärksten.")]},
+ k5good:{o:"u12", t:"Das Götti-System läuft. Noahs Götti erzählt stolz, dass Noah einem Kind beim Aufstehen geholfen hat.", o2:[
+  O("Ich mache solche Momente sichtbar, lobe Noah dafür und gebe auch den Eltern eine positive Rückmeldung.",1,{e:1,k:1},"end_good","eltern","praevention","Lob für erwünschtes Verhalten und Lernen am Modell fördern prosoziales Verhalten (Schubarth, 2020)."),
+  O("Gut so, wir lassen es laufen.",0,{},"end_ok","","praevention","Es läuft. Positive Rückmeldungen hätten den Effekt noch verstärkt.")]},
+ k5prog:{o:"kg", t:"Nach drei Faustlos-Lektionen ruft Noah im Streit plötzlich: «Ich bin wütend!», statt zuzuschlagen. Nicht immer, aber immer öfter.", o2:[
+  O("Ich greife das im Alltag auf, benenne Gefühle sofort, lobe ihn und informiere die Eltern, damit sie es zu Hause aufnehmen.",1,{b:-1,e:1},"end_good","eltern klasse","programme","Programme wirken vor allem, wenn sie gut umgesetzt und in den Schulalltag eingebunden sind (Schubarth, 2020)."),
+  O("Die Lektionen laufen, das reicht.",0,{},"end_ok","","programme","Ohne Einbindung in den Alltag bleibt die Wirkung kleiner.")]},
+ k5mid:{o:"u12", t:"Noah ist jetzt im Kindergarten umso aggressiver. Lea traut sich kaum mehr in die Bauecke.", o2:[
+  O("Wir setzen uns doch zusammen und erarbeiten einen gemeinsamen Plan für beide Stufen.",2,{},"k5good","team","praevention","Einzelmassnahmen greifen zu kurz, es braucht umfassende Konzepte (sozialökologischer Ansatz; Schubarth, 2020)."),
+  O("Abwarten, bis er in die Schule kommt.",0,{b:1},"end_mid","abwarten","entwicklung","Gerade jetzt wäre die Wirkung am grössten.")]}
+ }},
+
+eltern:{title:"Die Mütze", short:"Zwei Elternhäuser, zwei Lehrpersonen und ein Schulweg", img:"lh-fall-eltern.jpg", emo:"🧢", roles:["u12","u34"], start:2, kid:"Sara", init:{b:3,k:6,e:4,p:1},
+ ends:{good:"Der Schulweg ist wieder sicher, beide Familien vertrauen der Schule, und die beiden Lehrpersonen ziehen am gleichen Strick.", ok:"Das Plagen hat aufgehört, doch das Vertrauen ist noch nicht ganz zurück.", mid:"Ruhiger, aber ungeklärt. Sara bleibt unsicher, die Elternlager bestehen weiter.", bad:"Die Erwachsenen streiten, die Kinder bleiben allein. Der Streit zwischen den Familien prägt den Schulweg."},
+ n:{
+ e1:{o:"u12", t:"Eine Mail von Saras Eltern, mit Kopie an die Schulleitung: «Jan aus der 4. Klasse plagt unsere Tochter seit Wochen auf dem Schulweg. Gestern hat er sie in den Schnee gestossen. Wir verlangen eine Bestrafung, sonst gehen wir zur Polizei.» Im Elternchat deiner Klasse wird schon darüber diskutiert.", o2:[
+  O("Ich antworte sofort, dass Jan bestraft wird.",0,{e:1},"e2p","grenze","intervention","Ordnungsmassnahmen werden erst nach Anhörung entschieden (Schubarth, 2020). Ohne Klärung bringst du Jans Lehrperson in eine schwierige Lage."),
+  O("Der Schulweg ist Sache der Eltern, dafür ist die Schule nicht verantwortlich.",0,{e:-2,b:1},"e2w","abwarten","eltern","Eltern sollen wissen, dass die Schule Vorfälle begleitet (Walker et al., 2026). Die Mail ist auch ein Hilferuf."),
+  O("Ich danke für die Information, schlage ein Gespräch vor und informiere die Lehrperson der 3./4. Klasse.",1,{e:1},"e2t","eltern team","eltern","Ruhig, ernst nehmend und ohne vorschnelles Urteil.")]},
+ e2p:{o:"u34", t:"Jans Eltern stehen bei dir: «Unser Sohn wird bestraft, ohne dass ihn jemand angehört hat? Wir gehen zur Schulleitung.» Die Lehrperson der 1./2. Klasse hat die Strafe bereits versprochen.", o2:[
+  O("Ich übernehme Jans Sicht und vertrete sie gegenüber meiner Kollegin.",0,{k:-1},"e3split","","intervention","So entstehen zwei Lager. Alsaker: Kollegium, Schulleitung und Eltern ziehen am gleichen Strick."),
+  O("Ich setze mich mit der Lehrperson der 1./2. Klasse zusammen, um das Vorgehen zu klären und beide Kinder anzuhören.",1,{},"e2t","team","intervention","Ein gemeinsames Vorgehen klärt Rollen und Abläufe (Walker et al., 2026, Kap. 8.4.2).")]},
+ e2w:{o:"u12", t:"Saras Vater hat Jans Vater auf der Strasse zur Rede gestellt. Es kam zu einem lauten Streit, und im Elternchat fliegen die Fetzen.", o2:[
+  O("Ich ziehe die Schulleitung bei, lade beide Elternpaare getrennt ein und schreibe sachlich in den Elternchat, dass sich die Schule darum kümmert.",2,{e:2},"e2t","eltern team","eltern","Eltern, die die andere Seite direkt konfrontieren, verschlimmern die Lage meist (Jannan, 2010). Jetzt braucht es Struktur.","KO6"),
+  O("Das ist ein Streit unter Erwachsenen.",0,{b:1,k:-2},"end_bad","abwarten","eltern","Die Kinder spüren den Streit der Erwachsenen, und der Schulweg bleibt unsicher.")]},
+ e2t:{o:["u12","u34"], t:"Ihr beide sprecht euch ab. Die Lehrperson der 3./4. Klasse sagt: «Jan behauptet, Sara und ihre Freundinnen würden ihn auch beschimpfen.» Wie geht ihr vor?", o2:[
+  O("Jede von uns glaubt ihrem Kind und vertritt es gegenüber den Eltern. Wir kennen unsere Kinder schliesslich am besten.",0,{k:-1,e:-1},"e3split","","lohnt","Arbeiten Lehrpersonen gegeneinander, fehlt die gemeinsame Haltung, die Kindern Halt gibt (Alsaker, 2012)."),
+  O("Wir klären sorgfältig: einzelne Gespräche mit Sara und Jan ohne Schuldfrage, dazu ein Blick auf den Schulweg. Danach informieren wir beide Elternpaare.",1,{},"e3c","team beob","intervention","Für jeden Fall gilt: einzeln analysieren, dann methodisch vorgehen (Walker et al., 2026).","KO1")]},
+ e3split:{o:"u34", t:"Es gibt jetzt zwei Elternlager. Saras Freundinnen nennen Jan auf dem Pausenplatz nur noch «den Schläger». Jan wird immer wütender.", o2:[
+  O("Ich bitte die Schulleitung, ein Gespräch zwischen uns Lehrpersonen zu moderieren, damit wir gemeinsam vorgehen können.",2,{},"e3c","team","intervention","Zusammenstehen ist die Voraussetzung für alles Weitere (Alsaker, nach Schubarth, 2020)."),
+  O("Ich halte mich raus.",0,{k:-2},"end_bad","abwarten","gewalt","Die Etikettierung «Schläger» kann Jan in genau diese Rolle drängen (Schubarth, 2020).")]},
+ e3c:{o:"u34", t:"Die Gespräche zeigen: Seit drei Wochen nehmen Jan und sein Freund Dario Sara jeden Morgen die Mütze weg und werfen sie herum. Einmal hat Jan sie gestossen. Sara sagt, sie könne nichts dagegen tun. Jan meint: «Das war doch nur Spass.» Wie ordnest du das ein?", o2:[
+  O("Ein einmaliger Gewaltvorfall. Jan bekommt eine Strafe, dann ist der Fall abgeschlossen.",0,{},"e4s","grenze","gewalt","Der Stoss war einmalig, das Wegnehmen der Mütze geschieht aber seit Wochen."),
+  O("Ein Konflikt unter Kindern. Sara und Jan sollen sich mit Hilfe der Streitschlichtenden einigen.",0,{b:1},"e4m","","konflikt","Jan und Dario sind älter und zu zweit, Sara kann sich nicht wehren. Mediation setzt Gleichgewicht voraus (Schubarth, 2020)."),
+  O("Anzeichen für beginnendes Mobbing: wiederholt, älter, zu zweit, und Sara kommt nicht allein heraus. Ich interveniere früh und schütze Sara.",1,{b:-1},"e4g","beob grenze","prozess","Testphase: Hier wirkt Prävention am stärksten (Schubarth, 2020). «Nur Spass» ist eine typische Relativierung.","KO1")]},
+ e4g:{o:"u34", t:"Gespräch mit Jan und Dario. Beide sind nervös.", o2:[
+  O("Klare Grenze beim Verhalten, aber die beiden als Personen ernst nehmen: Was könnt ihr tun, damit der Schulweg für die Jüngeren sicher ist? Die Abmachung halten wir schriftlich fest.",1,{b:-1,k:1},"e5","grenze","intervention","Grenzen setzen, konsequent und wertschätzend: Alsakers vierte Strategie (nach Schubarth, 2020)."),
+  O("Jan entschuldigt sich vor Saras Klasse.",0,{k:-1},"e5mid","grenze","intervention","Ein Kind vor einer Klasse blosszustellen, schadet, auch ein mobbendes (Alsaker, 2012).")]},
+ e4m:{o:"u12", t:"Die Schlichtung scheitert. Sara weint, Jan und Dario grinsen sich an.", o2:[
+  O("Ich breche ab. Zusammen mit der Lehrperson der 3./4. Klasse greife ich jetzt lösungsorientiert bei Jan und Dario ein.",2,{},"e4g","team","konflikt","Was nicht funktioniert, wird durch etwas anderes ersetzt (Blum & Beck, 2019)."),
+  O("Nochmals versuchen, beim zweiten Mal klappt es vielleicht.",0,{b:2},"end_bad","","konflikt","Für Sara ist jede Gegenüberstellung eine neue Niederlage.")]},
+ e4s:{o:"u34", t:"Jan hat eine Strafe bekommen und ist wütend. Dario macht allein weiter, jetzt heimlich. Saras Eltern sind noch immer nicht zufrieden.", o2:[
+  O("Ich führe doch noch ein lösungsorientiertes Gespräch mit beiden Jungen.",2,{},"e4g","grenze","intervention","Bestrafungen können kontraproduktiv wirken, nicht beschuldigende, lösungsorientierte Interventionen sind oft wirksamer (Walker et al., 2026)."),
+  O("Der Fall ist abgeschlossen.",0,{b:1},"end_mid","","intervention","Dario war nie Teil der Lösung.")]},
+ e5:{o:["u12","u34"], t:"Die Mützen-Geschichte hat aufgehört. Nun informiert ihr die Eltern. Wie macht ihr das?", o2:[
+  O("Beide Elternpaare kommen ohne Vorbereitung an einen Tisch.",0,{e:-1},"end_ok","eltern","eltern","Riskant: Die Fronten können sich verhärten. Getrennte, vorbereitete Gespräche sind sicherer."),
+  O("Je ein vorbereitetes Gespräch: Was die Schule getan hat und wie die Eltern helfen können. Im Elternchat eine kurze, sachliche Information ohne Namen.",1,{e:3},"end_good","eltern team","eltern","Eltern raten, nicht über den Kopf des Kindes und der Schule hinweg zu handeln, und sie laufend positiv informieren (Jannan, 2010; Schubarth, 2020).","KO6")]},
+ e5mid:{o:"u12", t:"Sara hat immer noch Angst vor dem Schulweg. Jan meidet sie, Dario grinst.", o2:[
+  O("Nachgespräch mit Sara und eine Schulweggruppe, in der ältere Kinder die jüngeren begleiten.",1,{b:-1},"end_ok","klasse","rollen","Ältere Kinder als Verteidigende stärken jüngere (Hauser et al., 2009)."),
+  O("Das legt sich.",0,{},"end_mid","abwarten","prozess","Ohne Begleitung bleibt Sara verunsichert.")]}
+ }}
+};
+var FIRST = {pause:"p1", chat:"c1", kiga:"k1", eltern:"e1"};
+var ORDER = ["pause","kiga","chat","eltern"];
+
+/* ================= WISSENSKARTEN: [Frage, [Antworten], richtig, Erklärung, Theorie] ================= */
+var W = [
+ ["Welche Merkmale machen Mobbing nach Jannan (2010) aus?", ["Kräfteungleichgewicht, Häufigkeit, Dauer und kein Ausweg aus eigener Kraft","ein heftiger Streit mit lauten Worten","körperliche Gewalt, die sichtbar verletzt und von mindestens einer Zeugin oder einem Zeugen bestätigt wird","Uneinigkeit über einen Gegenstand"], 0, "Die Merkmale gelten gemeinsam. Walker et al. (2026) ergänzen den Ausschluss als häufiges Ziel.", "mobbing"],
+ ["Wie lange dauert Mobbing gemäss Walker et al. (2026) in der Regel?", ["3–4 Monate oder länger","einen Tag","eine Woche, sofern die Angriffe jeden Tag und vor der ganzen Klasse stattfinden","immer ein ganzes Schuljahr"], 0, "Mobbing zieht sich über längere Zeit hin, über Wochen bis Monate.", "mobbing"],
+ ["In wie vielen Mobbingfällen gibt es Zuschauende?", ["in über 85 Prozent","in etwa 10 Prozent","in rund der Hälfte, vor allem auf dem Pausenplatz und im Klassenchat","nie"], 0, "Mobbing braucht ein Publikum (Walker et al., 2026, Kap. 8.1).", "rollen"],
+ ["Wer macht beim Mobbing aktiv mit, würde aber selbst nie damit beginnen?", ["Assistierende","Verstärkende, die zuschauen, lachen und anfeuern","Aussenstehende","Verteidigende"], 0, "So beschreiben es die Rollen nach Salmivalli et al. (1996).", "rollen"],
+ ["Was zeigen Beobachtungsstudien, wenn Kinder bei Mobbing eingreifen?", ["In mehr als der Hälfte der Fälle wird das Mobbing gestoppt.","Es wird fast immer schlimmer.","Es ändert sich nichts.","Die Eingreifenden werden in der Regel selbst zu den nächsten Betroffenen."], 0, "Hier liegt das grösste Potenzial der Prävention (Hauser et al., 2009).", "rollen"],
+ ["Welche drei Phasen beschreibt Schubarth (2020) im Mobbingprozess?", ["Test-, Konsolidierungs- und Manifestationsphase","Streit, Versöhnung, Freundschaft","Beobachtung, Diagnose, Therapie und Nachsorge durch die Schulpsychologie","Anfang, Mitte, Schluss"], 0, "Je schutzloser sich die Kinder fühlen, desto grösser die Gefahr der Eskalation.", "prozess"],
+ ["In welcher Phase des Mobbingprozesses wirkt Prävention am stärksten?", ["in der Testphase","in der Manifestationsphase, wenn alle den Ernst der Lage erkannt haben","erst nach einem schweren Vorfall","in keiner Phase"], 0, "In der Manifestationsphase braucht es Intervention (Schubarth, 2020).", "prozess"],
+ ["Was meint Alsaker (2012) mit «Mobbing lohnt sich»?", ["Mobbende erleben Macht, Anerkennung und kaum Risiko.","Mobbende bekommen bessere Noten.","Mobbing ist für alle Beteiligten, auch für die Betroffenen, eine lehrreiche Erfahrung.","Mobbing ist erlaubt."], 0, "Dazu kommt «Spannung» in einem als langweilig erlebten Schulalltag.", "lohnt"],
+ ["Woran erkennt mensch ein einvernehmliches Tobspiel?", ["Beide machen freiwillig mit, wechseln die Rollen und lachen.","Ein Kind gewinnt immer.","Die Lehrperson hat es erlaubt und schaut von Anfang bis Ende aufmerksam zu.","Es wird laut."], 0, "Kinder können das selbst noch kaum begründen, die Erwachsenen benennen es für sie (nach Schubarth, 2020).", "konflikt"],
+ ["Warum eignet sich Peer-Mediation nicht für Mobbing?", ["Weil kein Gleichgewicht zwischen den Seiten besteht.","Weil sie zu lange dauert.","Weil Kinder im Zyklus 2 grundsätzlich noch nicht fähig sind, Streit unter Gleichaltrigen zu schlichten.","Weil sie verboten ist."], 0, "Mediation setzt voraus, dass beide Seiten gleichberechtigt verhandeln können.", "programme"],
+ ["Welche Fragen werden den Mobbenden im No Blame Approach nicht gestellt?", ["Warum-Fragen","Fragen nach Ideen für eine Lösung","Fragen danach, was sie selbst beitragen können, damit es dem betroffenen Kind besser geht","überhaupt keine Fragen"], 0, "Auch die Einladung zur Gruppe nennt den Grund nicht (Blum & Beck, 2019).", "nba"],
+ ["Wer gehört im No Blame Approach zur Unterstützungsgruppe?", ["Mobbende und hilfsbereite Mitschülerinnen und Mitschüler","nur die Betroffenen","die Eltern","Schulleitung, Schulsozialarbeit und Schulpsychologie"], 0, "Die Gruppe übernimmt die Verantwortung für die Verbesserung.", "nba"],
+ ["Für welche Stufe hält Schubarth (2020) den No Blame Approach für besonders geeignet?", ["für die Primarschule","für die Sekundarstufe II","für die Berufsschule und die Erwachsenenbildung","nur für den Kindergarten"], 0, "Also für Zyklus 1 und 2 (Schubarth, 2020, S. 188).", "nba"],
+ ["Was empfehlen Walker et al. (2026) Betroffenen von Cybermobbing?", ["Beweise sichern, blockieren, melden und Hilfe holen","online sofort zurückschlagen","das Handy für immer abgeben","nichts sagen, damit die Eltern das Gerät nicht wegnehmen"], 0, "Zurückschlagen provoziert Eskalation.", "cyber"],
+ ["Ist Cybermobbing in der Schweiz ein eigener Straftatbestand?", ["Nein, aber einzelne Handlungen können strafbar sein.","Ja, seit 2010.","Ja, aber nur für Jugendliche ab 15 Jahren mit eigenem Account.","Nein, nichts davon ist strafbar."], 0, "Zum Beispiel Beschimpfung, Drohung oder unbefugte Bildaufnahmen.", "cyber"],
+ ["Wo bekommen Kinder und Jugendliche in der Schweiz rund um die Uhr Beratung?", ["bei der 147 von Pro Juventute","bei der 117","bei der 1818","bei der Schulpsychologie, aber nur während der Schulzeit und mit Anmeldung durch die Eltern"], 0, "Per Telefon, SMS oder Chat.", "cyber"],
+ ["Welche Form von Mobbing ist im Zyklus 2 laut Jannan (2010) am häufigsten?", ["verbales Mobbing","Cybermobbing","körperliches Mobbing mit Sachbeschädigung auf dem Schulweg","gar keine"], 0, "Weil Kinder Beleidigungen oft nicht als Gewalt sehen, lohnt es sich, gemeinsam zu klären, was verletzt.", "gewalt"],
+ ["Wie verändert sich Mobbing mit dem Alter (Jannan, 2010)?", ["Es wird seltener, aber ein Fall dauert länger.","Es wird häufiger und kürzer.","Es bleibt in allen Altersstufen genau gleich häufig und gleich stabil.","Es verschwindet ab der 3. Klasse."], 0, "Mobbing ist in den ersten Schuljahren am häufigsten.", "entwicklung"],
+ ["In welchem Alter zeigen Trainingsprogramme die grössten Wirkungen?", ["zwischen zwei und sechs Jahren","zwischen 14 und 16 Jahren, wenn Jugendliche ihr Verhalten selbst reflektieren können","bei Erwachsenen","Das Alter spielt keine Rolle."], 0, "Bei jüngeren Kindern sind die Wirkungen grösser (Schubarth, 2020).", "praevention"],
+ ["Was ist Faustlos?", ["ein Präventionsprogramm zu Empathie, Impulskontrolle und Umgang mit Wut","ein Selbstverteidigungskurs","eine Regel, dass auf dem Pausenplatz während der grossen Pause nicht gerauft werden darf","eine Strafe"], 0, "Die deutsche Version von «Second Step» für Kindergarten und Grundschule.", "programme"],
+ ["Was zeigte die Evaluation von Be-Prox in 16 Kindergärten?", ["weniger Betroffene, mehr Hilfsbereitschaft","keine Veränderung","mehr Konflikte","weniger Konflikte in der Gruppe, aber mehr Angst der Kinder vor den Lehrpersonen"], 0, "Dazu ein grösseres Sicherheitsgefühl (Schubarth, 2020).", "programme"],
+ ["Was gehört zu dem, was bei Mobbing schadet?", ["Betroffene in eine andere Klasse versetzen","Beobachtungen notieren","die Schulsozialarbeit früh beiziehen und einen Plan mit klaren Zuständigkeiten erstellen","Eltern informieren"], 0, "Das verschiebt das Problem und bestätigt die Mobbenden (Alsaker, 2012).", "intervention"],
+ ["Wie heisst Alsakers sechste Strategie?", ["Zusammenstehen","Strafen","Abwarten, bis die Kinder den Konflikt selbst gelöst haben","Versetzen"], 0, "Kollegium, Schulleitung und Eltern ziehen am gleichen Strick.", "intervention"],
+ ["Warum schweigen viele gemobbte Kinder (Jannan, 2010)?", ["aus Scham und Angst, dass es schlimmer wird","weil es ihnen egal ist","weil sie das Mobbing selbst lustig finden und nicht als Problem sehen","weil sie nicht reden dürfen"], 0, "Dazu kommen Schuldgefühle und bei Jungen die Regel, nicht zu «petzen».", "schweigen"],
+ ["Was sollen Eltern von gemobbten Kindern eher nicht tun?", ["die Mobbenden oder deren Eltern direkt konfrontieren","ruhig zuhören","Vorfälle notieren und bei Cybermobbing Screenshots als Beweise sichern","früh mit der Lehrperson reden"], 0, "Meist wird das Mobbing danach schlimmer (Jannan, 2010).", "eltern"],
+ ["Was beeinflusst die Häufigkeit von Mobbing laut Jannan (2010) kaum?", ["die Klassengrösse","das Klassenklima","die Haltung und die Regeln, die eine Schule gemeinsam festlegt und durchsetzt","die Schulkultur"], 0, "Auch Herkunft und Stadt oder Land spielen kaum eine Rolle.", "faktoren"],
+ ["Was schützt laut Walker et al. (2026) vor Mobbing?", ["Freundschaften und eine Klasse, die sich früh dagegen stellt","ein besonders strenger Unterricht","möglichst wenig Gruppenarbeit, damit sich die Kinder nicht gegenseitig ablenken","ein Handyverbot"], 0, "Dazu Empathie, tragfähige Beziehungen und ein protektives Schulklima.", "faktoren"],
+ ["Wie ordnet Schubarth (2020) Aggression, Gewalt und Mobbing?", ["Mobbing ist eine Form von Gewalt, Gewalt eine Form von Aggression.","Alle drei bedeuten dasselbe.","Gewalt ist eine besondere Form von Mobbing, und Mobbing ist ein Teil der Aggression.","Sie haben nichts miteinander zu tun."], 0, "Jedes Mobbing ist Gewalt, aber nicht jede Gewalt ist Mobbing.", "gewalt"],
+ ["Welche Gewaltform meint «Zuwendung entziehen, Gerüchte, Ausschluss»?", ["psychische Gewalt","physische Gewalt","institutionelle Gewalt, die von den Strukturen und Regeln der Schule ausgeht","keine Gewalt"], 0, "Psychische Gewalt kann verbal, nonverbal oder indirekt sein (Schubarth, 2020).", "gewalt"],
+ ["Warum sprechen Walker et al. (2026) lieber von «Betroffenen» als von «Opfern»?", ["Damit sich die Kinder nicht dauerhaft als handlungsunfähig erleben.","Weil «Opfer» zu kurz ist.","Weil Kinder im Zyklus 1 und 2 das Wort «Opfer» in der Regel noch nicht kennen.","aus rechtlichen Gründen"], 0, "Für die psychische Gesundheit ist wichtig, handlungsfähig zu bleiben.", "mobbing"],
+ ["Was bedeuten Primär-, Sekundär- und Tertiärprävention?", ["für alle vorher, bei ersten Anzeichen, nach Vorfällen","drei Programme für drei Zyklen","drei Stufen von Strafen","drei Elterngespräche: zu Beginn, in der Mitte und am Ende des Schuljahres"], 0, "Nach Schubarth (2020, S. 122 f.).", "praevention"],
+ ["Was schlagen Hauser et al. (2009) für jüngere Kinder vor?", ["ein Götti- oder Patensystem mit älteren Kindern","ein Handyverbot","getrennte Pausen für jede Klasse, damit sich Ältere und Jüngere nicht mehr begegnen","mehr Hausaufgaben"], 0, "Ein älteres Kind steht einem jüngeren zur Seite.", "rollen"]
+];
+
+var RULES = '<ul class="lh-rules">'
+ +'<li><b>Ihr seid ein Team</b> von Lehrpersonen im Schulhaus Lindenhof: Kindergarten, 1./2., 3./4. und 5./6. Klasse. Bei weniger als vier Spielenden übernimmt jemand zwei Rollen.</li>'
+ +'<li><b>Eine Runde ist eine Schulwoche.</b> Jede Woche beginnt mit einer Wissenskarte. Danach kommen die Szenen der laufenden Fälle.</li>'
+ +'<li><b>Wer am Zug ist, entscheidet</b> für ihre oder seine Rolle. Ihr dürft euch beraten. Bei <b>Fallbesprechungen</b> entscheiden alle beteiligten Lehrpersonen gemeinsam.</li>'
+ +'<li><b>Zeit ist knapp:</b> Jede Lehrperson hat pro Woche '+TIME+' ⏱. Gespräche und Absprachen kosten Zeit, Abwarten kostet nichts. Eine richtig beantwortete Wissenskarte gibt +1 ⏱.</li>'
+ +'<li><b>Eure Entscheide bestimmen den Verlauf:</b> Jeder Fall verzweigt sich. Werte wie die Belastung des Kindes, das Klima in der Gruppe und das Vertrauen der Eltern zeigen die Folgen.</li>'
+ +'<li><b>Nach jedem Entscheid</b> gibt es eine Rückmeldung und ein Theorie-Kärtchen mit Link zur Themenseite. Lest sie, sie helfen bei den nächsten Entscheiden.</li>'
+ +'<li><b>Am Schluss</b> zeigt die Auswertung jeden Fall als Zeitleiste, euer Schulklima, eure Profile und Fragen für die Nachbesprechung.</li>'
+ +'</ul>';
+var REFLECT = ["An welcher Stelle hättet ihr in einem Fall früher handeln können? Woran hättet ihr es erkennen können?","Wo habt ihr zwischen Konflikt, Gewalt und Mobbing unterschieden, und woran habt ihr das festgemacht?","Welche Rolle spielten die Zuschauenden und die Gruppe in euren Fällen?","Wie habt ihr Eltern einbezogen? Was würdet ihr im nächsten Elterngespräch anders machen?","Was braucht ein Schulhaus, damit Lehrpersonen bei solchen Fällen «zusammenstehen» können?"];
+
+/* ================= ZUSTAND ================= */
+var S = null;
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+function pl(role){ return S.names[S.own[role]]; }
+function roleChip(r, withName){ return '<span class="lh-role" style="--rc:'+RL[r].c+'"><i>'+RL[r].s+'</i>'+(withName?esc(pl(r)):"")+'</span>'; }
+function owners(nd){ return typeof nd.o === "string" ? [nd.o] : nd.o; }
+function thBox(key, ins){
+ var t = TH[key]; if (!t) return "";
+ if (S && S.th.indexOf(key) < 0) S.th.push(key);
+ var h = '<div class="lh-th"><span class="ic">📚</span><div><b>Theorie dazu: '+esc(t.t)+'</b>'+esc(t.x)+' <small>('+esc(t.q)+')</small><br><a href="konflikte.html#'+t.a+'" target="_blank" rel="noopener">Mehr dazu auf der Themenseite →</a>';
+ if (ins && INS[ins]) h += '<br><span class="lh-ins">🛠 Instrument: <a href="'+BASE+'downloads/konflikte/'+INS[ins][1]+'.pdf" target="_blank" rel="noopener">'+esc(INS[ins][0])+' (PDF)</a></span>';
+ return h + '</div></div>';
+}
+function meters(cid){
+ var c = CASES[cid], s = S.cs[cid], ph = ["","Testphase","Konsolidierung","Manifestation"][s.p];
+ function m(lbl, v, good){ var pct = v*10, col = good ? (v>=6?"#4c8a55":v>=4?"#c9a227":"#b5532f") : (v<=3?"#4c8a55":v<=6?"#c9a227":"#b5532f"); return '<div>'+lbl+': <b>'+v+'/10</b><div class="m"><i style="width:'+pct+'%;background:'+col+'"></i></div></div>'; }
+ return '<div class="lh-stat">'+m("Belastung "+c.kid, s.b, false)+m("Klima in der Gruppe", s.k, true)+m("Vertrauen der Eltern", s.e, true)+'<div>Stand: <b>'+ph+'</b><div class="m"><i style="width:'+(s.p*33.3)+'%;background:'+(s.p===1?"#4c8a55":s.p===2?"#c9a227":"#b5532f")+'"></i></div></div></div>';
+}
+function bar(){
+ return '<div class="lh-bar"><span class="wk">Woche '+Math.min(S.week,S.weeks)+' / '+S.weeks+'</span><div class="tm">'
+  + ROLES.map(function(r){ return '<span style="--rc:'+RL[r].c+'">'+RL[r].s+' · '+esc(pl(r))+' · '+"⏱".repeat(Math.max(0,S.t[r]))+(S.t[r]<=0?"–":"")+'</span>'; }).join("")
+  + '</div><button id="lh-help">📖 Regeln</button><button id="lh-quit">Neu</button></div>';
+}
+function wireBar(){
+ var h = root.querySelector("#lh-help"); if (h) h.onclick = help;
+ var q = root.querySelector("#lh-quit"); if (q) q.onclick = function(){ if (confirm("Neues Spiel starten? Der aktuelle Spielstand geht verloren.")) { try{localStorage.removeItem(KEY);}catch(e){} setup(); } };
+}
+function help(){
+ var d = document.createElement("div"); d.className = "lh-ov";
+ d.innerHTML = '<div class="lh-ovbox" role="dialog" aria-modal="true"><h3 style="margin-top:0">So wird gespielt</h3>'+RULES+'<p style="text-align:right;margin:12px 0 0"><button class="lh-btn">Zurück zum Spiel</button></p></div>';
+ root.appendChild(d);
+ d.querySelector("button").onclick = function(){ d.remove(); };
+ d.onclick = function(e){ if (e.target === d) d.remove(); };
+}
+function top(){ var y = root.getBoundingClientRect().top + window.scrollY - 90; if (window.scrollY > y) window.scrollTo({top:y, behavior:"smooth"}); }
+
+/* ================= SETUP ================= */
+function setup(){
+ var saved = load(), n = 3, weeks = 8, chosen = ["pause","kiga","chat"];
+ var h = '<div class="lh-panel"><div class="lh-hero">'+img("lh-intro.jpg","Ein Schweizer Primarschulhaus mit Pausenplatz und Linde")+'<span class="emo">🏫</span><div class="cap"><small>Kooperatives Fallspiel · Zyklus 1 und 2</small><b>Schulhaus Lindenhof</b></div></div><div class="lh-body">'
+  + '<p>Ihr seid das Team des Schulhauses Lindenhof. Im Lauf eines Quartals tauchen Fälle von Konflikten, Gewalt und Mobbing auf, die mehrere Klassen betreffen. Ihr beobachtet, ordnet ein, entscheidet und arbeitet zusammen. Jeder Entscheid verändert den weiteren Verlauf, und nach jedem Zug erfahrt ihr, was die Forschung dazu sagt.</p>'
+  + (saved && saved.week && !saved.over ? '<p><button class="lh-btn" id="lh-res">Gespeichertes Spiel fortsetzen (Woche '+saved.week+')</button></p>' : '')
+  + '<h3>Wie viele spielen mit?</h3><div class="lh-chips" id="lh-n">'+[1,2,3,4].map(function(i){ return '<button data-n="'+i+'"'+(i===n?' class="on"':'')+'>'+i+(i===1?" Person":" Personen")+'</button>'; }).join("")+'</div>'
+  + '<div class="lh-pl" id="lh-pl"></div>'
+  + '<h3>Welche Fälle?</h3><div class="lh-cases">'+ORDER.map(function(id){ var c = CASES[id]; return '<label><input type="checkbox" value="'+id+'"'+(chosen.indexOf(id)>=0?' checked':'')+'><span><b>'+c.emo+' '+esc(c.title)+'</b>'+esc(c.short)+'<br>'+c.roles.map(function(r){ return '<small style="color:'+RL[r].c+';font-weight:700">'+RL[r].s+'</small>'; }).join(" · ")+'</span></label>'; }).join("")+'</div>'
+  + '<h3>Spieldauer</h3><div class="lh-chips" id="lh-w">'+[[6,"6 Wochen · etwa 40 Min."],[8,"8 Wochen · etwa 60 Min."],[10,"10 Wochen · etwa 75 Min."]].map(function(x){ return '<button data-w="'+x[0]+'"'+(x[0]===weeks?' class="on"':'')+'>'+x[1]+'</button>'; }).join("")+'</div>'
+  + '<details style="margin-top:16px"><summary><b>Spielregeln</b></summary>'+RULES+'</details>'
+  + '<p style="margin-top:18px"><button class="lh-btn" id="lh-go">Quartal beginnen</button></p></div></div>';
+ root.innerHTML = h;
+ var names = ["Spielerin 1","Spieler 2","Spielerin 3","Spieler 4"];
+ function plRender(){
+  var box = root.querySelector("#lh-pl"), out = "";
+  for (var i=0;i<n;i++){
+   var rs = ROLES.filter(function(r,j){ return j % n === i; });
+   out += '<label>Name '+(i+1)+'<input class="lh-input" data-i="'+i+'" maxlength="20" value="'+esc(names[i])+'"><span>'+rs.map(function(r){ return '<span class="lh-role" style="--rc:'+RL[r].c+';margin:2px 4px 0 0">'+RL[r].n+'</span>'; }).join("")+'</span></label>';
+  }
+  box.innerHTML = out;
+  box.querySelectorAll("input").forEach(function(inp){ inp.oninput = function(){ names[+inp.dataset.i] = inp.value; }; });
+ }
+ plRender();
+ root.querySelectorAll("#lh-n button").forEach(function(b){ b.onclick = function(){ n = +b.dataset.n; root.querySelectorAll("#lh-n button").forEach(function(x){ x.classList.toggle("on", x===b); }); plRender(); }; });
+ root.querySelectorAll("#lh-w button").forEach(function(b){ b.onclick = function(){ weeks = +b.dataset.w; root.querySelectorAll("#lh-w button").forEach(function(x){ x.classList.toggle("on", x===b); }); }; });
+ var res = root.querySelector("#lh-res"); if (res) res.onclick = function(){ S = saved; resume(); };
+ root.querySelector("#lh-go").onclick = function(){
+  var cs = [].map.call(root.querySelectorAll(".lh-cases input:checked"), function(x){ return x.value; });
+  if (!cs.length) { alert("Bitte wähle mindestens einen Fall."); return; }
+  var own = {}; ROLES.forEach(function(r,j){ own[r] = j % n; });
+  S = {names:names.slice(0,n).map(function(x,i){ return (x||"").trim() || ("Person "+(i+1)); }), own:own, weeks:weeks, week:1, t:{}, cs:{}, q:[], cur:null, step:"week", fb:null, ord:null, prof:names.slice(0,n).map(function(){ return {}; }), th:[], kn:{r:0,n:0}, used:[], over:false};
+  cs.forEach(function(id){ var c = CASES[id]; S.cs[id] = {node:FIRST[id], due:c.start, b:c.init.b, k:c.init.k, e:c.init.e, p:c.init.p, hist:[], end:null}; });
+  ROLES.forEach(function(r){ S.t[r] = TIME; });
+  save(); weekIntro();
+ };
+}
+function resume(){
+ if (S.over) return finish();
+ if (S.step === "fb" && S.fb) return feedback();
+ if (S.step === "scene" && S.cur) { return S.cur === "wissen" ? wissen() : scene(S.cur); }
+ weekIntro();
+}
+
+/* ================= WOCHE ================= */
+var TIPS = ["prozess","rollen","konflikt","lohnt","praevention","eltern","nba","faktoren","intervention","entwicklung"];
+function weekIntro(){
+ S.step = "week"; save();
+ var active = Object.keys(S.cs).filter(function(id){ return !S.cs[id].end; });
+ var due = active.filter(function(id){ return S.cs[id].due <= S.week; });
+ var tip = TIPS[(S.week-1) % TIPS.length];
+ var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img("lh-intro.jpg","Schulhaus Lindenhof")+'<span class="emo">🗓️</span><div class="cap"><small>Schulhaus Lindenhof</small><b>Woche '+S.week+'</b></div></div><div class="lh-body">'
+  + '<p>Diese Woche: eine Wissenskarte'+(due.length ? ' und '+due.length+' Szene'+(due.length>1?"n":"")+' aus '+due.map(function(id){ return '«'+esc(CASES[id].title)+'»'; }).join(", ") : '. In keinem Fall steht diese Woche etwas an')+'. Jede Lehrperson hat '+TIME+' ⏱.</p>'
+  + '<div class="lh-cases-st">'+Object.keys(S.cs).map(function(id){ var c = CASES[id], s = S.cs[id];
+     return '<div class="lh-cs"><h4>'+c.emo+' '+esc(c.title)+(s.end?endBadge(s.end):(s.due>S.week?' <small style="color:var(--mut);font-weight:400">· nächste Szene in Woche '+s.due+'</small>':''))+'</h4>'+c.roles.map(function(r){ return roleChip(r,true); }).join(" ")+(s.hist.length||s.end?meters(id):'<p style="margin:6px 0 0;color:var(--mut);font-size:14px">'+(s.due>S.week?'Beginnt in Woche '+s.due+'.':'Beginnt diese Woche.')+'</p>')+'</div>'; }).join("")+'</div>'
+  + '<div style="margin-top:6px"><b>Impuls der Woche</b>'+thBox(tip)+'</div>'
+  + '<p><button class="lh-btn" id="lh-start">Woche '+S.week+' beginnen</button></p></div></div>';
+ root.innerHTML = h; wireBar(); top();
+ root.querySelector("#lh-start").onclick = function(){
+  S.q = ["wissen"].concat(ORDER.filter(function(id){ return S.cs[id] && !S.cs[id].end && S.cs[id].due <= S.week; }));
+  next();
+ };
+}
+function endBadge(t){ var m = {good:["gut gelöst","#4c8a55"], ok:["gelöst","#6f9a4f"], mid:["teilweise","#c9a227"], bad:["ungünstig","#b5532f"], open:["offen","#7a8580"]}[t]; return '<span class="lh-end-badge" style="background:'+m[1]+'">'+m[0]+'</span>'; }
+function next(){
+ S.fb = null; S.ord = null;
+ if (!S.q.length) return weekEnd();
+ S.cur = S.q.shift(); S.step = "scene"; save();
+ if (S.cur === "wissen") wissen(); else scene(S.cur);
+}
+function weekEnd(){
+ var open = Object.keys(S.cs).filter(function(id){ return !S.cs[id].end; });
+ if (S.week >= S.weeks || !open.length) return finish();
+ S.week++; ROLES.forEach(function(r){ S.t[r] = TIME; }); save(); weekIntro();
+}
+
+/* ================= WISSENSKARTE ================= */
+function wissen(){
+ var role = ROLES[(S.week-1) % 4];
+ if (S.wq == null || S.wqWeek !== S.week) {
+  var pool = W.map(function(x,i){ return i; }).filter(function(i){ return S.used.indexOf(i) < 0; });
+  if (!pool.length) { S.used = []; pool = W.map(function(x,i){ return i; }); }
+  S.wq = pool[Math.floor(Math.random()*pool.length)]; S.wqWeek = S.week; S.wo = shuffle([0,1,2,3]); save();
+ }
+ var q = W[S.wq];
+ var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img("lh-wissen.jpg","Fachbücher auf einem Pult")+'<span class="emo">📖</span><div class="cap"><small>Wissenskarte · Woche '+S.week+'</small><b>Was sagt die Forschung?</b></div></div><div class="lh-body">'
+  + '<p class="lh-who">Antwortet: '+roleChip(role,true)+' · richtig = +1 ⏱ für diese Woche. Die anderen dürfen helfen.</p>'
+  + '<p style="font-size:18px"><b>'+esc(q[0])+'</b></p><div class="lh-opts lh-q">'
+  + S.wo.map(function(k){ return '<button class="lh-opt" data-k="'+k+'"><span>'+esc(q[1][k])+'</span></button>'; }).join("") + '</div></div></div>';
+ root.innerHTML = h; wireBar(); top();
+ root.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){
+  var k = +b.dataset.k, ok = k === q[2];
+  S.used.push(S.wq); S.kn.n++; if (ok) { S.kn.r++; S.t[role]++; }
+  S.fb = {kind:"w", ok:ok, q:q[0], a:q[1][q[2]], x:q[3], th:q[4], role:role};
+  S.step = "fb"; S.wq = null; save(); feedback();
+ }; });
+}
+
+/* ================= SZENE ================= */
+function scene(cid){
+ var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], ow = owners(nd);
+ if (!S.ord || S.ord.node !== s.node) { S.ord = {node:s.node, o:shuffle(nd.o2.map(function(x,i){ return i; }))}; save(); }
+ var team = ow.length > 1;
+ var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img(team?"lh-besprechung.jpg":c.img, c.title)+'<span class="emo">'+(team?"🤝":c.emo)+'</span><div class="cap"><small>Fall · '+esc(c.title)+' · Woche '+S.week+'</small><b>'+(team?"Fallbesprechung":esc(c.short))+'</b></div></div><div class="lh-body">'
+  + (team ? '<div class="lh-team">🤝 <b>Gemeinsam entscheiden:</b> '+ow.map(function(r){ return roleChip(r,true); }).join(" ")+' Besprecht euch und wählt zusammen. Die Zeit wird bei allen Beteiligten abgezogen.</div>'
+          : '<p class="lh-who">Am Zug: '+roleChip(ow[0],true)+'</p>')
+  + '<p style="font-size:17px">'+esc(nd.t)+'</p>' + meters(cid)
+  + '<div class="lh-opts">' + S.ord.o.map(function(i){ var o = nd.o2[i], can = ow.every(function(r){ return S.t[r] >= o.c; });
+     return '<button class="lh-opt" data-i="'+i+'"'+(can?'':' disabled title="Zu wenig Zeit diese Woche"')+'><span class="c'+(o.c?'':' z')+'">'+(o.c?"⏱ "+o.c:"0 ⏱")+'</span><span>'+esc(o.t)+(can?'':' <small>(zu wenig Zeit)</small>')+'</span></button>'; }).join("") + '</div>'
+  + '<p style="font-size:13px;color:var(--mut);margin:8px 0 0">Die Reihenfolge der Möglichkeiten ist zufällig.</p></div></div>';
+ root.innerHTML = h; wireBar(); top();
+ root.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){ choose(cid, +b.dataset.i); }; });
+}
+function choose(cid, i){
+ var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], o = nd.o2[i], ow = owners(nd);
+ ow.forEach(function(r){ S.t[r] -= o.c; });
+ var before = {b:s.b, k:s.k, e:s.e, p:s.p};
+ ["b","k","e"].forEach(function(v){ if (o.e[v]) s[v] = clamp(s[v]+o.e[v], 0, 10); });
+ if (o.e.p) s.p = clamp(s.p+o.e.p, 1, 3);
+ if (o.tag) o.tag.split(" ").forEach(function(t){ ow.forEach(function(r){ var p = S.prof[S.own[r]]; p[t] = (p[t]||0)+1; }); });
+ s.hist.push({w:S.week, r:ow, t:o.t, fb:o.fb, th:o.th});
+ var end = null;
+ if (o.n.indexOf("end_") === 0) { end = o.n.slice(4); s.end = end; }
+ else { s.node = o.n; s.due = S.week + 1; }
+ S.fb = {kind:"s", cid:cid, o:{t:o.t, fb:o.fb, th:o.th, ins:o.ins}, before:before, end:end};
+ S.step = "fb"; save(); feedback();
+}
+
+/* ================= RÜCKMELDUNG ================= */
+function feedback(){
+ var f = S.fb, h = bar() + '<div class="lh-panel"><div class="lh-body">';
+ if (f.kind === "w") {
+  h += '<p class="lh-who">Wissenskarte · '+roleChip(f.role,true)+'</p><p><b>'+esc(f.q)+'</b></p>'
+    + '<div class="lh-fb '+(f.ok?"ok":"no")+'"><b>'+(f.ok?"✔ Richtig! +1 ⏱ diese Woche.":"✘ Nicht ganz.")+'</b> Richtig ist: <b>'+esc(f.a)+'</b>. '+esc(f.x)+'</div>' + thBox(f.th);
+ } else {
+  var c = CASES[f.cid], s = S.cs[f.cid], d = [];
+  [["b","Belastung "+c.kid,false],["k","Klima",true],["e","Vertrauen der Eltern",true]].forEach(function(x){ var diff = s[x[0]] - f.before[x[0]]; if (diff) d.push('<span class="'+((diff>0)===x[2]?"up":"dn")+'">'+x[1]+' '+(diff>0?"▲ +":"▼ ")+diff+'</span>'); });
+  if (s.p !== f.before.p) d.push('<span class="'+(s.p>f.before.p?"dn":"up")+'">Stand: '+["","Testphase","Konsolidierung","Manifestation"][s.p]+'</span>');
+  h += '<p class="lh-who">'+c.emo+' '+esc(c.title)+' · euer Entscheid</p><p style="font-style:italic">«'+esc(f.o.t)+'»</p>'
+    + (d.length ? '<div class="lh-delta">'+d.join("")+'</div>' : '<div class="lh-delta"><span>keine sichtbare Veränderung</span></div>')
+    + '<div class="lh-fb">'+esc(f.o.fb)+'</div>' + thBox(f.o.th, f.o.ins)
+    + (f.end ? '<div class="lh-fb '+(f.end==="good"||f.end==="ok"?"ok":"no")+'"><b>Der Fall ist abgeschlossen '+endBadge(f.end)+'</b><br>'+esc(c.ends[f.end])+'</div>' : '<p style="color:var(--mut);font-size:14px">Wie es weitergeht, zeigt sich nächste Woche.</p>');
+ }
+ h += '<p><button class="lh-btn" id="lh-next">Weiter</button></p></div></div>';
+ root.innerHTML = h; wireBar(); top(); save();
+ root.querySelector("#lh-next").onclick = next;
+}
+
+/* ================= AUSWERTUNG ================= */
+function score(id){
+ var s = S.cs[id], base = {good:85, ok:68, mid:48, bad:25, open:40}[s.end || "open"];
+ return clamp(Math.round(base + (4 - s.b)*2 + (s.k - 5) + (s.e - 5)), 0, 100);
+}
+function finish(){
+ S.over = true; Object.keys(S.cs).forEach(function(id){ if (!S.cs[id].end) S.cs[id].open = true; }); save();
+ var ids = Object.keys(S.cs), tot = Math.round(ids.reduce(function(a,id){ return a + score(id); }, 0) / ids.length);
+ var verdict = tot >= 75 ? "Das Schulhaus Lindenhof ist ein sicherer Ort. Ihr habt früh hingeschaut und zusammengearbeitet." : tot >= 55 ? "Vieles ist gelungen, einiges ist noch offen. Schaut euch die Wendepunkte an." : "Das Quartal war schwierig. Gerade darum lohnt sich die Nachbesprechung.";
+ var h = '<div class="lh-panel"><div class="lh-hero">'+img(tot>=55?"lh-ende-gut.jpg":"lh-ende-offen.jpg","Pausenplatz")+'<span class="emo">'+(tot>=55?"🌳":"🌙")+'</span><div class="cap"><small>Ende des Quartals</small><b>Auswertung</b></div></div><div class="lh-body">'
+  + '<div class="lh-row" style="gap:18px"><div class="lh-score">'+tot+'</div><div><b>Schulklima (von 100)</b><br>'+verdict+'<br><small style="color:var(--mut)">Wissenskarten: '+S.kn.r+' von '+S.kn.n+' richtig</small></div></div>'
+  + '<h3>Eure Fälle</h3>' + ids.map(function(id){ var c = CASES[id], s = S.cs[id], e = s.end || "open";
+     return '<div class="lh-cs" style="margin:10px 0"><h4>'+c.emo+' '+esc(c.title)+endBadge(e)+' <small style="color:var(--mut);font-weight:400">'+score(id)+' Punkte</small></h4><p style="margin:4px 0">'+(s.end?esc(c.ends[s.end]):"Der Fall ist am Ende des Quartals noch nicht abgeschlossen. Hätte früheres Handeln geholfen?")+'</p>'+meters(id)
+      + '<details><summary><b>Zeitleiste der Entscheide</b></summary><ul class="lh-tl">'+s.hist.map(function(x){ return '<li><small>Woche '+x.w+' · '+x.r.map(function(r){ return RL[r].s; }).join(" + ")+'</small><br><b>'+esc(x.t)+'</b><br><small>'+esc(x.fb)+'</small></li>'; }).join("")+'</ul></details></div>'; }).join("")
+  + '<h3>Eure Profile</h3><div class="lh-prof">'+S.names.map(function(nm,i){ var p = S.prof[i], ks = Object.keys(TAGS).filter(function(k){ return p[k]; }).sort(function(a,b){ return p[b]-p[a]; });
+     return '<div><b>'+esc(nm)+'</b> · '+ROLES.filter(function(r){ return S.own[r]===i; }).map(function(r){ return RL[r].s; }).join(", ")+'<br>'+(ks.length ? ks.map(function(k){ return TAGS[k]+': '+p[k]; }).join("<br>") : '<small>keine Entscheide</small>')+'</div>'; }).join("")+'</div>'
+  + '<h3>Für die Nachbesprechung</h3><ol>'+REFLECT.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join("")+'</ol>'
+  + '<h3>Eure Theorie-Kärtchen ('+S.th.length+')</h3>'+S.th.map(function(k){ var t = TH[k]; return '<div class="lh-th" style="margin:8px 0"><span class="ic">📚</span><div><b>'+esc(t.t)+'</b>'+esc(t.x)+' <small>('+esc(t.q)+')</small><br><a href="konflikte.html#'+t.a+'" target="_blank" rel="noopener">Zur Themenseite →</a></div></div>'; }).join("")
+  + '<p style="margin-top:14px">🛠 Alle Instrumente zum Thema findest du auf der <a href="konflikte.html#instrumente" style="text-decoration:underline">Themenseite Konflikte, Gewalt und Mobbing</a>.</p>'
+  + '<p class="lh-row"><button class="lh-btn" id="lh-again">Neues Quartal</button><button class="lh-btn alt" id="lh-print">Auswertung drucken</button></p></div></div>';
+ root.innerHTML = h; top();
+ root.querySelector("#lh-again").onclick = function(){ try{localStorage.removeItem(KEY);}catch(e){} setup(); };
+ root.querySelector("#lh-print").onclick = function(){ root.querySelectorAll("details").forEach(function(d){ d.open = true; }); window.print(); };
+}
+
+setup();
+})();
+  </script>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Contact</a><a href="impressum.html">Legal notice</a><a href="datenschutz.html">Privacy</a></nav>
+  </div>
+</footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
+</body>
+</html>
