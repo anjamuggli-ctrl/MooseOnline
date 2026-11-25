@@ -744,10 +744,10 @@ page("pome24b.html", "Pome24B – MuggliOnline", f"""<main class="wrap">
       <a class="plan thema entile" href="pome24b-exam.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Unit 9 Practice Exercises</span><h3>Energy and the Environment</h3>
         <p>Practice exercises to the entire Unit 9 as preparation for the exam: eight sections with labelling, gap-fill texts, statistics and critical-thinking questions, each with its own answer check.</p>
         <span class="go">Open →</span></a>
-      <a class="plan thema entile" href="pome24b-power-town.html"><div class="thema-art">{GAME_PT_ART}</div><span class="badge live">Unit 9 Review Game</span><h3>Power Town</h3>
+      <a class="plan thema entile" href="pome24b-power-town.html"><div class="thema-art bild"><img src="img/pome24b/games/pt-tile.jpg" alt="" loading="lazy"></div><span class="badge live">Unit 9 Review Game</span><h3>Power Town</h3>
         <p>A board game for 1 to 4 players or teams: buy solar, wind, hydro and nuclear plants, answer questions about the whole unit and keep the climate meter low until 2050.</p>
         <span class="go">Play →</span></a>
-      <a class="plan thema entile" href="pome24b-island-escape.html"><div class="thema-art">{GAME_IE_ART}</div><span class="badge live">Unit 9 Review Game</span><h3>Island Escape</h3>
+      <a class="plan thema entile" href="pome24b-island-escape.html"><div class="thema-art bild"><img src="img/pome24b/games/ie-tile.jpg" alt="" loading="lazy"></div><span class="badge live">Unit 9 Review Game</span><h3>Island Escape</h3>
         <p>An escape game for your team: after a storm, Mira Island is dark. Solve the puzzles in four rooms and switch the island back on before the time runs out.</p>
         <span class="go">Play →</span></a>
     </div>

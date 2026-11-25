@@ -80,7 +80,7 @@
 (function(){
 "use strict";
 var root = document.getElementById("ie");
-var IMG = (window.SITE_BASE||"") + "img/pome24b/games/";
+var IMG = (window.SITE_BASE || (/\/(en|it|rm)\/[^\/]*$/.test(location.pathname) ? "../" : "")) + "img/pome24b/games/";
 var KEY = "mo_islandescape_v1", BEST = "mo_islandescape_best_v1";
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
