@@ -1039,13 +1039,88 @@ page("kontakt.html", "Kontakt – MuggliOnline", f"""<main class="wrap">
 
 page("impressum.html", "Impressum – MuggliOnline", f"""<main class="wrap">
 {hero("Impressum", "Rechtliches", "Impressum", "Angaben zur verantwortlichen Person dieser Website.")}
-  <section class="section"><p class="intro">Wird ergänzt.</p></section>
-</main>""", description="Impressum MuggliOnline.")
+  <section class="section"><div class="legal">
+    <h2>Verantwortlich für diese Website</h2>
+    <p><b>Dr. Anja Muggli</b><br>Chur, Schweiz<br>E-Mail: <a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a></p>
+    <p>MuggliOnline (mugglionline.ch) ist eine private, nicht kommerzielle Website. Sie bietet Lernmaterial für Lernende, Unterlagen für Lehrpersonen und Inhalte zur Pädagogik und Didaktik an. Es werden keine Waren oder Dienstleistungen verkauft.</p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Die Inhalte dieser Website werden mit grosser Sorgfalt erstellt und regelmässig überprüft. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Die Materialien dienen der Information und dem Lernen; sie ersetzen keine fachliche, rechtliche oder medizinische Beratung.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Diese Website enthält Links zu Websites Dritter. Auf deren Inhalte habe ich keinen Einfluss, und für sie sind ausschliesslich die jeweiligen Anbieterinnen und Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Sollte ich von Rechtsverletzungen erfahren, entferne ich den betreffenden Link umgehend.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Texte, Übungen, Grafiken und Spiele auf dieser Website sind, soweit nicht anders angegeben, von mir erstellt und urheberrechtlich geschützt. Für die nicht kommerzielle Nutzung im eigenen Unterricht dürfen sie gerne verwendet werden. Jede andere Verwendung, insbesondere die Veröffentlichung oder der Verkauf, braucht meine vorherige Zustimmung.</p>
+    <p>Inhalte Dritter sind als solche gekennzeichnet: Zitate und Abbildungen aus Fachliteratur werden als Zitat mit Quellenangabe wiedergegeben (Art. 25 Urheberrechtsgesetz, URG). Fotos und Grafiken anderer Urheberinnen und Urheber tragen einen Bildnachweis mit Lizenz. Einige Abbildungen und Spielbilder wurden mit KI-Werkzeugen (ChatGPT von OpenAI) erzeugt, einige Grafiken, Texte und Übungen mit Unterstützung von Claude (Anthropic) erstellt und von mir überarbeitet.</p>
+    <p>Falls du der Meinung bist, dass ein Inhalt deine Rechte verletzt, schreib mir bitte an <a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a>. Ich prüfe das Anliegen rasch und entferne den Inhalt bei Bedarf.</p>
+
+    <h2>Datenschutz</h2>
+    <p>Wie auf dieser Website mit Personendaten umgegangen wird, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <p class="stand">Stand: 25. November 2026</p>
+  </div></section>
+</main>""", description="Impressum von MuggliOnline: verantwortliche Person, Haftung, Urheberrecht.")
 
 page("datenschutz.html", "Datenschutz – MuggliOnline", f"""<main class="wrap">
 {hero("Datenschutz", "Rechtliches", "Datenschutzerklärung", "Wie auf dieser Website mit Daten umgegangen wird.")}
-  <section class="section"><p class="intro">Wird ergänzt.</p></section>
-</main>""", description="Datenschutzerklärung MuggliOnline.")
+  <section class="section"><div class="legal">
+    <p class="kurz"><b>Kurz gesagt:</b> Diese Website verwendet keine Cookies, keine Analyse- oder Werbedienste und keine Formulare. Antworten in Übungen und Spielständen bleiben auf deinem eigenen Gerät. Beim Aufruf der Seiten werden technisch nötige Verbindungsdaten (insbesondere die IP-Adresse) an den Hosting-Anbieter und an einzelne eingebundene Dienste übermittelt. Die Details stehen unten.</p>
+
+    <h2>1. Verantwortliche Person</h2>
+    <p>Verantwortlich für die Bearbeitung von Personendaten auf dieser Website ist:<br><b>Dr. Anja Muggli</b>, Chur, Schweiz<br>E-Mail: <a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a></p>
+    <p>Diese Datenschutzerklärung erfüllt die Informationspflicht nach Art. 19 des Bundesgesetzes über den Datenschutz (DSG, SR 235.1).</p>
+
+    <h2>2. Welche Daten bearbeitet werden und wozu</h2>
+    <h3>a) Aufruf der Website (Hosting)</h3>
+    <p>Die Website wird über <b>GitHub Pages</b> bereitgestellt, einen Dienst von GitHub, Inc. (USA, ein Unternehmen von Microsoft). Wenn du eine Seite aufrufst, verarbeitet der Server automatisch technische Verbindungsdaten: IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser und Betriebssystem sowie die zuvor besuchte Seite. GitHub speichert die IP-Adresse aus Sicherheitsgründen, etwa zur Abwehr von Angriffen. Ich selbst erhalte keine Besucherstatistiken und werte keine Daten aus.</p>
+    <p><b>Zweck:</b> technische Bereitstellung, Stabilität und Sicherheit der Website. Die Domain mugglionline.ch ist bei Infomaniak Network SA (Schweiz) registriert.</p>
+    <h3>b) Schriftarten (Google Fonts)</h3>
+    <p>Für die Darstellung der Schriften werden Google Fonts von Servern der Google LLC (USA) bzw. Google Ireland Limited geladen. Dabei übermittelt dein Browser deine IP-Adresse und technische Angaben zum Browser an Google. <b>Zweck:</b> einheitliche und gut lesbare Darstellung der Website.</p>
+    <h3>c) Eingebettete Videos (YouTube)</h3>
+    <p>Auf einzelnen Lernseiten sind Videos von YouTube (Google) im <b>erweiterten Datenschutzmodus</b> (youtube-nocookie.com) eingebettet. Beim Laden dieser Seiten wird eine Verbindung zu Servern von Google hergestellt und deine IP-Adresse übermittelt. Erst wenn du ein Video abspielst, kann YouTube weitere Daten bearbeiten und Cookies oder ähnliche Speicher setzen. Wenn du das nicht möchtest, spiele die Videos nicht ab oder öffne sie über den angegebenen Link bzw. QR-Code direkt bei YouTube. Es gelten die Datenschutzbestimmungen von Google.</p>
+    <h3>d) Bilder von Wikimedia Commons</h3>
+    <p>Auf einer Übungsseite wird ein frei lizenziertes Foto direkt von Wikimedia Commons (Wikimedia Foundation, USA) geladen. Dabei wird deine IP-Adresse an die Server von Wikimedia übermittelt. <b>Zweck:</b> Anzeige des Bildes.</p>
+    <h3>e) Speicherung auf deinem Gerät (Übungen und Spiele)</h3>
+    <p>Bei den interaktiven Übungen und Spielen werden deine Antworten, Spielstände, Teamnamen und Bestzeiten im <b>lokalen Speicher deines Browsers</b> (localStorage) abgelegt, damit du später weiterarbeiten kannst. Diese Daten werden nicht an mich oder an Dritte übermittelt. Du kannst sie jederzeit löschen, indem du in der Übung «Start again» bzw. im Spiel «New game» wählst oder die Website-Daten in deinem Browser löschst.</p>
+    <h3>f) Kontakt per E-Mail</h3>
+    <p>Wenn du mir eine E-Mail schreibst, bearbeite ich deine E-Mail-Adresse, deinen Namen und den Inhalt deiner Nachricht, um deine Anfrage zu beantworten. Die E-Mails werden bei meinem E-Mail-Anbieter gespeichert. Ich gebe sie nicht weiter und lösche sie, wenn sie für die Beantwortung und allfällige Rückfragen nicht mehr gebraucht werden, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+    <h2>3. Was diese Website nicht macht</h2>
+    <ul>
+      <li>keine Cookies durch die Website selbst</li>
+      <li>keine Analyse- oder Statistikdienste (z.&nbsp;B. Google Analytics)</li>
+      <li>keine Werbung, kein Tracking, keine Profilbildung</li>
+      <li>keine Benutzerkonten, keine Formulare, keine automatisierten Einzelentscheidungen</li>
+    </ul>
+
+    <h2>4. Empfängerinnen und Empfänger und Bekanntgabe ins Ausland</h2>
+    <p>Personendaten können an folgende Kategorien von Empfängern gelangen: Hosting-Anbieter (GitHub), Anbieter eingebundener Inhalte (Google für Schriften und Videos, Wikimedia für ein Bild) sowie mein E-Mail-Anbieter. Dabei können Daten in die <b>USA</b> und in Länder der <b>Europäischen Union</b> übermittelt werden.</p>
+    <p>Die Staaten der EU gelten nach Anhang 1 der Datenschutzverordnung (DSV) als Staaten mit angemessenem Datenschutz. Für die USA hat der Bundesrat seit dem 15. September 2024 festgestellt, dass Unternehmen, die unter dem <b>Swiss-U.S. Data Privacy Framework</b> zertifiziert sind, einen angemessenen Schutz bieten. Ob ein Unternehmen zertifiziert ist, lässt sich auf <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">dataprivacyframework.gov</a> überprüfen. Soweit keine Zertifizierung besteht, stützen sich die Anbieter nach eigenen Angaben auf Standardvertragsklauseln.</p>
+
+    <h2>5. Aufbewahrung</h2>
+    <p>Ich bewahre Personendaten nur so lange auf, wie es für den jeweiligen Zweck nötig ist. Wie lange GitHub, Google und Wikimedia technische Verbindungsdaten speichern, richtet sich nach deren eigenen Datenschutzbestimmungen. Daten im lokalen Speicher deines Browsers bleiben, bis du sie löschst.</p>
+
+    <h2>6. Deine Rechte</h2>
+    <p>Du hast nach dem DSG insbesondere das Recht,</p>
+    <ul>
+      <li>Auskunft darüber zu verlangen, ob und welche Personendaten ich über dich bearbeite (Art. 25 DSG),</li>
+      <li>die Berichtigung unrichtiger Daten zu verlangen (Art. 32 DSG),</li>
+      <li>der Bearbeitung zu widersprechen und die Löschung deiner Daten zu verlangen,</li>
+      <li>die Herausgabe oder Übertragung deiner Daten zu verlangen (Art. 28 DSG).</li>
+    </ul>
+    <p>Schreib mir dazu an <a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a>. Für Daten, die GitHub, Google oder Wikimedia in eigener Verantwortung bearbeiten, wende dich bitte direkt an diese Anbieter. Du kannst dich ausserdem an den <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)</a> wenden.</p>
+
+    <h2>7. Kinder und Jugendliche</h2>
+    <p>Die Lernmaterialien richten sich auch an Kinder und Jugendliche. Die Website verlangt keine Angaben zur Person. Bitte gib in Übungen und Spielen keine vollständigen Namen oder andere persönliche Angaben ein. Teamnamen wie «The Energy Team» genügen.</p>
+
+    <h2>8. Datensicherheit</h2>
+    <p>Ich treffe angemessene technische und organisatorische Massnahmen, um Personendaten zu schützen, und verzichte bewusst auf Dienste, die nicht nötig sind. Eine vollständig sichere Übertragung von Daten im Internet kann jedoch niemand garantieren.</p>
+
+    <h2>9. Änderungen</h2>
+    <p>Ich passe diese Datenschutzerklärung an, wenn sich die Website oder die Rechtslage ändert. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+    <p class="stand">Stand: 25. November 2026</p>
+  </div></section>
+</main>""", description="Datenschutzerklärung von MuggliOnline nach dem Schweizer Datenschutzgesetz (DSG): Hosting, Google Fonts, YouTube, lokale Speicherung, deine Rechte.")
 
 print("Seiten gebaut.")
 
