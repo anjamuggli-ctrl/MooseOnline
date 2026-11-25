@@ -3899,6 +3899,201 @@
    "en": "Review games: Power Town and Island Escape",
    "it": "Giochi di ripasso: Power Town e Island Escape",
    "rm": "Gieus d'emprender: Power Town ed Island Escape"
+  },
+  "1–4 Teams": {
+   "en": "1–4 teams",
+   "it": "1–4 squadre",
+   "rm": "1–4 teams"
+  },
+  "20–45 Min.": {
+   "en": "20–45 min",
+   "it": "20–45 min",
+   "rm": "20–45 min"
+  },
+  "20–50 Min.": {
+   "en": "20–50 min",
+   "it": "20–50 min",
+   "rm": "20–50 min"
+  },
+  "Teams": {
+   "en": "Teams",
+   "it": "Squadre",
+   "rm": "Teams"
+  },
+  "Lernspiel": {
+   "en": "Learning game",
+   "it": "Gioco didattico",
+   "rm": "Gieu d'emprender"
+  },
+  "Spiel öffnen →": {
+   "en": "Open game →",
+   "it": "Apri il gioco →",
+   "rm": "Avrir il gieu →"
+  },
+  "Spielsprache Englisch": {
+   "en": "Game language: English",
+   "it": "Lingua del gioco: inglese",
+   "rm": "Lingua dal gieu: englais"
+  },
+  "Einsatz:": {
+   "en": "Use:",
+   "it": "Impiego:",
+   "rm": "Diever:"
+  },
+  "Ursprünglich erstellt für den Technical-English-Unterricht an der Berufsschule.": {
+   "en": "Originally created for Technical English lessons at a vocational school.",
+   "it": "Creato originariamente per le lezioni di Technical English alla scuola professionale.",
+   "rm": "Creà oriundamain per l'instrucziun da Technical English a la scola professiunala."
+  },
+  "Ein Brettspiel zu Energie und Umwelt für 1 bis 4 Spielende oder Teams an einem Gerät. Die Lernenden führen als Gemeindepräsidien eine Stadt bis 2050 zu einer sauberen Energieversorgung: Wer ein Solar-, Wind-, Wasser- oder Kernkraftwerk kaufen will, beantwortet zuerst eine Frage. Ereigniskarten, Statistikfelder und ein gemeinsames Klimabarometer sorgen für Spannung.": {
+   "en": "A board game about energy and the environment for 1 to 4 players or teams on one device. As mayors, the learners lead a town to a clean energy supply by 2050: anyone who wants to buy a solar, wind, hydro or nuclear plant first answers a question. Event cards, statistics fields and a shared climate meter keep it exciting.",
+   "it": "Un gioco da tavolo su energia e ambiente per 1–4 giocatori o squadre su un solo dispositivo. Come sindaci, gli allievi portano una città entro il 2050 a un approvvigionamento energetico pulito: chi vuole comprare una centrale solare, eolica, idroelettrica o nucleare risponde prima a una domanda. Carte evento, caselle di statistica e un barometro climatico comune rendono il gioco avvincente.",
+   "rm": "In gieu da tavla davart energia ed ambient per 1 fin 4 giugaders u teams sin in apparat. Sco presidents communals mainan ils emprendists ina citad fin il 2050 ad in provediment d'energia net: tgi che vul cumprar ina ovra solara, da vent, idraulica u nucleara respunda l'emprim ad ina dumonda. Cartas d'eveniments, champs da statistica ed in barometer dal clima communabel procuran per tensiun."
+  },
+  "Ein Escape-Game für Teams: Nach einem Sturm ist die Insel Mira dunkel. In vier Räumen lösen die Lernenden Rätsel zum Treibhauseffekt, zum Meeresspiegel, zur Energieumwandlung und zur Kernenergie, finden Codes und schalten den Strom wieder ein. Zeitlimit wählbar, mit Hinweisen, Strafminuten und einer Bestenliste.": {
+   "en": "An escape game for teams: after a storm, Mira Island is dark. In four rooms, learners solve puzzles on the greenhouse effect, sea levels, energy conversion and nuclear power, find codes and switch the power back on. Selectable time limit, with hints, penalty minutes and a leaderboard.",
+   "it": "Un escape game per squadre: dopo una tempesta l'isola di Mira è al buio. In quattro stanze gli allievi risolvono enigmi sull'effetto serra, sul livello del mare, sulla conversione dell'energia e sull'energia nucleare, trovano codici e riaccendono la corrente. Limite di tempo a scelta, con aiuti, minuti di penalità e una classifica.",
+   "rm": "In escape game per teams: suenter ina tempesta è l'insla Mira stgira. En quatter stanzas sciolvan ils emprendists enigmas davart l'effect da serra, il nivel da la mar, la transfurmaziun d'energia e l'energia nucleara, chattan codes e stizzan puspè en il current. Limita da temp tschernibla, cun agids, minutas da chastì ed ina glista dals megliers."
+  },
+  "Sekundarstufe I (Zyklus 3) in Natur und Technik oder Geografie, Englisch ab Niveau A2/B1, Berufsfachschule (Fachkunde, ABU, Englisch) und Gymnasium (Geografie, Physik, Englisch), etwa zur Repetition vor einer Prüfung.": {
+   "en": " Lower secondary (cycle 3) in science and technology or geography, English from level A2/B1, vocational school (technical subjects, general education, English) and upper secondary school (geography, physics, English), for example as revision before a test.",
+   "it": " Secondario I (ciclo 3) in natura e tecnica o geografia, inglese dal livello A2/B1, scuola professionale (materie tecniche, cultura generale, inglese) e liceo (geografia, fisica, inglese), per esempio come ripasso prima di una verifica.",
+   "rm": " Stgalim secundar I (ciclus 3) en natira e tecnica u geografia, englais a partir dal nivel A2/B1, scola professiunala (enconuschientschas professiunalas, furmaziun generala, englais) e gimnasi (geografia, fisica, englais), per exempel per repeter avant in test."
+  },
+  "Sekundarstufe I ab der 8. Klasse in Natur und Technik, Physik oder Geografie, Englisch ab Niveau B1, Berufsfachschule und Gymnasium, als Repetition, Postenarbeit oder Abschluss einer Unterrichtseinheit.": {
+   "en": " Lower secondary from grade 8 in science and technology, physics or geography, English from level B1, vocational school and upper secondary school, as revision, station work or the end of a teaching unit.",
+   "it": " Secondario I dalla 2a media in natura e tecnica, fisica o geografia, inglese dal livello B1, scuola professionale e liceo, come ripasso, lavoro a postazioni o conclusione di un'unità didattica.",
+   "rm": " Stgalim secundar I a partir da la 8avla classa en natira e tecnica, fisica u geografia, englais a partir dal nivel B1, scola professiunala e gimnasi, sco repetiziun, lavur a posts u conclusiun d'ina unitad d'instrucziun."
+  },
+  "Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen, Lernen und Digitalität, Beurteilung sowie Konflikte, Gewalt und Mobbing.": {
+   "en": "Free tools for teaching practice and lessons, organised by competence: supporting learning processes, taking prior learning into account, analysing learning, leading learning conversations, learning and digitality, assessment, and conflict, violence and bullying.",
+   "it": "Strumenti gratuiti per il tirocinio e l'insegnamento, ordinati per competenza: accompagnare i processi di apprendimento, considerare i prerequisiti, analizzare l'apprendimento, condurre colloqui di apprendimento, apprendimento e digitalità, valutazione, nonché conflitti, violenza e mobbing.",
+   "rm": "Instruments gratuits per la pratica e l'instrucziun, ordinads tenor cumpetenza: accumpagnar process d'emprender, resguardar las premissas, analisar l'emprender, manar discurs d'emprender, emprender e digitalitad, valitaziun sco er conflicts, violenza e mobbing."
+  },
+  "Lernen und Digitalität": {
+   "en": "Learning and digitality",
+   "it": "Apprendimento e digitalità",
+   "rm": "Emprender e digitalitad"
+  },
+  "Planungsraster Klafki digital": {
+   "en": "Klafki planning grid, digital edition",
+   "it": "Griglia di pianificazione Klafki digitale",
+   "rm": "Rasta da planisaziun Klafki digital"
+  },
+  "Mit-über-trotz-Raster": {
+   "en": "With-about-despite grid",
+   "it": "Griglia con-su-nonostante",
+   "rm": "Rasta cun-davart-malgrà"
+  },
+  "Tool-Check": {
+   "en": "Tool check",
+   "it": "Check degli strumenti",
+   "rm": "Check dals tools"
+  },
+  "KI-Antwort prüfen": {
+   "en": "Checking an AI answer",
+   "it": "Verificare una risposta dell’IA",
+   "rm": "Controllar ina resposta da la IA"
+  },
+  "Projektplaner in fünf Phasen": {
+   "en": "Project planner in five phases",
+   "it": "Pianificatore di progetto in cinque fasi",
+   "rm": "Planisader da project en tschintg fasas"
+  },
+  "Lernspiel-Check nach der HERZ-Theorie": {
+   "en": "Learning game check based on the HERZ theory",
+   "it": "Check del gioco didattico secondo la teoria HERZ",
+   "rm": "Check dal gieu d'emprender tenor la teoria HERZ"
+  },
+  "Klassenvereinbarung digital": {
+   "en": "Digital class agreement",
+   "it": "Accordo di classe digitale",
+   "rm": "Cunvegna da classa digitala"
+  },
+  "Planungs-Check Digitalität": {
+   "en": "Digitality planning check",
+   "it": "Check di pianificazione digitalità",
+   "rm": "Check da planisaziun digitalitad"
+  },
+  "Kriterien-Werkstatt": {
+   "en": "Criteria workshop",
+   "it": "Laboratorio dei criteri",
+   "rm": "Ufficina dals criteris"
+  },
+  "Qualitätensuche": {
+   "en": "Looking for qualities",
+   "it": "Ricerca delle qualità",
+   "rm": "Tschertgar las qualitads"
+  },
+  "Selbstbeurteilung nach einer grösseren Arbeit": {
+   "en": "Self-assessment after a larger piece of work",
+   "it": "Autovalutazione dopo un lavoro più ampio",
+   "rm": "Autovalitaziun suenter ina lavur pli gronda"
+  },
+  "Peer-Feedback in sieben Schritten": {
+   "en": "Peer feedback in seven steps",
+   "it": "Feedback tra pari in sette passi",
+   "rm": "Feedback tranter pers en set pass"
+  },
+  "Portfolio-Planer": {
+   "en": "Portfolio planner",
+   "it": "Pianificatore del portfolio",
+   "rm": "Planisader dal portfolio"
+  },
+  "Rückmeldebogen Präsentation": {
+   "en": "Presentation feedback sheet",
+   "it": "Scheda di feedback per la presentazione",
+   "rm": "Fegl da resposta preschentaziun"
+  },
+  "Lernkontrolle anpassen": {
+   "en": "Adapting a test",
+   "it": "Adattare una verifica",
+   "rm": "Adattar ina controlla"
+  },
+  "Beurteilungs-Check": {
+   "en": "Assessment check",
+   "it": "Check della valutazione",
+   "rm": "Check da la valitaziun"
+  },
+  "Konflikt oder Mobbing? Einschätzungsbogen": {
+   "en": "Conflict or bullying? Assessment sheet",
+   "it": "Conflitto o mobbing? Scheda di valutazione",
+   "rm": "Conflict u mobbing? Fegl da stimaziun"
+  },
+  "Beobachtungsprotokoll Gruppe und Pause": {
+   "en": "Observation log: group and break time",
+   "it": "Protocollo d'osservazione: gruppo e ricreazione",
+   "rm": "Protocol d'observaziun: gruppa e pausa"
+  },
+  "Klassenregeln gegen Mobbing erarbeiten": {
+   "en": "Developing class rules against bullying",
+   "it": "Elaborare regole di classe contro il mobbing",
+   "rm": "Elavurar reglas da classa cunter mobbing"
+  },
+  "No Blame Approach: Leitfaden": {
+   "en": "No Blame Approach: guide",
+   "it": "No Blame Approach: guida",
+   "rm": "No Blame Approach: guida"
+  },
+  "Interventionsplan bei Mobbing": {
+   "en": "Intervention plan for bullying",
+   "it": "Piano d'intervento in caso di mobbing",
+   "rm": "Plan d'intervenziun en cas da mobbing"
+  },
+  "Elterngespräch bei Mobbing vorbereiten": {
+   "en": "Preparing a parent meeting about bullying",
+   "it": "Preparare un colloquio con i genitori sul mobbing",
+   "rm": "Preparar in discurs cun geniturs davart mobbing"
+  },
+  "Cybermobbing: Was ich tun kann": {
+   "en": "Cyberbullying: what I can do",
+   "it": "Cyberbullismo: cosa posso fare",
+   "rm": "Cybermobbing: tge che jau poss far"
+  },
+  "Klassen-Check gegen Mobbing": {
+   "en": "Class check against bullying",
+   "it": "Check della classe contro il mobbing",
+   "rm": "Check da la classa cunter mobbing"
   }
  },
  "js": {

@@ -913,4 +913,9 @@
   .legal a{text-decoration:underline}
   .legal .kurz{background:#eef3ee;border-left:4px solid var(--green,#3f5d4a);border-radius:10px;padding:14px 18px}
   .legal .stand{margin-top:30px;color:#6b7368;font-size:14px}
+  /* App-Werkstatt: Foto-Kacheln */
+  .card .art.foto{height:210px;padding:0;align-items:stretch;overflow:hidden}
+  .card .art.foto img{width:100%;height:100%;object-fit:cover;display:block}
+  .card .body p{margin:0 0 10px}
+  .card .vermerk{font-size:13.5px;color:#6b7368;font-style:italic;margin-top:12px}
 

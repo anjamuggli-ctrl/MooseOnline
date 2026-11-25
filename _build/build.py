@@ -654,6 +654,36 @@ INSTRUMENTE = [
       ("WOWW-Beobachtungsbogen und Klassenskala", "LG6_WOWW-Beobachtung"),
       ("Standortgespräch: Vorbereitung und Fördervereinbarung", "LG7_Standortgespraech"),
       ("Gesprächsreflexion", "LG8_Gespraechsreflexion")]),
+    ("Lernen und Digitalität", "digitalitaet.html", DIG_ART,
+     ("downloads/digitalitaet/Instrumente_Lernen_und_Digitalitaet", "Alle 8 Instrumente in einer Datei"),
+     [("Planungsraster Klafki digital", "DI1_Planungsraster-Klafki-digital"),
+      ("Mit-über-trotz-Raster", "DI2_Mit-ueber-trotz-Raster"),
+      ("Tool-Check", "DI3_Tool-Check"),
+      ("KI-Antwort prüfen", "DI4_KI-Antwort-pruefen"),
+      ("Projektplaner in fünf Phasen", "DI5_Projektplaner"),
+      ("Lernspiel-Check nach der HERZ-Theorie", "DI6_Lernspiel-Check-HERZ"),
+      ("Klassenvereinbarung digital", "DI7_Klassenvereinbarung-digital"),
+      ("Planungs-Check Digitalität", "DI8_Planungs-Check")]),
+    ("Lernende in Beurteilungsprozesse involvieren", "beurteilung.html", BEU_ART,
+     ("downloads/beurteilung/Instrumente_Beurteilung", "Alle 8 Instrumente in einer Datei"),
+     [("Kriterien-Werkstatt", "BE1_Kriterien-Werkstatt"),
+      ("Qualitätensuche", "BE2_Qualitaetensuche"),
+      ("Selbstbeurteilung nach einer grösseren Arbeit", "BE3_Selbstbeurteilung"),
+      ("Peer-Feedback in sieben Schritten", "BE4_Peer-Feedback"),
+      ("Portfolio-Planer", "BE5_Portfolio-Planer"),
+      ("Rückmeldebogen Präsentation", "BE6_Rueckmeldebogen-Praesentation"),
+      ("Lernkontrolle anpassen", "BE7_Lernkontrolle-anpassen"),
+      ("Beurteilungs-Check", "BE8_Beurteilungs-Check")]),
+    ("Umgang mit Konflikten, Gewalt und Mobbing", "konflikte.html", KON_ART,
+     ("downloads/konflikte/Instrumente_Konflikte_Gewalt_Mobbing", "Alle 8 Instrumente in einer Datei"),
+     [("Konflikt oder Mobbing? Einschätzungsbogen", "KO1_Konflikt-oder-Mobbing"),
+      ("Beobachtungsprotokoll Gruppe und Pause", "KO2_Beobachtungsprotokoll"),
+      ("Klassenregeln gegen Mobbing erarbeiten", "KO3_Klassenregeln"),
+      ("No Blame Approach: Leitfaden", "KO4_No-Blame-Approach"),
+      ("Interventionsplan bei Mobbing", "KO5_Interventionsplan"),
+      ("Elterngespräch bei Mobbing vorbereiten", "KO6_Elterngespraech"),
+      ("Cybermobbing: Was ich tun kann", "KO7_Cybermobbing-Lernende"),
+      ("Klassen-Check gegen Mobbing", "KO8_Klassen-Check")]),
 ]
 def instr_kachel(titel, href, art, alle, liste):
     ordner = href.replace(".html", "").replace("lernbegleitung", "lernbegleitung")
@@ -679,7 +709,7 @@ page("instrumente.html", "Instrumente – MuggliOnline", f"""<main class="wrap">
 {chr(10).join(instr_kachel(*k) for k in INSTRUMENTE)}
     </div>
   </section>
-</main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen.")
+</main>""", active="didaktik.html", description="Gratis Instrumente für Praktikum und Unterricht, geordnet nach Handlungskompetenz: Lernprozesse begleiten, Lernvoraussetzungen berücksichtigen, Lernen analysieren, Lerngespräche führen, Lernen und Digitalität, Beurteilung sowie Konflikte, Gewalt und Mobbing.")
 
 # ---------------- Lernende: Klassen ----------------
 EXAM_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><path d="M0 120 L0 98 L60 82 L110 96 L170 76 L220 90 L220 120 Z" fill="#cfdacd"/>'
@@ -869,6 +899,30 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
   <section class="section">
 {einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
+      <a class="card" href="pome24b-power-town.html">
+        <div class="art foto"><img src="img/pome24b/games/pt-tile.jpg" alt="" loading="lazy"></div>
+        <div class="body">
+          <div class="kicker"><span class="badge live">Lernspiel</span></div>
+          <h3>Power Town</h3>
+          <p>Ein Brettspiel zu Energie und Umwelt für 1 bis 4 Spielende oder Teams an einem Gerät. Die Lernenden führen als Gemeindepräsidien eine Stadt bis 2050 zu einer sauberen Energieversorgung: Wer ein Solar-, Wind-, Wasser- oder Kernkraftwerk kaufen will, beantwortet zuerst eine Frage. Ereigniskarten, Statistikfelder und ein gemeinsames Klimabarometer sorgen für Spannung.</p>
+          <p><b>Einsatz:</b> Sekundarstufe I (Zyklus 3) in Natur und Technik oder Geografie, Englisch ab Niveau A2/B1, Berufsfachschule (Fachkunde, ABU, Englisch) und Gymnasium (Geografie, Physik, Englisch), etwa zur Repetition vor einer Prüfung.</p>
+          <div class="tags"><span>1–4 Teams</span><span>20–50 Min.</span><span>Spielsprache Englisch</span></div>
+          <p class="vermerk">Ursprünglich erstellt für den Technical-English-Unterricht an der Berufsschule.</p>
+          <span class="go">Spiel öffnen →</span>
+        </div>
+      </a>
+      <a class="card" href="pome24b-island-escape.html">
+        <div class="art foto"><img src="img/pome24b/games/ie-tile.jpg" alt="" loading="lazy"></div>
+        <div class="body">
+          <div class="kicker"><span class="badge live">Lernspiel</span></div>
+          <h3>Island Escape</h3>
+          <p>Ein Escape-Game für Teams: Nach einem Sturm ist die Insel Mira dunkel. In vier Räumen lösen die Lernenden Rätsel zum Treibhauseffekt, zum Meeresspiegel, zur Energieumwandlung und zur Kernenergie, finden Codes und schalten den Strom wieder ein. Zeitlimit wählbar, mit Hinweisen, Strafminuten und einer Bestenliste.</p>
+          <p><b>Einsatz:</b> Sekundarstufe I ab der 8. Klasse in Natur und Technik, Physik oder Geografie, Englisch ab Niveau B1, Berufsfachschule und Gymnasium, als Repetition, Postenarbeit oder Abschluss einer Unterrichtseinheit.</p>
+          <div class="tags"><span>Teams</span><span>20–45 Min.</span><span>Spielsprache Englisch</span></div>
+          <p class="vermerk">Ursprünglich erstellt für den Technical-English-Unterricht an der Berufsschule.</p>
+          <span class="go">Spiel öffnen →</span>
+        </div>
+      </a>
       <a class="card wide" href="bullet-journal.html">
         <div class="art">
           <svg viewBox="0 0 220 140" aria-hidden="true">
