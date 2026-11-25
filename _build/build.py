@@ -711,8 +711,8 @@ KLASSEN = [
         <ul><li>Properties of Materials Exam: Practice Exercises to the Exam about Study Packet II</li></ul>
         <span class="go">Zur Probeprüfung →</span></a>""",
  f"""      <a class="plan thema entile" href="pome24b.html"><div class="thema-art">{ENERGY_ART}</div><span class="badge live">Technical English</span><h3>Pome24B</h3>
-        <p>Energy and the Environment</p>
-        <ul><li>Nuclear Energy: video and tasks</li><li>Practice for the Exam</li></ul>
+        <p>Polymechanikerinnen und Polymechaniker, E-Modul, 3. Lehrjahr</p>
+        <ul><li>Energy and the Environment</li><li>Nuclear Energy: video and tasks</li><li>Practice for the Exam</li><li>Lernspiele: Power Town und Island Escape</li></ul>
         <span class="go">Zur Klassenseite →</span></a>""",
  f"""      <a class="plan thema entile" href="primar6.html"><div class="thema-art">{PRIMAR_ART}</div><span class="badge live">Primarschule</span><h3>6. Primarklasse</h3>
         <p>Übungen zu verschiedenen Fächern der 6. Primarstufe, mit Selbstkontrolle</p>
