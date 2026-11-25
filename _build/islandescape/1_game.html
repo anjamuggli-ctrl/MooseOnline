@@ -72,6 +72,9 @@
   .ie-best{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0}
   .ie-best td,.ie-best th{padding:6px 8px;border-bottom:1px solid var(--ie-line);text-align:left}
   .ie-done{background:#e3f1df;border-radius:12px;padding:12px 16px;margin:12px 0;font-weight:600}
+  .ie-ov{position:fixed;inset:0;background:rgba(15,26,32,.6);display:flex;align-items:center;justify-content:center;z-index:100000;padding:14px}
+  .ie-ovbox{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:90vh;overflow:auto;padding:20px 22px;color:#1f2b33;line-height:1.5}
+  .ie-ovbox li{margin:4px 0}
   </style>
 
   <div class="ie" id="ie"><noscript><p>Please turn on JavaScript to play the game.</p></noscript></div>
@@ -84,8 +87,13 @@ var IMG = (window.SITE_BASE || (/\/(en|it|rm)\/[^\/]*$/.test(location.pathname) 
 var KEY = "mo_islandescape_v1", BEST = "mo_islandescape_best_v1";
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
-function img(f, alt){ return '<img src="'+IMG+f+'" alt="'+esc(alt)+'" onerror="this.remove()">'; }
+var FALLBACK = {"ie-timeup.jpg":"ie-intro.jpg"};
+function img(f, alt){ var fb = FALLBACK[f]; return '<img src="'+IMG+f+'" alt="'+esc(alt)+'"'+(fb?' data-fb="'+IMG+fb+'"':'')+' onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute(\'data-fb\')}else this.remove()">'; }
 function mmss(s){ s = Math.max(0, Math.round(s)); return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2); }
+
+var FACTS = '<div class="ie-fact"><b>Fact sheet: Mira Island</b><ul><li>4,000 inhabitants; in summer, about 4,000 tourists come as well.</li><li>About 2,500 hours of sunshine per year, mostly in summer.</li><li>Strong winds on the west coast, especially in autumn and winter.</li><li>The difference between high and low tide is only about 1 metre. One small river, no mountains.</li><li>A bird reserve on the hills of the west coast.</li></ul></div>';
+var RULES = '<b>Rules:</b> Every wrong code costs <b>1 minute</b>. Each room has one hint, which costs <b>2 minutes</b>. Talk in English in your team!';
+var HOWTO = '<h3 style="margin-top:0">How to play</h3><ul><li>You go through <b>four rooms</b>. In each room, solve the puzzle to find the code, then enter it in the lock.</li><li>Room 1: put the cards in the right order with ▲ and ▼. Room 4: switch ON the true statements and pull the lever.</li><li>Every wrong code costs <b>1 minute</b>. Each room has one hint, which costs <b>2 minutes</b>.</li><li>The lamps at the top show how many rooms you have solved. Your game is saved in this browser.</li><li>Talk in English in your team!</li></ul>'+FACTS;
 
 /* ================= ROOMS ================= */
 var ROOMS = [
@@ -131,8 +139,8 @@ function start(){
  var saved = load();
  root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-intro.jpg","A small island after a storm, with dark houses and a wind turbine standing still")+'<div class="cap"><small>Escape game · Unit 9</small><b>Island Escape: Power for Mira Island</b></div></div><div class="ie-body">'
   +'<p>Last night, a heavy storm hit <b>Mira Island</b>. The old diesel power plant is broken, the houses are dark, and the island’s new clean energy system is locked. You are the energy team that came by ship to help. Find your way through <b>four rooms</b>, solve the puzzles and switch the island back on before night falls.</p>'
-  +'<div class="ie-fact"><b>Fact sheet: Mira Island</b><ul><li>4,000 inhabitants; in summer, about 4,000 tourists come as well.</li><li>About 2,500 hours of sunshine per year, mostly in summer.</li><li>Strong winds on the west coast, especially in autumn and winter.</li><li>The difference between high and low tide is only about 1 metre. One small river, no mountains.</li><li>A bird reserve on the hills of the west coast.</li></ul></div>'
-  +'<p><b>Rules:</b> Every wrong code costs <b>1 minute</b>. Each room has one hint, which costs <b>2 minutes</b>. Talk in English in your team!</p>'
+  +FACTS
+  +'<p>'+RULES+'</p>'
   +(saved && !saved.end ? '<p><button class="ie-btn" id="ie-res">Continue the saved game (room '+(saved.room+1)+')</button></p>' : '')
   +'<div class="ie-row" style="margin:12px 0"><label for="ie-name"><b>Team name</b></label><input class="ie-input" id="ie-name" maxlength="28" value="The Energy Team"></div>'
   +'<p style="margin:8px 0 6px"><b>Time</b></p><div class="ie-chips" id="ie-time"><button data-m="20">20 minutes · experts</button><button data-m="30" class="on">30 minutes</button><button data-m="45">45 minutes</button><button data-m="0">no time limit</button></div>'
@@ -151,12 +159,22 @@ function bestTable(){
  return '<h3 style="margin-top:20px">Best teams on this device</h3><table class="ie-best"><tr><th>Team</th><th>Time</th><th>Hints</th><th>Wrong codes</th></tr>'+b.slice(0,5).map(function(x){ return '<tr><td>'+esc(x.team)+'</td><td>'+mmss(x.time)+'</td><td>'+x.hints+'</td><td>'+x.wrong+'</td></tr>'; }).join("")+'</table>';
 }
 
+function help(){
+ var d = document.createElement("div"); d.className = "ie-ov";
+ d.innerHTML = '<div class="ie-ovbox" role="dialog" aria-modal="true">'+HOWTO+'<p style="text-align:right;margin:12px 0 0"><button class="ie-btn">Back to the game</button></p></div>';
+ root.appendChild(d);
+ var close = function(){ d.remove(); document.removeEventListener("keydown", k); };
+ var k = function(e){ if (e.key === "Escape") close(); };
+ d.addEventListener("click", function(e){ if (e.target === d || e.target.closest("button")) close(); });
+ document.addEventListener("keydown", k); d.querySelector("button").focus();
+}
+
 /* ================= TIMER ================= */
 function stop(){ if (tick) clearInterval(tick); tick = null; }
 function bar(){
  var h = '<div class="ie-bar"><span class="ie-clock" id="ie-clock">'+(S.limit?mmss(left()):mmss(used()))+'</span><div class="ie-lamps">'
   + ROOMS.map(function(r,i){ return '<span class="ie-lamp'+(i<S.room?' on':'')+(i===S.room?' now':'')+'" title="'+esc(r.kick)+'">'+(i+1)+'</span>'; }).join("")
-  +'</div><span class="ie-team">'+esc(S.team)+'</span><button class="ie-btn alt sm" id="ie-quit" style="background:transparent;color:#fff;border-color:#8aa0ad">Restart</button></div>';
+  +'</div><span class="ie-team">'+esc(S.team)+'</span><button class="ie-btn alt sm" id="ie-help" style="background:transparent;color:#fff;border-color:#8aa0ad">📖 Rules</button><button class="ie-btn alt sm" id="ie-quit" style="background:transparent;color:#fff;border-color:#8aa0ad">Restart</button></div>';
  return h;
 }
 function runClock(){
@@ -194,6 +212,7 @@ function room(){
  h += '<div class="ie-row" style="justify-content:space-between;margin-top:12px"><button class="ie-btn alt sm" id="ie-hint"'+(S.hints.indexOf(S.room)>=0?' disabled':'')+'>💡 Hint (−2 minutes)</button><span style="color:var(--ie-mut);font-size:14px">Wrong codes so far: '+S.wrong+'</span></div></div></div>';
  root.innerHTML = h;
  runClock();
+ root.querySelector("#ie-help").onclick = help;
  root.querySelector("#ie-quit").onclick = function(){ if (confirm("Restart the escape game? Your progress will be lost.")) { try{localStorage.removeItem(KEY);}catch(e){} start(); } };
  root.querySelector("#ie-hint").onclick = function(){ if (S.hints.indexOf(S.room) < 0) { S.hints.push(S.room); S.pen += 120; save(); this.disabled = true; document.getElementById("ie-hintbox").innerHTML = '<div class="ie-hint"><b>Hint:</b> '+esc(R.hint)+'</div>'; } };
  if (R.type === "order") wireOrder(R);
@@ -271,7 +290,7 @@ function win(){
 }
 function timeUp(){
  stop();
- root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-intro.jpg","The dark island after the storm")+'<div class="cap"><small>Time is up</small><b>Night has fallen on Mira Island</b></div></div><div class="ie-body">'
+ root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-timeup.jpg","The dark island at night")+'<div class="cap"><small>Time is up</small><b>Night has fallen on Mira Island</b></div></div><div class="ie-body">'
   +'<p>The island is still dark, but you got far: <b>'+S.room+' of 4 rooms</b> are solved. You can continue without a time limit to finish the mission, or start again.</p>'
   +'<p class="ie-row"><button class="ie-btn" id="ie-cont">Continue without time limit</button><button class="ie-btn alt" id="ie-again">Start again</button></p></div></div>';
  root.querySelector("#ie-cont").onclick = function(){ S.limit = 0; save(); room(); };

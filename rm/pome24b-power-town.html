@@ -178,7 +178,11 @@ var KEY = "mo_powertown_v1";
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 function rnd(n){ return Math.floor(Math.random()*n); }
 function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=rnd(i+1), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
-function img(file, alt, cls){ return '<img'+(cls?' class="'+cls+'"':'')+' src="'+IMG+file+'" alt="'+esc(alt||"")+'" onerror="this.remove()">'; }
+/* new pictures fall back to an existing picture until they are uploaded */
+var FALLBACK = {"pt-field-townhall.jpg":"pt-event-funding.jpg","pt-field-event.jpg":"pt-event-storm.jpg","pt-field-summit.jpg":"pt-event-funding.jpg","pt-field-fair.jpg":"pt-card-stats.jpg",
+ "pt-event-tax.jpg":"pt-plant-gas.jpg","pt-event-prize.jpg":"pt-card-question.jpg","pt-event-sunny.jpg":"pt-plant-solar.jpg","pt-event-windy.jpg":"pt-plant-wind.jpg","pt-event-waste.jpg":"pt-plant-nuclear.jpg","pt-event-strike.jpg":"pt-event-citizens.jpg"};
+function img(file, alt, cls){ var fb = FALLBACK[file]; return '<img'+(cls?' class="'+cls+'"':'')+' src="'+IMG+file+'" alt="'+esc(alt||"")+'"'+(fb?' data-fb="'+IMG+fb+'"':'')+' onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute(\'data-fb\')}else this.remove()">'; }
+var FIMG = {start:"pt-field-townhall.jpg", event:"pt-field-event.jpg", quiz:"pt-card-question.jpg", stats:"pt-card-stats.jpg", summit:"pt-field-summit.jpg", fair:"pt-field-fair.jpg", blackout:"pt-event-blackout.jpg"};
 
 /* ================= QUESTIONS (Unit 9) =================
    [question, [options], index of correct option, explanation, level 1|2] */
@@ -338,12 +342,12 @@ var EVENTS = [
  {id:"blackout", img:"pt-event-blackout.jpg", t:"Winter evening without power", x:"On a cold, dark winter evening there is too little electricity in the grid. Towns that can store energy help out and sell their electricity.", run:function(p){ var n=count(p,"hydro"); if(n){ add(p,80); return "Your hydro plants can deliver electricity at night: +80 credits."; } pay(p,40); return "You must buy expensive electricity: −40 credits. (Tip: hydro and pumped storage help in winter.)"; }},
  {id:"funding", img:"pt-event-funding.jpg", t:"Funding approved!", x:"The canton supports towns that invest in clean energy.", run:function(p){ var n=count(p,"solar")+count(p,"wind")+count(p,"hydro"); if(n){ add(p,150); return "You own renewable plants: +150 credits!"; } add(p,50); return "+50 credits. With renewable plants, it would have been 150."; }},
  {id:"citizens", img:"pt-event-citizens.jpg", t:"Citizens build solar together", x:"Neighbours put solar panels on their apartment building. Your town supports them.", run:function(p){ var f=FIELDS.map(function(f,i){return i;}).filter(function(i){ return S.own[i]===p.id && FIELDS[i].t==="solar" && S.lvl[i]<2; }); if(f.length){ S.lvl[f[0]]=2; return "One of your solar plants is upgraded for free: "+FIELDS[f[0]].nm+" ★★"; } add(p,60); return "+60 credits."; }},
- {id:"tax", img:"pt-plant-gas.jpg", t:"New CO₂ tax", x:"Fossil power plants must now pay a tax on every tonne of CO₂.", run:function(p){ var n=count(p,"gas"); if(n){ pay(p,40*n); return "You pay "+(40*n)+" credits for your gas plants."; } return "You have no gas plant. Nothing to pay!"; }},
- {id:"prize", img:"pt-card-question.jpg", t:"Science prize", x:"A difficult question. Answer it correctly to win the town’s science prize.", q:"any2", ok:function(p){ add(p,120); return "+120 credits!"; }, no:function(){ return "No prize this time."; }},
- {id:"sunny", img:"pt-plant-solar.jpg", t:"A very sunny summer", x:"Record hours of sunshine! Solar plants produce more than ever.", run:function(p){ var n=count(p,"solar"); if(n){ add(p,35*n); return "+"+(35*n)+" credits for your solar plants."; } return "You have no solar plant yet."; }},
- {id:"windy", img:"pt-plant-wind.jpg", t:"A stormy winter", x:"Strong winds all winter long. Wind turbines produce a lot, just when solar panels produce little.", run:function(p){ var n=count(p,"wind"); if(n){ add(p,35*n); return "+"+(35*n)+" credits for your wind plants."; } return "You have no wind plant yet."; }},
- {id:"waste", img:"pt-plant-nuclear.jpg", t:"Radioactive waste", x:"Nuclear plant owners must pay into the fund for the final storage of radioactive waste.", run:function(p){ var n=count(p,"nuclear"); if(n){ pay(p,40*n); return "You pay "+(40*n)+" credits."; } return "You have no nuclear plant. Nothing to pay."; }},
- {id:"strike", img:"pt-event-citizens.jpg", t:"Climate strike", x:"Young people demonstrate for more climate protection. Explain the greenhouse effect correctly, and the town promises to cut emissions.", q:"gh", ok:function(){ meter(-1); return "Climate meter −1!"; }, no:function(){ return "The protest has no effect this time."; }}
+ {id:"tax", img:"pt-event-tax.jpg", t:"New CO₂ tax", x:"Fossil power plants must now pay a tax on every tonne of CO₂.", run:function(p){ var n=count(p,"gas"); if(n){ pay(p,40*n); return "You pay "+(40*n)+" credits for your gas plants."; } return "You have no gas plant. Nothing to pay!"; }},
+ {id:"prize", img:"pt-event-prize.jpg", t:"Science prize", x:"A difficult question. Answer it correctly to win the town’s science prize.", q:"any2", ok:function(p){ add(p,120); return "+120 credits!"; }, no:function(){ return "No prize this time."; }},
+ {id:"sunny", img:"pt-event-sunny.jpg", t:"A very sunny summer", x:"Record hours of sunshine! Solar plants produce more than ever.", run:function(p){ var n=count(p,"solar"); if(n){ add(p,35*n); return "+"+(35*n)+" credits for your solar plants."; } return "You have no solar plant yet."; }},
+ {id:"windy", img:"pt-event-windy.jpg", t:"A stormy winter", x:"Strong winds all winter long. Wind turbines produce a lot, just when solar panels produce little.", run:function(p){ var n=count(p,"wind"); if(n){ add(p,35*n); return "+"+(35*n)+" credits for your wind plants."; } return "You have no wind plant yet."; }},
+ {id:"waste", img:"pt-event-waste.jpg", t:"Radioactive waste", x:"Nuclear plant owners must pay into the fund for the final storage of radioactive waste.", run:function(p){ var n=count(p,"nuclear"); if(n){ pay(p,40*n); return "You pay "+(40*n)+" credits."; } return "You have no nuclear plant. Nothing to pay."; }},
+ {id:"strike", img:"pt-event-strike.jpg", t:"Climate strike", x:"Young people demonstrate for more climate protection. Explain the greenhouse effect correctly, and the town promises to cut emissions.", q:"gh", ok:function(){ meter(-1); return "Climate meter −1!"; }, no:function(){ return "The protest has no effect this time."; }}
 ];
 
 /* ================= STATE ================= */
@@ -363,6 +367,18 @@ function log(s){ S.log.unshift(s); S.log = S.log.slice(0,40); }
 function year(){ return Math.min(2050, 2026 + Math.round((S.round-1) * 24 / S.rounds)); }
 function yieldOf(i){ var f=FIELDS[i]; return PT[f.t].yield * (S.lvl[i]||1); }
 
+/* ================= RULES ================= */
+var RULES = '<ul class="pt-rules">'
+  +'<li><b>Roll and move</b> clockwise. Passing the <b>Town Hall</b> gives you 100 credits.</li>'
+  +'<li><b>Power plant field, free:</b> answer a question about this energy source. If you are right, you may buy the plant.</li>'
+  +'<li><b>Your own plant:</b> answer a harder question to upgrade it (★★). It then earns double.</li>'
+  +'<li><b>Another town’s plant:</b> you pay a grid fee. Answer a question correctly and you only pay half.</li>'
+  +'<li><b>At the start of each turn</b>, your plants earn credits: ☀️ 10 · 🌬️ 12 · 💧 16 · ⚛️ 22 · 🏭 16.</li>'
+  +'<li><b>Gas plants</b> are cheap but dirty: every time you pass the Town Hall, each of your gas plants pushes the <b>climate meter</b> up by 1. If it reaches 10, the sea floods the towns and <b>everyone loses</b>.</li>'
+  +'<li><b>Event, Quiz, Statistics, Climate Summit, Energy Fair, Blackout:</b> follow the card.</li>'
+  +'<li><b>End:</b> after the last round, the year is 2050. Score = credits + half the value of your plants + clean bonus (☀️🌬️💧 +50 each, ⚛️ +20, 🏭 −60).</li>'
+  +'</ul>';
+
 /* ================= SETUP SCREEN ================= */
 function setup(){
  var saved = load();
@@ -374,16 +390,7 @@ function setup(){
   h += '<div class="pt-pl"><span class="pt-tok'+'" style="--tc:'+t.c+'">'+t.ic+'</span><input type="text" id="pt-n'+i+'" value="'+["Team Tram","Team Wind","Team Sun","Team Bike"][i]+'" aria-label="Name of player '+(i+1)+'"><label><input type="checkbox" id="pt-on'+i+'"'+(i<2?' checked':'')+'> plays</label></div>';
  });
  h += '</div><h3>Game length</h3><div class="pt-chipset" id="pt-len"><button data-r="8">Short · 8 rounds · about 20 min</button><button data-r="12" class="on">Normal · 12 rounds · about 35 min</button><button data-r="18">Long · 18 rounds · about 50 min</button></div>'
-  +'<details style="margin:16px 0"><summary><b>Rules</b></summary><ul class="pt-rules">'
-  +'<li><b>Roll and move</b> clockwise. Passing the <b>Town Hall</b> gives you 100 credits.</li>'
-  +'<li><b>Power plant field, free:</b> answer a question about this energy source. If you are right, you may buy the plant.</li>'
-  +'<li><b>Your own plant:</b> answer a harder question to upgrade it (★★). It then earns double.</li>'
-  +'<li><b>Another town’s plant:</b> you pay a grid fee. Answer a question correctly and you only pay half.</li>'
-  +'<li><b>At the start of each turn</b>, your plants earn credits: ☀️ 10 · 🌬️ 12 · 💧 16 · ⚛️ 22 · 🏭 16.</li>'
-  +'<li><b>Gas plants</b> are cheap but dirty: every time you pass the Town Hall, each of your gas plants pushes the <b>climate meter</b> up by 1. If it reaches 10, the sea floods the towns and <b>everyone loses</b>.</li>'
-  +'<li><b>Event, Quiz, Statistics, Climate Summit, Energy Fair, Blackout:</b> follow the card.</li>'
-  +'<li><b>End:</b> after the last round, the year is 2050. Score = credits + half the value of your plants + clean bonus (☀️🌬️💧 +50 each, ⚛️ +20, 🏭 −60).</li>'
-  +'</ul></details>'
+  +'<details style="margin:16px 0"><summary><b>Rules</b></summary>'+RULES+'</details>'
   +'<button class="pt-btn" data-a="start">Start a new game</button></div>';
  root.innerHTML = h;
  root.querySelector("#pt-len").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; [].forEach.call(this.children,function(x){x.classList.toggle("on",x===b);}); });
@@ -446,9 +453,10 @@ function draw(){
   +'<div class="pt-meter" title="Climate meter: '+S.meter+' of 10"><span style="width:'+(S.meter*10)+'%"></span></div><div class="pt-mlbl"><span>climate meter</span><span><b>'+S.meter+'</b> / 10</span></div>'
   +'<div class="pt-die" id="pt-die" aria-hidden="true">'+dieFace(S.lastRoll||1)+'</div>'
   +'<button class="pt-btn" id="pt-roll"'+(S.phase!=="roll"||S.over?' disabled':'')+'>'+esc(p.nm)+': roll the die</button></div>'
-  +'<div class="pt-newrow"><button class="pt-btn alt" id="pt-new" style="padding:8px 14px;font-size:14px">New game</button></div>';
+  +'<div class="pt-newrow" style="display:flex;gap:8px;flex-wrap:wrap"><button class="pt-btn alt" id="pt-rulesbtn" style="padding:8px 14px;font-size:14px">📖 Rules</button><button class="pt-btn alt" id="pt-new" style="padding:8px 14px;font-size:14px">New game</button></div>';
  var side = document.getElementById("pt-side"); side.innerHTML = s;
  document.getElementById("pt-roll").addEventListener("click", roll);
+ document.getElementById("pt-rulesbtn").addEventListener("click", function(){ open({title:"How to play Power Town", ic:"📖", c:"#3f5d4a", img:"pt-tile.jpg", html:RULES, acts:[{t:"Close", f:close}]}); });
  document.getElementById("pt-new").addEventListener("click", function(){ if (confirm("Start a new game? The current game will be lost.")) { try{localStorage.removeItem(KEY);}catch(e){} setup(); } });
  upgradeTokens();
 }
@@ -527,7 +535,7 @@ function land(p){
  var i = p.pos, f = FIELDS[i];
  if (S.meter >= 10) return finish(true);
  if (f.k === "plant") return plantField(p, i);
- if (f.k === "start") { open({title:"Town Hall", ic:"🏛️", c:"#a8682f", html:"<p>You are at the Town Hall. Time to plan the next investments.</p>", acts:[{t:"OK", f:next}]}); return; }
+ if (f.k === "start") { open({title:"Town Hall", ic:"🏛️", c:"#a8682f", img:"pt-field-townhall.jpg", html:"<p>You are at the Town Hall. Time to plan the next investments.</p>", acts:[{t:"OK", f:next}]}); return; }
  if (f.k === "event") return eventField(p);
  if (f.k === "quiz") {
   var c = anyCat();
@@ -541,12 +549,12 @@ function land(p){
   return;
  }
  if (f.k === "summit") {
-  open({title:"Climate Summit", tag:"Climate Summit", ic:"🌍", c:"#4f8a52", img:"pt-event-funding.jpg", html:"<p>The towns meet to talk about climate protection. If you answer correctly, the <b>climate meter goes down by 1</b>.</p>"});
+  open({title:"Climate Summit", tag:"Climate Summit", ic:"🌍", c:"#4f8a52", img:"pt-field-summit.jpg", html:"<p>The towns meet to talk about climate protection. If you answer correctly, the <b>climate meter goes down by 1</b>.</p>"});
   ask(["gh","sea"][rnd(2)], 0, function(ok){ if (ok) meter(-1); log(esc(p.nm)+(ok?" convinces the Climate Summit: climate meter −1.":" could not convince the Climate Summit.")); setActs([{t:"Continue", f:next}]); });
   return;
  }
  if (f.k === "fair") {
-  open({title:"Energy Fair", tag:"Energy Fair", ic:"🎪", c:"#c98a12", img:"pt-card-stats.jpg", html:"<p>Present your town’s energy plan at the fair. A harder question: correct gives <b>+150 credits</b>.</p>"});
+  open({title:"Energy Fair", tag:"Energy Fair", ic:"🎪", c:"#c98a12", img:"pt-field-fair.jpg", html:"<p>Present your town’s energy plan at the fair. A harder question: correct gives <b>+150 credits</b>.</p>"});
   ask(anyCat(), 2, function(ok){ if (ok) add(p,150); log(esc(p.nm)+(ok?" wins the prize at the Energy Fair: +150.":" goes home from the Energy Fair without a prize.")); setActs([{t:"Continue", f:next}]); });
   return;
  }
@@ -624,7 +632,7 @@ function next(){
 function info(i){
  var f = FIELDS[i];
  if (f.k !== "plant") { var txt = {start:"Passing the Town Hall gives you 100 credits. Gas plants push the climate meter up here.", event:"Draw an event card.", quiz:"Answer a question: +50 credits.", stats:"Read a chart or numbers: +70 credits.", summit:"Answer correctly: climate meter −1.", fair:"A harder question: +150 credits.", blackout:"Answer correctly, or you miss your next turn."}[f.k];
-  open({title:f.nm, ic:f.ic, c:FCOL[f.k], html:"<p>"+txt+"</p>", acts:[{t:"Close", f:close}]}); return; }
+  open({title:f.nm, ic:f.ic, c:FCOL[f.k], img:FIMG[f.k], html:"<p>"+txt+"</p>", acts:[{t:"Close", f:close}]}); return; }
  var t = PT[f.t], own = S.own[i];
  open({title:f.nm, tag:t.name+" power", ic:t.ic, c:t.c, img:t.img, html:'<div class="pt-facts"><span>Price: <b>'+t.price+'</b></span><span>Earns: <b>'+t.yield+'</b> per turn (★★ '+(t.yield*2)+')</span><span>Clean bonus: <b>'+t.clean+'</b></span><span>Owner: <b>'+(own!=null?esc(S.players[own].nm):"nobody")+'</b></span></div>', acts:[{t:"Close", f:close}]});
 }
