@@ -4094,6 +4094,66 @@
    "en": "Class check against bullying",
    "it": "Check della classe contro il mobbing",
    "rm": "Check da la classa cunter mobbing"
+  },
+  "Ein Brettspiel zu Energie und Umwelt: Baut für eure Stadt bis 2050 eine saubere Energieversorgung auf.": {
+   "en": "A board game about energy and the environment: build a clean energy supply for your town by 2050. (Game language: German)",
+   "it": "Un gioco da tavolo su energia e ambiente: costruite per la vostra città un approvvigionamento energetico pulito entro il 2050. (Lingua del gioco: tedesco)",
+   "rm": "In gieu da tabla davart energia ed ambient: Construi per vossa citad entochen il 2050 in provediment d'energia nets. (Lingua dal gieu: tudestg)"
+  },
+  "Ein Escape-Game: Löst vier Energierätsel und schaltet die Insel Mira wieder ein.": {
+   "en": "An escape game: solve four energy puzzles and switch Mira Island back on. (Game language: German)",
+   "it": "Un escape game: risolvete quattro enigmi sull'energia e riaccendete l'isola di Mira. (Lingua del gioco: tedesco)",
+   "rm": "In escape game: Schliai quatter enigmas d'energia e envidai puspè l'insla Mira. (Lingua dal gieu: tudestg)"
+  },
+  "English version →": {
+   "en": "English version →",
+   "it": "English version →",
+   "rm": "English version →"
+  },
+  "Island Escape – App-Werkstatt – MuggliOnline": {
+   "en": "Island Escape – App Workshop – MuggliOnline",
+   "it": "Island Escape – Laboratorio app – MuggliOnline",
+   "rm": "Island Escape – Ufficina d'apps – MuggliOnline"
+  },
+  "Power Town – App-Werkstatt – MuggliOnline": {
+   "en": "Power Town – App Workshop – MuggliOnline",
+   "it": "Power Town – Laboratorio app – MuggliOnline",
+   "rm": "Power Town – Ufficina d'apps – MuggliOnline"
+  },
+  "Island Escape: ein Escape-Game zu Energie und Umwelt mit Rätseln zu Treibhauseffekt, Meeresspiegel, Energieumwandlung und Kernenergie.": {
+   "en": "Island Escape: an escape game in German about energy and the environment, with puzzles on the greenhouse effect, sea levels, energy conversion and nuclear power.",
+   "it": "Island Escape: un escape game in tedesco su energia e ambiente, con enigmi su effetto serra, livello del mare, conversione dell'energia ed energia nucleare.",
+   "rm": "Island Escape: in escape game en tudestg davart energia ed ambient, cun enigmas davart l'effect da serra, il nivel da la mar, la transfurmaziun d'energia e l'energia nucleara."
+  },
+  "Power Town: ein Brettspiel zu Energie und Umwelt mit Fragen zu Treibhauseffekt, Meeresspiegel, Solar-, Wasser-, Wind- und Kernenergie sowie Statistik.": {
+   "en": "Power Town: a board game in German about energy and the environment, with questions on the greenhouse effect, sea levels, solar, water, wind and nuclear power and statistics.",
+   "it": "Power Town: un gioco da tavolo in tedesco su energia e ambiente, con domande su effetto serra, livello del mare, energia solare, idrica, eolica e nucleare e statistica.",
+   "rm": "Power Town: in gieu da tabla en tudestg davart energia ed ambient, cun dumondas davart l'effect da serra, il nivel da la mar, l'energia solara, idraulica, eolica e nucleara e la statistica."
+  },
+  "Lernspiel · Energie und Umwelt": {
+   "en": "Learning game · Energy and the environment",
+   "it": "Gioco didattico · Energia e ambiente",
+   "rm": "Gieu d'emprender · Energia ed ambient"
+  },
+  "Sekundarstufe I (Zyklus 3) in Natur und Technik oder Geografie, Berufsfachschule (Fachkunde, ABU) und mit der englischen Version auch im Englischunterricht ab Niveau A2/B1 sowie Gymnasium (Geografie, Physik), etwa zur Repetition vor einer Prüfung.": {
+   "en": "Lower secondary (cycle 3) in science and technology or geography, vocational school (trade theory, general education) and, with the English version, English lessons from level A2/B1, as well as upper secondary school (geography, physics), for example as revision before a test.",
+   "it": "Secondario I (ciclo 3) in natura e tecnica o geografia, scuola professionale (conoscenze professionali, cultura generale) e, con la versione inglese, anche nelle lezioni d'inglese dal livello A2/B1, nonché liceo (geografia, fisica), per esempio come ripasso prima di una verifica.",
+   "rm": "Stgalim secundar I (ciclus 3) en natira e tecnica u geografia, scola professiunala (enconuschientschas professiunalas, scolaziun generala) e, cun la versiun englaisa, er en l'instrucziun d'englais a partir dal nivel A2/B1, sco er gimnasi (geografia, fisica), per exempel sco repetiziun avant in test."
+  },
+  "Sekundarstufe I ab der 8. Klasse in Natur und Technik, Physik oder Geografie, Berufsfachschule und Gymnasium, mit der englischen Version auch im Englischunterricht ab Niveau B1, als Repetition, Postenarbeit oder Abschluss einer Unterrichtseinheit.": {
+   "en": "Lower secondary from year 8 in science and technology, physics or geography, vocational school and upper secondary school and, with the English version, English lessons from level B1, as revision, station work or the end of a unit.",
+   "it": "Secondario I dalla classe 8 in natura e tecnica, fisica o geografia, scuola professionale e liceo e, con la versione inglese, anche nelle lezioni d'inglese dal livello B1, come ripasso, lavoro a postazioni o conclusione di un'unità didattica.",
+   "rm": "Stgalim secundar I a partir da la 8avla classa en natira e tecnica, fisica u geografia, scola professiunala e gimnasi e, cun la versiun englaisa, er en l'instrucziun d'englais a partir dal nivel B1, sco repetiziun, lavur a posts u conclusiun d'ina unitad d'instrucziun."
+  },
+  "Spielsprache Deutsch": {
+   "en": "Game language: German",
+   "it": "Lingua del gioco: tedesco",
+   "rm": "Lingua dal gieu: tudestg"
+  },
+  "auch auf Englisch": {
+   "en": "also in English",
+   "it": "anche in inglese",
+   "rm": "er en englais"
   }
  },
  "js": {

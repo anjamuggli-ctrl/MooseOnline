@@ -1,0 +1,583 @@
+  <style>
+  .pt{--pt-ink:#2f3a32;--pt-mut:#6b7368;--pt-bg:#fbfaf6;--pt-line:#d9d3c4;--solar:#d9a21b;--wind:#4f8fbf;--hydro:#2a6f97;--nuclear:#7d4f96;--gas:#7a7a7a;--event:#b0573a;--quiz:#3f5d4a;--stats:#3b4f8a;color:var(--pt-ink)}
+  .pt *{box-sizing:border-box}
+  .pt-setup{background:#fff;border:1px solid var(--pt-line);border-radius:18px;padding:22px;max-width:860px;margin:0 auto}
+  .pt-setup h2{margin:0 0 6px}
+  .pt-setup .row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+  .pt-pl{display:flex;align-items:center;gap:10px;background:var(--pt-bg);border:1px solid var(--pt-line);border-radius:12px;padding:8px 12px;flex:1 1 360px}
+  .pt-pl input[type=text]{flex:1;border:1px solid var(--pt-line);border-radius:8px;padding:7px 9px;font:inherit}
+  .pt-pl label{display:flex;align-items:center;gap:6px;font-size:14px;white-space:nowrap}
+  .pt-chipset{display:flex;flex-wrap:wrap;gap:8px}
+  .pt-chipset button{border:1.5px solid var(--pt-line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+  .pt-chipset button.on{background:var(--pt-ink);color:#fff;border-color:var(--pt-ink)}
+  .pt-btn{border:0;background:var(--pt-ink);color:#fff;border-radius:999px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer}
+  .pt-btn.alt{background:#fff;color:var(--pt-ink);border:1.5px solid var(--pt-ink)}
+  .pt-btn:disabled{opacity:.45;cursor:default}
+  .pt-rules{font-size:15px;line-height:1.55;color:#3d4b41}
+  .pt-rules li{margin:4px 0}
+  .pt-game{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:18px;align-items:start}
+  @media(max-width:980px){.pt-game{grid-template-columns:1fr}}
+  .pt-board{position:relative;background-size:cover;background-position:center;display:grid;grid-template-columns:1.25fr repeat(5,1fr) 1.25fr;grid-template-rows:1.25fr repeat(5,1fr) 1.25fr;gap:3px;aspect-ratio:1/1;width:100%;max-width:760px;margin:0 auto;background-color:#e9e4d6;border:3px solid var(--pt-ink);border-radius:16px;padding:3px}
+  .pt-f{position:relative;background:rgba(255,255,255,.88);backdrop-filter:blur(2px);border-radius:7px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3px 2px 2px;cursor:pointer;min-width:0;min-height:0}
+  .pt-f:hover{outline:2px solid var(--pt-ink)}
+  .pt-f .band{position:absolute;left:0;right:0;top:0;height:6px;background:var(--c)}
+  .pt-f .ic{font-size:clamp(13px,2.4vw,22px);line-height:1;margin-top:4px}
+  .pt-f .nm{font-size:clamp(7px,1.05vw,11px);line-height:1.15;color:var(--pt-ink);font-weight:600;margin-top:2px;overflow:hidden;max-height:2.4em}
+  .pt-f .pr{font-size:clamp(7px,.95vw,10px);color:var(--pt-mut)}
+  .pt-f.corner{background:rgba(246,235,220,.92)}.pt-f.corner .nm{font-size:clamp(8px,1.2vw,12.5px)}
+  .pt-f .own{position:absolute;inset:0;border:4px solid var(--oc);border-radius:7px;pointer-events:none}
+  .pt-f .lvl{position:absolute;right:3px;bottom:2px;font-size:10px;color:var(--oc);font-weight:800}
+  .pt-f .toks{position:absolute;left:2px;bottom:2px;display:flex;flex-wrap:wrap;gap:1px;max-width:100%}
+  .pt-tok{width:clamp(16px,3vw,30px);height:clamp(16px,3vw,30px);border-radius:50%;background:var(--tc) center/cover no-repeat;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:clamp(9px,1.4vw,15px)}
+  .pt-tok.img{background-color:transparent;border:0;box-shadow:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}
+  .pt-tok.active{animation:pt-hop .9s ease-in-out infinite}
+  @keyframes pt-hop{50%{transform:translateY(-4px)}}
+  .pt-center{grid-column:2/7;grid-row:2/7;position:relative;border-radius:10px;overflow:hidden;background:linear-gradient(160deg,#cfe3c4,#a9cbe0 55%,#e9cf96);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4%}
+  .pt-board.hasimg .pt-center{background:none}
+  .pt-turnbox{text-align:center}
+  .pt-turnbox .yr{font-size:34px;font-weight:800;font-family:Georgia,serif;line-height:1.05}
+  .pt-turnbox .rd{font-size:12.5px;color:var(--pt-mut)}
+  .pt-turnbox .pt-btn{width:100%}
+  .pt-meter{margin:8px 0 4px;height:14px;border-radius:999px;background:#e8ece8;overflow:hidden;border:1px solid #cdd6ce}
+  .pt-meter span{display:block;height:100%;background:linear-gradient(90deg,#6a994e,#e0a526 55%,#c0392b);transition:width .5s}
+  .pt-mlbl{display:flex;justify-content:space-between;font-size:11px;color:var(--pt-mut)}
+  .pt-die{width:64px;height:64px;border-radius:14px;background:#fff;border:2px solid var(--pt-ink);display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:9px;margin:10px auto 6px;box-shadow:0 3px 0 var(--pt-ink)}
+  .pt-die i{width:11px;height:11px;border-radius:50%;background:var(--pt-ink);margin:auto;visibility:hidden}
+  .pt-die.roll{animation:pt-roll .5s linear infinite}
+  @keyframes pt-roll{25%{transform:rotate(12deg)}75%{transform:rotate(-12deg)}}
+  @media(max-width:640px){.pt-f .pr{display:none}}
+  @media(max-width:980px){.pt-turnbox{order:-1}.pt-log{max-height:140px}}
+  .pt-side{display:flex;flex-direction:column;gap:12px}
+  .pt-card{background:#fff;border:1px solid var(--pt-line);border-radius:14px;padding:12px 14px}
+  .pt-card h3{margin:0 0 8px;font-size:16px}
+  .pt-p{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;border:2px solid transparent}
+  .pt-p.now{border-color:var(--tc);background:var(--pt-bg)}
+  .pt-p .who{flex:1;min-width:0}
+  .pt-p .pt-tok{width:40px;height:40px;font-size:18px}
+  .pt-p b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pt-p small{color:var(--pt-mut);font-size:12.5px}
+  .pt-p .cr{font-weight:800;font-variant-numeric:tabular-nums}
+  .pt-turn{text-align:center}
+  .pt-turn .msg{font-size:15px;min-height:2.6em;margin:4px 0 8px}
+  .pt-log{max-height:170px;overflow:auto;font-size:13px;color:#45524a;padding-left:16px;margin:0}
+  .pt-log li{margin:3px 0}
+  .pt-modal{position:fixed;inset:0;background:rgba(30,38,32,.55);display:flex;align-items:center;justify-content:center;z-index:100000;padding:14px}
+  .pt-modal[hidden]{display:none}
+  .pt-mbox{background:#fff;border-radius:18px;max-width:560px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 18px 60px rgba(0,0,0,.35);animation:pt-pop .25s ease-out}
+  @keyframes pt-pop{from{transform:scale(.92);opacity:0}}
+  .pt-mimg{position:relative;aspect-ratio:3/2;background:linear-gradient(135deg,var(--c,#3f5d4a),#2f3a32);display:flex;align-items:center;justify-content:center;font-size:64px;color:rgba(255,255,255,.9)}
+  .pt-mimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .pt-mimg .tag{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.92);color:var(--pt-ink);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  .pt-mbody{padding:16px 20px 20px}
+  .pt-mbody h3{margin:0 0 6px;font-size:20px}
+  .pt-mbody p{margin:6px 0;line-height:1.5}
+  .pt-opts{display:grid;gap:8px;margin:12px 0}
+  .pt-opts button{text-align:left;border:1.5px solid var(--pt-line);background:var(--pt-bg);border-radius:12px;padding:10px 12px;font:inherit;cursor:pointer}
+  .pt-opts button:hover:not(:disabled){border-color:var(--pt-ink)}
+  .pt-opts button.ok{background:#e3f1df;border-color:#4f8a52}
+  .pt-opts button.no{background:#f6e0dc;border-color:#b04a4a}
+  .pt-expl{background:var(--pt-bg);border-left:4px solid var(--c,#3f5d4a);border-radius:8px;padding:9px 12px;font-size:14.5px;margin:8px 0}
+  .pt-acts{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:12px}
+  .pt-facts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:14px;margin:8px 0;padding:10px;background:var(--pt-bg);border-radius:10px}
+  .pt-rank{width:100%;border-collapse:collapse;margin:10px 0;font-size:14.5px}
+  .pt-rank td,.pt-rank th{padding:6px 8px;border-bottom:1px solid var(--pt-line);text-align:left}
+  .pt-rank td.n{text-align:right;font-variant-numeric:tabular-nums}
+  .pt-mini{display:flex;align-items:flex-end;gap:6px;height:110px;margin:10px 0 2px;padding:0 4px;border-bottom:1.5px solid var(--pt-ink)}
+  .pt-mini div{flex:1;background:var(--stats);border-radius:4px 4px 0 0;position:relative}
+  .pt-mini div span{position:absolute;top:-17px;left:0;right:0;text-align:center;font-size:11px;font-weight:700}
+  .pt-minil{display:flex;gap:6px;padding:0 4px;font-size:11px;color:var(--pt-mut)}.pt-minil span{flex:1;text-align:center}
+  </style>
+
+  <div class="pt" id="pt">
+   <noscript><p>Bitte JavaScript aktivieren, um das Spiel zu spielen.</p></noscript>
+  </div>
+
+<script>
+(function(){
+"use strict";
+var root = document.getElementById("pt");
+var IMG = (window.SITE_BASE || (/\/(en|it|rm)\/[^\/]*$/.test(location.pathname) ? "../" : "")) + "img/pome24b/games/";
+var KEY = "mo_powertown_de_v1";
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function rnd(n){ return Math.floor(Math.random()*n); }
+function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=rnd(i+1), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+/* new pictures fall back to an existing picture until they are uploaded */
+var FALLBACK = {"pt-field-townhall.jpg":"pt-event-funding.jpg","pt-field-event.jpg":"pt-event-storm.jpg","pt-field-summit.jpg":"pt-event-funding.jpg","pt-field-fair.jpg":"pt-card-stats.jpg",
+ "pt-event-tax.jpg":"pt-plant-gas.jpg","pt-event-prize.jpg":"pt-card-question.jpg","pt-event-sunny.jpg":"pt-plant-solar.jpg","pt-event-windy.jpg":"pt-plant-wind.jpg","pt-event-waste.jpg":"pt-plant-nuclear.jpg","pt-event-strike.jpg":"pt-event-citizens.jpg"};
+function img(file, alt, cls){ var fb = FALLBACK[file]; return '<img'+(cls?' class="'+cls+'"':'')+' src="'+IMG+file+'" alt="'+esc(alt||"")+'"'+(fb?' data-fb="'+IMG+fb+'"':'')+' onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute(\'data-fb\')}else this.remove()">'; }
+var FIMG = {start:"pt-field-townhall.jpg", event:"pt-field-event.jpg", quiz:"pt-card-question.jpg", stats:"pt-card-stats.jpg", summit:"pt-field-summit.jpg", fair:"pt-field-fair.jpg", blackout:"pt-event-blackout.jpg"};
+
+/* ================= FRAGEN ================= */
+var Q = {
+ gh: [
+  ["Was ist die Atmosphäre?", ["die Gashülle um die Erde","das heisse Innere der Erde","das Eis am Nordpol","das Licht der Sonne"], 0, "Die Atmosphäre ist die Schicht aus Gasen, die die Erde umgibt.", 1],
+  ["Welches dieser Gase ist ein Treibhausgas?", ["Methan","Sauerstoff","Stickstoff","Helium"], 0, "Methan (CH₄) ist ein Treibhausgas. Es entsteht zum Beispiel bei Rindern, in Reisfeldern und auf Deponien.", 1],
+  ["Wie hoch wäre die Durchschnittstemperatur auf der Erde ohne natürlichen Treibhauseffekt?", ["etwa −18 °C","etwa 0 °C","etwa +15 °C","etwa +30 °C"], 0, "Ohne ihn läge der Durchschnitt bei etwa −18 °C statt bei etwa +15 °C.", 1],
+  ["Was bewirken Treibhausgase?", ["Sie lassen das Sonnenlicht grösstenteils durch, halten aber einen Teil der Wärme der Erde zurück.","Sie blockieren das ganze Sonnenlicht.","Sie produzieren Sauerstoff.","Sie machen Löcher in die Ozonschicht."], 0, "Sie halten einen Teil der Infrarotstrahlung (Wärme) zurück und senden sie zur Oberfläche zurück.", 1],
+  ["Wodurch verstärkt der Mensch den Treibhauseffekt vor allem?", ["durch das Verbrennen von Kohle, Öl und Gas","durch Solaranlagen","durch den Bau von Staudämmen","durch das Pflanzen von Bäumen"], 0, "Das Verbrennen fossiler Brennstoffe und das Abholzen von Wäldern bringen zusätzliches CO₂ in die Atmosphäre.", 1],
+  ["Woher stammt Lachgas (N₂O) vor allem?", ["aus Dünger auf den Feldern","aus alten Kühlschränken","aus brennendem Holz","aus schmelzenden Gletschern"], 0, "Landwirtinnen und Landwirte düngen ihre Felder, dabei wird Lachgas frei.", 2],
+  ["Welche Aussage stimmt?", ["Wetter ist ein Tag an einem Ort; Klima ist das durchschnittliche Wetter über etwa 30 Jahre.","Wetter und Klima bedeuten dasselbe.","Klima ist das Wetter einer Woche.","Wetter bedeutet nur Temperatur."], 0, "Klima ist das durchschnittliche Wetter einer Region über lange Zeit, meist 30 Jahre.", 2],
+  ["Ist das Ozonloch die Hauptursache der Klimaerwärmung?", ["Nein, die Hauptursache ist die Zunahme der Treibhausgase, vor allem CO₂.","Ja, es lässt mehr Wärme herein.","Ja, es verhindert, dass Wärme entweicht.","Nein, die Sonne wird heisser."], 0, "Das Ozonloch ist ein anderes Problem. Die Erwärmung kommt vor allem von zusätzlichen Treibhausgasen.", 2],
+  ["Die warme Erdoberfläche gibt Wärme ab als …", ["Infrarotstrahlung","UV-Licht","Schallwellen","Röntgenstrahlen"], 0, "Die Erde gibt Wärme als Infrarotstrahlung ab.", 2]
+ ],
+ sea: [
+  ["Was passiert mit Meerwasser, wenn es wärmer wird?", ["Es dehnt sich aus und braucht mehr Platz.","Es zieht sich zusammen.","Es gefriert.","Nichts."], 0, "Das nennt mensch Wärmeausdehnung. Sie ist einer der beiden Hauptgründe für den steigenden Meeresspiegel.", 1],
+  ["Welches schmelzende Eis lässt den Meeresspiegel steigen?", ["Gletscher und die Eisschilde von Grönland und der Antarktis","schwimmendes Meereis in der Arktis","Eisberge, die schon im Meer treiben","Eiswürfel in einem Getränk"], 0, "Nur Eis, das auf dem Land liegt, bringt neues Wasser ins Meer.", 1],
+  ["Warum verändert schmelzendes Meereis den Meeresspiegel kaum?", ["Es schwimmt schon im Wasser, wie ein Eiswürfel im Glas.","Es schmilzt zu langsam.","Es besteht aus Salz.","Es verdunstet sofort."], 0, "Schwimmendes Eis verdrängt bereits so viel Wasser, wie es wiegt.", 2],
+  ["Was sind die zwei Hauptgründe für den steigenden Meeresspiegel?", ["Warmes Wasser dehnt sich aus, und Eis auf dem Land schmilzt.","Mehr Regen und mehr Flüsse","Erdbeben und Vulkane","Schiffe und Fische"], 0, "Wärmeausdehnung und schmelzendes Landeis.", 2],
+  ["Die Schweiz hat keine Küste. Warum betrifft der steigende Meeresspiegel trotzdem Menschen in der Schweiz?", ["Waren kommen über grosse Häfen, und Menschen aus überschwemmten Regionen müssen vielleicht umziehen.","Er betrifft die Schweiz gar nicht.","Die Schweizer Seen überfluten die Alpen.","Der Rhein fliesst dann rückwärts."], 0, "Handel, Lebensmittelpreise und Migration verbinden die Schweiz mit Küstenregionen, und schmelzende Schweizer Gletscher bringen Wasser ins Meer.", 2],
+  ["Was meldete der Bericht «State of the Climate in 2025» zum globalen Meeresspiegel?", ["Er erreichte einen Rekordwert.","Er sank zum ersten Mal.","Er war gleich hoch wie 1900.","Er wurde nicht gemessen."], 0, "Gemäss dem Bericht erreichte der globale Meeresspiegel 2025 einen Rekordwert.", 2]
+ ],
+ solar: [
+  ["Energie kann weder erzeugt noch vernichtet werden. Sie kann nur …", ["umgewandelt werden","produziert werden","verbrannt werden","für immer gespeichert werden"], 0, "Energie kann nur von einer Form in eine andere umgewandelt werden.", 1],
+  ["Was wandelt eine Solarzelle um?", ["Lichtenergie in elektrische Energie","Lichtenergie in Wärme","Wärme in Licht","elektrische Energie in Bewegung"], 0, "Eine Solarzelle (Photovoltaikzelle) erzeugt direkt aus Licht Strom.", 1],
+  ["Was macht ein Sonnenkollektor?", ["Er erwärmt mit Sonnenlicht Wasser.","Er erzeugt Strom aus Wind.","Er speichert Strom.","Er kühlt ein Haus."], 0, "Ein Sonnenkollektor wandelt Lichtenergie in Wärme um, zum Beispiel für Warmwasser.", 1],
+  ["Welches Gerät wandelt Bewegungsenergie in elektrische Energie um?", ["ein Generator","ein Elektromotor","ein Sonnenkollektor","ein Holzofen"], 0, "Ein Generator macht aus Bewegung Strom. Ein Motor macht das Umgekehrte.", 1],
+  ["Wasser in einem Stausee hoch in den Bergen hat …", ["Lageenergie (potenzielle Energie)","chemische Energie","Kernenergie","keine Energie"], 0, "Wegen seiner Höhe speichert das Wasser Lageenergie.", 1],
+  ["Was ist ein Nachteil der Solarenergie?", ["Nachts erzeugt sie keinen Strom.","Die Energiequelle geht aus.","Sie erzeugt viel CO₂.","Sie braucht viel Wartung."], 0, "Ohne Sonne kein Strom: nachts und bei Bewölkung erzeugen Solaranlagen wenig.", 1],
+  ["Was sagt der Wirkungsgrad einer Maschine aus?", ["wie viel der Energie nutzbar ist","wie schnell sie läuft","wie schwer sie ist","wie viel sie kostet"], 0, "Keine Maschine wandelt alle Energie in nutzbare Energie um; ein Teil geht verloren, meist als Wärme.", 2],
+  ["Was ist ein Sonnenofen?", ["Viele Spiegel bündeln das Sonnenlicht auf einen kleinen Punkt und machen ihn extrem heiss.","Ein Ofen, in dem Holz brennt.","Eine Solaranlage auf dem Dach.","Eine Batterie für Solarstrom."], 0, "Sonnenöfen erreichen mehrere tausend Grad und dienen der Forschung und dem Schmelzen von Metallen.", 2],
+  ["Warum ist der Absorber in einem Sonnenkollektor schwarz?", ["Schwarz nimmt das Licht am besten auf und wird heiss.","Schwarz sieht auf dem Dach schöner aus.","Schwarz reflektiert das Licht.","Schwarz hält das Wasser kalt."], 0, "Eine schwarze Fläche nimmt das meiste Licht auf und wandelt es in Wärme um.", 2],
+  ["Was wandelt ein Elektromotor um?", ["elektrische Energie in Bewegungsenergie","Bewegungsenergie in elektrische Energie","Licht in Wärme","chemische Energie in Licht"], 0, "Ein Motor macht aus Strom Bewegung.", 2]
+ ],
+ water: [
+  ["Was ist ein Stausee?", ["ein künstlicher See hinter einer Staumauer","ein grosses Rohr","die Mündung eines Flusses","eine Maschine im Meer"], 0, "Das Wasser wird im Stausee hinter der Staumauer gespeichert.", 1],
+  ["Was ist eine Druckleitung?", ["ein grosses Rohr, das das Wasser zu den Turbinen hinunterführt","ein See in den Bergen","eine Fischart","ein Stromkabel"], 0, "Die Druckleitung führt das Wasser vom Stausee zu den Turbinen.", 1],
+  ["Wie viel des Schweizer Stroms stammt etwa aus Wasserkraft?", ["mehr als die Hälfte","etwa 5 %","etwa 20 %","gar nichts"], 0, "Die Wasserkraft ist die wichtigste Stromquelle der Schweiz.", 1],
+  ["Was nutzt ein Gezeitenkraftwerk?", ["das Steigen und Sinken des Meeresspiegels (Ebbe und Flut)","die Wellen eines Sees","den Regen in den Bergen","warmes Wasser aus dem Boden"], 0, "Gezeitenkraft nutzt Ebbe und Flut, die etwa zweimal am Tag kommen.", 1],
+  ["Was ist ein Ästuar?", ["der breite Teil eines Flusses, wo er ins Meer mündet","eine Turbinenart","die Quelle eines Flusses","ein Stausee in den Alpen"], 0, "Gezeitenkraftwerke werden quer über solche Flussmündungen gebaut.", 2],
+  ["Warum gibt es nur an wenigen Orten Gezeitenkraftwerke?", ["Sie brauchen einen sehr grossen Unterschied zwischen Ebbe und Flut und eine geeignete Flussmündung.","Sie brauchen viel Sonne.","Sie funktionieren nur in den Alpen.","Sie sind in Europa verboten."], 0, "Beides ist selten. La Rance in Frankreich läuft seit 1966.", 2],
+  ["Wie funktioniert ein Pumpspeicherkraftwerk?", ["Bei Stromüberschuss pumpt es Wasser hinauf, bei Bedarf lässt es das Wasser wieder hinunter.","Es pumpt Wasser aus dem Meer.","Es pumpt Wasser mit Wellen.","Es speichert Strom in grossen Batterien."], 0, "Es wirkt wie eine riesige Batterie und hilft, das Stromnetz auszugleichen.", 2],
+  ["Warum lässt sich Gezeitenkraft gut vorhersagen?", ["Die Zeiten von Ebbe und Flut sind Jahre im Voraus bekannt.","Der Wind weht immer gleich.","Sie funktioniert nur im Sommer.","Weil es jeden Tag regnet."], 0, "Die Gezeiten folgen dem Mond und sind darum sehr regelmässig.", 2],
+  ["Welches Wort bedeutet dasselbe wie «Strom erzeugen»?", ["Strom produzieren","Strom vernichten","Strom zurückwandeln","Strom sparen"], 0, "Strom erzeugen = Strom produzieren.", 2]
+ ],
+ wind: [
+  ["Was dreht den Rotor einer Windturbine?", ["der Wind, der auf die Rotorblätter bläst","ein Motor im Turm","das Wasser im Fluss","die Sonne"], 0, "Der Wind dreht die Rotorblätter, die an der Nabe befestigt sind.", 1],
+  ["Wo befindet sich der Generator einer Windturbine?", ["in der Gondel oben auf dem Turm","unter dem Boden","in den Rotorblättern","nur neben dem Transformator unten"], 0, "Getriebe und Generator sind in der Gondel.", 1],
+  ["Was misst ein Anemometer?", ["die Windgeschwindigkeit","die Temperatur","die Spannung","die Höhe des Turms"], 0, "Das Anemometer misst die Windgeschwindigkeit, die Windfahne die Richtung.", 1],
+  ["Was passiert mit einer Windturbine bei sehr starkem Wind?", ["Sie wird abgeschaltet, damit sie nicht beschädigt wird.","Sie erzeugt den meisten Strom überhaupt.","Sie dreht rückwärts.","Sie fällt um."], 0, "Bei Sturm werden die Turbinen abgeschaltet.", 1],
+  ["Was macht das Getriebe?", ["Es erhöht die Drehzahl, damit der Generator schnell genug dreht.","Es dreht die Gondel in den Wind.","Es misst den Wind.","Es speichert Strom."], 0, "Die langsame Welle dreht langsam; das Getriebe lässt die schnelle Welle schnell drehen.", 2],
+  ["Was macht der Azimutantrieb (Windnachführung)?", ["Er dreht die Gondel, damit der Rotor immer im Wind steht.","Er bremst die Rotorblätter.","Er erhöht die Spannung.","Er kühlt den Generator."], 0, "Er hält den Rotor in Windrichtung.", 2],
+  ["Warum baut mensch Windparks im Meer (offshore)?", ["Der Wind ist dort meist stärker und gleichmässiger.","An Land gibt es keinen Wind.","Fische brauchen Strom.","Bauen im Wasser ist billiger."], 0, "Auf dem Meer weht der Wind stärker und regelmässiger.", 2],
+  ["Welches Land hat 2025 etwa drei Viertel der neuen Windkraft weltweit gebaut?", ["China","die Schweiz","Deutschland","die USA"], 0, "China baute 119,4 GW der 158,7 GW (IRENA).", 2],
+  ["Warum braucht ein Land mit viel Windkraft auch Speicher oder andere Kraftwerke?", ["Der Wind weht nicht immer.","Windturbinen laufen nur nachts.","Windkraft ist im Winter verboten.","Turbinen brauchen Diesel zum Starten."], 0, "Bei wenig Wind müssen andere Quellen oder Speicher den Strom liefern.", 2]
+ ],
+ nuclear: [
+  ["Woher kommt die Wärme in einem Kernkraftwerk?", ["aus der Kernspaltung","aus dem Verbrennen von Kohle","von der Sonne","vom Wind"], 0, "Urankerne werden gespalten und setzen Wärme frei.", 1],
+  ["Was ist der Brennstoff in einem Kernkraftwerk?", ["Uran","Öl","Holz","Wasserstoff"], 0, "Uranoxid wird zu Tabletten gepresst und in Brennstäbe gefüllt.", 1],
+  ["Was machen die Steuerstäbe?", ["Sie fangen Neutronen ein und können die Kettenreaktion verlangsamen oder stoppen.","Sie erzeugen Strom.","Sie kühlen den Fluss.","Sie halten die Brennstofftabletten."], 0, "Steuerstäbe absorbieren Neutronen.", 1],
+  ["Was steigt aus dem Kühlturm auf?", ["Wasserdampf","Rauch mit CO₂","radioaktives Gas","nichts"], 0, "Die weisse Wolke ist Wasserdampf, kein Rauch.", 1],
+  ["Was ist das grösste Problem der Kernenergie?", ["radioaktiver Abfall, der während Tausenden von Jahren gefährlich bleibt","viel CO₂","sie funktioniert nur im Sommer","sie braucht viel Wind"], 0, "In der Schweiz gibt es noch kein Endlager.", 1],
+  ["Ist Kernenergie erneuerbar?", ["Nein, Uran wird abgebaut und geht eines Tages aus.","Ja, wie die Solarenergie.","Ja, weil sie Wasser nutzt.","Nur in der Schweiz."], 0, "Sie ist CO₂-arm, aber nicht erneuerbar.", 2],
+  ["Warum kocht das Wasser im Primärkreislauf bei etwa 320 °C nicht?", ["Es steht unter sehr hohem Druck.","Es ist mit Salz gemischt.","Es wird zuerst gefroren.","Es fliesst zu schnell."], 0, "Hoher Druck hält das Wasser flüssig.", 2],
+  ["Wie entsteht eine Kettenreaktion?", ["Ein Neutron spaltet einen Kern; dabei werden neue Neutronen frei, die weitere Kerne spalten.","Die Turbine dreht immer schneller.","Kaltes Wasser fliesst in den Reaktor.","Die Steuerstäbe werden eingefahren."], 0, "Jede Spaltung setzt neue Neutronen frei.", 2],
+  ["Was hat die Schweizer Stimmbevölkerung 2017 entschieden?", ["Es dürfen keine neuen Kernkraftwerke gebaut werden.","Alle Kernkraftwerke müssen sofort schliessen.","Zwei neue Kernkraftwerke werden gebaut.","Atommüll darf exportiert werden."], 0, "Die Energiestrategie 2050 verbietet neue Kernkraftwerke. Heute möchten einige das ändern.", 2],
+  ["Was wandelt die Bewegung der Turbine in Strom um?", ["der Generator","die Steuerstäbe","das Reaktorgebäude","der Kühlturm"], 0, "Dampf dreht die Turbine, und der Generator erzeugt Strom.", 2]
+ ],
+ stats: [
+  ["CO₂ am Mauna Loa: 401 ppm (2015) und 427 ppm (2025). Um wie viel stieg der Wert?", ["um etwa 26 ppm","um etwa 6 ppm","um etwa 46 ppm","um etwa 427 ppm"], 0, "427 − 401 = 26 ppm, etwa 2,6 ppm pro Jahr.", 1, {l:["2015","2020","2025"],v:[401,414,427],min:390,u:" ppm"}],
+  ["Welches Jahr war bisher (Stand 2025) das wärmste seit Messbeginn?", ["2024","2016","2020","2025"], 0, "2024 lag 1,29 °C über dem Durchschnitt des 20. Jahrhunderts.", 1, {l:["2020","2023","2024","2025"],v:[1.02,1.19,1.29,1.17],min:0,u:" °C"}],
+  ["Schweizer Solarstrom: 6,0 TWh (2024) und 8,0 TWh (2025). Wie hat sich die Produktion verändert?", ["um etwa +2 TWh","um etwa −2 TWh","um etwa +8 TWh","gar nicht"], 0, "Von 6,0 auf 8,0 TWh: etwa +2 TWh, eine Zunahme um etwa einen Drittel.", 1, {l:["2024","2025"],v:[6.0,8.0],min:0,u:" TWh"}],
+  ["2025 kamen weltweit 692 GW erneuerbare Leistung dazu, davon 511 GW Solar. Wie gross war etwa der Solaranteil?", ["etwa 75 %","etwa 25 %","etwa 50 %","etwa 95 %"], 0, "511 ÷ 692 ≈ 0,74, also etwa drei Viertel.", 2, {l:["Solar","Wind","Wasser","Bio"],v:[511,159,18,3],min:0,u:" GW"}],
+  ["Eine Schlagzeile lautet: «2025 war kühler als 2024 – die Erwärmung ist gestoppt!» Warum ist das falsch?", ["Ein einzelnes Jahr stoppt keinen langfristigen Trend; die Temperaturen schwanken von Jahr zu Jahr.","Weil 2025 eigentlich das heisseste Jahr war.","Weil gar nicht mehr gemessen wird.","Die Schlagzeile stimmt."], 0, "Entscheidend ist der lange Trend: Seit 1980 ist es um etwa 0,9 °C wärmer geworden.", 2],
+  ["Die y-Achse einer Grafik beginnt bei 395 ppm, nicht bei 0. Was bewirkt das?", ["Der Anstieg wirkt steiler als auf einer Achse, die bei 0 beginnt.","Die Zahlen sind falsch.","Der Anstieg wirkt kleiner.","Es hat keine Wirkung."], 0, "Eine abgeschnittene Achse lässt Veränderungen grösser wirken. Lies die Zahlen, nicht nur die Form.", 2],
+  ["Weltweiter Strom 2025: Kohle 33,0 %, alle Erneuerbaren 33,8 %. Was stimmt?", ["Die Erneuerbaren erzeugten etwas mehr als die Kohle.","Kohle erzeugte mehr als alle Erneuerbaren.","Solar war die grösste einzelne Quelle.","Fossile Energien erzeugten weniger als die Hälfte."], 0, "Gemäss Ember war das zum ersten Mal seit etwa 100 Jahren so.", 2],
+  ["Die Schweizer Wasserkraft sank von 48,3 TWh (2024) auf 37,5 TWh (2025). Was ist ein möglicher Grund?", ["weniger Regen und Schnee 2025","mehr Sonnenschein 2025","neue Kernkraftwerke","mehr Windturbinen"], 0, "Weniger Wasser in Flüssen und Stauseen bedeutet weniger Wasserkraft.", 2, {l:["2024","2025"],v:[48.3,37.5],min:0,u:" TWh"}],
+  ["Beweist eine Grafik, in der CO₂ und Temperatur gemeinsam steigen, dass CO₂ die Erwärmung verursacht?", ["Nein, Korrelation ist keine Kausalität; den Zusammenhang belegen aber Physik und viele Studien.","Ja, zwei steigende Linien beweisen das immer.","Nein, CO₂ hat nichts mit der Temperatur zu tun.","Ja, weil die Grafik blau ist."], 0, "Zwei Dinge können gemeinsam steigen, ohne dass das eine das andere verursacht. Der Beweis kommt aus Physik und Forschung.", 2]
+ ],
+ island: [
+  ["Auf der Insel Mira beträgt der Tidenhub nur etwa 1 Meter. Welche Energiequelle passt am wenigsten?", ["Gezeitenkraft","Solarenergie","Windkraft","Batterien"], 0, "Gezeitenkraft braucht einen sehr grossen Unterschied zwischen Ebbe und Flut.", 1],
+  ["Insel Mira: sonnige Sommer, windige Winter. Warum passen Solar- und Windenergie gut zusammen?", ["Wenn die eine wenig erzeugt, erzeugt die andere oft mehr.","Beide erzeugen im Sommer am meisten.","Beide funktionieren ohne Wind.","Beide werden im Meer gespeichert."], 0, "Sonne im Sommer, Wind im Herbst und Winter: Sie ergänzen sich.", 2],
+  ["Warum ist ein grosser Staudamm auf der Insel Mira keine gute Idee?", ["Es gibt keine Berge und nur einen kleinen Fluss.","Staudämme erzeugen CO₂.","Touristinnen und Touristen mögen kein Wasser.","Staudämme funktionieren nur nachts."], 0, "Wasserkraft braucht einen grossen Höhenunterschied und viel Wasser.", 2]
+ ]
+};
+var CATS = {gh:"Treibhauseffekt", sea:"Meeresspiegel", solar:"Energieumwandlung und Solarenergie", water:"Wasserkraft", wind:"Windkraft", nuclear:"Kernenergie", stats:"Statistik", island:"Das Inselprojekt"};
+var used = {};
+function pickQ(cat, level){
+ var pool = Q[cat].filter(function(q){ return !level || q[4] === level; });
+ if (!pool.length) pool = Q[cat];
+ used[cat] = used[cat] || [];
+ var fresh = pool.filter(function(q){ return used[cat].indexOf(Q[cat].indexOf(q)) < 0; });
+ if (!fresh.length) { used[cat] = []; fresh = pool; }
+ var q = fresh[rnd(fresh.length)]; used[cat].push(Q[cat].indexOf(q)); return q;
+}
+function anyCat(){ var k = ["gh","sea","solar","water","wind","nuclear","island"]; return k[rnd(k.length)]; }
+
+/* ================= PLANTS AND BOARD ================= */
+var PT = {
+ solar:   {name:"Solar", tag:"Solarenergie", ic:"☀️", c:"var(--solar)", price:100, yield:10, clean:50, cat:"solar", img:"pt-plant-solar.jpg"},
+ wind:    {name:"Wind", tag:"Windkraft", ic:"🌬️", c:"var(--wind)", price:120, yield:12, clean:50, cat:"wind", img:"pt-plant-wind.jpg"},
+ hydro:   {name:"Wasser", tag:"Wasserkraft", ic:"💧", c:"var(--hydro)", price:160, yield:16, clean:50, cat:"water", img:"pt-plant-hydro.jpg"},
+ nuclear: {name:"Kern", tag:"Kernenergie", ic:"⚛️", c:"var(--nuclear)", price:200, yield:22, clean:20, cat:"nuclear", img:"pt-plant-nuclear.jpg"},
+ gas:     {name:"Gas", tag:"Gaskraft", ic:"🏭", c:"var(--gas)", price:70, yield:16, clean:-60, cat:"gh", img:"pt-plant-gas.jpg"}
+};
+var FIELDS = [
+ {k:"start", nm:"Rathaus", ic:"🏛️"},
+ {k:"plant", t:"solar", nm:"Solardächer Altstadt"},
+ {k:"event", nm:"Ereignis", ic:"⚡"},
+ {k:"plant", t:"gas", nm:"Gaskraftwerk Industriezone"},
+ {k:"quiz", nm:"Quiz", ic:"❓"},
+ {k:"plant", t:"wind", nm:"Windpark Jurahöhe"},
+ {k:"summit", nm:"Klimagipfel", ic:"🌍"},
+ {k:"plant", t:"hydro", nm:"Flusskraftwerk Rhein"},
+ {k:"plant", t:"solar", nm:"Alpine Solaranlage"},
+ {k:"stats", nm:"Statistik", ic:"📊"},
+ {k:"plant", t:"nuclear", nm:"Kernkraftwerk Aare"},
+ {k:"event", nm:"Ereignis", ic:"⚡"},
+ {k:"fair", nm:"Energiemesse", ic:"🎪"},
+ {k:"plant", t:"wind", nm:"Windturbine Haldenstein"},
+ {k:"quiz", nm:"Quiz", ic:"❓"},
+ {k:"plant", t:"gas", nm:"Gaskraftwerk Hafen"},
+ {k:"plant", t:"solar", nm:"Solarfassade Schulhaus"},
+ {k:"event", nm:"Ereignis", ic:"⚡"},
+ {k:"blackout", nm:"Stromausfall", ic:"🔌"},
+ {k:"plant", t:"hydro", nm:"Pumpspeicher Alpen"},
+ {k:"stats", nm:"Statistik", ic:"📊"},
+ {k:"plant", t:"wind", nm:"Windpark Gotthard"},
+ {k:"plant", t:"nuclear", nm:"Kernkraftwerk am See"},
+ {k:"plant", t:"hydro", nm:"Staumauer Graubünden"}
+];
+/* position i (0..23) -> grid cell, clockwise starting bottom right */
+function cell(i){
+ if (i <= 6) return [7, 7-i];            /* bottom row, right to left */
+ if (i <= 12) return [7-(i-6), 1];       /* left column, bottom to top */
+ if (i <= 18) return [1, 1+(i-12)];      /* top row, left to right */
+ return [1+(i-18), 7];                   /* right column, top to bottom */
+}
+var FCOL = {start:"#a8682f", event:"var(--event)", quiz:"var(--quiz)", stats:"var(--stats)", summit:"#4f8a52", fair:"#c98a12", blackout:"#2f3a32"};
+
+var BOARD_OK = false;
+(function(){ var t = new Image(); t.onload = function(){ BOARD_OK = true; var b = document.getElementById("pt-board"); if (b) { b.classList.add("hasimg"); b.style.backgroundImage = "url("+IMG+"pt-board.jpg)"; } }; t.src = IMG + "pt-board.jpg"; })();
+var TOKENS = [
+ {c:"#3f8a4f", ic:"🚋", img:"pt-token-tram.png", nm:"Tram"},
+ {c:"#4f8fbf", ic:"🌬️", img:"pt-token-wind.png", nm:"Windturbine"},
+ {c:"#d9822b", ic:"🏠", img:"pt-token-solar.png", nm:"Solarhaus"},
+ {c:"#7d4f96", ic:"🚲", img:"pt-token-bike.png", nm:"Velo"}
+];
+
+/* ================= EVENTS ================= */
+var EVENTS = [
+ {id:"glacier", img:"pt-event-glacier.jpg", t:"Die Gletscher schmelzen", x:"Ein heisser Sommer lässt einen grossen Teil der Gletscher über deinen Stauseen schmelzen. Langfristig gibt es weniger Schmelzwasser für deine Staudämme.", run:function(p){ meter(1); var n=count(p,"hydro"); if(n){ pay(p,30*n); return "Klimabarometer +1. Du bezahlst "+(30*n)+" Taler für deine Wasserkraftwerke."; } return "Klimabarometer +1."; }},
+ {id:"storm", img:"pt-event-storm.jpg", t:"Sturmflut an der Küste", x:"Eine Sturmflut trifft den Hafen deiner Partnerstadt. Zeig, dass du den steigenden Meeresspiegel verstehst, dann wird die Hilfe deiner Stadt günstiger.", q:"sea", ok:function(p){ return "Gut gemacht! Deine Fachleute wissen, was zu tun ist. Keine Kosten."; }, no:function(p){ pay(p,80); return "Du bezahlst 80 Taler für Nothilfe."; }},
+ {id:"heatwave", img:"pt-event-heatwave.jpg", t:"Hitzewelle", x:"Die Flüsse sind zu warm. Kernkraftwerke, die mit Flusswasser kühlen, müssen ihre Leistung drosseln.", run:function(p){ var n=count(p,"nuclear"); if(n){ pay(p,50*n); return "Du bezahlst "+(50*n)+" Taler für deine Kernkraftwerke."; } add(p,20); return "Du hast kein Kernkraftwerk. Deine Solarzellen lieben die Sonne: +20 Taler."; }},
+ {id:"blackout", img:"pt-event-blackout.jpg", t:"Winterabend ohne Strom", x:"An einem kalten, dunklen Winterabend hat es zu wenig Strom im Netz. Städte, die Energie speichern können, helfen aus und verkaufen ihren Strom.", run:function(p){ var n=count(p,"hydro"); if(n){ add(p,80); return "Deine Wasserkraftwerke liefern auch nachts Strom: +80 Taler."; } pay(p,40); return "Du musst teuren Strom einkaufen: −40 Taler. (Tipp: Wasserkraft und Pumpspeicher helfen im Winter.)"; }},
+ {id:"funding", img:"pt-event-funding.jpg", t:"Fördergeld bewilligt!", x:"Der Kanton unterstützt Städte, die in saubere Energie investieren.", run:function(p){ var n=count(p,"solar")+count(p,"wind")+count(p,"hydro"); if(n){ add(p,150); return "Du besitzt erneuerbare Kraftwerke: +150 Taler!"; } add(p,50); return "+50 Taler. Mit erneuerbaren Kraftwerken wären es 150 gewesen."; }},
+ {id:"citizens", img:"pt-event-citizens.jpg", t:"Bürgerinnen und Bürger bauen gemeinsam Solar", x:"Nachbarinnen und Nachbarn montieren Solarpanels auf ihrem Mehrfamilienhaus. Deine Stadt unterstützt sie.", run:function(p){ var f=FIELDS.map(function(f,i){return i;}).filter(function(i){ return S.own[i]===p.id && FIELDS[i].t==="solar" && S.lvl[i]<2; }); if(f.length){ S.lvl[f[0]]=2; return "Eines deiner Solarkraftwerke wird gratis ausgebaut: "+FIELDS[f[0]].nm+" ★★"; } add(p,60); return "+60 Taler."; }},
+ {id:"tax", img:"pt-event-tax.jpg", t:"Neue CO₂-Abgabe", x:"Fossile Kraftwerke müssen neu für jede Tonne CO₂ eine Abgabe bezahlen.", run:function(p){ var n=count(p,"gas"); if(n){ pay(p,40*n); return "Du bezahlst "+(40*n)+" Taler für deine Gaskraftwerke."; } return "Du hast kein Gaskraftwerk. Nichts zu bezahlen!"; }},
+ {id:"prize", img:"pt-event-prize.jpg", t:"Wissenschaftspreis", x:"Eine schwierige Frage. Beantworte sie richtig und gewinne den Wissenschaftspreis der Stadt.", q:"any2", ok:function(p){ add(p,120); return "+120 Taler!"; }, no:function(){ return "Diesmal kein Preis."; }},
+ {id:"sunny", img:"pt-event-sunny.jpg", t:"Ein sehr sonniger Sommer", x:"Rekord an Sonnenstunden! Solarkraftwerke produzieren mehr als je zuvor.", run:function(p){ var n=count(p,"solar"); if(n){ add(p,35*n); return "+"+(35*n)+" Taler für deine Solarkraftwerke."; } return "Du hast noch kein Solarkraftwerk."; }},
+ {id:"windy", img:"pt-event-windy.jpg", t:"Ein stürmischer Winter", x:"Den ganzen Winter weht starker Wind. Windturbinen produzieren viel, genau dann, wenn Solaranlagen wenig liefern.", run:function(p){ var n=count(p,"wind"); if(n){ add(p,35*n); return "+"+(35*n)+" Taler für deine Windkraftwerke."; } return "Du hast noch kein Windkraftwerk."; }},
+ {id:"waste", img:"pt-event-waste.jpg", t:"Radioaktiver Abfall", x:"Wer ein Kernkraftwerk besitzt, zahlt in den Fonds für die Endlagerung radioaktiver Abfälle ein.", run:function(p){ var n=count(p,"nuclear"); if(n){ pay(p,40*n); return "Du bezahlst "+(40*n)+" Taler."; } return "Du hast kein Kernkraftwerk. Nichts zu bezahlen."; }},
+ {id:"strike", img:"pt-event-strike.jpg", t:"Klimastreik", x:"Junge Menschen demonstrieren für mehr Klimaschutz. Erkläre den Treibhauseffekt richtig, dann verspricht die Stadt, Emissionen zu senken.", q:"gh", ok:function(){ meter(-1); return "Klimabarometer −1!"; }, no:function(){ return "Der Protest bleibt diesmal ohne Wirkung."; }}
+];
+
+/* ================= STATE ================= */
+var S = null;
+function fresh(players, rounds){
+ return {players:players.map(function(p,i){ return {id:i, nm:p.nm, tok:p.tok, cr:500, pos:0, skip:false, right:0, asked:0}; }),
+  own:{}, lvl:{}, turn:0, round:1, rounds:rounds, meter:3, log:[], phase:"roll", over:false, deck:shuffle(EVENTS.map(function(e,i){return i;}))};
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+function cur(){ return S.players[S.turn]; }
+function count(p,t){ var n=0; for (var i in S.own) if (S.own[i]===p.id && FIELDS[i].t===t) n++; return n; }
+function add(p,n){ p.cr += n; }
+function pay(p,n,to){ p.cr -= n; if (to) to.cr += n; }
+function meter(d){ S.meter = Math.max(0, Math.min(10, S.meter + d)); }
+function log(s){ S.log.unshift(s); S.log = S.log.slice(0,40); }
+function year(){ return Math.min(2050, 2026 + Math.round((S.round-1) * 24 / S.rounds)); }
+function yieldOf(i){ var f=FIELDS[i]; return PT[f.t].yield * (S.lvl[i]||1); }
+
+/* ================= RULES ================= */
+var RULES = '<ul class="pt-rules">'
+  +'<li><b>Würfeln und ziehen</b> im Uhrzeigersinn. Wer am <b>Rathaus</b> vorbeizieht, erhält 100 Taler.</li>'
+  +'<li><b>Freies Kraftwerksfeld:</b> Beantworte eine Frage zu dieser Energiequelle. Ist sie richtig, darfst du das Kraftwerk kaufen.</li>'
+  +'<li><b>Eigenes Kraftwerk:</b> Beantworte eine schwierigere Frage, um es auszubauen (★★). Danach verdient es doppelt.</li>'
+  +'<li><b>Kraftwerk einer anderen Stadt:</b> Du bezahlst eine Netzgebühr. Mit einer richtigen Antwort zahlst du nur die Hälfte.</li>'
+  +'<li><b>Zu Beginn jedes Zugs</b> verdienen deine Kraftwerke Taler: ☀️ 10 · 🌬️ 12 · 💧 16 · ⚛️ 22 · 🏭 16.</li>'
+  +'<li><b>Gaskraftwerke</b> sind günstig, aber schmutzig: Jedes Mal, wenn du am Rathaus vorbeiziehst, erhöht jedes deiner Gaskraftwerke das <b>Klimabarometer</b> um 1. Erreicht es 10, überflutet das Wasser die Städte und <b>alle verlieren</b>.</li>'
+  +'<li><b>Ereignis, Quiz, Statistik, Klimagipfel, Energiemesse, Stromausfall:</b> Folge der Karte.</li>'
+  +'<li><b>Ende:</b> Nach der letzten Runde ist es 2050. Punkte = Taler + halber Wert deiner Kraftwerke + Sauberkeitsbonus (☀️🌬️💧 je +50, ⚛️ +20, 🏭 −60).</li>'
+  +'</ul>';
+
+/* ================= SETUP SCREEN ================= */
+function setup(){
+ var saved = load();
+ var h = '<div class="pt-setup"><h2>Power Town</h2>'
+  +'<p class="pt-rules" style="margin-top:0">🇬🇧 <a href="pome24b-power-town.html" style="text-decoration:underline">English version of the game</a></p>'
+  +'<p class="pt-rules">Ihr seid Gemeindepräsidentinnen und Gemeindepräsidenten kleiner Schweizer Städte. Euer Ziel: bis <b>2050</b> eine saubere, sichere Energieversorgung aufbauen, Taler verdienen und das gemeinsame <b>Klimabarometer</b> tief halten. Wer ein Kraftwerk kaufen will, beantwortet zuerst eine Frage zu Energie und Umwelt.</p>'
+  + (saved && !saved.over ? '<p><button class="pt-btn" data-a="resume">Gespeichertes Spiel fortsetzen (Runde '+saved.round+')</button></p>' : '')
+  +'<h3>Spielende</h3><p class="pt-rules" style="margin:0">Ein Gerät für alle: Nach jedem Zug weitergeben. Ihr könnt auch in Teams spielen. Häkchen setzen, wer mitspielt.</p><div class="row">';
+ TOKENS.forEach(function(t,i){
+  h += '<div class="pt-pl"><span class="pt-tok'+'" style="--tc:'+t.c+'">'+t.ic+'</span><input type="text" id="pt-n'+i+'" value="'+["Team Tram","Team Wind","Team Sonne","Team Velo"][i]+'" aria-label="Name von Spieler/in '+(i+1)+'"><label><input type="checkbox" id="pt-on'+i+'"'+(i<2?' checked':'')+'> spielt mit</label></div>';
+ });
+ h += '</div><h3>Spieldauer</h3><div class="pt-chipset" id="pt-len"><button data-r="8">Kurz · 8 Runden · etwa 20 Min.</button><button data-r="12" class="on">Normal · 12 Runden · etwa 35 Min.</button><button data-r="18">Lang · 18 Runden · etwa 50 Min.</button></div>'
+  +'<details style="margin:16px 0"><summary><b>Spielregeln</b></summary>'+RULES+'</details>'
+  +'<button class="pt-btn" data-a="start">Neues Spiel starten</button></div>';
+ root.innerHTML = h;
+ root.querySelector("#pt-len").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; [].forEach.call(this.children,function(x){x.classList.toggle("on",x===b);}); });
+ root.querySelector('[data-a="start"]').addEventListener("click", function(){
+  var ps = [];
+  TOKENS.forEach(function(t,i){ if (document.getElementById("pt-on"+i).checked) ps.push({nm:(document.getElementById("pt-n"+i).value.trim()||t.nm).slice(0,24), tok:i}); });
+  if (!ps.length) { alert("Bitte wähle mindestens eine Spielerin oder einen Spieler."); return; }
+  var r = +root.querySelector("#pt-len .on").dataset.r;
+  S = fresh(ps, r); log("Wir schreiben das Jahr 2026. Viel Glück!"); save(); game();
+ });
+ var rs = root.querySelector('[data-a="resume"]');
+ if (rs) rs.addEventListener("click", function(){ S = saved; game(); });
+}
+
+/* ================= GAME SCREEN ================= */
+function tokHtml(p, active){
+ var t = TOKENS[p.tok];
+ return '<span class="pt-tok'+(active?' active':'')+'" style="--tc:'+t.c+'" title="'+esc(p.nm)+'" data-tok="'+p.tok+'">'+t.ic+'</span>';
+}
+function upgradeTokens(){
+ [].forEach.call(root.querySelectorAll(".pt-tok[data-tok]"), function(el){
+  var t = TOKENS[+el.dataset.tok], probe = new Image();
+  probe.onload = function(){ el.classList.add("img"); el.style.backgroundImage = "url("+IMG+t.img+")"; el.textContent = ""; };
+  probe.src = IMG + t.img;
+ });
+}
+function game(){
+ root.innerHTML = '<div class="pt-game"><div><div class="pt-board" id="pt-board"></div></div><div class="pt-side" id="pt-side"></div></div>'
+  +'<div class="pt-modal" id="pt-modal" hidden><div class="pt-mbox" role="dialog" aria-modal="true" id="pt-mbox"></div></div>';
+ draw();
+ if (S.over) end();
+}
+function draw(){
+ var b = '';
+ FIELDS.forEach(function(f,i){
+  var c = cell(i), corner = (i % 6 === 0);
+  var col = f.k==="plant" ? PT[f.t].c : FCOL[f.k];
+  var ic = f.k==="plant" ? PT[f.t].ic : f.ic;
+  var own = S.own[i], ownP = own != null ? S.players[own] : null;
+  var here = S.players.filter(function(p){ return p.pos === i; });
+  b += '<div class="pt-f'+(corner?' corner':'')+'" style="grid-row:'+c[0]+';grid-column:'+c[1]+';--c:'+col+(ownP?';--oc:'+TOKENS[ownP.tok].c:'')+'" data-f="'+i+'" title="'+esc(f.nm)+'">'
+   +'<span class="band"></span><span class="ic">'+ic+'</span><span class="nm">'+esc(f.nm)+'</span>'
+   +(f.k==="plant" && own==null ? '<span class="pr">'+PT[f.t].price+'</span>' : '')
+   +(ownP ? '<span class="own"></span><span class="lvl">'+(S.lvl[i]===2?'★★':'★')+'</span>' : '')
+   +'<span class="toks">'+here.map(function(p){ return tokHtml(p, p===cur() && !S.over); }).join("")+'</span></div>';
+ });
+ var p = cur();
+ b += '<div class="pt-center" role="img" aria-label="Vogelperspektive auf eine Schweizer Seestadt im Wandel zu sauberer Energie"></div>';
+ var board = document.getElementById("pt-board"); board.innerHTML = b;
+ if (BOARD_OK) { board.classList.add("hasimg"); board.style.backgroundImage = "url("+IMG+"pt-board.jpg)"; }
+ board.onclick = function(e){ var f = e.target.closest(".pt-f"); if (f && S.phase==="roll") info(+f.dataset.f); };
+
+ var s = '<div class="pt-card"><h3>Städte</h3>';
+ S.players.forEach(function(q){
+  var plants = Object.keys(S.own).filter(function(i){ return S.own[i]===q.id; }).map(function(i){ return PT[FIELDS[i].t].ic; }).join(" ");
+  s += '<div class="pt-p'+(q===p&&!S.over?' now':'')+'" style="--tc:'+TOKENS[q.tok].c+'">'+tokHtml(q,false)+'<div class="who"><b>'+esc(q.nm)+'</b><small>'+(plants||"noch keine Kraftwerke")+(q.skip?' · ⏸ setzt einmal aus':'')+'</small></div><span class="cr">'+q.cr+'</span></div>';
+ });
+ s += '</div><div class="pt-card"><h3>Tagebuch</h3><ul class="pt-log">'+S.log.map(function(l){ return '<li>'+l+'</li>'; }).join("")+'</ul></div>'
+  +'<div class="pt-card pt-turnbox"><div class="rd">Runde '+Math.min(S.round,S.rounds)+' von '+S.rounds+'</div><div class="yr">'+year()+'</div>'
+  +'<div class="pt-meter" title="Klimabarometer: '+S.meter+' von 10"><span style="width:'+(S.meter*10)+'%"></span></div><div class="pt-mlbl"><span>Klimabarometer</span><span><b>'+S.meter+'</b> / 10</span></div>'
+  +'<div class="pt-die" id="pt-die" aria-hidden="true">'+dieFace(S.lastRoll||1)+'</div>'
+  +'<button class="pt-btn" id="pt-roll"'+(S.phase!=="roll"||S.over?' disabled':'')+'>'+esc(p.nm)+': würfeln</button></div>'
+  +'<div class="pt-newrow" style="display:flex;gap:8px;flex-wrap:wrap"><button class="pt-btn alt" id="pt-rulesbtn" style="padding:8px 14px;font-size:14px">📖 Regeln</button><button class="pt-btn alt" id="pt-new" style="padding:8px 14px;font-size:14px">Neues Spiel</button></div>';
+ var side = document.getElementById("pt-side"); side.innerHTML = s;
+ document.getElementById("pt-roll").addEventListener("click", roll);
+ document.getElementById("pt-rulesbtn").addEventListener("click", function(){ open({title:"So wird Power Town gespielt", ic:"📖", c:"#3f5d4a", img:"pt-tile.jpg", html:RULES, acts:[{t:"Schliessen", f:close}]}); });
+ document.getElementById("pt-new").addEventListener("click", function(){ if (confirm("Neues Spiel starten? Das laufende Spiel geht verloren.")) { try{localStorage.removeItem(KEY);}catch(e){} setup(); } });
+ upgradeTokens();
+}
+var PIPS = {1:[5],2:[1,9],3:[1,5,9],4:[1,3,7,9],5:[1,3,5,7,9],6:[1,3,4,6,7,9]};
+function dieFace(n){ var h=''; for (var k=1;k<=9;k++) h += '<i style="'+(PIPS[n].indexOf(k)>=0?'visibility:visible':'')+'"></i>'; return h; }
+
+/* ================= MODAL ================= */
+var modal, mbox;
+function open(o){
+ modal = document.getElementById("pt-modal"); mbox = document.getElementById("pt-mbox");
+ var h = '<div class="pt-mimg" style="--c:'+(o.c||"#3f5d4a")+'">'+(o.ic||"")+(o.img?img(o.img,o.alt||o.title):"")+(o.tag?'<span class="tag">'+esc(o.tag)+'</span>':'')+'</div><div class="pt-mbody"><h3>'+esc(o.title)+'</h3>'+(o.html||"")+'<div id="pt-mq"></div><div class="pt-acts" id="pt-acts"></div></div>';
+ mbox.innerHTML = h; modal.hidden = false;
+ setActs(o.acts||[]);
+ var f = mbox.querySelector("button"); if (f) f.focus();
+}
+function setActs(acts){
+ var a = document.getElementById("pt-acts"); a.innerHTML = "";
+ acts.forEach(function(x){ var b = document.createElement("button"); b.className = "pt-btn"+(x.alt?" alt":""); b.textContent = x.t; b.disabled = !!x.dis; b.onclick = x.f; a.appendChild(b); });
+}
+function close(){ modal.hidden = true; }
+
+/* ask a question inside the open modal; cb(correct) */
+function ask(cat, level, cb){
+ var q = pickQ(cat, level), p = cur();
+ var box = document.getElementById("pt-mq");
+ var order = shuffle(q[1].map(function(o,i){ return i; }));
+ var chart = q[5] ? miniChart(q[5]) : "";
+ box.innerHTML = '<div class="pt-expl" style="margin-top:12px"><b>'+CATS[cat]+(q[4]===2?' · schwierigere Frage':'')+'</b></div>'+chart+'<p><b>'+esc(q[0])+'</b></p><div class="pt-opts">'
+  + order.map(function(i){ return '<button data-i="'+i+'">'+esc(q[1][i])+'</button>'; }).join("")+'</div><div id="pt-qx"></div>';
+ setActs([]);
+ box.querySelector(".pt-opts").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b || b.disabled) return;
+  var ok = +b.dataset.i === q[2];
+  [].forEach.call(this.children, function(x){ x.disabled = true; if (+x.dataset.i === q[2]) x.classList.add("ok"); });
+  if (!ok) b.classList.add("no");
+  p.asked++; if (ok) p.right++;
+  document.getElementById("pt-qx").innerHTML = '<div class="pt-expl"><b>'+(ok?"Richtig!":"Nicht ganz.")+'</b> '+esc(q[3])+'</div>';
+  cb(ok);
+ });
+}
+function miniChart(d){
+ var mx = Math.max.apply(null, d.v), mn = d.min||0;
+ return '<div class="pt-mini">'+d.v.map(function(v){ return '<div style="height:'+Math.max(6,(v-mn)/(mx-mn)*100)+'%"><span>'+v+'</span></div>'; }).join("")+'</div><div class="pt-minil">'+d.l.map(function(l){ return '<span>'+esc(l)+'</span>'; }).join("")+'</div><p style="font-size:12px;color:var(--pt-mut);margin:2px 0 0">Einheit:'+esc(d.u)+(mn?' · die Achse beginnt bei '+mn:'')+'</p>';
+}
+
+/* ================= TURN ================= */
+function roll(){
+ if (S.phase !== "roll") return;
+ var p = cur();
+ S.phase = "move";
+ /* income */
+ var inc = 0; for (var i in S.own) if (S.own[i] === p.id) inc += yieldOf(i);
+ if (inc) { add(p, inc); }
+ var die = document.getElementById("pt-die"), btn = document.getElementById("pt-roll");
+ btn.disabled = true; die.classList.add("roll");
+ var n = 1 + rnd(6), k = 0;
+ var spin = setInterval(function(){ die.innerHTML = dieFace(1+rnd(6)); if (++k > 7) { clearInterval(spin); die.classList.remove("roll"); die.innerHTML = dieFace(n); S.lastRoll = n; step(p, n, inc); } }, 70);
+}
+function step(p, n, inc){
+ var steps = 0;
+ log(esc(p.nm)+" würfelt eine "+n+(inc?" und verdient "+inc+" Taler mit den Kraftwerken":"")+".");
+ var t = setInterval(function(){
+  p.pos = (p.pos + 1) % 24; steps++;
+  if (p.pos === 0) passStart(p);
+  draw();
+  if (steps >= n) { clearInterval(t); setTimeout(function(){ land(p); }, 280); }
+ }, 230);
+}
+function passStart(p){
+ add(p, 100);
+ var g = count(p, "gas");
+ if (g) { meter(g); log(esc(p.nm)+" zieht am Rathaus vorbei: +100 Taler. Die Gaskraftwerke erhöhen das Klimabarometer um "+g+"."); }
+ else log(esc(p.nm)+" zieht am Rathaus vorbei: +100 Taler.");
+}
+function land(p){
+ var i = p.pos, f = FIELDS[i];
+ if (S.meter >= 10) return finish(true);
+ if (f.k === "plant") return plantField(p, i);
+ if (f.k === "start") { open({title:"Rathaus", ic:"🏛️", c:"#a8682f", img:"pt-field-townhall.jpg", html:"<p>Du bist im Rathaus. Zeit, die nächsten Investitionen zu planen.</p>", acts:[{t:"OK", f:next}]}); return; }
+ if (f.k === "event") return eventField(p);
+ if (f.k === "quiz") {
+  var c = anyCat();
+  open({title:"Quiz", tag:"Quiz", ic:"❓", c:"var(--quiz)", img:"pt-card-question.jpg", html:"<p>Antworte richtig und verdiene <b>50 Taler</b>.</p>"});
+  ask(c, 0, function(ok){ if (ok) add(p,50); log(esc(p.nm)+(ok?" beantwortet die Quizfrage richtig: +50.":" verpasst die Quizfrage.")); setActs([{t:"Weiter", f:next}]); });
+  return;
+ }
+ if (f.k === "stats") {
+  open({title:"Statistik", tag:"Statistik", ic:"📊", c:"var(--stats)", img:"pt-card-stats.jpg", html:"<p>Lies die Zahlen genau. Richtig: <b>+70 Taler</b>.</p>"});
+  ask("stats", 0, function(ok){ if (ok) add(p,70); log(esc(p.nm)+(ok?" liest die Statistik richtig: +70.":" liest die Statistik falsch.")); setActs([{t:"Weiter", f:next}]); });
+  return;
+ }
+ if (f.k === "summit") {
+  open({title:"Klimagipfel", tag:"Klimagipfel", ic:"🌍", c:"#4f8a52", img:"pt-field-summit.jpg", html:"<p>Die Städte treffen sich, um über Klimaschutz zu sprechen. Antwortest du richtig, <b>sinkt das Klimabarometer um 1</b>.</p>"});
+  ask(["gh","sea"][rnd(2)], 0, function(ok){ if (ok) meter(-1); log(esc(p.nm)+(ok?" überzeugt am Klimagipfel: Klimabarometer −1.":" kann den Klimagipfel nicht überzeugen.")); setActs([{t:"Weiter", f:next}]); });
+  return;
+ }
+ if (f.k === "fair") {
+  open({title:"Energiemesse", tag:"Energiemesse", ic:"🎪", c:"#c98a12", img:"pt-field-fair.jpg", html:"<p>Stelle den Energieplan deiner Stadt an der Messe vor. Eine schwierigere Frage: richtig gibt <b>+150 Taler</b>.</p>"});
+  ask(anyCat(), 2, function(ok){ if (ok) add(p,150); log(esc(p.nm)+(ok?" gewinnt den Preis der Energiemesse: +150.":" geht ohne Preis von der Energiemesse nach Hause.")); setActs([{t:"Weiter", f:next}]); });
+  return;
+ }
+ if (f.k === "blackout") {
+  open({title:"Stromausfall!", tag:"Stromausfall", ic:"🔌", c:"#2f3a32", img:"pt-event-blackout.jpg", html:"<p>Das Licht geht aus. Antworte richtig, um das Netz zu reparieren. Sonst <b>setzt du einmal aus</b>.</p>"});
+  ask(["solar","wind","water","nuclear"][rnd(4)], 0, function(ok){ if (!ok) p.skip = true; log(esc(p.nm)+(ok?" behebt den Stromausfall.":" muss auf das Reparaturteam warten und setzt einmal aus.")); setActs([{t:"Weiter", f:next}]); });
+  return;
+ }
+}
+function plantField(p, i){
+ var f = FIELDS[i], t = PT[f.t], own = S.own[i];
+ var facts = '<div class="pt-facts"><span>Preis: <b>'+t.price+'</b></span><span>Ertrag pro Zug: <b>'+t.yield+'</b> (★★ '+(t.yield*2)+')</span><span>Sauberkeitsbonus am Schluss: <b>'+(t.clean>0?'+':'')+t.clean+'</b></span><span>'+(f.t==="gas"?'⚠️ Klimabarometer +1 bei jedem Durchgang am Rathaus':'kein CO₂ im Betrieb')+'</span></div>';
+ var o = {title:f.nm, tag:t.tag, ic:t.ic, c:t.c, img:t.img};
+ if (own == null) {
+  o.html = facts + (p.cr < t.price ? '<p>Du hast nicht genug Taler, um dieses Kraftwerk zu kaufen.</p>' : '<p>Beantworte die Frage, um das Kraftwerk kaufen zu dürfen.</p>');
+  if (p.cr < t.price) { o.acts = [{t:"Weiter", f:next}]; open(o); return; }
+  o.acts = []; open(o);
+  ask(t.cat, 1, function(ok){
+   if (ok) setActs([{t:"Jetzt nicht", alt:true, f:function(){ log(esc(p.nm)+" kauft "+esc(f.nm)+" nicht."); next(); }}, {t:"Kaufen für "+t.price, f:function(){ pay(p,t.price); S.own[i]=p.id; S.lvl[i]=1; log(esc(p.nm)+" kauft "+esc(f.nm)+" "+t.ic+"."); next(); }}]);
+   else { log(esc(p.nm)+" kann "+esc(f.nm)+" diesmal nicht kaufen."); setActs([{t:"Weiter", f:next}]); }
+  });
+  return;
+ }
+ if (own === p.id) {
+  var cost = Math.round(t.price*0.6);
+  if (S.lvl[i] === 2) { o.html = facts+"<p>Das ist dein Kraftwerk, und es ist bereits vollständig ausgebaut ★★.</p>"; o.acts=[{t:"Weiter", f:next}]; open(o); return; }
+  o.html = facts+"<p>Das ist dein Kraftwerk. Beantworte eine <b>schwierigere Frage</b>, um es für <b>"+cost+"</b> Taler auszubauen. Danach verdient es doppelt.</p>";
+  if (p.cr < cost) { o.html += "<p>Du hast nicht genug Taler für den Ausbau.</p>"; o.acts=[{t:"Weiter", f:next}]; open(o); return; }
+  open(o);
+  ask(t.cat, 2, function(ok){
+   if (ok) setActs([{t:"Jetzt nicht", alt:true, f:next}, {t:"Ausbauen für "+cost, f:function(){ pay(p,cost); S.lvl[i]=2; log(esc(p.nm)+" baut "+esc(f.nm)+" aus ★★."); next(); }}]);
+   else setActs([{t:"Weiter", f:next}]);
+  });
+  return;
+ }
+ var owner = S.players[own], fee = yieldOf(i)*3;
+ o.html = facts+"<p>Dieses Kraftwerk gehört <b>"+esc(owner.nm)+"</b>. Du musst eine Netzgebühr von <b>"+fee+"</b> Talern bezahlen. Antwortest du richtig, zahlst du nur die Hälfte.</p>";
+ open(o);
+ ask(t.cat, 0, function(ok){
+  var x = ok ? Math.round(fee/2) : fee;
+  pay(p, x, owner); log(esc(p.nm)+" bezahlt "+esc(owner.nm)+" eine Netzgebühr von "+x+" Talern.");
+  setActs([{t:"Weiter", f:next}]);
+ });
+}
+function eventField(p){
+ if (!S.deck.length) S.deck = shuffle(EVENTS.map(function(e,i){return i;}));
+ var e = EVENTS[S.deck.pop()];
+ var o = {title:e.t, tag:"Ereignis", ic:"⚡", c:"var(--event)", img:e.img, html:"<p>"+e.x+"</p>"};
+ if (e.run) {
+  var r = e.run(p); o.html += '<div class="pt-expl"><b>'+r+'</b></div>'; o.acts = [{t:"Weiter", f:next}];
+  log(esc(p.nm)+" · Ereignis «"+e.t+"»: "+r); open(o); return;
+ }
+ open(o);
+ var cat = e.q === "any2" ? anyCat() : e.q;
+ ask(cat, e.q === "any2" ? 2 : 0, function(ok){
+  var r = ok ? e.ok(p) : e.no(p);
+  document.getElementById("pt-qx").insertAdjacentHTML("beforeend", '<div class="pt-expl"><b>'+r+'</b></div>');
+  log(esc(p.nm)+" · Ereignis «"+e.t+"»: "+r);
+  setActs([{t:"Weiter", f:next}]);
+ });
+}
+function next(){
+ if (modal) close();
+ if (S.meter >= 10) return finish(true);
+ var n = S.players.length;
+ do {
+  S.turn = (S.turn + 1) % n;
+  if (S.turn === 0) { S.round++; if (S.round > S.rounds) { draw(); return finish(false); } log("<b>Neue Runde: "+year()+"</b>"); }
+  if (cur().skip) { cur().skip = false; log(esc(cur().nm)+" setzt diese Runde aus (Stromausfall)."); continue; }
+  break;
+ } while (true);
+ S.phase = "roll"; save(); draw();
+ if (n > 1) { var b = document.getElementById("pt-roll"); if (b) b.focus(); }
+}
+function info(i){
+ var f = FIELDS[i];
+ if (f.k !== "plant") { var txt = {start:"Wer am Rathaus vorbeizieht, erhält 100 Taler. Hier erhöhen Gaskraftwerke das Klimabarometer.", event:"Ziehe eine Ereigniskarte.", quiz:"Beantworte eine Frage: +50 Taler.", stats:"Lies eine Grafik oder Zahlen: +70 Taler.", summit:"Richtig antworten: Klimabarometer −1.", fair:"Eine schwierigere Frage: +150 Taler.", blackout:"Richtig antworten, sonst setzt du einmal aus."}[f.k];
+  open({title:f.nm, ic:f.ic, c:FCOL[f.k], img:FIMG[f.k], html:"<p>"+txt+"</p>", acts:[{t:"Schliessen", f:close}]}); return; }
+ var t = PT[f.t], own = S.own[i];
+ open({title:f.nm, tag:t.tag, ic:t.ic, c:t.c, img:t.img, html:'<div class="pt-facts"><span>Preis: <b>'+t.price+'</b></span><span>Ertrag: <b>'+t.yield+'</b> pro Zug (★★ '+(t.yield*2)+')</span><span>Sauberkeitsbonus: <b>'+t.clean+'</b></span><span>Besitz: <b>'+(own!=null?esc(S.players[own].nm):"niemand")+'</b></span></div>', acts:[{t:"Schliessen", f:close}]});
+}
+
+/* ================= END ================= */
+function score(p){
+ var v = 0, c = 0;
+ for (var i in S.own) if (S.own[i] === p.id) { var t = PT[FIELDS[i].t]; v += t.price*(S.lvl[i]===2?1.6:1); c += t.clean; }
+ return {cr:p.cr, val:Math.round(v/2), clean:c, total:p.cr+Math.round(v/2)+c};
+}
+function finish(flood){ S.over = true; S.flood = flood; S.phase = "over"; save(); draw(); end(); }
+function end(){
+ var rows = S.players.map(function(p){ var s = score(p); s.p = p; return s; }).sort(function(a,b){ return b.total - a.total; });
+ var h = '';
+ if (S.flood) h += '<p>Das Klimabarometer hat 10 erreicht. Der See überflutet die Promenade, und die Städte müssen ihr ganzes Geld für den Schutz ausgeben. <b>Alle verlieren.</b> Nächstes Mal: weniger Gaskraftwerke, mehr saubere Energie und mehr Klimagipfel!</p>';
+ else h += '<p>Wir schreiben das Jahr <b>2050</b>. '+(S.meter<=3?'Das Klimabarometer ist tief: Eure Städte haben gemeinsam grossartige Arbeit geleistet!':S.meter<=6?'Das Klimabarometer liegt in der Mitte: gut, aber es gibt noch zu tun.':'Das Klimabarometer ist hoch: Die Städte haben es geschafft, aber nur knapp.')+'</p>';
+ h += '<table class="pt-rank"><tr><th>Stadt</th><th class="n">Taler</th><th class="n">Kraftwerke</th><th class="n">Sauber</th><th class="n">Total</th><th class="n">Antworten</th></tr>'
+  + rows.map(function(r,k){ return '<tr><td>'+(k===0&&!S.flood?'🏆 ':'')+esc(r.p.nm)+'</td><td class="n">'+r.cr+'</td><td class="n">'+r.val+'</td><td class="n">'+(r.clean>0?'+':'')+r.clean+'</td><td class="n"><b>'+(S.flood?'–':r.total)+'</b></td><td class="n">'+r.p.right+'/'+r.p.asked+'</td></tr>'; }).join("")+'</table>';
+ open({title:S.flood?"Das Wasser hat gewonnen":"Netto-null 2050: "+esc(rows[0].p.nm)+" gewinnt!", ic:S.flood?"🌊":"🏆", c:S.flood?"#2a6f97":"#4f8a52", img:S.flood?"pt-lose.jpg":"pt-win.jpg", html:h,
+  acts:[{t:"Spielbrett ansehen", alt:true, f:close}, {t:"Neues Spiel", f:function(){ try{localStorage.removeItem(KEY);}catch(e){} close(); setup(); }}]});
+}
+
+document.addEventListener("keydown", function(e){ if (e.key === "Escape" && modal && !modal.hidden && mbox.querySelector("#pt-acts button") && /Schliessen/.test(mbox.querySelector("#pt-acts").textContent)) close(); });
+setup();
+})();
+</script>

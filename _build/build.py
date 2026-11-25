@@ -821,6 +821,24 @@ page("pome24b-island-escape.html", "Pome24B: Island Escape – MuggliOnline", f"
   </section>
 </main>""", active="lernende.html", description="Island Escape: an escape game for Pome24B to review Unit 9 Energy and the Environment, with puzzles on the greenhouse effect, sea levels, energy conversion, nuclear power and the island project.")
 
+ACTIVE["power-town.html"] = "werkstatt.html"
+PTDE_BODY = "".join((B / "powertown_de" / f).read_text() for f in sorted(p.name for p in (B / "powertown_de").glob("*.html")))
+page("power-town.html", "Power Town – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="werkstatt.html">App-Werkstatt</a> › Power Town', "Lernspiel · Energie und Umwelt", "Power Town", "Ein Brettspiel zu Energie und Umwelt: Baut für eure Stadt bis 2050 eine saubere Energieversorgung auf. <a href=\"pome24b-power-town.html\" style=\"text-decoration:underline;color:inherit;font-weight:600\">English version →</a>")}
+  <section class="section">
+<!--BODY:powertown_de-->{PTDE_BODY}<!--/BODY-->
+  </section>
+</main>""", active="werkstatt.html", description="Power Town: ein Brettspiel zu Energie und Umwelt mit Fragen zu Treibhauseffekt, Meeresspiegel, Solar-, Wasser-, Wind- und Kernenergie sowie Statistik.")
+
+ACTIVE["island-escape.html"] = "werkstatt.html"
+IEDE_BODY = "".join((B / "islandescape_de" / f).read_text() for f in sorted(p.name for p in (B / "islandescape_de").glob("*.html")))
+page("island-escape.html", "Island Escape – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="werkstatt.html">App-Werkstatt</a> › Island Escape', "Lernspiel · Energie und Umwelt", "Island Escape", "Ein Escape-Game: Löst vier Energierätsel und schaltet die Insel Mira wieder ein. <a href=\"pome24b-island-escape.html\" style=\"text-decoration:underline;color:inherit;font-weight:600\">English version →</a>")}
+  <section class="section">
+<!--BODY:islandescape_de-->{IEDE_BODY}<!--/BODY-->
+  </section>
+</main>""", active="werkstatt.html", description="Island Escape: ein Escape-Game zu Energie und Umwelt mit Rätseln zu Treibhauseffekt, Meeresspiegel, Energieumwandlung und Kernenergie.")
+
 ACTIVE["primar6.html"] = "lernende.html"
 page("primar6.html", "6. Primarklasse – MuggliOnline", f"""<main class="wrap">
 {hero('<a href="lernende.html">Lernende</a> › 6. Primarklasse', "Primarschule", "6. Primarklasse", "Übungsaufgaben zu Fächern der 6. Primarstufe")}
@@ -899,26 +917,26 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
   <section class="section">
 {einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
-      <a class="card" href="pome24b-power-town.html">
+      <a class="card" href="power-town.html">
         <div class="art foto"><img src="img/pome24b/games/pt-tile.jpg" alt="" loading="lazy"></div>
         <div class="body">
           <div class="kicker"><span class="badge live">Lernspiel</span></div>
           <h3>Power Town</h3>
           <p>Ein Brettspiel zu Energie und Umwelt für 1 bis 4 Spielende oder Teams an einem Gerät. Die Lernenden führen als Gemeindepräsidien eine Stadt bis 2050 zu einer sauberen Energieversorgung: Wer ein Solar-, Wind-, Wasser- oder Kernkraftwerk kaufen will, beantwortet zuerst eine Frage. Ereigniskarten, Statistikfelder und ein gemeinsames Klimabarometer sorgen für Spannung.</p>
-          <p><b>Einsatz:</b> Sekundarstufe I (Zyklus 3) in Natur und Technik oder Geografie, Englisch ab Niveau A2/B1, Berufsfachschule (Fachkunde, ABU, Englisch) und Gymnasium (Geografie, Physik, Englisch), etwa zur Repetition vor einer Prüfung.</p>
-          <div class="tags"><span>1–4 Teams</span><span>20–50 Min.</span><span>Spielsprache Englisch</span></div>
+          <p><b>Einsatz:</b> Sekundarstufe I (Zyklus 3) in Natur und Technik oder Geografie, Berufsfachschule (Fachkunde, ABU) und mit der englischen Version auch im Englischunterricht ab Niveau A2/B1 sowie Gymnasium (Geografie, Physik), etwa zur Repetition vor einer Prüfung.</p>
+          <div class="tags"><span>1–4 Teams</span><span>20–50 Min.</span><span>Spielsprache Deutsch</span><span>auch auf Englisch</span></div>
           <p class="vermerk">Ursprünglich erstellt für den Technical-English-Unterricht an der Berufsschule.</p>
           <span class="go">Spiel öffnen →</span>
         </div>
       </a>
-      <a class="card" href="pome24b-island-escape.html">
+      <a class="card" href="island-escape.html">
         <div class="art foto"><img src="img/pome24b/games/ie-tile.jpg" alt="" loading="lazy"></div>
         <div class="body">
           <div class="kicker"><span class="badge live">Lernspiel</span></div>
           <h3>Island Escape</h3>
           <p>Ein Escape-Game für Teams: Nach einem Sturm ist die Insel Mira dunkel. In vier Räumen lösen die Lernenden Rätsel zum Treibhauseffekt, zum Meeresspiegel, zur Energieumwandlung und zur Kernenergie, finden Codes und schalten den Strom wieder ein. Zeitlimit wählbar, mit Hinweisen, Strafminuten und einer Bestenliste.</p>
-          <p><b>Einsatz:</b> Sekundarstufe I ab der 8. Klasse in Natur und Technik, Physik oder Geografie, Englisch ab Niveau B1, Berufsfachschule und Gymnasium, als Repetition, Postenarbeit oder Abschluss einer Unterrichtseinheit.</p>
-          <div class="tags"><span>Teams</span><span>20–45 Min.</span><span>Spielsprache Englisch</span></div>
+          <p><b>Einsatz:</b> Sekundarstufe I ab der 8. Klasse in Natur und Technik, Physik oder Geografie, Berufsfachschule und Gymnasium, mit der englischen Version auch im Englischunterricht ab Niveau B1, als Repetition, Postenarbeit oder Abschluss einer Unterrichtseinheit.</p>
+          <div class="tags"><span>Teams</span><span>20–45 Min.</span><span>Spielsprache Deutsch</span><span>auch auf Englisch</span></div>
           <p class="vermerk">Ursprünglich erstellt für den Technical-English-Unterricht an der Berufsschule.</p>
           <span class="go">Spiel öffnen →</span>
         </div>
