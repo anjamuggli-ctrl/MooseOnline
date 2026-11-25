@@ -927,7 +927,7 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
 {einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
       <a class="card" href="lindenhof.html">
-        <div class="art foto"><img src="img/lindenhof/lh-tile.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+        <div class="art foto"><img src="img/lindenhof/lh-tile.jpg" alt="" loading="lazy"></div>
         <div class="body">
           <div class="kicker"><span class="badge live">Lernspiel</span></div>
           <h3>Schulhaus Lindenhof</h3>

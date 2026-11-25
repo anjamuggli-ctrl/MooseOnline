@@ -144,6 +144,8 @@
   .lh-ov{position:fixed;inset:0;z-index:100000;background:rgba(15,25,20,.55);display:flex;align-items:center;justify-content:center;padding:16px}
   .lh-ovbox{background:#fff;border-radius:16px;max-width:680px;width:100%;max-height:88vh;overflow:auto;padding:20px 22px;line-height:1.55}
   .lh-rules{padding-left:20px}.lh-rules li{margin:5px 0}
+  .lh-rimg{width:58px;height:40px;object-fit:cover;border-radius:8px;vertical-align:middle;margin-right:8px;border:2px solid var(--rc)}
+  .lh-pl .rr{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.lh-pl .rr>span{display:flex;align-items:center;font-size:13px;color:var(--ink)}
   @media (max-width:600px){.lh-body{padding:14px}.lh-bar{top:60px}}
   </style>
   <div class="lh" id="lh"><noscript><p>Bitte JavaScript aktivieren, um das Spiel zu spielen.</p></noscript></div>
@@ -427,6 +429,7 @@ var S = null;
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
 function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
 function pl(role){ return S.names[S.own[role]]; }
+function rimg(r){ return '<img class="lh-rimg" style="--rc:'+RL[r].c+'" src="'+IMG+RL[r].img+'" alt="" onerror="this.remove()">'; }
 function roleChip(r, withName){ return '<span class="lh-role" style="--rc:'+RL[r].c+'"><i>'+RL[r].s+'</i>'+(withName?esc(pl(r)):"")+'</span>'; }
 function owners(nd){ return typeof nd.o === "string" ? [nd.o] : nd.o; }
 function thBox(key, ins){
@@ -477,7 +480,7 @@ function setup(){
   var box = root.querySelector("#lh-pl"), out = "";
   for (var i=0;i<n;i++){
    var rs = ROLES.filter(function(r,j){ return j % n === i; });
-   out += '<label>Name '+(i+1)+'<input class="lh-input" data-i="'+i+'" maxlength="20" value="'+esc(names[i])+'"><span>'+rs.map(function(r){ return '<span class="lh-role" style="--rc:'+RL[r].c+';margin:2px 4px 0 0">'+RL[r].n+'</span>'; }).join("")+'</span></label>';
+   out += '<label>Name '+(i+1)+'<input class="lh-input" data-i="'+i+'" maxlength="20" value="'+esc(names[i])+'"><span class="rr">'+rs.map(function(r){ return '<span>'+rimg(r)+'<span class="lh-role" style="--rc:'+RL[r].c+'">'+RL[r].n+'</span></span>'; }).join("")+'</span></label>';
   }
   box.innerHTML = out;
   box.querySelectorAll("input").forEach(function(inp){ inp.oninput = function(){ names[+inp.dataset.i] = inp.value; }; });
@@ -564,7 +567,7 @@ function scene(cid){
  var team = ow.length > 1;
  var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img(team?"lh-besprechung.jpg":c.img, c.title)+'<span class="emo">'+(team?"🤝":c.emo)+'</span><div class="cap"><small>Fall · '+esc(c.title)+' · Woche '+S.week+'</small><b>'+(team?"Fallbesprechung":esc(c.short))+'</b></div></div><div class="lh-body">'
   + (team ? '<div class="lh-team">🤝 <b>Gemeinsam entscheiden:</b> '+ow.map(function(r){ return roleChip(r,true); }).join(" ")+' Besprecht euch und wählt zusammen. Die Zeit wird bei allen Beteiligten abgezogen.</div>'
-          : '<p class="lh-who">Am Zug: '+roleChip(ow[0],true)+'</p>')
+          : '<p class="lh-who">'+rimg(ow[0])+'Am Zug: '+roleChip(ow[0],true)+'</p>')
   + '<p style="font-size:17px">'+esc(nd.t)+'</p>' + meters(cid)
   + '<div class="lh-opts">' + S.ord.o.map(function(i){ var o = nd.o2[i], can = ow.every(function(r){ return S.t[r] >= o.c; });
      return '<button class="lh-opt" data-i="'+i+'"'+(can?'':' disabled title="Zu wenig Zeit diese Woche"')+'><span class="c'+(o.c?'':' z')+'">'+(o.c?"⏱ "+o.c:"0 ⏱")+'</span><span>'+esc(o.t)+(can?'':' <small>(zu wenig Zeit)</small>')+'</span></button>'; }).join("") + '</div>'
