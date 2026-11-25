@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pome24B: Island Escape – MuggliOnline</title>
+<meta name="description" content="Island Escape: an escape game for Pome24B to review Unit 9 Energy and the Environment, with puzzles on the greenhouse effect, sea levels, energy conversion, nuclear power and the island project.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=fda0e5cd">
+<link rel="alternate" hreflang="de" href="pome24b-island-escape.html">
+<link rel="alternate" hreflang="rm" href="rm/pome24b-island-escape.html">
+<link rel="alternate" hreflang="en" href="en/pome24b-island-escape.html">
+<link rel="alternate" hreflang="it" href="it/pome24b-island-escape.html">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="MuggliOnline Startseite">
+      <svg aria-hidden="true" viewBox="0 0 100 100">
+  <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clipPath></defs>
+  <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
+  <g clip-path="url(#inner)">
+    <!-- hintere Bergkette als M -->
+    <polygon points="10,68 44,33 58,47 73,29 100,52 100,100 10,100" fill="#87a48f"/>
+    <polygon points="44,33 58,47 52,100 48,100" fill="#6f8f78" opacity=".0"/>
+    <polygon points="44,33 58,47 54,60" fill="#6f8f78"/>
+    <polygon points="73,29 100,52 100,70 76,56" fill="#6f8f78"/>
+    <polygon points="44.0,33.0 50.5,39.5 46.9,36.9 44.1,39.7 40.8,36.7 37.7,39.5" fill="#ffffff"/>
+    <polygon points="73.0,29.0 80.6,35.5 76.4,32.9 74.1,35.7 70.3,32.7 67.6,35.5" fill="#ffffff"/>
+    <!-- vordere Bergkette als M -->
+    <polygon points="8,92 49,57 63,69 79,52 100,66 100,100 8,100" fill="#3f5d4a"/>
+    <polygon points="49,57 63,69 58,82" fill="#2f4a39"/>
+    <polygon points="79,52 100,66 100,84 82,72" fill="#2f4a39"/>
+  </g>
+
+  <path d="M91.95,42.60 A42.6,42.6 0 0 1 8.33,58.86" fill="none" stroke="#2f4a39" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M6.03,48.46 L6.10,47.02 L6.22,45.57 L6.39,44.13 L6.61,42.70 L6.87,41.27 L7.19,39.85 L7.54,38.45 L7.95,37.05 L8.40,35.68 L8.89,34.31 L9.43,32.97 L10.01,31.64 L10.64,30.33 L11.31,29.04 L12.02,27.78 L12.78,26.54 L13.57,25.32 L14.40,24.14 L15.28,22.98 L16.18,21.85 L17.13,20.75 L18.11,19.68 L19.13,18.65 L20.18,17.65 L21.26,16.68 L22.38,15.75 L23.52,14.86 L24.69,14.01 L25.89,13.19 L27.12,12.42 L28.37,11.68 L29.65,10.99 L30.94,10.34 L32.26,9.73 L33.60,9.17 L34.95,8.65 L36.32,8.18 L37.71,7.75 L39.11,7.37 L40.52,7.03 L41.94,6.74 L43.37,6.50 L44.81,6.31 L46.25,6.16 L47.70,6.06 L49.15,6.01 L50.60,6.00 L52.05,6.05 L53.49,6.14 L54.94,6.28 L56.38,6.46 L57.81,6.70 L59.23,6.98 L60.64,7.31 L62.05,7.68 L63.43,8.10 L64.81,8.57 L66.17,9.08 L67.51,9.63 L68.83,10.23 L70.13,10.87 L71.41,11.56 L72.66,12.28 L73.89,13.05 L75.10,13.86 L76.27,14.71 L77.42,15.59 L78.54,16.51 L79.63,17.47 L80.69,18.47 L81.71,19.50 L82.70,20.56 L83.65,21.65 L84.57,22.78 L85.45,23.93 L86.29,25.11 L87.09,26.32 L87.85,27.56 L88.57,28.82 L89.24,30.10 L89.88,31.40 L90.47,32.73 L91.02,34.07 L91.52,35.43 L91.98,36.81 L92.39,38.20 L92.75,39.60 L93.07,41.02 L93.35,42.44 L93.57,43.88 L90.80,44.27 L90.55,42.93 L90.25,41.61 L89.90,40.30 L89.50,39.00 L89.06,37.73 L88.57,36.47 L88.03,35.23 L87.46,34.01 L86.85,32.82 L86.19,31.65 L85.50,30.50 L84.77,29.38 L84.00,28.29 L83.20,27.23 L82.36,26.20 L81.49,25.20 L80.59,24.23 L79.65,23.30 L78.69,22.40 L77.70,21.54 L76.69,20.71 L75.65,19.91 L74.58,19.16 L73.49,18.44 L72.38,17.77 L71.26,17.13 L70.11,16.53 L68.95,15.97 L67.77,15.46 L66.58,14.98 L65.37,14.55 L64.16,14.16 L62.93,13.81 L61.70,13.50 L60.46,13.24 L59.22,13.02 L57.97,12.84 L56.73,12.70 L55.48,12.61 L54.23,12.56 L52.98,12.55 L51.74,12.58 L50.51,12.66 L49.28,12.77 L48.06,12.93 L46.85,13.13 L45.65,13.36 L44.46,13.64 L43.28,13.96 L42.12,14.31 L40.98,14.70 L39.86,15.13 L38.75,15.60 L37.66,16.10 L36.59,16.63 L35.55,17.20 L34.53,17.80 L33.53,18.44 L32.56,19.10 L31.61,19.80 L30.70,20.52 L29.80,21.28 L28.94,22.06 L28.11,22.86 L27.31,23.69 L26.54,24.55 L25.80,25.42 L25.09,26.32 L24.42,27.24 L23.78,28.17 L23.18,29.13 L22.61,30.10 L22.07,31.08 L21.57,32.08 L21.11,33.09 L20.68,34.12 L20.29,35.15 L19.93,36.19 L19.61,37.24 L19.33,38.29 L19.08,39.35 L18.88,40.42 L18.70,41.48 L18.57,42.55 L18.47,43.62 L18.41,44.68 L18.38,45.74 L18.39,46.80 L18.44,47.85 L18.52,48.90 Z" fill="#2f4a39"/>
+  <g stroke="#f4f1ea" stroke-width="1.15" stroke-linecap="round"><line x1="7.53" y1="37.05" x2="12.51" y2="38.57"/><line x1="10.38" y1="29.97" x2="14.77" y2="32.19"/><line x1="14.39" y1="23.48" x2="18.11" y2="26.25"/><line x1="19.46" y1="17.77" x2="22.46" y2="20.94"/><line x1="25.43" y1="13.02" x2="27.69" y2="16.43"/><line x1="32.13" y1="9.36" x2="33.67" y2="12.86"/><line x1="39.35" y1="6.90" x2="40.20" y2="10.36"/><line x1="46.89" y1="5.71" x2="47.12" y2="9.02"/><line x1="54.52" y1="5.83" x2="54.21" y2="8.88"/><line x1="62.01" y1="7.26" x2="61.25" y2="9.98"/></g>
+  <!-- Kopf: links in der Mitte, nach unten geneigt -->
+  <path d="M6.03,48.46
+           C4.2,53.6 3.6,58.2 3.5,62.6 C3.5,65.6 3.4,68.2 3.8,69.8 C4.2,71.4 5.6,72 7.2,71.6
+           L9.6,71 C10,73.6 10.4,76.4 10.8,79.4 C12,77 13,74.6 13.6,72.4
+           L18.2,65.8 C19.8,63.4 20.6,60.2 20.4,56.8 C20.2,54 19.4,51.8 18.52,48.90 Z" fill="#2f4a39"/>
+  <path d="M18.6,54.6 C22.4,53 26.4,53.2 29,54.8 C25.8,56.4 22,57.2 18.2,57 Z" fill="#2f4a39"/>
+  <path d="M7.6,56.6 C8.8,55.6 10.6,55.6 11.6,56.4 C10.4,57.6 8.8,57.8 7.6,56.6 Z" fill="#f4f1ea"/>
+  <path d="M4.4,68.4 l1.2,-0.2" stroke="#f4f1ea" stroke-width=".75" stroke-linecap="round"/>
+</svg>
+      <span class="name">Muggli<span>Online</span></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="didaktik.html">Pädagogik</a></li>
+      <li><a href="english.html">Lehrpersonen</a></li>
+      <li><a href="lernende.html" class="active">Lernende</a></li>
+      <li><a href="werkstatt.html">App-Werkstatt</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="ueber-anja.html">Über Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Sprache wählen" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>DE</button><ul class="lang-list"><li><a href="pome24b-island-escape.html" hreflang="de" lang="de" class="aktiv">Deutsch<small>DE</small></a></li><li><a href="rm/pome24b-island-escape.html" hreflang="rm" lang="rm">Rumantsch<small>RM</small></a></li><li><a href="en/pome24b-island-escape.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="it/pome24b-island-escape.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li></ul></div>
+    <button class="burger" aria-label="Menü öffnen" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="inner">
+      <div class="crumbs"><a href="index.html">Startseite</a> › <a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Island Escape</div>
+      <div class="kicker">Pome24B · Unit 9 Review Game</div>
+      <h1>Island Escape</h1>
+      <p class="lead">An escape game: solve four energy puzzles and switch Mira Island back on.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:150px"><path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/><path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/><path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg><svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:150px"><g fill="#2a3a4b"><g transform="translate(60 88.8) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(92 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(380 97.6) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(870 96.5) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1090 87.7) scale(1.15)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1126 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg>
+  </section>
+  <section class="section">
+<!--BODY:islandescape-->  <style>
+  .ie{--ie-ink:#1f2b33;--ie-mut:#5f6b70;--ie-line:#d6dde0;--ie-acc:#2a6f97;--ie-warn:#c0572b;--ie-ok:#4f8a52;color:var(--ie-ink)}
+  .ie *{box-sizing:border-box}
+  .ie-panel{background:#fff;border:1px solid var(--ie-line);border-radius:18px;overflow:hidden;max-width:900px;margin:0 auto}
+  .ie-hero{position:relative;aspect-ratio:3/1.25;background:linear-gradient(160deg,#2b3d4f,#46627a 50%,#7c8f6a);display:flex;align-items:flex-end}
+  .ie-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ie-hero .cap{position:relative;width:100%;padding:16px 20px;background:linear-gradient(transparent,rgba(10,18,24,.78));color:#fff}
+  .ie-hero .cap small{display:block;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.85;font-weight:700}
+  .ie-hero .cap b{font-family:Georgia,serif;font-size:clamp(22px,3.4vw,34px);font-weight:700;line-height:1.15}
+  .ie-body{padding:18px 22px 22px}
+  .ie-body p{line-height:1.55}
+  .ie-btn{border:0;background:var(--ie-ink);color:#fff;border-radius:999px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer}
+  .ie-btn.alt{background:#fff;color:var(--ie-ink);border:1.5px solid var(--ie-ink)}
+  .ie-btn.sm{padding:7px 14px;font-size:14px}
+  .ie-btn:disabled{opacity:.45;cursor:default}
+  .ie-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .ie-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .ie-chips button{border:1.5px solid var(--ie-line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+  .ie-chips button.on{background:var(--ie-ink);color:#fff;border-color:var(--ie-ink)}
+  .ie-input{border:1.5px solid var(--ie-line);border-radius:10px;padding:9px 11px;font:inherit}
+  .ie-fact{background:#eef3f6;border-radius:12px;padding:12px 16px;margin:12px 0;font-size:15px}
+  .ie-fact ul{margin:6px 0 0;padding-left:18px}.ie-fact li{margin:3px 0}
+  .ie-bar{position:sticky;top:70px;z-index:20;display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ie-ink);color:#fff;border-radius:14px;padding:10px 16px;margin:0 auto 14px;max-width:900px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .ie-clock{font:700 26px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;min-width:92px}
+  .ie-clock.low{color:#ffb4a0;animation:ie-blink 1s steps(2) infinite}
+  @keyframes ie-blink{50%{opacity:.55}}
+  .ie-lamps{display:flex;gap:8px;flex:1}
+  .ie-lamp{width:30px;height:30px;border-radius:50%;background:#3b4a55;border:2px solid #56656f;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#9fb0ba;transition:.4s}
+  .ie-lamp.on{background:#ffd55a;border-color:#fff2b8;color:#4a3a00;box-shadow:0 0 14px #ffd55a}
+  .ie-lamp.now{border-color:#fff}
+  .ie-team{font-size:14px;opacity:.85}
+  .ie-steps{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+  .ie-steps li{display:flex;align-items:center;gap:10px;background:#f4f7f8;border:1.5px solid var(--ie-line);border-radius:12px;padding:9px 10px}
+  .ie-steps .n{width:28px;height:28px;border-radius:50%;background:var(--ie-ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+  .ie-steps .tx{flex:1}
+  .ie-steps .dg{font:800 20px/1 ui-monospace,Menlo,monospace;color:var(--ie-warn);background:#fff;border:1.5px dashed var(--ie-warn);border-radius:8px;padding:5px 9px;flex:none}
+  .ie-steps .mv{display:flex;flex-direction:column;gap:3px;flex:none}
+  .ie-steps .mv button{border:1px solid var(--ie-line);background:#fff;border-radius:6px;width:32px;height:24px;cursor:pointer;font-size:12px}
+  .ie-list{counter-reset:none;padding:0;margin:12px 0;list-style:none;display:grid;gap:7px}
+  .ie-list li{display:flex;gap:10px;align-items:flex-start;background:#f4f7f8;border-radius:10px;padding:9px 12px}
+  .ie-list .n{font:800 18px/1.2 ui-monospace,Menlo,monospace;color:var(--ie-acc);min-width:22px}
+  .ie-poster{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:12px 0;background:#2e3b44;border-radius:12px;padding:12px}
+  .ie-poster div{background:#f7f3e8;border-radius:8px;padding:9px 11px;font-size:14.5px;display:flex;gap:10px;align-items:center}
+  .ie-poster b{font:800 22px/1 ui-monospace,Menlo,monospace;color:var(--ie-warn)}
+  .ie-lock{margin:18px 0 6px;background:#20303a;color:#fff;border-radius:16px;padding:16px 18px}
+  .ie-lock h4{margin:0 0 4px;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:#ffd55a}
+  .ie-lock p{margin:4px 0 10px;font-size:14.5px;color:#cfdbe2}
+  .ie-digits{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
+  .ie-digits label{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:#cfdbe2;max-width:92px;text-align:center}
+  .ie-digits input{width:52px;height:60px;border-radius:10px;border:2px solid #56656f;background:#0f1a20;color:#fff;font:800 28px/1 ui-monospace,Menlo,monospace;text-align:center}
+  .ie-digits input:focus{border-color:#ffd55a;outline:none}
+  .ie-msg{min-height:1.5em;margin-top:10px;font-weight:700}
+  .ie-msg.no{color:#ffb4a0}.ie-msg.ok{color:#b8f0b0}
+  .ie-shake{animation:ie-shake .4s}
+  @keyframes ie-shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+  .ie-sw{display:grid;gap:8px;margin:12px 0}
+  .ie-sw label{display:flex;align-items:center;gap:12px;background:#f4f7f8;border:1.5px solid var(--ie-line);border-radius:12px;padding:9px 12px;cursor:pointer}
+  .ie-sw input{position:absolute;opacity:0;pointer-events:none}
+  .ie-sw .tg{width:52px;height:28px;border-radius:999px;background:#9aa6ad;position:relative;flex:none;transition:.25s}
+  .ie-sw .tg::after{content:"OFF";position:absolute;top:3px;left:3px;width:30px;height:22px;border-radius:999px;background:#fff;font:800 9px/22px sans-serif;text-align:center;color:#5f6b70;transition:.25s}
+  .ie-sw input:checked+.tg{background:var(--ie-ok)}
+  .ie-sw input:checked+.tg::after{content:"ON";left:19px;color:var(--ie-ok)}
+  .ie-sw input:focus-visible+.tg{outline:3px solid var(--ie-acc)}
+  .ie-lever{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .ie-lever button{background:#c0392b;border:0;color:#fff;font:800 16px/1 inherit;border-radius:14px;padding:16px 24px;cursor:pointer;box-shadow:0 5px 0 #7d2219;letter-spacing:.04em}
+  .ie-lever button:active{transform:translateY(4px);box-shadow:0 1px 0 #7d2219}
+  .ie-meter{display:flex;gap:5px}.ie-meter i{width:18px;height:18px;border-radius:50%;background:#3b4a55;border:2px solid #56656f}.ie-meter i.on{background:#ffd55a;border-color:#fff2b8}
+  .ie-hint{background:#fff8e6;border-left:4px solid #e0a526;border-radius:8px;padding:9px 12px;margin:10px 0;font-size:15px}
+  .ie-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+  .ie-stats div{background:#f4f7f8;border-radius:12px;padding:12px;text-align:center}
+  .ie-stats b{display:block;font-size:26px;font-family:Georgia,serif}
+  .ie-best{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0}
+  .ie-best td,.ie-best th{padding:6px 8px;border-bottom:1px solid var(--ie-line);text-align:left}
+  .ie-done{background:#e3f1df;border-radius:12px;padding:12px 16px;margin:12px 0;font-weight:600}
+  </style>
+
+  <div class="ie" id="ie"><noscript><p>Please turn on JavaScript to play the game.</p></noscript></div>
+
+<script>
+(function(){
+"use strict";
+var root = document.getElementById("ie");
+var IMG = (window.SITE_BASE||"") + "img/pome24b/games/";
+var KEY = "mo_islandescape_v1", BEST = "mo_islandescape_best_v1";
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function img(f, alt){ return '<img src="'+IMG+f+'" alt="'+esc(alt)+'" onerror="this.remove()">'; }
+function mmss(s){ s = Math.max(0, Math.round(s)); return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2); }
+
+/* ================= ROOMS ================= */
+var ROOMS = [
+ {id:"weather", img:"ie-room1-weather.jpg", kick:"Room 1 · The weather station", title:"Why is the island getting warmer?",
+  story:"The door of the weather station is open. Inside, rain drums on the window. On the desk, the meteorologist left five cards about the greenhouse effect, but the wind has mixed them up. Each card has a number stamped on it. Put the cards in the right order: the numbers then give you the code for the next door.",
+  hint:"Start with the sun. The light must first reach the ground before the ground can give off heat. Humans come in at the very end.",
+  type:"order",
+  items:[["Sunlight passes through the atmosphere and reaches the Earth.","7"],["Land and oceans absorb most of the sunlight and warm up.","2"],["The warm surface gives off heat as infrared radiation.","9"],["Greenhouse gases trap part of this heat and send it back to the surface.","4"],["Humans add more greenhouse gases, so the greenhouse effect gets stronger and the Earth gets warmer.","6"]],
+  lock:{t:"Door code", p:"Enter the five stamped numbers in the right order of the greenhouse effect.", labels:["1st","2nd","3rd","4th","5th"]},
+  code:"72946", done:"The door clicks open. A gust of wind blows you towards the harbour."},
+ {id:"harbour", img:"ie-room2-harbour.jpg", kick:"Room 2 · The harbour", title:"How high must the dyke be?",
+  story:"Waves splash over the old stone dyke. The harbour master’s control box is locked. Next to it hangs a list with seven numbered processes. The code consists of the numbers of all processes that really make the sea level rise, from the smallest to the biggest number.",
+  hint:"Only ice that lies on land adds new water to the sea. Ice that already floats in the water is like an ice cube in a glass. And remember: warm water needs more space.",
+  type:"list",
+  items:["Floating sea ice in the Arctic Ocean melts.","Ocean water expands when it gets warmer.","More rain falls over the ocean.","The ice sheet on Greenland melts.","Icebergs that are already in the sea melt.","Glaciers in the Alps melt.","The ice sheet of Antarctica melts."],
+  lock:{t:"Control box", p:"The numbers of the processes that make the sea level rise, from smallest to biggest.", labels:["","","",""]},
+  code:"2467", done:"The control box opens and the pumps start. The water in the harbour slowly goes down. Now: the power house!"},
+ {id:"power", img:"ie-room3-powerhouse.jpg", kick:"Room 3 · The power house", title:"Every machine converts energy",
+  story:"In the power house, an old poster on the wall lists six energy conversions. The machines in the room are still switched off. To restart them, the panel asks which conversion each machine performs. Find the number for each machine.",
+  hint:"A solar cell makes electricity directly from light (not heat). A motor and a generator do opposite things: one makes movement from electricity, the other makes electricity from movement.",
+  type:"poster",
+  items:[["1","kinetic energy → electrical energy"],["2","light energy → heat"],["3","chemical energy → electrical energy"],["4","electrical energy → kinetic energy"],["5","light energy → electrical energy"],["6","chemical energy → heat and light"]],
+  lock:{t:"Machine panel", p:"Which conversion does each machine perform? Enter the poster number.", labels:["solar cell","electric motor","battery (in use)","generator"]},
+  code:"5431", done:"The machines hum. Solar panels, the small wind turbine and the water wheel are connected again. Only the control room is left."},
+ {id:"control", img:"ie-room4-control.jpg", kick:"Room 4 · The control room", title:"Switch on the island",
+  story:"The last room. Eight switches control the island’s energy system, and each one is labelled with a statement. Switch ON every statement that is true and leave the false ones OFF. Then pull the main lever. If the setting is wrong, the lamps show you how many switches are correct.",
+  hint:"Exactly five statements are true. The white cloud above a cooling tower is water vapour, not smoke. And uranium is mined: it will run out one day.",
+  type:"switch",
+  items:[["Control rods absorb neutrons and can slow down the chain reaction.",true],["The white cloud from a cooling tower is smoke full of CO₂.",false],["Nuclear energy is a renewable energy.",false],["Mira Island should not build a tidal power plant, because the tide difference is only about 1 metre.",true],["Batteries can store solar electricity from the day for the night.",true],["A wind turbine produces electricity at any wind speed.",false],["Radioactive waste stays dangerous for thousands of years.",true],["Wind turbines near the bird reserve can be stopped during the bird migration.",true]],
+  done:"The main lever clicks into place. One street lamp after the other lights up …"}
+];
+
+/* ================= STATE ================= */
+var S = null, tick = null;
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
+function left(){ return S.limit ? S.limit - (Date.now() - S.t0)/1000 - S.pen : Infinity; }
+function used(){ return (Date.now() - S.t0)/1000 + S.pen; }
+
+/* ================= START ================= */
+function start(){
+ stop();
+ var saved = load();
+ root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-intro.jpg","A small island after a storm, with dark houses and a wind turbine standing still")+'<div class="cap"><small>Escape game · Unit 9</small><b>Island Escape: Power for Mira Island</b></div></div><div class="ie-body">'
+  +'<p>Last night, a heavy storm hit <b>Mira Island</b>. The old diesel power plant is broken, the houses are dark, and the island’s new clean energy system is locked. You are the energy team that came by ship to help. Find your way through <b>four rooms</b>, solve the puzzles and switch the island back on before night falls.</p>'
+  +'<div class="ie-fact"><b>Fact sheet: Mira Island</b><ul><li>4,000 inhabitants; in summer, about 4,000 tourists come as well.</li><li>About 2,500 hours of sunshine per year, mostly in summer.</li><li>Strong winds on the west coast, especially in autumn and winter.</li><li>The difference between high and low tide is only about 1 metre. One small river, no mountains.</li><li>A bird reserve on the hills of the west coast.</li></ul></div>'
+  +'<p><b>Rules:</b> Every wrong code costs <b>1 minute</b>. Each room has one hint, which costs <b>2 minutes</b>. Talk in English in your team!</p>'
+  +(saved && !saved.end ? '<p><button class="ie-btn" id="ie-res">Continue the saved game (room '+(saved.room+1)+')</button></p>' : '')
+  +'<div class="ie-row" style="margin:12px 0"><label for="ie-name"><b>Team name</b></label><input class="ie-input" id="ie-name" maxlength="28" value="The Energy Team"></div>'
+  +'<p style="margin:8px 0 6px"><b>Time</b></p><div class="ie-chips" id="ie-time"><button data-m="20">20 minutes · experts</button><button data-m="30" class="on">30 minutes</button><button data-m="45">45 minutes</button><button data-m="0">no time limit</button></div>'
+  +'<p style="margin-top:18px"><button class="ie-btn" id="ie-go">Start the escape</button></p>'+bestTable()+'</div></div>';
+ root.querySelector("#ie-time").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; [].forEach.call(this.children,function(x){x.classList.toggle("on",x===b);}); });
+ root.querySelector("#ie-go").addEventListener("click", function(){
+  var m = +root.querySelector("#ie-time .on").dataset.m;
+  S = {team:(root.querySelector("#ie-name").value.trim()||"The Energy Team").slice(0,28), limit:m*60, t0:Date.now(), pen:0, room:0, hints:[], wrong:0, end:null, order:shuffle([0,1,2,3,4])};
+  save(); room();
+ });
+ var r = root.querySelector("#ie-res"); if (r) r.addEventListener("click", function(){ S = saved; room(); });
+}
+function bestTable(){
+ var b = []; try{ b = JSON.parse(localStorage.getItem(BEST)) || []; }catch(e){}
+ if (!b.length) return "";
+ return '<h3 style="margin-top:20px">Best teams on this device</h3><table class="ie-best"><tr><th>Team</th><th>Time</th><th>Hints</th><th>Wrong codes</th></tr>'+b.slice(0,5).map(function(x){ return '<tr><td>'+esc(x.team)+'</td><td>'+mmss(x.time)+'</td><td>'+x.hints+'</td><td>'+x.wrong+'</td></tr>'; }).join("")+'</table>';
+}
+
+/* ================= TIMER ================= */
+function stop(){ if (tick) clearInterval(tick); tick = null; }
+function bar(){
+ var h = '<div class="ie-bar"><span class="ie-clock" id="ie-clock">'+(S.limit?mmss(left()):mmss(used()))+'</span><div class="ie-lamps">'
+  + ROOMS.map(function(r,i){ return '<span class="ie-lamp'+(i<S.room?' on':'')+(i===S.room?' now':'')+'" title="'+esc(r.kick)+'">'+(i+1)+'</span>'; }).join("")
+  +'</div><span class="ie-team">'+esc(S.team)+'</span><button class="ie-btn alt sm" id="ie-quit" style="background:transparent;color:#fff;border-color:#8aa0ad">Restart</button></div>';
+ return h;
+}
+function runClock(){
+ stop();
+ tick = setInterval(function(){
+  var c = document.getElementById("ie-clock"); if (!c) return stop();
+  if (S.limit) { var l = left(); c.textContent = mmss(l); c.classList.toggle("low", l < 120); if (l <= 0) { stop(); timeUp(); } }
+  else c.textContent = mmss(used());
+ }, 500);
+}
+
+/* ================= ROOM ================= */
+function room(){
+ if (S.end === "win") return win();
+ if (S.limit && left() <= 0) return timeUp();
+ var R = ROOMS[S.room];
+ var h = bar() + '<div class="ie-panel"><div class="ie-hero">'+img(R.img, R.kick)+'<div class="cap"><small>'+esc(R.kick)+'</small><b>'+esc(R.title)+'</b></div></div><div class="ie-body"><p>'+esc(R.story)+'</p>';
+ if (R.type === "order") {
+  h += '<ol class="ie-steps" id="ie-order">' + S.order.map(function(k,pos){ return stepLi(R, k, pos); }).join("") + '</ol>';
+ } else if (R.type === "list") {
+  h += '<ul class="ie-list">'+R.items.map(function(t,i){ return '<li><span class="n">'+(i+1)+'</span><span>'+esc(t)+'</span></li>'; }).join("")+'</ul>';
+ } else if (R.type === "poster") {
+  h += '<div class="ie-poster" aria-label="Poster with six energy conversions">'+R.items.map(function(x){ return '<div><b>'+x[0]+'</b><span>'+esc(x[1])+'</span></div>'; }).join("")+'</div>';
+ } else if (R.type === "switch") {
+  h += '<div class="ie-sw" id="ie-sw">'+R.items.map(function(x,i){ return '<label><input type="checkbox" data-i="'+i+'"><span class="tg"></span><span>'+esc(x[0])+'</span></label>'; }).join("")+'</div>';
+ }
+ h += '<div id="ie-hintbox">'+(S.hints.indexOf(S.room)>=0?'<div class="ie-hint"><b>Hint:</b> '+esc(R.hint)+'</div>':'')+'</div>';
+ if (R.type === "switch") {
+  h += '<div class="ie-lock"><h4>Main lever</h4><p>Set the switches, then pull the lever. Wrong setting: −1 minute.</p><div class="ie-lever"><button id="ie-pull">⏻ PULL THE LEVER</button><div class="ie-meter" id="ie-meter" aria-live="polite">'+R.items.map(function(){ return '<i></i>'; }).join("")+'</div></div><div class="ie-msg" id="ie-msg" aria-live="polite"></div></div>';
+ } else {
+  h += '<div class="ie-lock" id="ie-lock"><h4>🔒 '+esc(R.lock.t)+'</h4><p>'+esc(R.lock.p)+'</p><div class="ie-digits">'
+   + R.lock.labels.map(function(l,i){ return '<label>'+'<input inputmode="numeric" maxlength="1" pattern="[0-9]" aria-label="Digit '+(i+1)+(l?' – '+esc(l):'')+'" data-d="'+i+'">'+(l?esc(l):'')+'</label>'; }).join("")
+   + '<button class="ie-btn" id="ie-try" style="background:#ffd55a;color:#20303a;margin-left:6px">Open</button></div><div class="ie-msg" id="ie-msg" aria-live="polite"></div></div>';
+ }
+ h += '<div class="ie-row" style="justify-content:space-between;margin-top:12px"><button class="ie-btn alt sm" id="ie-hint"'+(S.hints.indexOf(S.room)>=0?' disabled':'')+'>💡 Hint (−2 minutes)</button><span style="color:var(--ie-mut);font-size:14px">Wrong codes so far: '+S.wrong+'</span></div></div></div>';
+ root.innerHTML = h;
+ runClock();
+ root.querySelector("#ie-quit").onclick = function(){ if (confirm("Restart the escape game? Your progress will be lost.")) { try{localStorage.removeItem(KEY);}catch(e){} start(); } };
+ root.querySelector("#ie-hint").onclick = function(){ if (S.hints.indexOf(S.room) < 0) { S.hints.push(S.room); S.pen += 120; save(); this.disabled = true; document.getElementById("ie-hintbox").innerHTML = '<div class="ie-hint"><b>Hint:</b> '+esc(R.hint)+'</div>'; } };
+ if (R.type === "order") wireOrder(R);
+ if (R.type === "switch") root.querySelector("#ie-pull").onclick = pull;
+ else wireLock(R);
+ window.scrollTo({top: root.getBoundingClientRect().top + window.scrollY - 80, behavior:"smooth"});
+}
+function stepLi(R, k, pos){
+ return '<li data-k="'+k+'"><span class="n">'+(pos+1)+'</span><span class="tx">'+esc(R.items[k][0])+'</span><span class="dg" title="stamped number">'+R.items[k][1]+'</span><span class="mv"><button data-m="-1" aria-label="Move up">▲</button><button data-m="1" aria-label="Move down">▼</button></span></li>';
+}
+function wireOrder(R){
+ var ol = root.querySelector("#ie-order");
+ ol.addEventListener("click", function(e){
+  var b = e.target.closest("button[data-m]"); if (!b) return;
+  var li = b.closest("li"), pos = [].indexOf.call(ol.children, li), to = pos + (+b.dataset.m);
+  if (to < 0 || to >= S.order.length) return;
+  var t = S.order[pos]; S.order[pos] = S.order[to]; S.order[to] = t; save();
+  ol.innerHTML = S.order.map(function(k,p){ return stepLi(R,k,p); }).join("");
+  var nb = ol.children[to].querySelector('button[data-m="'+b.dataset.m+'"]'); if (nb) nb.focus();
+ });
+}
+function wireLock(R){
+ var ins = [].slice.call(root.querySelectorAll(".ie-digits input"));
+ ins.forEach(function(inp, i){
+  inp.addEventListener("input", function(){ inp.value = inp.value.replace(/\D/g,"").slice(-1); if (inp.value && ins[i+1]) ins[i+1].focus(); });
+  inp.addEventListener("keydown", function(e){ if (e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); if (e.key === "Enter") tryCode(R, ins); });
+ });
+ root.querySelector("#ie-try").onclick = function(){ tryCode(R, ins); };
+}
+function tryCode(R, ins){
+ var code = ins.map(function(x){ return x.value; }).join(""), msg = document.getElementById("ie-msg");
+ if (code.length < ins.length) { msg.className = "ie-msg no"; msg.textContent = "Please fill in all "+ins.length+" digits."; return; }
+ if (code === R.code) return solved(R);
+ S.wrong++; S.pen += 60; save();
+ var lock = document.getElementById("ie-lock"); lock.classList.remove("ie-shake"); void lock.offsetWidth; lock.classList.add("ie-shake");
+ msg.className = "ie-msg no"; msg.textContent = "Wrong code! −1 minute. Check the puzzle again.";
+}
+function pull(){
+ var R = ROOMS[S.room], boxes = [].slice.call(root.querySelectorAll("#ie-sw input"));
+ var right = boxes.filter(function(b){ return b.checked === R.items[+b.dataset.i][1]; }).length;
+ var lamps = root.querySelectorAll("#ie-meter i");
+ [].forEach.call(lamps, function(l,i){ l.classList.toggle("on", i < right); });
+ var msg = document.getElementById("ie-msg");
+ if (right === R.items.length) return solved(R);
+ S.wrong++; S.pen += 60; save();
+ msg.className = "ie-msg no"; msg.textContent = right+" of "+R.items.length+" switches are correct. −1 minute. Which statements are you not sure about?";
+}
+function solved(R){
+ stop();
+ var msg = document.getElementById("ie-msg"); msg.className = "ie-msg ok"; msg.textContent = "✔ Correct!";
+ S.room++;
+ if (S.room >= ROOMS.length) { S.end = "win"; S.time = used(); saveBest(); save(); setTimeout(win, 900); return; }
+ save();
+ var lamp = root.querySelectorAll(".ie-lamp")[S.room-1]; if (lamp) lamp.classList.add("on");
+ var body = root.querySelector(".ie-body");
+ body.insertAdjacentHTML("beforeend", '<div class="ie-done">'+esc(R.done)+'</div><p><button class="ie-btn" id="ie-next">Go to room '+(S.room+1)+' →</button></p>');
+ runClock();
+ var nb = document.getElementById("ie-next"); nb.focus(); nb.onclick = room;
+}
+function saveBest(){
+ var b = []; try{ b = JSON.parse(localStorage.getItem(BEST)) || []; }catch(e){}
+ b.push({team:S.team, time:Math.round(S.time), hints:S.hints.length, wrong:S.wrong});
+ b.sort(function(x,y){ return x.time - y.time; });
+ try{ localStorage.setItem(BEST, JSON.stringify(b.slice(0,10))); }catch(e){}
+}
+function win(){
+ stop();
+ root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-success.jpg","The island at night with all lights on")+'<div class="cap"><small>Mission complete</small><b>Mira Island is shining again!</b></div></div><div class="ie-body">'
+  +'<p>Well done, <b>'+esc(S.team)+'</b>! The solar panels, the wind turbines and the batteries supply the island with clean electricity, and the old diesel plant can stay switched off.</p>'
+  +'<div class="ie-stats"><div><b>'+mmss(S.time)+'</b>time (incl. penalties)</div><div><b>'+S.hints.length+'</b>hints used</div><div><b>'+S.wrong+'</b>wrong codes</div></div>'
+  +'<div class="ie-fact"><b>What you used in this game</b><ul><li>Room 1: the greenhouse effect (book p. 119)</li><li>Room 2: rising sea levels (pp. 122–123)</li><li>Room 3: converting energy (pp. 124–126)</li><li>Room 4: nuclear power, wind power and the island project (pp. 129–131)</li></ul></div>'
+  +'<p><b>Talk about it:</b> Which energy mix would you recommend for Mira Island, and why? Practise your answer in English with your team.</p>'
+  +'<p><button class="ie-btn" id="ie-again">Play again</button></p>'+bestTable()+'</div></div>';
+ root.querySelector("#ie-again").onclick = function(){ try{localStorage.removeItem(KEY);}catch(e){} start(); };
+}
+function timeUp(){
+ stop();
+ root.innerHTML = '<div class="ie-panel"><div class="ie-hero">'+img("ie-intro.jpg","The dark island after the storm")+'<div class="cap"><small>Time is up</small><b>Night has fallen on Mira Island</b></div></div><div class="ie-body">'
+  +'<p>The island is still dark, but you got far: <b>'+S.room+' of 4 rooms</b> are solved. You can continue without a time limit to finish the mission, or start again.</p>'
+  +'<p class="ie-row"><button class="ie-btn" id="ie-cont">Continue without time limit</button><button class="ie-btn alt" id="ie-again">Start again</button></p></div></div>';
+ root.querySelector("#ie-cont").onclick = function(){ S.limit = 0; save(); room(); };
+ root.querySelector("#ie-again").onclick = function(){ try{localStorage.removeItem(KEY);}catch(e){} start(); };
+}
+start();
+})();
+</script>
+<!--/BODY-->
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+  </div>
+</footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
+</body>
+</html>

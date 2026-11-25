@@ -497,6 +497,21 @@ THEMA_KON = f"""      <a class="plan thema entile" href="konflikte.html"><div cl
         <ul><li>Konflikt, Aggression, Gewalt und Mobbing unterscheiden</li><li>Cybermobbing erkennen und rechtlich einordnen</li><li>Rollen in der Gruppe und der Mobbingprozess</li><li>Soziales Verhalten von Zyklus 1 bis Zyklus 3</li><li>Prävention, Programme und No Blame Approach</li><li>Intervention, Elternarbeit und ein Klassen-Check</li></ul>
         <span class="go">Zum Thema →</span></a>"""
 
+GAME_PT_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><rect x="40" y="10" width="140" height="100" rx="10" fill="#f6ebdc" stroke="#2f3a32" stroke-width="2.5"/>'
+    '<rect x="62" y="30" width="96" height="60" rx="6" fill="#cfe3c4" stroke="#3f5d4a" stroke-width="1.5"/>'
+    '<g stroke="#2f3a32" stroke-width="1.2" fill="#fff"><rect x="44" y="14" width="16" height="14" rx="2"/><rect x="62" y="14" width="16" height="14" rx="2"/><rect x="80" y="14" width="16" height="14" rx="2"/><rect x="98" y="14" width="16" height="14" rx="2"/><rect x="116" y="14" width="16" height="14" rx="2"/><rect x="134" y="14" width="16" height="14" rx="2"/><rect x="160" y="14" width="16" height="14" rx="2"/>'
+    '<rect x="44" y="92" width="16" height="14" rx="2"/><rect x="62" y="92" width="16" height="14" rx="2"/><rect x="80" y="92" width="16" height="14" rx="2"/><rect x="98" y="92" width="16" height="14" rx="2"/><rect x="116" y="92" width="16" height="14" rx="2"/><rect x="134" y="92" width="16" height="14" rx="2"/><rect x="160" y="92" width="16" height="14" rx="2"/></g>'
+    '<path d="M95 75 V50 M95 50 l-9 -5 M95 50 l9 -5 M95 50 v-10" stroke="#4f8fbf" stroke-width="2.5" fill="none" stroke-linecap="round"/>'
+    '<rect x="112" y="62" width="30" height="16" fill="#2f3a32" transform="skewX(-15)"/><circle cx="125" cy="44" r="8" fill="#e0a526"/>'
+    '<rect x="186" y="62" width="26" height="26" rx="5" fill="#fff" stroke="#2f3a32" stroke-width="2"/><circle cx="193" cy="69" r="2.5" fill="#2f3a32"/><circle cx="205" cy="81" r="2.5" fill="#2f3a32"/><circle cx="199" cy="75" r="2.5" fill="#2f3a32"/></svg>')
+GAME_IE_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><rect width="220" height="120" rx="10" fill="#2b3d4f"/>'
+    '<path d="M0 92 Q55 84 110 92 T220 90 V120 H0 Z" fill="#46627a"/><path d="M50 92 Q80 52 112 58 Q150 50 176 92 Z" fill="#5f8a5a"/>'
+    '<rect x="88" y="70" width="14" height="14" fill="#1f2b33"/><rect x="108" y="66" width="18" height="18" fill="#1f2b33"/><rect x="132" y="72" width="12" height="12" fill="#1f2b33"/>'
+    '<rect x="91" y="74" width="4" height="4" fill="#ffd55a"/><rect x="113" y="70" width="5" height="5" fill="#ffd55a"/>'
+    '<path d="M150 72 V42 M150 42 l-10 -6 M150 42 l10 -6 M150 42 v-12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>'
+    '<g transform="translate(26 22)"><rect x="0" y="12" width="28" height="22" rx="4" fill="#ffd55a"/><path d="M6 12 V7 a8 8 0 0 1 16 0 V12" fill="none" stroke="#ffd55a" stroke-width="3.5"/><circle cx="14" cy="22" r="3" fill="#2b3d4f"/></g>'
+    '<path d="M180 18 l-6 12 h6 l-4 12" stroke="#ffd55a" stroke-width="2.5" fill="none"/></svg>')
+
 INSTR_ART = ('<svg viewBox="0 0 220 120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">'
     '<rect x="40" y="24" width="64" height="84" rx="6" fill="#e7ede6" stroke="#3f5d4a"/><path d="M52 44 H92 M52 58 H92 M52 72 H80" stroke="#3f5d4a"/>'
     '<rect x="116" y="14" width="64" height="84" rx="6" fill="#fff" stroke="#3f5d4a"/><path d="M128 34 H168 M128 48 H168 M128 62 H156" stroke="#3f5d4a"/>'
@@ -729,6 +744,12 @@ page("pome24b.html", "Pome24B – MuggliOnline", f"""<main class="wrap">
       <a class="plan thema entile" href="pome24b-exam.html"><div class="thema-art">{EXAM_ART}</div><span class="badge live">Unit 9 Practice Exercises</span><h3>Energy and the Environment</h3>
         <p>Practice exercises to the entire Unit 9 as preparation for the exam: eight sections with labelling, gap-fill texts, statistics and critical-thinking questions, each with its own answer check.</p>
         <span class="go">Open →</span></a>
+      <a class="plan thema entile" href="pome24b-power-town.html"><div class="thema-art">{GAME_PT_ART}</div><span class="badge live">Unit 9 Review Game</span><h3>Power Town</h3>
+        <p>A board game for 1 to 4 players or teams: buy solar, wind, hydro and nuclear plants, answer questions about the whole unit and keep the climate meter low until 2050.</p>
+        <span class="go">Play →</span></a>
+      <a class="plan thema entile" href="pome24b-island-escape.html"><div class="thema-art">{GAME_IE_ART}</div><span class="badge live">Unit 9 Review Game</span><h3>Island Escape</h3>
+        <p>An escape game for your team: after a storm, Mira Island is dark. Solve the puzzles in four rooms and switch the island back on before the time runs out.</p>
+        <span class="go">Play →</span></a>
     </div>
   </section>
 </main>""", active="lernende.html", description="Pome24B, Technical English: Energy and the Environment, nuclear energy and practice for the exam.")
@@ -751,6 +772,24 @@ page("pome24b-exam.html", "Pome24B: Unit 9 Practice Exercises – MuggliOnline",
 <!--BODY:pome24b_exam-->{PX_BODY}<!--/BODY-->
   </section>
 </main>""", active="lernende.html", description="Pome24B, Technical English: Unit 9 practice exercises (Energy and the Environment) as preparation for the exam, with labelling tasks, gap-fill texts, charts to interpret and critical-thinking questions with model answers.")
+
+ACTIVE["pome24b-power-town.html"] = "lernende.html"
+PT_BODY = "".join((B / "powertown" / f).read_text() for f in sorted(p.name for p in (B / "powertown").glob("*.html")))
+page("pome24b-power-town.html", "Pome24B: Power Town – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Power Town', "Pome24B · Unit 9 Review Game", "Power Town", "A board game about energy and the environment: build a clean energy supply for your town by 2050.")}
+  <section class="section">
+<!--BODY:powertown-->{PT_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Power Town: a board game for Pome24B to review Unit 9 Energy and the Environment, with questions on the greenhouse effect, sea levels, solar, water, wind and nuclear power and statistics.")
+
+ACTIVE["pome24b-island-escape.html"] = "lernende.html"
+IE_BODY = "".join((B / "islandescape" / f).read_text() for f in sorted(p.name for p in (B / "islandescape").glob("*.html")))
+page("pome24b-island-escape.html", "Pome24B: Island Escape – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="lernende.html">Lernende</a> › <a href="pome24b.html">Pome24B</a> › Island Escape', "Pome24B · Unit 9 Review Game", "Island Escape", "An escape game: solve four energy puzzles and switch Mira Island back on.")}
+  <section class="section">
+<!--BODY:islandescape-->{IE_BODY}<!--/BODY-->
+  </section>
+</main>""", active="lernende.html", description="Island Escape: an escape game for Pome24B to review Unit 9 Energy and the Environment, with puzzles on the greenhouse effect, sea levels, energy conversion, nuclear power and the island project.")
 
 ACTIVE["primar6.html"] = "lernende.html"
 page("primar6.html", "6. Primarklasse – MuggliOnline", f"""<main class="wrap">
