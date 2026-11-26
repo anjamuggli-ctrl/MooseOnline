@@ -4249,6 +4249,71 @@
    "en": "In the board game",
    "it": "Nel gioco da tavolo",
    "rm": "En il gieu da tabla"
+  },
+  "Bachelor- und Masterarbeiten, Leistungsnachweise und Seminararbeiten an Hochschulen sowie Maturaarbeiten. Die Liste wird alphabetisch sortiert und lässt sich direkt nach Word kopieren oder als Word-Datei herunterladen.": {
+   "en": "Bachelor's and master's theses, coursework and seminar papers at universities, as well as Matura projects. The list is sorted alphabetically and can be copied straight into Word or downloaded as a Word file.",
+   "it": "Tesi di bachelor e di master, prove di competenza e lavori di seminario nelle scuole universitarie, nonché lavori di maturità. L'elenco viene ordinato alfabeticamente e si può copiare direttamente in Word o scaricare come file Word.",
+   "rm": "Lavurs da bachelor e da master, cumprovas da prestaziun e lavurs da seminari a scolas autas sco er lavurs da matura. La glista vegn assortida alfabeticamain e po vegnir copiada directamain en Word u telechargiada sco datoteca Word."
+  },
+  "DOI und ISBN": {
+   "en": "DOI and ISBN",
+   "it": "DOI e ISBN",
+   "rm": "DOI ed ISBN"
+  },
+  "Export nach Word": {
+   "en": "Export to Word",
+   "it": "Esportazione in Word",
+   "rm": "Export en Word"
+  },
+  "Für Bachelor- und Masterarbeiten: Quellenart wählen, Angaben eintragen oder über DOI und ISBN automatisch abrufen. Der Generator erstellt den Eintrag fürs Literaturverzeichnis und die passenden Angaben im Text: Paraphrase, direktes Zitat, Sekundärzitat, Abbildung, Tabelle und Statistik. Wahlweise nach dem Leitfaden der PH Graubünden oder nach APA 7.": {
+   "en": "For bachelor's and master's theses: choose the type of source, enter the details or retrieve them automatically via DOI and ISBN. The generator creates the reference list entry and the matching in-text citations: paraphrase, direct quote, secondary citation, figure, table and statistics. Either according to the PH Graubünden guidelines or APA 7. Tool language: German.",
+   "it": "Per tesi di bachelor e di master: scegliere il tipo di fonte, inserire i dati o recuperarli automaticamente tramite DOI e ISBN. Il generatore crea la voce per la bibliografia e le citazioni nel testo: parafrasi, citazione diretta, citazione secondaria, figura, tabella e statistica. A scelta secondo le linee guida della PH dei Grigioni o secondo APA 7. Lingua dello strumento: tedesco.",
+   "rm": "Per lavurs da bachelor e da master: tscherner la sort da funtauna, endatar las indicaziuns u las retschaiver automaticamain via DOI ed ISBN. Il generatur fa l'endataziun per la bibliografia e las citaziuns adattadas en il text: parafrasa, citat direct, citat secundar, illustraziun, tabella e statistica. Tenor il guid da la PH dal Grischun u tenor APA 7. Lingua da l'instrument: tudestg."
+  },
+  "Generator öffnen →": {
+   "en": "Open the generator →",
+   "it": "Apri il generatore →",
+   "rm": "Avrir il generatur →"
+  },
+  "Literaturverzeichnis, Zitate im Text, Abbildungen und Statistiken korrekt belegen: nach dem Leitfaden der PHGR oder nach APA 7, mit Abruf über DOI und ISBN.": {
+   "en": "Cite your reference list, in-text quotations, figures and statistics correctly: according to the PHGR guidelines or APA 7, with lookup via DOI and ISBN. The tool is in German.",
+   "it": "Citare correttamente bibliografia, citazioni nel testo, figure e statistiche: secondo le linee guida della PHGR o APA 7, con ricerca tramite DOI e ISBN. Lo strumento è in tedesco.",
+   "rm": "Citar correctamain bibliografia, citats en il text, illustraziuns e statisticas: tenor il guid da la PHGR u tenor APA 7, cun tschertga via DOI ed ISBN. L'instrument è en tudestg."
+  },
+  "PHGR und APA 7": {
+   "en": "PHGR and APA 7",
+   "it": "PHGR e APA 7",
+   "rm": "PHGR ed APA 7"
+  },
+  "Quellen-Generator APA 7": {
+   "en": "APA 7 Citation Generator",
+   "it": "Generatore di citazioni APA 7",
+   "rm": "Generatur da citaziuns APA 7"
+  },
+  "Quellen-Generator APA 7 – App-Werkstatt – MuggliOnline": {
+   "en": "APA 7 Citation Generator – App Workshop – MuggliOnline",
+   "it": "Generatore di citazioni APA 7 – Laboratorio app – MuggliOnline",
+   "rm": "Generatur da citaziuns APA 7 – Ufficina d'apps – MuggliOnline"
+  },
+  "Quellen-Generator für Bachelor- und Masterarbeiten: Literaturverzeichnis und Zitate nach APA 7 bzw. dem Leitfaden der PH Graubünden, mit DOI- und ISBN-Abfrage und Export nach Word.": {
+   "en": "Citation generator for bachelor's and master's theses: reference list and citations according to APA 7 or the PH Graubünden guidelines, with DOI and ISBN lookup and export to Word.",
+   "it": "Generatore di citazioni per tesi di bachelor e di master: bibliografia e citazioni secondo APA 7 o le linee guida della PH dei Grigioni, con ricerca DOI e ISBN ed esportazione in Word.",
+   "rm": "Generatur da citaziuns per lavurs da bachelor e da master: bibliografia e citaziuns tenor APA 7 u tenor il guid da la PH dal Grischun, cun tschertga DOI ed ISBN ed export en Word."
+  },
+  "Werkzeug · Wissenschaftliches Arbeiten": {
+   "en": "Tool · Academic writing",
+   "it": "Strumento · Lavoro scientifico",
+   "rm": "Instrument · Lavur scientifica"
+  },
+  "»": {
+   "en": "»",
+   "it": "»",
+   "rm": "»"
+  },
+  "› Quellen-Generator": {
+   "en": "› Citation generator",
+   "it": "› Generatore di citazioni",
+   "rm": "› Generatur da citaziuns"
   }
  },
  "js": {

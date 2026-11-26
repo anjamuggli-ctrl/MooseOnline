@@ -821,6 +821,15 @@ page("pome24b-island-escape.html", "Pome24B: Island Escape – MuggliOnline", f"
   </section>
 </main>""", active="lernende.html", description="Island Escape: an escape game for Pome24B to review Unit 9 Energy and the Environment, with puzzles on the greenhouse effect, sea levels, energy conversion, nuclear power and the island project.")
 
+ACTIVE["zitieren.html"] = "werkstatt.html"
+ZT_BODY = "".join((B / "zitieren" / f).read_text() for f in sorted(p.name for p in (B / "zitieren").glob("*.html")))
+page("zitieren.html", "Quellen-Generator APA 7 – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
+{hero('<a href="werkstatt.html">App-Werkstatt</a> › Quellen-Generator', "Werkzeug · Wissenschaftliches Arbeiten", "Quellen-Generator APA 7", "Literaturverzeichnis, Zitate im Text, Abbildungen und Statistiken korrekt belegen: nach dem Leitfaden der PHGR oder nach APA 7, mit Abruf über DOI und ISBN.")}
+  <section class="section">
+<!--BODY:zitieren-->{ZT_BODY}<!--/BODY-->
+  </section>
+</main>""", active="werkstatt.html", description="Quellen-Generator für Bachelor- und Masterarbeiten: Literaturverzeichnis und Zitate nach APA 7 bzw. dem Leitfaden der PH Graubünden, mit DOI- und ISBN-Abfrage und Export nach Word.")
+
 ACTIVE["lindenhof.html"] = "werkstatt.html"
 LH_BODY = "".join((B / "lindenhof" / f).read_text() for f in sorted(p.name for p in (B / "lindenhof").glob("*.html")))
 page("lindenhof.html", "Schulhaus Lindenhof – App-Werkstatt – MuggliOnline", f"""<main class="wrap">
@@ -926,6 +935,17 @@ page("werkstatt.html", "App-Werkstatt – MuggliOnline", f"""<main class="wrap">
   <section class="section">
 {einleitung("Apps für Schule und Alltag", ["Die Apps laufen direkt im Browser, ohne Installation und ohne Anmeldung.", "Einzelne Apps werden künftig KI nutzen und sind dann passwortgeschützt. Du hast eine Idee für eine eigene App? Ich setze sie gerne für deinen Unterricht um."], 0)}
     <div class="cards">
+      <a class="card" href="zitieren.html">
+        <div class="art"><svg viewBox="0 0 200 120" aria-hidden="true"><rect x="40" y="18" width="120" height="86" rx="10" fill="#fff" stroke="#3f6b57" stroke-width="3"/><path d="M58 40h84M58 54h84M58 68h60M58 82h70" stroke="#9db8a7" stroke-width="5" stroke-linecap="round"/><text x="150" y="44" font-family="Georgia,serif" font-size="56" fill="#3f6b57">»</text></svg></div>
+        <div class="body">
+          <div class="kicker"><span class="badge live">Werkzeug</span></div>
+          <h3>Quellen-Generator APA 7</h3>
+          <p>Für Bachelor- und Masterarbeiten: Quellenart wählen, Angaben eintragen oder über DOI und ISBN automatisch abrufen. Der Generator erstellt den Eintrag fürs Literaturverzeichnis und die passenden Angaben im Text: Paraphrase, direktes Zitat, Sekundärzitat, Abbildung, Tabelle und Statistik. Wahlweise nach dem Leitfaden der PH Graubünden oder nach APA 7.</p>
+          <p><b>Einsatz:</b> Bachelor- und Masterarbeiten, Leistungsnachweise und Seminararbeiten an Hochschulen sowie Maturaarbeiten. Die Liste wird alphabetisch sortiert und lässt sich direkt nach Word kopieren oder als Word-Datei herunterladen.</p>
+          <div class="tags"><span>DOI und ISBN</span><span>PHGR und APA 7</span><span>Export nach Word</span></div>
+          <span class="go">Generator öffnen →</span>
+        </div>
+      </a>
       <a class="card" href="lindenhof.html">
         <div class="art foto"><img src="img/lindenhof/lh-tile.jpg" alt="" loading="lazy"></div>
         <div class="body">

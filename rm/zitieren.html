@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="rm">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generatur da citaziuns APA 7 – Ufficina d'apps – MuggliOnline</title>
+<meta name="description" content="Generatur da citaziuns per lavurs da bachelor e da master: bibliografia e citaziuns tenor APA 7 u tenor il guid da la PH dal Grischun, cun tschertga DOI ed ISBN ed export en Word.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=a675fe69">
+<link rel="alternate" hreflang="de" href="../zitieren.html">
+<link rel="alternate" hreflang="rm" href="../rm/zitieren.html">
+<link rel="alternate" hreflang="en" href="../en/zitieren.html">
+<link rel="alternate" hreflang="it" href="../it/zitieren.html">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Pagina principala da MuggliOnline">
+      <svg aria-hidden="true" viewBox="0 0 100 100">
+  <defs><clipPath id="inner"><circle cx="50" cy="50" r="41.400000000000006"/></clippath></defs>
+  <circle cx="50" cy="50" r="41.400000000000006" fill="#e2eae1"/>
+  <g clip-path="url(#inner)">
+    <!-- hintere Bergkette als M -->
+    <polygon points="10,68 44,33 58,47 73,29 100,52 100,100 10,100" fill="#87a48f"/>
+    <polygon points="44,33 58,47 52,100 48,100" fill="#6f8f78" opacity=".0"/>
+    <polygon points="44,33 58,47 54,60" fill="#6f8f78"/>
+    <polygon points="73,29 100,52 100,70 76,56" fill="#6f8f78"/>
+    <polygon points="44.0,33.0 50.5,39.5 46.9,36.9 44.1,39.7 40.8,36.7 37.7,39.5" fill="#ffffff"/>
+    <polygon points="73.0,29.0 80.6,35.5 76.4,32.9 74.1,35.7 70.3,32.7 67.6,35.5" fill="#ffffff"/>
+    <!-- vordere Bergkette als M -->
+    <polygon points="8,92 49,57 63,69 79,52 100,66 100,100 8,100" fill="#3f5d4a"/>
+    <polygon points="49,57 63,69 58,82" fill="#2f4a39"/>
+    <polygon points="79,52 100,66 100,84 82,72" fill="#2f4a39"/>
+  </g>
+
+  <path d="M91.95,42.60 A42.6,42.6 0 0 1 8.33,58.86" fill="none" stroke="#2f4a39" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M6.03,48.46 L6.10,47.02 L6.22,45.57 L6.39,44.13 L6.61,42.70 L6.87,41.27 L7.19,39.85 L7.54,38.45 L7.95,37.05 L8.40,35.68 L8.89,34.31 L9.43,32.97 L10.01,31.64 L10.64,30.33 L11.31,29.04 L12.02,27.78 L12.78,26.54 L13.57,25.32 L14.40,24.14 L15.28,22.98 L16.18,21.85 L17.13,20.75 L18.11,19.68 L19.13,18.65 L20.18,17.65 L21.26,16.68 L22.38,15.75 L23.52,14.86 L24.69,14.01 L25.89,13.19 L27.12,12.42 L28.37,11.68 L29.65,10.99 L30.94,10.34 L32.26,9.73 L33.60,9.17 L34.95,8.65 L36.32,8.18 L37.71,7.75 L39.11,7.37 L40.52,7.03 L41.94,6.74 L43.37,6.50 L44.81,6.31 L46.25,6.16 L47.70,6.06 L49.15,6.01 L50.60,6.00 L52.05,6.05 L53.49,6.14 L54.94,6.28 L56.38,6.46 L57.81,6.70 L59.23,6.98 L60.64,7.31 L62.05,7.68 L63.43,8.10 L64.81,8.57 L66.17,9.08 L67.51,9.63 L68.83,10.23 L70.13,10.87 L71.41,11.56 L72.66,12.28 L73.89,13.05 L75.10,13.86 L76.27,14.71 L77.42,15.59 L78.54,16.51 L79.63,17.47 L80.69,18.47 L81.71,19.50 L82.70,20.56 L83.65,21.65 L84.57,22.78 L85.45,23.93 L86.29,25.11 L87.09,26.32 L87.85,27.56 L88.57,28.82 L89.24,30.10 L89.88,31.40 L90.47,32.73 L91.02,34.07 L91.52,35.43 L91.98,36.81 L92.39,38.20 L92.75,39.60 L93.07,41.02 L93.35,42.44 L93.57,43.88 L90.80,44.27 L90.55,42.93 L90.25,41.61 L89.90,40.30 L89.50,39.00 L89.06,37.73 L88.57,36.47 L88.03,35.23 L87.46,34.01 L86.85,32.82 L86.19,31.65 L85.50,30.50 L84.77,29.38 L84.00,28.29 L83.20,27.23 L82.36,26.20 L81.49,25.20 L80.59,24.23 L79.65,23.30 L78.69,22.40 L77.70,21.54 L76.69,20.71 L75.65,19.91 L74.58,19.16 L73.49,18.44 L72.38,17.77 L71.26,17.13 L70.11,16.53 L68.95,15.97 L67.77,15.46 L66.58,14.98 L65.37,14.55 L64.16,14.16 L62.93,13.81 L61.70,13.50 L60.46,13.24 L59.22,13.02 L57.97,12.84 L56.73,12.70 L55.48,12.61 L54.23,12.56 L52.98,12.55 L51.74,12.58 L50.51,12.66 L49.28,12.77 L48.06,12.93 L46.85,13.13 L45.65,13.36 L44.46,13.64 L43.28,13.96 L42.12,14.31 L40.98,14.70 L39.86,15.13 L38.75,15.60 L37.66,16.10 L36.59,16.63 L35.55,17.20 L34.53,17.80 L33.53,18.44 L32.56,19.10 L31.61,19.80 L30.70,20.52 L29.80,21.28 L28.94,22.06 L28.11,22.86 L27.31,23.69 L26.54,24.55 L25.80,25.42 L25.09,26.32 L24.42,27.24 L23.78,28.17 L23.18,29.13 L22.61,30.10 L22.07,31.08 L21.57,32.08 L21.11,33.09 L20.68,34.12 L20.29,35.15 L19.93,36.19 L19.61,37.24 L19.33,38.29 L19.08,39.35 L18.88,40.42 L18.70,41.48 L18.57,42.55 L18.47,43.62 L18.41,44.68 L18.38,45.74 L18.39,46.80 L18.44,47.85 L18.52,48.90 Z" fill="#2f4a39"/>
+  <g stroke="#f4f1ea" stroke-width="1.15" stroke-linecap="round"><line x1="7.53" y1="37.05" x2="12.51" y2="38.57"/><line x1="10.38" y1="29.97" x2="14.77" y2="32.19"/><line x1="14.39" y1="23.48" x2="18.11" y2="26.25"/><line x1="19.46" y1="17.77" x2="22.46" y2="20.94"/><line x1="25.43" y1="13.02" x2="27.69" y2="16.43"/><line x1="32.13" y1="9.36" x2="33.67" y2="12.86"/><line x1="39.35" y1="6.90" x2="40.20" y2="10.36"/><line x1="46.89" y1="5.71" x2="47.12" y2="9.02"/><line x1="54.52" y1="5.83" x2="54.21" y2="8.88"/><line x1="62.01" y1="7.26" x2="61.25" y2="9.98"/></g>
+  <!-- Kopf: links in der Mitte, nach unten geneigt -->
+  <path d="M6.03,48.46
+           C4.2,53.6 3.6,58.2 3.5,62.6 C3.5,65.6 3.4,68.2 3.8,69.8 C4.2,71.4 5.6,72 7.2,71.6
+           L9.6,71 C10,73.6 10.4,76.4 10.8,79.4 C12,77 13,74.6 13.6,72.4
+           L18.2,65.8 C19.8,63.4 20.6,60.2 20.4,56.8 C20.2,54 19.4,51.8 18.52,48.90 Z" fill="#2f4a39"/>
+  <path d="M18.6,54.6 C22.4,53 26.4,53.2 29,54.8 C25.8,56.4 22,57.2 18.2,57 Z" fill="#2f4a39"/>
+  <path d="M7.6,56.6 C8.8,55.6 10.6,55.6 11.6,56.4 C10.4,57.6 8.8,57.8 7.6,56.6 Z" fill="#f4f1ea"/>
+  <path d="M4.4,68.4 l1.2,-0.2" stroke="#f4f1ea" stroke-width=".75" stroke-linecap="round"/>
+</svg>
+      <span class="name">Muggli<span>Online</span></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="didaktik.html">Pedagogia</a></li>
+      <li><a href="english.html">Persunas d'instrucziun</a></li>
+      <li><a href="lernende.html">Emprendists</a></li>
+      <li><a href="werkstatt.html" class="active">Lavuratori d'apps</a></li>
+      <li><a href="vision.html">Visiun</a></li>
+      <li><a href="ueber-anja.html">Davart Anja</a></li>
+      <li><a class="cta" href="kontakt.html">Contact</a></li>
+    </ul>
+    <div class="lang"><button class="lang-btn" type="button" aria-label="Tscherner la lingua" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>RM</button><ul class="lang-list"><li><a href="../zitieren.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="../rm/zitieren.html" hreflang="rm" lang="rm" class="aktiv">Rumantsch<small>RM</small></a></li><li><a href="../en/zitieren.html" hreflang="en" lang="en">English<small>EN</small></a></li><li><a href="../it/zitieren.html" hreflang="it" lang="it">Italiano<small>IT</small></a></li></ul></div>
+    <button class="burger" aria-label="Avrir il menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <div class="inner">
+      <div class="crumbs"><a href="index.html">Pagina principala</a> › <a href="werkstatt.html">Lavuratori d'apps</a> › Generatur da citaziuns</div>
+      <div class="kicker">Instrument · Lavur scientifica</div>
+      <h1>Generatur da citaziuns APA 7</h1>
+      <p class="lead">Citar correctamain bibliografia, citats en il text, illustraziuns e statisticas: tenor il guid da la PHGR u tenor APA 7, cun tschertga via DOI ed ISBN. L'instrument è en tudestg.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" style="height:150px"><path d="M0,120 L0,88 L120,52 L190,72 L300,22 L390,64 L470,46 L560,80 L660,38 L740,60 L840,16 L930,58 L1010,40 L1100,70 L1200,46 L1200,120 Z" fill="#4c6b57"/><path d="M0,120 L0,98 L90,80 L200,96 L330,66 L450,92 L560,74 L700,98 L820,68 L960,94 L1080,76 L1200,90 L1200,120 Z" fill="#5f8069"/><path d="M0,120 L0,104 L160,94 L300,107 L460,97 L640,109 L800,97 L980,107 L1200,99 L1200,120 Z" fill="#d6e0d3"/></svg><svg class="ridge" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true" style="height:150px"><g fill="#2a3a4b"><g transform="translate(60 88.8) scale(1.1)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(92 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(380 97.6) scale(0.7)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(870 96.5) scale(0.75)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1090 87.7) scale(1.15)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g><g transform="translate(1126 94.3) scale(0.85)"><polygon points="0,-34 -10,-14 10,-14"/><polygon points="0,-24 -14,0 14,0"/><polygon points="0,-12 -18,14 18,14"/><rect x="-2" y="14" width="4" height="8"/></g></g></svg>
+  </section>
+  <section class="section">
+  <style>
+  .zt{--ink:#22302b;--mut:#5d6964;--line:#d9e0dc;--acc:#3f6b57;--soft:#f3f6f4;--warn:#b5532f;color:var(--ink)}
+  .zt *{box-sizing:border-box}
+  .zt-top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin-bottom:14px}
+  .zt-seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+  .zt-seg button{border:0;background:#fff;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+  .zt-seg button.on{background:var(--ink);color:#fff}
+  .zt-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+  @media (max-width:900px){.zt-grid{grid-template-columns:1fr}}
+  .zt-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+  .zt-card h3{margin:0 0 10px;font-size:18px}
+  .zt-card h4{margin:14px 0 6px;font-size:15px}
+  .zt-quick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+  @media (max-width:560px){.zt-quick{grid-template-columns:1fr}}
+  .zt-quick label{font-size:13px;color:var(--mut);display:flex;flex-direction:column;gap:4px}
+  .zt-quick .row{display:flex;gap:6px}
+  .zt-in{border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:15px;width:100%;min-width:0;background:#fff;color:var(--ink)}
+  .zt-in:focus{outline:2px solid #9cc3ad;border-color:var(--acc)}
+  .zt-btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}
+  .zt-btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+  .zt-btn.sm{padding:5px 11px;font-size:13px}
+  .zt-btn:disabled{opacity:.45;cursor:not-allowed}
+  .zt-msg{font-size:13.5px;margin:4px 0 0;min-height:1em}
+  .zt-msg.ok{color:#2f6b37}.zt-msg.err{color:var(--warn)}
+  .zt-types{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:6px 0 12px}
+  .zt-types button{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:7px 9px;font:inherit;font-size:13.5px;text-align:left;cursor:pointer;line-height:1.25}
+  .zt-types button.on{border-color:var(--acc);background:#e9f3ed;font-weight:700}
+  .zt-fields{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  .zt-f{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--mut);grid-column:span 6}
+  .zt-f.h{grid-column:span 3}.zt-f.t{grid-column:span 2}
+  @media (max-width:560px){.zt-f.h,.zt-f.t{grid-column:span 6}}
+  .zt-f small{font-size:12px;color:#7b8781;line-height:1.35}
+  .zt-pers{display:grid;gap:6px;grid-column:span 6}
+  .zt-pers .pr{display:grid;grid-template-columns:1fr 1fr auto auto;gap:6px;align-items:center}
+  .zt-pers .pr.g{grid-template-columns:2fr 1fr auto auto}
+  .zt-pers .pr button{border:0;background:var(--soft);border-radius:8px;padding:6px 9px;cursor:pointer;font-size:13px}
+  .zt-pers .lbl{font-size:13px;color:var(--mut);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .zt-out{border-left:4px solid var(--acc);background:var(--soft);border-radius:0 10px 10px 0;padding:9px 12px;margin:6px 0;line-height:1.55;position:relative;font-size:15px}
+  .zt-out.ref{padding-left:2.2em;text-indent:-1.6em;background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc)}
+  .zt-out .cp{position:absolute;top:6px;right:6px;text-indent:0;border:0;background:#fff;border-radius:8px;padding:3px 8px;font-size:12px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .zt-out .cp.done{background:#e3f1e3}
+  .zt-out .lab{display:block;font-size:12px;color:var(--mut);text-indent:0;margin-bottom:2px}
+  .zt-note{font-size:13px;color:var(--mut);line-height:1.45;margin:4px 0 8px}
+  .zt-warn{font-size:13.5px;color:var(--warn);margin:6px 0}
+  .zt-usage{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 4px;font-size:13.5px}
+  .zt-usage .zt-in{width:auto;flex:1;min-width:110px}
+  .zt-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
+  .zt-tabs button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font:inherit;font-size:13px;cursor:pointer}
+  .zt-tabs button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .zt-list{margin-top:16px}
+  .zt-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;border-top:1px solid var(--line);padding:9px 0}
+  .zt-item .r{padding-left:1.6em;text-indent:-1.6em;line-height:1.55}
+  .zt-item .a{display:flex;gap:4px}
+  .zt-item.edit{background:#fff8e6}
+  .zt-hint{background:#fff6e5;border:1px solid #f0d7a6;border-radius:12px;padding:9px 12px;font-size:13.5px;line-height:1.5;margin:10px 0}
+  .zt details summary{cursor:pointer;font-weight:700}
+  </style>
+  <div class="zt" id="zt"><noscript><p>Bitte JavaScript aktivieren, um den Generator zu nutzen.</p></noscript></div>
+  <script>
+(function(){
+var root = document.getElementById("zt"); if (!root) return;
+var KEY = "mo_zitieren_v1";
+
+/* ================= QUELLENARTEN UND FELDER ================= */
+var TYPES = {
+ buch:{n:"Buch", ic:"📕", f:["autoren","jahr","titel","untertitel","auflage","ort","verlag","doi"]},
+ hrsg:{n:"Herausgeberwerk", ic:"📚", f:["hrsg","jahr","titel","untertitel","auflage","ort","verlag","doi"]},
+ kapitel:{n:"Kapitel im Sammelband", ic:"📖", f:["autoren","jahr","titel","hrsg","buchtitel","seiten","auflage","ort","verlag","doi"]},
+ artikel:{n:"Zeitschriftenartikel", ic:"📰", f:["autoren","jahr","titel","zeitschrift","jahrgang","heft","seiten","artikelnr","doi"]},
+ web:{n:"Webseite, Online-Text", ic:"🌐", f:["autoren","jahr","tag","monat","titel","website","url","abruf"]},
+ bericht:{n:"Bericht, Studie, Lehrplan", ic:"📊", f:["autoren","jahr","titel","untertitel","nummer","ort","verlag","url"]},
+ arbeit:{n:"BA-, MA-Arbeit, Dissertation", ic:"🎓", f:["autoren","jahr","titel","arbeitsart","institution","url"]},
+ gesetz:{n:"Gesetz, Verordnung", ic:"⚖️", f:["gtitel","abk","erlass","sr","stand","url"]},
+ video:{n:"Video, Film, Podcast", ic:"🎬", f:["autoren","jahr","tag","monat","titel","medium","plattform","url"]},
+ ki:{n:"KI-Ausgabe", ic:"🤖", f:["kianbieter","jahr","kimodell","kiversion","url"]}
+};
+var MONATE = ["","Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+var FD = {
+ jahr:{l:"Jahr", ph:"2022", w:"t", tip:"Leer lassen, wenn kein Jahr angegeben ist (→ o. J.)."},
+ tag:{l:"Tag", ph:"12", w:"t"}, monat:{l:"Monat", w:"t", sel:MONATE},
+ titel:{l:"Titel", ph:"Wissenschaftliches Arbeiten im Lehramtsstudium"},
+ untertitel:{l:"Untertitel", ph:"Recherchieren, schreiben, forschen"},
+ auflage:{l:"Auflage", ph:"2. überarbeitete", w:"h", tip:"Erst ab der 2. Auflage angeben. «2» wird zu «2. Aufl.»."},
+ ort:{l:"Verlagsort", ph:"Bern", w:"h", tip:"Nur im PHGR-Stil; APA 7 verzichtet darauf."},
+ verlag:{l:"Verlag", ph:"Hogrefe", w:"h"},
+ doi:{l:"DOI oder URL (falls vorhanden)", ph:"10.1024/xxxx oder https://…", tip:"Die DOI steht meist auf der ersten Seite eines Artikels oder beim Verlag. Sie wird als https://doi.org/… angegeben."},
+ buchtitel:{l:"Titel des Sammelbands", ph:"Handbuch Schulpädagogik"},
+ seiten:{l:"Seiten", ph:"161–175", w:"t", tip:"Von–bis, z. B. 161–175."},
+ zeitschrift:{l:"Zeitschrift", ph:"Zeitschrift für Erziehungswissenschaft", w:"h"},
+ jahrgang:{l:"Jahrgang (Band)", ph:"25", w:"t"}, heft:{l:"Heft (Nr.)", ph:"1", w:"t"},
+ artikelnr:{l:"Artikelnummer (statt Seiten)", ph:"e12345", w:"h"},
+ website:{l:"Name der Website", ph:"Pro Juventute", w:"h", tip:"Weglassen, wenn er gleich ist wie die Autorschaft."},
+ url:{l:"URL", ph:"https://…"},
+ abruf:{l:"Abrufdatum (nur bei Seiten, die sich laufend ändern)", ph:"14. März 2026", w:"h"},
+ nummer:{l:"Berichtsnummer", ph:"Nr. 3", w:"h"},
+ arbeitsart:{l:"Art der Arbeit", w:"h", sel:["Unveröffentlichte Bachelorarbeit","Unveröffentlichte Masterarbeit","Bachelorarbeit","Masterarbeit","Dissertation"]},
+ institution:{l:"Hochschule", ph:"Pädagogische Hochschule Graubünden", w:"h"},
+ gtitel:{l:"Titel des Erlasses", ph:"Bundesgesetz über die Berufsbildung"},
+ abk:{l:"Kurztitel und Abkürzung", ph:"Berufsbildungsgesetz, BBG", w:"h"},
+ erlass:{l:"Erlassen am", ph:"13. Dezember 2002", w:"h"},
+ sr:{l:"SR- bzw. BR-Nummer", ph:"412.10", w:"h", tip:"Systematische Rechtssammlung des Bundes (SR) oder Bündner Rechtsbuch (BR)."},
+ stand:{l:"Stand am", ph:"1. Januar 2024", w:"h"},
+ medium:{l:"Art", w:"h", sel:["Video","Film","Podcast","Podcast-Episode"]},
+ plattform:{l:"Plattform", ph:"YouTube", w:"h"},
+ kianbieter:{l:"Anbieter", ph:"OpenAI", w:"h"}, kimodell:{l:"Name des Modells", ph:"ChatGPT", w:"h"},
+ kiversion:{l:"Version oder Datum", ph:"GPT-5, Version vom 14. März 2026", w:"h"}
+};
+
+/* ================= ZUSTAND ================= */
+var S = {style:"phgr", list:[]};
+try { var sv = JSON.parse(localStorage.getItem(KEY)); if (sv && sv.list) S = sv; } catch(e){}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function blank(t){ return {id:null, type:t||"buch", d:{}, au:[{l:"",f:"",g:false,a:""}], ed:[{l:"",f:"",g:false,a:""}]}; }
+var cur = blank("buch"), editId = null, tab = "text", pages = "", sec = "", fig = "1";
+
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function tr(s){ return String(s||"").trim(); }
+function phgr(){ return S.style === "phgr"; }
+
+/* ================= FORMATIERUNG ================= */
+function initials(f){ f = tr(f); if (!f) return ""; if (/^([A-ZÄÖÜ]\.\s?-?)+$/.test(f.replace(/\s/g,""))) return f.replace(/\.(?=[^\s-])/g,". ").replace(/\s+/g," ").trim();
+ return f.split(/\s+/).map(function(p){ return p.split("-").map(function(x){ return x ? x.charAt(0).toUpperCase()+"." : ""; }).join("-"); }).join(" "); }
+function persons(arr){ return (arr||[]).filter(function(p){ return tr(p.l); }); }
+function refName(p){ return p.g ? tr(p.l) : tr(p.l) + (initials(p.f) ? ", " + initials(p.f) : ""); }
+function edName(p){ return p.g ? tr(p.l) : (initials(p.f) ? initials(p.f) + " " : "") + tr(p.l); }
+function joinRef(names){
+ var amp = phgr() ? " & " : ", & ", n = names.length;
+ if (!n) return ""; if (n === 1) return names[0];
+ if (n === 2) return names[0] + amp + names[1];
+ if (n > 20) return names.slice(0,19).join(", ") + ", … " + names[n-1];
+ return names.slice(0,-1).join(", ") + amp + names[n-1];
+}
+function dot(s){ s = tr(s); return /[.?!]$/.test(s.replace(/<[^>]+>/g,"")) ? s : s + "."; }
+function aufl(a){ a = tr(a); if (!a) return ""; if (/aufl/i.test(a)) return a; if (/^\d+$/.test(a)) return a + ". Aufl."; return a + " Aufl."; }
+function doiUrl(x){ x = tr(x); if (!x) return ""; var m = x.match(/(10\.\d{4,9}\/\S+)/); if (m && !/^https?:\/\/(?!doi\.org|dx\.doi\.org)/i.test(x)) return "https://doi.org/" + m[1].replace(/[.,;]$/,""); return x; }
+function pagesFmt(p){ return tr(p).replace(/\s*[-–]\s*/g, "–"); }
+function titleSub(t, s){ t = tr(t); s = tr(s); if (!s) return t; return (phgr() ? dot(t) + " " : t.replace(/[.:]$/,"") + ": ") + s; }
+function pub(d){ var v = tr(d.verlag), o = tr(d.ort); if (!v && !o) return ""; return (phgr() && o ? o + (v ? ": " : "") : "") + v; }
+function yearOf(src, suf){ var y = tr(src.d.jahr); if (src.type === "gesetz") { var m = tr(src.d.erlass).match(/(\d{4})/); y = m ? m[1] : ""; } return (y || "o. J.") + (suf ? (y ? "" : "-") + suf : ""); }
+function dateOf(src, suf){ var d = src.d, y = yearOf(src, suf); if (tr(d.monat)) y += ", " + (tr(d.tag) ? tr(d.tag) + ". " : "") + d.monat; return y; }
+function italicTitle(t){ return ["buch","hrsg","web","bericht","arbeit","video","ki"].indexOf(t) >= 0; }
+
+/* ---------- Literaturverzeichnis ---------- */
+function reference(src, suf){
+ var d = src.d, t = src.type, au = persons(src.au), ed = persons(src.ed), r = "", y = "(" + (t==="web"||t==="video" ? dateOf(src, suf) : yearOf(src, suf)) + "). ";
+ var main = esc(titleSub(d.titel, d.untertitel));
+ if (t === "gesetz") {
+  r = esc(tr(d.gtitel)) + (tr(d.abk) ? " (" + esc(d.abk) + ")" : "") + (tr(d.erlass) ? " vom " + esc(d.erlass) : "") + (tr(d.sr) ? ", " + (/^(SR|BR)\b/i.test(tr(d.sr)) ? "" : "SR ") + esc(d.sr) : "") + (tr(d.stand) ? " (Stand am " + esc(d.stand) + ")" : "") + ".";
+  if (tr(d.url)) r += " " + esc(d.url);
+  return r;
+ }
+ if (t === "ki") {
+  r = esc(dot(d.kianbieter || "Anbieter")) + " (" + yearOf(src, suf) + "). <i>" + esc(d.kimodell || "Modell") + "</i>" + (tr(d.kiversion) ? " (" + esc(d.kiversion) + ")" : "") + " [Grosses Sprachmodell]." + (tr(d.url) ? " " + esc(d.url) : "");
+  return r;
+ }
+ var who = t === "hrsg" ? joinRef(ed.map(refName)) : joinRef(au.map(refName));
+ if (who) r = esc(t === "hrsg" ? who + " (Hrsg.)." : dot(who)) + " " + y;
+ var titleHtml = italicTitle(t) ? "<i>" + main + "</i>" : main;
+ var nb = [];
+ if (t === "buch" || t === "hrsg") { if (aufl(d.auflage)) nb.push(aufl(d.auflage)); }
+ if (t === "bericht" && tr(d.nummer)) nb.push(tr(d.nummer));
+ var titleFull = titleHtml + (nb.length ? " (" + esc(nb.join(", ")) + ")" : "");
+ if (t === "arbeit") titleFull += /^Unveröff/.test(d.arbeitsart||"Unveröffentlichte Masterarbeit") ? " [" + esc(d.arbeitsart || "Unveröffentlichte Masterarbeit") + "]" : " [" + esc(d.arbeitsart) + (tr(d.institution) ? ", " + esc(d.institution) : "") + "]";
+ if (t === "video") titleFull += " [" + esc(d.medium || "Video") + "]";
+ if (!who) r = dot(titleFull) + " " + y; else r += dot(titleFull) + " ";
+ if (t === "buch" || t === "hrsg" || t === "bericht") { var p = pub(d); var grp = au.length === 1 && au[0].g && (tr(au[0].l) === tr(d.verlag) || (tr(au[0].a) && tr(au[0].a) === tr(d.verlag))); if (p && !grp) r += esc(dot(p)) + " "; r += esc(doiUrl(d.doi || d.url)); }
+ else if (t === "kapitel") {
+  var edn = joinRef(ed.map(edName)), inner = [];
+  if (aufl(d.auflage)) inner.push(aufl(d.auflage)); if (tr(d.seiten)) inner.push("S. " + pagesFmt(d.seiten));
+  r += "In " + (edn ? esc(edn) + " (Hrsg.), " : "") + "<i>" + esc(d.buchtitel || "Titel des Sammelbands") + "</i>" + (inner.length ? " (" + esc(inner.join(", ")) + ")" : "") + ". ";
+  var p2 = pub(d); if (p2) r += esc(dot(p2)) + " "; r += esc(doiUrl(d.doi));
+ }
+ else if (t === "artikel") {
+  r += "<i>" + esc(d.zeitschrift || "Zeitschrift") + (tr(d.jahrgang) ? ", " + esc(d.jahrgang) : "") + "</i>" + (tr(d.heft) ? "(" + esc(d.heft) + ")" : "");
+  if (tr(d.seiten)) r += ", " + esc(pagesFmt(d.seiten)); else if (tr(d.artikelnr)) r += ", Artikel " + esc(d.artikelnr);
+  r += ". " + esc(doiUrl(d.doi));
+ }
+ else if (t === "web") { var site = tr(d.website); if (site && !(au.length === 1 && tr(au[0].l) === site)) r += esc(dot(site)) + " "; r += tr(d.abruf) ? "Abgerufen am " + esc(d.abruf) + ", von " + esc(d.url) : esc(d.url); }
+ else if (t === "arbeit") { if (/^Unveröff/.test(d.arbeitsart||"Unveröffentlichte Masterarbeit") && tr(d.institution)) r += esc(dot(d.institution)) + " "; r += esc(d.url); }
+ else if (t === "video") { if (tr(d.plattform)) r += esc(dot(d.plattform)) + " "; r += esc(d.url); }
+ return r.replace(/\s+$/,"").replace(/\.\.$/,".");
+}
+
+/* ---------- im Text ---------- */
+function shortTitle(src){ var t = tr(src.d.titel) || "Titel"; return italicTitle(src.type) ? "<i>" + esc(t) + "</i>" : "«" + esc(t) + "»"; }
+function citeNames(src, narr, first){
+ var t = src.type, au = persons(t === "hrsg" ? src.ed : src.au);
+ if (t === "gesetz") { var ab = tr(src.d.abk).split(",").pop().trim(); return esc(ab || src.d.gtitel || "Gesetz"); }
+ if (t === "ki") return esc(src.d.kianbieter || "Anbieter");
+ if (!au.length) return shortTitle(src);
+ function nm(p){ return p.g ? (tr(p.a) ? (first ? null : esc(tr(p.a))) : esc(tr(p.l))) : esc(tr(p.l)); }
+ if (au.length === 1 && au[0].g && tr(au[0].a) && first) return {grp:true, full:esc(tr(au[0].l)), abk:esc(tr(au[0].a))};
+ if (au.length === 1) return nm(au[0]);
+ if (au.length === 2) return nm(au[0]) + (narr ? " und " : " & ") + nm(au[1]);
+ return nm(au[0]) + " et al.";
+}
+function pg(p){ p = tr(p); if (!p) return ""; return ", " + (/^(S\.|Kap\.|Abs\.|Art\.|Min\.|para)/i.test(p) ? p : "S. " + p.replace(/\s*[-–]\s*/g,"–")); }
+function paren(src, suf, p, opt){
+ opt = opt || {}; var n = citeNames(src, false, opt.first), y = yearOf(src, suf), pre = opt.vgl && phgr() ? "vgl. " : "";
+ if (n && n.grp) return "(" + pre + n.full + " [" + n.abk + "], " + y + pg(p) + ")";
+ return "(" + pre + n + ", " + y + pg(p) + ")";
+}
+function narrative(src, suf, p, opt){
+ opt = opt || {}; var n = citeNames(src, true, opt.first), y = yearOf(src, suf);
+ if (n && n.grp) return n.full + " (" + n.abk + ", " + y + pg(p) + ")";
+ return n + " (" + y + pg(p) + ")";
+}
+function isGroupAbk(src){ var au = persons(src.au); return au.length === 1 && au[0].g && tr(au[0].a); }
+
+/* ---------- Liste: Sortierung und a/b ---------- */
+function sortKey(src){
+ var au = persons(src.type === "hrsg" ? src.ed : src.au), k = src.type === "gesetz" ? tr(src.d.gtitel) : src.type === "ki" ? tr(src.d.kianbieter) : au.length ? au.map(function(p){ return tr(p.l) + " " + initials(p.f); }).join(" ") : tr(src.d.titel);
+ return k.toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/^(der|die|das|the|a|an|ein|eine) /,"");
+}
+function suffixes(list){
+ var groups = {}, out = {};
+ list.forEach(function(s){ var k = sortKey(s) + "|" + yearOf(s); (groups[k] = groups[k] || []).push(s); });
+ Object.keys(groups).forEach(function(k){ var g = groups[k]; if (g.length < 2) return; g.sort(function(a,b){ return tr(a.d.titel).localeCompare(tr(b.d.titel), "de"); }); g.forEach(function(s,i){ out[s.id] = "abcdefghijklmnopqrstuvwxyz".charAt(i); }); });
+ return out;
+}
+function sorted(){ return S.list.slice().sort(function(a,b){ var c = sortKey(a).localeCompare(sortKey(b), "de"); return c || yearOf(a).localeCompare(yearOf(b)) || tr(a.d.titel).localeCompare(tr(b.d.titel), "de"); }); }
+function warnings(src){
+ var w = [], d = src.d, t = src.type;
+ if (t !== "gesetz" && t !== "ki" && !tr(d.titel)) w.push("Titel fehlt.");
+ if (t === "gesetz" && !tr(d.gtitel)) w.push("Titel des Erlasses fehlt.");
+ if (["buch","kapitel","artikel","bericht","arbeit"].indexOf(t) >= 0 && !persons(src.au).length) w.push("Keine Autorin oder kein Autor: Ist es vielleicht eine Organisation (Gruppenautor)?");
+ if (t === "hrsg" && !persons(src.ed).length) w.push("Herausgeberinnen oder Herausgeber fehlen.");
+ if (t !== "gesetz" && !tr(d.jahr)) w.push("Kein Jahr: Es erscheint «o. J.» (ohne Jahr).");
+ if ((t === "buch" || t === "hrsg" || t === "kapitel") && !tr(d.verlag)) w.push("Verlag fehlt.");
+ if (t === "artikel" && !tr(d.doi)) w.push("Keine DOI: Prüfe auf der ersten Seite oder beim Verlag, ob es eine gibt.");
+ if ((t === "web" || t === "video") && !tr(d.url)) w.push("URL fehlt.");
+ return w;
+}
+
+/* ================= AUTOMATISCH AUSFÜLLEN ================= */
+function splitName(n){ n = tr(n); if (n.indexOf(",") > 0) { var p = n.split(","); return {l:tr(p[0]), f:tr(p.slice(1).join(" ")), g:false, a:""}; } var parts = n.split(/\s+/); if (parts.length === 1) return {l:n, f:"", g:false, a:""}; var l = parts.pop(); while (parts.length && /^(von|van|de|der|du|zu)$/i.test(parts[parts.length-1])) l = parts.pop() + " " + l; return {l:l, f:parts.join(" "), g:false, a:""}; }
+function strip(h){ var x = document.createElement("div"); x.innerHTML = String(h||""); return tr(x.textContent).replace(/\s+/g," "); }
+function msg(t, cls){ var m = root.querySelector("#zt-msg"); if (m) { m.textContent = t; m.className = "zt-msg " + (cls||""); } }
+function fetchDOI(){
+ var raw = tr(root.querySelector("#zt-doi").value), m = raw.match(/(10\.\d{4,9}\/\S+)/);
+ if (!m) return msg("Das sieht nicht nach einer DOI aus. Eine DOI beginnt mit «10.», z. B. 10.1007/s11618-022-01234-5.", "err");
+ var doi = m[1].replace(/[.,;]$/,""); msg("Suche bei Crossref …");
+ fetch("https://api.crossref.org/works/" + encodeURIComponent(doi)).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }).then(function(j){
+  var w = j.message, ty = w.type, t = ty === "journal-article" ? "artikel" : ty === "book-chapter" || ty === "book-section" || ty === "book-part" ? "kapitel" : ty === "edited-book" ? "hrsg" : /^(book|monograph|reference-book)$/.test(ty) ? "buch" : ty === "report" ? "bericht" : ty === "dissertation" ? "arbeit" : "artikel";
+  var dp = (w.issued && w.issued["date-parts"] && w.issued["date-parts"][0]) || (w["published-print"] && w["published-print"]["date-parts"][0]) || (w["published-online"] && w["published-online"]["date-parts"][0]) || [];
+  var n = blank(t), title = strip((w.title||[])[0]), sub = strip((w.subtitle||[])[0]);
+  n.d = {jahr: dp[0] ? String(dp[0]) : "", titel: title, untertitel: sub, doi: "https://doi.org/" + w.DOI, verlag: strip(w.publisher), ort: strip(w["publisher-location"])};
+  if (t === "artikel") { n.d.zeitschrift = strip((w["container-title"]||[])[0]); n.d.jahrgang = w.volume || ""; n.d.heft = w.issue || ""; n.d.seiten = (w.page||"").replace("-","–"); n.d.artikelnr = w["article-number"] || ""; n.d.verlag = ""; n.d.ort = ""; }
+  if (t === "kapitel") { n.d.buchtitel = strip((w["container-title"]||[])[0]); n.d.seiten = (w.page||"").replace("-","–"); }
+  var au = (w.author||[]).map(function(a){ return a.name ? {l:a.name, f:"", g:true, a:""} : {l:a.family||"", f:a.given||"", g:false, a:""}; });
+  var ed = (w.editor||[]).map(function(a){ return {l:a.family||a.name||"", f:a.given||"", g:!a.family, a:""}; });
+  if (t === "hrsg") { n.ed = ed.length ? ed : au; } else { n.au = au.length ? au : n.au; if (ed.length) n.ed = ed; }
+  cur = n; editId = null; pages = ""; draw(); msg("Gefunden: " + (title || "ohne Titel") + ". Bitte alle Angaben prüfen und ergänzen.", "ok");
+ }).catch(function(e){ msg("Zu dieser DOI wurde nichts gefunden (oder keine Verbindung). Bitte prüfe die DOI oder fülle das Formular von Hand aus.", "err"); });
+}
+function fetchISBN(){
+ var isbn = tr(root.querySelector("#zt-isbn").value).replace(/[^0-9Xx]/g,"").toUpperCase();
+ if (isbn.length !== 10 && isbn.length !== 13) return msg("Eine ISBN hat 10 oder 13 Ziffern, z. B. 978-3-456-86223-1.", "err");
+ msg("Suche bei Google Books und Open Library …");
+ var n = blank("buch");
+ function fill(v){ if (!v) return false; n.d.titel = n.d.titel || v.title || ""; n.d.untertitel = n.d.untertitel || v.subtitle || ""; n.d.verlag = n.d.verlag || v.publisher || ""; n.d.ort = n.d.ort || v.place || ""; n.d.jahr = n.d.jahr || (String(v.date||"").match(/\d{4}/)||[""])[0]; if (v.authors && v.authors.length && !persons(n.au).length) n.au = v.authors.map(splitName); return !!v.title; }
+ var g = fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn).then(function(r){ return r.json(); }).then(function(j){ var v = j.items && j.items[0] && j.items[0].volumeInfo; return v ? {title:v.title, subtitle:v.subtitle, publisher:v.publisher, date:v.publishedDate, authors:v.authors} : null; }).catch(function(){ return null; });
+ var o = fetch("https://openlibrary.org/api/books?bibkeys=ISBN:" + isbn + "&format=json&jscmd=data").then(function(r){ return r.json(); }).then(function(j){ var v = j["ISBN:" + isbn]; return v ? {title:v.title, subtitle:v.subtitle, publisher:(v.publishers||[])[0] && v.publishers[0].name, place:(v.publish_places||[])[0] && v.publish_places[0].name, date:v.publish_date, authors:(v.authors||[]).map(function(a){ return a.name; })} : null; }).catch(function(){ return null; });
+ Promise.all([g,o]).then(function(rs){
+  var ok1 = fill(rs[0]), ok2 = fill(rs[1]);
+  if (!ok1 && !ok2) return msg("Zu dieser ISBN wurde nichts gefunden. Bitte fülle das Formular von Hand aus.", "err");
+  cur = n; editId = null; pages = ""; draw();
+  msg("Gefunden: " + n.d.titel + ". Bitte prüfen: Auflage" + (phgr() && !n.d.ort ? ", Verlagsort" : "") + " und Schreibweise der Namen fehlen oft.", "ok");
+ });
+}
+
+/* ================= OBERFLÄCHE ================= */
+function persEditor(key, label, hint){
+ var arr = cur[key];
+ var h = '<div class="zt-pers" data-k="'+key+'"><div class="lbl"><span>'+label+'</span><span><button type="button" class="zt-btn sm alt" data-add="'+key+'">+ Person</button> <button type="button" class="zt-btn sm alt" data-addg="'+key+'">+ Organisation</button></span></div>';
+ arr.forEach(function(p,i){
+  h += p.g ? '<div class="pr g"><input class="zt-in" data-pk="'+key+'" data-i="'+i+'" data-f="l" placeholder="Organisation, z. B. Bundesamt für Statistik" value="'+esc(p.l)+'"><input class="zt-in" data-pk="'+key+'" data-i="'+i+'" data-f="a" placeholder="Abkürzung, z. B. BFS" value="'+esc(p.a)+'">'
+           : '<div class="pr"><input class="zt-in" data-pk="'+key+'" data-i="'+i+'" data-f="l" placeholder="Nachname" value="'+esc(p.l)+'"><input class="zt-in" data-pk="'+key+'" data-i="'+i+'" data-f="f" placeholder="Vorname(n)" value="'+esc(p.f)+'">';
+  h += '<button type="button" data-up="'+key+'" data-i="'+i+'" title="nach oben">▲</button><button type="button" data-del="'+key+'" data-i="'+i+'" title="entfernen">✕</button></div>';
+ });
+ return h + (hint ? '<small style="font-size:12px;color:#7b8781">'+hint+'</small>' : '') + '</div>';
+}
+function fieldsHTML(){
+ var h = '<div class="zt-fields">';
+ TYPES[cur.type].f.forEach(function(k){
+  if (k === "autoren") { h += persEditor("au", cur.type === "web" || cur.type === "video" || cur.type === "bericht" ? "Autorinnen und Autoren oder Organisation" : "Autorinnen und Autoren", "In der Reihenfolge wie in der Quelle. Vornamen werden automatisch zu Initialen."); return; }
+  if (k === "hrsg") { h += persEditor("ed", "Herausgeberinnen und Herausgeber (Hrsg.)"); return; }
+  var f = FD[k], v = cur.d[k] || "";
+  h += '<label class="zt-f '+(f.w||"")+'">'+f.l;
+  if (f.sel) h += '<select class="zt-in" data-k="'+k+'">'+f.sel.map(function(o){ return '<option'+(o===v?' selected':'')+'>'+esc(o)+'</option>'; }).join("")+'</select>';
+  else h += '<input class="zt-in" data-k="'+k+'" placeholder="'+esc(f.ph||"")+'" value="'+esc(v)+'">';
+  h += (f.tip ? '<small>'+esc(f.tip)+'</small>' : '') + '</label>';
+ });
+ return h + '</div>';
+}
+function out(html, label, plain){ return '<div class="zt-out'+(label==="ref"?" ref":"")+'">'+(label && label!=="ref" ? '<span class="lab">'+label+'</span>' : '')+html+'<button class="cp" data-copy="'+esc(html)+'">Kopieren</button></div>'; }
+function preview(){
+ var src = cur, sfx = editId ? suffixes(S.list.map(function(s){ return s.id === editId ? Object.assign({}, cur, {id:editId}) : s; }))[editId] : "";
+ var w = warnings(src), h = '<h3>Ergebnis</h3><h4>Literaturverzeichnis</h4>' + out(reference(src, sfx), "ref");
+ if (w.length) h += '<div class="zt-warn">⚠️ ' + w.map(esc).join("<br>⚠️ ") + '</div>';
+ h += '<h4>Im Text verwenden</h4><div class="zt-tabs">' + [["text","Paraphrase"],["zitat","Direktes Zitat"],["sek","Sekundärzitat"],["abb","Abbildung"],["tab","Tabelle"],["stat","Statistik"]].map(function(x){ return '<button data-tab="'+x[0]+'"'+(tab===x[0]?' class="on"':'')+'>'+x[1]+'</button>'; }).join("") + '</div>';
+ h += '<div class="zt-usage"><label>Seite(n) <input class="zt-in" id="zt-pg" placeholder="z. B. 45 oder 45–47 oder 45f." value="'+esc(pages)+'"></label></div>';
+ var grp = isGroupAbk(src), vg = phgr();
+ if (tab === "text") {
+  h += out(paren(src, sfx, pages, {vgl:true, first:grp}), "In Klammern" + (grp ? " (erste Nennung)" : "")) + (grp ? out(paren(src, sfx, pages, {vgl:true}), "In Klammern (ab der zweiten Nennung)") : "")
+     + out(narrative(src, sfx, pages, {first:grp}), "Im Satz" + (grp ? " (erste Nennung)" : "")) + (grp ? out(narrative(src, sfx, pages, {}), "Im Satz (ab der zweiten Nennung)") : "")
+     + '<p class="zt-note">Bei Paraphrasen (sinngemässe Wiedergabe) '+(vg ? 'steht im PHGR-Stil «vgl.» vor der Angabe. ' : '')+'Seitenzahlen sind empfohlen, wenn sich die Aussage auf eine bestimmte Stelle bezieht.'+(persons(src.au).length >= 3 ? ' Ab drei Personen steht «et al.» schon bei der ersten Nennung.' : '')+'</p>';
+ } else if (tab === "zitat") {
+  h += out("«Wörtliches Zitat» " + paren(src, sfx, pages || "S. ?", {first:grp}), "Kurzes Zitat") + out(narrative(src, sfx, pages || "S. ?", {first:grp}) + " schreibt: «Wörtliches Zitat».", "Im Satz eingeleitet")
+     + '<p class="zt-note">Direkte Zitate brauchen immer eine Seitenzahl (oder bei Webseiten z. B. «Abs. 3»). Auslassungen werden mit […] markiert, eigene Ergänzungen in [eckigen Klammern]. <b>Ab 40 Wörtern</b> wird das Zitat als eingerückter Block ohne Anführungszeichen gesetzt; die Angabe folgt nach dem Schlusspunkt.</p>';
+ } else if (tab === "sek") {
+  h += '<div class="zt-usage"><label>Originalquelle <input class="zt-in" id="zt-sec" placeholder="z. B. Humboldt, 1793" value="'+esc(sec)+'"></label></div>';
+  var orig = tr(sec) || "Original, Jahr", n = citeNames(src, false, false);
+  h += out("(" + esc(orig) + ", zit. nach " + (n && n.grp ? n.full : n) + ", " + yearOf(src, sfx) + pg(pages) + ")", "In Klammern")
+     + '<p class="zt-note">Ein Sekundärzitat verwendest du nur, wenn die Originalquelle nicht zugänglich ist. Ins Literaturverzeichnis kommt nur die Quelle, die du selbst gelesen hast (diese hier).</p>';
+ } else if (tab === "abb" || tab === "tab") {
+  var w2 = tab === "abb" ? "Abbildung" : "Tabelle";
+  h += '<div class="zt-usage"><label>Nummer <input class="zt-in" id="zt-fig" style="max-width:70px" value="'+esc(fig)+'"></label></div>';
+  var ref2 = narrative(src, sfx, pages, {});
+  h += out("<b>" + w2 + " " + esc(fig) + "</b><br><i>Titel " + (tab==="abb"?"der Abbildung":"der Tabelle") + "</i>", "Über der " + w2)
+     + out("<i>Anmerkung.</i> Aus " + ref2 + ".", "Unter der " + w2 + " (unverändert übernommen)")
+     + out("<i>Anmerkung.</i> In Anlehnung an " + ref2 + ".", "Unter der " + w2 + " (verändert oder neu gezeichnet)")
+     + '<p class="zt-note">Nummer und Titel stehen über der '+w2+', die Quelle als Anmerkung darunter. Die Quelle kommt zusätzlich ins Literaturverzeichnis, die '+w2+' ins '+w2+'sverzeichnis (Nummer, Titel, Seitenzahl). Eigene '+(tab==="abb"?"Abbildungen":"Tabellen")+' brauchen keine Quellenangabe.</p>';
+ } else if (tab === "stat") {
+  h += out(narrative(src, sfx, pages, {first:grp}).replace(/^/, "Gemäss ") + " …", "Zahlen im Satz")
+     + out("… " + paren(src, sfx, pages, {first:grp}) + ".", "Zahlen mit Angabe am Satzende")
+     + out("<i>Anmerkung.</i> Daten aus " + narrative(src, sfx, pages, {}) + ".", "Unter einer eigenen Grafik oder Tabelle mit diesen Daten")
+     + '<p class="zt-note">Statistiken werden wie jede andere Quelle belegt, meist mit der Organisation als Autorin (z. B. Bundesamt für Statistik [BFS]). Gib bei Datenbanken das Jahr der Veröffentlichung an, nicht das Jahr der Daten.</p>';
+ }
+ h += '<p class="zt-row" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button class="zt-btn" id="zt-add">'+(editId?"✔ Änderungen speichern":"＋ Ins Literaturverzeichnis")+'</button>'+(editId?'<button class="zt-btn alt" id="zt-cancel">Abbrechen</button>':'')+'<button class="zt-btn alt" id="zt-new">Neue Quelle</button></p>';
+ return h;
+}
+function listHTML(){
+ var L = sorted(), sx = suffixes(S.list);
+ var h = '<div class="zt-card zt-list"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><h3 style="margin:0">Mein Literaturverzeichnis ('+L.length+')</h3><span style="display:flex;gap:6px;flex-wrap:wrap">'
+   + '<button class="zt-btn sm" id="zt-copyall"'+(L.length?'':' disabled')+'>Alles kopieren (für Word)</button><button class="zt-btn sm alt" id="zt-doc"'+(L.length?'':' disabled')+'>Als Word-Datei</button><button class="zt-btn sm alt" id="zt-clear"'+(L.length?'':' disabled')+'>Liste leeren</button></span></div>';
+ if (!L.length) h += '<p class="zt-note" style="margin-top:10px">Noch leer. Erfasse oben eine Quelle und klicke auf «Ins Literaturverzeichnis». Die Liste wird automatisch alphabetisch sortiert und bleibt in diesem Browser gespeichert.</p>';
+ L.forEach(function(s){ h += '<div class="zt-item'+(s.id===editId?' edit':'')+'"><div class="r">'+reference(s, sx[s.id])+'</div><div class="a"><button class="zt-btn sm alt" data-edit="'+s.id+'">Bearbeiten</button><button class="zt-btn sm alt" data-rm="'+s.id+'" title="Löschen">✕</button></div></div>'; });
+ return h + '</div>';
+}
+function draw(){
+ var h = '<div class="zt-top"><div><b>Zitierstil:</b> <span class="zt-seg"><button data-st="phgr"'+(phgr()?' class="on"':'')+'>PHGR (nach Leitfaden)</button><button data-st="apa"'+(!phgr()?' class="on"':'')+'>APA 7</button></span></div>'
+   + '<span class="zt-note" style="margin:0;max-width:520px">'+(phgr() ? 'PHGR: wie APA 7, aber mit Verlagsort («Bern: Hogrefe»), ohne Komma vor «&» und mit «vgl.» bei Paraphrasen (Leitfaden Schriftliche Arbeiten; Roos &amp; Leutwyler, 2022).' : 'APA 7 (deutsche Fassung): ohne Verlagsort, mit Komma vor «&», ohne «vgl.».')+'</span></div>'
+   + '<div class="zt-grid"><div class="zt-card"><h3>1. Schnell ausfüllen</h3><div class="zt-quick">'
+   + '<label>DOI (Fachartikel, Kapitel)<span class="row"><input class="zt-in" id="zt-doi" placeholder="10.1007/s11618-…"><button class="zt-btn" id="zt-gdoi">Abrufen</button></span></label>'
+   + '<label>ISBN (Bücher)<span class="row"><input class="zt-in" id="zt-isbn" placeholder="978-3-456-86223-1"><button class="zt-btn" id="zt-gisbn">Abrufen</button></span></label></div>'
+   + '<p class="zt-msg" id="zt-msg"></p>'
+   + '<h3 style="margin-top:14px">2. Quellenart</h3><div class="zt-types">'+Object.keys(TYPES).map(function(k){ return '<button data-type="'+k+'"'+(cur.type===k?' class="on"':'')+'>'+TYPES[k].ic+' '+TYPES[k].n+'</button>'; }).join("")+'</div>'
+   + (cur.type === "bericht" ? '<div class="zt-hint">Vorlage: <button class="zt-btn sm alt" id="zt-lp21">Lehrplan 21 Graubünden</button> <button class="zt-btn sm alt" id="zt-bfs">Publikation des BFS</button></div>' : '')
+   + (cur.type === "ki" ? '<div class="zt-hint">Beachte die Vorgaben deiner Dozierenden zum Einsatz von KI. APA empfiehlt zusätzlich, im Text den verwendeten Prompt zu beschreiben und längere Antworten in den Anhang zu stellen.</div>' : '')
+   + (cur.type === "gesetz" ? '<div class="zt-hint">Für Gesetze gibt es in APA 7 keine Schweizer Regel. Diese Form ist verbreitet; im Text zitierst du z. B. (BBG, 2002) oder mit Artikel (Art. 3 BBG). Kläre die Form im Zweifel mit deiner Betreuungsperson.</div>' : '')
+   + '<h3 style="margin-top:4px">3. Angaben</h3>' + fieldsHTML()
+   + '<p style="margin:12px 0 0"><button class="zt-btn sm alt" id="zt-demo">Beispiel laden</button></p></div>'
+   + '<div class="zt-card" id="zt-prev">'+preview()+'</div></div>' + listHTML()
+   + '<details class="zt-card" style="margin-top:14px"><summary>Gut zu wissen</summary><ul style="line-height:1.6;margin:10px 0 0">'
+   + '<li>Der Generator folgt dem Leitfaden «Schriftliche Arbeiten» der PHGR, der auf Kapitel 5 von Roos und Leutwyler (2022) verweist, und ergänzt die Regeln von APA 7. Massgebend sind im Zweifel das Buch und die Vorgaben deiner Betreuungsperson.</li>'
+   + '<li>Prüfe automatisch abgerufene Angaben immer: Datenbanken schreiben Namen manchmal in Grossbuchstaben, lassen Untertitel weg oder kennen die Auflage nicht.</li>'
+   + '<li>Gleiche Autorschaft im gleichen Jahr? Der Generator ergänzt in der Liste automatisch 2020a, 2020b.</li>'
+   + '<li>Das Literaturverzeichnis enthält nur Quellen, die du im Text zitierst, alphabetisch sortiert, mit hängendem Einzug. Die Word-Datei ist bereits in Verdana 10 pt mit 1.5 Zeilenabstand formatiert, wie es der Leitfaden verlangt.</li>'
+   + '<li>Deine Daten bleiben in deinem Browser. Nur DOI und ISBN werden zur Suche an Crossref, Google Books und Open Library geschickt.</li></ul></details>';
+ root.innerHTML = h; wire();
+}
+function redrawPreview(){ var p = root.querySelector("#zt-prev"); if (p) { p.innerHTML = preview(); wirePreview(); } }
+function wirePreview(){
+ var p = root.querySelector("#zt-prev");
+ p.querySelectorAll("[data-tab]").forEach(function(b){ b.onclick = function(){ tab = b.dataset.tab; redrawPreview(); }; });
+ var pi = p.querySelector("#zt-pg"); if (pi) pi.oninput = function(){ pages = pi.value; var pos = pi.selectionStart; redrawPreview(); var n = root.querySelector("#zt-pg"); n.focus(); n.setSelectionRange(pos,pos); };
+ var si = p.querySelector("#zt-sec"); if (si) si.oninput = function(){ sec = si.value; var pos = si.selectionStart; redrawPreview(); var n = root.querySelector("#zt-sec"); n.focus(); n.setSelectionRange(pos,pos); };
+ var fi = p.querySelector("#zt-fig"); if (fi) fi.oninput = function(){ fig = fi.value; var pos = fi.selectionStart; redrawPreview(); var n = root.querySelector("#zt-fig"); n.focus(); n.setSelectionRange(pos,pos); };
+ p.querySelectorAll(".cp").forEach(function(b){ b.onclick = function(){ copyRich(b.dataset.copy); b.textContent = "✔ Kopiert"; b.classList.add("done"); setTimeout(function(){ b.textContent = "Kopieren"; b.classList.remove("done"); }, 1500); }; });
+ p.querySelector("#zt-add").onclick = function(){
+  if (warnings(cur).some(function(x){ return /Titel/.test(x); })) { alert("Bitte gib mindestens einen Titel an."); return; }
+  var c = JSON.parse(JSON.stringify(cur));
+  if (editId) { c.id = editId; S.list = S.list.map(function(s){ return s.id === editId ? c : s; }); }
+  else { c.id = "q" + Date.now().toString(36) + Math.random().toString(36).slice(2,5); S.list.push(c); }
+  save(); cur = blank(cur.type); editId = null; pages = ""; sec = ""; draw(); msg("Gespeichert. Du kannst die nächste Quelle erfassen.", "ok");
+ };
+ var cc = p.querySelector("#zt-cancel"); if (cc) cc.onclick = function(){ cur = blank(cur.type); editId = null; draw(); };
+ p.querySelector("#zt-new").onclick = function(){ cur = blank(cur.type); editId = null; pages = ""; draw(); };
+}
+function wire(){
+ root.querySelectorAll("[data-st]").forEach(function(b){ b.onclick = function(){ S.style = b.dataset.st; save(); draw(); }; });
+ root.querySelectorAll("[data-type]").forEach(function(b){ b.onclick = function(){ var keep = {au:cur.au, ed:cur.ed, d:cur.d}; cur.type = b.dataset.type; cur.au = keep.au; cur.ed = keep.ed; draw(); }; });
+ root.querySelectorAll("input[data-k]").forEach(function(i){ i.oninput = function(){ cur.d[i.dataset.k] = i.value; redrawPreview(); }; });
+ root.querySelectorAll("select[data-k]").forEach(function(i){ i.onchange = function(){ cur.d[i.dataset.k] = i.value; redrawPreview(); }; });
+ root.querySelectorAll("input[data-pk]").forEach(function(i){ i.oninput = function(){ cur[i.dataset.pk][+i.dataset.i][i.dataset.f] = i.value; redrawPreview(); }; });
+ root.querySelectorAll("[data-add]").forEach(function(b){ b.onclick = function(){ cur[b.dataset.add].push({l:"",f:"",g:false,a:""}); draw(); }; });
+ root.querySelectorAll("[data-addg]").forEach(function(b){ b.onclick = function(){ var a = cur[b.dataset.addg]; if (a.length === 1 && !tr(a[0].l)) a[0].g = true; else a.push({l:"",f:"",g:true,a:""}); draw(); }; });
+ root.querySelectorAll("[data-del]").forEach(function(b){ b.onclick = function(){ var a = cur[b.dataset.del]; a.splice(+b.dataset.i,1); if (!a.length) a.push({l:"",f:"",g:false,a:""}); draw(); }; });
+ root.querySelectorAll("[data-up]").forEach(function(b){ b.onclick = function(){ var a = cur[b.dataset.up], i = +b.dataset.i; if (i > 0) { var t = a[i]; a[i] = a[i-1]; a[i-1] = t; draw(); } }; });
+ root.querySelector("#zt-gdoi").onclick = fetchDOI; root.querySelector("#zt-gisbn").onclick = fetchISBN;
+ root.querySelector("#zt-doi").onkeydown = function(e){ if (e.key === "Enter") fetchDOI(); };
+ root.querySelector("#zt-isbn").onkeydown = function(e){ if (e.key === "Enter") fetchISBN(); };
+ root.querySelector("#zt-demo").onclick = function(){ cur = {id:null, type:"buch", d:{jahr:"2022", titel:"Wissenschaftliches Arbeiten im Lehramtsstudium", untertitel:"Recherchieren, schreiben, forschen", auflage:"2. überarbeitete", ort:"Bern", verlag:"Hogrefe Verlag"}, au:[{l:"Roos",f:"Markus",g:false,a:""},{l:"Leutwyler",f:"Bruno",g:false,a:""}], ed:[{l:"",f:"",g:false,a:""}]}; editId = null; pages = "134f."; draw(); };
+ var lp = root.querySelector("#zt-lp21"); if (lp) lp.onclick = function(){ cur.d = {jahr:"2016", titel:"Lehrplan 21 Graubünden", untertitel:"", nummer:"", ort:"", verlag:"", url:"https://gr.lehrplan.ch"}; cur.au = [{l:"Amt für Volksschule und Sport Graubünden",f:"",g:true,a:"AVS"}]; draw(); msg("Vorlage geladen. Bitte Jahr bzw. Fassung und URL mit deiner Version abgleichen.", "ok"); };
+ var bf = root.querySelector("#zt-bfs"); if (bf) bf.onclick = function(){ cur.au = [{l:"Bundesamt für Statistik",f:"",g:true,a:"BFS"}]; cur.d.ort = "Neuchâtel"; cur.d.verlag = "BFS"; cur.d.url = cur.d.url || "https://www.bfs.admin.ch/"; draw(); msg("Vorlage geladen: Ergänze Jahr, Titel und die genaue URL der Publikation.", "ok"); };
+ root.querySelectorAll("[data-edit]").forEach(function(b){ b.onclick = function(){ var s = S.list.filter(function(x){ return x.id === b.dataset.edit; })[0]; if (!s) return; cur = JSON.parse(JSON.stringify(s)); editId = s.id; draw(); root.scrollIntoView({behavior:"smooth"}); }; });
+ root.querySelectorAll("[data-rm]").forEach(function(b){ b.onclick = function(){ if (!confirm("Diese Quelle aus der Liste löschen?")) return; S.list = S.list.filter(function(x){ return x.id !== b.dataset.rm; }); if (editId === b.dataset.rm) { editId = null; cur = blank(cur.type); } save(); draw(); }; });
+ var ca = root.querySelector("#zt-copyall"); if (ca) ca.onclick = function(){ copyRich(listDoc(false)); ca.textContent = "✔ Kopiert – in Word einfügen"; setTimeout(function(){ ca.textContent = "Alles kopieren (für Word)"; }, 2200); };
+ var dc = root.querySelector("#zt-doc"); if (dc) dc.onclick = downloadDoc;
+ var cl = root.querySelector("#zt-clear"); if (cl) cl.onclick = function(){ if (confirm("Wirklich alle Quellen löschen?")) { S.list = []; save(); draw(); } };
+ wirePreview();
+}
+
+/* ================= EXPORT ================= */
+var PSTYLE = 'font-family:Verdana,sans-serif;font-size:10pt;line-height:150%;margin:0 0 6pt 1.25cm;text-indent:-1.25cm;text-align:left';
+function listDoc(full){
+ var sx = suffixes(S.list), body = sorted().map(function(s){ return '<p style="'+PSTYLE+'">'+reference(s, sx[s.id])+'</p>'; }).join("");
+ return full ? body : body;
+}
+function copyRich(html){
+ var plain = html.replace(/<br>/g,"\n").replace(/<\/p>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').trim();
+ var styled = '<div style="font-family:Verdana,sans-serif;font-size:10pt">'+html+'</div>';
+ if (navigator.clipboard && window.ClipboardItem) {
+  navigator.clipboard.write([new ClipboardItem({"text/html": new Blob([styled], {type:"text/html"}), "text/plain": new Blob([plain], {type:"text/plain"})})]).catch(function(){ fallbackCopy(styled); });
+ } else fallbackCopy(styled);
+}
+function fallbackCopy(html){ var d = document.createElement("div"); d.contentEditable = "true"; d.style.position = "fixed"; d.style.left = "-9999px"; d.innerHTML = html; document.body.appendChild(d); var r = document.createRange(); r.selectNodeContents(d); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand("copy"); } catch(e){} s.removeAllRanges(); d.remove(); }
+function downloadDoc(){
+ var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>Literaturverzeichnis</title></head><body>'
+  + '<h1 style="font-family:Verdana,sans-serif;font-size:14pt">Literaturverzeichnis</h1>' + listDoc(true) + '</body></html>';
+ var blob = new Blob(["﻿", html], {type:"application/msword"}), a = document.createElement("a");
+ a.href = URL.createObjectURL(blob); a.download = "Literaturverzeichnis.doc"; document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+
+draw();
+})();
+  </script>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MuggliOnline · Anja Muggli, Chur</span>
+    <nav><a href="mailto:anja@mugglionline.ch">anja@mugglionline.ch</a><a href="kontakt.html">Contact</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Protecziun da datas</a></nav>
+  </div>
+</footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('.lang.open').forEach(function(l){if(!l.contains(e.target))l.classList.remove('open')})});</script>
+</body>
+</html>
