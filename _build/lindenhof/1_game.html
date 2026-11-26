@@ -8,10 +8,11 @@
   .lh-hero .emo{position:absolute;right:22px;top:14px;font-size:46px;opacity:.55}
   .lh-hero .cap{position:relative;width:100%;padding:14px 20px;background:linear-gradient(transparent,rgba(12,20,16,.8));color:#fff}
   .lh-hero .cap small{display:block;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.9;font-weight:700}
-  .lh-hero .cap b{font-family:Georgia,serif;font-size:clamp(21px,3.2vw,32px);line-height:1.15}
+  .lh-hero .cap b{font-family:Georgia,serif;font-size:clamp(20px,3vw,30px);line-height:1.15}
   .lh-body{padding:18px 22px 22px}
   .lh-body p{line-height:1.58}
   .lh-btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:11px 22px;font:inherit;font-weight:700;cursor:pointer}
+  .lh-btn:disabled{opacity:.4;cursor:not-allowed}
   .lh-btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
   .lh-btn.sm{padding:7px 14px;font-size:14px}
   .lh-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -19,57 +20,113 @@
   .lh-chips button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
   .lh-chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
   .lh-input{border:1.5px solid var(--line);border-radius:10px;padding:8px 11px;font:inherit;min-width:0}
-  .lh-pl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+  .lh-pl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:8px 0}
   .lh-pl label{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--mut)}
+  .lh-pl .rr{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.lh-pl .rr>span{display:flex;align-items:center;font-size:13px;color:var(--ink)}
   .lh-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
   .lh-cases label{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;gap:8px;align-items:flex-start;cursor:pointer;font-size:14px;line-height:1.4}
   .lh-cases label b{display:block;font-size:15px}
   .lh-role{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px 3px 4px;background:var(--rc);color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
   .lh-role i{font-style:normal;background:rgba(255,255,255,.22);border-radius:999px;padding:1px 7px}
-  .lh-bar{position:sticky;top:70px;z-index:20;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:14px;padding:9px 14px;margin:0 auto 14px;max-width:920px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
-  .lh-bar .wk{font-weight:800;font-size:17px;margin-right:6px}
-  .lh-bar .tm{display:flex;gap:6px;flex-wrap:wrap;flex:1}
-  .lh-bar .tm span{background:rgba(255,255,255,.1);border-left:4px solid var(--rc);border-radius:8px;padding:3px 8px;font-size:13px}
-  .lh-bar button{background:transparent;color:#fff;border:1.5px solid #8fa39a;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
-  .lh-who{margin:0 0 10px;font-size:15px;color:var(--mut)}
-  .lh-team{background:#fff6e5;border:1px solid #f0d7a6;border-radius:12px;padding:8px 12px;margin:0 0 12px;font-size:15px}
+  .lh-rimg{width:58px;height:40px;object-fit:cover;border-radius:8px;vertical-align:middle;margin-right:8px;border:2px solid var(--rc)}
   .lh-opts{display:grid;gap:10px;margin:14px 0 4px}
   .lh-opt{display:flex;gap:12px;align-items:flex-start;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;font:inherit;line-height:1.45;cursor:pointer;transition:.15s}
-  .lh-opt:hover:not(:disabled){border-color:var(--acc);background:var(--soft)}
+  .lh-opt:hover:not(:disabled){border-color:var(--acc);background:var(--soft);transform:translateX(3px)}
   .lh-opt:disabled{opacity:.45;cursor:not-allowed}
   .lh-opt .c{flex:0 0 auto;font-size:13px;font-weight:700;color:var(--mut);background:var(--soft);border-radius:999px;padding:2px 9px;margin-top:2px}
   .lh-opt .c.z{color:var(--ok)}
-  .lh-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 16px;background:var(--soft);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:14px}
+  .lh-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px;background:var(--soft);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:14px}
   .lh-stat .m{height:8px;border-radius:99px;background:#dfe6e2;overflow:hidden;margin-top:4px}
-  .lh-stat .m i{display:block;height:100%;border-radius:99px}
+  .lh-stat .m i{display:block;height:100%;border-radius:99px;transition:width .8s ease}
   .lh-fb{border-left:5px solid var(--acc);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px;margin:12px 0;line-height:1.55}
   .lh-fb.ok{border-color:var(--ok)}.lh-fb.no{border-color:var(--warn)}
   .lh-delta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
-  .lh-delta span{font-size:13px;border-radius:999px;padding:3px 10px;background:#e9efe9}
+  .lh-delta span{font-size:13px;border-radius:999px;padding:3px 10px;background:#e9efe9;animation:lhpop .5s ease both}
   .lh-delta .up{background:#e3f1e3;color:#2f6b37}.lh-delta .dn{background:#f8e3da;color:#8a3a1c}
-  .lh-th{display:flex;gap:12px;border:1px solid #cfe0d6;background:#f1f8f4;border-radius:14px;padding:11px 14px;margin:12px 0;font-size:14.5px;line-height:1.5}
+  .lh-th{display:flex;gap:12px;border:1px solid #cfe0d6;background:#f1f8f4;border-radius:14px;padding:11px 14px;margin:12px 0;font-size:14.5px;line-height:1.5;animation:lhslide .5s ease both}
   .lh-th .ic{font-size:24px;line-height:1}
   .lh-th b{display:block;font-size:15px}
   .lh-th a{color:var(--acc);font-weight:700;text-decoration:underline}
   .lh-th small{color:var(--mut)}
-  .lh-ins{display:inline-block;margin-top:4px}
-  .lh-q .lh-opt{align-items:center}
-  .lh-cases-st{display:grid;gap:10px;margin:10px 0}
   .lh-cs{border:1px solid var(--line);border-radius:12px;padding:10px 14px}
   .lh-cs h4{margin:0 0 4px;font-size:16px}
-  .lh-end-badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700;color:#fff;margin-left:6px}
+  .lh-end-badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;color:#fff;margin-left:6px;vertical-align:middle}
   .lh-tl{list-style:none;padding:0;margin:8px 0 0;font-size:14px}
   .lh-tl li{border-left:3px solid var(--line);padding:4px 0 6px 12px;margin-left:6px}
   .lh-tl li small{color:var(--mut)}
   .lh-score{font:800 52px/1 Georgia,serif;color:var(--acc)}
   .lh-prof{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:10px 0}
   .lh-prof div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px}
-  .lh-ov{position:fixed;inset:0;z-index:100000;background:rgba(15,25,20,.55);display:flex;align-items:center;justify-content:center;padding:16px}
-  .lh-ovbox{background:#fff;border-radius:16px;max-width:680px;width:100%;max-height:88vh;overflow:auto;padding:20px 22px;line-height:1.55}
+  .lh-ov{position:fixed;inset:0;z-index:100000;background:rgba(15,25,20,.6);display:flex;align-items:center;justify-content:center;padding:14px;animation:lhfade .25s ease both}
+  .lh-ovbox{background:#fff;border-radius:18px;max-width:760px;width:100%;max-height:92vh;overflow:auto;line-height:1.55;animation:lhcard .45s cubic-bezier(.2,.9,.3,1.2) both;box-shadow:0 20px 60px rgba(0,0,0,.35)}
   .lh-rules{padding-left:20px}.lh-rules li{margin:5px 0}
-  .lh-rimg{width:58px;height:40px;object-fit:cover;border-radius:8px;vertical-align:middle;margin-right:8px;border:2px solid var(--rc)}
-  .lh-pl .rr{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.lh-pl .rr>span{display:flex;align-items:center;font-size:13px;color:var(--ink)}
-  @media (max-width:600px){.lh-body{padding:14px}.lh-bar{top:60px}}
+  /* ---------- Brett ---------- */
+  .lhb{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:start;gap:16px;max-width:1160px;margin:0 auto}
+  @media (max-width:940px){.lhb{grid-template-columns:1fr}.lhb-board{max-width:100%}}
+  .lhb-board{position:relative;aspect-ratio:1;width:100%;max-width:calc(100vh - 110px);justify-self:center;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);gap:3px;background:#2f4c40;padding:6px;border-radius:20px;box-shadow:0 14px 40px rgba(20,40,30,.35);user-select:none}
+  .lhb-center{grid-column:2/8;grid-row:2/8;position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,#58806a,#9db38a 50%,#d9c48f)}
+  .lhb-center>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .lhb-title{position:absolute;left:0;right:0;top:10px;text-align:center;font:700 clamp(15px,2.4vw,26px) Georgia,serif;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+  .lhb-ctrl{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);width:min(92%,430px);background:rgba(255,255,255,.95);border-radius:16px;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.3);text-align:center;font-size:14px}
+  .lhb-ctrl .who{margin-bottom:8px}
+  .lhb-ctrl .act{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .lhb-dir{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+  .lhb-dir button{border:0;background:#fff;padding:6px 10px;font:inherit;cursor:pointer}
+  .lhb-dir button.on{background:var(--ink);color:#fff}
+  .lhb-die{width:54px;height:54px;background:#fff;border:2px solid var(--ink);border-radius:12px;display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:7px;box-shadow:0 4px 0 var(--ink)}
+  .lhb-die span{width:9px;height:9px;border-radius:50%;background:var(--ink);place-self:center;opacity:0}
+  .lhb-die span.on{opacity:1}
+  .lhb-die.roll{animation:lhroll .6s ease}
+  .lhb-f{position:relative;background:#fbf8f1;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;border-bottom:4px solid var(--fc,#cfd8d2);font-size:clamp(8px,1vw,11px);line-height:1.1;padding:2px;color:var(--ink)}
+  .lhb-f .ic{font-size:clamp(14px,2.4vw,26px);line-height:1}
+  .lhb-f .nm{margin-top:2px;font-weight:600}
+  .lhb-f.corner{border-radius:12px;background-size:cover;background-position:center}
+  .lhb-f.corner .nm{background:rgba(255,255,255,.88);border-radius:6px;padding:1px 5px}
+  .lhb-f.k-wissen{background:#eef5f9}.lhb-f.k-alltag{background:#fdf3e3}.lhb-f.k-plus{background:#eef7ec}
+  .lhb-f.hl{box-shadow:inset 0 0 0 3px #f2b134;animation:lhglow 1s ease infinite alternate}
+  .lhb-mk{position:absolute;top:2px;right:2px;z-index:3;display:flex;align-items:center;gap:2px;background:var(--mc);color:#fff;border-radius:999px;padding:1px 5px 1px 3px;font-size:clamp(10px,1.3vw,14px);box-shadow:0 2px 6px rgba(0,0,0,.3);animation:lhpulse 1.3s ease-in-out infinite}
+  .lhb-mk i{font-style:normal;font-size:.75em;font-weight:800}
+  .lhb-mk.new{animation:lhdrop .7s cubic-bezier(.2,.9,.3,1.4) both, lhpulse 1.3s 0.7s ease-in-out infinite}
+  .lhb-pawn{position:absolute;width:7.2%;aspect-ratio:1;transform:translate(-50%,-62%);transition:left .24s ease,top .24s ease;z-index:6;pointer-events:none;filter:drop-shadow(0 4px 3px rgba(0,0,0,.35))}
+  .lhb-pawn .pb{position:absolute;inset:8%;border-radius:50% 50% 42% 42%;background:var(--rc);border:2px solid #fff;display:flex;align-items:center;justify-content:center;color:#fff;font:800 clamp(7px,1vw,11px)/1 sans-serif}
+  .lhb-pawn img{position:absolute;inset:-12%;width:124%;height:124%;object-fit:contain}
+  .lhb-pawn.hop{animation:lhhop .24s ease}
+  .lhb-pawn.act{z-index:7}
+  .lhb-pawn.act::after{content:"";position:absolute;left:50%;bottom:-14%;width:70%;height:18%;transform:translateX(-50%);border-radius:50%;background:rgba(242,177,52,.8);animation:lhglow .8s ease infinite alternate;z-index:-1}
+  .lhb-side{display:flex;flex-direction:column;gap:12px}
+  .lhb-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+  .lhb-card h4{margin:0 0 8px;font-size:15px}
+  .lhb-wk{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .lhb-wk b{font:700 22px Georgia,serif}
+  .lhb-pl{display:flex;align-items:center;gap:8px;padding:6px 6px;border-radius:10px;font-size:14px;transition:background .3s}
+  .lhb-pl.on{background:#fff3d6}
+  .lhb-pl .dot{width:14px;height:14px;border-radius:50%;background:var(--rc);flex:0 0 auto}
+  .lhb-pl .t{margin-left:auto;white-space:nowrap}
+  .lhb-cs{font-size:13.5px;border-left:4px solid var(--cc);padding:4px 0 6px 9px;margin:6px 0}
+  .lhb-cs .mm{display:flex;gap:6px;margin-top:3px}
+  .lhb-cs .mm span{flex:1;height:5px;border-radius:9px;background:#e3e9e5;overflow:hidden}
+  .lhb-cs .mm i{display:block;height:100%;transition:width .8s}
+  .lhb-log{font-size:13px;color:var(--mut);max-height:150px;overflow:auto;padding-left:16px;margin:0}
+  .lhb-log li{margin:2px 0}
+  .lhb-log li:first-child{color:var(--ink);font-weight:600;animation:lhslide .4s ease both}
+  .lhb-toast{position:fixed;left:50%;top:22%;transform:translateX(-50%);z-index:100001;background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:lhtoast 1.8s ease both;pointer-events:none}
+  .lhb-banner{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .lhb-banner b{background:rgba(34,48,43,.92);color:#fff;font:700 clamp(22px,4vw,40px) Georgia,serif;padding:14px 34px;border-radius:18px;animation:lhbanner 1.8s ease both}
+  .lhb-conf{position:fixed;top:-20px;width:10px;height:14px;z-index:100002;animation:lhfall 2.2s linear forwards;pointer-events:none}
+  @keyframes lhhop{50%{transform:translate(-50%,-105%)}}
+  @keyframes lhroll{0%{transform:rotate(0) scale(1)}30%{transform:rotate(200deg) scale(1.15)}60%{transform:rotate(380deg) scale(.95)}100%{transform:rotate(720deg) scale(1)}}
+  @keyframes lhpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+  @keyframes lhdrop{0%{transform:translateY(-60px) scale(.3);opacity:0}100%{transform:none;opacity:1}}
+  @keyframes lhglow{from{box-shadow:inset 0 0 0 3px #f2b134}to{box-shadow:inset 0 0 0 3px #fff0c7}}
+  @keyframes lhfade{from{opacity:0}to{opacity:1}}
+  @keyframes lhcard{from{transform:translateY(30px) scale(.94);opacity:0}to{transform:none;opacity:1}}
+  @keyframes lhslide{from{transform:translateX(-10px);opacity:0}to{transform:none;opacity:1}}
+  @keyframes lhpop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+  @keyframes lhtoast{0%{opacity:0;transform:translate(-50%,10px)}15%,75%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-20px)}}
+  @keyframes lhbanner{0%{transform:scale(.5);opacity:0}20%,75%{transform:scale(1);opacity:1}100%{transform:scale(1.1);opacity:0}}
+  @keyframes lhfall{to{transform:translateY(110vh) rotate(720deg)}}
+  @media (max-width:600px){.lh-body{padding:14px}.lhb-f .nm{display:none}.lhb-title{font-size:13px}.lhb{padding-bottom:150px}.lhb-ctrl{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:94%;z-index:50;font-size:12px;padding:8px;border:1px solid var(--line)}.lhb-die{width:44px;height:44px;padding:5px}.lhb-die span{width:7px;height:7px}}
+  @media (prefers-reduced-motion:reduce){.lh *{animation:none!important;transition:none!important}}
   </style>
   <div class="lh" id="lh"><noscript><p>Bitte JavaScript aktivieren, um das Spiel zu spielen.</p></noscript></div>
   <script>
@@ -77,7 +134,7 @@
 var root = document.getElementById("lh"); if (!root) return;
 var BASE = window.SITE_BASE || (/\/(en|it|rm)\/[^\/]*$/.test(location.pathname) ? "../" : "");
 var IMG = BASE + "img/lindenhof/";
-var KEY = "mo_lindenhof_v1";
+var KEY = "mo_lindenhof_brett_v1";
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 function img(f, alt){ return '<img src="'+IMG+f+'" alt="'+esc(alt||"")+'" onerror="this.remove()">'; }
 function shuffle(a){ a = a.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
@@ -336,67 +393,105 @@ var W = [
  ["Was schlagen Hauser et al. (2009) für jüngere Kinder vor?", ["ein Götti- oder Patensystem mit älteren Kindern","ein Handyverbot","getrennte Pausen für jede Klasse, damit sich Ältere und Jüngere nicht mehr begegnen","mehr Hausaufgaben"], 0, "Ein älteres Kind steht einem jüngeren zur Seite.", "rollen"]
 ];
 
+
+
+/* ================= SPIELBRETT ================= */
+var F = [
+ {k:"lehrer", n:"Lehrerzimmer", ic:"☕", img:"lh-feld-lehrerzimmer.jpg"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"home", r:"u34", n:"Zimmer 3./4.", ic:"📘"}, {k:"alltag", n:"Schulalltag", ic:"⚡"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"home", r:"u56", n:"Zimmer 5./6.", ic:"🌍"}, {k:"plus", n:"Znüni-Pause", ic:"🍎"},
+ {k:"pause", n:"Pausenplatz", ic:"⚽", img:"lh-feld-pausenplatz.jpg"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"alltag", n:"Schulalltag", ic:"⚡"}, {k:"home", r:"u12", n:"Zimmer 1./2.", ic:"✏️"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"plus", n:"Schulsozial­arbeit", ic:"🤝"}, {k:"alltag", n:"Schulalltag", ic:"⚡"},
+ {k:"home", r:"kg", n:"Kindergarten", ic:"🧸", img:"lh-feld-kindergarten.jpg"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"alltag", n:"Schulalltag", ic:"⚡"}, {k:"ort", n:"Computer­raum", ic:"💻"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"plus", n:"Bibliothek", ic:"📚"}, {k:"alltag", n:"Schulalltag", ic:"⚡"},
+ {k:"weg", n:"Schulweg", ic:"🚸", img:"lh-feld-schulweg.jpg"},
+ {k:"wissen", n:"Wissen", ic:"📖"}, {k:"alltag", n:"Schulalltag", ic:"⚡"}, {k:"ort", n:"Eltern­zimmer", ic:"👪"},
+ {k:"wissen", n:"Turnhalle", ic:"🤸"}, {k:"alltag", n:"Schulalltag", ic:"⚡"}, {k:"wissen", n:"Wissen", ic:"📖"}
+];
+var NF = F.length;
+var HOME = {u34:2, u56:5, u12:10, kg:14};
+var AT = {pause:{p2o:7, p3w:7, p3m:7, p4reg:7}, chat:{c2:17, c3loss:17, c4good:17, c2late:24, c3esk:24}, kiga:{k3e:24, k4bad:24, k5good:7}, eltern:{e1:24, e2p:24, e2w:21, e3c:21, e4m:21, e5mid:21}};
+var CCOL = {pause:"#3c6ea3", chat:"#86579f", kiga:"#c0773a", eltern:"#3f8a66"};
+var FUSE = 2;
+function cell(i){ if (i<=7) return [1,i+1]; if (i<=14) return [i-6,8]; if (i<=21) return [8,8-(i-14)]; return [8-(i-21),1]; }
+function owners(nd){ return typeof nd.o === "string" ? [nd.o] : nd.o; }
+function locOf(cid, node){ var nd = CASES[cid].n[node], ow = owners(nd); if (ow.length > 1) return 0; var a = AT[cid] && AT[cid][node]; return a != null ? a : HOME[ow[0]]; }
+
+/* ================= SCHULALLTAG-KARTEN ================= */
+function active(){ return Object.keys(S.cs).filter(function(id){ return !S.cs[id].end; }); }
+function anyCase(r){ var a = active(), mine = a.filter(function(id){ return CASES[id].roles.indexOf(r) >= 0; }); var l = mine.length ? mine : a; return l.length ? l[Math.floor(Math.random()*l.length)] : null; }
+function bump(cid, v, d){ if (!cid) return ""; var s = S.cs[cid]; s[v] = clamp(s[v]+d, 0, 10); return " Im Fall «"+CASES[cid].title+"»: "+({b:"Belastung "+CASES[cid].kid, k:"Klima", e:"Vertrauen der Eltern"}[v])+" "+(d>0?"+":"")+d+"."; }
+var EV = [
+ {t:"Krankheitsvertretung", x:"Eine Kollegin ist krank, du übernimmst zwei Lektionen.", th:"praevention", f:function(r){ addT(r,-1); return "−1 ⏱ diese Woche."; }},
+ {t:"Frau Caduff hat Zeit", x:"Die Schulsozialarbeiterin bietet dir spontan ein Gespräch an.", th:"intervention", f:function(r){ addT(r,1); return "+1 ⏱ diese Woche."; }},
+ {t:"Elternabend vorbereiten", x:"Präsentation, Einladungen, Stühle stellen: Der Elternabend kostet Zeit, stärkt aber das Vertrauen.", th:"eltern", f:function(r){ addT(r,-1); return "−1 ⏱." + bump(anyCase(r),"e",1); }},
+ {t:"Weiterbildung No Blame Approach", x:"Ein Nachmittag Weiterbildung im Team. Du gehst mit neuen Ideen nach Hause.", th:"nba", f:function(r){ addT(r,1); return "+1 ⏱ diese Woche."; }},
+ {t:"Der Drucker streikt", x:"Eine Stunde Kopierraum statt Vorbereitung.", th:"faktoren", f:function(r){ addT(r,-1); return "−1 ⏱ diese Woche."; }},
+ {t:"Teamsitzung zu Pausenregeln", x:"Das Kollegium einigt sich auf gemeinsame Regeln und gleiche Reaktionen auf dem Pausenplatz.", th:"praevention", f:function(){ var o = ""; active().forEach(function(id){ o += bump(id,"k",1); }); return o ? o.trim() : "Keine laufenden Fälle."; }},
+ {t:"Klassenrat", x:"Im Klassenrat bringen die Kinder eigene Ideen für ein besseres Miteinander ein.", th:"programme", f:function(r){ return bump(anyCase(r),"k",1).trim() || "Kein laufender Fall betroffen."; }},
+ {t:"Gerücht im Elternchat", x:"Im Elternchat macht ein Gerücht die Runde. Mehrere Eltern sind verunsichert.", th:"eltern", f:function(r){ return bump(anyCase(r),"e",-1).trim() || "Zum Glück ohne Folgen."; }},
+ {t:"Schulhausfest", x:"Beim Schulhausfest mischen sich die Klassen. Ältere helfen Jüngeren beim Seilziehen.", th:"rollen", f:function(r){ return bump(anyCase(r),"b",-1).trim() || "Alle hatten Spass."; }},
+ {t:"Pausenaufsicht im Regen", x:"Du schaust genau hin und gibst deine Beobachtungen ans Team weiter.", th:"prozess", f:function(){ var m = active().filter(function(id){ return S.cs[id].mk; }); if (!m.length) return "Heute ist alles ruhig."; var id = m[0]; S.cs[id].mk.exp++; return "Die Frist im Fall «"+CASES[id].title+"» verlängert sich um 1 Woche."; }},
+ {t:"Statistik für die Schulleitung", x:"Die Schulleitung braucht bis morgen Zahlen zu Absenzen.", th:"faktoren", f:function(r){ addT(r,-1); return "−1 ⏱ diese Woche."; }},
+ {t:"Ein Kind kommt auf dich zu", x:"Ein Kind erzählt dir leise, was es auf dem Pausenplatz beobachtet hat. Verteidigende brauchen Erwachsene, die zuhören.", th:"rollen", f:function(r){ return bump(anyCase(r),"b",-1).trim() || "Du hörst gut zu."; }}
+];
+var PLUS = {6:"Znüni-Pause mit Kolleginnen: Kurz durchatmen.", 12:"Frau Caduff von der Schulsozialarbeit unterstützt dich.", 19:"In der Bibliothek findest du Ruhe zum Nachdenken."};
+
 var RULES = '<ul class="lh-rules">'
- +'<li><b>Ihr seid ein Team</b> von Lehrpersonen im Schulhaus Lindenhof: Kindergarten, 1./2., 3./4. und 5./6. Klasse. Bei weniger als vier Spielenden übernimmt jemand zwei Rollen.</li>'
- +'<li><b>Eine Runde ist eine Schulwoche.</b> Jede Woche beginnt mit einer Wissenskarte. Danach kommen die Szenen der laufenden Fälle.</li>'
- +'<li><b>Wer am Zug ist, entscheidet</b> für ihre oder seine Rolle. Ihr dürft euch beraten. Bei <b>Fallbesprechungen</b> entscheiden alle beteiligten Lehrpersonen gemeinsam.</li>'
- +'<li><b>Zeit ist knapp:</b> Jede Lehrperson hat pro Woche '+TIME+' ⏱. Gespräche und Absprachen kosten Zeit, Abwarten kostet nichts. Eine richtig beantwortete Wissenskarte gibt +1 ⏱.</li>'
- +'<li><b>Eure Entscheide bestimmen den Verlauf:</b> Jeder Fall verzweigt sich. Werte wie die Belastung des Kindes, das Klima in der Gruppe und das Vertrauen der Eltern zeigen die Folgen.</li>'
- +'<li><b>Nach jedem Entscheid</b> gibt es eine Rückmeldung und ein Theorie-Kärtchen mit Link zur Themenseite. Lest sie, sie helfen bei den nächsten Entscheiden.</li>'
- +'<li><b>Am Schluss</b> zeigt die Auswertung jeden Fall als Zeitleiste, euer Schulklima, eure Profile und Fragen für die Nachbesprechung.</li>'
+ +'<li><b>Ihr seid ein Team</b> von Lehrpersonen: Kindergarten, 1./2., 3./4. und 5./6. Klasse. Jede Lehrperson hat eine Spielfigur. Bei weniger als vier Spielenden führt jemand zwei Figuren.</li>'
+ +'<li><b>Eine Runde ist eine Schulwoche:</b> Alle vier Figuren sind einmal am Zug. Jede Lehrperson hat pro Woche '+TIME+' ⏱.</li>'
+ +'<li><b>Würfeln und ziehen:</b> Wähle die Richtung ↻ oder ↺ und würfle. Zieht deine Figur an einem <b>Fall-Marker</b> vorbei, der dich betrifft, hält sie dort an. Für 1 ⏱ kannst du stattdessen <b>direkt hingehen</b>.</li>'
+ +'<li><b>Fall-Marker</b> erscheinen am Ort des Geschehens. Fallbesprechungen (mehrere Lehrpersonen) finden im <b>Lehrerzimmer</b> statt; dort entscheiden alle Beteiligten gemeinsam. Die Zahl am Marker zeigt die verbleibenden Wochen.</li>'
+ +'<li><b>Frist verpasst?</b> Dann entwickelt sich der Fall ohne euch weiter, meist ungünstig.</li>'
+ +'<li><b>Marker einer Kollegin?</b> Du informierst sie: Ihre Frist verlängert sich um 1 Woche.</li>'
+ +'<li><b>Felder:</b> 📖 Wissenskarte (richtig: +1 ⏱) · ⚡ Schulalltag-Karte · 🍎 🤝 📚 +1 ⏱ · ☕ Lehrerzimmer und eigenes Zimmer: Theorie-Impuls.</li>'
+ +'<li><b>Nach jedem Entscheid</b> gibt es eine Rückmeldung und ein Theorie-Kärtchen mit Link zur Themenseite. Am Schluss zeigt die Auswertung euer Schulklima, die Verläufe und Fragen für die Nachbesprechung.</li>'
  +'</ul>';
-var REFLECT = ["An welcher Stelle hättet ihr in einem Fall früher handeln können? Woran hättet ihr es erkennen können?","Wo habt ihr zwischen Konflikt, Gewalt und Mobbing unterschieden, und woran habt ihr das festgemacht?","Welche Rolle spielten die Zuschauenden und die Gruppe in euren Fällen?","Wie habt ihr Eltern einbezogen? Was würdet ihr im nächsten Elterngespräch anders machen?","Was braucht ein Schulhaus, damit Lehrpersonen bei solchen Fällen «zusammenstehen» können?"];
+var REFLECT = ["An welcher Stelle hättet ihr in einem Fall früher handeln können? Woran hättet ihr es erkennen können?","Wo habt ihr zwischen Konflikt, Gewalt und Mobbing unterschieden, und woran habt ihr das festgemacht?","Welche Rolle spielten die Zuschauenden und die Gruppe in euren Fällen?","Wie habt ihr Eltern einbezogen? Was würdet ihr im nächsten Elterngespräch anders machen?","Welche Fristen habt ihr verpasst, und was sagt das über Zeit und Prioritäten im Schulalltag?"];
 
 /* ================= ZUSTAND ================= */
-var S = null;
+var S = null, busy = false, dir = 1;
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
 function load(){ try{ return JSON.parse(localStorage.getItem(KEY)); }catch(e){ return null; } }
-function pl(role){ return S.names[S.own[role]]; }
+function pl(r){ return S.names[S.own[r]]; }
+function cur(){ return ROLES[S.ti]; }
+function addT(r, d){ S.t[r] = Math.max(0, S.t[r] + d); }
+function log(t){ S.log.unshift(t); S.log = S.log.slice(0, 30); }
+function toast(t){ var d = document.createElement("div"); d.className = "lhb-toast"; d.textContent = t; root.appendChild(d); setTimeout(function(){ d.remove(); }, 1900); }
+function confetti(){ var cols = ["#f2b134","#4c8a55","#3c6ea3","#c0773a","#86579f"]; for (var i=0;i<40;i++){ var c = document.createElement("div"); c.className = "lhb-conf"; c.style.left = Math.random()*100+"vw"; c.style.background = cols[i%5]; c.style.animationDelay = Math.random()*0.6+"s"; root.appendChild(c); (function(c){ setTimeout(function(){ c.remove(); }, 3000); })(c); } }
 function rimg(r){ return '<img class="lh-rimg" style="--rc:'+RL[r].c+'" src="'+IMG+RL[r].img+'" alt="" onerror="this.remove()">'; }
 function roleChip(r, withName){ return '<span class="lh-role" style="--rc:'+RL[r].c+'"><i>'+RL[r].s+'</i>'+(withName?esc(pl(r)):"")+'</span>'; }
-function owners(nd){ return typeof nd.o === "string" ? [nd.o] : nd.o; }
+function endBadge(t){ var m = {good:["gut gelöst","#4c8a55"], ok:["gelöst","#6f9a4f"], mid:["teilweise","#c9a227"], bad:["ungünstig","#b5532f"], open:["offen","#7a8580"]}[t]; return '<span class="lh-end-badge" style="background:'+m[1]+'">'+m[0]+'</span>'; }
 function thBox(key, ins){
  var t = TH[key]; if (!t) return "";
  if (S && S.th.indexOf(key) < 0) S.th.push(key);
  var h = '<div class="lh-th"><span class="ic">📚</span><div><b>Theorie dazu: '+esc(t.t)+'</b>'+esc(t.x)+' <small>('+esc(t.q)+')</small><br><a href="konflikte.html#'+t.a+'" target="_blank" rel="noopener">Mehr dazu auf der Themenseite →</a>';
- if (ins && INS[ins]) h += '<br><span class="lh-ins">🛠 Instrument: <a href="'+BASE+'downloads/konflikte/'+INS[ins][1]+'.pdf" target="_blank" rel="noopener">'+esc(INS[ins][0])+' (PDF)</a></span>';
+ if (ins && INS[ins]) h += '<br>🛠 Instrument: <a href="'+BASE+'downloads/konflikte/'+INS[ins][1]+'.pdf" target="_blank" rel="noopener">'+esc(INS[ins][0])+' (PDF)</a>';
  return h + '</div></div>';
 }
 function meters(cid){
  var c = CASES[cid], s = S.cs[cid], ph = ["","Testphase","Konsolidierung","Manifestation"][s.p];
- function m(lbl, v, good){ var pct = v*10, col = good ? (v>=6?"#4c8a55":v>=4?"#c9a227":"#b5532f") : (v<=3?"#4c8a55":v<=6?"#c9a227":"#b5532f"); return '<div>'+lbl+': <b>'+v+'/10</b><div class="m"><i style="width:'+pct+'%;background:'+col+'"></i></div></div>'; }
+ function m(lbl, v, good){ var col = good ? (v>=6?"#4c8a55":v>=4?"#c9a227":"#b5532f") : (v<=3?"#4c8a55":v<=6?"#c9a227":"#b5532f"); return '<div>'+lbl+': <b>'+v+'/10</b><div class="m"><i style="width:'+(v*10)+'%;background:'+col+'"></i></div></div>'; }
  return '<div class="lh-stat">'+m("Belastung "+c.kid, s.b, false)+m("Klima in der Gruppe", s.k, true)+m("Vertrauen der Eltern", s.e, true)+'<div>Stand: <b>'+ph+'</b><div class="m"><i style="width:'+(s.p*33.3)+'%;background:'+(s.p===1?"#4c8a55":s.p===2?"#c9a227":"#b5532f")+'"></i></div></div></div>';
 }
-function bar(){
- return '<div class="lh-bar"><span class="wk">Woche '+Math.min(S.week,S.weeks)+' / '+S.weeks+'</span><div class="tm">'
-  + ROLES.map(function(r){ return '<span style="--rc:'+RL[r].c+'">'+RL[r].s+' · '+esc(pl(r))+' · '+"⏱".repeat(Math.max(0,S.t[r]))+(S.t[r]<=0?"–":"")+'</span>'; }).join("")
-  + '</div><button id="lh-help">📖 Regeln</button><button id="lh-quit">Neu</button></div>';
-}
-function wireBar(){
- var h = root.querySelector("#lh-help"); if (h) h.onclick = help;
- var q = root.querySelector("#lh-quit"); if (q) q.onclick = function(){ if (confirm("Neues Spiel starten? Der aktuelle Spielstand geht verloren.")) { try{localStorage.removeItem(KEY);}catch(e){} setup(); } };
-}
-function help(){
- var d = document.createElement("div"); d.className = "lh-ov";
- d.innerHTML = '<div class="lh-ovbox" role="dialog" aria-modal="true"><h3 style="margin-top:0">So wird gespielt</h3>'+RULES+'<p style="text-align:right;margin:12px 0 0"><button class="lh-btn">Zurück zum Spiel</button></p></div>';
- root.appendChild(d);
- d.querySelector("button").onclick = function(){ d.remove(); };
- d.onclick = function(e){ if (e.target === d) d.remove(); };
-}
-function top(){ var y = root.getBoundingClientRect().top + window.scrollY - 90; if (window.scrollY > y) window.scrollTo({top:y, behavior:"smooth"}); }
+function relevant(r, f){ return Object.keys(S.cs).filter(function(id){ var s = S.cs[id]; return s.mk && s.mk.at === f && owners(CASES[id].n[s.node]).indexOf(r) >= 0; }); }
+function markersAt(f){ return Object.keys(S.cs).filter(function(id){ var s = S.cs[id]; return s.mk && s.mk.at === f; }); }
+function myMarkers(r){ return Object.keys(S.cs).filter(function(id){ var s = S.cs[id]; return s.mk && owners(CASES[id].n[s.node]).indexOf(r) >= 0; }).sort(function(a,b){ return S.cs[a].mk.exp - S.cs[b].mk.exp; }); }
 
 /* ================= SETUP ================= */
 function setup(){
  var saved = load(), n = 3, weeks = 8, chosen = ["pause","kiga","chat"];
- var h = '<div class="lh-panel"><div class="lh-hero">'+img("lh-intro.jpg","Ein Schweizer Primarschulhaus mit Pausenplatz und Linde")+'<span class="emo">🏫</span><div class="cap"><small>Kooperatives Fallspiel · Zyklus 1 und 2</small><b>Schulhaus Lindenhof</b></div></div><div class="lh-body">'
-  + '<p>Ihr seid das Team des Schulhauses Lindenhof. Im Lauf eines Quartals tauchen Fälle von Konflikten, Gewalt und Mobbing auf, die mehrere Klassen betreffen. Ihr beobachtet, ordnet ein, entscheidet und arbeitet zusammen. Jeder Entscheid verändert den weiteren Verlauf, und nach jedem Zug erfahrt ihr, was die Forschung dazu sagt.</p>'
+ var h = '<div class="lh-panel"><div class="lh-hero">'+img("lh-intro.jpg","Ein Schweizer Primarschulhaus mit Pausenplatz und Linde")+'<span class="emo">🎲</span><div class="cap"><small>Kooperatives Brettspiel · Zyklus 1 und 2</small><b>Schulhaus Lindenhof</b></div></div><div class="lh-body">'
+  + '<p>Ihr seid das Team des Schulhauses Lindenhof. Eure Spielfiguren ziehen durchs Schulhaus, vom Lehrerzimmer über den Pausenplatz bis zum Schulweg. Unterwegs tauchen Fälle von Konflikten, Gewalt und Mobbing auf, die mehrere Klassen betreffen. Erreicht sie rechtzeitig, entscheidet klug und arbeitet zusammen. Nach jedem Entscheid erfahrt ihr, was die Forschung dazu sagt.</p>'
   + (saved && saved.week && !saved.over ? '<p><button class="lh-btn" id="lh-res">Gespeichertes Spiel fortsetzen (Woche '+saved.week+')</button></p>' : '')
   + '<h3>Wie viele spielen mit?</h3><div class="lh-chips" id="lh-n">'+[1,2,3,4].map(function(i){ return '<button data-n="'+i+'"'+(i===n?' class="on"':'')+'>'+i+(i===1?" Person":" Personen")+'</button>'; }).join("")+'</div>'
   + '<div class="lh-pl" id="lh-pl"></div>'
   + '<h3>Welche Fälle?</h3><div class="lh-cases">'+ORDER.map(function(id){ var c = CASES[id]; return '<label><input type="checkbox" value="'+id+'"'+(chosen.indexOf(id)>=0?' checked':'')+'><span><b>'+c.emo+' '+esc(c.title)+'</b>'+esc(c.short)+'<br>'+c.roles.map(function(r){ return '<small style="color:'+RL[r].c+';font-weight:700">'+RL[r].s+'</small>'; }).join(" · ")+'</span></label>'; }).join("")+'</div>'
-  + '<h3>Spieldauer</h3><div class="lh-chips" id="lh-w">'+[[6,"6 Wochen · etwa 40 Min."],[8,"8 Wochen · etwa 60 Min."],[10,"10 Wochen · etwa 75 Min."]].map(function(x){ return '<button data-w="'+x[0]+'"'+(x[0]===weeks?' class="on"':'')+'>'+x[1]+'</button>'; }).join("")+'</div>'
+  + '<h3>Spieldauer</h3><div class="lh-chips" id="lh-w">'+[[6,"6 Wochen · etwa 45 Min."],[8,"8 Wochen · etwa 60 Min."],[10,"10 Wochen · etwa 80 Min."]].map(function(x){ return '<button data-w="'+x[0]+'"'+(x[0]===weeks?' class="on"':'')+'>'+x[1]+'</button>'; }).join("")+'</div>'
   + '<details style="margin-top:16px"><summary><b>Spielregeln</b></summary>'+RULES+'</details>'
-  + '<p style="margin-top:18px"><button class="lh-btn" id="lh-go">Quartal beginnen</button></p></div></div>';
+  + '<p style="margin-top:18px"><button class="lh-btn" id="lh-go">🎲 Spiel starten</button></p></div></div>';
  root.innerHTML = h;
  var names = ["Spielerin 1","Spieler 2","Spielerin 3","Spieler 4"];
  function plRender(){
@@ -416,134 +511,261 @@ function setup(){
   var cs = [].map.call(root.querySelectorAll(".lh-cases input:checked"), function(x){ return x.value; });
   if (!cs.length) { alert("Bitte wähle mindestens einen Fall."); return; }
   var own = {}; ROLES.forEach(function(r,j){ own[r] = j % n; });
-  S = {names:names.slice(0,n).map(function(x,i){ return (x||"").trim() || ("Person "+(i+1)); }), own:own, weeks:weeks, week:1, t:{}, cs:{}, q:[], cur:null, step:"week", fb:null, ord:null, prof:names.slice(0,n).map(function(){ return {}; }), th:[], kn:{r:0,n:0}, used:[], over:false};
-  cs.forEach(function(id){ var c = CASES[id]; S.cs[id] = {node:FIRST[id], due:c.start, b:c.init.b, k:c.init.k, e:c.init.e, p:c.init.p, hist:[], end:null}; });
-  ROLES.forEach(function(r){ S.t[r] = TIME; });
-  save(); weekIntro();
+  S = {names:names.slice(0,n).map(function(x,i){ return (x||"").trim() || ("Person "+(i+1)); }), own:own, weeks:weeks, week:0, ti:0, t:{}, pos:{}, cs:{}, prof:names.slice(0,n).map(function(){ return {}; }), th:[], kn:{r:0,n:0}, used:[], ev:[], log:[], modal:null, exq:[], over:false, missed:0};
+  cs.forEach(function(id){ var c = CASES[id]; S.cs[id] = {node:FIRST[id], due:c.start, b:c.init.b, k:c.init.k, e:c.init.e, p:c.init.p, hist:[], end:null, mk:null}; });
+  ROLES.forEach(function(r){ S.t[r] = TIME; S.pos[r] = HOME[r]; });
+  startWeek();
  };
 }
 function resume(){
  if (S.over) return finish();
- if (S.step === "fb" && S.fb) return feedback();
- if (S.step === "scene" && S.cur) { return S.cur === "wissen" ? wissen() : scene(S.cur); }
- weekIntro();
+ render();
+ var m = S.modal; if (!m) return;
+ if (m.type === "scene") openScene(m.cid);
+ else if (m.type === "fb") feedback();
+ else if (m.type === "wissen") wissen(m.r);
+ else if (m.type === "info") info(m);
 }
 
-/* ================= WOCHE ================= */
-var TIPS = ["prozess","rollen","konflikt","lohnt","praevention","eltern","nba","faktoren","intervention","entwicklung"];
-function weekIntro(){
- S.step = "week"; save();
- var active = Object.keys(S.cs).filter(function(id){ return !S.cs[id].end; });
- var due = active.filter(function(id){ return S.cs[id].due <= S.week; });
- var tip = TIPS[(S.week-1) % TIPS.length];
- var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img("lh-intro.jpg","Schulhaus Lindenhof")+'<span class="emo">🗓️</span><div class="cap"><small>Schulhaus Lindenhof</small><b>Woche '+S.week+'</b></div></div><div class="lh-body">'
-  + '<p>Diese Woche: eine Wissenskarte'+(due.length ? ' und '+due.length+' Szene'+(due.length>1?"n":"")+' aus '+due.map(function(id){ return '«'+esc(CASES[id].title)+'»'; }).join(", ") : '. In keinem Fall steht diese Woche etwas an')+'. Jede Lehrperson hat '+TIME+' ⏱.</p>'
-  + '<div class="lh-cases-st">'+Object.keys(S.cs).map(function(id){ var c = CASES[id], s = S.cs[id];
-     return '<div class="lh-cs"><h4>'+c.emo+' '+esc(c.title)+(s.end?endBadge(s.end):(s.due>S.week?' <small style="color:var(--mut);font-weight:400">· nächste Szene in Woche '+s.due+'</small>':''))+'</h4>'+c.roles.map(function(r){ return roleChip(r,true); }).join(" ")+(s.hist.length||s.end?meters(id):'<p style="margin:6px 0 0;color:var(--mut);font-size:14px">'+(s.due>S.week?'Beginnt in Woche '+s.due+'.':'Beginnt diese Woche.')+'</p>')+'</div>'; }).join("")+'</div>'
-  + '<div style="margin-top:6px"><b>Impuls der Woche</b>'+thBox(tip)+'</div>'
-  + '<p><button class="lh-btn" id="lh-start">Woche '+S.week+' beginnen</button></p></div></div>';
- root.innerHTML = h; wireBar(); top();
- root.querySelector("#lh-start").onclick = function(){
-  S.q = ["wissen"].concat(ORDER.filter(function(id){ return S.cs[id] && !S.cs[id].end && S.cs[id].due <= S.week; }));
-  next();
- };
+/* ================= DARSTELLUNG ================= */
+function render(){
+ var r = cur();
+ var h = '<div class="lhb"><div class="lhb-board" id="lhb">';
+ F.forEach(function(f,i){
+  var rc = cell(i), col = f.k==="home" ? RL[f.r].c : (f.k==="wissen" ? "#5c8fb0" : f.k==="alltag" ? "#d99a3d" : f.k==="plus" ? "#4c8a55" : "#3f6b57");
+  var corner = i % 7 === 0;
+  h += '<div class="lhb-f k-'+f.k+(corner?' corner':'')+'" id="lhf'+i+'" style="grid-row:'+rc[0]+';grid-column:'+rc[1]+';--fc:'+col+(f.img?';background-image:url(\''+IMG+f.img+'\')':'')+'" title="'+esc(f.n.replace("­",""))+'"><span class="ic">'+f.ic+'</span><span class="nm">'+f.n+'</span>';
+  markersAt(i).forEach(function(id){ var s = S.cs[id], left = s.mk.exp - S.week + 1; h += '<span class="lhb-mk'+(s.mk.fresh?' new':'')+'" style="--mc:'+CCOL[id]+'" title="'+esc(CASES[id].title)+': noch '+left+' Woche(n)">'+CASES[id].emo+'<i>'+left+'</i></span>'; });
+  h += '</div>';
+ });
+ h += '<div class="lhb-center">'+img("lh-board.jpg","Schulhaus Lindenhof aus der Vogelperspektive")+'<div class="lhb-title">Schulhaus Lindenhof</div>'
+   + '<div class="lhb-ctrl" id="lhb-ctrl"></div></div>';
+ ROLES.forEach(function(x){ h += '<div class="lhb-pawn'+(x===r?' act':'')+'" id="lhp-'+x+'" style="--rc:'+RL[x].c+'"><span class="pb">'+RL[x].s.replace("LP ","")+'</span><img src="'+IMG+'lh-pawn-'+x.replace("u","")+'.png" alt="" onerror="this.remove()"></div>'; });
+ h += '</div><div class="lhb-side">'
+   + '<div class="lhb-card"><div class="lhb-wk"><span>Woche</span><b>'+Math.min(S.week,S.weeks)+' / '+S.weeks+'</b></div></div>'
+   + '<div class="lhb-card"><h4>Team</h4>'+ROLES.map(function(x){ return '<div class="lhb-pl'+(x===r?' on':'')+'" style="--rc:'+RL[x].c+'"><span class="dot"></span><span><b>'+RL[x].s+'</b> · '+esc(pl(x))+'</span><span class="t">'+("⏱".repeat(S.t[x])||"–")+'</span></div>'; }).join("")+'</div>'
+   + '<div class="lhb-card"><h4>Fälle</h4>'+Object.keys(S.cs).map(function(id){ var c = CASES[id], s = S.cs[id];
+       var st = s.end ? endBadge(s.end) : s.mk ? '📍 '+F[s.mk.at].n.replace("­","")+' · noch '+(s.mk.exp-S.week+1)+' W.' : (s.due>S.week ? 'ab Woche '+s.due : '');
+       return '<div class="lhb-cs" style="--cc:'+CCOL[id]+'"><b>'+c.emo+' '+esc(c.title)+'</b> <small>'+st+'</small><div class="mm"><span title="Belastung"><i style="width:'+(s.b*10)+'%;background:'+(s.b<=3?"#4c8a55":s.b<=6?"#c9a227":"#b5532f")+'"></i></span><span title="Klima"><i style="width:'+(s.k*10)+'%;background:#5c8fb0"></i></span><span title="Vertrauen der Eltern"><i style="width:'+(s.e*10)+'%;background:#86579f"></i></span></div></div>'; }).join("")
+   + '<small style="color:var(--mut)">Balken: Belastung · Klima · Vertrauen der Eltern</small></div>'
+   + '<div class="lhb-card"><h4>Tagebuch</h4><ul class="lhb-log">'+S.log.slice(0,12).map(function(x){ return '<li>'+x+'</li>'; }).join("")+'</ul></div>'
+   + '<div class="lh-row"><button class="lh-btn sm alt" id="lh-help">📖 Regeln</button><button class="lh-btn sm alt" id="lh-quit">Neues Spiel</button></div>'
+   + '</div></div>';
+ root.innerHTML = h;
+ ROLES.forEach(function(x){ placePawn(x, false); });
+ Object.keys(S.cs).forEach(function(id){ if (S.cs[id].mk) S.cs[id].mk.fresh = false; });
+ controls();
+ root.querySelector("#lh-help").onclick = help;
+ root.querySelector("#lh-quit").onclick = function(){ if (confirm("Neues Spiel starten? Der aktuelle Spielstand geht verloren.")) { try{localStorage.removeItem(KEY);}catch(e){} setup(); } };
+ window.onresize = function(){ if (S && !S.over && document.getElementById("lhb")) ROLES.forEach(function(x){ placePawn(x,false); }); };
 }
-function endBadge(t){ var m = {good:["gut gelöst","#4c8a55"], ok:["gelöst","#6f9a4f"], mid:["teilweise","#c9a227"], bad:["ungünstig","#b5532f"], open:["offen","#7a8580"]}[t]; return '<span class="lh-end-badge" style="background:'+m[1]+'">'+m[0]+'</span>'; }
-function next(){
- S.fb = null; S.ord = null;
- if (!S.q.length) return weekEnd();
- S.cur = S.q.shift(); S.step = "scene"; save();
- if (S.cur === "wissen") wissen(); else scene(S.cur);
+var OFF = {kg:[-.2,-.2], u12:[.2,-.2], u34:[-.2,.2], u56:[.2,.2]};
+function placePawn(r, hop){
+ var p = document.getElementById("lhp-"+r), f = document.getElementById("lhf"+S.pos[r]); if (!p || !f) return;
+ var x = f.offsetLeft + f.offsetWidth*(.5+OFF[r][0]), y = f.offsetTop + f.offsetHeight*(.5+OFF[r][1]+.08);
+ p.style.left = x+"px"; p.style.top = y+"px";
+ if (hop) { p.classList.remove("hop"); void p.offsetWidth; p.classList.add("hop"); }
 }
-function weekEnd(){
- var open = Object.keys(S.cs).filter(function(id){ return !S.cs[id].end; });
- if (S.week >= S.weeks || !open.length) return finish();
- S.week++; ROLES.forEach(function(r){ S.t[r] = TIME; }); save(); weekIntro();
-}
-
-/* ================= WISSENSKARTE ================= */
-function wissen(){
- var role = ROLES[(S.week-1) % 4];
- if (S.wq == null || S.wqWeek !== S.week) {
-  var pool = W.map(function(x,i){ return i; }).filter(function(i){ return S.used.indexOf(i) < 0; });
-  if (!pool.length) { S.used = []; pool = W.map(function(x,i){ return i; }); }
-  S.wq = pool[Math.floor(Math.random()*pool.length)]; S.wqWeek = S.week; S.wo = shuffle([0,1,2,3]); save();
+function dieHTML(n){ var on = {1:[4],2:[0,8],3:[0,4,8],4:[0,2,6,8],5:[0,2,4,6,8],6:[0,2,3,5,6,8]}[n]||[]; var o = ""; for (var i=0;i<9;i++) o += '<span'+(on.indexOf(i)>=0?' class="on"':'')+'></span>'; return o; }
+function controls(){
+ var c = document.getElementById("lhb-ctrl"); if (!c) return;
+ var r = cur(), mine = myMarkers(r);
+ var h = '<div class="who">'+rimg(r)+'Am Zug: '+roleChip(r,true)+'</div><div class="act">'
+   + '<span class="lhb-dir"><button data-d="1"'+(dir===1?' class="on"':'')+' title="im Uhrzeigersinn">↻</button><button data-d="-1"'+(dir===-1?' class="on"':'')+' title="gegen den Uhrzeigersinn">↺</button></span>'
+   + '<div class="lhb-die" id="lhb-die">'+dieHTML(S.lastDie||5)+'</div>'
+   + '<button class="lh-btn" id="lhb-roll">🎲 Würfeln</button></div>';
+ if (mine.length) {
+  var id = mine[0], can = S.t[r] >= 1;
+  h += '<div style="margin-top:8px"><button class="lh-btn sm alt" id="lhb-go"'+(can?'':' disabled')+'>🚶 Direkt zu '+CASES[id].emo+' '+esc(F[S.cs[id].mk.at].n.replace("­",""))+' (⏱ 1)</button></div>';
  }
- var q = W[S.wq];
- var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img("lh-wissen.jpg","Fachbücher auf einem Pult")+'<span class="emo">📖</span><div class="cap"><small>Wissenskarte · Woche '+S.week+'</small><b>Was sagt die Forschung?</b></div></div><div class="lh-body">'
-  + '<p class="lh-who">Antwortet: '+roleChip(role,true)+' · richtig = +1 ⏱ für diese Woche. Die anderen dürfen helfen.</p>'
-  + '<p style="font-size:18px"><b>'+esc(q[0])+'</b></p><div class="lh-opts lh-q">'
-  + S.wo.map(function(k){ return '<button class="lh-opt" data-k="'+k+'"><span>'+esc(q[1][k])+'</span></button>'; }).join("") + '</div></div></div>';
- root.innerHTML = h; wireBar(); top();
- root.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){
-  var k = +b.dataset.k, ok = k === q[2];
-  S.used.push(S.wq); S.kn.n++; if (ok) { S.kn.r++; S.t[role]++; }
-  S.fb = {kind:"w", ok:ok, q:q[0], a:q[1][q[2]], x:q[3], th:q[4], role:role};
-  S.step = "fb"; S.wq = null; save(); feedback();
- }; });
+ c.innerHTML = h;
+ c.querySelectorAll(".lhb-dir button").forEach(function(b){ b.onclick = function(){ dir = +b.dataset.d; controls(); hl(); }; });
+ c.querySelector("#lhb-roll").onclick = roll;
+ var g = c.querySelector("#lhb-go"); if (g) g.onclick = function(){ goDirect(mine[0]); };
+ hl();
+}
+function hl(){ root.querySelectorAll(".lhb-f.hl").forEach(function(x){ x.classList.remove("hl"); }); myMarkers(cur()).forEach(function(id){ var f = document.getElementById("lhf"+S.cs[id].mk.at); if (f) f.classList.add("hl"); }); }
+function help(){ modal('<div class="lh-body"><h3 style="margin-top:0">So wird gespielt</h3>'+RULES+'<p style="text-align:right;margin:12px 0 0"><button class="lh-btn" id="lh-x">Zurück zum Spiel</button></p></div>', function(d){ d.querySelector("#lh-x").onclick = function(){ d.remove(); }; }); }
+function modal(html, wire){
+ var old = root.querySelector(".lh-ov"); if (old) old.remove();
+ var d = document.createElement("div"); d.className = "lh-ov"; d.innerHTML = '<div class="lh-ovbox" role="dialog" aria-modal="true">'+html+'</div>';
+ root.appendChild(d); if (wire) wire(d); return d;
+}
+function closeModal(){ var d = root.querySelector(".lh-ov"); if (d) d.remove(); }
+
+/* ================= ZUG ================= */
+function roll(){
+ if (busy) return; busy = true;
+ var die = document.getElementById("lhb-die"), n = 1 + Math.floor(Math.random()*6), k = 0;
+ root.querySelectorAll("#lhb-ctrl button").forEach(function(b){ b.disabled = true; });
+ die.classList.add("roll");
+ var iv = setInterval(function(){ die.innerHTML = dieHTML(1+Math.floor(Math.random()*6)); if (++k > 7) { clearInterval(iv); die.innerHTML = dieHTML(n); die.classList.remove("roll"); S.lastDie = n; setTimeout(function(){ move(cur(), n, dir); }, 350); } }, 75);
+}
+function move(r, n, d){
+ var i = 0, p = document.getElementById("lhp-"+r);
+ (function step(){
+  if (i >= n) return arrive(r, false);
+  S.pos[r] = (S.pos[r] + d + NF) % NF; i++;
+  placePawn(r, true);
+  setTimeout(function(){
+   if (relevant(r, S.pos[r]).length && i < n) { toast("Halt! Hier wartet ein Fall auf dich."); return arrive(r, true); }
+   step();
+  }, 270);
+ })();
+}
+function goDirect(cid){
+ if (busy) return; busy = true;
+ var r = cur(), target = S.cs[cid].mk.at; addT(r, -1);
+ var fw = (target - S.pos[r] + NF) % NF, bw = (S.pos[r] - target + NF) % NF, d = fw <= bw ? 1 : -1, n = Math.min(fw, bw);
+ log(esc(pl(r))+" ("+RL[r].s+") geht direkt zu «"+esc(CASES[cid].title)+"» (−1 ⏱).");
+ if (!n) return arrive(r, true);
+ (function step(){ S.pos[r] = (S.pos[r] + d + NF) % NF; placePawn(r, true); if (S.pos[r] === target) return setTimeout(function(){ arrive(r, true); }, 260); setTimeout(step, 120); })();
+}
+function arrive(r){
+ busy = false;
+ var f = S.pos[r], fd = F[f], rel = relevant(r, f);
+ if (rel.length) { log(esc(pl(r))+" erreicht den Fall «"+esc(CASES[rel[0]].title)+"»."); return openScene(rel[0]); }
+ var other = markersAt(f).filter(function(id){ return !S.cs[id].mk.hinted; });
+ if (other.length) {
+  var id = other[0], s = S.cs[id], ow = owners(CASES[id].n[s.node]); s.mk.exp++; s.mk.hinted = true;
+  log(esc(pl(r))+" informiert "+ow.map(function(x){ return esc(pl(x)); }).join(" und ")+": Frist +1 Woche.");
+  return info({title:"Du bemerkst etwas", icon:"👀", img:CASES[id].img, text:"Im Fall «"+CASES[id].title+"» steht etwas an, das "+ow.map(function(x){ return RL[x].s; }).join(" und ")+" betrifft. Du informierst "+ow.map(function(x){ return pl(x); }).join(" und ")+". Die Frist verlängert sich um 1 Woche.", th:"schweigen"});
+ }
+ if (fd.k === "wissen" || fd.k === "pause" || fd.k === "weg") return wissen(r, fd.k === "pause" ? "Pausenaufsicht: " : fd.k === "weg" ? "Unterwegs auf dem Schulweg: " : "");
+ if (fd.k === "alltag") return event(r);
+ if (fd.k === "plus") { addT(r, 1); log(esc(pl(r))+": "+esc(fd.n.replace("­",""))+", +1 ⏱."); return info({title:fd.n.replace("­",""), icon:fd.ic, text:PLUS[f]+" +1 ⏱ diese Woche.", th:["eltern","intervention","praevention","faktoren"][f%4]}); }
+ var tips = ["prozess","rollen","konflikt","lohnt","praevention","eltern","nba","faktoren","intervention","entwicklung","mobbing","gewalt","cyber","programme"];
+ var tip = tips[(S.week*3 + f) % tips.length];
+ return info({title: fd.k === "lehrer" ? "Austausch im Lehrerzimmer" : fd.k === "home" ? "Ruhiger Moment" : fd.n.replace("­",""), icon:fd.ic, img: fd.k==="home" ? RL[fd.r].img : null, text: fd.k === "lehrer" ? "Beim Kaffee tauscht ihr euch über eine Studie aus." : "Hier ist gerade alles ruhig. Du nutzt die Zeit, um nachzulesen.", th:tip});
+}
+function endTurn(){
+ closeModal(); S.modal = null;
+ S.ti++;
+ if (S.ti >= ROLES.length) return endWeek();
+ save(); render();
+}
+function startWeek(){
+ S.week++; S.ti = 0;
+ ROLES.forEach(function(r){ S.t[r] = TIME; });
+ var neu = [];
+ Object.keys(S.cs).forEach(function(id){ var s = S.cs[id]; if (!s.end && !s.mk && s.due <= S.week) { s.mk = {at:locOf(id, s.node), exp:S.week+FUSE, fresh:true}; neu.push(id); } });
+ log("<b>Woche "+S.week+"</b>"+(neu.length ? ": neue Fälle bei "+neu.map(function(id){ return CASES[id].emo+" "+F[S.cs[id].mk.at].n.replace("­",""); }).join(", ") : ""));
+ save(); render();
+ if (S.week === 1) { var y = root.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({top:y, behavior:"smooth"}); }
+ var b = document.createElement("div"); b.className = "lhb-banner"; b.innerHTML = "<b>Woche "+S.week+"</b>"; var bd = document.getElementById("lhb"); if (bd) { bd.appendChild(b); setTimeout(function(){ b.remove(); }, 1900); }
+}
+function endWeek(){
+ S.exq = Object.keys(S.cs).filter(function(id){ var s = S.cs[id]; return s.mk && !s.end && s.mk.exp <= S.week; });
+ nextExpiry();
+}
+function nextExpiry(){
+ if (S.exq.length) { var id = S.exq.shift(); return expire(id); }
+ if (S.week >= S.weeks || !active().length) return finish();
+ startWeek();
+}
+function expire(cid){
+ var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], best = null;
+ nd.o2.forEach(function(o,i){ if (best === null || o.c < nd.o2[best].c || (o.c === nd.o2[best].c && /abwarten/.test(o.tag) && !/abwarten/.test(nd.o2[best].tag))) best = i; });
+ S.missed++;
+ log("⏰ Frist verpasst im Fall «"+esc(c.title)+"».");
+ apply(cid, best, true);
+ S.modal = {type:"fb"}; save(); feedback();
 }
 
 /* ================= SZENE ================= */
-function scene(cid){
- var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], ow = owners(nd);
- if (!S.ord || S.ord.node !== s.node) { S.ord = {node:s.node, o:shuffle(nd.o2.map(function(x,i){ return i; }))}; save(); }
- var team = ow.length > 1;
- var h = bar() + '<div class="lh-panel"><div class="lh-hero sm">'+img(team?"lh-besprechung.jpg":c.img, c.title)+'<span class="emo">'+(team?"🤝":c.emo)+'</span><div class="cap"><small>Fall · '+esc(c.title)+' · Woche '+S.week+'</small><b>'+(team?"Fallbesprechung":esc(c.short))+'</b></div></div><div class="lh-body">'
-  + (team ? '<div class="lh-team">🤝 <b>Gemeinsam entscheiden:</b> '+ow.map(function(r){ return roleChip(r,true); }).join(" ")+' Besprecht euch und wählt zusammen. Die Zeit wird bei allen Beteiligten abgezogen.</div>'
-          : '<p class="lh-who">'+rimg(ow[0])+'Am Zug: '+roleChip(ow[0],true)+'</p>')
-  + '<p style="font-size:17px">'+esc(nd.t)+'</p>' + meters(cid)
-  + '<div class="lh-opts">' + S.ord.o.map(function(i){ var o = nd.o2[i], can = ow.every(function(r){ return S.t[r] >= o.c; });
-     return '<button class="lh-opt" data-i="'+i+'"'+(can?'':' disabled title="Zu wenig Zeit diese Woche"')+'><span class="c'+(o.c?'':' z')+'">'+(o.c?"⏱ "+o.c:"0 ⏱")+'</span><span>'+esc(o.t)+(can?'':' <small>(zu wenig Zeit)</small>')+'</span></button>'; }).join("") + '</div>'
-  + '<p style="font-size:13px;color:var(--mut);margin:8px 0 0">Die Reihenfolge der Möglichkeiten ist zufällig.</p></div></div>';
- root.innerHTML = h; wireBar(); top();
- root.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){ choose(cid, +b.dataset.i); }; });
+function openScene(cid){
+ var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], ow = owners(nd), team = ow.length > 1;
+ if (!S.ord || S.ord.node !== s.node || S.ord.cid !== cid) S.ord = {cid:cid, node:s.node, o:shuffle(nd.o2.map(function(x,i){ return i; }))};
+ S.modal = {type:"scene", cid:cid}; save();
+ var any = false;
+ var opts = S.ord.o.map(function(i){ var o = nd.o2[i], can = ow.every(function(r){ return S.t[r] >= o.c; }); if (can) any = true;
+   return '<button class="lh-opt" data-i="'+i+'"'+(can?'':' disabled')+'><span class="c'+(o.c?'':' z')+'">'+(o.c?"⏱ "+o.c:"0 ⏱")+'</span><span>'+esc(o.t)+(can?'':' <small>(zu wenig Zeit)</small>')+'</span></button>'; }).join("");
+ var left = s.mk ? s.mk.exp - S.week + 1 : 1;
+ var h = '<div class="lh-hero sm">'+img(team?"lh-besprechung.jpg":c.img, c.title)+'<span class="emo">'+(team?"🤝":c.emo)+'</span><div class="cap"><small>Fall · '+esc(c.title)+' · Woche '+S.week+'</small><b>'+(team?"Fallbesprechung im Lehrerzimmer":esc(c.short))+'</b></div></div><div class="lh-body">'
+  + (team ? '<p style="background:#fff6e5;border:1px solid #f0d7a6;border-radius:12px;padding:8px 12px">🤝 <b>Gemeinsam entscheiden:</b> '+ow.map(function(r){ return roleChip(r,true); }).join(" ")+' Besprecht euch. Die Zeit wird bei allen Beteiligten abgezogen.</p>' : '<p>'+rimg(ow[0])+roleChip(ow[0],true)+'</p>')
+  + '<p style="font-size:17px">'+esc(nd.t)+'</p>'+meters(cid)+'<div class="lh-opts">'+opts+'</div>'
+  + '<p class="lh-row" style="justify-content:space-between;font-size:13px;color:var(--mut);margin-top:10px"><span>Die Reihenfolge ist zufällig. Frist: noch '+left+' Woche(n).</span><button class="lh-btn sm alt" id="lh-later">Später entscheiden</button></p></div>';
+ modal(h, function(d){
+  d.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){ apply(cid, +b.dataset.i, false); S.modal = {type:"fb"}; save(); feedback(); }; });
+  d.querySelector("#lh-later").onclick = function(){ log(esc(pl(cur()))+" verschiebt den Fall «"+esc(c.title)+"»."); endTurn(); };
+ });
 }
-function choose(cid, i){
+function apply(cid, i, auto){
  var c = CASES[cid], s = S.cs[cid], nd = c.n[s.node], o = nd.o2[i], ow = owners(nd);
- ow.forEach(function(r){ S.t[r] -= o.c; });
+ if (!auto) ow.forEach(function(r){ addT(r, -o.c); });
  var before = {b:s.b, k:s.k, e:s.e, p:s.p};
  ["b","k","e"].forEach(function(v){ if (o.e[v]) s[v] = clamp(s[v]+o.e[v], 0, 10); });
  if (o.e.p) s.p = clamp(s.p+o.e.p, 1, 3);
- if (o.tag) o.tag.split(" ").forEach(function(t){ ow.forEach(function(r){ var p = S.prof[S.own[r]]; p[t] = (p[t]||0)+1; }); });
- s.hist.push({w:S.week, r:ow, t:o.t, fb:o.fb, th:o.th});
+ if (o.tag && !auto) o.tag.split(" ").forEach(function(t){ ow.forEach(function(r){ var p = S.prof[S.own[r]]; p[t] = (p[t]||0)+1; }); });
+ s.hist.push({w:S.week, r:ow, t:(auto?"⏰ Frist verpasst: ":"")+o.t, fb:o.fb});
+ s.mk = null;
  var end = null;
- if (o.n.indexOf("end_") === 0) { end = o.n.slice(4); s.end = end; }
+ if (o.n.indexOf("end_") === 0) { end = o.n.slice(4); s.end = end; log(c.emo+" Fall «"+esc(c.title)+"» abgeschlossen: "+{good:"gut gelöst",ok:"gelöst",mid:"teilweise",bad:"ungünstig"}[end]+"."); }
  else { s.node = o.n; s.due = S.week + 1; }
- S.fb = {kind:"s", cid:cid, o:{t:o.t, fb:o.fb, th:o.th, ins:o.ins}, before:before, end:end};
- S.step = "fb"; save(); feedback();
+ if (!auto) log(esc(ow.map(pl).join(" + "))+" entscheidet im Fall «"+esc(c.title)+"».");
+ S.fb = {kind:"s", cid:cid, o:{t:o.t, fb:o.fb, th:o.th, ins:o.ins}, before:before, end:end, auto:auto};
+}
+function feedback(){
+ var f = S.fb, c = CASES[f.cid], s = S.cs[f.cid], d = [];
+ [["b","Belastung "+c.kid,false],["k","Klima",true],["e","Vertrauen der Eltern",true]].forEach(function(x){ var diff = s[x[0]] - f.before[x[0]]; if (diff) d.push('<span class="'+((diff>0)===x[2]?"up":"dn")+'">'+x[1]+' '+(diff>0?"▲ +":"▼ ")+diff+'</span>'); });
+ if (s.p !== f.before.p) d.push('<span class="'+(s.p>f.before.p?"dn":"up")+'">Stand: '+["","Testphase","Konsolidierung","Manifestation"][s.p]+'</span>');
+ var h = '<div class="lh-body"><p style="color:var(--mut);margin:0 0 6px">'+c.emo+' '+esc(c.title)+' · '+(f.auto?'<b style="color:var(--warn)">⏰ Frist verpasst</b>':'euer Entscheid')+'</p>'
+  + (f.auto ? '<p>Niemand hat den Fall rechtzeitig erreicht. Ohne euch passiert Folgendes:</p>' : '')
+  + '<p style="font-style:italic;font-size:17px">«'+esc(f.o.t)+'»</p>'
+  + '<div class="lh-delta">'+(d.length ? d.join("") : '<span>keine sichtbare Veränderung</span>')+'</div>'
+  + '<div class="lh-fb'+(f.auto?" no":"")+'">'+esc(f.o.fb)+'</div>' + thBox(f.o.th, f.o.ins)
+  + (f.end ? '<div class="lh-fb '+(f.end==="good"||f.end==="ok"?"ok":"no")+'"><b>Der Fall ist abgeschlossen '+endBadge(f.end)+'</b><br>'+esc(c.ends[f.end])+'</div>' : '<p style="color:var(--mut);font-size:14px">Der Fall geht nächste Woche weiter, ein neuer Marker erscheint.</p>')
+  + '<p><button class="lh-btn" id="lh-next">Weiter</button></p></div>';
+ modal(h, function(dd){ dd.querySelector("#lh-next").onclick = function(){ S.fb = null; if (f.auto) { closeModal(); S.modal = null; save(); nextExpiry(); } else endTurn(); }; });
+ if (f.end === "good" || f.end === "ok") confetti();
 }
 
-/* ================= RÜCKMELDUNG ================= */
-function feedback(){
- var f = S.fb, h = bar() + '<div class="lh-panel"><div class="lh-body">';
- if (f.kind === "w") {
-  h += '<p class="lh-who">Wissenskarte · '+roleChip(f.role,true)+'</p><p><b>'+esc(f.q)+'</b></p>'
-    + '<div class="lh-fb '+(f.ok?"ok":"no")+'"><b>'+(f.ok?"✔ Richtig! +1 ⏱ diese Woche.":"✘ Nicht ganz.")+'</b> Richtig ist: <b>'+esc(f.a)+'</b>. '+esc(f.x)+'</div>' + thBox(f.th);
- } else {
-  var c = CASES[f.cid], s = S.cs[f.cid], d = [];
-  [["b","Belastung "+c.kid,false],["k","Klima",true],["e","Vertrauen der Eltern",true]].forEach(function(x){ var diff = s[x[0]] - f.before[x[0]]; if (diff) d.push('<span class="'+((diff>0)===x[2]?"up":"dn")+'">'+x[1]+' '+(diff>0?"▲ +":"▼ ")+diff+'</span>'); });
-  if (s.p !== f.before.p) d.push('<span class="'+(s.p>f.before.p?"dn":"up")+'">Stand: '+["","Testphase","Konsolidierung","Manifestation"][s.p]+'</span>');
-  h += '<p class="lh-who">'+c.emo+' '+esc(c.title)+' · euer Entscheid</p><p style="font-style:italic">«'+esc(f.o.t)+'»</p>'
-    + (d.length ? '<div class="lh-delta">'+d.join("")+'</div>' : '<div class="lh-delta"><span>keine sichtbare Veränderung</span></div>')
-    + '<div class="lh-fb">'+esc(f.o.fb)+'</div>' + thBox(f.o.th, f.o.ins)
-    + (f.end ? '<div class="lh-fb '+(f.end==="good"||f.end==="ok"?"ok":"no")+'"><b>Der Fall ist abgeschlossen '+endBadge(f.end)+'</b><br>'+esc(c.ends[f.end])+'</div>' : '<p style="color:var(--mut);font-size:14px">Wie es weitergeht, zeigt sich nächste Woche.</p>');
+/* ================= KARTEN ================= */
+function wissen(r, pre){
+ if (S.modal && S.modal.type === "wissen" && S.modal.q != null) var qi = S.modal.q, ord = S.modal.ord;
+ else {
+  var pool = W.map(function(x,i){ return i; }).filter(function(i){ return S.used.indexOf(i) < 0; });
+  if (!pool.length) { S.used = []; pool = W.map(function(x,i){ return i; }); }
+  qi = pool[Math.floor(Math.random()*pool.length)]; ord = shuffle([0,1,2,3]);
+  S.modal = {type:"wissen", r:r, q:qi, ord:ord, pre:pre||""}; save();
  }
- h += '<p><button class="lh-btn" id="lh-next">Weiter</button></p></div></div>';
- root.innerHTML = h; wireBar(); top(); save();
- root.querySelector("#lh-next").onclick = next;
+ var q = W[qi];
+ var h = '<div class="lh-hero sm">'+img("lh-wissen.jpg","Fachbücher auf einem Pult")+'<span class="emo">📖</span><div class="cap"><small>'+esc(S.modal.pre||"")+'Wissenskarte</small><b>Was sagt die Forschung?</b></div></div><div class="lh-body">'
+  + '<p>Antwortet: '+roleChip(r,true)+' · richtig = +1 ⏱. Die anderen dürfen helfen.</p><p style="font-size:18px"><b>'+esc(q[0])+'</b></p><div class="lh-opts">'
+  + ord.map(function(k){ return '<button class="lh-opt" data-k="'+k+'"><span>'+esc(q[1][k])+'</span></button>'; }).join("") + '</div></div>';
+ modal(h, function(d){ d.querySelectorAll(".lh-opt").forEach(function(b){ b.onclick = function(){
+  var ok = +b.dataset.k === q[2]; S.used.push(qi); S.kn.n++; if (ok) { S.kn.r++; addT(r, 1); }
+  log(esc(pl(r))+(ok?" beantwortet eine Wissenskarte richtig (+1 ⏱).":" verpasst eine Wissenskarte."));
+  info({title: ok ? "Richtig! +1 ⏱" : "Nicht ganz", icon: ok ? "✔" : "✘", ok:ok, text:"Richtig ist: «"+q[1][q[2]]+"». "+q[3], th:q[4]});
+  if (ok) confetti();
+ }; }); });
+}
+function event(r){
+ var pool = EV.map(function(x,i){ return i; }).filter(function(i){ return S.ev.indexOf(i) < 0; });
+ if (!pool.length) { S.ev = []; pool = EV.map(function(x,i){ return i; }); }
+ var i = pool[Math.floor(Math.random()*pool.length)], e = EV[i]; S.ev.push(i);
+ var res = e.f(r);
+ log(esc(pl(r))+": ⚡ "+esc(e.t)+". "+esc(res));
+ info({title:e.t, icon:"⚡", img:"lh-karte-alltag.jpg", kick:"Schulalltag", text:e.x, res:res, th:e.th});
+}
+function info(m){
+ m.type = "info"; S.modal = m; save();
+ var h = (m.img ? '<div class="lh-hero sm">'+img(m.img,"")+'<span class="emo">'+m.icon+'</span><div class="cap"><small>'+esc(m.kick||"Schulhaus Lindenhof")+'</small><b>'+esc(m.title)+'</b></div></div>' : '')
+  + '<div class="lh-body">'+(m.img ? '' : '<h3 style="margin-top:0">'+m.icon+' '+esc(m.title)+'</h3>')
+  + '<p'+(m.ok!=null?' class="lh-fb '+(m.ok?"ok":"no")+'"':'')+'>'+esc(m.text)+'</p>'
+  + (m.res ? '<div class="lh-delta"><span>'+esc(m.res)+'</span></div>' : '')
+  + thBox(m.th) + '<p><button class="lh-btn" id="lh-next">Weiter</button></p></div>';
+ modal(h, function(d){ d.querySelector("#lh-next").onclick = endTurn; });
 }
 
 /* ================= AUSWERTUNG ================= */
-function score(id){
- var s = S.cs[id], base = {good:85, ok:68, mid:48, bad:25, open:40}[s.end || "open"];
- return clamp(Math.round(base + (4 - s.b)*2 + (s.k - 5) + (s.e - 5)), 0, 100);
-}
+function score(id){ var s = S.cs[id], base = {good:85, ok:68, mid:48, bad:25, open:40}[s.end || "open"]; return clamp(Math.round(base + (4 - s.b)*2 + (s.k - 5) + (s.e - 5)), 0, 100); }
 function finish(){
- S.over = true; Object.keys(S.cs).forEach(function(id){ if (!S.cs[id].end) S.cs[id].open = true; }); save();
+ S.over = true; S.modal = null; save(); closeModal();
  var ids = Object.keys(S.cs), tot = Math.round(ids.reduce(function(a,id){ return a + score(id); }, 0) / ids.length);
  var verdict = tot >= 75 ? "Das Schulhaus Lindenhof ist ein sicherer Ort. Ihr habt früh hingeschaut und zusammengearbeitet." : tot >= 55 ? "Vieles ist gelungen, einiges ist noch offen. Schaut euch die Wendepunkte an." : "Das Quartal war schwierig. Gerade darum lohnt sich die Nachbesprechung.";
  var h = '<div class="lh-panel"><div class="lh-hero">'+img(tot>=55?"lh-ende-gut.jpg":"lh-ende-offen.jpg","Pausenplatz")+'<span class="emo">'+(tot>=55?"🌳":"🌙")+'</span><div class="cap"><small>Ende des Quartals</small><b>Auswertung</b></div></div><div class="lh-body">'
-  + '<div class="lh-row" style="gap:18px"><div class="lh-score">'+tot+'</div><div><b>Schulklima (von 100)</b><br>'+verdict+'<br><small style="color:var(--mut)">Wissenskarten: '+S.kn.r+' von '+S.kn.n+' richtig</small></div></div>'
+  + '<div class="lh-row" style="gap:18px"><div class="lh-score">'+tot+'</div><div><b>Schulklima (von 100)</b><br>'+verdict+'<br><small style="color:var(--mut)">Wissenskarten: '+S.kn.r+' von '+S.kn.n+' richtig · verpasste Fristen: '+S.missed+'</small></div></div>'
   + '<h3>Eure Fälle</h3>' + ids.map(function(id){ var c = CASES[id], s = S.cs[id], e = s.end || "open";
      return '<div class="lh-cs" style="margin:10px 0"><h4>'+c.emo+' '+esc(c.title)+endBadge(e)+' <small style="color:var(--mut);font-weight:400">'+score(id)+' Punkte</small></h4><p style="margin:4px 0">'+(s.end?esc(c.ends[s.end]):"Der Fall ist am Ende des Quartals noch nicht abgeschlossen. Hätte früheres Handeln geholfen?")+'</p>'+meters(id)
       + '<details><summary><b>Zeitleiste der Entscheide</b></summary><ul class="lh-tl">'+s.hist.map(function(x){ return '<li><small>Woche '+x.w+' · '+x.r.map(function(r){ return RL[r].s; }).join(" + ")+'</small><br><b>'+esc(x.t)+'</b><br><small>'+esc(x.fb)+'</small></li>'; }).join("")+'</ul></details></div>'; }).join("")
@@ -552,8 +774,9 @@ function finish(){
   + '<h3>Für die Nachbesprechung</h3><ol>'+REFLECT.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join("")+'</ol>'
   + '<h3>Eure Theorie-Kärtchen ('+S.th.length+')</h3>'+S.th.map(function(k){ var t = TH[k]; return '<div class="lh-th" style="margin:8px 0"><span class="ic">📚</span><div><b>'+esc(t.t)+'</b>'+esc(t.x)+' <small>('+esc(t.q)+')</small><br><a href="konflikte.html#'+t.a+'" target="_blank" rel="noopener">Zur Themenseite →</a></div></div>'; }).join("")
   + '<p style="margin-top:14px">🛠 Alle Instrumente zum Thema findest du auf der <a href="konflikte.html#instrumente" style="text-decoration:underline">Themenseite Konflikte, Gewalt und Mobbing</a>.</p>'
-  + '<p class="lh-row"><button class="lh-btn" id="lh-again">Neues Quartal</button><button class="lh-btn alt" id="lh-print">Auswertung drucken</button></p></div></div>';
- root.innerHTML = h; top();
+  + '<p class="lh-row"><button class="lh-btn" id="lh-again">Neues Spiel</button><button class="lh-btn alt" id="lh-print">Auswertung drucken</button></p></div></div>';
+ root.innerHTML = h; window.scrollTo({top: root.getBoundingClientRect().top + window.scrollY - 90, behavior:"smooth"});
+ if (tot >= 55) confetti();
  root.querySelector("#lh-again").onclick = function(){ try{localStorage.removeItem(KEY);}catch(e){} setup(); };
  root.querySelector("#lh-print").onclick = function(){ root.querySelectorAll("details").forEach(function(d){ d.open = true; }); window.print(); };
 }
